@@ -22,6 +22,7 @@ class ReportTests(unittest.TestCase):
                                              "tfm_with_diary": 0,
                                              "historical_pending": len(self.registry["historical_ideas"])})
         self.assertTrue(all(item["return_pct"] is None for item in result["tracks"]))
+        self.assertTrue(all(item["day_return_pct"] is None for item in result["tracks"]))
         self.assertIn("TFM: red LSTM", markdown(result))
 
     def test_paper_and_legacy_are_separate_groups(self):
@@ -41,6 +42,21 @@ class ReportTests(unittest.TestCase):
         self.assertEqual((new["first_session"], new["last_session"], new["return_pct"]),
                          ("2026-09-28", "2026-09-29", 1.0))
         self.assertIn("no forman una clasificación común", markdown(result))
+
+    def test_daily_change_uses_previous_valuation_and_preserves_first_day_unknown(self):
+        paper = {"config_hash": _config_hash(self.config), "first_session": "2026-09-28",
+                 "last_session": "2026-09-29", "strategies": {
+                     name: {"status": "active", "equity": [
+                         {"date": "2026-09-28", "nav": 100000.0},
+                         {"date": "2026-09-29", "nav": 101000.0}]}
+                     for name in self.registry["paper_tracks"]}}
+        result = build(self.registry, self.config, paper, now=self.now)
+        row = next(x for x in result["tracks"] if x["id"] == "benchmark_spy")
+        self.assertEqual((row["day_return_pct"], row["return_pct"], row["currency"]), (1.0, 1.0, "USD"))
+        paper["strategies"]["benchmark_spy"]["equity"] = [{"date": "2026-09-29", "nav": 101000.0}]
+        result = build(self.registry, self.config, paper, now=self.now)
+        row = next(x for x in result["tracks"] if x["id"] == "benchmark_spy")
+        self.assertIsNone(row["day_return_pct"])
 
     def test_foreign_paper_state_is_rejected(self):
         paper = {"config_hash": "invalid", "strategies": {name: {} for name in self.registry["paper_tracks"]}}

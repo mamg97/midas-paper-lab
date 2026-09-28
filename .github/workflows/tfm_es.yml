@@ -39,11 +39,24 @@ jobs:
       - name: Record four forecasts and paper decisions
         if: ${{ !inputs.preflight_only }}
         run: python tfm_shadow/run.py --output tfm_state
-      - name: Commit only TFM shadow state
+      - name: Refresh all-strategy status after Madrid close
+        if: ${{ always() && !inputs.preflight_only }}
+        run: |
+          python strategy_comparison/report.py \
+            --registry strategy_comparison/registry.json \
+            --paper-config paper_demo/config.json \
+            --paper-state paper_state/state.json \
+            --tfm-config tfm_shadow/config.json \
+            --tfm-state tfm_state/ledger.json \
+            --output strategy_state
+      - name: Commit TFM shadow and comparison state
         if: ${{ always() && !inputs.preflight_only }}
         run: |
           if [ -d tfm_state ]; then
             git add -- tfm_state
+          fi
+          if [ -f strategy_state/dashboard.json ] && [ -f strategy_state/dashboard.md ]; then
+            git add -- strategy_state/dashboard.json strategy_state/dashboard.md
           fi
           if ! git diff --cached --quiet; then
             git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Record MIDAS TFM shadow forecasts'

@@ -39,6 +39,16 @@ def _equity(value, label):
     return float(value)
 
 
+def _daily_return(history, label):
+    if len(history) < 2:
+        return None
+    previous = _equity(history[-2].get("nav"), label + " anterior")
+    current = _equity(history[-1].get("nav"), label)
+    if previous == 0:
+        return None
+    return round(100 * (current / previous - 1), 6)
+
+
 TFM_IDS = {"tfm_lgbm_2023": "lgbm", "tfm_mlp_2023": "mlp",
            "tfm_lstm_2023": "lstm", "tfm_arima_2023": "arima"}
 
@@ -78,7 +88,8 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
     for strategy_id, label in paper_names.items():
         row = {"id": strategy_id, "label": label, "group": "paper_nuevo", "status": "programada_sin_diario",
                "first_session": None, "last_session": None, "initial_capital": capital, "last_equity": None,
-               "return_pct": None, "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."}
+               "return_pct": None, "day_return_pct": None, "currency": paper_config.get("currency", "USD"),
+               "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."}
         if paper_state is not None:
             book = paper_state["strategies"][strategy_id]
             history = book.get("equity", [])
@@ -88,12 +99,14 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             row.update(status="demo_con_diario" if book.get("status") == "active" else "pendiente_modelo",
                        first_session=paper_state.get("first_session"),
                        last_session=paper_state.get("last_session"), last_equity=nav,
-                       return_pct=round(100 * (nav / capital - 1), 6))
+                       return_pct=round(100 * (nav / capital - 1), 6),
+                       day_return_pct=_daily_return(history, strategy_id))
         rows.append(row)
     for item in legacy_tracks:
         row = {"id": item["id"], "label": item["label"], "group": "diario_heredado",
                "status": "sin_diario_disponible", "first_session": None, "last_session": None,
                "initial_capital": None, "last_equity": None, "return_pct": None,
+               "day_return_pct": None, "currency": None,
                "note": item["note"]}
         if item["id"] == "genetic_sp500_legacy" and legacy_state is not None:
             history = legacy_state.get("equity_history")
@@ -114,7 +127,8 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                    "group": "tfm_demo_adaptado", "status": "programada_sin_diario",
                    "first_session": None, "last_session": None,
                    "initial_capital": _equity(tfm_config["paper_policy"]["capital"], "capital TFM"),
-                   "last_equity": None, "return_pct": None,
+                   "last_equity": None, "return_pct": None, "day_return_pct": None,
+                   "currency": tfm_config.get("currency", "EUR"),
                    "note": "Modelo del TFM reimplementado; regla de cartera común provisional, distinta de la tesis.",
                    "kind": item["kind"], "source": item["source"]}
             if tfm_state is not None:
@@ -125,12 +139,14 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                 capital_tfm = row["initial_capital"]
                 row.update(status="demo_con_diario", first_session=tfm_state.get("first_session"),
                            last_session=tfm_state.get("last_session"), last_equity=nav,
-                           return_pct=round(100 * (nav / capital_tfm - 1), 6))
+                           return_pct=round(100 * (nav / capital_tfm - 1), 6),
+                           day_return_pct=_daily_return(book["equity"], item["id"]))
             rows.append(row)
         else:
             rows.append({"id": item["id"], "label": item["label"], "group": "historica_pendiente",
                          "status": "sin_ejecucion_comparable", "first_session": None, "last_session": None,
                          "initial_capital": None, "last_equity": None, "return_pct": None,
+                         "day_return_pct": None, "currency": None,
                          "note": item["blocker"], "kind": item["kind"], "source": item["source"]})
     return {"schema_version": 1, "generated_at_utc": timestamp.isoformat(),
             "principle": "No ordenar rentabilidades de carteras con distintas fechas de inicio o supuestos de ejecución.",
@@ -144,10 +160,11 @@ def markdown(report):
     lines = ["# MIDAS: todas las ideas en paralelo", "",
              "Actualizado: " + report["generated_at_utc"] + ". El tablero distingue resultados observados de ideas aún no ejecutadas.", "",
              "Las rentabilidades de la campaña nueva, el TFM adaptado y el diario genético antiguo **no forman una clasificación común**: empiezan en fechas distintas, usan divisas o reglas de ejecución distintas.", "",
-             "| Línea | Estado | Primera fecha | Última fecha | Rentabilidad |", "| --- | --- | --- | --- | ---: |"]
+             "| Línea | Estado | Primera fecha | Última fecha | Última sesión | Acumulada |", "| --- | --- | --- | --- | ---: | ---: |"]
     for row in report["tracks"]:
         value = "—" if row["return_pct"] is None else f"{row['return_pct']:.2f} %"
-        lines.append(f"| {row['label']} | {row['status']} | {row['first_session'] or '—'} | {row['last_session'] or '—'} | {value} |")
+        daily = "—" if row["day_return_pct"] is None else f"{row['day_return_pct']:.2f} %"
+        lines.append(f"| {row['label']} | {row['status']} | {row['first_session'] or '—'} | {row['last_session'] or '—'} | {daily} | {value} |")
     lines += ["", "## Qué impide activar las líneas restantes", ""]
     for row in report["tracks"]:
         if row["group"] == "historica_pendiente":
