@@ -5,6 +5,11 @@ on:
     # 20:23 CET / 21:23 CEST: después del cierre de Madrid.
     - cron: '23 19 * * 1-5'
   workflow_dispatch:
+    inputs:
+      preflight_only:
+        description: 'Verificar dependencias y pruebas sin registrar una sesión'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -32,9 +37,10 @@ jobs:
       - name: Verify chronology and paper accounting
         run: python -m unittest discover -s tfm_shadow/tests -v
       - name: Record four forecasts and paper decisions
+        if: ${{ !inputs.preflight_only }}
         run: python tfm_shadow/run.py --output tfm_state
       - name: Commit only TFM shadow state
-        if: always()
+        if: ${{ always() && !inputs.preflight_only }}
         run: |
           if [ -d tfm_state ]; then
             git add -- tfm_state

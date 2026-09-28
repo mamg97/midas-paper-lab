@@ -5,6 +5,11 @@ on:
     # NYSE ha cerrado tanto en horario de verano como de invierno.
     - cron: '37 23 * * 1-5'
   workflow_dispatch:
+    inputs:
+      preflight_only:
+        description: 'Verificar dependencias y pruebas sin registrar una sesión'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -31,9 +36,10 @@ jobs:
           python -m unittest discover -s paper_demo/tests -v
           python -m unittest discover -s strategy_comparison/tests -v
       - name: Record today's paper portfolios
+        if: ${{ !inputs.preflight_only }}
         run: python paper_demo/run.py --output paper_state
       - name: Build all-strategy status
-        if: always()
+        if: ${{ always() && !inputs.preflight_only }}
         run: |
           python strategy_comparison/report.py \
             --registry strategy_comparison/registry.json \
@@ -43,7 +49,7 @@ jobs:
             --tfm-state tfm_state/ledger.json \
             --output strategy_state
       - name: Commit only MIDAS paper and comparison state
-        if: always()
+        if: ${{ always() && !inputs.preflight_only }}
         run: |
           if [ -f strategy_state/dashboard.json ] && [ -f strategy_state/dashboard.md ]; then
             git add -- strategy_state/dashboard.json strategy_state/dashboard.md
