@@ -1,6 +1,6 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-09-28T07:56:40.657805+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-09-28T09:05:10.669156+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 Las rentabilidades de la campaña nueva, el TFM adaptado y el diario genético antiguo **no forman una clasificación común**: empiezan en fechas distintas, usan divisas o reglas de ejecución distintas.
 
@@ -36,6 +36,7 @@ Las rentabilidades de la campaña nueva, el TFM adaptado y el diario genético a
 | Bot BTC Coinbase | sin_ejecucion_comparable | — | — | — | — |
 | Markowitz | sin_ejecucion_comparable | — | — | — | — |
 | Filtro fundamental MIDAS Python | sin_ejecucion_comparable | — | — | — | — |
+| TimesFM: predictor zero-shot (hipótesis) | sin_ejecucion_comparable | — | — | — | — |
 
 ## Qué impide activar las líneas restantes
 
@@ -55,5 +56,6 @@ Las rentabilidades de la campaña nueva, el TFM adaptado y el diario genético a
 - **Bot BTC Coinbase**: El original incluye llamadas a órdenes reales; portar solo reglas a simulador sin credenciales.
 - **Markowitz**: Comparar como asignador de pesos; antes, normalizar divisas y frecuencia.
 - **Filtro fundamental MIDAS Python**: Definir datos conocidos en cada fecha y cartera receptora; no es una señal independiente.
+- **TimesFM: predictor zero-shot (hipótesis)**: Fijar universo, horizonte, versión del modelo y regla de órdenes; validar prospectivamente antes de activar una cartera.
 
 La [hoja de ruta](../research/ROADMAP.md) documenta el estado de las adaptaciones. Ninguna fila pendiente recibe rentabilidad simulada retrospectivamente.

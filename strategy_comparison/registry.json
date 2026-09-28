@@ -161,6 +161,13 @@
       "kind": "filtro complementario",
       "source": "fuente histórica privada, no publicada",
       "blocker": "Definir datos conocidos en cada fecha y cartera receptora; no es una señal independiente."
+    },
+    {
+      "id": "timesfm_zero_shot",
+      "label": "TimesFM: predictor zero-shot (hipótesis)",
+      "kind": "modelo predictivo por estudiar",
+      "source": "research/TIMESFM.md",
+      "blocker": "Fijar universo, horizonte, versión del modelo y regla de órdenes; validar prospectivamente antes de activar una cartera."
     }
   ]
 }

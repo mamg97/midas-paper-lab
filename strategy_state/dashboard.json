@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-28T07:56:40.657805+00:00",
+  "generated_at_utc": "2026-09-28T09:05:10.669156+00:00",
   "principle": "No ordenar rentabilidades de carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 0,
     "legacy_with_diary": 0,
     "tfm_with_diary": 0,
-    "historical_pending": 16
+    "historical_pending": 17
   },
   "tracks": [
     {
@@ -468,6 +468,22 @@
       "note": "Definir datos conocidos en cada fecha y cartera receptora; no es una señal independiente.",
       "kind": "filtro complementario",
       "source": "fuente histórica privada, no publicada"
+    },
+    {
+      "id": "timesfm_zero_shot",
+      "label": "TimesFM: predictor zero-shot (hipótesis)",
+      "group": "historica_pendiente",
+      "status": "sin_ejecucion_comparable",
+      "first_session": null,
+      "last_session": null,
+      "initial_capital": null,
+      "last_equity": null,
+      "return_pct": null,
+      "day_return_pct": null,
+      "currency": null,
+      "note": "Fijar universo, horizonte, versión del modelo y regla de órdenes; validar prospectivamente antes de activar una cartera.",
+      "kind": "modelo predictivo por estudiar",
+      "source": "research/TIMESFM.md"
     }
   ]
 }
