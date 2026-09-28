@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "campaign": "midas_us_paper_2026_09",
+  "currency": "USD",
+  "tickers": ["AAPL", "AMZN", "JNJ", "JPM", "KO", "MSFT", "NVDA", "XOM"],
+  "benchmark_tickers": ["SPY"],
+  "capital": 100000.0,
+  "commission": 0.001,
+  "slippage": 0.0005,
+  "invest_fraction": 0.95,
+  "max_positions": 8,
+  "max_missed_sessions": 5,
+  "max_entry_weight": 0.15,
+  "strategies": {
+    "benchmark_spy": {"kind": "equal_weight_hold", "universe": ["SPY"], "entry_weight": 1.0, "stop_loss": null, "take_profit": null},
+    "buy_hold_equal_weight": {"kind": "equal_weight_hold", "stop_loss": null, "take_profit": null},
+    "ema_rsi_fixed": {"kind": "ema_rsi", "params": {"fast": 12, "slow": 26, "rsi_period": 14, "oversold": 30, "overbought": 70}, "stop_loss": 0.08, "take_profit": 0.15},
+    "genetic_frozen": {"kind": "genetic_frozen", "params": {"fast": 4, "slow": 22, "rsi_period": 6, "oversold": 20, "overbought": 72}, "stop_loss": 0.0903, "take_profit": 0.2367},
+    "macd_12_26_9": {"kind": "macd", "stop_loss": 0.08, "take_profit": 0.15},
+    "rsi_reversion_14": {"kind": "rsi_reversion", "stop_loss": 0.08, "take_profit": 0.15},
+    "bollinger_breakout_20": {"kind": "bollinger_breakout", "stop_loss": 0.08, "take_profit": 0.15},
+    "turtle_20_10_long": {"kind": "turtle_20_10", "stop_loss": null, "take_profit": null},
+    "turtle_55_20_long": {"kind": "turtle_55_20", "stop_loss": null, "take_profit": null}
+  }
+}

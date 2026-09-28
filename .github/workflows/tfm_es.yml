@@ -1,0 +1,45 @@
+name: MIDAS TFM shadow forecasts
+
+on:
+  schedule:
+    # 20:23 CET / 21:23 CEST: después del cierre de Madrid.
+    - cron: '23 19 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: midas-tfm-shadow
+  cancel-in-progress: false
+
+jobs:
+  forecast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: tfm_shadow/requirements-live.txt
+      - name: Install OpenMP and model libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgomp1
+          python -m pip install -r tfm_shadow/requirements-live.txt
+      - name: Verify chronology and paper accounting
+        run: python -m unittest discover -s tfm_shadow/tests -v
+      - name: Record four forecasts and paper decisions
+        run: python tfm_shadow/run.py --output tfm_state
+      - name: Commit only TFM shadow state
+        if: always()
+        run: |
+          if [ -d tfm_state ]; then
+            git add -- tfm_state
+          fi
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Record MIDAS TFM shadow forecasts'
+            git push
+          fi

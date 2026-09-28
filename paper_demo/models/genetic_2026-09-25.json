@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "model_id": "midas_genetic_8_us_2026-09-25",
+  "status": "frozen_for_prospective_comparison",
+  "provenance": "experimento de investigación fuera de este repositorio; parámetros fijados antes del inicio demo",
+  "selected_asof": "2026-09-25",
+  "universe": [
+    "AAPL",
+    "AMZN",
+    "JNJ",
+    "JPM",
+    "KO",
+    "MSFT",
+    "NVDA",
+    "XOM"
+  ],
+  "currency": "USD",
+  "source": "yfinance raw daily OHLCV; exact CSV archived in local handoff, not committed to Git",
+  "data_csv_sha256": "7eac726a35a585337c7614ab589b52c87f1eb541c9a7b0adf49523fa27f33f96",
+  "data_digest_sha256": "c85bd5f267d322cbb301149f73792920d87a390c1e173675e836f03cf7dc5a29",
+  "search_config": {
+    "schema_version": 1,
+    "seed": 42,
+    "capital": 100000.0,
+    "commission": 0.001,
+    "slippage": 0.0005,
+    "invest_fraction": 0.95,
+    "splits": {
+      "train": {
+        "start": "2023-12-20",
+        "end": "2025-06-12"
+      },
+      "validation": {
+        "start": "2025-06-13",
+        "end": "2026-01-16"
+      },
+      "test": {
+        "start": "2026-01-20",
+        "end": "2026-09-25"
+      }
+    },
+    "search": {
+      "population": 16,
+      "generations": 5,
+      "validation_candidates": 4
+    },
+    "acceptance": {
+      "min_validation_return": 0.0,
+      "max_validation_drawdown": 0.25,
+      "min_validation_trades": 1
+    },
+    "portfolio": {
+      "max_positions": 8,
+      "max_entry_weight": 0.15
+    }
+  },
+  "genome": {
+    "fast": 4,
+    "slow": 22,
+    "rsi_period": 6,
+    "overbought": 72,
+    "oversold": 20,
+    "stop_loss": 0.0903,
+    "take_profit": 0.2367
+  },
+  "train_metrics": {
+    "initial_capital": 100000.0,
+    "final_equity": 126997.37535052569,
+    "total_return": 0.2699737535052569,
+    "max_drawdown": 0.07109153873241802,
+    "round_trips": 40,
+    "commissions": 1268.5976321186358,
+    "turnover": 12.685976321186354,
+    "max_simultaneous_positions": 8
+  },
+  "validation_metrics": {
+    "initial_capital": 100000.0,
+    "final_equity": 105484.3099941949,
+    "total_return": 0.054843099941949136,
+    "max_drawdown": 0.02236779195292271,
+    "round_trips": 14,
+    "commissions": 336.8133622534946,
+    "turnover": 3.3681336225349456,
+    "max_simultaneous_positions": 8
+  },
+  "untouched_test_metrics": {
+    "initial_capital": 100000.0,
+    "final_equity": 110609.3762101887,
+    "total_return": 0.10609376210188692,
+    "max_drawdown": 0.08244928484303571,
+    "round_trips": 21,
+    "commissions": 615.6589449240282,
+    "turnover": 6.15658944924028,
+    "max_simultaneous_positions": 7
+  },
+  "test_equal_weight_benchmark_metrics": {
+    "initial_capital": 100000.0,
+    "final_equity": 119873.75723533926,
+    "total_return": 0.19873757235339262,
+    "max_drawdown": 0.059966362829592446,
+    "round_trips": 8,
+    "commissions": 209.89384088641552,
+    "turnover": 2.098938408864155,
+    "max_simultaneous_positions": 8
+  },
+  "signal_parity": {
+    "compared_decisions": 3232,
+    "mismatches": 0,
+    "paper_history_bars": 350
+  },
+  "limitations": [
+    "Historical test underperformed its equal-weight benchmark.",
+    "The paper engine separately models dividends and splits, while the search backtest used raw OHLCV.",
+    "This is a new 8-stock frozen candidate, not a reconstruction of the legacy S&P 500 agent."
+  ]
+}

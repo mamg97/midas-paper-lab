@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "purpose": "Inventario de todas las ideas localizadas; una fila no implica que la estrategia esté ejecutándose.",
+  "paper_tracks": {
+    "benchmark_spy": "Referencia SPY",
+    "buy_hold_equal_weight": "Referencia ocho acciones equiponderadas",
+    "ema_rsi_fixed": "EMA/RSI fijo, adaptación nueva",
+    "genetic_frozen": "Genético nuevo congelado, ocho acciones",
+    "macd_12_26_9": "MACD, adaptación nueva",
+    "rsi_reversion_14": "RSI reversión, adaptación nueva",
+    "bollinger_breakout_20": "Bollinger ruptura, adaptación nueva",
+    "turtle_20_10_long": "Turtle 20/10 largo, adaptación nueva",
+    "turtle_55_20_long": "Turtle 55/20 largo, adaptación nueva"
+  },
+  "legacy_tracks": [
+    {
+      "id": "genetic_sp500_legacy",
+      "label": "Genético original S&P 500",
+      "source": "fuente histórica privada, no publicada",
+      "cadence": "diaria, workflow propio a las 08:00 UTC",
+      "note": "Diario y ejecución propios; observar por separado hasta reconciliar horarios y contabilidad."
+    }
+  ],
+  "historical_ideas": [
+    {
+      "id": "tfg_midas_r_2021",
+      "label": "TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo",
+      "kind": "estrategia semanal",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Portar los tres filtros y pesos sobre el universo original de varios mercados, con divisas y calendario."
+    },
+    {
+      "id": "midas_r_crypto",
+      "label": "MIDAS R cripto",
+      "kind": "estrategia",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Necesita campaña EUR y calendario 24/7; comprobar diferencias frente al TFG."
+    },
+    {
+      "id": "tfm_lgbm_2023",
+      "label": "TFM: LightGBM",
+      "kind": "modelo predictivo",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Reconstruir entrenamiento temporal y registrar predicción; definir política de operaciones diferenciada."
+    },
+    {
+      "id": "tfm_mlp_2023",
+      "label": "TFM: red MLP",
+      "kind": "modelo predictivo",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Corregir escalado y validación temporal antes de predicción prospectiva; definir política de operaciones."
+    },
+    {
+      "id": "tfm_lstm_2023",
+      "label": "TFM: red LSTM",
+      "kind": "modelo predictivo",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Portar la secuencia y el escalado sin fuga temporal; definir política de operaciones."
+    },
+    {
+      "id": "tfm_arima_2023",
+      "label": "TFM: ARIMA",
+      "kind": "modelo predictivo",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Validar pronóstico causal y coste de entrenamiento diario; definir política de operaciones."
+    },
+    {
+      "id": "midas_lgbm_weekly_return",
+      "label": "MIDAS Python: LightGBM rentabilidad semanal",
+      "kind": "modelo predictivo",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Los datos/Features llegan hasta 2024 y el entrenamiento mezclaba semanas; rehacer el pipeline cronológico."
+    },
+    {
+      "id": "midas_lgbm_weekly_direction",
+      "label": "MIDAS Python: LightGBM dirección semanal",
+      "kind": "modelo predictivo",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Rehacer features y entrenamiento cronológicos; no cargar pickle legado sin contrato verificado."
+    },
+    {
+      "id": "midas_lgbm_weekly_price",
+      "label": "MIDAS Python: LightGBM precio semanal",
+      "kind": "modelo predictivo",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Rehacer features y entrenamiento cronológicos; no cargar pickle legado sin contrato verificado."
+    },
+    {
+      "id": "midas_lgbm_combined",
+      "label": "MIDAS Python: filtro combinado de los tres LightGBM",
+      "kind": "estrategia semanal",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Depende de tres predicciones y features semanales; exige datos actuales, versión de modelos y órdenes fechadas."
+    },
+    {
+      "id": "genetic_single_asset_2026",
+      "label": "Genético original de un solo activo",
+      "kind": "estrategia",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Separar entrenamiento y ejecución del mismo cierre, elegir activo y congelar versión antes de empezar."
+    },
+    {
+      "id": "rsi_itx_70_30",
+      "label": "RSI original 70/30 sobre Inditex",
+      "kind": "backtest de exposición larga/corta",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "El original usa posición -1/0/+1 sobre retornos al cierre; el motor actual es solo largo y no replica cortos/costes."
+    },
+    {
+      "id": "ichimoku_aapl",
+      "label": "Ichimoku original sobre AAPL",
+      "kind": "backtest experimental",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "La referencia a close(-26) puede mirar al futuro; corregir y marcar una versión nueva antes de ejecutarla."
+    },
+    {
+      "id": "gap_open_close",
+      "label": "Gap alcista de apertura a cierre",
+      "kind": "estrategia intradía",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "El gap se conoce en apertura; requiere ejecución intradía separada del ciclo cierre a apertura."
+    },
+    {
+      "id": "turtle_short_20_10",
+      "label": "Turtle 20/10 corto original",
+      "kind": "estrategia corta",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Requiere contabilidad de posiciones cortas y costes de préstamo."
+    },
+    {
+      "id": "turtle_short_55_20",
+      "label": "Turtle 55/20 corto original",
+      "kind": "estrategia corta",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Requiere contabilidad de posiciones cortas y costes de préstamo."
+    },
+    {
+      "id": "momentum_sp500_monthly",
+      "label": "Screener momentum mensual S&P 500",
+      "kind": "selección, sin cartera",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Documentar regla de salida y pesos antes de convertir la selección mensual en cartera."
+    },
+    {
+      "id": "coinbase_btc",
+      "label": "Bot BTC Coinbase",
+      "kind": "estrategia cripto",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "El original incluye llamadas a órdenes reales; portar solo reglas a simulador sin credenciales."
+    },
+    {
+      "id": "markowitz_weights",
+      "label": "Markowitz",
+      "kind": "política de asignación",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Comparar como asignador de pesos; antes, normalizar divisas y frecuencia."
+    },
+    {
+      "id": "midas_fundamental_filter",
+      "label": "Filtro fundamental MIDAS Python",
+      "kind": "filtro complementario",
+      "source": "fuente histórica privada, no publicada",
+      "blocker": "Definir datos conocidos en cada fecha y cartera receptora; no es una señal independiente."
+    }
+  ]
+}
