@@ -4,7 +4,7 @@ Comparador prospectivo de estrategias de inversión **solo en modo demo**. Este 
 
 ## Estado
 
-La publicación y el primer registro con datos reales están pendientes. Un backtest, una prueba sintética o una señal calculada a posteriori no cuentan como rendimiento prospectivo. Cada línea del [registro](strategy_comparison/registry.json) indica si tiene diario propio o si todavía es una idea pendiente de adaptación.
+El repositorio ya está publicado, y ambos workflows están habilitados. El primer registro con datos reales y la primera liquidación siguen pendientes de verificación. Un backtest, una prueba sintética o una señal calculada a posteriori no cuentan como rendimiento prospectivo. Cada línea del [registro](strategy_comparison/registry.json) indica si tiene diario propio o si todavía es una idea pendiente de adaptación.
 
 Hay nueve carteras USD sobre ocho acciones estadounidenses y SPY, incluidas dos referencias y un genoma congelado antes de la campaña. También hay cuatro carteras EUR del universo IBEX del TFM: LightGBM, MLP, LSTM y ARIMA. Estas cuatro son **reimplementaciones corregidas de 2026** con la misma política de compraventa provisional; no reproducen literalmente la tesis. Las fechas, divisas y reglas difieren entre campañas, así que sus porcentajes no forman una clasificación común.
 
