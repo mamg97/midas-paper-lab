@@ -23,7 +23,10 @@ class ReportTests(unittest.TestCase):
                                              "historical_pending": len(self.registry["historical_ideas"])})
         self.assertTrue(all(item["return_pct"] is None for item in result["tracks"]))
         self.assertTrue(all(item["day_return_pct"] is None for item in result["tracks"]))
+        self.assertEqual({item["id"]: item["provenance"] for item in result["tracks"]},
+                         self.registry["provenance"])
         self.assertIn("TFM: red LSTM", markdown(result))
+        self.assertIn("| Procedencia |", markdown(result))
 
     def test_paper_and_legacy_are_separate_groups(self):
         paper = {"config_hash": _config_hash(self.config), "first_session": "2026-09-28",
@@ -65,6 +68,10 @@ class ReportTests(unittest.TestCase):
         bad = copy.deepcopy(self.registry)
         bad["historical_ideas"].append(copy.deepcopy(bad["historical_ideas"][0]))
         with self.assertRaisesRegex(ValueError, "duplicadas"):
+            build(bad, self.config, now=self.now)
+        bad = copy.deepcopy(self.registry)
+        del bad["provenance"]["genetic_sp500_legacy"]
+        with self.assertRaisesRegex(ValueError, "Procedencia incompleta"):
             build(bad, self.config, now=self.now)
 
     def test_tfm_adaptation_is_labelled_and_uses_separate_eur_ledger(self):

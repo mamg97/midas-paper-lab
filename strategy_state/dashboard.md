@@ -1,42 +1,42 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-09-28T09:05:10.669156+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-09-28T09:36:04.444283+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 Las rentabilidades de la campaña nueva, el TFM adaptado y el diario genético antiguo **no forman una clasificación común**: empiezan en fechas distintas, usan divisas o reglas de ejecución distintas.
 
-| Línea | Estado | Primera fecha | Última fecha | Última sesión | Acumulada |
-| --- | --- | --- | --- | ---: | ---: |
-| Referencia SPY | programada_sin_diario | — | — | — | — |
-| Referencia ocho acciones equiponderadas | programada_sin_diario | — | — | — | — |
-| EMA/RSI fijo, adaptación nueva | programada_sin_diario | — | — | — | — |
-| Genético nuevo congelado, ocho acciones | programada_sin_diario | — | — | — | — |
-| MACD, adaptación nueva | programada_sin_diario | — | — | — | — |
-| RSI reversión, adaptación nueva | programada_sin_diario | — | — | — | — |
-| Bollinger ruptura, adaptación nueva | programada_sin_diario | — | — | — | — |
-| Turtle 20/10 largo, adaptación nueva | programada_sin_diario | — | — | — | — |
-| Turtle 55/20 largo, adaptación nueva | programada_sin_diario | — | — | — | — |
-| Genético original S&P 500 | sin_diario_disponible | — | — | — | — |
-| TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo | sin_ejecucion_comparable | — | — | — | — |
-| MIDAS R cripto | sin_ejecucion_comparable | — | — | — | — |
-| TFM: LightGBM (versión corregida 2026) | programada_sin_diario | — | — | — | — |
-| TFM: red MLP (versión corregida 2026) | programada_sin_diario | — | — | — | — |
-| TFM: red LSTM (versión corregida 2026) | programada_sin_diario | — | — | — | — |
-| TFM: ARIMA (versión corregida 2026) | programada_sin_diario | — | — | — | — |
-| MIDAS Python: LightGBM rentabilidad semanal | sin_ejecucion_comparable | — | — | — | — |
-| MIDAS Python: LightGBM dirección semanal | sin_ejecucion_comparable | — | — | — | — |
-| MIDAS Python: LightGBM precio semanal | sin_ejecucion_comparable | — | — | — | — |
-| MIDAS Python: filtro combinado de los tres LightGBM | sin_ejecucion_comparable | — | — | — | — |
-| Genético original de un solo activo | sin_ejecucion_comparable | — | — | — | — |
-| RSI original 70/30 sobre Inditex | sin_ejecucion_comparable | — | — | — | — |
-| Ichimoku original sobre AAPL | sin_ejecucion_comparable | — | — | — | — |
-| Gap alcista de apertura a cierre | sin_ejecucion_comparable | — | — | — | — |
-| Turtle 20/10 corto original | sin_ejecucion_comparable | — | — | — | — |
-| Turtle 55/20 corto original | sin_ejecucion_comparable | — | — | — | — |
-| Screener momentum mensual S&P 500 | sin_ejecucion_comparable | — | — | — | — |
-| Bot BTC Coinbase | sin_ejecucion_comparable | — | — | — | — |
-| Markowitz | sin_ejecucion_comparable | — | — | — | — |
-| Filtro fundamental MIDAS Python | sin_ejecucion_comparable | — | — | — | — |
-| TimesFM: predictor zero-shot (hipótesis) | sin_ejecucion_comparable | — | — | — | — |
+| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Día | Acumulada |
+| --- | --- | --- | --- | --- | ---: | ---: |
+| Referencia SPY | Campaña nueva 2026 · referencia SPY | programada_sin_diario | — | — | — | — |
+| Referencia ocho acciones equiponderadas | Campaña nueva 2026 · referencia equiponderada | programada_sin_diario | — | — | — | — |
+| EMA/RSI fijo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | programada_sin_diario | — | — | — | — |
+| Genético nuevo congelado, ocho acciones | MIDAS nuevo 2026 · genético congelado | programada_sin_diario | — | — | — | — |
+| MACD, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | programada_sin_diario | — | — | — | — |
+| RSI reversión, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | programada_sin_diario | — | — | — | — |
+| Bollinger ruptura, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | programada_sin_diario | — | — | — | — |
+| Turtle 20/10 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | programada_sin_diario | — | — | — | — |
+| Turtle 55/20 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | programada_sin_diario | — | — | — | — |
+| Genético original S&P 500 | Agente genético S&P 500 original · 2026 | sin_diario_disponible | — | — | — | — |
+| TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo | TFG 2021 · MIDAS en R | sin_ejecucion_comparable | — | — | — | — |
+| MIDAS R cripto | MIDAS en R · experimento cripto | sin_ejecucion_comparable | — | — | — | — |
+| TFM: LightGBM (versión corregida 2026) | TFM · modelo reimplementado en 2026 | programada_sin_diario | — | — | — | — |
+| TFM: red MLP (versión corregida 2026) | TFM · modelo reimplementado en 2026 | programada_sin_diario | — | — | — | — |
+| TFM: red LSTM (versión corregida 2026) | TFM · modelo reimplementado en 2026 | programada_sin_diario | — | — | — | — |
+| TFM: ARIMA (versión corregida 2026) | TFM · modelo reimplementado en 2026 | programada_sin_diario | — | — | — | — |
+| MIDAS Python: LightGBM rentabilidad semanal | MIDAS Python · pipeline LightGBM semanal | sin_ejecucion_comparable | — | — | — | — |
+| MIDAS Python: LightGBM dirección semanal | MIDAS Python · pipeline LightGBM semanal | sin_ejecucion_comparable | — | — | — | — |
+| MIDAS Python: LightGBM precio semanal | MIDAS Python · pipeline LightGBM semanal | sin_ejecucion_comparable | — | — | — | — |
+| MIDAS Python: filtro combinado de los tres LightGBM | MIDAS Python · filtro de los tres LightGBM | sin_ejecucion_comparable | — | — | — | — |
+| Genético original de un solo activo | Agente genético · prototipo individual 2026 | sin_ejecucion_comparable | — | — | — | — |
+| RSI original 70/30 sobre Inditex | Experimento histórico · trading | sin_ejecucion_comparable | — | — | — | — |
+| Ichimoku original sobre AAPL | Experimento histórico · trading | sin_ejecucion_comparable | — | — | — | — |
+| Gap alcista de apertura a cierre | Experimento histórico · trading intradía | sin_ejecucion_comparable | — | — | — | — |
+| Turtle 20/10 corto original | Experimento histórico · trading en corto | sin_ejecucion_comparable | — | — | — | — |
+| Turtle 55/20 corto original | Experimento histórico · trading en corto | sin_ejecucion_comparable | — | — | — | — |
+| Screener momentum mensual S&P 500 | Experimento histórico · selección mensual | sin_ejecucion_comparable | — | — | — | — |
+| Bot BTC Coinbase | Bot Coinbase histórico · cripto | sin_ejecucion_comparable | — | — | — | — |
+| Markowitz | Módulo Markowitz · asignación de pesos | sin_ejecucion_comparable | — | — | — | — |
+| Filtro fundamental MIDAS Python | MIDAS Python · filtro fundamental | sin_ejecucion_comparable | — | — | — | — |
+| TimesFM: predictor zero-shot (hipótesis) | Idea nueva 2026 · TimesFM | sin_ejecucion_comparable | — | — | — | — |
 
 ## Qué impide activar las líneas restantes
 

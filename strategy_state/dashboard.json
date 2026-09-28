@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-28T09:05:10.669156+00:00",
+  "generated_at_utc": "2026-09-28T09:36:04.444283+00:00",
   "principle": "No ordenar rentabilidades de carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 0,
@@ -12,6 +12,7 @@
     {
       "id": "benchmark_spy",
       "label": "Referencia SPY",
+      "provenance": "Campaña nueva 2026 · referencia SPY",
       "group": "paper_nuevo",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -26,6 +27,7 @@
     {
       "id": "buy_hold_equal_weight",
       "label": "Referencia ocho acciones equiponderadas",
+      "provenance": "Campaña nueva 2026 · referencia equiponderada",
       "group": "paper_nuevo",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -40,6 +42,7 @@
     {
       "id": "ema_rsi_fixed",
       "label": "EMA/RSI fijo, adaptación nueva",
+      "provenance": "Campaña nueva 2026 · señal técnica adaptada",
       "group": "paper_nuevo",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -54,6 +57,7 @@
     {
       "id": "genetic_frozen",
       "label": "Genético nuevo congelado, ocho acciones",
+      "provenance": "MIDAS nuevo 2026 · genético congelado",
       "group": "paper_nuevo",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -68,6 +72,7 @@
     {
       "id": "macd_12_26_9",
       "label": "MACD, adaptación nueva",
+      "provenance": "Campaña nueva 2026 · señal técnica adaptada",
       "group": "paper_nuevo",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -82,6 +87,7 @@
     {
       "id": "rsi_reversion_14",
       "label": "RSI reversión, adaptación nueva",
+      "provenance": "Campaña nueva 2026 · señal técnica adaptada",
       "group": "paper_nuevo",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -96,6 +102,7 @@
     {
       "id": "bollinger_breakout_20",
       "label": "Bollinger ruptura, adaptación nueva",
+      "provenance": "Campaña nueva 2026 · señal técnica adaptada",
       "group": "paper_nuevo",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -110,6 +117,7 @@
     {
       "id": "turtle_20_10_long",
       "label": "Turtle 20/10 largo, adaptación nueva",
+      "provenance": "Campaña nueva 2026 · señal técnica adaptada",
       "group": "paper_nuevo",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -124,6 +132,7 @@
     {
       "id": "turtle_55_20_long",
       "label": "Turtle 55/20 largo, adaptación nueva",
+      "provenance": "Campaña nueva 2026 · señal técnica adaptada",
       "group": "paper_nuevo",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -138,6 +147,7 @@
     {
       "id": "genetic_sp500_legacy",
       "label": "Genético original S&P 500",
+      "provenance": "Agente genético S&P 500 original · 2026",
       "group": "diario_heredado",
       "status": "sin_diario_disponible",
       "first_session": null,
@@ -152,6 +162,7 @@
     {
       "id": "tfg_midas_r_2021",
       "label": "TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo",
+      "provenance": "TFG 2021 · MIDAS en R",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -168,6 +179,7 @@
     {
       "id": "midas_r_crypto",
       "label": "MIDAS R cripto",
+      "provenance": "MIDAS en R · experimento cripto",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -184,6 +196,7 @@
     {
       "id": "tfm_lgbm_2023",
       "label": "TFM: LightGBM (versión corregida 2026)",
+      "provenance": "TFM · modelo reimplementado en 2026",
       "group": "tfm_demo_adaptado",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -200,6 +213,7 @@
     {
       "id": "tfm_mlp_2023",
       "label": "TFM: red MLP (versión corregida 2026)",
+      "provenance": "TFM · modelo reimplementado en 2026",
       "group": "tfm_demo_adaptado",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -216,6 +230,7 @@
     {
       "id": "tfm_lstm_2023",
       "label": "TFM: red LSTM (versión corregida 2026)",
+      "provenance": "TFM · modelo reimplementado en 2026",
       "group": "tfm_demo_adaptado",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -232,6 +247,7 @@
     {
       "id": "tfm_arima_2023",
       "label": "TFM: ARIMA (versión corregida 2026)",
+      "provenance": "TFM · modelo reimplementado en 2026",
       "group": "tfm_demo_adaptado",
       "status": "programada_sin_diario",
       "first_session": null,
@@ -248,6 +264,7 @@
     {
       "id": "midas_lgbm_weekly_return",
       "label": "MIDAS Python: LightGBM rentabilidad semanal",
+      "provenance": "MIDAS Python · pipeline LightGBM semanal",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -264,6 +281,7 @@
     {
       "id": "midas_lgbm_weekly_direction",
       "label": "MIDAS Python: LightGBM dirección semanal",
+      "provenance": "MIDAS Python · pipeline LightGBM semanal",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -280,6 +298,7 @@
     {
       "id": "midas_lgbm_weekly_price",
       "label": "MIDAS Python: LightGBM precio semanal",
+      "provenance": "MIDAS Python · pipeline LightGBM semanal",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -296,6 +315,7 @@
     {
       "id": "midas_lgbm_combined",
       "label": "MIDAS Python: filtro combinado de los tres LightGBM",
+      "provenance": "MIDAS Python · filtro de los tres LightGBM",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -312,6 +332,7 @@
     {
       "id": "genetic_single_asset_2026",
       "label": "Genético original de un solo activo",
+      "provenance": "Agente genético · prototipo individual 2026",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -328,6 +349,7 @@
     {
       "id": "rsi_itx_70_30",
       "label": "RSI original 70/30 sobre Inditex",
+      "provenance": "Experimento histórico · trading",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -344,6 +366,7 @@
     {
       "id": "ichimoku_aapl",
       "label": "Ichimoku original sobre AAPL",
+      "provenance": "Experimento histórico · trading",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -360,6 +383,7 @@
     {
       "id": "gap_open_close",
       "label": "Gap alcista de apertura a cierre",
+      "provenance": "Experimento histórico · trading intradía",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -376,6 +400,7 @@
     {
       "id": "turtle_short_20_10",
       "label": "Turtle 20/10 corto original",
+      "provenance": "Experimento histórico · trading en corto",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -392,6 +417,7 @@
     {
       "id": "turtle_short_55_20",
       "label": "Turtle 55/20 corto original",
+      "provenance": "Experimento histórico · trading en corto",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -408,6 +434,7 @@
     {
       "id": "momentum_sp500_monthly",
       "label": "Screener momentum mensual S&P 500",
+      "provenance": "Experimento histórico · selección mensual",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -424,6 +451,7 @@
     {
       "id": "coinbase_btc",
       "label": "Bot BTC Coinbase",
+      "provenance": "Bot Coinbase histórico · cripto",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -440,6 +468,7 @@
     {
       "id": "markowitz_weights",
       "label": "Markowitz",
+      "provenance": "Módulo Markowitz · asignación de pesos",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -456,6 +485,7 @@
     {
       "id": "midas_fundamental_filter",
       "label": "Filtro fundamental MIDAS Python",
+      "provenance": "MIDAS Python · filtro fundamental",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
@@ -472,6 +502,7 @@
     {
       "id": "timesfm_zero_shot",
       "label": "TimesFM: predictor zero-shot (hipótesis)",
+      "provenance": "Idea nueva 2026 · TimesFM",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
       "first_session": null,
