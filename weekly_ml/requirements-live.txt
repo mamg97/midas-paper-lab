@@ -1,0 +1,8 @@
+yfinance==1.1.0
+pandas_market_calendars==5.4.0
+pandas==2.3.3
+numpy==2.5.3
+lightgbm==4.7.0
+scikit-learn==1.9.1
+statsmodels==0.15.0
+tensorflow-cpu==2.21.0

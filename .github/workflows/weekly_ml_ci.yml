@@ -1,0 +1,34 @@
+name: MIDAS weekly ML CI
+
+on:
+  pull_request:
+    paths:
+      - 'weekly_ml/**'
+      - 'strategy_comparison/**'
+      - '.github/workflows/weekly_ml.yml'
+      - '.github/workflows/weekly_ml_ci.yml'
+      - '.github/workflows/paper_us.yml'
+      - '.github/workflows/tfm_es.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install full weekly-ML test dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgomp1
+          python -m pip install -r weekly_ml/requirements-live.txt
+      - name: Compile and test
+        run: |
+          python -m py_compile weekly_ml/*.py strategy_comparison/report.py
+          python -m unittest discover -s weekly_ml/tests -v
+          python -m unittest discover -s strategy_comparison/tests -v

@@ -54,7 +54,7 @@ TFM_IDS = {"tfm_lgbm_2023": "lgbm", "tfm_mlp_2023": "mlp",
 
 
 def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
-          tfm_config=None, tfm_state=None):
+          tfm_config=None, tfm_state=None, weekly_config=None, weekly_state=None):
     if registry.get("schema_version") != 1:
         raise ValueError("Versión de registro no válida")
     paper_names = registry.get("paper_tracks", {})
@@ -62,7 +62,11 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
         raise ValueError("Registro y configuración paper no coinciden")
     ideas = registry.get("historical_ideas", [])
     legacy_tracks = registry.get("legacy_tracks", [])
-    ids = list(paper_names) + [x["id"] for x in legacy_tracks + ideas]
+    weekly_tracks = registry.get("weekly_ml_tracks", {})
+    if not isinstance(weekly_tracks, dict):
+        raise ValueError("Registro weekly ML inválido")
+    weekly_ids = [item["id"] for item in weekly_tracks.values()]
+    ids = list(paper_names) + weekly_ids + [x["id"] for x in legacy_tracks + ideas]
     if len(ids) != len(set(ids)):
         raise ValueError("Ideas duplicadas")
     provenance = registry.get("provenance", {})
@@ -86,6 +90,15 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             raise ValueError("El diario TFM pertenece a otra configuración")
         if set(tfm_state.get("models", {})) != set(TFM_IDS.values()):
             raise ValueError("Faltan carteras TFM")
+    if weekly_config is not None:
+        expected_weekly = set(weekly_config.get("models", [])) | {"benchmark_spy", "benchmark_rsp"}
+        if set(weekly_tracks) != expected_weekly:
+            raise ValueError("Registro y configuración weekly ML no coinciden")
+    if weekly_state is not None:
+        if weekly_config is None or weekly_state.get("config_hash") != _config_hash(weekly_config):
+            raise ValueError("El diario weekly ML pertenece a otra configuración")
+        if set(weekly_state.get("strategies", {})) != set(weekly_tracks):
+            raise ValueError("Faltan carteras weekly ML")
     timestamp = now or datetime.now(timezone.utc)
     rows = []
     for strategy_id, label in paper_names.items():
@@ -105,6 +118,31 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        last_session=paper_state.get("last_session"), last_equity=nav,
                        return_pct=round(100 * (nav / capital - 1), 6),
                        day_return_pct=_daily_return(history, strategy_id))
+        rows.append(row)
+    for strategy_key, item in weekly_tracks.items():
+        capital_weekly = None if weekly_config is None else _equity(
+            weekly_config["paper_policy"]["capital"], "capital weekly ML")
+        row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
+               "group": "weekly_ml_demo", "status": "programada_sin_diario",
+               "first_session": None, "last_session": None,
+               "initial_capital": capital_weekly, "last_equity": None,
+               "return_pct": None, "day_return_pct": None,
+               "currency": None if weekly_config is None else weekly_config.get("currency", "USD"),
+               "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."}
+        if weekly_state is not None:
+            book = weekly_state["strategies"][strategy_key]
+            history = book.get("equity", [])
+            if not history:
+                raise ValueError("Cartera weekly ML sin patrimonio: " + strategy_key)
+            nav = _equity(history[-1].get("nav"), strategy_key)
+            if history[-1].get("date") != weekly_state.get("last_session"):
+                raise ValueError("Patrimonio weekly ML sin fecha válida")
+            row.update(status="demo_con_diario",
+                       first_session=weekly_state.get("first_session"),
+                       last_session=weekly_state.get("last_session"),
+                       last_equity=nav,
+                       return_pct=round(100 * (nav / capital_weekly - 1), 6),
+                       day_return_pct=_daily_return(history, strategy_key))
         rows.append(row)
     for item in legacy_tracks:
         row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
@@ -160,14 +198,15 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             "counts": {"paper_with_diary": sum(x["group"] == "paper_nuevo" and x["status"] == "demo_con_diario" for x in rows),
                        "legacy_with_diary": sum(x["status"] == "diario_heredado_observado" for x in rows),
                        "tfm_with_diary": sum(x["group"] == "tfm_demo_adaptado" and x["status"] == "demo_con_diario" for x in rows),
+                       "weekly_ml_with_diary": sum(x["group"] == "weekly_ml_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "historical_pending": sum(x["group"] == "historica_pendiente" for x in rows)}, "tracks": rows}
 
 
 def markdown(report):
     lines = ["# MIDAS: todas las ideas en paralelo", "",
              "Actualizado: " + report["generated_at_utc"] + ". El tablero distingue resultados observados de ideas aún no ejecutadas.", "",
-             "Las rentabilidades de la campaña nueva, el TFM adaptado y el diario genético antiguo **no forman una clasificación común**: empiezan en fechas distintas, usan divisas o reglas de ejecución distintas.", "",
-             "| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Día | Acumulada |", "| --- | --- | --- | --- | --- | ---: | ---: |"]
+             "Las rentabilidades de las campañas diarias, TFM, weekly ML y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.", "",
+             "| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Último periodo | Acumulada |", "| --- | --- | --- | --- | --- | ---: | ---: |"]
     for row in report["tracks"]:
         value = "—" if row["return_pct"] is None else f"{row['return_pct']:.2f} %"
         daily = "—" if row["day_return_pct"] is None else f"{row['day_return_pct']:.2f} %"
@@ -188,12 +227,16 @@ def main(argv=None):
     parser.add_argument("--legacy-state")
     parser.add_argument("--tfm-config")
     parser.add_argument("--tfm-state")
+    parser.add_argument("--weekly-ml-config")
+    parser.add_argument("--weekly-ml-state")
     parser.add_argument("--output", required=True)
     args = parser.parse_args(argv)
     report = build(_read(args.registry), _read(args.paper_config),
                    _read(args.paper_state, optional=True), _read(args.legacy_state, optional=True) if args.legacy_state else None,
                    tfm_config=_read(args.tfm_config) if args.tfm_config else None,
-                   tfm_state=_read(args.tfm_state, optional=True) if args.tfm_state else None)
+                   tfm_state=_read(args.tfm_state, optional=True) if args.tfm_state else None,
+                   weekly_config=_read(args.weekly_ml_config) if args.weekly_ml_config else None,
+                   weekly_state=_read(args.weekly_ml_state, optional=True) if args.weekly_ml_state else None)
     output = Path(args.output)
     _write(output / "dashboard.json", json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     _write(output / "dashboard.md", markdown(report))

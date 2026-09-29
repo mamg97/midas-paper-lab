@@ -47,6 +47,8 @@ jobs:
             --paper-state paper_state/state.json \
             --tfm-config tfm_shadow/config.json \
             --tfm-state tfm_state/ledger.json \
+            --weekly-ml-config weekly_ml/config.json \
+            --weekly-ml-state weekly_ml_state/ledger.json \
             --output strategy_state
       - name: Commit only MIDAS paper and comparison state
         if: ${{ always() && !inputs.preflight_only }}
