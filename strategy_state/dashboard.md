@@ -1,10 +1,10 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-09-29T17:31:32.434716+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-09-29T23:03:23.668109+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
-Las rentabilidades de la campaña nueva, el TFM adaptado y el diario genético antiguo **no forman una clasificación común**: empiezan en fechas distintas, usan divisas o reglas de ejecución distintas.
+Las rentabilidades de las campañas diarias, TFM, weekly ML y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
-| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Día | Acumulada |
+| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Último periodo | Acumulada |
 | --- | --- | --- | --- | --- | ---: | ---: |
 | Referencia SPY | Campaña nueva 2026 · referencia SPY | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
 | Referencia ocho acciones equiponderadas | Campaña nueva 2026 · referencia equiponderada | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
@@ -15,6 +15,15 @@ Las rentabilidades de la campaña nueva, el TFM adaptado y el diario genético a
 | Bollinger ruptura, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
 | Turtle 20/10 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
 | Turtle 55/20 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
+| ML semanal · referencia SPY | Campaña ML semanal 2026 · referencia SPY | programada_sin_diario | — | — | — | — |
+| ML semanal · referencia RSP | Campaña ML semanal 2026 · referencia RSP equiponderada | programada_sin_diario | — | — | — | — |
+| ML semanal · LightGBM rentabilidad | MIDAS Python v2 · regresión semanal corregida 2026 | programada_sin_diario | — | — | — | — |
+| ML semanal · LightGBM dirección | MIDAS Python v2 · clasificación semanal corregida 2026 | programada_sin_diario | — | — | — | — |
+| ML semanal · LightGBM ranker | MIDAS nuevo 2026 · ranking cross-sectional que sustituye precio absoluto | programada_sin_diario | — | — | — | — |
+| ML semanal · MLP | TFM/ML · MLP adaptado al horizonte semanal | programada_sin_diario | — | — | — | — |
+| ML semanal · LSTM | TFM/ML · LSTM adaptado al horizonte semanal | programada_sin_diario | — | — | — | — |
+| ML semanal · ARIMA | TFM/ML · ARIMA adaptado al horizonte semanal | programada_sin_diario | — | — | — | — |
+| ML semanal · ensemble consenso | MIDAS nuevo 2026 · consenso de expertos semanales | programada_sin_diario | — | — | — | — |
 | Genético original S&P 500 | Agente genético S&P 500 original · 2026 | sin_diario_disponible | — | — | — | — |
 | TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo | TFG 2021 · MIDAS en R | sin_ejecucion_comparable | — | — | — | — |
 | MIDAS R cripto | MIDAS en R · experimento cripto | sin_ejecucion_comparable | — | — | — | — |
