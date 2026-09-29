@@ -1,0 +1,3 @@
+bootstrap_signal_asof=2026-09-25
+bootstrap_entry_and_mark=2026-09-28
+purpose=end_to_end_smoke_only
