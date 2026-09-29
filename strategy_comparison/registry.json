@@ -43,7 +43,16 @@
     "coinbase_btc": "Bot Coinbase histórico · cripto",
     "markowitz_weights": "Módulo Markowitz · asignación de pesos",
     "midas_fundamental_filter": "MIDAS Python · filtro fundamental",
-    "timesfm_zero_shot": "Idea nueva 2026 · TimesFM"
+    "timesfm_zero_shot": "Idea nueva 2026 · TimesFM",
+    "weekly_ml_benchmark_spy": "Campaña ML semanal 2026 · referencia SPY",
+    "weekly_ml_benchmark_rsp": "Campaña ML semanal 2026 · referencia RSP equiponderada",
+    "weekly_ml_lgbm_return_2026": "MIDAS Python v2 · regresión semanal corregida 2026",
+    "weekly_ml_lgbm_direction_2026": "MIDAS Python v2 · clasificación semanal corregida 2026",
+    "weekly_ml_lgbm_ranker_2026": "MIDAS nuevo 2026 · ranking cross-sectional que sustituye precio absoluto",
+    "weekly_ml_mlp_2026": "TFM/ML · MLP adaptado al horizonte semanal",
+    "weekly_ml_lstm_2026": "TFM/ML · LSTM adaptado al horizonte semanal",
+    "weekly_ml_arima_2026": "TFM/ML · ARIMA adaptado al horizonte semanal",
+    "weekly_ml_ensemble_2026": "MIDAS nuevo 2026 · consenso de expertos semanales"
   },
   "legacy_tracks": [
     {
@@ -202,5 +211,43 @@
       "source": "research/TIMESFM.md",
       "blocker": "Fijar universo, horizonte, versión del modelo y regla de órdenes; validar prospectivamente antes de activar una cartera."
     }
-  ]
+  ],
+  "weekly_ml_tracks": {
+    "benchmark_spy": {
+      "id": "weekly_ml_benchmark_spy",
+      "label": "ML semanal · referencia SPY"
+    },
+    "benchmark_rsp": {
+      "id": "weekly_ml_benchmark_rsp",
+      "label": "ML semanal · referencia RSP"
+    },
+    "lgbm_return": {
+      "id": "weekly_ml_lgbm_return_2026",
+      "label": "ML semanal · LightGBM rentabilidad"
+    },
+    "lgbm_direction": {
+      "id": "weekly_ml_lgbm_direction_2026",
+      "label": "ML semanal · LightGBM dirección"
+    },
+    "lgbm_ranker": {
+      "id": "weekly_ml_lgbm_ranker_2026",
+      "label": "ML semanal · LightGBM ranker"
+    },
+    "mlp_return": {
+      "id": "weekly_ml_mlp_2026",
+      "label": "ML semanal · MLP"
+    },
+    "lstm_return": {
+      "id": "weekly_ml_lstm_2026",
+      "label": "ML semanal · LSTM"
+    },
+    "arima_return": {
+      "id": "weekly_ml_arima_2026",
+      "label": "ML semanal · ARIMA"
+    },
+    "ensemble_consensus": {
+      "id": "weekly_ml_ensemble_2026",
+      "label": "ML semanal · ensemble consenso"
+    }
+  }
 }
