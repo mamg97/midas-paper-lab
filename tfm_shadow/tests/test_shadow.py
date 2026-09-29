@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from forecast import make_samples, validate_panel
-from market import eligible_session
+from market import eligible_session, contiguous_complete_panel
 from run import evaluate, run
 from paper import advance
 
@@ -24,6 +24,26 @@ def panel(length=140):
 
 
 class ForecastContractTests(unittest.TestCase):
+    def test_old_bad_provider_bar_truncates_history_without_inventing_price(self):
+        data = panel(150)
+        dates = [bar["date"] for bar in data["AAA.MC"]]
+        data["BBB.MC"][4]["close"] = float("nan")
+        clean = contiguous_complete_panel(data, dates, dates[-1], minimum=130)
+        self.assertEqual(len(clean["AAA.MC"]), 145)
+        self.assertEqual(clean["AAA.MC"][0]["date"], dates[5])
+        self.assertEqual(clean["BBB.MC"][-1]["close"], data["BBB.MC"][-1]["close"])
+
+    def test_recent_or_current_bad_bar_stops_the_forecast(self):
+        data = panel(150)
+        dates = [bar["date"] for bar in data["AAA.MC"]]
+        data["BBB.MC"][100]["close"] = float("nan")
+        with self.assertRaisesRegex(ValueError, "Historial continuo insuficiente"):
+            contiguous_complete_panel(data, dates, dates[-1], minimum=130)
+        data["BBB.MC"][100]["close"] = 100.0
+        data["BBB.MC"][-1]["close"] = float("nan")
+        with self.assertRaisesRegex(ValueError, "Última sesión incompleta"):
+            contiguous_complete_panel(data, dates, dates[-1], minimum=130)
+
     def test_delayed_workflow_stays_before_next_market_open(self):
         madrid = timezone(timedelta(hours=2))
         self.assertEqual(eligible_session(datetime(2026, 9, 28, 21, 0, tzinfo=madrid)),
