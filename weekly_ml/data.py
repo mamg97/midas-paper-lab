@@ -236,17 +236,23 @@ def build_dataset(panel, sectors, usable, asof, minimum_live=300, minimum_labell
             }
             if i + 1 < len(groups):
                 next_block = groups[i + 1][1]
-                target_open = float(next_block["open"].iloc[0])
-                target_close = float(next_block["close"].iloc[-1])
-                target = target_close / target_open - 1
-                if math.isfinite(target):
-                    record.update(
-                        target_return=float(target),
-                        target_positive=int(target > 0),
-                        target_end_date=next_block.index[-1].date().isoformat(),
-                    )
-                    labelled.append(record)
-                    rows_for_ticker += 1
+                target_end_date = next_block.index[-1].date().isoformat()
+                # A training label is legal only after the entire target week has
+                # completed by the current signal cutoff.  This guard is what
+                # prevents future bars appended to the input from changing past
+                # training rows.
+                if target_end_date <= asof:
+                    target_open = float(next_block["open"].iloc[0])
+                    target_close = float(next_block["close"].iloc[-1])
+                    target = target_close / target_open - 1
+                    if math.isfinite(target):
+                        record.update(
+                            target_return=float(target),
+                            target_positive=int(target > 0),
+                            target_end_date=target_end_date,
+                        )
+                        labelled.append(record)
+                        rows_for_ticker += 1
             if signal_date.date().isoformat() == asof:
                 live.append(record)
         if rows_for_ticker < minimum_labelled_weeks or not any(row["ticker"] == ticker for row in live):
