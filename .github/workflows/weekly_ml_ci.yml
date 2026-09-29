@@ -22,8 +22,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install lightweight test dependencies
-        run: python -m pip install pandas==2.3.3 numpy==2.5.3
+      - name: Install full weekly-ML test dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgomp1
+          python -m pip install -r weekly_ml/requirements-live.txt
       - name: Compile and test
         run: |
           python -m py_compile weekly_ml/*.py strategy_comparison/report.py
