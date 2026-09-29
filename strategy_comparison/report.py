@@ -49,6 +49,23 @@ def _daily_return(history, label):
     return round(100 * (current / previous - 1), 6)
 
 
+def _equity_history(history, label, limit=520):
+    if not isinstance(history, list):
+        return []
+    points = []
+    for item in history[-limit:]:
+        if not isinstance(item, dict):
+            raise ValueError("Histórico de patrimonio inválido: " + label)
+        date = item.get("date")
+        nav = _equity(item.get("nav"), label + " histórico")
+        if not isinstance(date, str) or len(date) < 10:
+            raise ValueError("Fecha de patrimonio inválida: " + label)
+        points.append({"date": date[:10], "nav": nav})
+    if any(points[index]["date"] <= points[index - 1]["date"] for index in range(1, len(points))):
+        raise ValueError("Histórico de patrimonio desordenado: " + label)
+    return points
+
+
 TFM_IDS = {"tfm_lgbm_2023": "lgbm", "tfm_mlp_2023": "mlp",
            "tfm_lstm_2023": "lstm", "tfm_arima_2023": "arima"}
 
@@ -106,7 +123,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                "group": "paper_nuevo", "status": "programada_sin_diario",
                "first_session": None, "last_session": None, "initial_capital": capital, "last_equity": None,
                "return_pct": None, "day_return_pct": None, "currency": paper_config.get("currency", "USD"),
-               "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."}
+               "equity_history": [], "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."}
         if paper_state is not None:
             book = paper_state["strategies"][strategy_id]
             history = book.get("equity", [])
@@ -117,7 +134,8 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        first_session=paper_state.get("first_session"),
                        last_session=paper_state.get("last_session"), last_equity=nav,
                        return_pct=round(100 * (nav / capital - 1), 6),
-                       day_return_pct=_daily_return(history, strategy_id))
+                       day_return_pct=_daily_return(history, strategy_id),
+                       equity_history=_equity_history(history, strategy_id))
         rows.append(row)
     for strategy_key, item in weekly_tracks.items():
         capital_weekly = None if weekly_config is None else _equity(
@@ -128,6 +146,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                "initial_capital": capital_weekly, "last_equity": None,
                "return_pct": None, "day_return_pct": None,
                "currency": None if weekly_config is None else weekly_config.get("currency", "USD"),
+               "equity_history": [],
                "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."}
         if weekly_state is not None:
             book = weekly_state["strategies"][strategy_key]
@@ -142,14 +161,15 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        last_session=weekly_state.get("last_session"),
                        last_equity=nav,
                        return_pct=round(100 * (nav / capital_weekly - 1), 6),
-                       day_return_pct=_daily_return(history, strategy_key))
+                       day_return_pct=_daily_return(history, strategy_key),
+                       equity_history=_equity_history(history, strategy_key))
         rows.append(row)
     for item in legacy_tracks:
         row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
                "group": "diario_heredado",
                "status": "sin_diario_disponible", "first_session": None, "last_session": None,
                "initial_capital": None, "last_equity": None, "return_pct": None,
-               "day_return_pct": None, "currency": None,
+               "day_return_pct": None, "currency": None, "equity_history": [],
                "note": item["note"]}
         if item["id"] == "genetic_sp500_legacy" and legacy_state is not None:
             history = legacy_state.get("equity_history")
@@ -162,7 +182,9 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             nav = _equity(history[dates[-1]], "patrimonio genético")
             row.update(status="diario_heredado_observado", first_session=dates[0], last_session=dates[-1],
                        initial_capital=initial, last_equity=nav,
-                       return_pct=round(100 * (nav / initial - 1), 6))
+                       return_pct=round(100 * (nav / initial - 1), 6),
+                       equity_history=[{"date": date[:10], "nav": _equity(history[date], "patrimonio genético histórico")}
+                                       for date in dates[-520:]])
         rows.append(row)
     for item in ideas:
         if item["id"] in TFM_IDS and tfm_config is not None:
@@ -172,7 +194,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                    "first_session": None, "last_session": None,
                    "initial_capital": _equity(tfm_config["paper_policy"]["capital"], "capital TFM"),
                    "last_equity": None, "return_pct": None, "day_return_pct": None,
-                   "currency": tfm_config.get("currency", "EUR"),
+                   "currency": tfm_config.get("currency", "EUR"), "equity_history": [],
                    "note": "Modelo del TFM reimplementado; regla de cartera común provisional, distinta de la tesis.",
                    "kind": item["kind"], "source": item["source"]}
             if tfm_state is not None:
@@ -184,14 +206,15 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                 row.update(status="demo_con_diario", first_session=tfm_state.get("first_session"),
                            last_session=tfm_state.get("last_session"), last_equity=nav,
                            return_pct=round(100 * (nav / capital_tfm - 1), 6),
-                           day_return_pct=_daily_return(book["equity"], item["id"]))
+                           day_return_pct=_daily_return(book["equity"], item["id"]),
+                           equity_history=_equity_history(book["equity"], item["id"]))
             rows.append(row)
         else:
             rows.append({"id": item["id"], "label": item["label"],
                          "provenance": provenance[item["id"]], "group": "historica_pendiente",
                          "status": "sin_ejecucion_comparable", "first_session": None, "last_session": None,
                          "initial_capital": None, "last_equity": None, "return_pct": None,
-                         "day_return_pct": None, "currency": None,
+                         "day_return_pct": None, "currency": None, "equity_history": [],
                          "note": item["blocker"], "kind": item["kind"], "source": item["source"]})
     return {"schema_version": 1, "generated_at_utc": timestamp.isoformat(),
             "principle": "No ordenar rentabilidades de carteras con distintas fechas de inicio o supuestos de ejecución.",
