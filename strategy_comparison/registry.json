@@ -120,10 +120,10 @@
     },
     {
       "id": "midas_lgbm_combined",
-      "label": "MIDAS Python: filtro combinado de los tres LightGBM",
-      "kind": "estrategia semanal",
+      "label": "MIDAS Python v2: selección semanal de hasta 30 empresas",
+      "kind": "estrategia semanal de selección",
       "source": "fuente histórica privada, no publicada",
-      "blocker": "Depende de tres predicciones y features semanales; exige datos actuales, versión de modelos y órdenes fechadas."
+      "blocker": "El código original sí proponía inversiones semanales: combina tres predicciones, RSI y ranking. Para medir rentabilidad demo faltan datos actuales, modelos causales, órdenes fechadas y contabilidad de ejecución."
     },
     {
       "id": "genetic_single_asset_2026",

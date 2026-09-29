@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-29T02:41:44.709441+00:00",
+  "generated_at_utc": "2026-09-29T17:31:32.434716+00:00",
   "principle": "No ordenar rentabilidades de carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
@@ -314,7 +314,7 @@
     },
     {
       "id": "midas_lgbm_combined",
-      "label": "MIDAS Python: filtro combinado de los tres LightGBM",
+      "label": "MIDAS Python v2: selección semanal de hasta 30 empresas",
       "provenance": "MIDAS Python · filtro de los tres LightGBM",
       "group": "historica_pendiente",
       "status": "sin_ejecucion_comparable",
@@ -325,8 +325,8 @@
       "return_pct": null,
       "day_return_pct": null,
       "currency": null,
-      "note": "Depende de tres predicciones y features semanales; exige datos actuales, versión de modelos y órdenes fechadas.",
-      "kind": "estrategia semanal",
+      "note": "El código original sí proponía inversiones semanales: combina tres predicciones, RSI y ranking. Para medir rentabilidad demo faltan datos actuales, modelos causales, órdenes fechadas y contabilidad de ejecución.",
+      "kind": "estrategia semanal de selección",
       "source": "fuente histórica privada, no publicada"
     },
     {

@@ -1,6 +1,6 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-09-29T02:41:44.709441+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-09-29T17:31:32.434716+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 Las rentabilidades de la campaña nueva, el TFM adaptado y el diario genético antiguo **no forman una clasificación común**: empiezan en fechas distintas, usan divisas o reglas de ejecución distintas.
 
@@ -25,7 +25,7 @@ Las rentabilidades de la campaña nueva, el TFM adaptado y el diario genético a
 | MIDAS Python: LightGBM rentabilidad semanal | MIDAS Python · pipeline LightGBM semanal | sin_ejecucion_comparable | — | — | — | — |
 | MIDAS Python: LightGBM dirección semanal | MIDAS Python · pipeline LightGBM semanal | sin_ejecucion_comparable | — | — | — | — |
 | MIDAS Python: LightGBM precio semanal | MIDAS Python · pipeline LightGBM semanal | sin_ejecucion_comparable | — | — | — | — |
-| MIDAS Python: filtro combinado de los tres LightGBM | MIDAS Python · filtro de los tres LightGBM | sin_ejecucion_comparable | — | — | — | — |
+| MIDAS Python v2: selección semanal de hasta 30 empresas | MIDAS Python · filtro de los tres LightGBM | sin_ejecucion_comparable | — | — | — | — |
 | Genético original de un solo activo | Agente genético · prototipo individual 2026 | sin_ejecucion_comparable | — | — | — | — |
 | RSI original 70/30 sobre Inditex | Experimento histórico · trading | sin_ejecucion_comparable | — | — | — | — |
 | Ichimoku original sobre AAPL | Experimento histórico · trading | sin_ejecucion_comparable | — | — | — | — |
@@ -45,7 +45,7 @@ Las rentabilidades de la campaña nueva, el TFM adaptado y el diario genético a
 - **MIDAS Python: LightGBM rentabilidad semanal**: Los datos/Features llegan hasta 2024 y el entrenamiento mezclaba semanas; rehacer el pipeline cronológico.
 - **MIDAS Python: LightGBM dirección semanal**: Rehacer features y entrenamiento cronológicos; no cargar pickle legado sin contrato verificado.
 - **MIDAS Python: LightGBM precio semanal**: Rehacer features y entrenamiento cronológicos; no cargar pickle legado sin contrato verificado.
-- **MIDAS Python: filtro combinado de los tres LightGBM**: Depende de tres predicciones y features semanales; exige datos actuales, versión de modelos y órdenes fechadas.
+- **MIDAS Python v2: selección semanal de hasta 30 empresas**: El código original sí proponía inversiones semanales: combina tres predicciones, RSI y ranking. Para medir rentabilidad demo faltan datos actuales, modelos causales, órdenes fechadas y contabilidad de ejecución.
 - **Genético original de un solo activo**: Separar entrenamiento y ejecución del mismo cierre, elegir activo y congelar versión antes de empezar.
 - **RSI original 70/30 sobre Inditex**: El original usa posición -1/0/+1 sobre retornos al cierre; el motor actual es solo largo y no replica cortos/costes.
 - **Ichimoku original sobre AAPL**: La referencia a close(-26) puede mirar al futuro; corregir y marcar una versión nueva antes de ejecutarla.
