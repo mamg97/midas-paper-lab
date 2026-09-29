@@ -10,6 +10,12 @@ Hay nueve carteras USD sobre ocho acciones estadounidenses y SPY, incluidas dos 
 
 Las señales se calculan con información disponible al cierre. Las operaciones se modelan con la apertura o el cierre posterior, más comisión del 0,1 % y deslizamiento supuesto del 0,05 % por lado. Se registran órdenes pendientes, patrimonio, errores y sesiones omitidas. No se modelan todos los detalles de un bróker real; consulta [paper_demo](paper_demo/README.md) y [tfm_shadow](tfm_shadow/README.md).
 
+## MIDAS Weekly ML
+
+Desde el 29/09/2026 existe además una campaña **semanal** sobre un universo S&P-derived congelado de 503 acciones. Combina LightGBM (retorno, dirección y ranking), MLP, LSTM, ARIMA y un ensemble de consenso, con SPY y RSP como referencias. Predice el retorno ejecutable de la semana siguiente (primera apertura → último cierre), entrena solo con etiquetas conocidas y mantiene una cartera ficticia independiente por experto.
+
+El código y contrato están en [weekly_ml](weekly_ml/README.md). El workflow se ejecuta tras el cierre semanal de EE. UU. y no crea resultados retroactivos: hasta la primera señal prospectiva sus filas deben mostrarse como programadas/sin diario.
+
 ## Ejecución y coste
 
 Los dos workflows se programan tras los cierres de Madrid y Nueva York, con ejecución manual disponible. En un repositorio público, GitHub indica que el uso de runners estándar de Actions es gratuito; esto no garantiza puntualidad, disponibilidad de datos ni ausencia de límites de uso. No se instala TimesFM ni se descargan sus pesos en cada ejecución. Los cuatro modelos TFM sí se entrenan diariamente con los datos conocidos hasta ese cierre; el genoma estadounidense permanece congelado. Se impone un máximo de 45 minutos al TFM y 30 al ciclo estadounidense. Consulta la [documentación oficial de facturación](https://docs.github.com/en/billing/concepts/product-billing/github-actions).
