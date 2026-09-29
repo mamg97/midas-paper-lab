@@ -12,6 +12,8 @@ Las señales se calculan con información disponible al cierre. Las operaciones 
 
 ## MIDAS Weekly ML
 
+👉 **[Dashboard visual de modelos y predicciones](WEEKLY_ML_DASHBOARD.md)**
+
 Desde el 29/09/2026 existe además una campaña **semanal** sobre un universo S&P-derived congelado de 503 acciones. Combina LightGBM (retorno, dirección y ranking), MLP, LSTM, ARIMA y un ensemble de consenso, con SPY y RSP como referencias. Predice el retorno ejecutable de la semana siguiente (primera apertura → último cierre), entrena solo con etiquetas conocidas y mantiene una cartera ficticia independiente por experto.
 
 El código y contrato están en [weekly_ml](weekly_ml/README.md). El workflow se ejecuta tras el cierre semanal de EE. UU. y no crea resultados retroactivos: hasta la primera señal prospectiva sus filas deben mostrarse como programadas/sin diario.
