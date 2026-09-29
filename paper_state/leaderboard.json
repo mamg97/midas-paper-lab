@@ -1,0 +1,110 @@
+[
+  {
+    "fills": 0,
+    "first_session": "2026-09-28",
+    "last_session": "2026-09-28",
+    "max_drawdown_pct": 0,
+    "missed_decisions": 0,
+    "nav": 100000.0,
+    "positions": 0,
+    "return_pct": 0.0,
+    "status": "active",
+    "strategy": "benchmark_spy"
+  },
+  {
+    "fills": 0,
+    "first_session": "2026-09-28",
+    "last_session": "2026-09-28",
+    "max_drawdown_pct": 0,
+    "missed_decisions": 0,
+    "nav": 100000.0,
+    "positions": 0,
+    "return_pct": 0.0,
+    "status": "active",
+    "strategy": "bollinger_breakout_20"
+  },
+  {
+    "fills": 0,
+    "first_session": "2026-09-28",
+    "last_session": "2026-09-28",
+    "max_drawdown_pct": 0,
+    "missed_decisions": 0,
+    "nav": 100000.0,
+    "positions": 0,
+    "return_pct": 0.0,
+    "status": "active",
+    "strategy": "buy_hold_equal_weight"
+  },
+  {
+    "fills": 0,
+    "first_session": "2026-09-28",
+    "last_session": "2026-09-28",
+    "max_drawdown_pct": 0,
+    "missed_decisions": 0,
+    "nav": 100000.0,
+    "positions": 0,
+    "return_pct": 0.0,
+    "status": "active",
+    "strategy": "ema_rsi_fixed"
+  },
+  {
+    "fills": 0,
+    "first_session": "2026-09-28",
+    "last_session": "2026-09-28",
+    "max_drawdown_pct": 0,
+    "missed_decisions": 0,
+    "nav": 100000.0,
+    "positions": 0,
+    "return_pct": 0.0,
+    "status": "active",
+    "strategy": "genetic_frozen"
+  },
+  {
+    "fills": 0,
+    "first_session": "2026-09-28",
+    "last_session": "2026-09-28",
+    "max_drawdown_pct": 0,
+    "missed_decisions": 0,
+    "nav": 100000.0,
+    "positions": 0,
+    "return_pct": 0.0,
+    "status": "active",
+    "strategy": "macd_12_26_9"
+  },
+  {
+    "fills": 0,
+    "first_session": "2026-09-28",
+    "last_session": "2026-09-28",
+    "max_drawdown_pct": 0,
+    "missed_decisions": 0,
+    "nav": 100000.0,
+    "positions": 0,
+    "return_pct": 0.0,
+    "status": "active",
+    "strategy": "rsi_reversion_14"
+  },
+  {
+    "fills": 0,
+    "first_session": "2026-09-28",
+    "last_session": "2026-09-28",
+    "max_drawdown_pct": 0,
+    "missed_decisions": 0,
+    "nav": 100000.0,
+    "positions": 0,
+    "return_pct": 0.0,
+    "status": "active",
+    "strategy": "turtle_20_10_long"
+  },
+  {
+    "fills": 0,
+    "first_session": "2026-09-28",
+    "last_session": "2026-09-28",
+    "max_drawdown_pct": 0,
+    "missed_decisions": 0,
+    "nav": 100000.0,
+    "positions": 0,
+    "return_pct": 0.0,
+    "status": "active",
+    "strategy": "turtle_55_20_long"
+  }
+]

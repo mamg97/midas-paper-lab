@@ -1,0 +1,243 @@
+{
+  "config_hash": "acd19e661c3c4c9bea9cd94bc771d5d8e6a961f8a71ce8684aa80dcab0dd8ff4",
+  "first_session": "2026-09-28",
+  "last_session": "2026-09-28",
+  "market_hashes": {
+    "2026-09-28": "56a5dd3caf078571b094efd252177324cf44b99f1784871ef1fe5cb0d94f24a7"
+  },
+  "missed_decision_sessions": [],
+  "schema_version": 1,
+  "source": "yfinance/raw_ohlc",
+  "strategies": {
+    "benchmark_spy": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "cash": 100000.0,
+          "date": "2026-09-28",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "events": [
+        {
+          "date": "2026-09-28",
+          "side": "buy",
+          "ticker": "SPY",
+          "type": "signal"
+        }
+      ],
+      "pending": {
+        "SPY": {
+          "side": "buy",
+          "signal_date": "2026-09-28"
+        }
+      },
+      "positions": {},
+      "status": "active"
+    },
+    "bollinger_breakout_20": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "cash": 100000.0,
+          "date": "2026-09-28",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "pending": {},
+      "positions": {},
+      "status": "active"
+    },
+    "buy_hold_equal_weight": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "cash": 100000.0,
+          "date": "2026-09-28",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "events": [
+        {
+          "date": "2026-09-28",
+          "side": "buy",
+          "ticker": "AAPL",
+          "type": "signal"
+        },
+        {
+          "date": "2026-09-28",
+          "side": "buy",
+          "ticker": "AMZN",
+          "type": "signal"
+        },
+        {
+          "date": "2026-09-28",
+          "side": "buy",
+          "ticker": "JNJ",
+          "type": "signal"
+        },
+        {
+          "date": "2026-09-28",
+          "side": "buy",
+          "ticker": "JPM",
+          "type": "signal"
+        },
+        {
+          "date": "2026-09-28",
+          "side": "buy",
+          "ticker": "KO",
+          "type": "signal"
+        },
+        {
+          "date": "2026-09-28",
+          "side": "buy",
+          "ticker": "MSFT",
+          "type": "signal"
+        },
+        {
+          "date": "2026-09-28",
+          "side": "buy",
+          "ticker": "NVDA",
+          "type": "signal"
+        },
+        {
+          "date": "2026-09-28",
+          "side": "buy",
+          "ticker": "XOM",
+          "type": "signal"
+        }
+      ],
+      "pending": {
+        "AAPL": {
+          "side": "buy",
+          "signal_date": "2026-09-28"
+        },
+        "AMZN": {
+          "side": "buy",
+          "signal_date": "2026-09-28"
+        },
+        "JNJ": {
+          "side": "buy",
+          "signal_date": "2026-09-28"
+        },
+        "JPM": {
+          "side": "buy",
+          "signal_date": "2026-09-28"
+        },
+        "KO": {
+          "side": "buy",
+          "signal_date": "2026-09-28"
+        },
+        "MSFT": {
+          "side": "buy",
+          "signal_date": "2026-09-28"
+        },
+        "NVDA": {
+          "side": "buy",
+          "signal_date": "2026-09-28"
+        },
+        "XOM": {
+          "side": "buy",
+          "signal_date": "2026-09-28"
+        }
+      },
+      "positions": {},
+      "status": "active"
+    },
+    "ema_rsi_fixed": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "cash": 100000.0,
+          "date": "2026-09-28",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "pending": {},
+      "positions": {},
+      "status": "active"
+    },
+    "genetic_frozen": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "cash": 100000.0,
+          "date": "2026-09-28",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "pending": {},
+      "positions": {},
+      "status": "active"
+    },
+    "macd_12_26_9": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "cash": 100000.0,
+          "date": "2026-09-28",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "pending": {},
+      "positions": {},
+      "status": "active"
+    },
+    "rsi_reversion_14": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "cash": 100000.0,
+          "date": "2026-09-28",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "pending": {},
+      "positions": {},
+      "status": "active"
+    },
+    "turtle_20_10_long": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "cash": 100000.0,
+          "date": "2026-09-28",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "pending": {},
+      "positions": {},
+      "status": "active"
+    },
+    "turtle_55_20_long": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "cash": 100000.0,
+          "date": "2026-09-28",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "pending": {},
+      "positions": {},
+      "status": "active"
+    }
+  },
+  "synthetic": false
+}

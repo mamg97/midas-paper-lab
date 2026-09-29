@@ -1,20 +1,20 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-09-28T23:52:33.094318+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-09-29T02:41:44.709441+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 Las rentabilidades de la campaña nueva, el TFM adaptado y el diario genético antiguo **no forman una clasificación común**: empiezan en fechas distintas, usan divisas o reglas de ejecución distintas.
 
 | Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Día | Acumulada |
 | --- | --- | --- | --- | --- | ---: | ---: |
-| Referencia SPY | Campaña nueva 2026 · referencia SPY | programada_sin_diario | — | — | — | — |
-| Referencia ocho acciones equiponderadas | Campaña nueva 2026 · referencia equiponderada | programada_sin_diario | — | — | — | — |
-| EMA/RSI fijo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | programada_sin_diario | — | — | — | — |
-| Genético nuevo congelado, ocho acciones | MIDAS nuevo 2026 · genético congelado | programada_sin_diario | — | — | — | — |
-| MACD, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | programada_sin_diario | — | — | — | — |
-| RSI reversión, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | programada_sin_diario | — | — | — | — |
-| Bollinger ruptura, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | programada_sin_diario | — | — | — | — |
-| Turtle 20/10 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | programada_sin_diario | — | — | — | — |
-| Turtle 55/20 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | programada_sin_diario | — | — | — | — |
+| Referencia SPY | Campaña nueva 2026 · referencia SPY | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
+| Referencia ocho acciones equiponderadas | Campaña nueva 2026 · referencia equiponderada | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
+| EMA/RSI fijo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
+| Genético nuevo congelado, ocho acciones | MIDAS nuevo 2026 · genético congelado | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
+| MACD, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
+| RSI reversión, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
+| Bollinger ruptura, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
+| Turtle 20/10 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
+| Turtle 55/20 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 2026-09-28 | 2026-09-28 | — | 0.00 % |
 | Genético original S&P 500 | Agente genético S&P 500 original · 2026 | sin_diario_disponible | — | — | — | — |
 | TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo | TFG 2021 · MIDAS en R | sin_ejecucion_comparable | — | — | — | — |
 | MIDAS R cripto | MIDAS en R · experimento cripto | sin_ejecucion_comparable | — | — | — | — |
