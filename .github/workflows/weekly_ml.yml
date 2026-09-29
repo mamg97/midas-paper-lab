@@ -43,6 +43,17 @@ jobs:
       - name: Record weekly ML forecasts and paper portfolios
         if: ${{ !inputs.preflight_only }}
         run: python weekly_ml/run.py --output weekly_ml_state
+      - name: Refresh Weekly ML human dashboard
+        if: ${{ always() && !inputs.preflight_only }}
+        run: |
+          latest_forecast="$(ls weekly_ml_state/forecasts/*.json 2>/dev/null | sort | tail -1 || true)"
+          if [ -n "$latest_forecast" ]; then
+            python weekly_ml/report.py \
+              --forecast "$latest_forecast" \
+              --ledger weekly_ml_state/ledger.json \
+              --bootstrap weekly_ml_bootstrap_state/bootstrap_2026-09-25.json \
+              --output WEEKLY_ML_DASHBOARD.md
+          fi
       - name: Refresh all-strategy dashboard
         if: ${{ always() && !inputs.preflight_only }}
         run: |
@@ -60,6 +71,9 @@ jobs:
         run: |
           if [ -d weekly_ml_state ]; then
             git add -- weekly_ml_state
+          fi
+          if [ -f WEEKLY_ML_DASHBOARD.md ]; then
+            git add -- WEEKLY_ML_DASHBOARD.md
           fi
           if [ -f strategy_state/dashboard.json ] && [ -f strategy_state/dashboard.md ]; then
             git add -- strategy_state/dashboard.json strategy_state/dashboard.md
