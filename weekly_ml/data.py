@@ -198,7 +198,7 @@ def _daily_features(frame, market):
     return result
 
 
-def build_dataset(panel, sectors, usable, asof, minimum_live=300):
+def build_dataset(panel, sectors, usable, asof, minimum_live=300, minimum_labelled_weeks=52):
     """Return causal labelled rows plus one live row per usable ticker."""
     market = panel["SPY"]
     labelled = []
@@ -249,7 +249,7 @@ def build_dataset(panel, sectors, usable, asof, minimum_live=300):
                     rows_for_ticker += 1
             if signal_date.date().isoformat() == asof:
                 live.append(record)
-        if rows_for_ticker < 80 or not any(row["ticker"] == ticker for row in live):
+        if rows_for_ticker < minimum_labelled_weeks or not any(row["ticker"] == ticker for row in live):
             excluded[ticker] = "insufficient_feature_history_or_live_row"
 
     if not labelled or not live:
