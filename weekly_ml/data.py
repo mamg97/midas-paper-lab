@@ -122,13 +122,19 @@ def live_panel(config, universe_path, now=None):
                 failures[ticker] = "download_empty"
                 continue
             frame = frame.loc[frame.index.date <= datetime.fromisoformat(asof).date()]
-            if frame.empty or frame.index[-1].date().isoformat() != asof:
+            if frame.empty:
+                failures[ticker] = "empty_before_asof"
+                continue
+            # Preserve the observed history even when the latest bar is missing.  A ticker
+            # can then still settle a previously committed paper order without being
+            # eligible for a new signal.  We never synthesize the missing latest bar.
+            panel[ticker] = frame
+            if frame.index[-1].date().isoformat() != asof:
                 failures[ticker] = "missing_asof"
                 continue
             if len(frame) < int(config["feature_min_history_days"]):
                 failures[ticker] = f"history_{len(frame)}"
                 continue
-            panel[ticker] = frame
 
     for benchmark in config["benchmark_tickers"]:
         if benchmark not in panel:
