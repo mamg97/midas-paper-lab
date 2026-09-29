@@ -56,6 +56,10 @@ class ReportTests(unittest.TestCase):
         result = build(self.registry, self.config, paper, now=self.now)
         row = next(x for x in result["tracks"] if x["id"] == "benchmark_spy")
         self.assertEqual((row["day_return_pct"], row["return_pct"], row["currency"]), (1.0, 1.0, "USD"))
+        self.assertEqual(row["equity_history"], [
+            {"date": "2026-09-28", "nav": 100000.0},
+            {"date": "2026-09-29", "nav": 101000.0}
+        ])
         paper["strategies"]["benchmark_spy"]["equity"] = [{"date": "2026-09-29", "nav": 101000.0}]
         result = build(self.registry, self.config, paper, now=self.now)
         row = next(x for x in result["tracks"] if x["id"] == "benchmark_spy")
@@ -115,6 +119,7 @@ class ReportTests(unittest.TestCase):
         self.assertEqual((ensemble["group"], ensemble["return_pct"], ensemble["day_return_pct"]),
                          ("weekly_ml_demo", 1.0, 1.0))
         self.assertEqual(ensemble["currency"], "USD")
+        self.assertEqual(ensemble["equity_history"][-1], {"date": "2026-10-09", "nav": 101000.0})
 
 if __name__ == "__main__":
     unittest.main()
