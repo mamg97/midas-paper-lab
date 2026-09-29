@@ -1,0 +1,70 @@
+name: MIDAS weekly ML paper
+
+on:
+  schedule:
+    # Friday after XNYS close and vendor-delay margin, plus a Saturday backup slot.
+    - cron: '17 23 * * 5'
+    - cron: '17 2 * * 6'
+  workflow_dispatch:
+    inputs:
+      preflight_only:
+        description: 'Verify code/tests without recording a market forecast'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: midas-weekly-ml
+  cancel-in-progress: false
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: weekly_ml/requirements-live.txt
+      - name: Install OpenMP and ML libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgomp1
+          python -m pip install -r weekly_ml/requirements-live.txt
+      - name: Verify chronology, accounting and dashboard integration
+        run: |
+          python -m py_compile weekly_ml/*.py strategy_comparison/report.py
+          python -m unittest discover -s weekly_ml/tests -v
+          python -m unittest discover -s strategy_comparison/tests -v
+      - name: Record weekly ML forecasts and paper portfolios
+        if: ${{ !inputs.preflight_only }}
+        run: python weekly_ml/run.py --output weekly_ml_state
+      - name: Refresh all-strategy dashboard
+        if: ${{ always() && !inputs.preflight_only }}
+        run: |
+          python strategy_comparison/report.py \
+            --registry strategy_comparison/registry.json \
+            --paper-config paper_demo/config.json \
+            --paper-state paper_state/state.json \
+            --tfm-config tfm_shadow/config.json \
+            --tfm-state tfm_state/ledger.json \
+            --weekly-ml-config weekly_ml/config.json \
+            --weekly-ml-state weekly_ml_state/ledger.json \
+            --output strategy_state
+      - name: Commit weekly ML and dashboard state
+        if: ${{ always() && !inputs.preflight_only }}
+        run: |
+          if [ -d weekly_ml_state ]; then
+            git add -- weekly_ml_state
+          fi
+          if [ -f strategy_state/dashboard.json ] && [ -f strategy_state/dashboard.md ]; then
+            git add -- strategy_state/dashboard.json strategy_state/dashboard.md
+          fi
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Record MIDAS weekly ML paper state'
+            git push
+          fi
