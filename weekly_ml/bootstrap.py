@@ -10,10 +10,10 @@ import json
 import math
 import os
 import tempfile
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from data import build_dataset, live_panel
+from data import _extract_download, build_dataset, load_universe
 from models import fit_predict
 from paper import advance, BENCHMARKS, digest
 
@@ -81,6 +81,79 @@ def _markdown(path, report):
                 f"{row['rank_dispersion']:.4f} |"
             )
     Path(path).write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def _bootstrap_panel(config, universe_path, signal_asof, mark_asof):
+    """Download only the history needed for the explicitly retrospective smoke replay.
+
+    This bypasses the production eligible-session guard on purpose, but stays isolated in
+    bootstrap.py so the official forward runner cannot create retrospective signals.
+    """
+    signal_date = date.fromisoformat(signal_asof)
+    mark_date = date.fromisoformat(mark_asof)
+    if mark_date <= signal_date:
+        raise ValueError("mark_asof debe ser posterior a signal_asof")
+
+    symbols, sectors = load_universe(universe_path)
+    requested = symbols + [x for x in config["benchmark_tickers"] if x not in symbols]
+
+    import yfinance as yf
+
+    panel = {}
+    failures = {}
+    start_date = signal_date - timedelta(days=365 * 7)
+    end_date = mark_date + timedelta(days=1)
+    for start in range(0, len(requested), 60):
+        chunk = requested[start:start + 60]
+        data = yf.download(
+            chunk,
+            start=start_date.isoformat(),
+            end=end_date.isoformat(),
+            interval="1d",
+            auto_adjust=False,
+            actions=False,
+            group_by="ticker",
+            threads=True,
+            progress=False,
+        )
+        for ticker in chunk:
+            frame = _extract_download(data, ticker)
+            if frame is None:
+                failures[ticker] = "download_empty"
+                continue
+            frame = frame.loc[frame.index.date <= mark_date]
+            if frame.empty:
+                failures[ticker] = "empty_before_mark"
+                continue
+            panel[ticker] = frame
+
+    usable = []
+    minimum = int(config["feature_min_history_days"])
+    for ticker in symbols:
+        frame = panel.get(ticker)
+        if frame is None:
+            continue
+        history = frame.loc[frame.index.date <= signal_date]
+        if history.empty or history.index[-1].date() != signal_date:
+            failures[ticker] = "missing_signal_cutoff"
+            continue
+        if len(history) < minimum:
+            failures[ticker] = f"history_{len(history)}"
+            continue
+        usable.append(ticker)
+
+    for benchmark in config["benchmark_tickers"]:
+        frame = panel.get(benchmark)
+        if frame is None:
+            raise ValueError("Benchmark sin datos: " + benchmark)
+        if signal_date not in set(frame.index.date):
+            raise ValueError("Benchmark sin cierre de señal: " + benchmark)
+        if mark_date not in set(frame.index.date):
+            raise ValueError("Benchmark sin cierre de valoración: " + benchmark)
+
+    if len(usable) < 350:
+        raise ValueError(f"Universo bootstrap utilizable demasiado pequeño: {len(usable)}")
+    return panel, sectors, usable, failures
 
 
 def _portfolio_snapshot(name, book, panel, policy, signal_asof, mark_asof):
@@ -152,12 +225,9 @@ def run(config_path, output_dir, signal_asof, mark_asof):
     root = config_path.parent.parent
     universe_path = root / config["universe_file"]
 
-    snapshot = live_panel(config, universe_path)
-    if snapshot is None:
-        raise ValueError("No hay ninguna sesión XNYS cerrada disponible")
-    panel, sectors, usable, market_failures, current_asof = snapshot
-    if mark_asof > current_asof:
-        raise ValueError(f"El cierre solicitado {mark_asof} aún no estaba completo; último elegible {current_asof}")
+    panel, sectors, usable, market_failures = _bootstrap_panel(
+        config, universe_path, signal_asof, mark_asof
+    )
 
     labelled, live, feature_exclusions = build_dataset(panel, sectors, usable, signal_asof)
     predictions, validation, training = fit_predict(config, labelled, live)
@@ -194,7 +264,7 @@ def run(config_path, output_dir, signal_asof, mark_asof):
         "signal_asof": signal_asof,
         "entry_date": entry_dates[0] if len(entry_dates) == 1 else entry_dates,
         "mark_date": mark_asof,
-        "live_market_cutoff": current_asof,
+        "bootstrap_data_cutoff": mark_asof,
         "training": training,
         "validation": validation,
         "universe": {
