@@ -19,7 +19,7 @@ class ReportTests(unittest.TestCase):
     def test_missing_runs_are_explicit_and_have_no_returns(self):
         result = build(self.registry, self.config, now=self.now)
         self.assertEqual(result["counts"], {"paper_with_diary": 0, "legacy_with_diary": 0,
-                                             "tfm_with_diary": 0,
+                                             "tfm_with_diary": 0, "weekly_ml_with_diary": 0,
                                              "historical_pending": len(self.registry["historical_ideas"])})
         self.assertTrue(all(item["return_pct"] is None for item in result["tracks"]))
         self.assertTrue(all(item["day_return_pct"] is None for item in result["tracks"]))
@@ -95,6 +95,26 @@ class ReportTests(unittest.TestCase):
             build(self.registry, self.config, now=self.now,
                   tfm_config=tfm_config, tfm_state=tfm)
 
+
+    def test_weekly_ml_adaptation_uses_separate_usd_ledger(self):
+        weekly_config = {"models": ["lgbm_return", "lgbm_direction", "lgbm_ranker",
+                                     "mlp_return", "lstm_return", "arima_return",
+                                     "ensemble_consensus"],
+                         "currency": "USD", "paper_policy": {"capital": 100000.0}}
+        keys = list(self.registry["weekly_ml_tracks"])
+        weekly = {"config_hash": _config_hash(weekly_config), "first_session": "2026-10-02",
+                  "last_session": "2026-10-09", "strategies": {
+                      key: {"nav": 101000.0,
+                            "equity": [{"date": "2026-10-02", "nav": 100000.0},
+                                       {"date": "2026-10-09", "nav": 101000.0}]}
+                      for key in keys}}
+        result = build(self.registry, self.config, now=self.now,
+                       weekly_config=weekly_config, weekly_state=weekly)
+        self.assertEqual(result["counts"]["weekly_ml_with_diary"], 9)
+        ensemble = next(row for row in result["tracks"] if row["id"] == "weekly_ml_ensemble_2026")
+        self.assertEqual((ensemble["group"], ensemble["return_pct"], ensemble["day_return_pct"]),
+                         ("weekly_ml_demo", 1.0, 1.0))
+        self.assertEqual(ensemble["currency"], "USD")
 
 if __name__ == "__main__":
     unittest.main()
