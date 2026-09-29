@@ -192,7 +192,7 @@ def _daily_features(frame, market):
     return result
 
 
-def build_dataset(panel, sectors, usable, asof):
+def build_dataset(panel, sectors, usable, asof, minimum_live=300):
     """Return causal labelled rows plus one live row per usable ticker."""
     market = panel["SPY"]
     labelled = []
@@ -253,7 +253,7 @@ def build_dataset(panel, sectors, usable, asof):
     valid_live = set(live_df["ticker"]) - set(excluded)
     labelled_df = labelled_df[labelled_df["ticker"].isin(valid_live)].reset_index(drop=True)
     live_df = live_df[live_df["ticker"].isin(valid_live)].reset_index(drop=True)
-    if len(live_df) < 300:
+    if len(live_df) < minimum_live:
         raise ValueError(f"Demasiadas exclusiones de features: {len(live_df)} activos")
     return labelled_df, live_df, excluded
 
