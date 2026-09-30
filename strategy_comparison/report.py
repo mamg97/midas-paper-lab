@@ -72,7 +72,7 @@ TFM_IDS = {"tfm_lgbm_2023": "lgbm", "tfm_mlp_2023": "mlp",
 
 def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
           tfm_config=None, tfm_state=None, weekly_config=None, weekly_state=None,
-          tfg_config=None, tfg_state=None):
+          tfg_config=None, tfg_state=None, capital_config=None, capital_state=None):
     if registry.get("schema_version") != 1:
         raise ValueError("Versión de registro no válida")
     paper_names = registry.get("paper_tracks", {})
@@ -88,7 +88,11 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
     if not isinstance(tfg_tracks, dict):
         raise ValueError("Registro TFG inválido")
     tfg_ids = [item["id"] for item in tfg_tracks.values()]
-    ids = list(paper_names) + weekly_ids + tfg_ids + [x["id"] for x in legacy_tracks + ideas]
+    capital_tracks = registry.get("capital_cycle_tracks", {})
+    if not isinstance(capital_tracks, dict):
+        raise ValueError("Registro Capital Cycle inválido")
+    capital_ids = [item["id"] for item in capital_tracks.values()]
+    ids = list(paper_names) + weekly_ids + tfg_ids + capital_ids + [x["id"] for x in legacy_tracks + ideas]
     if len(ids) != len(set(ids)):
         raise ValueError("Ideas duplicadas")
     provenance = registry.get("provenance", {})
@@ -131,6 +135,18 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             raise ValueError("El diario TFG pertenece a otra configuración")
         if not isinstance(tfg_state.get("equity"), list) or not tfg_state["equity"]:
             raise ValueError("Diario TFG sin patrimonio")
+    if capital_config is not None:
+        if set(capital_tracks) != {"capital_cycle_inflection"}:
+            raise ValueError("Registro Capital Cycle incompleto")
+        if capital_config.get("name") != "MIDAS_capital_cycle_inflection_2026":
+            raise ValueError("Configuración Capital Cycle no reconocida")
+    if capital_state is not None:
+        if capital_config is None or capital_state.get("config_hash") != _config_hash(capital_config):
+            raise ValueError("El diario Capital Cycle pertenece a otra configuración")
+        if capital_state.get("strategy_id") != "capital_cycle_inflection_2026":
+            raise ValueError("Diario Capital Cycle no reconocido")
+        if not isinstance(capital_state.get("equity"), list) or not capital_state["equity"]:
+            raise ValueError("Diario Capital Cycle sin patrimonio")
     timestamp = now or datetime.now(timezone.utc)
     rows = []
     for strategy_id, label in paper_names.items():
@@ -203,6 +219,30 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        day_return_pct=_daily_return(history, item["id"]),
                        equity_history=_equity_history(history, item["id"]))
         rows.append(row)
+    for strategy_key, item in capital_tracks.items():
+        capital_cc = None if capital_config is None else _equity(
+            capital_config["paper_policy"]["capital"], "capital Capital Cycle")
+        row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
+               "group": "capital_cycle_demo", "status": "programada_sin_diario",
+               "first_session": None, "last_session": None,
+               "initial_capital": capital_cc, "last_equity": None,
+               "return_pct": None, "day_return_pct": None,
+               "currency": None if capital_config is None else capital_config.get("currency", "USD"),
+               "equity_history": [],
+               "note": "Capital Cycle v1: underinvestment multianual + calidad + valoración normalizada + confirmación 6/12 meses; rebalance mensual y fills next-open."}
+        if capital_state is not None:
+            history = capital_state["equity"]
+            nav = _equity(capital_state.get("nav"), item["id"])
+            if history[-1].get("date") != capital_state.get("last_session"):
+                raise ValueError("Patrimonio Capital Cycle sin fecha válida")
+            row.update(status="demo_con_diario",
+                       first_session=capital_state.get("first_session"),
+                       last_session=capital_state.get("last_session"),
+                       last_equity=nav,
+                       return_pct=round(100 * (nav / capital_cc - 1), 6),
+                       day_return_pct=_daily_return(history, item["id"]),
+                       equity_history=_equity_history(history, item["id"]))
+        rows.append(row)
     for item in legacy_tracks:
         row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
                "group": "diario_heredado",
@@ -262,13 +302,14 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        "tfm_with_diary": sum(x["group"] == "tfm_demo_adaptado" and x["status"] == "demo_con_diario" for x in rows),
                        "weekly_ml_with_diary": sum(x["group"] == "weekly_ml_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "tfg_with_diary": sum(x["group"] == "tfg_demo_adaptado" and x["status"] == "demo_con_diario" for x in rows),
+                       "capital_cycle_with_diary": sum(x["group"] == "capital_cycle_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "historical_pending": sum(x["group"] == "historica_pendiente" for x in rows)}, "tracks": rows}
 
 
 def markdown(report):
     lines = ["# MIDAS: todas las ideas en paralelo", "",
              "Actualizado: " + report["generated_at_utc"] + ". El tablero distingue resultados observados de ideas aún no ejecutadas.", "",
-             "Las rentabilidades de las campañas diarias, TFM, Weekly ML, TFG corregido y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.", "",
+             "Las rentabilidades de las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.", "",
              "| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Último periodo | Acumulada |", "| --- | --- | --- | --- | --- | ---: | ---: |"]
     for row in report["tracks"]:
         value = "—" if row["return_pct"] is None else f"{row['return_pct']:.2f} %"
@@ -294,6 +335,8 @@ def main(argv=None):
     parser.add_argument("--weekly-ml-state")
     parser.add_argument("--tfg-config")
     parser.add_argument("--tfg-state")
+    parser.add_argument("--capital-cycle-config", default="capital_cycle/config.json")
+    parser.add_argument("--capital-cycle-state", default="capital_cycle_state/ledger.json")
     parser.add_argument("--output", required=True)
     args = parser.parse_args(argv)
     report = build(_read(args.registry), _read(args.paper_config),
@@ -303,7 +346,9 @@ def main(argv=None):
                    weekly_config=_read(args.weekly_ml_config) if args.weekly_ml_config else None,
                    weekly_state=_read(args.weekly_ml_state, optional=True) if args.weekly_ml_state else None,
                    tfg_config=_read(args.tfg_config) if args.tfg_config else None,
-                   tfg_state=_read(args.tfg_state, optional=True) if args.tfg_state else None)
+                   tfg_state=_read(args.tfg_state, optional=True) if args.tfg_state else None,
+                   capital_config=_read(args.capital_cycle_config) if args.capital_cycle_config and Path(args.capital_cycle_config).exists() else None,
+                   capital_state=_read(args.capital_cycle_state, optional=True) if args.capital_cycle_state else None)
     output = Path(args.output)
     _write(output / "dashboard.json", json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     _write(output / "dashboard.md", markdown(report))
