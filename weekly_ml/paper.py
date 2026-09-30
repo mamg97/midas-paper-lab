@@ -139,6 +139,11 @@ def advance(config, panel, forecast, state=None):
             "last_session": asof,
             "forecast_hash": forecast_hash,
             "missed_signal_weeks": [],
+            "execution": {
+                "fractional_shares": bool(policy.get("fractional_shares", False)),
+                "share_precision": int(policy.get("share_precision", 0)),
+                "min_notional": float(policy.get("min_notional", 0)),
+            },
             "strategies": {},
         }
         for name in strategies:
