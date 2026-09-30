@@ -53,7 +53,8 @@
     "weekly_ml_lstm_2026": "TFM/ML · LSTM adaptado al horizonte semanal",
     "weekly_ml_arima_2026": "TFM/ML · ARIMA adaptado al horizonte semanal",
     "weekly_ml_ensemble_2026": "MIDAS nuevo 2026 · consenso de expertos semanales",
-    "tfg_corrected_2026": "TFG 2021 · arquitectura portada y corregida para paper 2026"
+    "tfg_corrected_2026": "TFG 2021 · arquitectura portada y corregida para paper 2026",
+    "capital_cycle_inflection_2026": "MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle"
   },
   "legacy_tracks": [
     {
@@ -255,6 +256,12 @@
     "tfg_corrected": {
       "id": "tfg_corrected_2026",
       "label": "TFG corregido 2026 · técnico + AHP + MAD"
+    }
+  },
+  "capital_cycle_tracks": {
+    "capital_cycle_inflection": {
+      "id": "capital_cycle_inflection_2026",
+      "label": "Capital Cycle Inflection · underinvestment + calidad + giro"
     }
   }
 }

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "name": "MIDAS_capital_cycle_inflection_2026",
+  "calendar": "XNYS",
+  "currency": "USD",
+  "universe_file": "weekly_ml/universe_sp500_2026-09-29.csv",
+  "benchmark_ticker": "SPY",
+  "history_period": "6y",
+  "price_min_history_days": 760,
+  "allowed_sectors": [
+    "Energy",
+    "Materials",
+    "Industrials",
+    "Utilities",
+    "Consumer Discretionary",
+    "Information Technology"
+  ],
+  "minimum_valid_candidates": 35,
+  "fundamental_workers": 8,
+  "paper_policy": {
+    "capital": 100000.0,
+    "commission": 0.001,
+    "slippage": 0.0005,
+    "invest_fraction": 0.95,
+    "max_positions": 12,
+    "max_position_weight": 0.1,
+    "max_sector_positions": 4,
+    "fractional_shares": true,
+    "share_precision": 6,
+    "min_notional": 10.0
+  },
+  "cycle_model": {
+    "minimum_capex_to_revenue": 0.025,
+    "entry_score": 60.0,
+    "retention_score": 45.0,
+    "hard_exit_score": 35.0,
+    "minimum_quality_score": 40.0,
+    "minimum_sector_scarcity_score": 35.0,
+    "inflection_min_votes": 2,
+    "hard_exit_inflection_votes": 0,
+    "minimum_positive_fcf_years": 2,
+    "maximum_net_debt_to_ocf": 6.0,
+    "minimum_interest_coverage": 1.0,
+    "minimum_hold_months": 3,
+    "weights": {
+      "capital_scarcity": 0.45,
+      "survivor_quality": 0.3,
+      "valuation": 0.15,
+      "inflection": 0.1
+    }
+  },
+  "version": "2026-10-01-capital-cycle-v1"
+}
