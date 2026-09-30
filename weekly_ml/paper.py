@@ -11,6 +11,21 @@ from data import execution_window
 BENCHMARKS = {"benchmark_spy": "SPY", "benchmark_rsp": "RSP"}
 
 
+def _fractional_quantity(budget, buy_price, policy):
+    if not policy.get("fractional_shares", False):
+        return float(math.floor(budget / (buy_price * (1 + float(policy["commission"])))))
+    precision = int(policy.get("share_precision", 6))
+    if not 0 <= precision <= 8:
+        raise ValueError("share_precision inválido")
+    minimum = float(policy.get("min_notional", 0))
+    raw = budget / (buy_price * (1 + float(policy["commission"])))
+    scale = 10 ** precision
+    quantity = math.floor(raw * scale) / scale
+    if quantity <= 0 or quantity * buy_price < minimum:
+        return 0.0
+    return quantity
+
+
 def digest(value):
     return hashlib.sha256(
         json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
@@ -74,11 +89,11 @@ def _settle(book, panel, current_asof, pending, policy, benchmark=False):
         raw_close = float(window["close"])
         buy = raw_open * (1 + float(policy["slippage"]))
         sell = raw_close * (1 - float(policy["slippage"]))
-        quantity = math.floor(budget_each / (buy * (1 + float(policy["commission"]))))
+        quantity = _fractional_quantity(budget_each, buy, policy)
         if quantity <= 0:
             book.setdefault("unfilled", []).append({
                 "signal_date": order["signal_date"], "ticker": ticker,
-                "reason": "budget_below_one_share", **window,
+                "reason": "below_min_notional", **window,
             })
             continue
         buy_fee = quantity * buy * float(policy["commission"])
