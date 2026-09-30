@@ -28,6 +28,9 @@ class BootstrapSnapshotTests(unittest.TestCase):
             "slippage": 0.0005,
             "invest_fraction": 0.95,
             "max_entry_weight": 0.12,
+            "fractional_shares": True,
+            "share_precision": 6,
+            "min_notional": 10.0,
         }
         book = {"pending": [{"ticker": "AAA", "signal_date": "2026-09-25", "score": 1.0}]}
         result = _portfolio_snapshot(
@@ -39,6 +42,8 @@ class BootstrapSnapshotTests(unittest.TestCase):
         self.assertEqual(position["mark_date"], "2026-09-28")
         self.assertAlmostEqual(position["raw_open"], 101.0)
         self.assertAlmostEqual(position["mark_close"], 103.0)
+        self.assertIsInstance(position["quantity"], float)
+        self.assertNotEqual(position["quantity"], float(int(position["quantity"])))
         self.assertGreater(result["mark_to_market_nav"], 100000.0)
 
 
