@@ -183,7 +183,7 @@ def build(forecast=None, ledger=None, bootstrap=None):
         "", "## Cómo interpretarlo", "",
         "- **Predicción ≠ rentabilidad realizada.**",
         "- La validación cronológica sirve para diagnóstico; no se suma al track record demo.",
-        "- El bootstrap está excluido del forward.",
+        "- El bootstrap está excluido del forward y fue generado antes de activar el sizing fraccionado; no se reescribe retrospectivamente.",
         "- Cuando exista ledger forward, el NAV y los trades cerrados de cada experto se acumularán aquí.",
         "- SPY y RSP son referencias, no modelos.",
         "",
