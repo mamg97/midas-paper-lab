@@ -1,12 +1,13 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-30T02:19:04.228908+00:00",
+  "generated_at_utc": "2026-09-30T23:06:39.801672+00:00",
   "principle": "No ordenar rentabilidades de carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
     "legacy_with_diary": 0,
     "tfm_with_diary": 0,
     "weekly_ml_with_diary": 0,
+    "tfg_with_diary": 0,
     "historical_pending": 17
   },
   "tracks": [
@@ -380,6 +381,22 @@
       "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."
     },
     {
+      "id": "tfg_corrected_2026",
+      "label": "TFG corregido 2026 · técnico + AHP + MAD",
+      "provenance": "TFG 2021 · arquitectura portada y corregida para paper 2026",
+      "group": "tfg_demo_adaptado",
+      "status": "programada_sin_diario",
+      "first_session": null,
+      "last_session": null,
+      "initial_capital": 100000.0,
+      "last_equity": null,
+      "return_pct": null,
+      "day_return_pct": null,
+      "currency": "USD",
+      "equity_history": [],
+      "note": "Arquitectura TFG 2021 portada con riesgo/beta sobre retornos y ejecución prospectiva next-open."
+    },
+    {
       "id": "genetic_sp500_legacy",
       "label": "Genético original S&P 500",
       "provenance": "Agente genético S&P 500 original · 2026",
@@ -409,7 +426,7 @@
       "day_return_pct": null,
       "currency": null,
       "equity_history": [],
-      "note": "Portar los tres filtros y pesos sobre el universo original de varios mercados, con divisas y calendario.",
+      "note": "La réplica literal global de 20 mercados sigue pendiente por símbolos, divisas y calendarios; la variante TFG corregido 2026 se ejecuta por separado sobre un universo S&P-derived homogéneo.",
       "kind": "estrategia semanal",
       "source": "fuente histórica privada, no publicada"
     },

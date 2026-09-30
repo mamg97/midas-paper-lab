@@ -1,8 +1,8 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-09-30T02:19:04.228908+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-09-30T23:06:39.801672+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
-Las rentabilidades de las campañas diarias, TFM, weekly ML y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
+Las rentabilidades de las campañas diarias, TFM, Weekly ML, TFG corregido y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
 | Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Último periodo | Acumulada |
 | --- | --- | --- | --- | --- | ---: | ---: |
@@ -24,6 +24,7 @@ Las rentabilidades de las campañas diarias, TFM, weekly ML y el diario genétic
 | ML semanal · LSTM | TFM/ML · LSTM adaptado al horizonte semanal | programada_sin_diario | — | — | — | — |
 | ML semanal · ARIMA | TFM/ML · ARIMA adaptado al horizonte semanal | programada_sin_diario | — | — | — | — |
 | ML semanal · ensemble consenso | MIDAS nuevo 2026 · consenso de expertos semanales | programada_sin_diario | — | — | — | — |
+| TFG corregido 2026 · técnico + AHP + MAD | TFG 2021 · arquitectura portada y corregida para paper 2026 | programada_sin_diario | — | — | — | — |
 | Genético original S&P 500 | Agente genético S&P 500 original · 2026 | sin_diario_disponible | — | — | — | — |
 | TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo | TFG 2021 · MIDAS en R | sin_ejecucion_comparable | — | — | — | — |
 | MIDAS R cripto | MIDAS en R · experimento cripto | sin_ejecucion_comparable | — | — | — | — |
@@ -49,7 +50,7 @@ Las rentabilidades de las campañas diarias, TFM, weekly ML y el diario genétic
 
 ## Qué impide activar las líneas restantes
 
-- **TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo**: Portar los tres filtros y pesos sobre el universo original de varios mercados, con divisas y calendario.
+- **TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo**: La réplica literal global de 20 mercados sigue pendiente por símbolos, divisas y calendarios; la variante TFG corregido 2026 se ejecuta por separado sobre un universo S&P-derived homogéneo.
 - **MIDAS R cripto**: Necesita campaña EUR y calendario 24/7; comprobar diferencias frente al TFG.
 - **MIDAS Python: LightGBM rentabilidad semanal**: Los datos/Features llegan hasta 2024 y el entrenamiento mezclaba semanas; rehacer el pipeline cronológico.
 - **MIDAS Python: LightGBM dirección semanal**: Rehacer features y entrenamiento cronológicos; no cargar pickle legado sin contrato verificado.
