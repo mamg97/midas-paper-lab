@@ -10,6 +10,12 @@ Hay nueve carteras USD sobre ocho acciones estadounidenses y SPY, incluidas dos 
 
 Las señales se calculan con información disponible al cierre. Las operaciones se modelan con la apertura o el cierre posterior, más comisión del 0,1 % y deslizamiento supuesto del 0,05 % por lado. Las campañas nuevas admiten **acciones fraccionadas** cuando su política lo declara; Weekly ML y TFM usan 6 decimales y un nominal mínimo de 10 unidades de su divisa. Se registran órdenes pendientes, patrimonio, errores y sesiones omitidas. No se modelan todos los detalles de un bróker real; consulta [paper_demo](paper_demo/README.md) y [tfm_shadow](tfm_shadow/README.md).
 
+## MIDAS Capital Cycle
+
+Desde el 01/10/2026 existe además una campaña **Capital Cycle Inflection** sobre el universo S&P-derived congelado. Traduce a reglas prospectivas el ciclo de capital: años de retirada de inversión + supervivencia financiera + valoración normalizada + confirmación de giro de 6-12 meses. La primera ejecución registra una señal de lanzamiento y, desde entonces, el ranking se recalcula al cierre de cada mes; las órdenes son siempre ficticias y se modelan en la apertura posterior.
+
+La metodología, fuentes empíricas, horizontes y límites están documentados en [research/CAPITAL_CYCLE_STRATEGY.md](research/CAPITAL_CYCLE_STRATEGY.md). No se publica un backtest fundamental retrospectivo con datos actuales porque sin estados financieros point-in-time y membresía histórica introduciría look-ahead y survivorship bias.
+
 ## MIDAS Weekly ML
 
 👉 **[Dashboard visual de modelos y predicciones](WEEKLY_ML_DASHBOARD.md)**
