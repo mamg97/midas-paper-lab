@@ -116,7 +116,11 @@ def advance(config, panel, forecast, state=None):
     if state is None:
         result = {"schema_version": 1, "config_hash": config_hash, "currency": "EUR",
                   "first_session": asof, "last_session": asof, "forecast_hash": forecast_hash,
-                  "missed_decision_sessions": [], "models": {}}
+                  "missed_decision_sessions": [],
+                  "execution": {"fractional_shares": bool(policy.get("fractional_shares", False)),
+                                "share_precision": int(policy.get("share_precision", 0)),
+                                "min_notional": float(policy.get("min_notional", 0))},
+                  "models": {}}
         for name, values in forecast["models"].items():
             result["models"][name] = {"nav": float(policy["capital"]),
                                        "pending": [{**order, "signal_date": asof}
