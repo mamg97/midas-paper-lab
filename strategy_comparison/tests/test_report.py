@@ -20,7 +20,7 @@ class ReportTests(unittest.TestCase):
         result = build(self.registry, self.config, now=self.now)
         self.assertEqual(result["counts"], {"paper_with_diary": 0, "legacy_with_diary": 0,
                                              "tfm_with_diary": 0, "weekly_ml_with_diary": 0,
-                                             "tfg_with_diary": 0,
+                                             "tfg_with_diary": 0, "capital_cycle_with_diary": 0,
                                              "historical_pending": len(self.registry["historical_ideas"])})
         self.assertTrue(all(item["return_pct"] is None for item in result["tracks"]))
         self.assertTrue(all(item["day_return_pct"] is None for item in result["tracks"]))
@@ -149,6 +149,34 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(row["currency"], "USD")
         self.assertEqual(row["equity_history"][-1], {"date": "2026-10-09", "nav": 101500.0})
         self.assertIn("TFG corregido 2026", markdown(result))
+
+
+    def test_capital_cycle_uses_separate_monthly_ledger(self):
+        capital_config = {
+            "name": "MIDAS_capital_cycle_inflection_2026",
+            "currency": "USD",
+            "paper_policy": {"capital": 100000.0},
+        }
+        capital = {
+            "config_hash": _config_hash(capital_config),
+            "strategy_id": "capital_cycle_inflection_2026",
+            "first_session": "2026-09-30",
+            "last_session": "2026-10-01",
+            "nav": 101250.0,
+            "equity": [
+                {"date": "2026-09-30", "nav": 100000.0},
+                {"date": "2026-10-01", "nav": 101250.0},
+            ],
+        }
+        result = build(self.registry, self.config, now=self.now,
+                       capital_config=capital_config, capital_state=capital)
+        self.assertEqual(result["counts"]["capital_cycle_with_diary"], 1)
+        row = next(x for x in result["tracks"] if x["id"] == "capital_cycle_inflection_2026")
+        self.assertEqual(row["group"], "capital_cycle_demo")
+        self.assertEqual(row["return_pct"], 1.25)
+        self.assertEqual(row["day_return_pct"], 1.25)
+        self.assertEqual(row["currency"], "USD")
+        self.assertIn("underinvestment", row["note"])
 
 
 if __name__ == "__main__":
