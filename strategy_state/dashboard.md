@@ -1,8 +1,8 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-09-30T23:06:39.801672+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-09-30T23:22:23.215287+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
-Las rentabilidades de las campañas diarias, TFM, Weekly ML, TFG corregido y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
+Las rentabilidades de las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
 | Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Último periodo | Acumulada |
 | --- | --- | --- | --- | --- | ---: | ---: |
@@ -25,6 +25,7 @@ Las rentabilidades de las campañas diarias, TFM, Weekly ML, TFG corregido y el 
 | ML semanal · ARIMA | TFM/ML · ARIMA adaptado al horizonte semanal | programada_sin_diario | — | — | — | — |
 | ML semanal · ensemble consenso | MIDAS nuevo 2026 · consenso de expertos semanales | programada_sin_diario | — | — | — | — |
 | TFG corregido 2026 · técnico + AHP + MAD | TFG 2021 · arquitectura portada y corregida para paper 2026 | programada_sin_diario | — | — | — | — |
+| Capital Cycle Inflection · underinvestment + calidad + giro | MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle | demo_con_diario | 2026-09-30 | 2026-09-30 | — | 0.00 % |
 | Genético original S&P 500 | Agente genético S&P 500 original · 2026 | sin_diario_disponible | — | — | — | — |
 | TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo | TFG 2021 · MIDAS en R | sin_ejecucion_comparable | — | — | — | — |
 | MIDAS R cripto | MIDAS en R · experimento cripto | sin_ejecucion_comparable | — | — | — | — |

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-30T23:06:39.801672+00:00",
+  "generated_at_utc": "2026-09-30T23:22:23.215287+00:00",
   "principle": "No ordenar rentabilidades de carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
@@ -8,6 +8,7 @@
     "tfm_with_diary": 0,
     "weekly_ml_with_diary": 0,
     "tfg_with_diary": 0,
+    "capital_cycle_with_diary": 1,
     "historical_pending": 17
   },
   "tracks": [
@@ -395,6 +396,27 @@
       "currency": "USD",
       "equity_history": [],
       "note": "Arquitectura TFG 2021 portada con riesgo/beta sobre retornos y ejecución prospectiva next-open."
+    },
+    {
+      "id": "capital_cycle_inflection_2026",
+      "label": "Capital Cycle Inflection · underinvestment + calidad + giro",
+      "provenance": "MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle",
+      "group": "capital_cycle_demo",
+      "status": "demo_con_diario",
+      "first_session": "2026-09-30",
+      "last_session": "2026-09-30",
+      "initial_capital": 100000.0,
+      "last_equity": 100000.0,
+      "return_pct": 0.0,
+      "day_return_pct": null,
+      "currency": "USD",
+      "equity_history": [
+        {
+          "date": "2026-09-30",
+          "nav": 100000.0
+        }
+      ],
+      "note": "Capital Cycle v1: underinvestment multianual + calidad + valoración normalizada + confirmación 6/12 meses; rebalance mensual y fills next-open."
     },
     {
       "id": "genetic_sp500_legacy",
