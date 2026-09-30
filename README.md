@@ -8,7 +8,7 @@ El repositorio ya está publicado y ambos workflows están habilitados. Las nuev
 
 Hay nueve carteras USD sobre ocho acciones estadounidenses y SPY, incluidas dos referencias y un genoma congelado antes de la campaña. También hay cuatro carteras EUR del universo IBEX del TFM: LightGBM, MLP, LSTM y ARIMA. Estas cuatro son **reimplementaciones corregidas de 2026** con la misma política de compraventa provisional; no reproducen literalmente la tesis. Las fechas, divisas y reglas difieren entre campañas, así que sus porcentajes no forman una clasificación común.
 
-Las señales se calculan con información disponible al cierre. Las operaciones se modelan con la apertura o el cierre posterior, más comisión del 0,1 % y deslizamiento supuesto del 0,05 % por lado. Se registran órdenes pendientes, patrimonio, errores y sesiones omitidas. No se modelan todos los detalles de un bróker real; consulta [paper_demo](paper_demo/README.md) y [tfm_shadow](tfm_shadow/README.md).
+Las señales se calculan con información disponible al cierre. Las operaciones se modelan con la apertura o el cierre posterior, más comisión del 0,1 % y deslizamiento supuesto del 0,05 % por lado. Las campañas nuevas admiten **acciones fraccionadas** cuando su política lo declara; Weekly ML y TFM usan 6 decimales y un nominal mínimo de 10 unidades de su divisa. Se registran órdenes pendientes, patrimonio, errores y sesiones omitidas. No se modelan todos los detalles de un bróker real; consulta [paper_demo](paper_demo/README.md) y [tfm_shadow](tfm_shadow/README.md).
 
 ## MIDAS Weekly ML
 
