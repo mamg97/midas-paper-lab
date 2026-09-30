@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-09-29T23:03:23.668109+00:00",
+  "generated_at_utc": "2026-09-30T02:19:04.228908+00:00",
   "principle": "No ordenar rentabilidades de carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
@@ -17,16 +17,20 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-09-28",
+      "last_session": "2026-09-29",
       "initial_capital": 100000.0,
-      "last_equity": 100000.0,
-      "return_pct": 0.0,
-      "day_return_pct": null,
+      "last_equity": 99532.33174843852,
+      "return_pct": -0.467668,
+      "day_return_pct": -0.467668,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-09-28",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-09-29",
+          "nav": 99532.33174843852
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."
@@ -38,16 +42,20 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-09-28",
+      "last_session": "2026-09-29",
       "initial_capital": 100000.0,
-      "last_equity": 100000.0,
-      "return_pct": 0.0,
-      "day_return_pct": null,
+      "last_equity": 99394.56551284832,
+      "return_pct": -0.605434,
+      "day_return_pct": -0.605434,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-09-28",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-09-29",
+          "nav": 99394.56551284832
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."
@@ -59,15 +67,19 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-09-28",
+      "last_session": "2026-09-29",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
-      "day_return_pct": null,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-09-28",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-09-29",
           "nav": 100000.0
         }
       ],
@@ -80,15 +92,19 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-09-28",
+      "last_session": "2026-09-29",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
-      "day_return_pct": null,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-09-28",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-09-29",
           "nav": 100000.0
         }
       ],
@@ -101,15 +117,19 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-09-28",
+      "last_session": "2026-09-29",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
-      "day_return_pct": null,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-09-28",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-09-29",
           "nav": 100000.0
         }
       ],
@@ -122,15 +142,19 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-09-28",
+      "last_session": "2026-09-29",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
-      "day_return_pct": null,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-09-28",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-09-29",
           "nav": 100000.0
         }
       ],
@@ -143,15 +167,19 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-09-28",
+      "last_session": "2026-09-29",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
-      "day_return_pct": null,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-09-28",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-09-29",
           "nav": 100000.0
         }
       ],
@@ -164,15 +192,19 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-09-28",
+      "last_session": "2026-09-29",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
-      "day_return_pct": null,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-09-28",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-09-29",
           "nav": 100000.0
         }
       ],
@@ -185,15 +217,19 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-09-28",
+      "last_session": "2026-09-29",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
-      "day_return_pct": null,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-09-28",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-09-29",
           "nav": 100000.0
         }
       ],

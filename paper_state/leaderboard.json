@@ -2,19 +2,7 @@
   {
     "fills": 0,
     "first_session": "2026-09-28",
-    "last_session": "2026-09-28",
-    "max_drawdown_pct": 0,
-    "missed_decisions": 0,
-    "nav": 100000.0,
-    "positions": 0,
-    "return_pct": 0.0,
-    "status": "active",
-    "strategy": "benchmark_spy"
-  },
-  {
-    "fills": 0,
-    "first_session": "2026-09-28",
-    "last_session": "2026-09-28",
+    "last_session": "2026-09-29",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
     "nav": 100000.0,
@@ -26,19 +14,7 @@
   {
     "fills": 0,
     "first_session": "2026-09-28",
-    "last_session": "2026-09-28",
-    "max_drawdown_pct": 0,
-    "missed_decisions": 0,
-    "nav": 100000.0,
-    "positions": 0,
-    "return_pct": 0.0,
-    "status": "active",
-    "strategy": "buy_hold_equal_weight"
-  },
-  {
-    "fills": 0,
-    "first_session": "2026-09-28",
-    "last_session": "2026-09-28",
+    "last_session": "2026-09-29",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
     "nav": 100000.0,
@@ -50,7 +26,7 @@
   {
     "fills": 0,
     "first_session": "2026-09-28",
-    "last_session": "2026-09-28",
+    "last_session": "2026-09-29",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
     "nav": 100000.0,
@@ -62,7 +38,7 @@
   {
     "fills": 0,
     "first_session": "2026-09-28",
-    "last_session": "2026-09-28",
+    "last_session": "2026-09-29",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
     "nav": 100000.0,
@@ -74,7 +50,7 @@
   {
     "fills": 0,
     "first_session": "2026-09-28",
-    "last_session": "2026-09-28",
+    "last_session": "2026-09-29",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
     "nav": 100000.0,
@@ -86,7 +62,7 @@
   {
     "fills": 0,
     "first_session": "2026-09-28",
-    "last_session": "2026-09-28",
+    "last_session": "2026-09-29",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
     "nav": 100000.0,
@@ -98,7 +74,7 @@
   {
     "fills": 0,
     "first_session": "2026-09-28",
-    "last_session": "2026-09-28",
+    "last_session": "2026-09-29",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
     "nav": 100000.0,
@@ -106,5 +82,29 @@
     "return_pct": 0.0,
     "status": "active",
     "strategy": "turtle_55_20_long"
+  },
+  {
+    "fills": 1,
+    "first_session": "2026-09-28",
+    "last_session": "2026-09-29",
+    "max_drawdown_pct": 0.4676682515614816,
+    "missed_decisions": 0,
+    "nav": 99532.33174843852,
+    "positions": 1,
+    "return_pct": -0.4676682515614816,
+    "status": "active",
+    "strategy": "benchmark_spy"
+  },
+  {
+    "fills": 8,
+    "first_session": "2026-09-28",
+    "last_session": "2026-09-29",
+    "max_drawdown_pct": 0.6054344871516792,
+    "missed_decisions": 0,
+    "nav": 99394.56551284832,
+    "positions": 8,
+    "return_pct": -0.6054344871516792,
+    "status": "active",
+    "strategy": "buy_hold_equal_weight"
   }
 ]
