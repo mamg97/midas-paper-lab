@@ -1,6 +1,6 @@
 # MIDAS Weekly ML — dashboard
 
-> **Estado actual:** bootstrap técnico completado. La campaña forward oficial todavía no ha generado su primera señal semanal. El bootstrap del 25/09/2026 se muestra aquí solo para visualizar y comprobar el sistema; está excluido del rendimiento prospectivo.
+> **Estado actual:** bootstrap técnico completado. La campaña forward oficial todavía no ha generado su primera señal semanal. El bootstrap del 25/09/2026 se muestra aquí solo para visualizar y comprobar el sistema; está excluido del rendimiento prospectivo. **Ese bootstrap se generó antes de activar acciones fraccionadas y no se reescribe; el forward oficial sí usa 6 decimales y mínimo 10 USD.**
 
 ## Vista rápida
 
