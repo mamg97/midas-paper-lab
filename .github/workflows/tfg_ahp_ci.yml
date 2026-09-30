@@ -1,0 +1,35 @@
+name: MIDAS TFG corrected CI
+
+on:
+  pull_request:
+    paths:
+      - 'tfg_ahp/**'
+      - 'strategy_comparison/**'
+      - '.github/workflows/tfg_ahp.yml'
+      - '.github/workflows/tfg_ahp_ci.yml'
+      - '.github/workflows/paper_us.yml'
+      - '.github/workflows/tfm_es.yml'
+      - '.github/workflows/weekly_ml.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: tfg_ahp/requirements-live.txt
+      - name: Install dependencies
+        run: python -m pip install -r tfg_ahp/requirements-live.txt
+      - name: Compile
+        run: python -m py_compile tfg_ahp/*.py strategy_comparison/report.py
+      - name: Test TFG corrected
+        run: python -m unittest discover -s tfg_ahp/tests -v
+      - name: Test global dashboard
+        run: python -m unittest discover -s strategy_comparison/tests -v

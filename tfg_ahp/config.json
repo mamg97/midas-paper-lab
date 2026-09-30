@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "name": "TFG_2021_corrected_2026",
+  "calendar": "XNYS",
+  "currency": "USD",
+  "universe_file": "weekly_ml/universe_sp500_2026-09-29.csv",
+  "benchmark_tickers": ["SPY", "RSP"],
+  "history_period": "3y",
+  "technical": {
+    "window_days": 35,
+    "macd_threshold": 0.8,
+    "rsi_threshold": 0.9,
+    "stochastic_threshold": 0.9,
+    "bollinger_threshold": 0.9
+  },
+  "multicriteria": {
+    "return_days": 40,
+    "risk_days": 252,
+    "beta_days": 252,
+    "top_n": 30,
+    "weights": {
+      "return": 0.3333333333,
+      "low_volatility": 0.3333333333,
+      "low_beta": 0.3333333334
+    }
+  },
+  "portfolio": {
+    "top_n": 15,
+    "risk_aversion": 1.0,
+    "capital": 100000.0,
+    "invest_fraction": 0.95,
+    "max_position_weight": 0.15,
+    "commission": 0.001,
+    "slippage": 0.0005,
+    "fractional_shares": true,
+    "share_precision": 6,
+    "min_notional": 10.0,
+    "portfolio_stop_pct": -0.012
+  },
+  "version": "2026-09-30-tfg-corrected-v1"
+}

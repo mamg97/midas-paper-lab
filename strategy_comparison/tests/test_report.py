@@ -20,6 +20,7 @@ class ReportTests(unittest.TestCase):
         result = build(self.registry, self.config, now=self.now)
         self.assertEqual(result["counts"], {"paper_with_diary": 0, "legacy_with_diary": 0,
                                              "tfm_with_diary": 0, "weekly_ml_with_diary": 0,
+                                             "tfg_with_diary": 0,
                                              "historical_pending": len(self.registry["historical_ideas"])})
         self.assertTrue(all(item["return_pct"] is None for item in result["tracks"]))
         self.assertTrue(all(item["day_return_pct"] is None for item in result["tracks"]))
@@ -120,6 +121,35 @@ class ReportTests(unittest.TestCase):
                          ("weekly_ml_demo", 1.0, 1.0))
         self.assertEqual(ensemble["currency"], "USD")
         self.assertEqual(ensemble["equity_history"][-1], {"date": "2026-10-09", "nav": 101000.0})
+
+
+    def test_tfg_corrected_uses_separate_weekly_ledger(self):
+        tfg_config = {
+            "name": "TFG_2021_corrected_2026",
+            "currency": "USD",
+            "portfolio": {"capital": 100000.0}
+        }
+        tfg = {
+            "config_hash": _config_hash(tfg_config),
+            "first_signal_session": "2026-10-02",
+            "last_signal_session": "2026-10-09",
+            "nav": 101500.0,
+            "equity": [
+                {"date": "2026-10-02", "nav": 100000.0},
+                {"date": "2026-10-09", "nav": 101500.0}
+            ]
+        }
+        result = build(self.registry, self.config, now=self.now,
+                       tfg_config=tfg_config, tfg_state=tfg)
+        self.assertEqual(result["counts"]["tfg_with_diary"], 1)
+        row = next(x for x in result["tracks"] if x["id"] == "tfg_corrected_2026")
+        self.assertEqual(row["group"], "tfg_demo_adaptado")
+        self.assertEqual(row["return_pct"], 1.5)
+        self.assertEqual(row["day_return_pct"], 1.5)
+        self.assertEqual(row["currency"], "USD")
+        self.assertEqual(row["equity_history"][-1], {"date": "2026-10-09", "nav": 101500.0})
+        self.assertIn("TFG corregido 2026", markdown(result))
+
 
 if __name__ == "__main__":
     unittest.main()
