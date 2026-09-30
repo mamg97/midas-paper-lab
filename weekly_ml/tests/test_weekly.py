@@ -73,6 +73,9 @@ class WeeklyPaperTests(unittest.TestCase):
                 "min_predicted_return": 0.005,
                 "min_direction_probability": 0.55,
                 "ensemble_min_positive_votes": 3,
+                "fractional_shares": True,
+                "share_precision": 6,
+                "min_notional": 10.0,
             },
         }
 
@@ -109,6 +112,8 @@ class WeeklyPaperTests(unittest.TestCase):
         trade = state2["strategies"]["lgbm_return"]["trades"][0]
         self.assertEqual(trade["first_session"], "2026-09-21")
         self.assertEqual(trade["last_session"], "2026-09-25")
+        self.assertIsInstance(trade["quantity"], float)
+        self.assertNotEqual(trade["quantity"], float(int(trade["quantity"])))
         self.assertLess(trade["net_pnl"], 0)
         self.assertLess(state2["strategies"]["lgbm_return"]["nav"], 100000.0)
         self.assertEqual(len(state2["strategies"]["benchmark_spy"]["trades"]), 1)
