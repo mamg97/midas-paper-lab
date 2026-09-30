@@ -44,14 +44,17 @@
     "lstm",
     "arima"
   ],
-  "version": "2026-09-28-shadow-v1",
+  "version": "2026-09-30-shadow-v1-fractional",
   "paper_policy": {
-    "capital": 100000.0,
+    "capital": 100000,
     "commission": 0.001,
     "slippage": 0.0005,
     "invest_fraction": 0.95,
     "max_positions": 10,
     "min_predicted_return": 0.003,
-    "max_entry_weight": 0.15
+    "max_entry_weight": 0.15,
+    "fractional_shares": true,
+    "share_precision": 6,
+    "min_notional": 10
   }
 }

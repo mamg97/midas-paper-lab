@@ -15,7 +15,7 @@ from pathlib import Path
 
 from data import _extract_download, build_dataset, load_universe
 from models import fit_predict
-from paper import advance, BENCHMARKS, digest
+from paper import advance, BENCHMARKS, digest, _fractional_quantity
 
 
 def _read(path):
@@ -184,7 +184,7 @@ def _portfolio_snapshot(name, book, panel, policy, signal_asof, mark_asof):
         mark_close = float(marked.iloc[-1]["close"])
         raw_open = float(entry_row["open"])
         buy_price = raw_open * (1 + float(policy["slippage"]))
-        qty = math.floor(budget_each / (buy_price * (1 + float(policy["commission"]))))
+        qty = _fractional_quantity(budget_each, buy_price, policy)
         if qty <= 0:
             continue
         buy_fee = qty * buy_price * float(policy["commission"])

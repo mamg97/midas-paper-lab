@@ -4,7 +4,10 @@
   "calendar": "XNYS",
   "currency": "USD",
   "universe_file": "weekly_ml/universe_sp500_2026-09-29.csv",
-  "benchmark_tickers": ["SPY", "RSP"],
+  "benchmark_tickers": [
+    "SPY",
+    "RSP"
+  ],
   "history_period": "6y",
   "feature_min_history_days": 260,
   "validation_weeks": 26,
@@ -18,7 +21,7 @@
     "ensemble_consensus"
   ],
   "paper_policy": {
-    "capital": 100000.0,
+    "capital": 100000,
     "commission": 0.001,
     "slippage": 0.0005,
     "invest_fraction": 0.95,
@@ -26,18 +29,28 @@
     "max_entry_weight": 0.12,
     "min_predicted_return": 0.005,
     "min_direction_probability": 0.55,
-    "ensemble_min_positive_votes": 3
+    "ensemble_min_positive_votes": 3,
+    "fractional_shares": true,
+    "share_precision": 6,
+    "min_notional": 10
   },
   "training": {
     "seed": 42,
     "lgbm_estimators": 350,
     "lgbm_learning_rate": 0.03,
-    "mlp_hidden": [64, 32],
+    "mlp_hidden": [
+      64,
+      32
+    ],
     "mlp_max_iter": 250,
     "lstm_units": 24,
     "lstm_epochs": 4,
     "lstm_batch_size": 512,
-    "arima_order": [1, 0, 0]
+    "arima_order": [
+      1,
+      0,
+      0
+    ]
   },
-  "version": "2026-09-29-weekly-ml-v1"
+  "version": "2026-09-30-weekly-ml-v1-fractional"
 }

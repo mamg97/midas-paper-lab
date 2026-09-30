@@ -88,7 +88,8 @@ class ForecastContractTests(unittest.TestCase):
         config = {"tickers": ["AAA.MC"], "models": ["lgbm"], "paper_policy": {
             "capital": 1000.0, "commission": .001, "slippage": .0005,
             "invest_fraction": .95, "max_entry_weight": .15,
-            "max_positions": 1, "min_predicted_return": .003}}
+            "max_positions": 1, "min_predicted_return": .003,
+            "fractional_shares": True, "share_precision": 6, "min_notional": 10.0}}
         bars = {"AAA.MC": [{"date": "2026-09-24", "open": 100.0, "close": 100.0},
                            {"date": "2026-09-25", "open": 100.0, "close": 110.0}]}
         first = {"asof": "2026-09-24", "models": {"lgbm": {"AAA.MC": {
@@ -102,7 +103,9 @@ class ForecastContractTests(unittest.TestCase):
         book = settled["models"]["lgbm"]
         self.assertEqual(book["trades"][0]["signal_date"], "2026-09-24")
         self.assertEqual(book["trades"][0]["date"], "2026-09-25")
-        self.assertEqual(book["trades"][0]["quantity"], 1)
+        self.assertIsInstance(book["trades"][0]["quantity"], float)
+        self.assertGreater(book["trades"][0]["quantity"], 1.0)
+        self.assertLess(book["trades"][0]["quantity"], 2.0)
         self.assertGreater(book["nav"], 1000)
         self.assertEqual(book["pending"], [])
         duplicate, changed = advance(config, bars, second, settled)
@@ -118,7 +121,9 @@ class ForecastContractTests(unittest.TestCase):
                       "paper_policy": {"capital": 100000.0, "commission": .001,
                                        "slippage": .0005, "invest_fraction": .95,
                                        "max_positions": 10, "min_predicted_return": .003,
-                                       "max_entry_weight": .15}}
+                                       "max_entry_weight": .15,
+                                       "fractional_shares": True, "share_precision": 6,
+                                       "min_notional": 10.0}}
             config_path = root / "config.json"
             config_path.write_text(json.dumps(config), encoding="utf-8")
             snapshot = root / "market.csv"
@@ -156,11 +161,12 @@ class ForecastContractTests(unittest.TestCase):
             scored = json.loads((output / "evaluations" / f"{dates[139]}.json").read_text())
             self.assertEqual(len(scored["rows"]), 124)
 
-    def test_unaffordable_whole_share_keeps_cash(self):
+    def test_expensive_share_is_filled_fractionally(self):
         config = {"tickers": ["AAA.MC"], "models": ["lgbm"], "paper_policy": {
             "capital": 1000.0, "commission": .001, "slippage": .0005,
             "invest_fraction": .95, "max_entry_weight": .15,
-            "max_positions": 1, "min_predicted_return": .003}}
+            "max_positions": 1, "min_predicted_return": .003,
+            "fractional_shares": True, "share_precision": 6, "min_notional": 10.0}}
         bars = {"AAA.MC": [{"date": "2026-09-24", "open": 1000., "close": 1000.},
                            {"date": "2026-09-25", "open": 1000., "close": 1100.}]}
         def prediction(day):
@@ -168,10 +174,11 @@ class ForecastContractTests(unittest.TestCase):
                 "return_predicted_pct": 1.0}}}}
         first, _ = advance(config, {"AAA.MC": bars["AAA.MC"][:1]}, prediction("2026-09-24"))
         second, _ = advance(config, bars, prediction("2026-09-25"), first)
-        self.assertEqual(second["models"]["lgbm"]["nav"], 1000.)
-        self.assertEqual(second["models"]["lgbm"]["trades"], [])
-        self.assertEqual(second["models"]["lgbm"]["unfilled"][0]["reason"],
-                         "budget_below_one_share")
+        trade = second["models"]["lgbm"]["trades"][0]
+        self.assertGreater(trade["quantity"], 0.1)
+        self.assertLess(trade["quantity"], 0.2)
+        self.assertGreater(second["models"]["lgbm"]["nav"], 1000.)
+        self.assertEqual(second["models"]["lgbm"]["unfilled"], [])
 
 
 if __name__ == "__main__":

@@ -30,7 +30,29 @@ def _policy(config):
     maximum = policy["max_positions"]
     if type(maximum) is not int or not 1 <= maximum <= len(config["tickers"]):
         raise ValueError("max_positions inválido")
+    if policy.get("fractional_shares", False):
+        precision = policy.get("share_precision", 6)
+        if type(precision) is not int or not 0 <= precision <= 8:
+            raise ValueError("share_precision inválido")
+        minimum = policy.get("min_notional", 0)
+        if isinstance(minimum, bool) or not isinstance(minimum, (float, int)) or not math.isfinite(minimum) or minimum < 0:
+            raise ValueError("min_notional inválido")
     return policy
+
+
+def _fractional_quantity(budget, buy_price, policy):
+    if not policy.get("fractional_shares", False):
+        return float(math.floor(budget / (buy_price * (1 + policy["commission"]))))
+    precision = int(policy.get("share_precision", 6))
+    if not 0 <= precision <= 8:
+        raise ValueError("share_precision inválido")
+    minimum = float(policy.get("min_notional", 0))
+    raw = budget / (buy_price * (1 + policy["commission"]))
+    scale = 10 ** precision
+    quantity = math.floor(raw * scale) / scale
+    if quantity <= 0 or quantity * buy_price < minimum:
+        return 0.0
+    return quantity
 
 
 def _select(predictions, policy):
@@ -58,10 +80,10 @@ def _settle(book, panel, day, pending, policy):
             raise ValueError("Precio de liquidación inválido")
         buy = raw_open * (1 + policy["slippage"])
         sell = raw_close * (1 - policy["slippage"])
-        quantity = math.floor(budget / (buy * (1 + policy["commission"])))
-        if quantity == 0:
+        quantity = _fractional_quantity(budget, buy, policy)
+        if quantity <= 0:
             book.setdefault("unfilled", []).append({"signal_date": order["signal_date"], "date": day,
-                                                      "ticker": ticker, "reason": "budget_below_one_share"})
+                                                      "ticker": ticker, "reason": "below_min_notional"})
             continue
         cash_out = quantity * buy * (1 + policy["commission"])
         buy_fee = quantity * buy * policy["commission"]
@@ -94,7 +116,11 @@ def advance(config, panel, forecast, state=None):
     if state is None:
         result = {"schema_version": 1, "config_hash": config_hash, "currency": "EUR",
                   "first_session": asof, "last_session": asof, "forecast_hash": forecast_hash,
-                  "missed_decision_sessions": [], "models": {}}
+                  "missed_decision_sessions": [],
+                  "execution": {"fractional_shares": bool(policy.get("fractional_shares", False)),
+                                "share_precision": int(policy.get("share_precision", 0)),
+                                "min_notional": float(policy.get("min_notional", 0))},
+                  "models": {}}
         for name, values in forecast["models"].items():
             result["models"][name] = {"nav": float(policy["capital"]),
                                        "pending": [{**order, "signal_date": asof}
