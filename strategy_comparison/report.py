@@ -71,7 +71,8 @@ TFM_IDS = {"tfm_lgbm_2023": "lgbm", "tfm_mlp_2023": "mlp",
 
 
 def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
-          tfm_config=None, tfm_state=None, weekly_config=None, weekly_state=None):
+          tfm_config=None, tfm_state=None, weekly_config=None, weekly_state=None,
+          tfg_config=None, tfg_state=None):
     if registry.get("schema_version") != 1:
         raise ValueError("Versión de registro no válida")
     paper_names = registry.get("paper_tracks", {})
@@ -83,7 +84,11 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
     if not isinstance(weekly_tracks, dict):
         raise ValueError("Registro weekly ML inválido")
     weekly_ids = [item["id"] for item in weekly_tracks.values()]
-    ids = list(paper_names) + weekly_ids + [x["id"] for x in legacy_tracks + ideas]
+    tfg_tracks = registry.get("tfg_tracks", {})
+    if not isinstance(tfg_tracks, dict):
+        raise ValueError("Registro TFG inválido")
+    tfg_ids = [item["id"] for item in tfg_tracks.values()]
+    ids = list(paper_names) + weekly_ids + tfg_ids + [x["id"] for x in legacy_tracks + ideas]
     if len(ids) != len(set(ids)):
         raise ValueError("Ideas duplicadas")
     provenance = registry.get("provenance", {})
@@ -116,6 +121,16 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             raise ValueError("El diario weekly ML pertenece a otra configuración")
         if set(weekly_state.get("strategies", {})) != set(weekly_tracks):
             raise ValueError("Faltan carteras weekly ML")
+    if tfg_config is not None:
+        if set(tfg_tracks) != {"tfg_corrected"}:
+            raise ValueError("Registro TFG corregido incompleto")
+        if tfg_config.get("name") != "TFG_2021_corrected_2026":
+            raise ValueError("Configuración TFG no reconocida")
+    if tfg_state is not None:
+        if tfg_config is None or tfg_state.get("config_hash") != _config_hash(tfg_config):
+            raise ValueError("El diario TFG pertenece a otra configuración")
+        if not isinstance(tfg_state.get("equity"), list) or not tfg_state["equity"]:
+            raise ValueError("Diario TFG sin patrimonio")
     timestamp = now or datetime.now(timezone.utc)
     rows = []
     for strategy_id, label in paper_names.items():
@@ -163,6 +178,30 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        return_pct=round(100 * (nav / capital_weekly - 1), 6),
                        day_return_pct=_daily_return(history, strategy_key),
                        equity_history=_equity_history(history, strategy_key))
+        rows.append(row)
+    for strategy_key, item in tfg_tracks.items():
+        capital_tfg = None if tfg_config is None else _equity(
+            tfg_config["portfolio"]["capital"], "capital TFG")
+        row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
+               "group": "tfg_demo_adaptado", "status": "programada_sin_diario",
+               "first_session": None, "last_session": None,
+               "initial_capital": capital_tfg, "last_equity": None,
+               "return_pct": None, "day_return_pct": None,
+               "currency": None if tfg_config is None else tfg_config.get("currency", "USD"),
+               "equity_history": [],
+               "note": "Arquitectura TFG 2021 portada con riesgo/beta sobre retornos y ejecución prospectiva next-open."}
+        if tfg_state is not None:
+            history = tfg_state["equity"]
+            nav = _equity(tfg_state.get("nav"), item["id"])
+            if history[-1].get("date") != tfg_state.get("last_signal_session"):
+                raise ValueError("Patrimonio TFG sin fecha válida")
+            row.update(status="demo_con_diario",
+                       first_session=tfg_state.get("first_signal_session"),
+                       last_session=tfg_state.get("last_signal_session"),
+                       last_equity=nav,
+                       return_pct=round(100 * (nav / capital_tfg - 1), 6),
+                       day_return_pct=_daily_return(history, item["id"]),
+                       equity_history=_equity_history(history, item["id"]))
         rows.append(row)
     for item in legacy_tracks:
         row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
@@ -222,13 +261,14 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        "legacy_with_diary": sum(x["status"] == "diario_heredado_observado" for x in rows),
                        "tfm_with_diary": sum(x["group"] == "tfm_demo_adaptado" and x["status"] == "demo_con_diario" for x in rows),
                        "weekly_ml_with_diary": sum(x["group"] == "weekly_ml_demo" and x["status"] == "demo_con_diario" for x in rows),
+                       "tfg_with_diary": sum(x["group"] == "tfg_demo_adaptado" and x["status"] == "demo_con_diario" for x in rows),
                        "historical_pending": sum(x["group"] == "historica_pendiente" for x in rows)}, "tracks": rows}
 
 
 def markdown(report):
     lines = ["# MIDAS: todas las ideas en paralelo", "",
              "Actualizado: " + report["generated_at_utc"] + ". El tablero distingue resultados observados de ideas aún no ejecutadas.", "",
-             "Las rentabilidades de las campañas diarias, TFM, weekly ML y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.", "",
+             "Las rentabilidades de las campañas diarias, TFM, Weekly ML, TFG corregido y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.", "",
              "| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Último periodo | Acumulada |", "| --- | --- | --- | --- | --- | ---: | ---: |"]
     for row in report["tracks"]:
         value = "—" if row["return_pct"] is None else f"{row['return_pct']:.2f} %"
@@ -252,6 +292,8 @@ def main(argv=None):
     parser.add_argument("--tfm-state")
     parser.add_argument("--weekly-ml-config")
     parser.add_argument("--weekly-ml-state")
+    parser.add_argument("--tfg-config")
+    parser.add_argument("--tfg-state")
     parser.add_argument("--output", required=True)
     args = parser.parse_args(argv)
     report = build(_read(args.registry), _read(args.paper_config),
@@ -259,7 +301,9 @@ def main(argv=None):
                    tfm_config=_read(args.tfm_config) if args.tfm_config else None,
                    tfm_state=_read(args.tfm_state, optional=True) if args.tfm_state else None,
                    weekly_config=_read(args.weekly_ml_config) if args.weekly_ml_config else None,
-                   weekly_state=_read(args.weekly_ml_state, optional=True) if args.weekly_ml_state else None)
+                   weekly_state=_read(args.weekly_ml_state, optional=True) if args.weekly_ml_state else None,
+                   tfg_config=_read(args.tfg_config) if args.tfg_config else None,
+                   tfg_state=_read(args.tfg_state, optional=True) if args.tfg_state else None)
     output = Path(args.output)
     _write(output / "dashboard.json", json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     _write(output / "dashboard.md", markdown(report))
