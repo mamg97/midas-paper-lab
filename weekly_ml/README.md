@@ -86,6 +86,12 @@ comisión + slippage
 
 La campaña no rellena semanas pasadas. Si una ejecución falla, se puede liquidar una orden previamente registrada con datos posteriores, pero la semana sin señal queda marcada como perdida.
 
+## Acciones fraccionadas
+
+La ejecución paper admite acciones fraccionadas porque el usuario opera con un bróker que permite fracciones. El sizing usa el capital objetivo de cada posición, redondea **hacia abajo a 6 decimales** para no exceder el presupuesto y exige un nominal mínimo de **10 USD**. Comisión y slippage se calculan sobre el nominal fraccionado exactamente igual que con acciones enteras.
+
+Esta regla aplica también a SPY/RSP y evita que una acción de precio elevado quede infraponderada solo por el redondeo a unidades enteras.
+
 ## Interpretación
 
 Un modelo que acierta la dirección no necesariamente produce una cartera rentable. Se registran por separado:
