@@ -209,7 +209,7 @@ Esta es la traducción cuantitativa de «vender cuando el capital vuelve al sect
 
 ## 11. Ejecución
 
-Señal: cierre de la última sesión XNYS de cada mes.
+Señal: la primera ejecución prospectiva registra una señal de lanzamiento en el primer cierre disponible; desde entonces, cierre de la última sesión XNYS de cada mes. Esta excepción evita esperar casi un mes para iniciar el experimento y queda fechada explícitamente en el diario.
 
 Fill: apertura de la siguiente sesión.
 
