@@ -52,7 +52,8 @@
     "weekly_ml_mlp_2026": "TFM/ML · MLP adaptado al horizonte semanal",
     "weekly_ml_lstm_2026": "TFM/ML · LSTM adaptado al horizonte semanal",
     "weekly_ml_arima_2026": "TFM/ML · ARIMA adaptado al horizonte semanal",
-    "weekly_ml_ensemble_2026": "MIDAS nuevo 2026 · consenso de expertos semanales"
+    "weekly_ml_ensemble_2026": "MIDAS nuevo 2026 · consenso de expertos semanales",
+    "tfg_corrected_2026": "TFG 2021 · arquitectura portada y corregida para paper 2026"
   },
   "legacy_tracks": [
     {
@@ -69,7 +70,7 @@
       "label": "TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo",
       "kind": "estrategia semanal",
       "source": "fuente histórica privada, no publicada",
-      "blocker": "Portar los tres filtros y pesos sobre el universo original de varios mercados, con divisas y calendario."
+      "blocker": "La réplica literal global de 20 mercados sigue pendiente por símbolos, divisas y calendarios; la variante TFG corregido 2026 se ejecuta por separado sobre un universo S&P-derived homogéneo."
     },
     {
       "id": "midas_r_crypto",
@@ -248,6 +249,12 @@
     "ensemble_consensus": {
       "id": "weekly_ml_ensemble_2026",
       "label": "ML semanal · ensemble consenso"
+    }
+  },
+  "tfg_tracks": {
+    "tfg_corrected": {
+      "id": "tfg_corrected_2026",
+      "label": "TFG corregido 2026 · técnico + AHP + MAD"
     }
   }
 }
