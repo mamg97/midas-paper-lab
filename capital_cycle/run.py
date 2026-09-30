@@ -51,10 +51,14 @@ def _month_index(day):
 
 
 def _decision_due(state, asof, is_month_end):
-    if is_month_end:
-        return not state or state.get("last_signal_session") != asof
+    # Launch exception: the first real run records a signal immediately so the
+    # prospective campaign does not wait until the next month-end. After launch,
+    # decisions are month-end only, except a clearly disclosed recovery when a
+    # whole month was missed.
     if not state or not state.get("last_signal_session"):
-        return False
+        return True
+    if is_month_end:
+        return state.get("last_signal_session") != asof
     # Do not invent omitted month-end signals, but after a whole month was missed
     # recover at the next available close and disclose it in the signal metadata.
     return _month_index(asof) - _month_index(state["last_signal_session"]) >= 2
