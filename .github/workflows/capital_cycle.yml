@@ -1,0 +1,71 @@
+name: MIDAS capital cycle paper
+
+on:
+  schedule:
+    # Daily after XNYS close. The engine only ranks fundamentals at month-end;
+    # other sessions settle next-open fills and mark the fictitious portfolio.
+    - cron: '57 23 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      preflight_only:
+        description: 'Verify capital-cycle code/tests without recording a session'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: midas-capital-cycle
+  cancel-in-progress: false
+
+jobs:
+  capital-cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: capital_cycle/requirements-live.txt
+      - name: Install capital-cycle runtime
+        run: python -m pip install -r capital_cycle/requirements-live.txt
+      - name: Verify methodology, accounting and comparison integration
+        run: |
+          python -m py_compile capital_cycle/*.py strategy_comparison/report.py
+          python -m unittest discover -s capital_cycle/tests -v
+          python -m unittest discover -s strategy_comparison/tests -v
+      - name: Record capital-cycle paper state
+        if: ${{ !inputs.preflight_only }}
+        run: python capital_cycle/run.py --output capital_cycle_state
+      - name: Refresh all-strategy dashboard
+        if: ${{ always() && !inputs.preflight_only }}
+        run: |
+          python strategy_comparison/report.py \
+            --registry strategy_comparison/registry.json \
+            --paper-config paper_demo/config.json \
+            --paper-state paper_state/state.json \
+            --tfm-config tfm_shadow/config.json \
+            --tfm-state tfm_state/ledger.json \
+            --weekly-ml-config weekly_ml/config.json \
+            --weekly-ml-state weekly_ml_state/ledger.json \
+            --tfg-config tfg_ahp/config.json \
+            --tfg-state tfg_state/ledger.json \
+            --capital-cycle-config capital_cycle/config.json \
+            --capital-cycle-state capital_cycle_state/ledger.json \
+            --output strategy_state
+      - name: Commit capital-cycle and dashboard state
+        if: ${{ always() && !inputs.preflight_only }}
+        run: |
+          if [ -d capital_cycle_state ]; then
+            git add -- capital_cycle_state
+          fi
+          if [ -f strategy_state/dashboard.json ] && [ -f strategy_state/dashboard.md ]; then
+            git add -- strategy_state/dashboard.json strategy_state/dashboard.md
+          fi
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Record MIDAS capital-cycle paper state'
+            git push
+          fi
