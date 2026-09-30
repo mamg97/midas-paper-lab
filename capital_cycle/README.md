@@ -22,7 +22,7 @@ Capital inicial: 100.000 USD ficticios. Comisión 0,10 % y deslizamiento 0,05 % 
 ## Frecuencias
 
 - **fundamentales / ciclo de capital:** cada fin de mes;
-- **ranking y rebalanceo:** cierre de la última sesión XNYS del mes;
+- **ranking y rebalanceo:** la primera ejecución real registra una señal de lanzamiento; después, cierre de la última sesión XNYS del mes;
 - **fills ficticios:** apertura de la siguiente sesión;
 - **valoración del diario:** cada sesión cerrada;
 - **horizonte de señales:** 3 años para depresión/underinvestment y 6-12 meses para confirmar el giro;
