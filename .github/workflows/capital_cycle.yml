@@ -1,6 +1,11 @@
 name: MIDAS capital cycle paper
 
 on:
+  push:
+    branches: ['main']
+    paths:
+      - 'capital_cycle/**'
+      - '.github/workflows/capital_cycle.yml'
   pull_request:
     paths:
       - 'capital_cycle/**'
