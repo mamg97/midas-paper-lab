@@ -126,7 +126,7 @@ def _diagnostic_lines(stderr):
     out = []
     for raw in str(stderr or "").splitlines():
         if any(marker in raw.lower() for marker in markers):
-            line = re.sub(r"https?://\\S+", "<url>", raw.strip())
+            line = re.sub(r"https?://\S+", "<url>", raw.strip())
             if line:
                 out.append(line[:500])
     return out[-12:]
