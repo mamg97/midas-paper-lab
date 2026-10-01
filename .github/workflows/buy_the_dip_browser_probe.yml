@@ -1,0 +1,33 @@
+name: Buy The Dip browser transcript probe
+
+on:
+  pull_request:
+    paths:
+      - 'buy_the_dip_corpus/browser_transcript.py'
+      - '.github/workflows/buy_the_dip_browser_probe.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser runtime
+        run: |
+          python -m pip install 'playwright>=1.55,<2'
+          python -m playwright install --with-deps chromium
+      - name: Try visible YouTube transcript panel
+        run: |
+          python buy_the_dip_corpus/browser_transcript.py \
+            --video-id Vax3e_R44DI \
+            --output /tmp/transcript.txt
+          test -s /tmp/transcript.txt
+      - name: Destroy probe transcript
+        if: always()
+        run: rm -f /tmp/transcript.txt
