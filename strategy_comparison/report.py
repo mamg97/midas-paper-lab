@@ -102,7 +102,9 @@ def _risk_metrics(points):
             returns.append(navs[index] / navs[index - 1] - 1.0)
 
     volatility = sharpe = None
-    if len(returns) >= 2:
+    # Annualized volatility and Sharpe are too unstable with only a handful of
+    # observations. Keep max drawdown from day one, but wait for 10 returns.
+    if len(returns) >= 10:
         sd = statistics.stdev(returns)
         valid_gaps = [
             (dates[i] - dates[i - 1]).days
