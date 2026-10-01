@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "attempted_at_utc": "2026-10-01T11:39:31.618332+00:00",
+  "promoted": true,
+  "reason": "non_regressing_candidate",
+  "candidate_manifest_count": 300,
+  "previous_manifest_count": 300,
+  "candidate_caption_coverage": 0,
+  "previous_caption_coverage": 0,
+  "caption_transport": {
+    "status": "blocked_or_unavailable",
+    "canary_video_id": "NjMXlb6pPDc",
+    "canary_ok": false,
+    "surfaces": [],
+    "canary": {
+      "returncode": 1,
+      "timed_out": false,
+      "messages": [
+        "WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  <url>  for details on installing one",
+        "WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing",
+        "ERROR: [youtube] NjMXlb6pPDc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  <url>  for how to manually pass cookies. Also see  <url>  for tips on effectively exporting YouTube cookies"
+      ]
+    }
+  }
+}

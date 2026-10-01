@@ -3,7 +3,7 @@
   "source_name": "Buy The Dip",
   "channel_url": "https://www.youtube.com/@Buy_The_Dip",
   "channel_id": "UCS5I8A7UAu43QgFxxu8VRbQ",
-  "generated_at_utc": "2026-10-01T07:26:10.238522+00:00",
+  "generated_at_utc": "2026-10-01T11:39:31.618136+00:00",
   "config_version": "2026-10-01-buy-the-dip-corpus-v1",
   "manifest_count": 300,
   "by_format": {
@@ -16,13 +16,28 @@
     "missing": 300,
     "pct": 0.0
   },
+  "caption_transport": {
+    "status": "blocked_or_unavailable",
+    "canary_video_id": "NjMXlb6pPDc",
+    "canary_ok": false,
+    "surfaces": [],
+    "canary": {
+      "returncode": 1,
+      "timed_out": false,
+      "messages": [
+        "WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  <url>  for details on installing one",
+        "WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing",
+        "ERROR: [youtube] NjMXlb6pPDc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  <url>  for how to manually pass cookies. Also see  <url>  for tips on effectively exporting YouTube cookies"
+      ]
+    }
+  },
   "by_category": {
-    "portfolio_update": 46,
-    "company_or_theme": 162,
-    "macro_market": 40,
+    "portfolio_update": 43,
+    "company_or_theme": 171,
+    "macro_market": 37,
+    "sector_theme": 28,
     "methodology": 5,
-    "sector_theme": 30,
-    "guest_interview": 15,
+    "guest_interview": 14,
     "short": 2
   },
   "lexicon_aggregate": {
@@ -221,24 +236,6 @@
       "url": "https://www.youtube.com/watch?v=6hmNp6N8Gdo"
     },
     {
-      "video_id": "ARpaMofMpx0",
-      "title": "Nuestra CARTERA de INVERSIÓN en AGOSTO | BUY THE DIP PODCAST",
-      "published_date": null,
-      "category": "portfolio_update",
-      "guest_likely": false,
-      "score": 8.0,
-      "url": "https://www.youtube.com/watch?v=ARpaMofMpx0"
-    },
-    {
-      "video_id": "Ac1ZqjTbEx0",
-      "title": "Nuestra CARTERA de INVERSIÓN a MITAD DE AÑO | BUY THE DIP PODCAST",
-      "published_date": null,
-      "category": "portfolio_update",
-      "guest_likely": false,
-      "score": 8.0,
-      "url": "https://www.youtube.com/watch?v=Ac1ZqjTbEx0"
-    },
-    {
       "video_id": "FdAm8oWiw6k",
       "title": "Cartera de INVERSIÓN en NOVIEMBRE  | BUY THE DIP PODCAST",
       "published_date": null,
@@ -383,15 +380,6 @@
       "url": "https://www.youtube.com/watch?v=WEercPWuPJw"
     },
     {
-      "video_id": "Z9uiKsEQPWE",
-      "title": "Nuestra CARTERA de INVERSIÓN en ABRIL | BUY THE DIP PODCAST",
-      "published_date": null,
-      "category": "portfolio_update",
-      "guest_likely": false,
-      "score": 8.0,
-      "url": "https://www.youtube.com/watch?v=Z9uiKsEQPWE"
-    },
-    {
       "video_id": "aFYOC3YNR5E",
       "title": "¿GANANCIAS o PÉRDIDAS en ENERO? 📉📈 Nuestra CARTERA al DESCUBIERTO! | BUY THE DIP PODCAST",
       "published_date": null,
@@ -444,6 +432,33 @@
       "guest_likely": false,
       "score": 8.0,
       "url": "https://www.youtube.com/watch?v=i5EfibJeKz8"
+    },
+    {
+      "video_id": "jOSRF2SlWC4",
+      "title": "BUY THE DIP PODCAST: EPISODIO 26 NUESTRA CARTERA DE NOVIEMBRE 2020",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=jOSRF2SlWC4"
+    },
+    {
+      "video_id": "nVMmnYjkNpg",
+      "title": "Nuestra Cartera de INVERSIÓN en Mayo | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=nVMmnYjkNpg"
+    },
+    {
+      "video_id": "oiK2Q-4TOjM",
+      "title": "BUY THE DIP PODCAST EPISODIO 31: NUESTRA CARTERA PARA 2021",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=oiK2Q-4TOjM"
     }
   ],
   "methodology_note": "Corpus screening only. No trading rule is considered canonical until semantic review distinguishes host process from guest opinions and recurring themes."
