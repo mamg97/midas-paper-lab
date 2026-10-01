@@ -20,7 +20,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: buy-the-dip-corpus
+  group: buy-the-dip-research-state
   cancel-in-progress: false
 
 jobs:
