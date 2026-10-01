@@ -70,6 +70,13 @@ class EngineTests(unittest.TestCase):
         self.assertFalse(changed)
         self.assertEqual(same["nav"], state["nav"])
 
+    def test_same_session_ignores_provider_revision_after_freeze(self):
+        state, _ = advance(self.config, self.bars(), "2026-09-30", 505.0, state=None)
+        revised = self.bars(a=101.0, b=49.0, spy=501.0)
+        same, changed = advance(self.config, revised, "2026-09-30", 506.01, state=state)
+        self.assertFalse(changed)
+        self.assertEqual(same, state)
+
 
 if __name__ == "__main__":
     unittest.main()

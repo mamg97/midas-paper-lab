@@ -202,9 +202,9 @@ def advance(config, bars, asof, benchmark_close, decision=None, state=None):
         if state.get("strategy_id") != "capital_cycle_inflection_2026":
             raise ValueError("Diario capital-cycle no reconocido")
         if state.get("last_session") == asof:
-            previous = state.get("market_hashes", {}).get(asof)
-            if previous and previous != bar_hash:
-                raise ValueError("Datos revisados para sesión ya registrada")
+            # The ledger is append-only. A provider may revise an already frozen
+            # OHLC row after the first successful run; duplicate executions must
+            # remain a clean no-op instead of rewriting or failing the campaign.
             return copy.deepcopy(state), False
         if state.get("last_session") and state["last_session"] > asof:
             raise ValueError("Sesión capital-cycle fuera de orden")

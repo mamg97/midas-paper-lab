@@ -49,10 +49,10 @@ jobs:
           python -m unittest discover -s capital_cycle/tests -v
           python -m unittest discover -s strategy_comparison/tests -v
       - name: Record capital-cycle paper state
-        if: ${{ github.event_name != 'pull_request' && !inputs.preflight_only }}
+        if: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && !inputs.preflight_only }}
         run: python capital_cycle/run.py --output capital_cycle_state
       - name: Refresh all-strategy dashboard
-        if: ${{ always() && github.event_name != 'pull_request' && !inputs.preflight_only }}
+        if: ${{ always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && !inputs.preflight_only }}
         run: |
           python strategy_comparison/report.py \
             --registry strategy_comparison/registry.json \
@@ -68,7 +68,7 @@ jobs:
             --capital-cycle-state capital_cycle_state/ledger.json \
             --output strategy_state
       - name: Commit capital-cycle and dashboard state
-        if: ${{ always() && github.event_name != 'pull_request' && !inputs.preflight_only }}
+        if: ${{ always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && !inputs.preflight_only }}
         run: |
           if [ -d capital_cycle_state ]; then
             git add -- capital_cycle_state
