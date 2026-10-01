@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "source_name": "Buy The Dip",
+  "channel_url": "https://www.youtube.com/@Buy_The_Dip",
+  "channel_id": "UCS5I8A7UAu43QgFxxu8VRbQ",
+  "source_scope": "youtube_channel_only",
+  "include_formats": ["long", "live", "short"],
+  "transcript_policy": "transient_only_never_commit_verbatim",
+  "preferred_caption_languages": ["es", "es-ES", "en"],
+  "topic_count": 12,
+  "max_features": 6000,
+  "strategy_lexicons": {
+    "quality": ["calidad", "roic", "roe", "retorno sobre capital", "margen", "márgenes", "ventaja competitiva", "moat", "cultura empresarial", "posición dominante"],
+    "cash_flow": ["flujo de caja", "free cash flow", "fcf", "cash flow", "caja libre"],
+    "valuation": ["valoración", "valoracion", "margen de seguridad", "per", "ev ebit", "ev/ebit", "precio objetivo", "barata", "barato", "sobrevalorada", "sobrevalorado", "infravalorada", "infravalorado"],
+    "balance_sheet": ["deuda", "balance", "caja neta", "deuda neta", "liquidez", "solvencia"],
+    "capital_allocation": ["asignación de capital", "asignacion de capital", "recompras", "buyback", "dividendo", "capex", "adquisiciones"],
+    "contrarian": ["sector odiado", "sectores odiados", "contrarian", "nadie quiere", "castigado", "castigada", "pánico", "panico", "capitulación", "capitulacion"],
+    "cyclical": ["ciclo", "cíclico", "ciclico", "materias primas", "commodities", "oferta y demanda", "oferta", "demanda", "inventarios", "producción", "produccion"],
+    "macro": ["inflación", "inflacion", "tipos de interés", "tipos de interes", "recesión", "recesion", "fed", "bancos centrales", "pmi", "empleo", "aranceles"],
+    "portfolio": ["cartera", "posición", "posicion", "peso", "concentrar", "concentración", "concentracion", "diversificar", "diversificación", "diversificacion"],
+    "entry": ["comprar", "compra", "entrada", "entrar", "añadir", "anadir", "incrementar posición", "incrementar posicion"],
+    "exit": ["vender", "venta", "salir", "salida", "reducir posición", "reducir posicion", "deshacer posición", "deshacer posicion"],
+    "risk": ["riesgo", "stop loss", "pérdida permanente", "perdida permanente", "drawdown", "volatilidad"],
+    "technical": ["análisis técnico", "analisis tecnico", "media móvil", "media movil", "rsi", "macd", "soporte", "resistencia", "tendencia", "momentum"],
+    "management": ["management", "directiva", "equipo gestor", "ceo", "incentivos", "skin in the game", "insiders"]
+  },
+  "version": "2026-10-01-buy-the-dip-corpus-v1"
+}

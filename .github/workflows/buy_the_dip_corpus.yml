@@ -1,0 +1,71 @@
+name: Buy The Dip corpus sync
+
+on:
+  pull_request:
+    paths:
+      - 'buy_the_dip_corpus/**'
+      - 'research/BUY_THE_DIP_SOURCE_STRATEGY.md'
+      - '.github/workflows/buy_the_dip_corpus.yml'
+  push:
+    branches: ['main']
+    paths:
+      - 'buy_the_dip_corpus/**'
+      - 'research/BUY_THE_DIP_SOURCE_STRATEGY.md'
+      - '.github/workflows/buy_the_dip_corpus.yml'
+  schedule:
+    - cron: '23 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: buy-the-dip-corpus
+  cancel-in-progress: false
+
+jobs:
+  corpus:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: buy_the_dip_corpus/requirements.txt
+
+      - name: Install corpus runtime
+        run: python -m pip install -r buy_the_dip_corpus/requirements.txt
+
+      - name: Unit tests
+        run: python -m unittest discover -s buy_the_dip_corpus/tests -v
+
+      - name: Compile
+        run: python -m py_compile buy_the_dip_corpus/*.py
+
+      - name: Build full channel corpus map
+        if: ${{ github.event_name != 'pull_request' }}
+        run: python buy_the_dip_corpus/build_corpus.py --output buy_the_dip_state
+
+      - name: 'Safety check: no subtitle/transcript files persisted'
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          if find buy_the_dip_state -type f \( -name '*.vtt' -o -name '*.srt' -o -name '*.ass' -o -name '*.lrc' \) | grep -q .; then
+            echo 'Transcript/caption file leaked into persistent state' >&2
+            exit 1
+          fi
+          if grep -RIl --include='*.json' --include='*.md' -- '-->' buy_the_dip_state | grep -q .; then
+            echo 'Caption timing leaked into persistent state' >&2
+            exit 1
+          fi
+
+      - name: Commit derived corpus state
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          git add -- buy_the_dip_state
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh Buy The Dip derived corpus'
+            git push
+          fi
