@@ -177,10 +177,37 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(row["group"], "buy_the_dip_demo")
         self.assertEqual(row["return_pct"], -1.0)
         self.assertEqual(row["risk_observations"], 3)
-        self.assertIsNotNone(row["annualized_volatility_pct"])
+        self.assertIsNone(row["annualized_volatility_pct"])
         self.assertAlmostEqual(row["max_drawdown_pct"], -2.941176, places=5)
-        self.assertIsNotNone(row["sharpe_0rf"])
+        self.assertIsNone(row["sharpe_0rf"])
         self.assertIn("Buy The Dip", markdown(result))
+
+
+    def test_risk_volatility_and_sharpe_wait_for_enough_observations(self):
+        btd_config = {
+            "name": "MIDAS_buy_the_dip_corpus_v0_2026",
+            "currency": "USD",
+            "paper_policy": {"capital": 100000.0},
+        }
+        equity = []
+        nav = 100000.0
+        for day in range(1, 12):
+            nav *= 1.002 if day % 2 else 0.999
+            equity.append({"date": f"2026-10-{day:02d}", "nav": nav})
+        btd = {
+            "config_hash": _config_hash(btd_config),
+            "strategy_id": "buy_the_dip_corpus_2026_v0",
+            "first_session": equity[0]["date"],
+            "last_session": equity[-1]["date"],
+            "nav": equity[-1]["nav"],
+            "equity": equity,
+        }
+        result = build(self.registry, self.config, now=self.now,
+                       btd_config=btd_config, btd_state=btd)
+        row = next(x for x in result["tracks"] if x["id"] == "buy_the_dip_corpus_2026_v0")
+        self.assertEqual(row["risk_observations"], 11)
+        self.assertIsNotNone(row["annualized_volatility_pct"])
+        self.assertIsNotNone(row["sharpe_0rf"])
 
 
     def test_capital_cycle_uses_separate_monthly_ledger(self):
