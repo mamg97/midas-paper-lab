@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "name": "MIDAS_buy_the_dip_corpus_v0_2026",
+  "calendar": "XNYS",
+  "currency": "USD",
+  "universe_file": "weekly_ml/universe_sp500_2026-09-29.csv",
+  "benchmark_ticker": "SPY",
+  "history_period": "6y",
+  "price_min_history_days": 760,
+  "minimum_valid_candidates": 80,
+  "fundamental_workers": 8,
+  "paper_policy": {
+    "capital": 100000.0,
+    "commission": 0.001,
+    "slippage": 0.0005,
+    "max_positions": 10,
+    "max_position_weight": 0.15,
+    "max_sector_positions": 3,
+    "max_sector_weight": 0.30,
+    "fractional_shares": true,
+    "share_precision": 6,
+    "min_notional": 10.0
+  },
+  "model": {
+    "entry_score": 60.0,
+    "retention_score": 45.0,
+    "hard_exit_score": 30.0,
+    "minimum_quality_score": 35.0,
+    "minimum_valuation_score": 50.0,
+    "minimum_dislocation_score": 40.0,
+    "minimum_catalyst_votes": 2,
+    "minimum_positive_fcf_years": 2,
+    "maximum_net_debt_to_ocf": 5.0,
+    "minimum_interest_coverage": 1.5,
+    "minimum_hold_months": 3,
+    "rerated_valuation_score": 25.0,
+    "rerated_dislocation_score": 30.0,
+    "weights": {
+      "valuation": 0.30,
+      "quality": 0.20,
+      "capital_allocation": 0.15,
+      "dislocation": 0.20,
+      "catalyst": 0.15
+    },
+    "invest_fraction_by_eligible": [
+      {"min_candidates": 10, "invest_fraction": 0.95},
+      {"min_candidates": 7, "invest_fraction": 0.90},
+      {"min_candidates": 4, "invest_fraction": 0.70},
+      {"min_candidates": 1, "invest_fraction": 0.50},
+      {"min_candidates": 0, "invest_fraction": 0.00}
+    ]
+  },
+  "version": "2026-10-01-buy-the-dip-corpus-v0"
+}
