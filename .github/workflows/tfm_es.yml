@@ -4,6 +4,9 @@ on:
   schedule:
     # 20:23 CET / 21:23 CEST: después del cierre de Madrid.
     - cron: '23 19 * * 1-5'
+    # Segunda oportunidad antes de la apertura de Madrid si el proveedor
+    # todavía no había publicado una sesión completa en el primer intento.
+    - cron: '23 3 * * 2-6'
   workflow_dispatch:
     inputs:
       preflight_only:
