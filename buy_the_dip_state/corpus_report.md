@@ -6,7 +6,7 @@ Fuente canónica: https://www.youtube.com/@Buy_The_Dip
 - Captions utilizables: **0** (0.00 %)
 - Transporte captions: **blocked_or_unavailable** · canary=False
 - Formatos: **{'long': 271, 'live': 27, 'short': 2}**
-- Categorías derivadas: **{'portfolio_update': 42, 'company_or_theme': 180, 'macro_market': 34, 'methodology': 5, 'sector_theme': 24, 'guest_interview': 13, 'short': 2}**
+- Categorías derivadas: **{'portfolio_update': 46, 'company_or_theme': 169, 'macro_market': 37, 'sector_theme': 27, 'methodology': 5, 'guest_interview': 14, 'short': 2}**
 
 ## Señales recurrentes
 
@@ -44,6 +44,7 @@ Fuente canónica: https://www.youtube.com/@Buy_The_Dip
 - s/f · **La Cartera de INVERSIÓN del DIABLO vs la de JESUCRISTO  | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=5zhiPZ_25QE
 - s/f · **Cartera de INVERSIÓN en JUNIO | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=69jYd6ofAyc
 - s/f · **Nuestra Cartera de INVERSIÓN en Diciembre | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=6hmNp6N8Gdo
+- s/f · **Nuestra CARTERA de INVERSIÓN a MITAD DE AÑO | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=Ac1ZqjTbEx0
 - s/f · **Cartera de INVERSIÓN en NOVIEMBRE  | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=FdAm8oWiw6k
 - s/f · **Cartera de INVERSIÓN en FEBRERO  | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=G3ouHDpENXo
 - s/f · **Nuestra Cartera de INVERSIÓN en Octubre | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=HBXcRvP29f8
@@ -53,7 +54,6 @@ Fuente canónica: https://www.youtube.com/@Buy_The_Dip
 - s/f · **Nuestra CARTERA y RENTABILIDAD del AÑO | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=Nn-ENiVL-JE
 - s/f · **Nuestra CARTERA de INVERSIÓN en Febrero-Marzo | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=Oshx709ObyM
 - s/f · **BUY THE DIP PODCAST: EPISODIO 29 NUESTRA CARTERA DE DICIEMBRE 2020** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=PQtYShldu5k
-- s/f · **BUY THE DIP PODCAST: EPISODIO 14 ¡NOTICIA IMPORTANTE! Y NUESTRA CARTERA AGOSTO 2020** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=QtJsr_sWF4Y
 
 ## Topics no supervisados
 

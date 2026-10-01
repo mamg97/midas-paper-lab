@@ -6,8 +6,8 @@
   "canonical_identity": "youtube_channel",
   "episode_count": 193,
   "with_audio_url": 193,
-  "matched_to_youtube": 124,
-  "unmatched_or_ambiguous": 69,
+  "matched_to_youtube": 131,
+  "unmatched_or_ambiguous": 62,
   "episodes": [
     {
       "title": "¿En qué INVERTIRMOS este SEPTIEMBRE? - NUESTRA CARTERA | BUY THE DIP PODCAST",
@@ -146,12 +146,12 @@
       "audio_url": "https://www.ivoox.com/hay-oportunidad-inversion-estos-sectores-en_mf_167520157_feed_1.mp3",
       "audio_mime": "audio/mpeg",
       "audio_length_bytes": 20999941,
-      "youtube_video_id": null,
-      "youtube_title": null,
-      "youtube_url": null,
-      "match_score": 0.588364,
-      "second_best_score": 0.5872,
-      "match_status": "unmatched_or_ambiguous"
+      "youtube_video_id": "oFomcCtMb6M",
+      "youtube_title": "¿Hay OPORTUNIDAD de INVERSIÓN en estos sectores en 2026? | BUY THE DIP PODCAST",
+      "youtube_url": "https://www.youtube.com/watch?v=oFomcCtMb6M",
+      "match_score": 1.0,
+      "second_best_score": 0.588364,
+      "match_status": "matched"
     },
     {
       "title": "Nuestra CARTERA y RENTABILIDAD del AÑO 2025 | BUY THE DIP PODCAST",
@@ -166,7 +166,7 @@
       "youtube_title": "Nuestra CARTERA y RENTABILIDAD del AÑO | BUY THE DIP PODCAST",
       "youtube_url": "https://www.youtube.com/watch?v=Nn-ENiVL-JE",
       "match_score": 0.915556,
-      "second_best_score": 0.528105,
+      "second_best_score": 0.561945,
       "match_status": "matched"
     },
     {
@@ -198,7 +198,7 @@
       "youtube_title": null,
       "youtube_url": null,
       "match_score": 0.896,
-      "second_best_score": 0.875495,
+      "second_best_score": 0.896,
       "match_status": "unmatched_or_ambiguous"
     },
     {
@@ -322,12 +322,12 @@
       "audio_url": "https://www.ivoox.com/nuestra-cartera-inversion-a-mitad-de-ano_mf_150527294_feed_1.mp3",
       "audio_mime": "audio/mpeg",
       "audio_length_bytes": 21664914,
-      "youtube_video_id": null,
-      "youtube_title": null,
-      "youtube_url": null,
-      "match_score": 0.725963,
+      "youtube_video_id": "Ac1ZqjTbEx0",
+      "youtube_title": "Nuestra CARTERA de INVERSIÓN a MITAD DE AÑO | BUY THE DIP PODCAST",
+      "youtube_url": "https://www.youtube.com/watch?v=Ac1ZqjTbEx0",
+      "match_score": 1.0,
       "second_best_score": 0.725963,
-      "match_status": "unmatched_or_ambiguous"
+      "match_status": "matched"
     },
     {
       "title": "¿En qué PAÍSES INVERTIR? | BUY THE DIP PODCAST",
@@ -386,12 +386,12 @@
       "audio_url": "https://www.ivoox.com/vamos-hacia-la-peor-recesion-desde-2008-con_mf_145194042_feed_1.mp3",
       "audio_mime": "audio/mpeg",
       "audio_length_bytes": 26587010,
-      "youtube_video_id": null,
-      "youtube_title": null,
-      "youtube_url": null,
-      "match_score": 0.516711,
-      "second_best_score": 0.336471,
-      "match_status": "unmatched_or_ambiguous"
+      "youtube_video_id": "GEkJ5Mvxw9Q",
+      "youtube_title": "¿Vamos hacia La PEOR RECESIÓN desde 2008? con Diego Puertas  | BUY THE DIP PODCAST",
+      "youtube_url": "https://www.youtube.com/watch?v=GEkJ5Mvxw9Q",
+      "match_score": 1.0,
+      "second_best_score": 0.352004,
+      "match_status": "matched"
     },
     {
       "title": "Buscando OPORTUNIDADES de INVERSIÓN con Adrià Rivero | BUY THE DIP PODCAST",
@@ -418,12 +418,12 @@
       "audio_url": "https://www.ivoox.com/hasta-donde-seguira-subiendo-oro-que-pasa_mf_144938361_feed_1.mp3",
       "audio_mime": "audio/mpeg",
       "audio_length_bytes": 7779056,
-      "youtube_video_id": null,
-      "youtube_title": null,
-      "youtube_url": null,
-      "match_score": 0.3837,
-      "second_best_score": 0.368811,
-      "match_status": "unmatched_or_ambiguous"
+      "youtube_video_id": "Inl1QLeoBCY",
+      "youtube_title": "¿Hasta dónde seguirá subiendo el ORO? ¿Qué pasa?",
+      "youtube_url": "https://www.youtube.com/watch?v=Inl1QLeoBCY",
+      "match_score": 1.0,
+      "second_best_score": 0.3837,
+      "match_status": "matched"
     },
     {
       "title": "TRUMP hunde LA BOLSA ¿Qué OPORTUNIDADES hay EN LAS CAÍDAS?",
@@ -434,12 +434,12 @@
       "audio_url": "https://www.ivoox.com/trump-hunde-la-bolsa-que-oportunidades-hay-en_mf_144476330_feed_1.mp3",
       "audio_mime": "audio/mpeg",
       "audio_length_bytes": 8373394,
-      "youtube_video_id": null,
-      "youtube_title": null,
-      "youtube_url": null,
-      "match_score": 0.466667,
-      "second_best_score": 0.400168,
-      "match_status": "unmatched_or_ambiguous"
+      "youtube_video_id": "n4QnU-5l760",
+      "youtube_title": "TRUMP hunde LA BOLSA ¿Qué OPORTUNIDADES hay EN LAS CAÍDAS?",
+      "youtube_url": "https://www.youtube.com/watch?v=n4QnU-5l760",
+      "match_score": 1.0,
+      "second_best_score": 0.466667,
+      "match_status": "matched"
     },
     {
       "title": "Nuestra CARTERA de INVERSIÓN en Febrero-Marzo | BUY THE DIP PODCAST",
@@ -501,8 +501,8 @@
       "youtube_video_id": null,
       "youtube_title": null,
       "youtube_url": null,
-      "match_score": 0.416364,
-      "second_best_score": 0.369641,
+      "match_score": 0.369641,
+      "second_best_score": 0.365254,
       "match_status": "unmatched_or_ambiguous"
     },
     {
@@ -646,7 +646,7 @@
       "youtube_title": "Nuestra CARTERA y RENTABILIDAD del AÑO | BUY THE DIP PODCAST",
       "youtube_url": "https://www.youtube.com/watch?v=Nn-ENiVL-JE",
       "match_score": 1.0,
-      "second_best_score": 0.536,
+      "second_best_score": 0.599556,
       "match_status": "matched"
     },
     {
@@ -678,7 +678,7 @@
       "youtube_title": "IDEAS de INVERSIÓN en SECTORES ODIADOS | BUY THE DIP PODCAST",
       "youtube_url": "https://www.youtube.com/watch?v=XVds3X6S1dU",
       "match_score": 1.0,
-      "second_best_score": 0.585,
+      "second_best_score": 0.657778,
       "match_status": "matched"
     },
     {
@@ -694,7 +694,7 @@
       "youtube_title": "Nuestra Cartera de INVERSIÓN en OCTUBRE-NOVIEMBRE | BUY THE DIP PODCAST",
       "youtube_url": "https://www.youtube.com/watch?v=5SGLgwvrv4U",
       "match_score": 1.0,
-      "second_best_score": 0.878182,
+      "second_best_score": 1.0,
       "match_status": "matched"
     },
     {
@@ -802,12 +802,12 @@
       "audio_url": "https://www.ivoox.com/invertir-activos-unicos-iii-monopolios-locales_mf_133055264_feed_1.mp3",
       "audio_mime": "audio/mpeg",
       "audio_length_bytes": 34899635,
-      "youtube_video_id": null,
-      "youtube_title": null,
-      "youtube_url": null,
-      "match_score": 0.675385,
-      "second_best_score": 0.6592,
-      "match_status": "unmatched_or_ambiguous"
+      "youtube_video_id": "1koVlCtIpAg",
+      "youtube_title": "INVERTIR en ACTIVOS ÚNICOS III MONOPOLIOS LOCALES | BUY THE DIP PODCAST",
+      "youtube_url": "https://www.youtube.com/watch?v=1koVlCtIpAg",
+      "match_score": 1.0,
+      "second_best_score": 0.675385,
+      "match_status": "matched"
     },
     {
       "title": "Nuestra Cartera de INVERSIÓN en JULIO | BUY THE DIP PODCAST",
@@ -1650,12 +1650,12 @@
       "audio_url": "https://www.ivoox.com/cual-mejor-empresa-petroleo-para_mf_100564725_feed_1.mp3",
       "audio_mime": "audio/mpeg",
       "audio_length_bytes": 15764838,
-      "youtube_video_id": null,
-      "youtube_title": null,
-      "youtube_url": null,
-      "match_score": 0.49007,
-      "second_best_score": 0.486667,
-      "match_status": "unmatched_or_ambiguous"
+      "youtube_video_id": "eb6TWuGxz-4",
+      "youtube_title": "Cuál en la mejor empresa de PETRÓLEO para INVERTIR | BUY THE DIP PODCAST",
+      "youtube_url": "https://www.youtube.com/watch?v=eb6TWuGxz-4",
+      "match_score": 1.0,
+      "second_best_score": 0.49007,
+      "match_status": "matched"
     },
     {
       "title": "Cartera de INVERSIÓN en DICIEMBRE | BUY THE DIP PODCAST",
@@ -1702,7 +1702,7 @@
       "youtube_title": "Un negocio protegido de la inflación | BUY THE DIP PODCAST",
       "youtube_url": "https://www.youtube.com/watch?v=0bQUnE3IB0Y",
       "match_score": 1.0,
-      "second_best_score": 0.349733,
+      "second_best_score": 0.387922,
       "match_status": "matched"
     },
     {
@@ -1958,7 +1958,7 @@
       "youtube_title": "INVERTIR EN EL ESPACIO | BUY THE DIP PODCAST",
       "youtube_url": "https://www.youtube.com/watch?v=3yG_4HLQU18",
       "match_score": 1.0,
-      "second_best_score": 0.620163,
+      "second_best_score": 0.622313,
       "match_status": "matched"
     },
     {
@@ -2486,7 +2486,7 @@
       "youtube_title": null,
       "youtube_url": null,
       "match_score": 0.426792,
-      "second_best_score": 0.355765,
+      "second_best_score": 0.357778,
       "match_status": "unmatched_or_ambiguous"
     },
     {
@@ -2965,8 +2965,8 @@
       "youtube_video_id": null,
       "youtube_title": null,
       "youtube_url": null,
-      "match_score": 0.43766,
-      "second_best_score": 0.427937,
+      "match_score": 0.493571,
+      "second_best_score": 0.43766,
       "match_status": "unmatched_or_ambiguous"
     },
     {
