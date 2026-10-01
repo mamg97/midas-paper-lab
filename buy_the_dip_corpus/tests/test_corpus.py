@@ -2,6 +2,7 @@ import json
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -60,6 +61,56 @@ class CorpusTests(unittest.TestCase):
         clean = build_corpus._relevance(base)
         guest = build_corpus._relevance({**base, "guest_likely": True})
         self.assertGreater(clean, guest)
+
+
+    def test_diagnostics_keep_errors_but_redact_urls(self):
+        lines = build_corpus._diagnostic_lines(
+            "WARNING: subtitles unavailable at https://example.com/signed?x=1\n"
+            "INFO: harmless\nERROR: HTTP 403 blocked"
+        )
+        self.assertEqual(len(lines), 2)
+        self.assertIn("<url>", lines[0])
+        self.assertNotIn("example.com", lines[0])
+        self.assertIn("403", lines[1])
+
+    def test_canary_failure_stops_before_full_channel_scan(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch.object(
+                build_corpus,
+                "_caption_command",
+                return_value={"returncode": 0, "timed_out": False, "messages": ["blocked"]},
+            ) as call:
+                result = build_corpus._download_captions(
+                    "https://www.youtube.com/@Buy_The_Dip",
+                    tmp,
+                    ["es"],
+                    canary_video_id="abc123",
+                    sleep_seconds=0,
+                )
+        self.assertEqual(result["status"], "blocked_or_unavailable")
+        self.assertFalse(result["canary_ok"])
+        self.assertEqual(call.call_count, 1)
+
+    def test_canary_success_allows_surface_scan(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            def fake_command(url, temp_dir, langs, **kwargs):
+                if "watch?v=abc123" in url:
+                    Path(temp_dir, "abc123.es.vtt").write_text(
+                        "WEBVTT\n\n00:00:00.000 --> 00:00:01.000\nHola",
+                        encoding="utf-8",
+                    )
+                return {"returncode": 0, "timed_out": False, "messages": []}
+            with mock.patch.object(build_corpus, "_caption_command", side_effect=fake_command) as call:
+                result = build_corpus._download_captions(
+                    "https://www.youtube.com/@Buy_The_Dip",
+                    tmp,
+                    ["es"],
+                    canary_video_id="abc123",
+                    sleep_seconds=0,
+                )
+        self.assertEqual(result["status"], "reachable")
+        self.assertTrue(result["canary_ok"])
+        self.assertEqual(call.call_count, 1 + len(build_corpus.SURFACES))
 
 
 if __name__ == "__main__":
