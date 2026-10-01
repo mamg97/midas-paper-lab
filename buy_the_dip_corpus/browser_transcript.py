@@ -53,6 +53,19 @@ def scrape(video_id: str, output: str):
             viewport={"width": 1440, "height": 1200},
         )
         page = context.new_page()
+        transcript_payloads = []
+        transcript_responses = []
+
+        def on_response(response):
+            if "get_transcript" not in response.url:
+                return
+            transcript_responses.append({"url": response.url, "status": response.status})
+            try:
+                transcript_payloads.append(response.json())
+            except Exception:
+                pass
+
+        page.on("response", on_response)
         try:
             page.goto(url, wait_until="domcontentloaded", timeout=60000)
             page.wait_for_timeout(4000)
@@ -84,7 +97,41 @@ def scrape(video_id: str, output: str):
                 'tp-yt-paper-button:has-text("transcrip")',
             ])
             result["diagnostics"].append("transcript_button=" + str(clicked))
-            page.wait_for_timeout(3500)
+            page.wait_for_timeout(8000)
+            result["diagnostics"].append("get_transcript_responses=" + json.dumps(transcript_responses))
+
+            def transcript_texts_from_payload(payload):
+                found = []
+                def walk(node, in_segment=False):
+                    if isinstance(node, dict):
+                        segment_here = in_segment or any(
+                            key in node for key in (
+                                "transcriptSegmentRenderer",
+                                "transcriptSegmentViewModel",
+                            )
+                        )
+                        if segment_here:
+                            text_value = node.get("text")
+                            if isinstance(text_value, str) and text_value.strip():
+                                found.append(text_value.strip())
+                        for key, value in node.items():
+                            child_segment = segment_here or ("transcriptSegment" in key)
+                            if key == "runs" and child_segment and isinstance(value, list):
+                                for run in value:
+                                    if isinstance(run, dict):
+                                        t = run.get("text")
+                                        if isinstance(t, str) and t.strip():
+                                            found.append(t.strip())
+                            walk(value, child_segment)
+                    elif isinstance(node, list):
+                        for value in node:
+                            walk(value, in_segment)
+                walk(payload)
+                return found
+
+            network_texts = []
+            for payload in transcript_payloads:
+                network_texts.extend(transcript_texts_from_payload(payload))
 
             selectors = [
                 "ytd-transcript-segment-renderer",
@@ -96,6 +143,12 @@ def scrape(video_id: str, output: str):
             ]
             texts = []
             seen = set()
+            for txt in network_texts:
+                txt = re.sub(r"\s+", " ", txt).strip()
+                if txt and txt not in seen:
+                    seen.add(txt)
+                    texts.append(txt)
+            result["diagnostics"].append(f"network_transcript_texts={len(texts)}")
             for selector in selectors:
                 loc = page.locator(selector)
                 count = loc.count()
