@@ -419,6 +419,7 @@ def choose_portfolio(scored, positions, asof, config):
     model, policy = config["model"], config["paper_policy"]
     lookup = {row["ticker"]: row for row in scored}
     exits = {}
+    locked = []
     candidates = []
 
     for row in scored:
@@ -437,15 +438,26 @@ def choose_portfolio(scored, positions, asof, config):
             ):
                 exits[ticker] = "score_below_retention"
                 continue
-            # Small hysteresis bonus avoids needless monthly turnover while still
-            # allowing a clearly better opportunity to replace an incumbent.
-            candidates.append((float(row["composite_score"]) + 4.0, row, True))
+            if held < model["minimum_hold_months"]:
+                locked.append(row)
+            else:
+                # Small hysteresis bonus avoids needless monthly turnover while still
+                # allowing a clearly better opportunity to replace an incumbent.
+                candidates.append((float(row["composite_score"]) + 4.0, row, True))
         elif row["entry_eligible"]:
             candidates.append((float(row["composite_score"]), row, False))
 
-    candidates.sort(key=lambda item: (-item[0], item[1]["ticker"]))
     selected = []
     sector_counts = defaultdict(int)
+    for row in sorted(locked, key=lambda item: (-float(item["composite_score"]), item["ticker"])):
+        if len(selected) >= int(policy["max_positions"]):
+            raise ValueError("Posiciones bloqueadas por permanencia mínima exceden max_positions")
+        if sector_counts[row["sector"]] >= int(policy["max_sector_positions"]):
+            raise ValueError("Posiciones bloqueadas por permanencia mínima exceden max_sector_positions")
+        selected.append(row)
+        sector_counts[row["sector"]] += 1
+
+    candidates.sort(key=lambda item: (-item[0], item[1]["ticker"]))
     for _, row, _ in candidates:
         if len(selected) >= int(policy["max_positions"]):
             break
@@ -466,5 +478,6 @@ def choose_portfolio(scored, positions, asof, config):
         exits[ticker] = "rank_replaced" if held >= model["minimum_hold_months"] else "sector_or_position_cap"
 
     eligible_count = sum(bool(row.get("entry_eligible")) for row in scored)
-    invest_fraction = _invest_fraction(eligible_count, model)
+    opportunity_count = max(eligible_count, len(selected))
+    invest_fraction = _invest_fraction(opportunity_count, model)
     return _allocate(selected, invest_fraction, policy), exits, invest_fraction
