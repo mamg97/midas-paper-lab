@@ -47,6 +47,15 @@
       "methodology_relevance_score": 12.0
     },
     {
+      "video_id": "ckJ0cRRc7DE",
+      "title": "El Lado Oscuro de las Inversiones: Nuestros Fracasos | BUY THE DIP PODCAST",
+      "url": "https://www.youtube.com/watch?v=ckJ0cRRc7DE",
+      "category": "methodology",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 12.0
+    },
+    {
       "video_id": "-EL1QLkTi_A",
       "title": "Nuestra Cartera de INVERSIÓN en AGOSTO | BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=-EL1QLkTi_A",
@@ -131,6 +140,15 @@
       "video_id": "6hmNp6N8Gdo",
       "title": "Nuestra Cartera de INVERSIÓN en Diciembre | BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=6hmNp6N8Gdo",
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 8.0
+    },
+    {
+      "video_id": "ARpaMofMpx0",
+      "title": "Nuestra CARTERA de INVERSIÓN en AGOSTO | BUY THE DIP PODCAST",
+      "url": "https://www.youtube.com/watch?v=ARpaMofMpx0",
       "category": "portfolio_update",
       "guest_likely": false,
       "caption_available": false,
@@ -353,15 +371,6 @@
       "methodology_relevance_score": 8.0
     },
     {
-      "video_id": "ijwCQJkwDog",
-      "title": "Nuestra CARTERA de INVERSIÓN en OCTUBRE-NOVIEMBRE | BUY THE DIP PODCAST",
-      "url": "https://www.youtube.com/watch?v=ijwCQJkwDog",
-      "category": "portfolio_update",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 8.0
-    },
-    {
       "video_id": "jOSRF2SlWC4",
       "title": "BUY THE DIP PODCAST: EPISODIO 26 NUESTRA CARTERA DE NOVIEMBRE 2020",
       "url": "https://www.youtube.com/watch?v=jOSRF2SlWC4",
@@ -407,18 +416,18 @@
       "methodology_relevance_score": 8.0
     },
     {
-      "video_id": "skHAbJHZ8XE",
-      "title": "BUY THE DIP PODCAST EPISODIO 36: NUESTRA CARTERA DE FEBRERO",
-      "url": "https://www.youtube.com/watch?v=skHAbJHZ8XE",
+      "video_id": "sc944xFNM00",
+      "title": "Nuestra CARTERA de INVERSIÓN en SEPTIEMBRE | BUY THE DIP PODCAST",
+      "url": "https://www.youtube.com/watch?v=sc944xFNM00",
       "category": "portfolio_update",
       "guest_likely": false,
       "caption_available": false,
       "methodology_relevance_score": 8.0
     },
     {
-      "video_id": "tFnhCKdS_zU",
-      "title": "BUY THE DIP PODCAST: EPISODIO 9 NUESTRA CARTERA 3",
-      "url": "https://www.youtube.com/watch?v=tFnhCKdS_zU",
+      "video_id": "skHAbJHZ8XE",
+      "title": "BUY THE DIP PODCAST EPISODIO 36: NUESTRA CARTERA DE FEBRERO",
+      "url": "https://www.youtube.com/watch?v=skHAbJHZ8XE",
       "category": "portfolio_update",
       "guest_likely": false,
       "caption_available": false,
@@ -542,6 +551,15 @@
       "methodology_relevance_score": 3.0
     },
     {
+      "video_id": "KAPa_BGXkRs",
+      "title": "INVERTIR en URANIO y la BURBUJA que viene | BUY THE DIP PODCAST",
+      "url": "https://www.youtube.com/watch?v=KAPa_BGXkRs",
+      "category": "sector_theme",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 3.0
+    },
+    {
       "video_id": "LQLtVRT6s6E",
       "title": "OREZONE GOLD Una minera de oro en Burkina Faso",
       "url": "https://www.youtube.com/watch?v=LQLtVRT6s6E",
@@ -560,6 +578,15 @@
       "methodology_relevance_score": 3.0
     },
     {
+      "video_id": "R5Uhmi5Qm5I",
+      "title": "ORO y URANIO: Estos dos metales HAN DESPERTADO",
+      "url": "https://www.youtube.com/watch?v=R5Uhmi5Qm5I",
+      "category": "sector_theme",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 3.0
+    },
+    {
       "video_id": "RPhiC3ELmk8",
       "title": "SOFTWARE (SaaS) Sector by an EXPERT - HISTORIC OPPORTUNITY? | BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=RPhiC3ELmk8",
@@ -572,6 +599,15 @@
       "video_id": "UzxdIAOxKCA",
       "title": "BUY THE DIP PODCAST EPISODIO 60: Jose Ruiz de Alda: Industriales, Energía y MMPP",
       "url": "https://www.youtube.com/watch?v=UzxdIAOxKCA",
+      "category": "sector_theme",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 3.0
+    },
+    {
+      "video_id": "Y3wIDQMm5ag",
+      "title": "La LOCURA del ORO rompe MÁXIMOS HISTÓRICOS",
+      "url": "https://www.youtube.com/watch?v=Y3wIDQMm5ag",
       "category": "sector_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -626,6 +662,15 @@
       "video_id": "ht5OchPc8sw",
       "title": "💥 URANIO camino a 100$ ¿todavía se puede INVERTIR?",
       "url": "https://www.youtube.com/watch?v=ht5OchPc8sw",
+      "category": "sector_theme",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 3.0
+    },
+    {
+      "video_id": "jf3HWs6bSnQ",
+      "title": "La ENERGÍA, ¿el sector con más OPORTUNIDADES en 2025?",
+      "url": "https://www.youtube.com/watch?v=jf3HWs6bSnQ",
       "category": "sector_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -704,6 +749,33 @@
       "methodology_relevance_score": 3.0
     },
     {
+      "video_id": "xM1ERqrAZKw",
+      "title": "¡EL ORO SE DERRUMBA! ¿Es el FIN DEFINITIVO del Bull Market?",
+      "url": "https://www.youtube.com/watch?v=xM1ERqrAZKw",
+      "category": "sector_theme",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 3.0
+    },
+    {
+      "video_id": "xQLuiuDKk-M",
+      "title": "INVERTIR en PLATINO y PALADIO",
+      "url": "https://www.youtube.com/watch?v=xQLuiuDKk-M",
+      "category": "sector_theme",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 3.0
+    },
+    {
+      "video_id": "EBf4zbAkQoc",
+      "title": "TODO el MUNDO está ganando DINERO con el ORO",
+      "url": "https://www.youtube.com/watch?v=EBf4zbAkQoc",
+      "category": "sector_theme",
+      "guest_likely": true,
+      "caption_available": false,
+      "methodology_relevance_score": 0.0
+    },
+    {
       "video_id": "-IiSCmwD3as",
       "title": "Así ha evolucionado LA TECNOLOGIA MILITAR y la GUERRA",
       "url": "https://www.youtube.com/watch?v=-IiSCmwD3as",
@@ -722,15 +794,6 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "1K-zkyfi-SA",
-      "title": "Employment data SINKS the STOCK MARKET",
-      "url": "https://www.youtube.com/watch?v=1K-zkyfi-SA",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
       "video_id": "1koVlCtIpAg",
       "title": "INVERTIR en ACTIVOS ÚNICOS III MONOPOLIOS LOCALES | BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=1koVlCtIpAg",
@@ -741,7 +804,7 @@
     },
     {
       "video_id": "2F4_-qp2x9g",
-      "title": "The Asset Nobody Is Looking At: SILVER | Buy The Dip Podcast",
+      "title": "El Activo Que Nadie Está Mirando: PLATA | Buy The Dip Podcast",
       "url": "https://www.youtube.com/watch?v=2F4_-qp2x9g",
       "category": "company_or_theme",
       "guest_likely": false,
@@ -813,7 +876,7 @@
     },
     {
       "video_id": "5Vwg9I3k4os",
-      "title": "Will Donald Trump's \"One Big Beautiful Bill\" work? - OPEC increases production",
+      "title": "¿Funcionará la \"One Big Beautiful Bill\" de DONALD TRUMP? - La OPEP aumenta producción",
       "url": "https://www.youtube.com/watch?v=5Vwg9I3k4os",
       "category": "company_or_theme",
       "guest_likely": false,
@@ -947,27 +1010,9 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "ARpaMofMpx0",
-      "title": "Our Investment Portfolio in August | Buy the Dip Podcast",
-      "url": "https://www.youtube.com/watch?v=ARpaMofMpx0",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
       "video_id": "B4TbekfgbI8",
       "title": "Lockheed Martin. Segmento aeronautics. 1.3",
       "url": "https://www.youtube.com/watch?v=B4TbekfgbI8",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
-      "video_id": "BVzSC7RRoJE",
-      "title": "Nike explodes on the stock market - bull market in metals?",
-      "url": "https://www.youtube.com/watch?v=BVzSC7RRoJE",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -1013,15 +1058,6 @@
       "video_id": "DsRJo8VR0PM",
       "title": "Actualización Geo Group 👉 Tesis de INVERSIÓN",
       "url": "https://www.youtube.com/watch?v=DsRJo8VR0PM",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
-      "video_id": "EBf4zbAkQoc",
-      "title": "EVERYONE is making MONEY with GOLD",
-      "url": "https://www.youtube.com/watch?v=EBf4zbAkQoc",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -1100,15 +1136,6 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "KAPa_BGXkRs",
-      "title": "INVESTING in URANIUM and the COMING BUBBLE | BUY THE DIP PODCAST",
-      "url": "https://www.youtube.com/watch?v=KAPa_BGXkRs",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
       "video_id": "Kliioi2-xSE",
       "title": "🔥 IDEAS de INVERSIÓN en COBRE | Filo Mining, NGEX, Marimaca.",
       "url": "https://www.youtube.com/watch?v=Kliioi2-xSE",
@@ -1172,15 +1199,6 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "McQBGI1VRD0",
-      "title": "The stock market is soaring. Is this the start of a new bull market?",
-      "url": "https://www.youtube.com/watch?v=McQBGI1VRD0",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
       "video_id": "N9hZizO1cXk",
       "title": "¿Busca TRUMP crear una CRISIS ECONÓMICA?",
       "url": "https://www.youtube.com/watch?v=N9hZizO1cXk",
@@ -1211,15 +1229,6 @@
       "video_id": "NR7Z04zYqlA",
       "title": "EEUU y CHINA disparan el GASTO MILITAR ¿La NUEVA GUERRA FRIA?",
       "url": "https://www.youtube.com/watch?v=NR7Z04zYqlA",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
-      "video_id": "Nra5bmq3hZ4",
-      "title": "Why is the stock market collapsing? TRUMP does it again...",
-      "url": "https://www.youtube.com/watch?v=Nra5bmq3hZ4",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -1334,15 +1343,6 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "R5Uhmi5Qm5I",
-      "title": "GOLD and URANIUM: These two metals HAVE AWAKENED",
-      "url": "https://www.youtube.com/watch?v=R5Uhmi5Qm5I",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
       "video_id": "SIAqS_cjTsE",
       "title": "Viene una CRISIS en 2023 👉 Cómo prepararte para la CRISIS",
       "url": "https://www.youtube.com/watch?v=SIAqS_cjTsE",
@@ -1451,15 +1451,6 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "WogbfbSXcR4",
-      "title": "STOCK INVESTMENT IDEA for 2023 👉 PROSEGUR CASH",
-      "url": "https://www.youtube.com/watch?v=WogbfbSXcR4",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
       "video_id": "X9s-_5nz4b4",
       "title": "GOLD flies to HIGHS of $3,500",
       "url": "https://www.youtube.com/watch?v=X9s-_5nz4b4",
@@ -1472,15 +1463,6 @@
       "video_id": "XVds3X6S1dU",
       "title": "IDEAS de INVERSIÓN en SECTORES ODIADOS | BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=XVds3X6S1dU",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
-      "video_id": "Y3wIDQMm5ag",
-      "title": "The GOLD RUSH breaks HISTORIC RECORDS",
-      "url": "https://www.youtube.com/watch?v=Y3wIDQMm5ag",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -1542,7 +1524,7 @@
     },
     {
       "video_id": "_KLgQ3tlpHI",
-      "title": "A WAR in IRAN could trigger a WORLD CRISIS",
+      "title": "Una GUERRA en IRÁN puede provocar una CRISIS MUNDIAL",
       "url": "https://www.youtube.com/watch?v=_KLgQ3tlpHI",
       "category": "company_or_theme",
       "guest_likely": false,
@@ -1607,15 +1589,6 @@
       "video_id": "c_17uZfDQBw",
       "title": "INVERTIR en ISRAEL | BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=c_17uZfDQBw",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
-      "video_id": "ckJ0cRRc7DE",
-      "title": "The Dark Side of Investing: Our Failures | BUY THE DIP PODCAST",
-      "url": "https://www.youtube.com/watch?v=ckJ0cRRc7DE",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -1704,7 +1677,7 @@
     },
     {
       "video_id": "gLjYJSeNGVE",
-      "title": "2 IDEAS de INVERSIÓN en EMPRESAS FUNERARIAS",
+      "title": "2 INVESTMENT IDEAS in FUNERAL HOMES",
       "url": "https://www.youtube.com/watch?v=gLjYJSeNGVE",
       "category": "company_or_theme",
       "guest_likely": false,
@@ -1749,8 +1722,17 @@
     },
     {
       "video_id": "i9hrrD0WAcM",
-      "title": "Lemonade ($LMND) Investment Thesis: Investing in the Best Insurance Company?",
+      "title": "Lemonade ($LMND) Tesis de inversión. ¿Invertir en la mejor aseguradora?",
       "url": "https://www.youtube.com/watch?v=i9hrrD0WAcM",
+      "category": "company_or_theme",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 2.0
+    },
+    {
+      "video_id": "ijwCQJkwDog",
+      "title": "Our Investment Portfolio for October-November | Buy the Dip Podcast",
+      "url": "https://www.youtube.com/watch?v=ijwCQJkwDog",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -1766,18 +1748,18 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "jIUJYS-dCXg",
-      "title": "MASTERCLASS on INVESTING in the DEFENSE Sector | BUY THE DIP PODCAST",
-      "url": "https://www.youtube.com/watch?v=jIUJYS-dCXg",
+      "video_id": "jDj0JmcKMGo",
+      "title": "The End of Inflation? Why is Gold Falling?",
+      "url": "https://www.youtube.com/watch?v=jDj0JmcKMGo",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "jf3HWs6bSnQ",
-      "title": "ENERGY: The Sector with the Most Opportunities in 2025?",
-      "url": "https://www.youtube.com/watch?v=jf3HWs6bSnQ",
+      "video_id": "jIUJYS-dCXg",
+      "title": "MASTERCLASS on INVESTING in the DEFENSE Sector | BUY THE DIP PODCAST",
+      "url": "https://www.youtube.com/watch?v=jIUJYS-dCXg",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -1838,6 +1820,15 @@
       "methodology_relevance_score": 2.0
     },
     {
+      "video_id": "n4QnU-5l760",
+      "title": "TRUMP DROP THE STOCK MARKET. WHAT OPPORTUNITIES ARE THERE IN THE FALLS?",
+      "url": "https://www.youtube.com/watch?v=n4QnU-5l760",
+      "category": "company_or_theme",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 2.0
+    },
+    {
       "video_id": "nc-mFSDkp3A",
       "title": "OIL in 2026 by an expert - CRITICAL SITUATION? | BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=nc-mFSDkp3A",
@@ -1857,7 +1848,7 @@
     },
     {
       "video_id": "o9bXwd98NjE",
-      "title": "Is this the end of Berkshire Hathaway? - Warren Buffett retires",
+      "title": "¿El FIN de BERKSHIRE HATHAWAY? - Warren Buffett se retira",
       "url": "https://www.youtube.com/watch?v=o9bXwd98NjE",
       "category": "company_or_theme",
       "guest_likely": false,
@@ -1866,7 +1857,7 @@
     },
     {
       "video_id": "oFomcCtMb6M",
-      "title": "¿Hay OPORTUNIDAD de INVERSIÓN en estos sectores en 2026? | BUY THE DIP PODCAST",
+      "title": "Are there investment opportunities in these sectors in 2026? | Buy the Dip Podcast",
       "url": "https://www.youtube.com/watch?v=oFomcCtMb6M",
       "category": "company_or_theme",
       "guest_likely": false,
@@ -1964,15 +1955,6 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "sc944xFNM00",
-      "title": "Our September Investment Portfolio | Buy the Dip Podcast",
-      "url": "https://www.youtube.com/watch?v=sc944xFNM00",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
       "video_id": "sij91clbaPg",
       "title": "💥 INVERTIR en LOOKHEED MARTIN  | 👉 IDEAS de INVERSIÓN",
       "url": "https://www.youtube.com/watch?v=sij91clbaPg",
@@ -1985,6 +1967,15 @@
       "video_id": "t6uKkpqq9JE",
       "title": "🐄 Oportunidad de INVERSIÓN en TERRENOS AGRÍCOLAS",
       "url": "https://www.youtube.com/watch?v=t6uKkpqq9JE",
+      "category": "company_or_theme",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 2.0
+    },
+    {
+      "video_id": "tFnhCKdS_zU",
+      "title": "BUY THE DIP PODCAST: EPISODE 9 OUR PORTFOLIO 3",
+      "url": "https://www.youtube.com/watch?v=tFnhCKdS_zU",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -2036,15 +2027,6 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "uwQB6Bg5chI",
-      "title": "Investing in Gold and Silver with an Expert | Buy the Dip Podcast",
-      "url": "https://www.youtube.com/watch?v=uwQB6Bg5chI",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
       "video_id": "v-8ZPrcvIdM",
       "title": "BETTER INVESTMENT than GOLD?",
       "url": "https://www.youtube.com/watch?v=v-8ZPrcvIdM",
@@ -2075,24 +2057,6 @@
       "video_id": "x-9ob3kOOec",
       "title": "💥 INVERTIR  en SSC SECURITY",
       "url": "https://www.youtube.com/watch?v=x-9ob3kOOec",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
-      "video_id": "xM1ERqrAZKw",
-      "title": "GOLD IS CRASHING! Is this the DEFINITIVE END of the Bull Market?",
-      "url": "https://www.youtube.com/watch?v=xM1ERqrAZKw",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
-      "video_id": "xQLuiuDKk-M",
-      "title": "INVEST in PLATINUM and PALLADIUM",
-      "url": "https://www.youtube.com/watch?v=xQLuiuDKk-M",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -2243,6 +2207,15 @@
       "methodology_relevance_score": -1.0
     },
     {
+      "video_id": "1K-zkyfi-SA",
+      "title": "Los datos de empleo HUNDEN la BOLSA",
+      "url": "https://www.youtube.com/watch?v=1K-zkyfi-SA",
+      "category": "macro_market",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": -1.0
+    },
+    {
       "video_id": "4hL_yczMEcw",
       "title": "El Mercado se HUNDE - ¿El FIN de LAS SIETE MAGNÍFICAS?",
       "url": "https://www.youtube.com/watch?v=4hL_yczMEcw",
@@ -2255,6 +2228,15 @@
       "video_id": "7KR_dELnqAU",
       "title": "Rusia vs Ucrania ¿Cómo afectará a la bolsa? BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=7KR_dELnqAU",
+      "category": "macro_market",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": -1.0
+    },
+    {
+      "video_id": "BVzSC7RRoJE",
+      "title": "NIKE explota en BOLSA - ¿BULL market en los METALES?",
+      "url": "https://www.youtube.com/watch?v=BVzSC7RRoJE",
       "category": "macro_market",
       "guest_likely": false,
       "caption_available": false,
@@ -2333,6 +2315,24 @@
       "methodology_relevance_score": -1.0
     },
     {
+      "video_id": "McQBGI1VRD0",
+      "title": "La BOLSA se DISPARA ¿inicio de un nuevo BULL MARKET?",
+      "url": "https://www.youtube.com/watch?v=McQBGI1VRD0",
+      "category": "macro_market",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": -1.0
+    },
+    {
+      "video_id": "Nra5bmq3hZ4",
+      "title": "¿Por qué se HUNDE la BOLSA? TRUMP lo vuelve a hacer...",
+      "url": "https://www.youtube.com/watch?v=Nra5bmq3hZ4",
+      "category": "macro_market",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": -1.0
+    },
+    {
       "video_id": "OtxmmbIQtyg",
       "title": "BUY THE DIP PODCAST: EPISODIO 21 CÓMO AFECTARAN LAS ELECCIONES DE EEUU A LOS MERCADOS",
       "url": "https://www.youtube.com/watch?v=OtxmmbIQtyg",
@@ -2390,6 +2390,15 @@
       "video_id": "WCZep37702c",
       "title": "¿El MEJOR MOMENTO para INVERTIR? | La BOLSA se prepara para SUBIR sin PARAR",
       "url": "https://www.youtube.com/watch?v=WCZep37702c",
+      "category": "macro_market",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": -1.0
+    },
+    {
+      "video_id": "WogbfbSXcR4",
+      "title": "IDEA de INVERSIÓN en BOLSA para 2023 👉 PROSEGUR CASH",
+      "url": "https://www.youtube.com/watch?v=WogbfbSXcR4",
       "category": "macro_market",
       "guest_likely": false,
       "caption_available": false,
@@ -2459,15 +2468,6 @@
       "methodology_relevance_score": -1.0
     },
     {
-      "video_id": "jDj0JmcKMGo",
-      "title": "¿El FIN de la INFLACIÓN? ¿Por qué CAE el ORO?",
-      "url": "https://www.youtube.com/watch?v=jDj0JmcKMGo",
-      "category": "macro_market",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": -1.0
-    },
-    {
       "video_id": "l5murc2cwg4",
       "title": "💥 INVERTIR en BOLSA  👉 ¿Cómo saber si COMPRAR una EMPRESA en BOLSA?",
       "url": "https://www.youtube.com/watch?v=l5murc2cwg4",
@@ -2489,15 +2489,6 @@
       "video_id": "mqJDfr0c2DQ",
       "title": "IDEA de INVERSIÓN en BOLSA para 2023 👉 Montana Aerospace",
       "url": "https://www.youtube.com/watch?v=mqJDfr0c2DQ",
-      "category": "macro_market",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": -1.0
-    },
-    {
-      "video_id": "n4QnU-5l760",
-      "title": "TRUMP hunde LA BOLSA ¿Qué OPORTUNIDADES hay EN LAS CAÍDAS?",
-      "url": "https://www.youtube.com/watch?v=n4QnU-5l760",
       "category": "macro_market",
       "guest_likely": false,
       "caption_available": false,
@@ -2577,7 +2568,7 @@
     },
     {
       "video_id": "9dOoU_5xxs4",
-      "title": "Interview with Rafael Valera from Buy&Hold | BUY THE DIP PODCAST",
+      "title": "Entrevista a Rafael Valera Buy&Hold | BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=9dOoU_5xxs4",
       "category": "guest_interview",
       "guest_likely": true,
@@ -2678,6 +2669,15 @@
       "video_id": "p410B2D2J3Y",
       "title": "PETRÓLEO en 2023 por un experto - EMPIEZA LA ESCASEZ  |  BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=p410B2D2J3Y",
+      "category": "guest_interview",
+      "guest_likely": true,
+      "caption_available": false,
+      "methodology_relevance_score": -5.0
+    },
+    {
+      "video_id": "uwQB6Bg5chI",
+      "title": "INVERTIR en ORO y PLATA por un EXPERTO | BUY THE DIP PODCAST",
+      "url": "https://www.youtube.com/watch?v=uwQB6Bg5chI",
       "category": "guest_interview",
       "guest_likely": true,
       "caption_available": false,
