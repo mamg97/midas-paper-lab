@@ -41,6 +41,7 @@ jobs:
           python -m unittest discover -s weekly_ml/tests -v
           python -m unittest discover -s strategy_comparison/tests -v
       - name: Record weekly ML forecasts and paper portfolios
+        id: execute
         if: ${{ !inputs.preflight_only }}
         run: python weekly_ml/run.py --output weekly_ml_state
       - name: Refresh Weekly ML human dashboard
@@ -54,6 +55,17 @@ jobs:
               --bootstrap weekly_ml_bootstrap_state/bootstrap_2026-09-25.json \
               --output WEEKLY_ML_DASHBOARD.md
           fi
+      - name: Record scheduled runtime health
+        if: ${{ always() && github.event_name == 'schedule' && !inputs.preflight_only }}
+        run: |
+          python strategy_comparison/runtime_health.py \
+            --output strategy_runtime/weekly_ml.json \
+            --workflow-key weekly_ml \
+            --workflow-name "MIDAS weekly ML paper" \
+            --outcome "${{ steps.execute.outcome }}" \
+            --run-id "$GITHUB_RUN_ID" \
+            --run-number "$GITHUB_RUN_NUMBER" \
+            --head-sha "$GITHUB_SHA"
       - name: Refresh all-strategy dashboard
         if: ${{ always() && !inputs.preflight_only }}
         run: |
@@ -71,6 +83,9 @@ jobs:
       - name: Commit weekly ML and dashboard state
         if: ${{ always() && !inputs.preflight_only }}
         run: |
+          if [ -f strategy_runtime/weekly_ml.json ]; then
+            git add -- strategy_runtime/weekly_ml.json
+          fi
           if [ -d weekly_ml_state ]; then
             git add -- weekly_ml_state
           fi
