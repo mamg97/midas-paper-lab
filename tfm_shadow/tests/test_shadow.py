@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from forecast import make_samples, validate_panel
-from market import eligible_session, contiguous_complete_panel
+from market import eligible_session, contiguous_complete_panel, current_session_issues
 from run import evaluate, run
 from paper import advance
 
@@ -43,6 +43,15 @@ class ForecastContractTests(unittest.TestCase):
         data["BBB.MC"][-1]["close"] = float("nan")
         with self.assertRaisesRegex(ValueError, "Última sesión incompleta"):
             contiguous_complete_panel(data, dates, dates[-1], minimum=130)
+
+    def test_current_session_issues_identifies_assets_without_fabricating_prices(self):
+        data = panel(4)
+        asof = data["AAA.MC"][-1]["date"]
+        data["AAA.MC"][-1]["close"] = float("nan")
+        data["BBB.MC"].pop()
+        missing, invalid = current_session_issues(data, asof, ["AAA.MC", "BBB.MC", "CCC.MC"])
+        self.assertEqual(missing, ["BBB.MC", "CCC.MC"])
+        self.assertEqual(invalid, ["AAA.MC"])
 
     def test_delayed_workflow_stays_before_next_market_open(self):
         madrid = timezone(timedelta(hours=2))
