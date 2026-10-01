@@ -197,6 +197,7 @@ def _one_fundamental(ticker, asof):
         "cash": _annual_map(balance, ["Cash Cash Equivalents And Short Term Investments", "Cash And Cash Equivalents"]),
         "revenue": _annual_map(income, ["Total Revenue", "Operating Revenue"]),
         "operating_income": _annual_map(income, ["Operating Income", "EBIT"]),
+        "net_income": _annual_map(income, ["Net Income", "Net Income Common Stockholders"]),
         "interest_expense": _annual_map(income, ["Interest Expense", "Interest Expense Non Operating"]),
         "ocf": _annual_map(cashflow, ["Operating Cash Flow", "Total Cash From Operating Activities"]),
         "capex": _annual_map(cashflow, ["Capital Expenditure", "Capital Expenditures"]),
