@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-01T03:49:37.965478+00:00",
-  "principle": "No ordenar rentabilidades de carteras con distintas fechas de inicio o supuestos de ejecución.",
+  "generated_at_utc": "2026-10-01T16:38:32.444056+00:00",
+  "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
     "legacy_with_diary": 0,
@@ -9,6 +9,7 @@
     "weekly_ml_with_diary": 0,
     "tfg_with_diary": 0,
     "capital_cycle_with_diary": 1,
+    "buy_the_dip_with_diary": 0,
     "historical_pending": 17
   },
   "tracks": [
@@ -39,7 +40,11 @@
           "nav": 99338.12021893082
         }
       ],
-      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."
+      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
+      "risk_observations": 3,
+      "annualized_volatility_pct": 3.059301,
+      "max_drawdown_pct": -0.66188,
+      "sharpe_0rf": -27.297684
     },
     {
       "id": "buy_hold_equal_weight",
@@ -68,7 +73,11 @@
           "nav": 99521.90040866181
         }
       ],
-      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."
+      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
+      "risk_observations": 3,
+      "annualized_volatility_pct": 8.234022,
+      "max_drawdown_pct": -0.605434,
+      "sharpe_0rf": -7.304185
     },
     {
       "id": "ema_rsi_fixed",
@@ -97,7 +106,11 @@
           "nav": 100000.0
         }
       ],
-      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."
+      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
+      "risk_observations": 3,
+      "annualized_volatility_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "sharpe_0rf": null
     },
     {
       "id": "genetic_frozen",
@@ -126,7 +139,11 @@
           "nav": 100000.0
         }
       ],
-      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."
+      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
+      "risk_observations": 3,
+      "annualized_volatility_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "sharpe_0rf": null
     },
     {
       "id": "macd_12_26_9",
@@ -155,7 +172,11 @@
           "nav": 100000.0
         }
       ],
-      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."
+      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
+      "risk_observations": 3,
+      "annualized_volatility_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "sharpe_0rf": null
     },
     {
       "id": "rsi_reversion_14",
@@ -184,7 +205,11 @@
           "nav": 100000.0
         }
       ],
-      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."
+      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
+      "risk_observations": 3,
+      "annualized_volatility_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "sharpe_0rf": null
     },
     {
       "id": "bollinger_breakout_20",
@@ -213,7 +238,11 @@
           "nav": 100000.0
         }
       ],
-      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."
+      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
+      "risk_observations": 3,
+      "annualized_volatility_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "sharpe_0rf": null
     },
     {
       "id": "turtle_20_10_long",
@@ -242,7 +271,11 @@
           "nav": 100000.0
         }
       ],
-      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."
+      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
+      "risk_observations": 3,
+      "annualized_volatility_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "sharpe_0rf": null
     },
     {
       "id": "turtle_55_20_long",
@@ -271,7 +304,11 @@
           "nav": 100000.0
         }
       ],
-      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación."
+      "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
+      "risk_observations": 3,
+      "annualized_volatility_pct": 0.0,
+      "max_drawdown_pct": 0.0,
+      "sharpe_0rf": null
     },
     {
       "id": "weekly_ml_benchmark_spy",
@@ -287,7 +324,11 @@
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."
+      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "weekly_ml_benchmark_rsp",
@@ -303,7 +344,11 @@
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."
+      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "weekly_ml_lgbm_return_2026",
@@ -319,7 +364,11 @@
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."
+      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "weekly_ml_lgbm_direction_2026",
@@ -335,7 +384,11 @@
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."
+      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "weekly_ml_lgbm_ranker_2026",
@@ -351,7 +404,11 @@
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."
+      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "weekly_ml_mlp_2026",
@@ -367,7 +424,11 @@
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."
+      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "weekly_ml_lstm_2026",
@@ -383,7 +444,11 @@
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."
+      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "weekly_ml_arima_2026",
@@ -399,7 +464,11 @@
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."
+      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "weekly_ml_ensemble_2026",
@@ -415,7 +484,11 @@
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."
+      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "tfg_corrected_2026",
@@ -431,7 +504,11 @@
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [],
-      "note": "Arquitectura TFG 2021 portada con riesgo/beta sobre retornos y ejecución prospectiva next-open."
+      "note": "Arquitectura TFG 2021 portada con riesgo/beta sobre retornos y ejecución prospectiva next-open.",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "capital_cycle_inflection_2026",
@@ -452,7 +529,31 @@
           "nav": 100000.0
         }
       ],
-      "note": "Capital Cycle v1: underinvestment multianual + calidad + valoración normalizada + confirmación 6/12 meses; rebalance mensual y fills next-open."
+      "note": "Capital Cycle v1: underinvestment multianual + calidad + valoración normalizada + confirmación 6/12 meses; rebalance mensual y fills next-open.",
+      "risk_observations": 1,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": 0.0,
+      "sharpe_0rf": null
+    },
+    {
+      "id": "buy_the_dip_corpus_2026_v0",
+      "label": "Buy The Dip corpus v0 · deep value + special situations",
+      "provenance": "MIDAS 2026 · Buy The Dip corpus v0 · deep value + special situations",
+      "group": "buy_the_dip_demo",
+      "status": "programada_sin_diario",
+      "first_session": null,
+      "last_session": null,
+      "initial_capital": 100000.0,
+      "last_equity": null,
+      "return_pct": null,
+      "day_return_pct": null,
+      "currency": "USD",
+      "equity_history": [],
+      "note": "Buy The Dip corpus v0: deep value + special situations; valoración, calidad, capital allocation, dislocación y catalizadores; decisión mensual y fills next-open.",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "genetic_sp500_legacy",
@@ -468,7 +569,11 @@
       "day_return_pct": null,
       "currency": null,
       "equity_history": [],
-      "note": "Diario y ejecución propios; observar por separado hasta reconciliar horarios y contabilidad."
+      "note": "Diario y ejecución propios; observar por separado hasta reconciliar horarios y contabilidad.",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "tfg_midas_r_2021",
@@ -486,7 +591,11 @@
       "equity_history": [],
       "note": "La réplica literal global de 20 mercados sigue pendiente por símbolos, divisas y calendarios; la variante TFG corregido 2026 se ejecuta por separado sobre un universo S&P-derived homogéneo.",
       "kind": "estrategia semanal",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "midas_r_crypto",
@@ -504,7 +613,11 @@
       "equity_history": [],
       "note": "Necesita campaña EUR y calendario 24/7; comprobar diferencias frente al TFG.",
       "kind": "estrategia",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "tfm_lgbm_2023",
@@ -522,7 +635,11 @@
       "equity_history": [],
       "note": "Modelo del TFM reimplementado; regla de cartera común provisional, distinta de la tesis.",
       "kind": "modelo predictivo",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "tfm_mlp_2023",
@@ -540,7 +657,11 @@
       "equity_history": [],
       "note": "Modelo del TFM reimplementado; regla de cartera común provisional, distinta de la tesis.",
       "kind": "modelo predictivo",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "tfm_lstm_2023",
@@ -558,7 +679,11 @@
       "equity_history": [],
       "note": "Modelo del TFM reimplementado; regla de cartera común provisional, distinta de la tesis.",
       "kind": "modelo predictivo",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "tfm_arima_2023",
@@ -576,7 +701,11 @@
       "equity_history": [],
       "note": "Modelo del TFM reimplementado; regla de cartera común provisional, distinta de la tesis.",
       "kind": "modelo predictivo",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "midas_lgbm_weekly_return",
@@ -594,7 +723,11 @@
       "equity_history": [],
       "note": "Los datos/Features llegan hasta 2024 y el entrenamiento mezclaba semanas; rehacer el pipeline cronológico.",
       "kind": "modelo predictivo",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "midas_lgbm_weekly_direction",
@@ -612,7 +745,11 @@
       "equity_history": [],
       "note": "Rehacer features y entrenamiento cronológicos; no cargar pickle legado sin contrato verificado.",
       "kind": "modelo predictivo",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "midas_lgbm_weekly_price",
@@ -630,7 +767,11 @@
       "equity_history": [],
       "note": "Rehacer features y entrenamiento cronológicos; no cargar pickle legado sin contrato verificado.",
       "kind": "modelo predictivo",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "midas_lgbm_combined",
@@ -648,7 +789,11 @@
       "equity_history": [],
       "note": "El código original sí proponía inversiones semanales: combina tres predicciones, RSI y ranking. Para medir rentabilidad demo faltan datos actuales, modelos causales, órdenes fechadas y contabilidad de ejecución.",
       "kind": "estrategia semanal de selección",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "genetic_single_asset_2026",
@@ -666,7 +811,11 @@
       "equity_history": [],
       "note": "Separar entrenamiento y ejecución del mismo cierre, elegir activo y congelar versión antes de empezar.",
       "kind": "estrategia",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "rsi_itx_70_30",
@@ -684,7 +833,11 @@
       "equity_history": [],
       "note": "El original usa posición -1/0/+1 sobre retornos al cierre; el motor actual es solo largo y no replica cortos/costes.",
       "kind": "backtest de exposición larga/corta",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "ichimoku_aapl",
@@ -702,7 +855,11 @@
       "equity_history": [],
       "note": "La referencia a close(-26) puede mirar al futuro; corregir y marcar una versión nueva antes de ejecutarla.",
       "kind": "backtest experimental",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "gap_open_close",
@@ -720,7 +877,11 @@
       "equity_history": [],
       "note": "El gap se conoce en apertura; requiere ejecución intradía separada del ciclo cierre a apertura.",
       "kind": "estrategia intradía",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "turtle_short_20_10",
@@ -738,7 +899,11 @@
       "equity_history": [],
       "note": "Requiere contabilidad de posiciones cortas y costes de préstamo.",
       "kind": "estrategia corta",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "turtle_short_55_20",
@@ -756,7 +921,11 @@
       "equity_history": [],
       "note": "Requiere contabilidad de posiciones cortas y costes de préstamo.",
       "kind": "estrategia corta",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "momentum_sp500_monthly",
@@ -774,7 +943,11 @@
       "equity_history": [],
       "note": "Documentar regla de salida y pesos antes de convertir la selección mensual en cartera.",
       "kind": "selección, sin cartera",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "coinbase_btc",
@@ -792,7 +965,11 @@
       "equity_history": [],
       "note": "El original incluye llamadas a órdenes reales; portar solo reglas a simulador sin credenciales.",
       "kind": "estrategia cripto",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "markowitz_weights",
@@ -810,7 +987,11 @@
       "equity_history": [],
       "note": "Comparar como asignador de pesos; antes, normalizar divisas y frecuencia.",
       "kind": "política de asignación",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "midas_fundamental_filter",
@@ -828,7 +1009,11 @@
       "equity_history": [],
       "note": "Definir datos conocidos en cada fecha y cartera receptora; no es una señal independiente.",
       "kind": "filtro complementario",
-      "source": "fuente histórica privada, no publicada"
+      "source": "fuente histórica privada, no publicada",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     },
     {
       "id": "timesfm_zero_shot",
@@ -846,7 +1031,11 @@
       "equity_history": [],
       "note": "Fijar universo, horizonte, versión del modelo y regla de órdenes; validar prospectivamente antes de activar una cartera.",
       "kind": "modelo predictivo por estudiar",
-      "source": "research/TIMESFM.md"
+      "source": "research/TIMESFM.md",
+      "risk_observations": 0,
+      "annualized_volatility_pct": null,
+      "max_drawdown_pct": null,
+      "sharpe_0rf": null
     }
   ]
 }
