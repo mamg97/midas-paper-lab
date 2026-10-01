@@ -57,6 +57,17 @@ class FactorPolicyTests(unittest.TestCase):
         self.assertEqual(targets, {})
         self.assertEqual(exits["BAD"], "hard_quality_or_value_exit")
 
+    def test_minimum_hold_position_is_not_rotated_or_forced_to_cash(self):
+        positions = {"YOUNG": {"entry_date": "2026-09-15", "sector": "Industrials"}}
+        scored = [self.row("YOUNG", 46, "Industrials", eligible=False)]
+        targets, exits, invest_fraction = choose_portfolio(
+            scored, positions, "2026-10-01", self.config
+        )
+        self.assertIn("YOUNG", targets)
+        self.assertNotIn("YOUNG", exits)
+        self.assertEqual(invest_fraction, 0.50)
+
+
     def test_caps_are_respected(self):
         scored = [self.row(f"E{i}", 90-i, "Energy", vol=0.15) for i in range(6)]
         scored += [self.row(f"I{i}", 80-i, "Industrials", vol=0.30) for i in range(6)]
