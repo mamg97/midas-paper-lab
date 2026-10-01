@@ -5,6 +5,7 @@ import hashlib
 import json
 import math
 import os
+import statistics
 import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
@@ -66,13 +67,70 @@ def _equity_history(history, label, limit=520):
     return points
 
 
+def _risk_metrics(points):
+    """Risk from the same recorded NAV path shown in the dashboard."""
+    if not isinstance(points, list) or not points:
+        return {
+            "risk_observations": 0,
+            "annualized_volatility_pct": None,
+            "max_drawdown_pct": None,
+            "sharpe_0rf": None,
+        }
+    navs = [float(point["nav"]) for point in points if isinstance(point, dict) and _equity(point.get("nav"), "riesgo") >= 0]
+    if not navs:
+        return {
+            "risk_observations": 0,
+            "annualized_volatility_pct": None,
+            "max_drawdown_pct": None,
+            "sharpe_0rf": None,
+        }
+    peak = navs[0]
+    max_dd = 0.0
+    for nav in navs:
+        peak = max(peak, nav)
+        if peak > 0:
+            max_dd = min(max_dd, nav / peak - 1.0)
+
+    returns = []
+    dates = []
+    for index, point in enumerate(points):
+        try:
+            dates.append(datetime.fromisoformat(str(point["date"])[:10]).date())
+        except (TypeError, ValueError, KeyError):
+            dates.append(None)
+        if index and navs[index - 1] > 0:
+            returns.append(navs[index] / navs[index - 1] - 1.0)
+
+    volatility = sharpe = None
+    if len(returns) >= 2:
+        sd = statistics.stdev(returns)
+        valid_gaps = [
+            (dates[i] - dates[i - 1]).days
+            for i in range(1, len(dates))
+            if dates[i] is not None and dates[i - 1] is not None and (dates[i] - dates[i - 1]).days > 0
+        ]
+        gap = statistics.median(valid_gaps) if valid_gaps else 1
+        periods = 252.0 if gap <= 3 else 52.0 if gap <= 10 else 12.0 if gap <= 40 else 4.0
+        volatility = 100.0 * sd * math.sqrt(periods)
+        if sd > 1e-15:
+            sharpe = statistics.fmean(returns) / sd * math.sqrt(periods)
+
+    return {
+        "risk_observations": len(navs),
+        "annualized_volatility_pct": None if volatility is None else round(volatility, 6),
+        "max_drawdown_pct": round(100.0 * max_dd, 6),
+        "sharpe_0rf": None if sharpe is None else round(sharpe, 6),
+    }
+
+
 TFM_IDS = {"tfm_lgbm_2023": "lgbm", "tfm_mlp_2023": "mlp",
            "tfm_lstm_2023": "lstm", "tfm_arima_2023": "arima"}
 
 
 def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
           tfm_config=None, tfm_state=None, weekly_config=None, weekly_state=None,
-          tfg_config=None, tfg_state=None, capital_config=None, capital_state=None):
+          tfg_config=None, tfg_state=None, capital_config=None, capital_state=None,
+          btd_config=None, btd_state=None):
     if registry.get("schema_version") != 1:
         raise ValueError("Versión de registro no válida")
     paper_names = registry.get("paper_tracks", {})
