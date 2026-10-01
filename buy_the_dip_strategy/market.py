@@ -182,7 +182,7 @@ def _market_cap(instrument):
     return None
 
 
-def _one_fundamental(ticker, asof):
+def _one_fundamental(ticker, asof, sector):
     import yfinance as yf
 
     instrument = yf.Ticker(ticker)
@@ -208,7 +208,7 @@ def _one_fundamental(ticker, asof):
             "Issuance Of Capital Stock", "Common Stock Issuance", "Issuance Of Stock"
         ]),
     }
-    required = ("assets", "revenue", "ocf", "capex")
+    required = ("assets", "revenue", "equity", "net_income") if sector == "Financials" else ("assets", "revenue", "ocf", "capex")
     common = set.intersection(*(set(maps[key]) for key in required)) if all(maps[key] for key in required) else set()
     common = [day for day in common if day <= asof]
     dates = sorted(common, reverse=True)[:4]
@@ -231,7 +231,7 @@ def _one_fundamental(ticker, asof):
 def fundamentals_snapshot(tickers, sectors, *, asof, workers=8):
     data, failures = {}, {}
     with ThreadPoolExecutor(max_workers=max(1, int(workers))) as pool:
-        futures = {pool.submit(_one_fundamental, ticker, asof): ticker for ticker in tickers}
+        futures = {pool.submit(_one_fundamental, ticker, asof, sectors[ticker]): ticker for ticker in tickers}
         for future in as_completed(futures):
             ticker = futures[future]
             try:
