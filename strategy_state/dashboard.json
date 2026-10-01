@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-01T16:38:32.444056+00:00",
+  "generated_at_utc": "2026-10-01T16:47:46.305341+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
@@ -42,9 +42,9 @@
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
       "risk_observations": 3,
-      "annualized_volatility_pct": 3.059301,
+      "annualized_volatility_pct": null,
       "max_drawdown_pct": -0.66188,
-      "sharpe_0rf": -27.297684
+      "sharpe_0rf": null
     },
     {
       "id": "buy_hold_equal_weight",
@@ -75,9 +75,9 @@
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
       "risk_observations": 3,
-      "annualized_volatility_pct": 8.234022,
+      "annualized_volatility_pct": null,
       "max_drawdown_pct": -0.605434,
-      "sharpe_0rf": -7.304185
+      "sharpe_0rf": null
     },
     {
       "id": "ema_rsi_fixed",
@@ -108,7 +108,7 @@
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
       "risk_observations": 3,
-      "annualized_volatility_pct": 0.0,
+      "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
@@ -141,7 +141,7 @@
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
       "risk_observations": 3,
-      "annualized_volatility_pct": 0.0,
+      "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
@@ -174,7 +174,7 @@
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
       "risk_observations": 3,
-      "annualized_volatility_pct": 0.0,
+      "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
@@ -207,7 +207,7 @@
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
       "risk_observations": 3,
-      "annualized_volatility_pct": 0.0,
+      "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
@@ -240,7 +240,7 @@
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
       "risk_observations": 3,
-      "annualized_volatility_pct": 0.0,
+      "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
@@ -273,7 +273,7 @@
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
       "risk_observations": 3,
-      "annualized_volatility_pct": 0.0,
+      "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
@@ -306,7 +306,7 @@
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
       "risk_observations": 3,
-      "annualized_volatility_pct": 0.0,
+      "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
