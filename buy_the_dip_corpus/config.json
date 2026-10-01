@@ -171,5 +171,11 @@
   },
   "version": "2026-10-01-buy-the-dip-corpus-v1",
   "caption_canary_video_id": "NjMXlb6pPDc",
-  "caption_transport_retry_seconds": 1
+  "caption_transport_retry_seconds": 1,
+  "podcast_mirror": {
+    "provider": "iVoox",
+    "feed_url": "https://feeds.ivoox.com/feed_fg_f1997526_filtro_1.xml",
+    "role": "transport_mirror_for_same_long_form_podcast",
+    "canonical_identity": "youtube_channel"
+  }
 }
