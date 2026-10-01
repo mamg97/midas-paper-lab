@@ -49,6 +49,13 @@ jobs:
         if: ${{ github.event_name != 'pull_request' }}
         run: python buy_the_dip_corpus/build_corpus.py --output buy_the_dip_state
 
+      - name: Map official podcast mirror to YouTube catalogue
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          python buy_the_dip_corpus/rss_mirror.py \
+            --manifest buy_the_dip_state/manifest.json \
+            --output buy_the_dip_state/rss_mirror.json
+
       - name: 'Safety check: no subtitle/transcript files persisted'
         if: ${{ github.event_name != 'pull_request' }}
         run: |
