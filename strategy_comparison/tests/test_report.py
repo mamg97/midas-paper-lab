@@ -21,6 +21,7 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(result["counts"], {"paper_with_diary": 0, "legacy_with_diary": 0,
                                              "tfm_with_diary": 0, "weekly_ml_with_diary": 0,
                                              "tfg_with_diary": 0, "capital_cycle_with_diary": 0,
+                                             "buy_the_dip_with_diary": 0,
                                              "historical_pending": len(self.registry["historical_ideas"])})
         self.assertTrue(all(item["return_pct"] is None for item in result["tracks"]))
         self.assertTrue(all(item["day_return_pct"] is None for item in result["tracks"]))
@@ -149,6 +150,37 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(row["currency"], "USD")
         self.assertEqual(row["equity_history"][-1], {"date": "2026-10-09", "nav": 101500.0})
         self.assertIn("TFG corregido 2026", markdown(result))
+
+
+    def test_buy_the_dip_uses_separate_monthly_ledger_and_risk(self):
+        btd_config = {
+            "name": "MIDAS_buy_the_dip_corpus_v0_2026",
+            "currency": "USD",
+            "paper_policy": {"capital": 100000.0},
+        }
+        btd = {
+            "config_hash": _config_hash(btd_config),
+            "strategy_id": "buy_the_dip_corpus_2026_v0",
+            "first_session": "2026-10-01",
+            "last_session": "2026-10-05",
+            "nav": 99000.0,
+            "equity": [
+                {"date": "2026-10-01", "nav": 100000.0},
+                {"date": "2026-10-02", "nav": 102000.0},
+                {"date": "2026-10-05", "nav": 99000.0},
+            ],
+        }
+        result = build(self.registry, self.config, now=self.now,
+                       btd_config=btd_config, btd_state=btd)
+        self.assertEqual(result["counts"]["buy_the_dip_with_diary"], 1)
+        row = next(x for x in result["tracks"] if x["id"] == "buy_the_dip_corpus_2026_v0")
+        self.assertEqual(row["group"], "buy_the_dip_demo")
+        self.assertEqual(row["return_pct"], -1.0)
+        self.assertEqual(row["risk_observations"], 3)
+        self.assertIsNotNone(row["annualized_volatility_pct"])
+        self.assertAlmostEqual(row["max_drawdown_pct"], -2.941176, places=5)
+        self.assertIsNotNone(row["sharpe_0rf"])
+        self.assertIn("Buy The Dip", markdown(result))
 
 
     def test_capital_cycle_uses_separate_monthly_ledger(self):
