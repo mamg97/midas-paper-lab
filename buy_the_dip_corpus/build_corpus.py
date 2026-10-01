@@ -340,6 +340,13 @@ def build(config, output):
     manifest = build_manifest(config)
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
+    previous_report = None
+    previous_report_path = output / "corpus_report.json"
+    if previous_report_path.exists():
+        try:
+            previous_report = json.loads(previous_report_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, TypeError):
+            previous_report = None
     with tempfile.TemporaryDirectory(prefix="buy-the-dip-captions-") as temp_dir:
         caption_transport = _download_captions(
             config["channel_url"], temp_dir,
@@ -417,6 +424,34 @@ def build(config, output):
             "review distinguishes host process from guest opinions and recurring themes."
         ),
     }
+    previous_available = int(((previous_report or {}).get("caption_coverage") or {}).get("available") or 0)
+    previous_count = int((previous_report or {}).get("manifest_count") or 0)
+    candidate_available = int(report["caption_coverage"]["available"])
+    candidate_count = int(report["manifest_count"])
+    regression_reason = None
+    if previous_report is not None and candidate_count < previous_count:
+        regression_reason = "manifest_count_regressed"
+    elif previous_report is not None and candidate_available < previous_available:
+        regression_reason = "caption_coverage_regressed"
+
+    ingestion_status = {
+        "schema_version": 1,
+        "attempted_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+        "promoted": regression_reason is None,
+        "reason": regression_reason or "non_regressing_candidate",
+        "candidate_manifest_count": candidate_count,
+        "previous_manifest_count": previous_count,
+        "candidate_caption_coverage": candidate_available,
+        "previous_caption_coverage": previous_available,
+        "caption_transport": caption_transport,
+    }
+
+    if regression_reason is not None:
+        Path(output / "ingestion_status.json").write_text(
+            json.dumps(ingestion_status, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
+        return previous_report
+
     manifest_out = {
         "schema_version": 1,
         "channel_url": config["channel_url"],
@@ -467,6 +502,9 @@ def build(config, output):
     )
     Path(output / "corpus_report.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    Path(output / "ingestion_status.json").write_text(
+        json.dumps(ingestion_status, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
     lines = [
