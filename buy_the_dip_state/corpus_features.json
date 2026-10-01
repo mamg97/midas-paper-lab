@@ -1081,7 +1081,7 @@
     },
     {
       "video_id": "2iXVLrxC-5s",
-      "title": "INVERTIR en EMPRESAS AGRÍCOLAS | BUY THE DIP PODCAST",
+      "title": "INVESTING in AGRICULTURAL COMPANIES | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 3877,
       "view_count": 1300,
@@ -3699,7 +3699,7 @@
     },
     {
       "video_id": "9E8ZKvK1g4c",
-      "title": "Oil Prices Collapse What's Going On?",
+      "title": "El Precio del PETRÓLEO COLAPSA ¿Qué pasa?",
       "published_date": null,
       "duration_seconds": 864,
       "view_count": 889,
@@ -3711,7 +3711,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "sector_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -3771,7 +3771,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 3.0,
       "topics": []
     },
     {
@@ -5393,7 +5393,7 @@
     },
     {
       "video_id": "EBf4zbAkQoc",
-      "title": "EVERYONE is making MONEY with GOLD",
+      "title": "TODO el MUNDO está ganando DINERO con el ORO",
       "published_date": null,
       "duration_seconds": 819,
       "view_count": 451,
@@ -5405,8 +5405,8 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
-      "guest_likely": false,
+      "category": "sector_theme",
+      "guest_likely": true,
       "lexicon_counts": {
         "quality": {
           "count": 0,
@@ -5465,7 +5465,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 0.0,
       "topics": []
     },
     {
@@ -5701,7 +5701,7 @@
     },
     {
       "video_id": "GEkJ5Mvxw9Q",
-      "title": "Are we heading toward the worst recession since 2008? with Diego Puertas | BUY THE DIP PODCAST",
+      "title": "¿Vamos hacia La PEOR RECESIÓN desde 2008? con Diego Puertas  | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 3324,
       "view_count": 872,
@@ -5713,8 +5713,8 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
-      "guest_likely": false,
+      "category": "guest_interview",
+      "guest_likely": true,
       "lexicon_counts": {
         "quality": {
           "count": 0,
@@ -5773,7 +5773,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": -5.0,
       "topics": []
     },
     {
@@ -8242,7 +8242,7 @@
     },
     {
       "video_id": "McQBGI1VRD0",
-      "title": "The stock market is soaring. Is this the start of a new bull market?",
+      "title": "La BOLSA se DISPARA ¿inicio de un nuevo BULL MARKET?",
       "published_date": null,
       "duration_seconds": 1167,
       "view_count": 961,
@@ -8254,7 +8254,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "macro_market",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -8314,7 +8314,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": -1.0,
       "topics": []
     },
     {
@@ -8781,7 +8781,7 @@
     },
     {
       "video_id": "Nra5bmq3hZ4",
-      "title": "Why is the stock market collapsing? TRUMP does it again...",
+      "title": "¿Por qué se HUNDE la BOLSA? TRUMP lo vuelve a hacer...",
       "published_date": null,
       "duration_seconds": 931,
       "view_count": 1000,
@@ -8793,7 +8793,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "macro_market",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -8853,7 +8853,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": -1.0,
       "topics": []
     },
     {
@@ -9246,7 +9246,7 @@
       "title": "What are we INVESTING in this SEPTEMBER? - OUR PORTFOLIO | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 2515,
-      "view_count": 1700,
+      "view_count": 1800,
       "surfaces": [
         "long"
       ],
@@ -10321,7 +10321,7 @@
     },
     {
       "video_id": "R5Uhmi5Qm5I",
-      "title": "GOLD and URANIUM: These two metals HAVE AWAKENED",
+      "title": "ORO y URANIO: Estos dos metales HAN DESPERTADO",
       "published_date": null,
       "duration_seconds": 489,
       "view_count": 585,
@@ -10333,7 +10333,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "sector_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -10393,7 +10393,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 3.0,
       "topics": []
     },
     {
@@ -10475,7 +10475,7 @@
     },
     {
       "video_id": "RPhiC3ELmk8",
-      "title": "Sector SOFTWARE (SaaS) por un EXPERTO - ¿OPORTUNIDAD HISTÓRICA?  | BUY THE DIP PODCAST",
+      "title": "SOFTWARE (SaaS) Sector by an EXPERT - HISTORIC OPPORTUNITY? | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 5535,
       "view_count": 3800,
@@ -10487,8 +10487,8 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "guest_interview",
-      "guest_likely": true,
+      "category": "sector_theme",
+      "guest_likely": false,
       "lexicon_counts": {
         "quality": {
           "count": 0,
@@ -10547,7 +10547,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": -5.0,
+      "methodology_relevance_score": 3.0,
       "topics": []
     },
     {
@@ -12246,7 +12246,7 @@
     },
     {
       "video_id": "WogbfbSXcR4",
-      "title": "IDEA de INVERSIÓN en BOLSA para 2023 👉 PROSEGUR CASH",
+      "title": "STOCK INVESTMENT IDEA for 2023 👉 PROSEGUR CASH",
       "published_date": null,
       "duration_seconds": 817,
       "view_count": 1200,
@@ -12258,7 +12258,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "macro_market",
+      "category": "company_or_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -12318,7 +12318,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": -1.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -14710,7 +14710,7 @@
     },
     {
       "video_id": "ckJ0cRRc7DE",
-      "title": "The Dark Side of Investing: Our Failures | BUY THE DIP PODCAST",
+      "title": "El Lado Oscuro de las Inversiones: Nuestros Fracasos | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 2516,
       "view_count": 491,
@@ -14722,7 +14722,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "methodology",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -14782,7 +14782,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 12.0,
       "topics": []
     },
     {
@@ -14864,7 +14864,7 @@
     },
     {
       "video_id": "cz4yrlbAJxE",
-      "title": "La cartera de AZVALOR 👉 Analizando FONDOS DE INVERSIÓN | BUY THE DIP PODCAST",
+      "title": "AZVALOR's Portfolio 👉 Analyzing INVESTMENT FUNDS | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 4526,
       "view_count": 5300,
@@ -15249,7 +15249,7 @@
     },
     {
       "video_id": "eb6TWuGxz-4",
-      "title": "Cuál en la mejor empresa de PETRÓLEO para INVERTIR | BUY THE DIP PODCAST",
+      "title": "WHAT IS THE BEST OIL COMPANY TO INVEST IN | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 1943,
       "view_count": 1300,
@@ -15261,7 +15261,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "sector_theme",
+      "category": "company_or_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -15321,7 +15321,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 3.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -15634,7 +15634,7 @@
     },
     {
       "video_id": "f1TQOO-KNvc",
-      "title": "Inflation is relentless, and is oil about to wake up?",
+      "title": "La INFLACIÓN no da tregua y ¿El PETRÓLEO va a despertar?",
       "published_date": null,
       "duration_seconds": 907,
       "view_count": 1000,
@@ -15646,7 +15646,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "macro_market",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -15706,7 +15706,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": -1.0,
       "topics": []
     },
     {
@@ -17559,7 +17559,7 @@
     },
     {
       "video_id": "keU5Zha2cJE",
-      "title": "FONDOS de INVERSIÓN ESPAÑOLES | BUY THE DIP PODCAST",
+      "title": "Investment funds podcast",
       "published_date": null,
       "duration_seconds": 3349,
       "view_count": 1100,
@@ -17867,7 +17867,7 @@
     },
     {
       "video_id": "lsrRumn0OoA",
-      "title": "Is there URANIUM in SPAIN and CAN IT BE EXPLOITED?",
+      "title": "¿Hay URANIO en ESPAÑA y se PUEDE EXPLOTAR?",
       "published_date": null,
       "duration_seconds": 678,
       "view_count": 423,
@@ -17879,7 +17879,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "sector_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -17939,12 +17939,12 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 3.0,
       "topics": []
     },
     {
       "video_id": "m0eTE-jeY8Y",
-      "title": "GOLD: The BEST ASSET of the last 20 years!",
+      "title": "ORO: ¡El MEJOR ACTIVO de los últimos 20 años!",
       "published_date": null,
       "duration_seconds": 1081,
       "view_count": 597,
@@ -17956,7 +17956,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "sector_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -18016,7 +18016,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 3.0,
       "topics": []
     },
     {
@@ -19022,7 +19022,7 @@
     },
     {
       "video_id": "oFomcCtMb6M",
-      "title": "¿Hay OPORTUNIDAD de INVERSIÓN en estos sectores en 2026? | BUY THE DIP PODCAST",
+      "title": "Are there investment opportunities in these sectors in 2026? | Buy the Dip Podcast",
       "published_date": null,
       "duration_seconds": 2626,
       "view_count": 845,
@@ -20562,7 +20562,7 @@
     },
     {
       "video_id": "sc944xFNM00",
-      "title": "Our September Investment Portfolio | Buy the Dip Podcast",
+      "title": "Nuestra CARTERA de INVERSIÓN en SEPTIEMBRE | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 2673,
       "view_count": 771,
@@ -20574,7 +20574,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "portfolio_update",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -20634,7 +20634,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 8.0,
       "topics": []
     },
     {
@@ -22410,7 +22410,7 @@
     },
     {
       "video_id": "xVZl6vVVkdg",
-      "title": "Uranium mining in danger as Russia cuts off gas to Ukraine",
+      "title": "La Minería de URANIO en PELIGRO mientras RUSIA corta el gas a UCRANIA",
       "published_date": null,
       "duration_seconds": 1313,
       "view_count": 1700,
@@ -22422,7 +22422,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "sector_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -22482,7 +22482,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 3.0,
       "topics": []
     },
     {
