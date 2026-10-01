@@ -86,30 +86,42 @@ def scrape(video_id: str, output: str):
             result["diagnostics"].append("transcript_button=" + str(clicked))
             page.wait_for_timeout(3500)
 
-            segments = page.locator("ytd-transcript-segment-renderer")
-            count = segments.count()
-            result["diagnostics"].append(f"segment_count={count}")
+            selectors = [
+                "ytd-transcript-segment-renderer",
+                "ytd-transcript-segment-view-model",
+                "ytd-transcript-segment-list-renderer yt-formatted-string",
+                'ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-searchable-transcript"] yt-formatted-string',
+                '[class*="segment-text"]',
+                '[class*="transcript-segment"]',
+            ]
             texts = []
-            if count:
-                for i in range(count):
-                    seg = segments.nth(i)
+            seen = set()
+            for selector in selectors:
+                loc = page.locator(selector)
+                count = loc.count()
+                result["diagnostics"].append(f"{selector}={count}")
+                for i in range(min(count, 5000)):
                     try:
-                        txt = seg.locator(".segment-text").inner_text(timeout=2000)
+                        txt = re.sub(r"\s+", " ", loc.nth(i).inner_text(timeout=1500)).strip()
                     except Exception:
-                        txt = seg.inner_text(timeout=2000)
-                    txt = re.sub(r"\s+", " ", txt).strip()
-                    if txt:
-                        texts.append(txt)
+                        continue
+                    if not txt or txt in seen or len(txt) < 2:
+                        continue
+                    if re.fullmatch(r"\d{1,2}:\d{2}(?::\d{2})?", txt):
+                        continue
+                    if txt.lower() in {"transcripción", "transcript", "mostrar transcripción", "show transcript"}:
+                        continue
+                    seen.add(txt)
+                    texts.append(txt)
             if not texts:
-                # Generic fallback for newer transcript DOMs.
-                candidates = page.locator(
-                    '[class*="transcript"] [class*="segment"], '
-                    '[class*="transcript"] [class*="cue"]'
-                )
-                for i in range(min(candidates.count(), 5000)):
-                    txt = re.sub(r"\s+", " ", candidates.nth(i).inner_text()).strip()
-                    if txt:
-                        texts.append(txt)
+                panel = page.locator('ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-searchable-transcript"]')
+                result["diagnostics"].append(f"panel_count={panel.count()}")
+                if panel.count():
+                    try:
+                        panel_text = re.sub(r"\s+", " ", panel.first.inner_text(timeout=3000)).strip()
+                        result["diagnostics"].append("panel_text_prefix=" + panel_text[:500])
+                    except Exception as exc:
+                        result["diagnostics"].append("panel_text_error=" + type(exc).__name__)
             transcript = "\n".join(texts).strip()
             if transcript:
                 result["success"] = True
