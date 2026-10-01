@@ -1,0 +1,102 @@
+name: Buy The Dip semantic review
+
+on:
+  pull_request:
+    paths:
+      - 'buy_the_dip_corpus/semantic_worker.py'
+      - 'buy_the_dip_corpus/requirements-analysis.txt'
+      - 'buy_the_dip_corpus/tests/**'
+      - '.github/workflows/buy_the_dip_semantic.yml'
+  push:
+    branches: ['main']
+    paths:
+      - 'buy_the_dip_corpus/semantic_worker.py'
+      - 'buy_the_dip_corpus/requirements-analysis.txt'
+      - '.github/workflows/buy_the_dip_semantic.yml'
+  schedule:
+    - cron: '17 2,14 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: buy-the-dip-research-state
+  cancel-in-progress: false
+
+jobs:
+  semantic-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: |
+            buy_the_dip_corpus/requirements.txt
+            buy_the_dip_corpus/requirements-analysis.txt
+
+      - name: Install lightweight test dependencies
+        run: python -m pip install -r buy_the_dip_corpus/requirements.txt
+
+      - name: Verify worker contract
+        run: |
+          python -m py_compile buy_the_dip_corpus/semantic_worker.py
+          python -m unittest discover -s buy_the_dip_corpus/tests -v
+
+      - uses: actions/cache@v4
+        if: ${{ github.event_name != 'pull_request' }}
+        with:
+          path: ~/.cache/huggingface
+          key: btd-local-models-qwen3-4b-whisper-small-v1
+
+      - name: Install local transcription and analysis runtime
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          python -m pip install -r buy_the_dip_corpus/requirements-analysis.txt
+          python -m pip install llama-cpp-python==0.3.31 \
+            --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+
+      - name: Process next eligible episode
+        if: ${{ github.event_name != 'pull_request' }}
+        env:
+          OMP_NUM_THREADS: '4'
+          BTD_ASR_MODEL: small
+          BTD_LLM_REPO: Qwen/Qwen3-4B-GGUF
+          BTD_LLM_FILE: Qwen3-4B-Q4_K_M.gguf
+        run: |
+          test -s buy_the_dip_state/semantic_queue.json
+          test -s buy_the_dip_state/rss_mirror.json
+          python buy_the_dip_corpus/semantic_worker.py \
+            --queue buy_the_dip_state/semantic_queue.json \
+            --rss buy_the_dip_state/rss_mirror.json \
+            --state buy_the_dip_state
+
+      - name: Safety check derived output
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          if find buy_the_dip_state -type f \( -name '*.mp3' -o -name '*.wav' -o -name '*.m4a' -o -name '*.vtt' -o -name '*.srt' \) | grep -q .; then
+            echo 'Raw media or transcript artifact leaked into persistent state' >&2
+            exit 1
+          fi
+          if grep -RIl --include='*.json' -- '"transcript"[[:space:]]*:' buy_the_dip_state/reviews 2>/dev/null | grep -q .; then
+            echo 'Verbatim transcript field leaked into semantic reviews' >&2
+            exit 1
+          fi
+
+      - name: Commit semantic evidence
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          git add -- buy_the_dip_state/reviews buy_the_dip_state/semantic_progress.json
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'Review next Buy The Dip episode'
+            git pull --rebase origin main
+            git push
+          fi
