@@ -41,3 +41,27 @@ todo el canal.
 - `buy_the_dip_state/corpus_features.json`: señales derivadas por vídeo.
 - `buy_the_dip_state/corpus_report.json`: cobertura y temas agregados.
 - `buy_the_dip_state/corpus_report.md`: resumen auditable.
+
+
+## Incidencia Colab 01/10/2026 y ruta operativa
+
+La primera prueba de Colab recuperó correctamente 10/10 transcripciones mediante
+`youtube-transcript-api`. Una ejecución posterior, en otra VM de Colab, quedó
+bloqueada desde el primer vídeo pendiente con `RequestBlocked`. Por tanto, una
+ejecución exitosa en Colab no garantiza que otra VM del pool de Google conserve
+una IP aceptada por YouTube.
+
+No se debe insistir con múltiples reintentos sobre la misma IP bloqueada, ni usar
+cookies personales, proxies o mecanismos para eludir los controles de YouTube.
+
+La ruta de contingencia estable es ejecutar la ingestión desde el Mac del usuario,
+usando su conexión normal, con `buy_the_dip_corpus/local_transcribe.py`. El runner:
+
+- carga el manifest canónico completo;
+- reanuda por vídeo y conserva checkpoints;
+- intenta transcript API, luego captions con yt-dlp y, solo si es necesario,
+  audio + Whisper;
+- se detiene si detecta que toda la conexión está bloqueada;
+- escribe en el Drive local sincronizado cuando Google Drive for Desktop está
+  disponible, o en un staging local configurable mediante `BTD_OUT`;
+- no toca ninguna campaña paper ni los diarios de MIDAS.
