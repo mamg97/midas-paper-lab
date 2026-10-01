@@ -145,3 +145,35 @@ Antes de congelar v1:
 - contradicciones históricas documentadas;
 - parámetros definidos antes del primer fill.
 
+
+
+## Validación de ingestión en Colab · 2026-10-01
+
+La prueba controlada sobre los 10 últimos vídeos del canal terminó con **10/10
+transcripciones recuperadas** y **0 fallos**, usando exclusivamente
+`youtube-transcript-api` desde una sesión de Google Colab.
+
+Resultados del lote:
+
+- 65.198 palabras recuperadas;
+- idioma español en los 10 casos;
+- tiempo por vídeo entre ~0,9 s y ~11,4 s;
+- sin necesidad de `yt-dlp` ni Whisper en el lote validado.
+
+Esto confirma que el bloqueo observado en GitHub Actions era de red/IP cloud y no
+una ausencia general de captions del canal.
+
+Arquitectura operativa a partir de esta validación:
+
+- **Colab** = ingestión desde YouTube y checkpoint reanudable;
+- **Drive privado** = staging temporal/operativo del corpus;
+- **GitHub/MIDAS** = metadatos, análisis derivado y estrategia, nunca dependencia
+  directa de YouTube para la extracción;
+- **Segundo Cerebro** = consumo de la campaña paper final, separada de las campañas
+  existentes.
+
+La expansión al corpus completo debe procesar únicamente vídeos pendientes,
+reutilizar resultados previos, guardar checkpoint tras cada vídeo, espaciar
+peticiones y detenerse temporalmente si aparecen errores consecutivos.
+
+Esta validación no modifica ni reetiqueta ninguna campaña MIDAS activa.
