@@ -411,12 +411,15 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
 def markdown(report):
     lines = ["# MIDAS: todas las ideas en paralelo", "",
              "Actualizado: " + report["generated_at_utc"] + ". El tablero distingue resultados observados de ideas aún no ejecutadas.", "",
-             "Las rentabilidades de las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.", "",
-             "| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Último periodo | Acumulada |", "| --- | --- | --- | --- | --- | ---: | ---: |"]
+             "La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo no se ordenan como si sus fechas, divisas o reglas fueran idénticas.", "",
+             "| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Último periodo | Acumulada | Vol. anual. | Máx. DD | Sharpe 0rf |", "| --- | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |"]
     for row in report["tracks"]:
         value = "—" if row["return_pct"] is None else f"{row['return_pct']:.2f} %"
         daily = "—" if row["day_return_pct"] is None else f"{row['day_return_pct']:.2f} %"
-        lines.append(f"| {row['label']} | {row['provenance']} | {row['status']} | {row['first_session'] or '—'} | {row['last_session'] or '—'} | {daily} | {value} |")
+        vol = "—" if row["annualized_volatility_pct"] is None else f"{row['annualized_volatility_pct']:.2f} %"
+        drawdown = "—" if row["max_drawdown_pct"] is None else f"{row['max_drawdown_pct']:.2f} %"
+        sharpe = "—" if row["sharpe_0rf"] is None else f"{row['sharpe_0rf']:.2f}"
+        lines.append(f"| {row['label']} | {row['provenance']} | {row['status']} | {row['first_session'] or '—'} | {row['last_session'] or '—'} | {daily} | {value} | {vol} | {drawdown} | {sharpe} |")
     lines += ["", "## Qué impide activar las líneas restantes", ""]
     for row in report["tracks"]:
         if row["group"] == "historica_pendiente":
@@ -439,6 +442,8 @@ def main(argv=None):
     parser.add_argument("--tfg-state")
     parser.add_argument("--capital-cycle-config", default="capital_cycle/config.json")
     parser.add_argument("--capital-cycle-state", default="capital_cycle_state/ledger.json")
+    parser.add_argument("--buy-the-dip-config", default="buy_the_dip_strategy/config.json")
+    parser.add_argument("--buy-the-dip-state", default="buy_the_dip_state/ledger.json")
     parser.add_argument("--output", required=True)
     args = parser.parse_args(argv)
     report = build(_read(args.registry), _read(args.paper_config),
@@ -450,7 +455,9 @@ def main(argv=None):
                    tfg_config=_read(args.tfg_config) if args.tfg_config else None,
                    tfg_state=_read(args.tfg_state, optional=True) if args.tfg_state else None,
                    capital_config=_read(args.capital_cycle_config) if args.capital_cycle_config and Path(args.capital_cycle_config).exists() else None,
-                   capital_state=_read(args.capital_cycle_state, optional=True) if args.capital_cycle_state else None)
+                   capital_state=_read(args.capital_cycle_state, optional=True) if args.capital_cycle_state else None,
+                   btd_config=_read(args.buy_the_dip_config) if args.buy_the_dip_config and Path(args.buy_the_dip_config).exists() else None,
+                   btd_state=_read(args.buy_the_dip_state, optional=True) if args.buy_the_dip_state else None)
     output = Path(args.output)
     _write(output / "dashboard.json", json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     _write(output / "dashboard.md", markdown(report))
