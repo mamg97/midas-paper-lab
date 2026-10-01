@@ -167,7 +167,7 @@ def extract(video_id):
         except Exception as exc:
             attempts.append({"method": "audio+whisper", "error": f"{type(exc).__name__}: {exc}"[:2500]})
 
-    blocked = all(looks_blocked(a["error"]) for a in attempts if a.get("error"))
+    blocked = any(looks_blocked(a["error"]) for a in attempts if a.get("error"))
     raise RuntimeError(json.dumps({"blocked": blocked, "attempts": attempts}, ensure_ascii=False))
 
 
@@ -196,6 +196,7 @@ def main():
     print(f"⏳ Pendientes en esta ejecución: {len(pending)}")
 
     done_this_run = 0
+    consecutive_failures = 0
     for idx, video in enumerate(pending, 1):
         vid = video["video_id"]
         folder = videos_root / vid
@@ -213,8 +214,10 @@ def main():
             }
             atomic_json(folder / "metadata.json", meta)
             done_this_run += 1
+            consecutive_failures = 0
             print(f"   ✅ {method} · {meta['word_count']:,} palabras")
         except Exception as exc:
+            consecutive_failures += 1
             msg = str(exc)
             atomic_json(folder / "metadata.json", {
                 **video, "success": False, "last_error": msg[:6000],
@@ -226,7 +229,10 @@ def main():
             except Exception:
                 parsed = {}
             if parsed.get("blocked"):
-                print("\n🛑 YouTube está bloqueando también esta conexión. Paro para no insistir.")
+                print("\n🛑 YouTube está bloqueando esta conexión. Paro inmediatamente para no insistir.")
+                break
+            if consecutive_failures >= 3:
+                print("\n🛑 Tres fallos consecutivos. Paro y conservaré el checkpoint para reanudar después.")
                 break
         time.sleep(args.sleep)
 
