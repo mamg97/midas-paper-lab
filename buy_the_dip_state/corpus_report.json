@@ -3,7 +3,7 @@
   "source_name": "Buy The Dip",
   "channel_url": "https://www.youtube.com/@Buy_The_Dip",
   "channel_id": "UCS5I8A7UAu43QgFxxu8VRbQ",
-  "generated_at_utc": "2026-10-01T14:44:08.077807+00:00",
+  "generated_at_utc": "2026-10-01T15:14:00.716552+00:00",
   "config_version": "2026-10-01-buy-the-dip-corpus-v1",
   "manifest_count": 300,
   "by_format": {
@@ -32,12 +32,12 @@
     }
   },
   "by_category": {
-    "portfolio_update": 46,
-    "company_or_theme": 157,
-    "macro_market": 40,
-    "sector_theme": 34,
+    "portfolio_update": 49,
+    "company_or_theme": 148,
+    "macro_market": 45,
+    "sector_theme": 36,
     "methodology": 6,
-    "guest_interview": 15,
+    "guest_interview": 14,
     "short": 2
   },
   "lexicon_aggregate": {

@@ -6,7 +6,7 @@ Fuente canónica: https://www.youtube.com/@Buy_The_Dip
 - Captions utilizables: **0** (0.00 %)
 - Transporte captions: **blocked_or_unavailable** · canary=False
 - Formatos: **{'long': 271, 'live': 27, 'short': 2}**
-- Categorías derivadas: **{'portfolio_update': 46, 'company_or_theme': 157, 'macro_market': 40, 'sector_theme': 34, 'methodology': 6, 'guest_interview': 15, 'short': 2}**
+- Categorías derivadas: **{'portfolio_update': 49, 'company_or_theme': 148, 'macro_market': 45, 'sector_theme': 36, 'methodology': 6, 'guest_interview': 14, 'short': 2}**
 
 ## Señales recurrentes
 
