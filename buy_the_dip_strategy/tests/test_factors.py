@@ -42,10 +42,10 @@ class FactorPolicyTests(unittest.TestCase):
 
     def test_rotation_can_replace_old_position(self):
         positions = {"OLD": {"entry_date": "2026-01-02", "sector": "Industrials"}}
-        scored = [
-            self.row("NEW", 90, "Energy"),
-            self.row("OLD", 46, "Industrials", eligible=False),
-        ] + [self.row(f"X{i}", 65 - i, "Materials") for i in range(9)]
+        sectors = ["Energy", "Materials", "Information Technology", "Healthcare", "Consumer Staples"]
+        scored = [self.row("NEW", 95, "Energy")]
+        scored += [self.row(f"X{i}", 90 - i, sectors[i % len(sectors)]) for i in range(11)]
+        scored += [self.row("OLD", 46, "Industrials", eligible=False)]
         targets, exits, _ = choose_portfolio(scored, positions, "2026-10-01", self.config)
         self.assertNotIn("OLD", targets)
         self.assertEqual(exits["OLD"], "rank_replaced")
