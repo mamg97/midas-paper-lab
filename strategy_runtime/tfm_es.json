@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "workflow_key": "tfm_es",
+  "workflow_name": "MIDAS TFM shadow forecasts",
+  "event": "schedule",
+  "outcome": "failure",
+  "run_id": 36789239679,
+  "run_number": 4,
+  "head_sha": "",
+  "recorded_at_utc": "2026-09-30T23:05:37Z"
+}
