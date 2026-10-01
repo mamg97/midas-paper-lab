@@ -411,7 +411,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
 def markdown(report):
     lines = ["# MIDAS: todas las ideas en paralelo", "",
              "Actualizado: " + report["generated_at_utc"] + ". El tablero distingue resultados observados de ideas aún no ejecutadas.", "",
-             "La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo no se ordenan como si sus fechas, divisas o reglas fueran idénticas.", "",
+             "La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.", "",
              "| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Último periodo | Acumulada | Vol. anual. | Máx. DD | Sharpe 0rf |", "| --- | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |"]
     for row in report["tracks"]:
         value = "—" if row["return_pct"] is None else f"{row['return_pct']:.2f} %"
