@@ -40,8 +40,20 @@ jobs:
       - name: Verify chronology and paper accounting
         run: python -m unittest discover -s tfm_shadow/tests -v
       - name: Record four forecasts and paper decisions
+        id: execute
         if: ${{ !inputs.preflight_only }}
         run: python tfm_shadow/run.py --output tfm_state
+      - name: Record scheduled runtime health
+        if: ${{ always() && github.event_name == 'schedule' && !inputs.preflight_only }}
+        run: |
+          python strategy_comparison/runtime_health.py \
+            --output strategy_runtime/tfm_es.json \
+            --workflow-key tfm_es \
+            --workflow-name "MIDAS TFM shadow forecasts" \
+            --outcome "${{ steps.execute.outcome }}" \
+            --run-id "$GITHUB_RUN_ID" \
+            --run-number "$GITHUB_RUN_NUMBER" \
+            --head-sha "$GITHUB_SHA"
       - name: Refresh all-strategy status after Madrid close
         if: ${{ always() && !inputs.preflight_only }}
         run: |
@@ -59,6 +71,9 @@ jobs:
       - name: Commit TFM shadow and comparison state
         if: ${{ always() && !inputs.preflight_only }}
         run: |
+          if [ -f strategy_runtime/tfm_es.json ]; then
+            git add -- strategy_runtime/tfm_es.json
+          fi
           if [ -d tfm_state ]; then
             git add -- tfm_state
           fi
