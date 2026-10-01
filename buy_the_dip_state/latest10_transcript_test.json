@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "source": "Buy The Dip latest-10 transcript extraction test",
+  "generated_at_utc": "2026-10-01T13:37:27.389019+00:00",
+  "count": 10,
+  "success_count": 0,
+  "failure_count": 10,
+  "videos": [
+    {
+      "video_id": "Vax3e_R44DI",
+      "title": "La rentabilidad de los bonos se dispara más del 5% ¿Qué significa para tu cartera?",
+      "published_at": "2026-09-28T16:28:01+00:00",
+      "url": "https://www.youtube.com/watch?v=Vax3e_R44DI",
+      "source": "youtube_rss",
+      "success": false,
+      "method": null,
+      "language": null,
+      "word_count": 0,
+      "character_count": 0,
+      "attempts": [
+        {
+          "method": "aggregate",
+          "error": "artifact missing"
+        }
+      ]
+    },
+    {
+      "video_id": "Yze0sJEPHDg",
+      "title": "¿Cómo invertir y aprovechar la subida del petróleo?",
+      "published_at": "2026-09-18T11:17:48+00:00",
+      "url": "https://www.youtube.com/watch?v=Yze0sJEPHDg",
+      "source": "youtube_rss",
+      "success": false,
+      "method": null,
+      "language": null,
+      "word_count": 0,
+      "character_count": 0,
+      "attempts": [
+        {
+          "method": "aggregate",
+          "error": "artifact missing"
+        }
+      ]
+    },
+    {
+      "video_id": "aSL0Qx5AYUk",
+      "title": "El petróleo se dispara: ¿Se acerca una crisis energética?",
+      "published_at": "2026-09-14T18:14:04+00:00",
+      "url": "https://www.youtube.com/watch?v=aSL0Qx5AYUk",
+      "source": "youtube_rss",
+      "success": false,
+      "method": null,
+      "language": null,
+      "word_count": 0,
+      "character_count": 0,
+      "attempts": [
+        {
+          "method": "aggregate",
+          "error": "artifact missing"
+        }
+      ]
+    },
+    {
+      "video_id": "v-8ZPrcvIdM",
+      "title": "¿Mejor INVERSIÓN que el ORO?",
+      "published_at": "2026-09-09T11:21:50+00:00",
+      "url": "https://www.youtube.com/watch?v=v-8ZPrcvIdM",
+      "source": "youtube_rss",
+      "success": false,
+      "method": null,
+      "language": null,
+      "word_count": 0,
+      "character_count": 0,
+      "attempts": [
+        {
+          "method": "aggregate",
+          "error": "artifact missing"
+        }
+      ]
+    },
+    {
+      "video_id": "O_20WOPPhE4",
+      "title": "¿En qué INVERTIRMOS este SEPTIEMBRE? - NUESTRA CARTERA | BUY THE DIP PODCAST",
+      "published_at": "2026-09-07T16:27:00+00:00",
+      "url": "https://www.youtube.com/watch?v=O_20WOPPhE4",
+      "source": "youtube_rss",
+      "success": false,
+      "method": null,
+      "language": null,
+      "word_count": 0,
+      "character_count": 0,
+      "attempts": [
+        {
+          "method": "aggregate",
+          "error": "artifact missing"
+        }
+      ]
+    },
+    {
+      "video_id": "nc-mFSDkp3A",
+      "title": "PETRÓLEO en 2026 por un experto - ¿ SITUACIÓN CRITICA?  |  BUY THE DIP PODCAST",
+      "published_at": "2026-08-11T17:26:31+00:00",
+      "url": "https://www.youtube.com/watch?v=nc-mFSDkp3A",
+      "source": "youtube_rss",
+      "success": false,
+      "method": null,
+      "language": null,
+      "word_count": 0,
+      "character_count": 0,
+      "attempts": [
+        {
+          "method": "aggregate",
+          "error": "artifact missing"
+        }
+      ]
+    },
+    {
+      "video_id": "keU5Zha2cJE",
+      "title": "FONDOS de INVERSIÓN ESPAÑOLES | BUY THE DIP PODCAST",
+      "published_at": "2026-08-04T15:01:11+00:00",
+      "url": "https://www.youtube.com/watch?v=keU5Zha2cJE",
+      "source": "youtube_rss",
+      "success": false,
+      "method": null,
+      "language": null,
+      "word_count": 0,
+      "character_count": 0,
+      "attempts": [
+        {
+          "method": "aggregate",
+          "error": "artifact missing"
+        }
+      ]
+    },
+    {
+      "video_id": "zSy6grQYrYU",
+      "title": "¿Estas son las MEJORES OPORTUNIDADES de INVERSIÓN actuales?",
+      "published_at": "2026-08-03T10:37:50+00:00",
+      "url": "https://www.youtube.com/watch?v=zSy6grQYrYU",
+      "source": "youtube_rss",
+      "success": false,
+      "method": null,
+      "language": null,
+      "word_count": 0,
+      "character_count": 0,
+      "attempts": [
+        {
+          "method": "aggregate",
+          "error": "artifact missing"
+        }
+      ]
+    },
+    {
+      "video_id": "O-xScDlKoHE",
+      "title": "Estamos INVIRTIENDO en estas ACCIONES (Nuestra Cartera) | BUY THE DIP PODCAST",
+      "published_at": "2026-07-24T15:00:06+00:00",
+      "url": "https://www.youtube.com/watch?v=O-xScDlKoHE",
+      "source": "youtube_rss",
+      "success": false,
+      "method": null,
+      "language": null,
+      "word_count": 0,
+      "character_count": 0,
+      "attempts": [
+        {
+          "method": "aggregate",
+          "error": "artifact missing"
+        }
+      ]
+    },
+    {
+      "video_id": "8Eud3puK3NY",
+      "title": "¿Qué ocurre en IRÁN? - ¿Se puede INVERTIR en este mercado?",
+      "published_at": "2026-06-25T18:53:10+00:00",
+      "url": "https://www.youtube.com/watch?v=8Eud3puK3NY",
+      "source": "youtube_rss",
+      "success": false,
+      "method": null,
+      "language": null,
+      "word_count": 0,
+      "character_count": 0,
+      "attempts": [
+        {
+          "method": "aggregate",
+          "error": "artifact missing"
+        }
+      ]
+    }
+  ],
+  "note": "Transcript text is intentionally not committed; only extraction metadata persists."
+}
