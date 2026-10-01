@@ -1,0 +1,112 @@
+name: Buy The Dip latest 10 transcript test
+
+on:
+  pull_request:
+    paths:
+      - 'buy_the_dip_corpus/latest10_extract.py'
+      - '.github/workflows/buy_the_dip_latest10.yml'
+  push:
+    branches: ['main']
+    paths:
+      - 'buy_the_dip_corpus/latest10_extract.py'
+      - '.github/workflows/buy_the_dip_latest10.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: buy-the-dip-latest10
+  cancel-in-progress: false
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.inventory.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install inventory runtime
+        run: python -m pip install 'yt-dlp>=2025.1.1'
+      - name: Resolve latest ten uploads
+        id: inventory
+        run: python buy_the_dip_corpus/latest10_extract.py inventory --limit 10 --output latest10_inventory.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: btd-latest10-inventory
+          path: latest10_inventory.json
+          retention-days: 1
+
+  transcript:
+    if: ${{ github.event_name != 'pull_request' }}
+    needs: inventory
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix: ${{ fromJSON(needs.inventory.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install transcript runtime
+        run: python -m pip install 'youtube-transcript-api>=1.2,<2' 'yt-dlp>=2025.1.1'
+      - name: Extract transcript
+        id: transcribe
+        continue-on-error: true
+        run: |
+          mkdir -p "latest10_work/${{ matrix.video_id }}"
+          python buy_the_dip_corpus/latest10_extract.py transcribe \
+            --video-id "${{ matrix.video_id }}" \
+            --output-dir "latest10_work/${{ matrix.video_id }}"
+      - name: Keep only extraction metadata
+        if: always()
+        run: rm -f "latest10_work/${{ matrix.video_id }}/transcript.txt"
+      - name: Upload extraction metadata
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: btd-meta-${{ matrix.video_id }}
+          path: latest10_work/${{ matrix.video_id }}/metadata.json
+          if-no-files-found: warn
+          retention-days: 1
+      - name: Fail if extraction failed
+        if: steps.transcribe.outcome == 'failure'
+        run: exit 1
+
+  aggregate:
+    if: ${{ always() && github.event_name != 'pull_request' }}
+    needs: [inventory, transcript]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: btd-*
+          path: latest10_artifacts
+      - name: Locate inventory
+        run: cp latest10_artifacts/btd-latest10-inventory/latest10_inventory.json latest10_inventory.json
+      - name: Aggregate extraction results
+        run: |
+          mkdir -p buy_the_dip_state
+          python buy_the_dip_corpus/latest10_extract.py aggregate \
+            --inventory latest10_inventory.json \
+            --artifacts-dir latest10_artifacts \
+            --output buy_the_dip_state/latest10_transcript_test.json
+      - name: Commit metadata report only
+        run: |
+          git add -- buy_the_dip_state/latest10_transcript_test.json
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' \
+                -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+                commit -m 'Record Buy The Dip latest-10 transcript extraction test'
+            git push
+          fi
