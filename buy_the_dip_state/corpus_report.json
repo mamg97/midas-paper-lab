@@ -3,7 +3,7 @@
   "source_name": "Buy The Dip",
   "channel_url": "https://www.youtube.com/@Buy_The_Dip",
   "channel_id": "UCS5I8A7UAu43QgFxxu8VRbQ",
-  "generated_at_utc": "2026-10-01T11:47:00.092109+00:00",
+  "generated_at_utc": "2026-10-01T11:57:13.304049+00:00",
   "config_version": "2026-10-01-buy-the-dip-corpus-v1",
   "manifest_count": 300,
   "by_format": {
@@ -32,12 +32,12 @@
     }
   },
   "by_category": {
-    "portfolio_update": 44,
-    "company_or_theme": 161,
-    "macro_market": 39,
-    "sector_theme": 34,
-    "methodology": 6,
-    "guest_interview": 14,
+    "portfolio_update": 42,
+    "company_or_theme": 180,
+    "macro_market": 34,
+    "methodology": 5,
+    "sector_theme": 24,
+    "guest_interview": 13,
     "short": 2
   },
   "lexicon_aggregate": {
@@ -144,15 +144,6 @@
       "guest_likely": false,
       "score": 12.0,
       "url": "https://www.youtube.com/watch?v=NjMXlb6pPDc"
-    },
-    {
-      "video_id": "ckJ0cRRc7DE",
-      "title": "El Lado Oscuro de las Inversiones: Nuestros Fracasos | BUY THE DIP PODCAST",
-      "published_date": null,
-      "category": "methodology",
-      "guest_likely": false,
-      "score": 12.0,
-      "url": "https://www.youtube.com/watch?v=ckJ0cRRc7DE"
     },
     {
       "video_id": "-EL1QLkTi_A",
@@ -459,6 +450,15 @@
       "guest_likely": false,
       "score": 8.0,
       "url": "https://www.youtube.com/watch?v=nVMmnYjkNpg"
+    },
+    {
+      "video_id": "oiK2Q-4TOjM",
+      "title": "BUY THE DIP PODCAST EPISODIO 31: NUESTRA CARTERA PARA 2021",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=oiK2Q-4TOjM"
     }
   ],
   "methodology_note": "Corpus screening only. No trading rule is considered canonical until semantic review distinguishes host process from guest opinions and recurring themes."
