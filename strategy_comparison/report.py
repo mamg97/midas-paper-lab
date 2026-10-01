@@ -150,7 +150,11 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
     if not isinstance(capital_tracks, dict):
         raise ValueError("Registro Capital Cycle inválido")
     capital_ids = [item["id"] for item in capital_tracks.values()]
-    ids = list(paper_names) + weekly_ids + tfg_ids + capital_ids + [x["id"] for x in legacy_tracks + ideas]
+    btd_tracks = registry.get("buy_the_dip_tracks", {})
+    if not isinstance(btd_tracks, dict):
+        raise ValueError("Registro Buy The Dip inválido")
+    btd_ids = [item["id"] for item in btd_tracks.values()]
+    ids = list(paper_names) + weekly_ids + tfg_ids + capital_ids + btd_ids + [x["id"] for x in legacy_tracks + ideas]
     if len(ids) != len(set(ids)):
         raise ValueError("Ideas duplicadas")
     provenance = registry.get("provenance", {})
@@ -205,6 +209,18 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             raise ValueError("Diario Capital Cycle no reconocido")
         if not isinstance(capital_state.get("equity"), list) or not capital_state["equity"]:
             raise ValueError("Diario Capital Cycle sin patrimonio")
+    if btd_config is not None:
+        if set(btd_tracks) != {"buy_the_dip_corpus"}:
+            raise ValueError("Registro Buy The Dip incompleto")
+        if btd_config.get("name") != "MIDAS_buy_the_dip_corpus_v0_2026":
+            raise ValueError("Configuración Buy The Dip no reconocida")
+    if btd_state is not None:
+        if btd_config is None or btd_state.get("config_hash") != _config_hash(btd_config):
+            raise ValueError("El diario Buy The Dip pertenece a otra configuración")
+        if btd_state.get("strategy_id") != "buy_the_dip_corpus_2026_v0":
+            raise ValueError("Diario Buy The Dip no reconocido")
+        if not isinstance(btd_state.get("equity"), list) or not btd_state["equity"]:
+            raise ValueError("Diario Buy The Dip sin patrimonio")
     timestamp = now or datetime.now(timezone.utc)
     rows = []
     for strategy_id, label in paper_names.items():
