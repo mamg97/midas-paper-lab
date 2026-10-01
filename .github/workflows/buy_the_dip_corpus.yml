@@ -49,7 +49,7 @@ jobs:
         if: ${{ github.event_name != 'pull_request' }}
         run: python buy_the_dip_corpus/build_corpus.py --output buy_the_dip_state
 
-      - name: Safety check: no subtitle/transcript files persisted
+      - name: 'Safety check: no subtitle/transcript files persisted'
         if: ${{ github.event_name != 'pull_request' }}
         run: |
           if find buy_the_dip_state -type f \( -name '*.vtt' -o -name '*.srt' -o -name '*.ass' -o -name '*.lrc' \) | grep -q .; then
