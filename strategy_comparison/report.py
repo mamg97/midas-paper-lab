@@ -317,6 +317,30 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        day_return_pct=_daily_return(history, item["id"]),
                        equity_history=_equity_history(history, item["id"]))
         rows.append(row)
+    for strategy_key, item in btd_tracks.items():
+        capital_btd = None if btd_config is None else _equity(
+            btd_config["paper_policy"]["capital"], "capital Buy The Dip")
+        row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
+               "group": "buy_the_dip_demo", "status": "programada_sin_diario",
+               "first_session": None, "last_session": None,
+               "initial_capital": capital_btd, "last_equity": None,
+               "return_pct": None, "day_return_pct": None,
+               "currency": None if btd_config is None else btd_config.get("currency", "USD"),
+               "equity_history": [],
+               "note": "Buy The Dip corpus v0: deep value + special situations; valoración, calidad, capital allocation, dislocación y catalizadores; decisión mensual y fills next-open."}
+        if btd_state is not None:
+            history = btd_state["equity"]
+            nav = _equity(btd_state.get("nav"), item["id"])
+            if history[-1].get("date") != btd_state.get("last_session"):
+                raise ValueError("Patrimonio Buy The Dip sin fecha válida")
+            row.update(status="demo_con_diario",
+                       first_session=btd_state.get("first_session"),
+                       last_session=btd_state.get("last_session"),
+                       last_equity=nav,
+                       return_pct=round(100 * (nav / capital_btd - 1), 6),
+                       day_return_pct=_daily_return(history, item["id"]),
+                       equity_history=_equity_history(history, item["id"]))
+        rows.append(row)
     for item in legacy_tracks:
         row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
                "group": "diario_heredado",
@@ -369,14 +393,18 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                          "initial_capital": None, "last_equity": None, "return_pct": None,
                          "day_return_pct": None, "currency": None, "equity_history": [],
                          "note": item["blocker"], "kind": item["kind"], "source": item["source"]})
+    for row in rows:
+        row.update(_risk_metrics(row.get("equity_history", [])))
+
     return {"schema_version": 1, "generated_at_utc": timestamp.isoformat(),
-            "principle": "No ordenar rentabilidades de carteras con distintas fechas de inicio o supuestos de ejecución.",
+            "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
             "counts": {"paper_with_diary": sum(x["group"] == "paper_nuevo" and x["status"] == "demo_con_diario" for x in rows),
                        "legacy_with_diary": sum(x["status"] == "diario_heredado_observado" for x in rows),
                        "tfm_with_diary": sum(x["group"] == "tfm_demo_adaptado" and x["status"] == "demo_con_diario" for x in rows),
                        "weekly_ml_with_diary": sum(x["group"] == "weekly_ml_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "tfg_with_diary": sum(x["group"] == "tfg_demo_adaptado" and x["status"] == "demo_con_diario" for x in rows),
                        "capital_cycle_with_diary": sum(x["group"] == "capital_cycle_demo" and x["status"] == "demo_con_diario" for x in rows),
+                       "buy_the_dip_with_diary": sum(x["group"] == "buy_the_dip_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "historical_pending": sum(x["group"] == "historica_pendiente" for x in rows)}, "tracks": rows}
 
 
