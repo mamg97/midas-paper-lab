@@ -177,3 +177,84 @@ reutilizar resultados previos, guardar checkpoint tras cada vídeo, espaciar
 peticiones y detenerse temporalmente si aparecen errores consecutivos.
 
 Esta validación no modifica ni reetiqueta ninguna campaña MIDAS activa.
+
+
+## Estrategia paper provisional v0 · 2026-10-01
+
+El usuario ha autorizado iniciar una campaña prospectiva antes de completar el
+corpus entero. Esta decisión **no convierte v0 en la estrategia canónica final del
+canal**. La campaña queda identificada como `buy_the_dip_corpus_2026_v0` y sus
+parámetros quedan congelados antes del primer fill.
+
+### Evidencia fuente ya revisada que sí entra en v0
+
+Los episodios recientes transcritos muestran de forma explícita y repetida estos
+componentes de proceso:
+
+- valoración centrada en FCF/earnings yield, caja neta, activos y descuento frente
+  a comparables;
+- preferencia por negocios que sobreviven el periodo malo y por estructuras de
+  balance que permitan esperar;
+- búsqueda de discrepancias: empresa/sector castigado aunque la economía del
+  negocio o activo siga intacta;
+- catalizadores identificables: recompras, monetización de activos, M&A,
+  strategic review, entrada en producción, normalización operativa o recuperación
+  sectorial;
+- rotación por coste de oportunidad: una posición puede venderse aun conservando
+  potencial si aparecen alternativas más atractivas;
+- venta/reducción tras rerating cuando el precio deja de ofrecer el margen de
+  seguridad buscado;
+- caja como posición válida cuando faltan oportunidades claras;
+- paciencia y prohibición práctica de perseguir precios;
+- sizing menor cuando existe un riesgo no diversificable elevado, por ejemplo
+  jurisdicción;
+- aceptación de volatilidad si la tesis de largo plazo permanece intacta.
+
+Vídeos de evidencia directa ya disponibles en el staging privado incluyen, entre
+otros: `O_20WOPPhE4` (cartera septiembre 2026), `O-xScDlKoHE` (cartera julio
+2026), `zSy6grQYrYU` (oportunidades actuales), `Vax3e_R44DI` (bonos/macro),
+`Yze0sJEPHDg` y `aSL0Qx5AYUk` (petróleo), y `v-8ZPrcvIdM` (oro/activos
+reales).
+
+### Qué NO se atribuye a los hosts
+
+Los pesos numéricos del score, umbrales, máximo de posiciones y proxies de
+catalizador son decisiones de ingeniería para hacer el proceso ejecutable y
+auditable. No se presentan como reglas textuales dichas por los autores.
+
+La v0 usa:
+
+- valoración 30 %;
+- calidad/supervivencia 20 %;
+- asignación de capital 15 %;
+- dislocación 20 %;
+- catalizador/inflection 15 %.
+
+La señal se calcula mensualmente; el NAV se marca diariamente. No hay stop-loss
+por porcentaje ni take-profit fijo: la salida depende de deterioro, rerating,
+score o coste de oportunidad.
+
+### Universo v0
+
+Para no seleccionar retrospectivamente small caps internacionales después de ver
+qué funcionó, v0 usa el universo S&P-derived ya congelado en MIDAS. Esto reduce la
+fidelidad respecto a la parte internacional/special-situations del canal, pero
+maximiza la auditabilidad de la primera campaña.
+
+Una futura v1 global debe congelar su propio universo antes del primer fill y
+arrancar con un diario nuevo.
+
+### Criterio de competencia
+
+Cada estrategia MIDAS conserva su frecuencia natural. La comparación se hace
+sobre NAV observado y no obliga a Buy The Dip a operar semanal o diariamente.
+
+Además de rentabilidad acumulada, el tablero debe registrar riesgo realizado:
+
+- volatilidad anualizada adaptada a la cadencia observada;
+- máximo drawdown;
+- Sharpe realizado con rf=0 como estadístico descriptivo;
+- número de observaciones.
+
+Mientras no exista una ventana común suficiente, no se declara un ganador por
+rentabilidad bruta entre campañas con fechas de inicio distintas.

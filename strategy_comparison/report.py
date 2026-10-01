@@ -5,6 +5,7 @@ import hashlib
 import json
 import math
 import os
+import statistics
 import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
@@ -66,13 +67,70 @@ def _equity_history(history, label, limit=520):
     return points
 
 
+def _risk_metrics(points):
+    """Risk from the same recorded NAV path shown in the dashboard."""
+    if not isinstance(points, list) or not points:
+        return {
+            "risk_observations": 0,
+            "annualized_volatility_pct": None,
+            "max_drawdown_pct": None,
+            "sharpe_0rf": None,
+        }
+    navs = [float(point["nav"]) for point in points if isinstance(point, dict) and _equity(point.get("nav"), "riesgo") >= 0]
+    if not navs:
+        return {
+            "risk_observations": 0,
+            "annualized_volatility_pct": None,
+            "max_drawdown_pct": None,
+            "sharpe_0rf": None,
+        }
+    peak = navs[0]
+    max_dd = 0.0
+    for nav in navs:
+        peak = max(peak, nav)
+        if peak > 0:
+            max_dd = min(max_dd, nav / peak - 1.0)
+
+    returns = []
+    dates = []
+    for index, point in enumerate(points):
+        try:
+            dates.append(datetime.fromisoformat(str(point["date"])[:10]).date())
+        except (TypeError, ValueError, KeyError):
+            dates.append(None)
+        if index and navs[index - 1] > 0:
+            returns.append(navs[index] / navs[index - 1] - 1.0)
+
+    volatility = sharpe = None
+    if len(returns) >= 2:
+        sd = statistics.stdev(returns)
+        valid_gaps = [
+            (dates[i] - dates[i - 1]).days
+            for i in range(1, len(dates))
+            if dates[i] is not None and dates[i - 1] is not None and (dates[i] - dates[i - 1]).days > 0
+        ]
+        gap = statistics.median(valid_gaps) if valid_gaps else 1
+        periods = 252.0 if gap <= 3 else 52.0 if gap <= 10 else 12.0 if gap <= 40 else 4.0
+        volatility = 100.0 * sd * math.sqrt(periods)
+        if sd > 1e-15:
+            sharpe = statistics.fmean(returns) / sd * math.sqrt(periods)
+
+    return {
+        "risk_observations": len(navs),
+        "annualized_volatility_pct": None if volatility is None else round(volatility, 6),
+        "max_drawdown_pct": round(100.0 * max_dd, 6),
+        "sharpe_0rf": None if sharpe is None else round(sharpe, 6),
+    }
+
+
 TFM_IDS = {"tfm_lgbm_2023": "lgbm", "tfm_mlp_2023": "mlp",
            "tfm_lstm_2023": "lstm", "tfm_arima_2023": "arima"}
 
 
 def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
           tfm_config=None, tfm_state=None, weekly_config=None, weekly_state=None,
-          tfg_config=None, tfg_state=None, capital_config=None, capital_state=None):
+          tfg_config=None, tfg_state=None, capital_config=None, capital_state=None,
+          btd_config=None, btd_state=None):
     if registry.get("schema_version") != 1:
         raise ValueError("Versión de registro no válida")
     paper_names = registry.get("paper_tracks", {})
@@ -92,7 +150,11 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
     if not isinstance(capital_tracks, dict):
         raise ValueError("Registro Capital Cycle inválido")
     capital_ids = [item["id"] for item in capital_tracks.values()]
-    ids = list(paper_names) + weekly_ids + tfg_ids + capital_ids + [x["id"] for x in legacy_tracks + ideas]
+    btd_tracks = registry.get("buy_the_dip_tracks", {})
+    if not isinstance(btd_tracks, dict):
+        raise ValueError("Registro Buy The Dip inválido")
+    btd_ids = [item["id"] for item in btd_tracks.values()]
+    ids = list(paper_names) + weekly_ids + tfg_ids + capital_ids + btd_ids + [x["id"] for x in legacy_tracks + ideas]
     if len(ids) != len(set(ids)):
         raise ValueError("Ideas duplicadas")
     provenance = registry.get("provenance", {})
@@ -147,6 +209,18 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             raise ValueError("Diario Capital Cycle no reconocido")
         if not isinstance(capital_state.get("equity"), list) or not capital_state["equity"]:
             raise ValueError("Diario Capital Cycle sin patrimonio")
+    if btd_config is not None:
+        if set(btd_tracks) != {"buy_the_dip_corpus"}:
+            raise ValueError("Registro Buy The Dip incompleto")
+        if btd_config.get("name") != "MIDAS_buy_the_dip_corpus_v0_2026":
+            raise ValueError("Configuración Buy The Dip no reconocida")
+    if btd_state is not None:
+        if btd_config is None or btd_state.get("config_hash") != _config_hash(btd_config):
+            raise ValueError("El diario Buy The Dip pertenece a otra configuración")
+        if btd_state.get("strategy_id") != "buy_the_dip_corpus_2026_v0":
+            raise ValueError("Diario Buy The Dip no reconocido")
+        if not isinstance(btd_state.get("equity"), list) or not btd_state["equity"]:
+            raise ValueError("Diario Buy The Dip sin patrimonio")
     timestamp = now or datetime.now(timezone.utc)
     rows = []
     for strategy_id, label in paper_names.items():
@@ -243,6 +317,30 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        day_return_pct=_daily_return(history, item["id"]),
                        equity_history=_equity_history(history, item["id"]))
         rows.append(row)
+    for strategy_key, item in btd_tracks.items():
+        capital_btd = None if btd_config is None else _equity(
+            btd_config["paper_policy"]["capital"], "capital Buy The Dip")
+        row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
+               "group": "buy_the_dip_demo", "status": "programada_sin_diario",
+               "first_session": None, "last_session": None,
+               "initial_capital": capital_btd, "last_equity": None,
+               "return_pct": None, "day_return_pct": None,
+               "currency": None if btd_config is None else btd_config.get("currency", "USD"),
+               "equity_history": [],
+               "note": "Buy The Dip corpus v0: deep value + special situations; valoración, calidad, capital allocation, dislocación y catalizadores; decisión mensual y fills next-open."}
+        if btd_state is not None:
+            history = btd_state["equity"]
+            nav = _equity(btd_state.get("nav"), item["id"])
+            if history[-1].get("date") != btd_state.get("last_session"):
+                raise ValueError("Patrimonio Buy The Dip sin fecha válida")
+            row.update(status="demo_con_diario",
+                       first_session=btd_state.get("first_session"),
+                       last_session=btd_state.get("last_session"),
+                       last_equity=nav,
+                       return_pct=round(100 * (nav / capital_btd - 1), 6),
+                       day_return_pct=_daily_return(history, item["id"]),
+                       equity_history=_equity_history(history, item["id"]))
+        rows.append(row)
     for item in legacy_tracks:
         row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
                "group": "diario_heredado",
@@ -295,26 +393,33 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                          "initial_capital": None, "last_equity": None, "return_pct": None,
                          "day_return_pct": None, "currency": None, "equity_history": [],
                          "note": item["blocker"], "kind": item["kind"], "source": item["source"]})
+    for row in rows:
+        row.update(_risk_metrics(row.get("equity_history", [])))
+
     return {"schema_version": 1, "generated_at_utc": timestamp.isoformat(),
-            "principle": "No ordenar rentabilidades de carteras con distintas fechas de inicio o supuestos de ejecución.",
+            "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
             "counts": {"paper_with_diary": sum(x["group"] == "paper_nuevo" and x["status"] == "demo_con_diario" for x in rows),
                        "legacy_with_diary": sum(x["status"] == "diario_heredado_observado" for x in rows),
                        "tfm_with_diary": sum(x["group"] == "tfm_demo_adaptado" and x["status"] == "demo_con_diario" for x in rows),
                        "weekly_ml_with_diary": sum(x["group"] == "weekly_ml_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "tfg_with_diary": sum(x["group"] == "tfg_demo_adaptado" and x["status"] == "demo_con_diario" for x in rows),
                        "capital_cycle_with_diary": sum(x["group"] == "capital_cycle_demo" and x["status"] == "demo_con_diario" for x in rows),
+                       "buy_the_dip_with_diary": sum(x["group"] == "buy_the_dip_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "historical_pending": sum(x["group"] == "historica_pendiente" for x in rows)}, "tracks": rows}
 
 
 def markdown(report):
     lines = ["# MIDAS: todas las ideas en paralelo", "",
              "Actualizado: " + report["generated_at_utc"] + ". El tablero distingue resultados observados de ideas aún no ejecutadas.", "",
-             "Las rentabilidades de las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.", "",
-             "| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Último periodo | Acumulada |", "| --- | --- | --- | --- | --- | ---: | ---: |"]
+             "La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.", "",
+             "| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Último periodo | Acumulada | Vol. anual. | Máx. DD | Sharpe 0rf |", "| --- | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |"]
     for row in report["tracks"]:
         value = "—" if row["return_pct"] is None else f"{row['return_pct']:.2f} %"
         daily = "—" if row["day_return_pct"] is None else f"{row['day_return_pct']:.2f} %"
-        lines.append(f"| {row['label']} | {row['provenance']} | {row['status']} | {row['first_session'] or '—'} | {row['last_session'] or '—'} | {daily} | {value} |")
+        vol = "—" if row["annualized_volatility_pct"] is None else f"{row['annualized_volatility_pct']:.2f} %"
+        drawdown = "—" if row["max_drawdown_pct"] is None else f"{row['max_drawdown_pct']:.2f} %"
+        sharpe = "—" if row["sharpe_0rf"] is None else f"{row['sharpe_0rf']:.2f}"
+        lines.append(f"| {row['label']} | {row['provenance']} | {row['status']} | {row['first_session'] or '—'} | {row['last_session'] or '—'} | {daily} | {value} | {vol} | {drawdown} | {sharpe} |")
     lines += ["", "## Qué impide activar las líneas restantes", ""]
     for row in report["tracks"]:
         if row["group"] == "historica_pendiente":
@@ -337,6 +442,8 @@ def main(argv=None):
     parser.add_argument("--tfg-state")
     parser.add_argument("--capital-cycle-config", default="capital_cycle/config.json")
     parser.add_argument("--capital-cycle-state", default="capital_cycle_state/ledger.json")
+    parser.add_argument("--buy-the-dip-config", default="buy_the_dip_strategy/config.json")
+    parser.add_argument("--buy-the-dip-state", default="buy_the_dip_state/ledger.json")
     parser.add_argument("--output", required=True)
     args = parser.parse_args(argv)
     report = build(_read(args.registry), _read(args.paper_config),
@@ -348,7 +455,9 @@ def main(argv=None):
                    tfg_config=_read(args.tfg_config) if args.tfg_config else None,
                    tfg_state=_read(args.tfg_state, optional=True) if args.tfg_state else None,
                    capital_config=_read(args.capital_cycle_config) if args.capital_cycle_config and Path(args.capital_cycle_config).exists() else None,
-                   capital_state=_read(args.capital_cycle_state, optional=True) if args.capital_cycle_state else None)
+                   capital_state=_read(args.capital_cycle_state, optional=True) if args.capital_cycle_state else None,
+                   btd_config=_read(args.buy_the_dip_config) if args.buy_the_dip_config and Path(args.buy_the_dip_config).exists() else None,
+                   btd_state=_read(args.buy_the_dip_state, optional=True) if args.buy_the_dip_state else None)
     output = Path(args.output)
     _write(output / "dashboard.json", json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     _write(output / "dashboard.md", markdown(report))

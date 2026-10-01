@@ -54,7 +54,8 @@
     "weekly_ml_arima_2026": "TFM/ML · ARIMA adaptado al horizonte semanal",
     "weekly_ml_ensemble_2026": "MIDAS nuevo 2026 · consenso de expertos semanales",
     "tfg_corrected_2026": "TFG 2021 · arquitectura portada y corregida para paper 2026",
-    "capital_cycle_inflection_2026": "MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle"
+    "capital_cycle_inflection_2026": "MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle",
+    "buy_the_dip_corpus_2026_v0": "MIDAS 2026 · Buy The Dip corpus v0 · deep value + special situations"
   },
   "legacy_tracks": [
     {
@@ -262,6 +263,12 @@
     "capital_cycle_inflection": {
       "id": "capital_cycle_inflection_2026",
       "label": "Capital Cycle Inflection · underinvestment + calidad + giro"
+    }
+  },
+  "buy_the_dip_tracks": {
+    "buy_the_dip_corpus": {
+      "id": "buy_the_dip_corpus_2026_v0",
+      "label": "Buy The Dip corpus v0 · deep value + special situations"
     }
   }
 }
