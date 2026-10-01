@@ -1,0 +1,450 @@
+{
+  "schema_version": 1,
+  "source_name": "Buy The Dip",
+  "channel_url": "https://www.youtube.com/@Buy_The_Dip",
+  "channel_id": "UCS5I8A7UAu43QgFxxu8VRbQ",
+  "generated_at_utc": "2026-10-01T07:26:10.238522+00:00",
+  "config_version": "2026-10-01-buy-the-dip-corpus-v1",
+  "manifest_count": 300,
+  "by_format": {
+    "long": 271,
+    "live": 27,
+    "short": 2
+  },
+  "caption_coverage": {
+    "available": 0,
+    "missing": 300,
+    "pct": 0.0
+  },
+  "by_category": {
+    "portfolio_update": 46,
+    "company_or_theme": 162,
+    "macro_market": 40,
+    "methodology": 5,
+    "sector_theme": 30,
+    "guest_interview": 15,
+    "short": 2
+  },
+  "lexicon_aggregate": {
+    "quality": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "cash_flow": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "valuation": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "balance_sheet": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "capital_allocation": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "contrarian": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "cyclical": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "macro": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "portfolio": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "entry": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "exit": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "risk": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "technical": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    },
+    "management": {
+      "videos_with_signal": 0,
+      "mentions": 0
+    }
+  },
+  "topics": [],
+  "top_methodology_videos": [
+    {
+      "video_id": "1aXx6NZMf-M",
+      "title": "¿Concentrar o diversificar las INVERSIONES? | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "methodology",
+      "guest_likely": false,
+      "score": 12.0,
+      "url": "https://www.youtube.com/watch?v=1aXx6NZMf-M"
+    },
+    {
+      "video_id": "CcC_oRv3NuA",
+      "title": "💥 Donde INVERTIR en BOLSA  👉 Como Buscar EMPRESAS para INVERTIR",
+      "published_date": null,
+      "category": "methodology",
+      "guest_likely": false,
+      "score": 12.0,
+      "url": "https://www.youtube.com/watch?v=CcC_oRv3NuA"
+    },
+    {
+      "video_id": "GuTe-zWK7Ag",
+      "title": "2024 TODO LO QUE HEMOS APRENDIDO  | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "methodology",
+      "guest_likely": false,
+      "score": 12.0,
+      "url": "https://www.youtube.com/watch?v=GuTe-zWK7Ag"
+    },
+    {
+      "video_id": "MJcwJg8nJTY",
+      "title": "Análisis técnico y Value Investing  BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "methodology",
+      "guest_likely": false,
+      "score": 12.0,
+      "url": "https://www.youtube.com/watch?v=MJcwJg8nJTY"
+    },
+    {
+      "video_id": "NjMXlb6pPDc",
+      "title": "Cómo buscar, analizar e INVERTIR en EMPRESAS  | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "methodology",
+      "guest_likely": false,
+      "score": 12.0,
+      "url": "https://www.youtube.com/watch?v=NjMXlb6pPDc"
+    },
+    {
+      "video_id": "-EL1QLkTi_A",
+      "title": "Nuestra Cartera de INVERSIÓN en AGOSTO | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=-EL1QLkTi_A"
+    },
+    {
+      "video_id": "2bLJzZR9hxw",
+      "title": "Nuestra Cartera de INVERSIÓN en MAYO-JUNIO | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=2bLJzZR9hxw"
+    },
+    {
+      "video_id": "3GH3BmBL5eA",
+      "title": "🌹 La CARTERA de INVERSIÓN de PEDRO SANCHEZ | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=3GH3BmBL5eA"
+    },
+    {
+      "video_id": "4kqQtHup884",
+      "title": "BUY THE DIP PODCAST EPISODIO 48: NUESTRA CARTERA DE INVERSIÓN EN MAYO",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=4kqQtHup884"
+    },
+    {
+      "video_id": "5FB-DVk9PUg",
+      "title": "BUY THE DIP PODCAST: EPISODIO 2 NUESTRA CARTERA 1",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=5FB-DVk9PUg"
+    },
+    {
+      "video_id": "5K2CpG8Ke1I",
+      "title": "BUY THE DIP PODCAST: EPISODIO 18 NUESTRA CARTERA DE SEPTIEMBRE 2020",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=5K2CpG8Ke1I"
+    },
+    {
+      "video_id": "5SGLgwvrv4U",
+      "title": "Nuestra Cartera de INVERSIÓN en OCTUBRE-NOVIEMBRE | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=5SGLgwvrv4U"
+    },
+    {
+      "video_id": "5zhiPZ_25QE",
+      "title": "La Cartera de INVERSIÓN del DIABLO vs la de JESUCRISTO  | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=5zhiPZ_25QE"
+    },
+    {
+      "video_id": "69jYd6ofAyc",
+      "title": "Cartera de INVERSIÓN en JUNIO | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=69jYd6ofAyc"
+    },
+    {
+      "video_id": "6hmNp6N8Gdo",
+      "title": "Nuestra Cartera de INVERSIÓN en Diciembre | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=6hmNp6N8Gdo"
+    },
+    {
+      "video_id": "ARpaMofMpx0",
+      "title": "Nuestra CARTERA de INVERSIÓN en AGOSTO | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=ARpaMofMpx0"
+    },
+    {
+      "video_id": "Ac1ZqjTbEx0",
+      "title": "Nuestra CARTERA de INVERSIÓN a MITAD DE AÑO | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=Ac1ZqjTbEx0"
+    },
+    {
+      "video_id": "FdAm8oWiw6k",
+      "title": "Cartera de INVERSIÓN en NOVIEMBRE  | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=FdAm8oWiw6k"
+    },
+    {
+      "video_id": "G3ouHDpENXo",
+      "title": "Cartera de INVERSIÓN en FEBRERO  | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=G3ouHDpENXo"
+    },
+    {
+      "video_id": "HBXcRvP29f8",
+      "title": "Nuestra Cartera de INVERSIÓN en Octubre | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=HBXcRvP29f8"
+    },
+    {
+      "video_id": "J-ttbHPHfOM",
+      "title": "Nuestra Cartera de INVERSIÓN en Junio | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=J-ttbHPHfOM"
+    },
+    {
+      "video_id": "LAMPycsBl58",
+      "title": "BUY THE DIP PODCAST: EPISODIO 12 RESUMEN DEL MES DE JULIO",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=LAMPycsBl58"
+    },
+    {
+      "video_id": "MEDzHAw8emY",
+      "title": "Javier Acción y su cartera de INVERSIÓN | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=MEDzHAw8emY"
+    },
+    {
+      "video_id": "Nn-ENiVL-JE",
+      "title": "Nuestra CARTERA y RENTABILIDAD del AÑO | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=Nn-ENiVL-JE"
+    },
+    {
+      "video_id": "Oshx709ObyM",
+      "title": "Nuestra CARTERA de INVERSIÓN en Febrero-Marzo | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=Oshx709ObyM"
+    },
+    {
+      "video_id": "PQtYShldu5k",
+      "title": "BUY THE DIP PODCAST: EPISODIO 29 NUESTRA CARTERA DE DICIEMBRE 2020",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=PQtYShldu5k"
+    },
+    {
+      "video_id": "QtJsr_sWF4Y",
+      "title": "BUY THE DIP PODCAST: EPISODIO 14 ¡NOTICIA IMPORTANTE! Y NUESTRA CARTERA AGOSTO 2020",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=QtJsr_sWF4Y"
+    },
+    {
+      "video_id": "RAWJ2N968kM",
+      "title": "Nuestra Cartera de INVERSIÓN en JULIO | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=RAWJ2N968kM"
+    },
+    {
+      "video_id": "TD0SCFGX8s4",
+      "title": "BUY THE DIP PODCAST EPISODIO 63: NUESTRA CARTERA más PREGUNTAS EN DIRECTO",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=TD0SCFGX8s4"
+    },
+    {
+      "video_id": "TPJq4dhSZV4",
+      "title": "Cartera de INVERSIÓN en DICIEMBRE  | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=TPJq4dhSZV4"
+    },
+    {
+      "video_id": "UoBkgg45QU8",
+      "title": "Nuestra Cartera de INVERSIÓN en Enero | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=UoBkgg45QU8"
+    },
+    {
+      "video_id": "UwtrHnG2GT8",
+      "title": "Nuestra Cartera de INVERSIÓN en ABRIL | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=UwtrHnG2GT8"
+    },
+    {
+      "video_id": "WEercPWuPJw",
+      "title": "Cartera de INVERSIÓN en MARZO   | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=WEercPWuPJw"
+    },
+    {
+      "video_id": "Z9uiKsEQPWE",
+      "title": "Nuestra CARTERA de INVERSIÓN en ABRIL | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=Z9uiKsEQPWE"
+    },
+    {
+      "video_id": "aFYOC3YNR5E",
+      "title": "¿GANANCIAS o PÉRDIDAS en ENERO? 📉📈 Nuestra CARTERA al DESCUBIERTO! | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=aFYOC3YNR5E"
+    },
+    {
+      "video_id": "banPhgfEpGU",
+      "title": "Nuestra Cartera de INVERSIÓN en Abril | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=banPhgfEpGU"
+    },
+    {
+      "video_id": "bkJFLoxA2qg",
+      "title": "CARTERA y Resumen Del Mes  | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=bkJFLoxA2qg"
+    },
+    {
+      "video_id": "eVkwOU9zX4w",
+      "title": "Nuestra cartera de INVERSIÓN en ENERO | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=eVkwOU9zX4w"
+    },
+    {
+      "video_id": "etWzK0Bb7qQ",
+      "title": "Nuestra Cartera de INVERSIÓN en Marzo | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=etWzK0Bb7qQ"
+    },
+    {
+      "video_id": "i5EfibJeKz8",
+      "title": "Nuestra Cartera de INVERSIÓN en Marzo | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=i5EfibJeKz8"
+    }
+  ],
+  "methodology_note": "Corpus screening only. No trading rule is considered canonical until semantic review distinguishes host process from guest opinions and recurring themes."
+}
