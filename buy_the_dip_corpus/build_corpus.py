@@ -121,21 +121,75 @@ def build_manifest(config):
     return rows
 
 
-def _download_captions(channel_url, temp_dir, languages):
+def _diagnostic_lines(stderr):
+    markers = ("error", "warning", "sign in", "429", "403", "blocked", "subtitle", "caption")
+    out = []
+    for raw in str(stderr or "").splitlines():
+        if any(marker in raw.lower() for marker in markers):
+            line = re.sub(r"https?://\\S+", "<url>", raw.strip())
+            if line:
+                out.append(line[:500])
+    return out[-12:]
+
+
+def _caption_command(url, temp_dir, langs, *, sleep_seconds=1.0, no_playlist=False, timeout=3600):
+    cmd = [
+        "yt-dlp", "--skip-download", "--write-subs", "--write-auto-subs",
+        "--sub-langs", langs, "--sub-format", "vtt", "--ignore-errors",
+        "--sleep-requests", str(max(0.0, float(sleep_seconds))),
+        "--retries", "2",
+        "-o", str(Path(temp_dir) / "%(id)s.%(language)s.%(ext)s"),
+    ]
+    if no_playlist:
+        cmd.append("--no-playlist")
+    cmd.append(url)
+    try:
+        proc = subprocess.run(cmd, text=True, capture_output=True, timeout=timeout)
+        return {
+            "returncode": int(proc.returncode),
+            "timed_out": False,
+            "messages": _diagnostic_lines(proc.stderr),
+        }
+    except subprocess.TimeoutExpired as exc:
+        return {
+            "returncode": None,
+            "timed_out": True,
+            "messages": _diagnostic_lines(getattr(exc, "stderr", "")),
+        }
+
+
+def _download_captions(channel_url, temp_dir, languages, *, canary_video_id=None, sleep_seconds=1.0):
     langs = ",".join(dict.fromkeys(languages + ["es.*", "en.*"]))
+    diagnostics = {
+        "status": "unknown",
+        "canary_video_id": canary_video_id,
+        "canary_ok": None,
+        "surfaces": [],
+    }
+
+    if canary_video_id:
+        canary_url = "https://www.youtube.com/watch?v=" + canary_video_id
+        canary = _caption_command(
+            canary_url, temp_dir, langs,
+            sleep_seconds=sleep_seconds, no_playlist=True, timeout=300,
+        )
+        files = [p for p in Path(temp_dir).glob(canary_video_id + ".*.vtt") if p.stat().st_size > 0]
+        diagnostics["canary_ok"] = bool(files)
+        diagnostics["canary"] = canary
+        if not files:
+            diagnostics["status"] = "blocked_or_unavailable"
+            return diagnostics
+
     for suffix in SURFACES.values():
         url = channel_url.rstrip("/") + "/" + suffix
-        cmd = [
-            "yt-dlp", "--skip-download", "--write-subs", "--write-auto-subs",
-            "--sub-langs", langs, "--sub-format", "vtt", "--ignore-errors",
-            "--no-warnings", "--sleep-requests", "0.15",
-            "-o", str(Path(temp_dir) / "%(id)s.%(language)s.%(ext)s"), url
-        ]
-        # A surface failure should not destroy the full manifest; coverage is explicit.
-        try:
-            subprocess.run(cmd, text=True, capture_output=True, timeout=3600)
-        except subprocess.TimeoutExpired:
-            pass
+        result = _caption_command(
+            url, temp_dir, langs,
+            sleep_seconds=sleep_seconds, no_playlist=False, timeout=3600,
+        )
+        diagnostics["surfaces"].append({"surface": suffix, **result})
+
+    diagnostics["status"] = "reachable"
+    return diagnostics
 
 
 def _parse_vtt(path):
@@ -287,9 +341,11 @@ def build(config, output):
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="buy-the-dip-captions-") as temp_dir:
-        _download_captions(
+        caption_transport = _download_captions(
             config["channel_url"], temp_dir,
-            list(config.get("preferred_caption_languages") or ["es", "en"])
+            list(config.get("preferred_caption_languages") or ["es", "en"]),
+            canary_video_id=config.get("caption_canary_video_id"),
+            sleep_seconds=float(config.get("caption_transport_retry_seconds", 1.0)),
         )
         rows, texts = [], []
         for item in manifest:
@@ -340,6 +396,7 @@ def build(config, output):
             "missing": len(rows) - len(transcript_rows),
             "pct": round(100 * len(transcript_rows) / len(rows), 2) if rows else 0,
         },
+        "caption_transport": caption_transport,
         "by_category": dict(by_category),
         "lexicon_aggregate": aggregate,
         "topics": topics,
@@ -376,6 +433,38 @@ def build(config, output):
         json.dumps({"schema_version": 1, "videos": rows}, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8"
     )
+    priority = {
+        "methodology": 0,
+        "portfolio_update": 1,
+        "sector_theme": 2,
+        "company_or_theme": 3,
+        "macro_market": 4,
+        "guest_interview": 5,
+        "short": 6,
+    }
+    semantic_queue = [
+        {
+            "video_id": row["video_id"],
+            "title": row["title"],
+            "url": row["url"],
+            "category": row["category"],
+            "guest_likely": row["guest_likely"],
+            "caption_available": row["caption_available"],
+            "methodology_relevance_score": row["methodology_relevance_score"],
+        }
+        for row in sorted(
+            rows,
+            key=lambda row: (
+                priority.get(row["category"], 99),
+                -row["methodology_relevance_score"],
+                row["video_id"],
+            ),
+        )
+    ]
+    Path(output / "semantic_queue.json").write_text(
+        json.dumps({"schema_version": 1, "videos": semantic_queue}, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8"
+    )
     Path(output / "corpus_report.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
@@ -385,6 +474,7 @@ def build(config, output):
         f"Fuente canónica: {config['channel_url']}", "",
         f"- Vídeos inventariados: **{len(rows)}**",
         f"- Captions utilizables: **{len(transcript_rows)}** ({report['caption_coverage']['pct']:.2f} %)",
+        f"- Transporte captions: **{caption_transport['status']}** · canary={caption_transport.get('canary_ok')}",
         f"- Formatos: **{dict(by_format)}**",
         f"- Categorías derivadas: **{dict(by_category)}**", "",
         "## Señales recurrentes", "",
