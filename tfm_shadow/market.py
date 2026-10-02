@@ -28,6 +28,31 @@ def eligible_session(now=None):
     return session.date().isoformat()
 
 
+def _valid_price(value):
+    return isinstance(value, (int, float)) and math.isfinite(value) and value > 0
+
+
+def intraday_close_fallback(rows, asof, daily_open):
+    """Return the regular-session close from hourly bars only with full Madrid coverage."""
+    if not _valid_price(daily_open):
+        return None
+    session = sorted(
+        (row for row in rows if row.get("date") == asof),
+        key=lambda row: (row.get("hour", -1), row.get("minute", -1))
+    )
+    if len(session) < 8:
+        return None
+    hours = [row.get("hour") for row in session if isinstance(row.get("hour"), int)]
+    if not hours or min(hours) > 9 or max(hours) < 17:
+        return None
+    if any(not _valid_price(row.get("open")) or not _valid_price(row.get("close")) for row in session):
+        return None
+    first_open = float(session[0]["open"])
+    if abs(first_open / float(daily_open) - 1.0) > 0.01:
+        return None
+    return float(session[-1]["close"])
+
+
 def current_session_issues(raw_panel, asof, expected_tickers=None):
     """Return assets whose current-session bar is absent or unusable, without fabricating prices."""
     tickers = list(expected_tickers or raw_panel)
@@ -38,8 +63,7 @@ def current_session_issues(raw_panel, asof, expected_tickers=None):
         if bar is None:
             missing.append(ticker)
             continue
-        valid = all(isinstance(bar.get(field), (int, float)) and math.isfinite(bar[field]) and bar[field] > 0
-                    for field in ("open", "close"))
+        valid = all(_valid_price(bar.get(field)) for field in ("open", "close"))
         if not valid:
             invalid.append(ticker)
     return missing, invalid
@@ -52,8 +76,7 @@ def contiguous_complete_panel(raw_panel, expected_dates, asof, minimum=130):
     dates = [day for day in expected_dates if first <= day <= asof]
     complete = []
     for day in dates:
-        valid = all(day in rows and all(isinstance(rows[day][field], (int, float)) and
-                                       math.isfinite(rows[day][field]) and rows[day][field] > 0
+        valid = all(day in rows and all(_valid_price(rows[day].get(field))
                                        for field in ("open", "close"))
                     for rows in by_ticker.values())
         complete.append(valid)
@@ -87,14 +110,31 @@ def live_panel(config, now=None):
     def download_one(ticker):
         instrument = yf.Ticker(ticker)
         data = instrument.history(period="3y", interval="1d", auto_adjust=False,
-                                  actions=True, repair=False, raise_errors=True)
+                                  actions=True, repair=False, raise_errors=True, keepna=True)
         if data is None or data.empty:
             raise ValueError("Sin datos")
         if instrument.get_history_metadata().get("currency") != "EUR":
             raise ValueError("Divisa distinta de EUR o ausente")
-        return [{"date": index.date().isoformat(), "open": float(row["Open"]),
+        bars = [{"date": index.date().isoformat(), "open": float(row["Open"]),
                  "close": float(row["Close"])}
                 for index, row in data.iterrows() if index.date().isoformat() <= today]
+
+        target = next((bar for bar in bars if bar["date"] == today), None)
+        if target and _valid_price(target.get("open")) and not _valid_price(target.get("close")):
+            hourly = instrument.history(period="5d", interval="1h", auto_adjust=False,
+                                        actions=False, repair=False, prepost=False, keepna=True)
+            hourly_rows = [
+                {"date": index.date().isoformat(), "hour": int(index.hour), "minute": int(index.minute),
+                 "open": float(row["Open"]), "close": float(row["Close"])}
+                for index, row in hourly.iterrows()
+                if index.date().isoformat() == today
+            ] if hourly is not None and not hourly.empty else []
+            recovered = intraday_close_fallback(hourly_rows, today, target["open"])
+            if recovered is not None:
+                target["close"] = recovered
+                print(f"TFM fallback intradía {ticker} {today}: close={recovered:.6f}")
+
+        return bars
 
     def refresh(tickers):
         for ticker in tickers:
