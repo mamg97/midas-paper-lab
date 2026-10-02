@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from forecast import make_samples, validate_panel
-from market import eligible_session, contiguous_complete_panel, current_session_issues
+from market import eligible_session, contiguous_complete_panel, current_session_issues, intraday_close_fallback
 from run import evaluate, run
 from paper import advance
 
@@ -52,6 +52,27 @@ class ForecastContractTests(unittest.TestCase):
         missing, invalid = current_session_issues(data, asof, ["AAA.MC", "BBB.MC", "CCC.MC"])
         self.assertEqual(missing, ["BBB.MC", "CCC.MC"])
         self.assertEqual(invalid, ["AAA.MC"])
+
+    def test_intraday_close_fallback_requires_full_regular_session_and_matching_open(self):
+        asof = "2026-10-01"
+        rows = [
+            {"date": asof, "hour": hour, "minute": 0,
+             "open": 12.16 if hour == 9 else 12.0, "close": 11.85 + (hour - 17) * 0.01}
+            for hour in range(9, 18)
+        ]
+        self.assertAlmostEqual(intraday_close_fallback(rows, asof, 12.16), rows[-1]["close"])
+        self.assertIsNone(intraday_close_fallback(rows[:-1], asof, 12.16))
+        self.assertIsNone(intraday_close_fallback(rows, asof, 11.50))
+        bad = [dict(row) for row in rows]
+        bad[-1]["close"] = float("nan")
+        self.assertIsNone(intraday_close_fallback(bad, asof, 12.16))
+
+    def test_intraday_close_fallback_never_repairs_another_session(self):
+        rows = [
+            {"date": "2026-09-30", "hour": hour, "minute": 0, "open": 10.0, "close": 10.1}
+            for hour in range(9, 18)
+        ]
+        self.assertIsNone(intraday_close_fallback(rows, "2026-10-01", 10.0))
 
     def test_delayed_workflow_stays_before_next_market_open(self):
         madrid = timezone(timedelta(hours=2))
