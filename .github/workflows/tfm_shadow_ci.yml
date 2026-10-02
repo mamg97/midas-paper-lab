@@ -44,6 +44,15 @@ jobs:
                              actions=False, repair=False, progress=False, threads=False, keepna=True)
           print("BULK")
           print(bulk.tail(3).to_string())
+          repaired = yf.download(["SAN.MC","BBVA.MC"], period="10d", interval="1d", auto_adjust=False,
+                                 actions=False, repair=True, progress=False, threads=False, keepna=True)
+          print("REPAIRED")
+          print(repaired.tail(3).to_string())
+          for ticker in ["SAN.MC", "BBVA.MC"]:
+              hourly = yf.Ticker(ticker).history(period="5d", interval="1h", auto_adjust=False,
+                                                 actions=False, repair=False, prepost=False, keepna=True)
+              print("HOURLY", ticker)
+              print(hourly[["Open","High","Low","Close","Volume"]].tail(12).to_string())
           PY
       - name: Compile TFM paper engine
         run: python -m py_compile tfm_shadow/*.py
