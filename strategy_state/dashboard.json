@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-01T23:17:14.059252+00:00",
+  "generated_at_utc": "2026-10-02T02:21:51.114216+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
@@ -9,7 +9,7 @@
     "weekly_ml_with_diary": 0,
     "tfg_with_diary": 0,
     "capital_cycle_with_diary": 1,
-    "buy_the_dip_with_diary": 0,
+    "buy_the_dip_with_diary": 1,
     "historical_pending": 17
   },
   "tracks": [
@@ -540,19 +540,24 @@
       "label": "Buy The Dip corpus v0 · deep value + special situations",
       "provenance": "MIDAS 2026 · Buy The Dip corpus v0 · deep value + special situations",
       "group": "buy_the_dip_demo",
-      "status": "programada_sin_diario",
-      "first_session": null,
-      "last_session": null,
+      "status": "demo_con_diario",
+      "first_session": "2026-10-01",
+      "last_session": "2026-10-01",
       "initial_capital": 100000.0,
-      "last_equity": null,
-      "return_pct": null,
+      "last_equity": 100000.0,
+      "return_pct": 0.0,
       "day_return_pct": null,
       "currency": "USD",
-      "equity_history": [],
+      "equity_history": [
+        {
+          "date": "2026-10-01",
+          "nav": 100000.0
+        }
+      ],
       "note": "Buy The Dip corpus v0: deep value + special situations; valoración, calidad, capital allocation, dislocación y catalizadores; decisión mensual y fills next-open.",
-      "risk_observations": 0,
+      "risk_observations": 1,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": null,
+      "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
     {
