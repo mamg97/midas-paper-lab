@@ -1,0 +1,104 @@
+{
+  "config_hash": "d4399f019c25b16424a2f809a056b02adb63b641fda633d575a39a32f7b4be17",
+  "currency": "EUR",
+  "execution": {
+    "fractional_shares": true,
+    "min_notional": 10.0,
+    "share_precision": 6
+  },
+  "first_session": "2026-10-02",
+  "forecast_hash": "654bbab18387e48698650f455feb637450f8151fab36babb69c6a436300059e0",
+  "last_session": "2026-10-02",
+  "missed_decision_sessions": [],
+  "models": {
+    "arima": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [],
+      "trades": [],
+      "unfilled": []
+    },
+    "lgbm": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [],
+      "trades": [],
+      "unfilled": []
+    },
+    "lstm": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [],
+      "trades": [],
+      "unfilled": []
+    },
+    "mlp": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [
+        {
+          "predicted_return_pct": 2.477277476812766,
+          "signal_date": "2026-10-02",
+          "ticker": "ANA.MC"
+        },
+        {
+          "predicted_return_pct": 1.4525579129208663,
+          "signal_date": "2026-10-02",
+          "ticker": "ANE.MC"
+        },
+        {
+          "predicted_return_pct": 1.4254669682253946,
+          "signal_date": "2026-10-02",
+          "ticker": "TEF.MC"
+        },
+        {
+          "predicted_return_pct": 0.8826807013182584,
+          "signal_date": "2026-10-02",
+          "ticker": "AMS.MC"
+        },
+        {
+          "predicted_return_pct": 0.8513209871259888,
+          "signal_date": "2026-10-02",
+          "ticker": "MAP.MC"
+        },
+        {
+          "predicted_return_pct": 0.5344699580716944,
+          "signal_date": "2026-10-02",
+          "ticker": "GRF.MC"
+        },
+        {
+          "predicted_return_pct": 0.37372904222000974,
+          "signal_date": "2026-10-02",
+          "ticker": "ELE.MC"
+        }
+      ],
+      "trades": [],
+      "unfilled": []
+    }
+  },
+  "schema_version": 1
+}

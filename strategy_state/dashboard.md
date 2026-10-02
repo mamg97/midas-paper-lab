@@ -1,6 +1,6 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-10-02T03:47:39.030222+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-10-02T23:06:41.808379+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
@@ -30,10 +30,10 @@ La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. L
 | Genético original S&P 500 | Agente genético S&P 500 original · 2026 | sin_diario_disponible | — | — | — | — | — | — | — |
 | TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo | TFG 2021 · MIDAS en R | sin_ejecucion_comparable | — | — | — | — | — | — | — |
 | MIDAS R cripto | MIDAS en R · experimento cripto | sin_ejecucion_comparable | — | — | — | — | — | — | — |
-| TFM: LightGBM (versión corregida 2026) | TFM · modelo reimplementado en 2026 | programada_sin_diario | — | — | — | — | — | — | — |
-| TFM: red MLP (versión corregida 2026) | TFM · modelo reimplementado en 2026 | programada_sin_diario | — | — | — | — | — | — | — |
-| TFM: red LSTM (versión corregida 2026) | TFM · modelo reimplementado en 2026 | programada_sin_diario | — | — | — | — | — | — | — |
-| TFM: ARIMA (versión corregida 2026) | TFM · modelo reimplementado en 2026 | programada_sin_diario | — | — | — | — | — | — | — |
+| TFM: LightGBM (versión corregida 2026) | TFM · modelo reimplementado en 2026 | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
+| TFM: red MLP (versión corregida 2026) | TFM · modelo reimplementado en 2026 | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
+| TFM: red LSTM (versión corregida 2026) | TFM · modelo reimplementado en 2026 | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
+| TFM: ARIMA (versión corregida 2026) | TFM · modelo reimplementado en 2026 | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
 | MIDAS Python: LightGBM rentabilidad semanal | MIDAS Python · pipeline LightGBM semanal | sin_ejecucion_comparable | — | — | — | — | — | — | — |
 | MIDAS Python: LightGBM dirección semanal | MIDAS Python · pipeline LightGBM semanal | sin_ejecucion_comparable | — | — | — | — | — | — | — |
 | MIDAS Python: LightGBM precio semanal | MIDAS Python · pipeline LightGBM semanal | sin_ejecucion_comparable | — | — | — | — | — | — | — |
