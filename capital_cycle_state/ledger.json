@@ -1,7 +1,7 @@
 {
   "benchmark_first_close": 762.6300048828125,
-  "benchmark_last_close": 762.6300048828125,
-  "cash": 100000.0,
+  "benchmark_last_close": 763.989990234375,
+  "cash": 5000.000882622999,
   "config_hash": "bc315edf86812951eee7cd9d925332c32a5b8b7160111d4d72cb24fdcf8f7e6d",
   "currency": "USD",
   "equity": [
@@ -11,6 +11,13 @@
       "date": "2026-09-30",
       "nav": 100000.0,
       "positions": 0
+    },
+    {
+      "benchmark_close": 763.989990234375,
+      "cash": 5000.000882622999,
+      "date": "2026-10-01",
+      "nav": 100626.30858269057,
+      "positions": 12
     }
   ],
   "events": [
@@ -20,49 +27,220 @@
       "targets": 12,
       "ticker": null,
       "type": "signal"
+    },
+    {
+      "date": "2026-10-01",
+      "fee": 7.908757715795607,
+      "price": 397.13847244262695,
+      "quantity": 19.914358,
+      "reason": "monthly_rebalance",
+      "side": "buy",
+      "ticker": "ADI",
+      "type": "fill"
+    },
+    {
+      "date": "2026-10-01",
+      "fee": 7.908757883489962,
+      "price": 114.3871668319702,
+      "quantity": 69.140255,
+      "reason": "monthly_rebalance",
+      "side": "buy",
+      "ticker": "CF",
+      "type": "fill"
+    },
+    {
+      "date": "2026-10-01",
+      "fee": 7.908757849527845,
+      "price": 107.16355561065673,
+      "quantity": 73.800816,
+      "reason": "monthly_rebalance",
+      "side": "buy",
+      "ticker": "EBAY",
+      "type": "fill"
+    },
+    {
+      "date": "2026-10-01",
+      "fee": 7.908757887940413,
+      "price": 138.05900049591062,
+      "quantity": 57.285348,
+      "reason": "monthly_rebalance",
+      "side": "buy",
+      "ticker": "EOG",
+      "type": "fill"
+    },
+    {
+      "date": "2026-10-01",
+      "fee": 7.908757873951962,
+      "price": 124.11202805328368,
+      "quantity": 63.722735,
+      "reason": "monthly_rebalance",
+      "side": "buy",
+      "ticker": "MHK",
+      "type": "fill"
+    },
+    {
+      "date": "2026-10-01",
+      "fee": 7.908757817753788,
+      "price": 114.86740255737304,
+      "quantity": 68.851194,
+      "reason": "monthly_rebalance",
+      "side": "buy",
+      "ticker": "NEM",
+      "type": "fill"
+    },
+    {
+      "date": "2026-10-01",
+      "fee": 7.9087578339208635,
+      "price": 76.59827755737304,
+      "quantity": 103.249813,
+      "reason": "monthly_rebalance",
+      "side": "buy",
+      "ticker": "ON",
+      "type": "fill"
+    },
+    {
+      "date": "2026-10-01",
+      "fee": 7.908757873709955,
+      "price": 55.72785076332092,
+      "quantity": 141.917511,
+      "reason": "monthly_rebalance",
+      "side": "buy",
+      "ticker": "OXY",
+      "type": "fill"
+    },
+    {
+      "date": "2026-10-01",
+      "fee": 7.908757784552197,
+      "price": 225.71280610656737,
+      "quantity": 35.03903,
+      "reason": "monthly_rebalance",
+      "side": "buy",
+      "ticker": "PAYC",
+      "type": "fill"
+    },
+    {
+      "date": "2026-10-01",
+      "fee": 7.908757886592634,
+      "price": 99.35965255737304,
+      "quantity": 79.597278,
+      "reason": "monthly_rebalance",
+      "side": "buy",
+      "ticker": "PAYX",
+      "type": "fill"
+    },
+    {
+      "date": "2026-10-01",
+      "fee": 7.90875778632182,
+      "price": 185.27258267211914,
+      "quantity": 42.687146,
+      "reason": "monthly_rebalance",
+      "side": "buy",
+      "ticker": "QCOM",
+      "type": "fill"
+    },
+    {
+      "date": "2026-10-01",
+      "fee": 7.9087578297966035,
+      "price": 86.2531040840149,
+      "quantity": 91.692443,
+      "reason": "monthly_rebalance",
+      "side": "buy",
+      "ticker": "SWKS",
+      "type": "fill"
+    },
+    {
+      "date": "2026-10-01",
+      "reason": "next_open",
+      "signal_date": "2026-09-30",
+      "targets": 12,
+      "ticker": null,
+      "type": "rebalance_filled"
     }
   ],
   "first_session": "2026-09-30",
   "first_signal_session": "2026-09-30",
-  "last_session": "2026-09-30",
+  "last_session": "2026-10-01",
   "last_signal_session": "2026-09-30",
   "market_hashes": {
-    "2026-09-30": "51f8326ab8e0311408d2f438d440aecbd2c4ecb6558ac86c45d43fd83cccbd65"
+    "2026-09-30": "51f8326ab8e0311408d2f438d440aecbd2c4ecb6558ac86c45d43fd83cccbd65",
+    "2026-10-01": "2cf3932208b5fc3c5f795b4532ab7af3b668c7297a3e1d59e16566e0f3de4529"
   },
-  "nav": 100000.0,
-  "pending": {
-    "expected_fill_session": "2026-10-01",
-    "sectors": {
-      "ADI": "Information Technology",
-      "CF": "Materials",
-      "EBAY": "Consumer Discretionary",
-      "EOG": "Energy",
-      "MHK": "Consumer Discretionary",
-      "NEM": "Materials",
-      "ON": "Information Technology",
-      "OXY": "Energy",
-      "PAYC": "Industrials",
-      "PAYX": "Industrials",
-      "QCOM": "Information Technology",
-      "SWKS": "Information Technology"
+  "nav": 100626.30858269057,
+  "pending": null,
+  "positions": {
+    "ADI": {
+      "entry_date": "2026-10-01",
+      "entry_price": 397.13847244262695,
+      "quantity": 19.914358,
+      "sector": "Information Technology"
     },
-    "signal_date": "2026-09-30",
-    "target_weights": {
-      "ADI": 0.07916666666666666,
-      "CF": 0.07916666666666666,
-      "EBAY": 0.07916666666666666,
-      "EOG": 0.07916666666666666,
-      "MHK": 0.07916666666666666,
-      "NEM": 0.07916666666666666,
-      "ON": 0.07916666666666666,
-      "OXY": 0.07916666666666666,
-      "PAYC": 0.07916666666666666,
-      "PAYX": 0.07916666666666666,
-      "QCOM": 0.07916666666666666,
-      "SWKS": 0.07916666666666666
+    "CF": {
+      "entry_date": "2026-10-01",
+      "entry_price": 114.3871668319702,
+      "quantity": 69.140255,
+      "sector": "Materials"
+    },
+    "EBAY": {
+      "entry_date": "2026-10-01",
+      "entry_price": 107.16355561065673,
+      "quantity": 73.800816,
+      "sector": "Consumer Discretionary"
+    },
+    "EOG": {
+      "entry_date": "2026-10-01",
+      "entry_price": 138.05900049591062,
+      "quantity": 57.285348,
+      "sector": "Energy"
+    },
+    "MHK": {
+      "entry_date": "2026-10-01",
+      "entry_price": 124.11202805328368,
+      "quantity": 63.722735,
+      "sector": "Consumer Discretionary"
+    },
+    "NEM": {
+      "entry_date": "2026-10-01",
+      "entry_price": 114.86740255737304,
+      "quantity": 68.851194,
+      "sector": "Materials"
+    },
+    "ON": {
+      "entry_date": "2026-10-01",
+      "entry_price": 76.59827755737304,
+      "quantity": 103.249813,
+      "sector": "Information Technology"
+    },
+    "OXY": {
+      "entry_date": "2026-10-01",
+      "entry_price": 55.72785076332092,
+      "quantity": 141.917511,
+      "sector": "Energy"
+    },
+    "PAYC": {
+      "entry_date": "2026-10-01",
+      "entry_price": 225.71280610656737,
+      "quantity": 35.03903,
+      "sector": "Industrials"
+    },
+    "PAYX": {
+      "entry_date": "2026-10-01",
+      "entry_price": 99.35965255737304,
+      "quantity": 79.597278,
+      "sector": "Industrials"
+    },
+    "QCOM": {
+      "entry_date": "2026-10-01",
+      "entry_price": 185.27258267211914,
+      "quantity": 42.687146,
+      "sector": "Information Technology"
+    },
+    "SWKS": {
+      "entry_date": "2026-10-01",
+      "entry_price": 86.2531040840149,
+      "quantity": 91.692443,
+      "sector": "Information Technology"
     }
   },
-  "positions": {},
   "schema_version": 1,
   "signals": [
     {
