@@ -30,6 +30,21 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libgomp1
           python -m pip install -r tfm_shadow/requirements-live.txt
+      - name: Probe Yahoo Madrid daily bars
+        run: |
+          python - <<'PY'
+          import math
+          import yfinance as yf
+          for ticker in ["SAN.MC", "BBVA.MC"]:
+              t = yf.Ticker(ticker)
+              data = t.history(period="10d", interval="1d", auto_adjust=False, actions=True, repair=False, raise_errors=True, keepna=True)
+              print("TICKER", ticker)
+              print(data[["Open","High","Low","Close","Volume"]].tail(3).to_string())
+          bulk = yf.download(["SAN.MC","BBVA.MC"], period="10d", interval="1d", auto_adjust=False,
+                             actions=False, repair=False, progress=False, threads=False, keepna=True)
+          print("BULK")
+          print(bulk.tail(3).to_string())
+          PY
       - name: Compile TFM paper engine
         run: python -m py_compile tfm_shadow/*.py
       - name: Run TFM chronology and paper tests
