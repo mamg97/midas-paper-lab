@@ -4,9 +4,9 @@ on:
   schedule:
     # 20:23 CET / 21:23 CEST: después del cierre de Madrid.
     - cron: '23 19 * * 1-5'
-    # Segunda oportunidad antes de la apertura de Madrid si el proveedor
-    # todavía no había publicado una sesión completa en el primer intento.
-    - cron: '23 3 * * 2-6'
+    # Segunda oportunidad la misma noche. GitHub suele retrasar los cron varias horas;
+    # programarla a las 23:23 UTC evita que ese retraso la empuje tras la apertura de Madrid.
+    - cron: '23 23 * * 1-5'
   workflow_dispatch:
     inputs:
       preflight_only:
