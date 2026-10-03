@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-02T23:06:41.808379+00:00",
+  "generated_at_utc": "2026-10-03T02:03:54.193595+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
     "legacy_with_diary": 0,
     "tfm_with_diary": 4,
-    "weekly_ml_with_diary": 0,
+    "weekly_ml_with_diary": 9,
     "tfg_with_diary": 0,
     "capital_cycle_with_diary": 1,
     "buy_the_dip_with_diary": 1,
@@ -351,19 +351,24 @@
       "label": "ML semanal · referencia SPY",
       "provenance": "Campaña ML semanal 2026 · referencia SPY",
       "group": "weekly_ml_demo",
-      "status": "programada_sin_diario",
-      "first_session": null,
-      "last_session": null,
+      "status": "demo_con_diario",
+      "first_session": "2026-10-02",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": null,
-      "return_pct": null,
+      "last_equity": 100000.0,
+      "return_pct": 0.0,
       "day_return_pct": null,
       "currency": "USD",
-      "equity_history": [],
+      "equity_history": [
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
+        }
+      ],
       "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
-      "risk_observations": 0,
+      "risk_observations": 1,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": null,
+      "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
     {
@@ -371,19 +376,24 @@
       "label": "ML semanal · referencia RSP",
       "provenance": "Campaña ML semanal 2026 · referencia RSP equiponderada",
       "group": "weekly_ml_demo",
-      "status": "programada_sin_diario",
-      "first_session": null,
-      "last_session": null,
+      "status": "demo_con_diario",
+      "first_session": "2026-10-02",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": null,
-      "return_pct": null,
+      "last_equity": 100000.0,
+      "return_pct": 0.0,
       "day_return_pct": null,
       "currency": "USD",
-      "equity_history": [],
+      "equity_history": [
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
+        }
+      ],
       "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
-      "risk_observations": 0,
+      "risk_observations": 1,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": null,
+      "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
     {
@@ -391,19 +401,24 @@
       "label": "ML semanal · LightGBM rentabilidad",
       "provenance": "MIDAS Python v2 · regresión semanal corregida 2026",
       "group": "weekly_ml_demo",
-      "status": "programada_sin_diario",
-      "first_session": null,
-      "last_session": null,
+      "status": "demo_con_diario",
+      "first_session": "2026-10-02",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": null,
-      "return_pct": null,
+      "last_equity": 100000.0,
+      "return_pct": 0.0,
       "day_return_pct": null,
       "currency": "USD",
-      "equity_history": [],
+      "equity_history": [
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
+        }
+      ],
       "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
-      "risk_observations": 0,
+      "risk_observations": 1,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": null,
+      "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
     {
@@ -411,19 +426,24 @@
       "label": "ML semanal · LightGBM dirección",
       "provenance": "MIDAS Python v2 · clasificación semanal corregida 2026",
       "group": "weekly_ml_demo",
-      "status": "programada_sin_diario",
-      "first_session": null,
-      "last_session": null,
+      "status": "demo_con_diario",
+      "first_session": "2026-10-02",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": null,
-      "return_pct": null,
+      "last_equity": 100000.0,
+      "return_pct": 0.0,
       "day_return_pct": null,
       "currency": "USD",
-      "equity_history": [],
+      "equity_history": [
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
+        }
+      ],
       "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
-      "risk_observations": 0,
+      "risk_observations": 1,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": null,
+      "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
     {
@@ -431,19 +451,24 @@
       "label": "ML semanal · LightGBM ranker",
       "provenance": "MIDAS nuevo 2026 · ranking cross-sectional que sustituye precio absoluto",
       "group": "weekly_ml_demo",
-      "status": "programada_sin_diario",
-      "first_session": null,
-      "last_session": null,
+      "status": "demo_con_diario",
+      "first_session": "2026-10-02",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": null,
-      "return_pct": null,
+      "last_equity": 100000.0,
+      "return_pct": 0.0,
       "day_return_pct": null,
       "currency": "USD",
-      "equity_history": [],
+      "equity_history": [
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
+        }
+      ],
       "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
-      "risk_observations": 0,
+      "risk_observations": 1,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": null,
+      "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
     {
@@ -451,19 +476,24 @@
       "label": "ML semanal · MLP",
       "provenance": "TFM/ML · MLP adaptado al horizonte semanal",
       "group": "weekly_ml_demo",
-      "status": "programada_sin_diario",
-      "first_session": null,
-      "last_session": null,
+      "status": "demo_con_diario",
+      "first_session": "2026-10-02",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": null,
-      "return_pct": null,
+      "last_equity": 100000.0,
+      "return_pct": 0.0,
       "day_return_pct": null,
       "currency": "USD",
-      "equity_history": [],
+      "equity_history": [
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
+        }
+      ],
       "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
-      "risk_observations": 0,
+      "risk_observations": 1,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": null,
+      "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
     {
@@ -471,19 +501,24 @@
       "label": "ML semanal · LSTM",
       "provenance": "TFM/ML · LSTM adaptado al horizonte semanal",
       "group": "weekly_ml_demo",
-      "status": "programada_sin_diario",
-      "first_session": null,
-      "last_session": null,
+      "status": "demo_con_diario",
+      "first_session": "2026-10-02",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": null,
-      "return_pct": null,
+      "last_equity": 100000.0,
+      "return_pct": 0.0,
       "day_return_pct": null,
       "currency": "USD",
-      "equity_history": [],
+      "equity_history": [
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
+        }
+      ],
       "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
-      "risk_observations": 0,
+      "risk_observations": 1,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": null,
+      "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
     {
@@ -491,19 +526,24 @@
       "label": "ML semanal · ARIMA",
       "provenance": "TFM/ML · ARIMA adaptado al horizonte semanal",
       "group": "weekly_ml_demo",
-      "status": "programada_sin_diario",
-      "first_session": null,
-      "last_session": null,
+      "status": "demo_con_diario",
+      "first_session": "2026-10-02",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": null,
-      "return_pct": null,
+      "last_equity": 100000.0,
+      "return_pct": 0.0,
       "day_return_pct": null,
       "currency": "USD",
-      "equity_history": [],
+      "equity_history": [
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
+        }
+      ],
       "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
-      "risk_observations": 0,
+      "risk_observations": 1,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": null,
+      "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
     {
@@ -511,19 +551,24 @@
       "label": "ML semanal · ensemble consenso",
       "provenance": "MIDAS nuevo 2026 · consenso de expertos semanales",
       "group": "weekly_ml_demo",
-      "status": "programada_sin_diario",
-      "first_session": null,
-      "last_session": null,
+      "status": "demo_con_diario",
+      "first_session": "2026-10-02",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": null,
-      "return_pct": null,
+      "last_equity": 100000.0,
+      "return_pct": 0.0,
       "day_return_pct": null,
       "currency": "USD",
-      "equity_history": [],
+      "equity_history": [
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
+        }
+      ],
       "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
-      "risk_observations": 0,
+      "risk_observations": 1,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": null,
+      "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
     },
     {

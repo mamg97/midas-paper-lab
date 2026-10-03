@@ -1,0 +1,460 @@
+{
+  "config_hash": "94b54389771fe95e6c0bde98d982522cfa83166bbaabd92b9b706346f83dd890",
+  "currency": "USD",
+  "execution": {
+    "fractional_shares": true,
+    "min_notional": 10.0,
+    "share_precision": 6
+  },
+  "first_session": "2026-10-02",
+  "forecast_hash": "28859d356a6c59467a6e64c75f75e07bd91fafab64d3af50da9ba3d9ccb8ada9",
+  "last_session": "2026-10-02",
+  "missed_signal_weeks": [],
+  "schema_version": 1,
+  "strategies": {
+    "arima_return": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [
+        {
+          "predicted_return": 0.05777606433103642,
+          "score": 0.05777606433103642,
+          "signal_date": "2026-10-02",
+          "ticker": "MRNA"
+        },
+        {
+          "predicted_return": 0.05619170401312233,
+          "score": 0.05619170401312233,
+          "signal_date": "2026-10-02",
+          "ticker": "DELL"
+        },
+        {
+          "predicted_return": 0.044762863272670074,
+          "score": 0.044762863272670074,
+          "signal_date": "2026-10-02",
+          "ticker": "MU"
+        },
+        {
+          "predicted_return": 0.043911139446711586,
+          "score": 0.043911139446711586,
+          "signal_date": "2026-10-02",
+          "ticker": "INCY"
+        },
+        {
+          "predicted_return": 0.04258167597063758,
+          "score": 0.04258167597063758,
+          "signal_date": "2026-10-02",
+          "ticker": "NTAP"
+        },
+        {
+          "predicted_return": 0.04116745907248356,
+          "score": 0.04116745907248356,
+          "signal_date": "2026-10-02",
+          "ticker": "CCL"
+        },
+        {
+          "predicted_return": 0.04103587596436077,
+          "score": 0.04103587596436077,
+          "signal_date": "2026-10-02",
+          "ticker": "AMD"
+        },
+        {
+          "predicted_return": 0.04088823785045886,
+          "score": 0.04088823785045886,
+          "signal_date": "2026-10-02",
+          "ticker": "HPE"
+        },
+        {
+          "predicted_return": 0.039661819726427114,
+          "score": 0.039661819726427114,
+          "signal_date": "2026-10-02",
+          "ticker": "WDC"
+        },
+        {
+          "predicted_return": 0.03856442233209756,
+          "score": 0.03856442233209756,
+          "signal_date": "2026-10-02",
+          "ticker": "DDOG"
+        }
+      ],
+      "trades": [],
+      "unfilled": []
+    },
+    "benchmark_rsp": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [
+        {
+          "score": 1.0,
+          "signal_date": "2026-10-02",
+          "ticker": "RSP"
+        }
+      ],
+      "trades": [],
+      "unfilled": []
+    },
+    "benchmark_spy": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [
+        {
+          "score": 1.0,
+          "signal_date": "2026-10-02",
+          "ticker": "SPY"
+        }
+      ],
+      "trades": [],
+      "unfilled": []
+    },
+    "ensemble_consensus": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [
+        {
+          "positive_votes": 5,
+          "predicted_return": 0.0098453008660235,
+          "rank_dispersion": 0.17481644843317154,
+          "score": 0.875,
+          "signal_date": "2026-10-02",
+          "ticker": "AMD"
+        },
+        {
+          "positive_votes": 4,
+          "predicted_return": 0.010093419020869247,
+          "rank_dispersion": 0.17075981748288144,
+          "score": 0.8676870748299318,
+          "signal_date": "2026-10-02",
+          "ticker": "INTC"
+        },
+        {
+          "positive_votes": 4,
+          "predicted_return": 0.006974129653531075,
+          "rank_dispersion": 0.1687469951810057,
+          "score": 0.8423469387755101,
+          "signal_date": "2026-10-02",
+          "ticker": "UAL"
+        },
+        {
+          "positive_votes": 4,
+          "predicted_return": 0.00786433550115483,
+          "rank_dispersion": 0.17457273824010083,
+          "score": 0.8273809523809522,
+          "signal_date": "2026-10-02",
+          "ticker": "ON"
+        },
+        {
+          "positive_votes": 4,
+          "predicted_return": 0.03215432432403247,
+          "rank_dispersion": 0.21708282687256902,
+          "score": 0.8243197278911564,
+          "signal_date": "2026-10-02",
+          "ticker": "MRNA"
+        },
+        {
+          "positive_votes": 4,
+          "predicted_return": 0.0158104629224637,
+          "rank_dispersion": 0.22842288712817005,
+          "score": 0.8090136054421769,
+          "signal_date": "2026-10-02",
+          "ticker": "QCOM"
+        },
+        {
+          "positive_votes": 4,
+          "predicted_return": 0.0072179237881687475,
+          "rank_dispersion": 0.14278150329891548,
+          "score": 0.7984693877551021,
+          "signal_date": "2026-10-02",
+          "ticker": "CDNS"
+        },
+        {
+          "positive_votes": 4,
+          "predicted_return": 0.005753622445211969,
+          "rank_dispersion": 0.24771930438428713,
+          "score": 0.7957482993197279,
+          "signal_date": "2026-10-02",
+          "ticker": "SMCI"
+        },
+        {
+          "positive_votes": 4,
+          "predicted_return": 0.007114748279687739,
+          "rank_dispersion": 0.15915359983957192,
+          "score": 0.7886054421768707,
+          "signal_date": "2026-10-02",
+          "ticker": "MCHP"
+        },
+        {
+          "positive_votes": 4,
+          "predicted_return": 0.007126786395235083,
+          "rank_dispersion": 0.17527315175711614,
+          "score": 0.7777210884353742,
+          "signal_date": "2026-10-02",
+          "ticker": "SNPS"
+        }
+      ],
+      "trades": [],
+      "unfilled": []
+    },
+    "lgbm_direction": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [],
+      "trades": [],
+      "unfilled": []
+    },
+    "lgbm_ranker": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [
+        {
+          "score": 0.08795764761456161,
+          "signal_date": "2026-10-02",
+          "ticker": "APA"
+        },
+        {
+          "score": 0.08146386560570686,
+          "signal_date": "2026-10-02",
+          "ticker": "DDOG"
+        },
+        {
+          "score": 0.08146386560570686,
+          "signal_date": "2026-10-02",
+          "ticker": "HPE"
+        },
+        {
+          "score": 0.08146386560570686,
+          "signal_date": "2026-10-02",
+          "ticker": "ON"
+        },
+        {
+          "score": 0.0805227936121553,
+          "signal_date": "2026-10-02",
+          "ticker": "AMD"
+        },
+        {
+          "score": 0.0805227936121553,
+          "signal_date": "2026-10-02",
+          "ticker": "CRWD"
+        },
+        {
+          "score": 0.0805227936121553,
+          "signal_date": "2026-10-02",
+          "ticker": "MPWR"
+        },
+        {
+          "score": 0.07686306691319295,
+          "signal_date": "2026-10-02",
+          "ticker": "SNPS"
+        },
+        {
+          "score": 0.0766005861125621,
+          "signal_date": "2026-10-02",
+          "ticker": "INTC"
+        },
+        {
+          "score": 0.0766005861125621,
+          "signal_date": "2026-10-02",
+          "ticker": "SWKS"
+        }
+      ],
+      "trades": [],
+      "unfilled": []
+    },
+    "lgbm_return": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [],
+      "trades": [],
+      "unfilled": []
+    },
+    "lstm_return": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [
+        {
+          "predicted_return": 0.013725976459681988,
+          "score": 0.013725976459681988,
+          "signal_date": "2026-10-02",
+          "ticker": "ENPH"
+        },
+        {
+          "predicted_return": 0.010964992456138134,
+          "score": 0.010964992456138134,
+          "signal_date": "2026-10-02",
+          "ticker": "QCOM"
+        },
+        {
+          "predicted_return": 0.01034558191895485,
+          "score": 0.01034558191895485,
+          "signal_date": "2026-10-02",
+          "ticker": "MGM"
+        },
+        {
+          "predicted_return": 0.010343305766582489,
+          "score": 0.010343305766582489,
+          "signal_date": "2026-10-02",
+          "ticker": "FICO"
+        },
+        {
+          "predicted_return": 0.010275277309119701,
+          "score": 0.010275277309119701,
+          "signal_date": "2026-10-02",
+          "ticker": "APTV"
+        },
+        {
+          "predicted_return": 0.010156387463212013,
+          "score": 0.010156387463212013,
+          "signal_date": "2026-10-02",
+          "ticker": "SMCI"
+        },
+        {
+          "predicted_return": 0.009409823454916477,
+          "score": 0.009409823454916477,
+          "signal_date": "2026-10-02",
+          "ticker": "FSLR"
+        },
+        {
+          "predicted_return": 0.008748319931328297,
+          "score": 0.008748319931328297,
+          "signal_date": "2026-10-02",
+          "ticker": "AKAM"
+        },
+        {
+          "predicted_return": 0.008430023677647114,
+          "score": 0.008430023677647114,
+          "signal_date": "2026-10-02",
+          "ticker": "ON"
+        },
+        {
+          "predicted_return": 0.008162805810570717,
+          "score": 0.008162805810570717,
+          "signal_date": "2026-10-02",
+          "ticker": "ORCL"
+        }
+      ],
+      "trades": [],
+      "unfilled": []
+    },
+    "mlp_return": {
+      "equity": [
+        {
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
+        }
+      ],
+      "nav": 100000.0,
+      "pending": [
+        {
+          "predicted_return": 0.1080236614860113,
+          "score": 0.1080236614860113,
+          "signal_date": "2026-10-02",
+          "ticker": "INTC"
+        },
+        {
+          "predicted_return": 0.09959879192018588,
+          "score": 0.09959879192018588,
+          "signal_date": "2026-10-02",
+          "ticker": "QCOM"
+        },
+        {
+          "predicted_return": 0.08037615541684968,
+          "score": 0.08037615541684968,
+          "signal_date": "2026-10-02",
+          "ticker": "MRNA"
+        },
+        {
+          "predicted_return": 0.05192512515047489,
+          "score": 0.05192512515047489,
+          "signal_date": "2026-10-02",
+          "ticker": "PAYC"
+        },
+        {
+          "predicted_return": 0.04754737252388889,
+          "score": 0.04754737252388889,
+          "signal_date": "2026-10-02",
+          "ticker": "SWKS"
+        },
+        {
+          "predicted_return": 0.04715692592504693,
+          "score": 0.04715692592504693,
+          "signal_date": "2026-10-02",
+          "ticker": "ZBRA"
+        },
+        {
+          "predicted_return": 0.04226608540745396,
+          "score": 0.04226608540745396,
+          "signal_date": "2026-10-02",
+          "ticker": "IT"
+        },
+        {
+          "predicted_return": 0.042074522926212776,
+          "score": 0.042074522926212776,
+          "signal_date": "2026-10-02",
+          "ticker": "ADBE"
+        },
+        {
+          "predicted_return": 0.03958836398194222,
+          "score": 0.03958836398194222,
+          "signal_date": "2026-10-02",
+          "ticker": "JBL"
+        },
+        {
+          "predicted_return": 0.034385443377821893,
+          "score": 0.034385443377821893,
+          "signal_date": "2026-10-02",
+          "ticker": "UAL"
+        }
+      ],
+      "trades": [],
+      "unfilled": []
+    }
+  }
+}

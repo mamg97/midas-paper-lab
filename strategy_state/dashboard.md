@@ -1,6 +1,6 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-10-02T23:06:41.808379+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-10-03T02:03:54.193595+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
@@ -15,15 +15,15 @@ La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. L
 | Bollinger ruptura, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 2026-09-28 | 2026-10-01 | 0.00 % | 0.00 % | — | 0.00 % | — |
 | Turtle 20/10 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 2026-09-28 | 2026-10-01 | 0.00 % | 0.00 % | — | 0.00 % | — |
 | Turtle 55/20 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 2026-09-28 | 2026-10-01 | 0.00 % | 0.00 % | — | 0.00 % | — |
-| ML semanal · referencia SPY | Campaña ML semanal 2026 · referencia SPY | programada_sin_diario | — | — | — | — | — | — | — |
-| ML semanal · referencia RSP | Campaña ML semanal 2026 · referencia RSP equiponderada | programada_sin_diario | — | — | — | — | — | — | — |
-| ML semanal · LightGBM rentabilidad | MIDAS Python v2 · regresión semanal corregida 2026 | programada_sin_diario | — | — | — | — | — | — | — |
-| ML semanal · LightGBM dirección | MIDAS Python v2 · clasificación semanal corregida 2026 | programada_sin_diario | — | — | — | — | — | — | — |
-| ML semanal · LightGBM ranker | MIDAS nuevo 2026 · ranking cross-sectional que sustituye precio absoluto | programada_sin_diario | — | — | — | — | — | — | — |
-| ML semanal · MLP | TFM/ML · MLP adaptado al horizonte semanal | programada_sin_diario | — | — | — | — | — | — | — |
-| ML semanal · LSTM | TFM/ML · LSTM adaptado al horizonte semanal | programada_sin_diario | — | — | — | — | — | — | — |
-| ML semanal · ARIMA | TFM/ML · ARIMA adaptado al horizonte semanal | programada_sin_diario | — | — | — | — | — | — | — |
-| ML semanal · ensemble consenso | MIDAS nuevo 2026 · consenso de expertos semanales | programada_sin_diario | — | — | — | — | — | — | — |
+| ML semanal · referencia SPY | Campaña ML semanal 2026 · referencia SPY | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · referencia RSP | Campaña ML semanal 2026 · referencia RSP equiponderada | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · LightGBM rentabilidad | MIDAS Python v2 · regresión semanal corregida 2026 | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · LightGBM dirección | MIDAS Python v2 · clasificación semanal corregida 2026 | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · LightGBM ranker | MIDAS nuevo 2026 · ranking cross-sectional que sustituye precio absoluto | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · MLP | TFM/ML · MLP adaptado al horizonte semanal | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · LSTM | TFM/ML · LSTM adaptado al horizonte semanal | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · ARIMA | TFM/ML · ARIMA adaptado al horizonte semanal | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · ensemble consenso | MIDAS nuevo 2026 · consenso de expertos semanales | demo_con_diario | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
 | TFG corregido 2026 · técnico + AHP + MAD | TFG 2021 · arquitectura portada y corregida para paper 2026 | programada_sin_diario | — | — | — | — | — | — | — |
 | Capital Cycle Inflection · underinvestment + calidad + giro | MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle | demo_con_diario | 2026-09-30 | 2026-10-01 | 0.63 % | 0.63 % | — | 0.00 % | — |
 | Buy The Dip corpus v0 · deep value + special situations | MIDAS 2026 · Buy The Dip corpus v0 · deep value + special situations | demo_con_diario | 2026-10-01 | 2026-10-01 | — | 0.00 % | — | 0.00 % | — |
