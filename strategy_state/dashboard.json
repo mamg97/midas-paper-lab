@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-03T02:07:14.133790+00:00",
+  "generated_at_utc": "2026-10-03T02:16:47.268620+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
@@ -20,11 +20,11 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-01",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": 99506.35181324293,
-      "return_pct": -0.493648,
-      "day_return_pct": 0.169353,
+      "last_equity": 100205.2656757989,
+      "return_pct": 0.205266,
+      "day_return_pct": 0.702381,
       "currency": "USD",
       "equity_history": [
         {
@@ -42,10 +42,14 @@
         {
           "date": "2026-10-01",
           "nav": 99506.35181324293
+        },
+        {
+          "date": "2026-10-02",
+          "nav": 100205.2656757989
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "risk_observations": 4,
+      "risk_observations": 5,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": -0.66188,
       "sharpe_0rf": null
@@ -57,11 +61,11 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-01",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": 99404.3795320571,
-      "return_pct": -0.59562,
-      "day_return_pct": -0.118085,
+      "last_equity": 99758.4413476841,
+      "return_pct": -0.241559,
+      "day_return_pct": 0.356183,
       "currency": "USD",
       "equity_history": [
         {
@@ -79,10 +83,14 @@
         {
           "date": "2026-10-01",
           "nav": 99404.3795320571
+        },
+        {
+          "date": "2026-10-02",
+          "nav": 99758.4413476841
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "risk_observations": 4,
+      "risk_observations": 5,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": -0.605434,
       "sharpe_0rf": null
@@ -94,7 +102,7 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-01",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
@@ -116,10 +124,14 @@
         {
           "date": "2026-10-01",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "risk_observations": 4,
+      "risk_observations": 5,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -131,11 +143,11 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-01",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": 100192.68393418574,
-      "return_pct": 0.192684,
-      "day_return_pct": 0.192684,
+      "last_equity": 100210.30336458496,
+      "return_pct": 0.210303,
+      "day_return_pct": 0.017586,
       "currency": "USD",
       "equity_history": [
         {
@@ -153,10 +165,14 @@
         {
           "date": "2026-10-01",
           "nav": 100192.68393418574
+        },
+        {
+          "date": "2026-10-02",
+          "nav": 100210.30336458496
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "risk_observations": 4,
+      "risk_observations": 5,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -168,11 +184,11 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-01",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
-      "last_equity": 100000.0,
-      "return_pct": 0.0,
-      "day_return_pct": 0.0,
+      "last_equity": 99923.89026705372,
+      "return_pct": -0.07611,
+      "day_return_pct": -0.07611,
       "currency": "USD",
       "equity_history": [
         {
@@ -190,12 +206,16 @@
         {
           "date": "2026-10-01",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-02",
+          "nav": 99923.89026705372
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "risk_observations": 4,
+      "risk_observations": 5,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": 0.0,
+      "max_drawdown_pct": -0.07611,
       "sharpe_0rf": null
     },
     {
@@ -205,7 +225,7 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-01",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
@@ -227,10 +247,14 @@
         {
           "date": "2026-10-01",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "risk_observations": 4,
+      "risk_observations": 5,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -242,7 +266,7 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-01",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
@@ -264,10 +288,14 @@
         {
           "date": "2026-10-01",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "risk_observations": 4,
+      "risk_observations": 5,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -279,7 +307,7 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-01",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
@@ -301,10 +329,14 @@
         {
           "date": "2026-10-01",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "risk_observations": 4,
+      "risk_observations": 5,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -316,7 +348,7 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-01",
+      "last_session": "2026-10-02",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
@@ -338,10 +370,14 @@
         {
           "date": "2026-10-01",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-02",
+          "nav": 100000.0
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "risk_observations": 4,
+      "risk_observations": 5,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null

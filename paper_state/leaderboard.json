@@ -2,19 +2,31 @@
   {
     "fills": 1,
     "first_session": "2026-09-28",
-    "last_session": "2026-10-01",
+    "last_session": "2026-10-02",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
-    "nav": 100192.68393418574,
+    "nav": 100210.30336458496,
     "positions": 1,
-    "return_pct": 0.19268393418574448,
+    "return_pct": 0.2103033645849628,
     "status": "active",
     "strategy": "genetic_frozen"
   },
   {
+    "fills": 1,
+    "first_session": "2026-09-28",
+    "last_session": "2026-10-02",
+    "max_drawdown_pct": 0.6618797810691746,
+    "missed_decisions": 0,
+    "nav": 100205.2656757989,
+    "positions": 1,
+    "return_pct": 0.20526567579890465,
+    "status": "active",
+    "strategy": "benchmark_spy"
+  },
+  {
     "fills": 0,
     "first_session": "2026-09-28",
-    "last_session": "2026-10-01",
+    "last_session": "2026-10-02",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
     "nav": 100000.0,
@@ -26,7 +38,7 @@
   {
     "fills": 0,
     "first_session": "2026-09-28",
-    "last_session": "2026-10-01",
+    "last_session": "2026-10-02",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
     "nav": 100000.0,
@@ -38,19 +50,7 @@
   {
     "fills": 0,
     "first_session": "2026-09-28",
-    "last_session": "2026-10-01",
-    "max_drawdown_pct": 0,
-    "missed_decisions": 0,
-    "nav": 100000.0,
-    "positions": 0,
-    "return_pct": 0.0,
-    "status": "active",
-    "strategy": "macd_12_26_9"
-  },
-  {
-    "fills": 0,
-    "first_session": "2026-09-28",
-    "last_session": "2026-10-01",
+    "last_session": "2026-10-02",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
     "nav": 100000.0,
@@ -62,7 +62,7 @@
   {
     "fills": 0,
     "first_session": "2026-09-28",
-    "last_session": "2026-10-01",
+    "last_session": "2026-10-02",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
     "nav": 100000.0,
@@ -74,7 +74,7 @@
   {
     "fills": 0,
     "first_session": "2026-09-28",
-    "last_session": "2026-10-01",
+    "last_session": "2026-10-02",
     "max_drawdown_pct": 0,
     "missed_decisions": 0,
     "nav": 100000.0,
@@ -86,24 +86,24 @@
   {
     "fills": 1,
     "first_session": "2026-09-28",
-    "last_session": "2026-10-01",
-    "max_drawdown_pct": 0.6618797810691746,
+    "last_session": "2026-10-02",
+    "max_drawdown_pct": 0.07610973294628343,
     "missed_decisions": 0,
-    "nav": 99506.35181324293,
+    "nav": 99923.89026705372,
     "positions": 1,
-    "return_pct": -0.49364818675706745,
+    "return_pct": -0.07610973294628343,
     "status": "active",
-    "strategy": "benchmark_spy"
+    "strategy": "macd_12_26_9"
   },
   {
     "fills": 8,
     "first_session": "2026-09-28",
-    "last_session": "2026-10-01",
+    "last_session": "2026-10-02",
     "max_drawdown_pct": 0.6054344871516792,
     "missed_decisions": 0,
-    "nav": 99404.3795320571,
+    "nav": 99758.4413476841,
     "positions": 8,
-    "return_pct": -0.5956204679429034,
+    "return_pct": -0.24155865231589857,
     "status": "active",
     "strategy": "buy_hold_equal_weight"
   }

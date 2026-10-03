@@ -1,12 +1,13 @@
 {
   "config_hash": "acd19e661c3c4c9bea9cd94bc771d5d8e6a961f8a71ce8684aa80dcab0dd8ff4",
   "first_session": "2026-09-28",
-  "last_session": "2026-10-01",
+  "last_session": "2026-10-02",
   "market_hashes": {
     "2026-09-28": "56a5dd3caf078571b094efd252177324cf44b99f1784871ef1fe5cb0d94f24a7",
     "2026-09-29": "9c8bebd2da71e94ba298bcff40634012cef2ef41ec017e89bf7da673f28718ca",
     "2026-09-30": "215d9145d4bb40bf86c2ebf7e2254868ecfa8aa6f6881bdd7d414bc2a1d54139",
-    "2026-10-01": "e8123c6f8bf54ea975f2ee7fff7a4ea73fe8a9e4f2199bd184a3a5275f03072a"
+    "2026-10-01": "e8123c6f8bf54ea975f2ee7fff7a4ea73fe8a9e4f2199bd184a3a5275f03072a",
+    "2026-10-02": "a07e21ebf660fe18010126f232043422b0295727ff6e9b7f4b9548aebef1c185"
   },
   "missed_decision_sessions": [],
   "schema_version": 1,
@@ -38,6 +39,12 @@
           "date": "2026-10-01",
           "decision_recorded": true,
           "nav": 99506.35181324293
+        },
+        {
+          "cash": 4999.999999999971,
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100205.2656757989
         }
       ],
       "events": [
@@ -72,6 +79,12 @@
         },
         {
           "date": "2026-10-01",
+          "side": "buy",
+          "ticker": "SPY",
+          "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
           "side": "buy",
           "ticker": "SPY",
           "type": "signal"
@@ -112,6 +125,12 @@
         {
           "cash": 100000.0,
           "date": "2026-10-01",
+          "decision_recorded": true,
+          "nav": 100000.0
+        },
+        {
+          "cash": 100000.0,
+          "date": "2026-10-02",
           "decision_recorded": true,
           "nav": 100000.0
         }
@@ -166,6 +185,12 @@
           "date": "2026-10-01",
           "decision_recorded": true,
           "nav": 99404.3795320571
+        },
+        {
+          "cash": 4999.999999999998,
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 99758.4413476841
         }
       ],
       "events": [
@@ -448,6 +473,54 @@
           "side": "buy",
           "ticker": "XOM",
           "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "buy",
+          "ticker": "AAPL",
+          "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "buy",
+          "ticker": "AMZN",
+          "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "buy",
+          "ticker": "JNJ",
+          "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "buy",
+          "ticker": "JPM",
+          "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "buy",
+          "ticker": "KO",
+          "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "buy",
+          "ticker": "MSFT",
+          "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "buy",
+          "ticker": "NVDA",
+          "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "buy",
+          "ticker": "XOM",
+          "type": "signal"
         }
       ],
       "pending": {},
@@ -529,6 +602,12 @@
           "date": "2026-10-01",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "cash": 100000.0,
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
         }
       ],
       "events": [],
@@ -562,6 +641,12 @@
           "date": "2026-10-01",
           "decision_recorded": true,
           "nav": 100192.68393418574
+        },
+        {
+          "cash": 85000.0,
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100210.30336458496
         }
       ],
       "events": [
@@ -587,6 +672,12 @@
           "side": "sell",
           "ticker": "JNJ",
           "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "sell",
+          "ticker": "JNJ",
+          "type": "signal"
         }
       ],
       "pending": {},
@@ -601,7 +692,7 @@
       "status": "active"
     },
     "macd_12_26_9": {
-      "cash": 100000.0,
+      "cash": 85000.0,
       "equity": [
         {
           "cash": 100000.0,
@@ -626,6 +717,12 @@
           "date": "2026-10-01",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "cash": 85000.0,
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 99923.89026705372
         }
       ],
       "events": [
@@ -640,15 +737,28 @@
           "side": "buy",
           "ticker": "MSFT",
           "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "fee": 14.985014985014987,
+          "price": 519.6497096557617,
+          "quantity": 28.836761969792505,
+          "reason": "close_signal",
+          "side": "buy",
+          "signal_date": "2026-10-01",
+          "ticker": "MSFT",
+          "type": "fill"
         }
       ],
-      "pending": {
+      "pending": {},
+      "positions": {
         "MSFT": {
-          "side": "buy",
-          "signal_date": "2026-10-01"
+          "entry_price": 519.6497096557617,
+          "quantity": 28.836761969792505,
+          "stop": 478.0777328833008,
+          "target": 597.5971661041259
         }
       },
-      "positions": {},
       "status": "active"
     },
     "rsi_reversion_14": {
@@ -675,6 +785,12 @@
         {
           "cash": 100000.0,
           "date": "2026-10-01",
+          "decision_recorded": true,
+          "nav": 100000.0
+        },
+        {
+          "cash": 100000.0,
+          "date": "2026-10-02",
           "decision_recorded": true,
           "nav": 100000.0
         }
@@ -710,6 +826,12 @@
           "date": "2026-10-01",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "cash": 100000.0,
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
         }
       ],
       "events": [
@@ -747,6 +869,18 @@
           "date": "2026-10-01",
           "side": "sell",
           "ticker": "JNJ",
+          "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "sell",
+          "ticker": "JNJ",
+          "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "sell",
+          "ticker": "KO",
           "type": "signal"
         }
       ],
@@ -780,6 +914,12 @@
           "date": "2026-10-01",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "cash": 100000.0,
+          "date": "2026-10-02",
+          "decision_recorded": true,
+          "nav": 100000.0
         }
       ],
       "events": [
@@ -811,6 +951,18 @@
           "date": "2026-10-01",
           "side": "sell",
           "ticker": "JNJ",
+          "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "sell",
+          "ticker": "JNJ",
+          "type": "signal"
+        },
+        {
+          "date": "2026-10-02",
+          "side": "sell",
+          "ticker": "KO",
           "type": "signal"
         }
       ],
