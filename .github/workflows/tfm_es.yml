@@ -71,16 +71,7 @@ jobs:
       - name: Commit TFM shadow and comparison state
         if: ${{ always() && !inputs.preflight_only }}
         run: |
-          if [ -f strategy_runtime/tfm_es.json ]; then
-            git add -- strategy_runtime/tfm_es.json
-          fi
-          if [ -d tfm_state ]; then
-            git add -- tfm_state
-          fi
-          if [ -f strategy_state/dashboard.json ] && [ -f strategy_state/dashboard.md ]; then
-            git add -- strategy_state/dashboard.json strategy_state/dashboard.md
-          fi
-          if ! git diff --cached --quiet; then
-            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Record MIDAS TFM shadow forecasts'
-            git push
-          fi
+          python strategy_comparison/publish_state.py \
+            --message "Record MIDAS TFM shadow forecasts" \\
+            --path strategy_runtime/tfm_es.json \\
+            --path tfm_state
