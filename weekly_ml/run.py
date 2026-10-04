@@ -122,8 +122,6 @@ def run(config_path, output_dir, now=None):
         return {"status": "market_closed", "changed": False}
     panel, sectors, usable, market_failures, asof = snapshot
 
-    labelled, live, feature_exclusions = build_dataset(panel, sectors, usable, asof)
-    input_digest = _frame_digest(labelled, live)
     out = Path(output_dir)
     forecast_dir = out / "forecasts"
     existing = sorted(forecast_dir.glob("????-??-??.json"))
@@ -132,9 +130,20 @@ def run(config_path, output_dir, now=None):
         raise ValueError("Forecast semanal fuera de orden")
     if existing and existing[-1].stem == asof:
         previous = _read(existing[-1])
-        if previous.get("input_digest") != input_digest:
-            raise ValueError("Los datos/features cambiaron para un forecast semanal ya registrado")
+        if previous.get("config_hash") != digest(config):
+            raise ValueError("Forecast previo pertenece a otra configuración")
+        state_path = out / "ledger.json"
+        if not state_path.exists():
+            raise ValueError("Forecast semanal registrado sin ledger")
+        state = _read(state_path)
+        if state.get("config_hash") != digest(config) or state.get("last_session") != asof:
+            raise ValueError("Ledger semanal desalineado con forecast ya registrado")
+        if state.get("forecast_hash") != digest(previous):
+            raise ValueError("Ledger semanal apunta a otro forecast")
         return {"status": "already_recorded", "session": asof, "changed": False}
+
+    labelled, live, feature_exclusions = build_dataset(panel, sectors, usable, asof)
+    input_digest = _frame_digest(labelled, live)
 
     state_path = out / "ledger.json"
     state = _read(state_path) if state_path.exists() else None
