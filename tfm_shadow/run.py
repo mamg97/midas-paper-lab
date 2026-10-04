@@ -108,10 +108,26 @@ def run(config_path, output_dir, snapshot_csv=None):
         raise ValueError("Configuración TFM no admitida")
     if config.get("models") != ["lgbm", "mlp", "lstm", "arima"] or len(config.get("tickers", [])) != 31:
         raise ValueError("Faltan modelos o activos del universo TFM")
+    out = Path(output_dir)
     if snapshot_csv:
         panel = read_csv(snapshot_csv)
         asof = next(iter(panel.values()))[-1]["date"]
     else:
+        due_asof = eligible_session()
+        if due_asof is None:
+            return {"status": "market_closed", "changed": False}
+        existing_due = out / "forecasts" / (due_asof + ".json")
+        ledger_due = out / "ledger.json"
+        if existing_due.exists() and ledger_due.exists():
+            previous = _read(existing_due)
+            state = _read(ledger_due)
+            if previous.get("config_hash") != _digest(config):
+                raise ValueError("Pronóstico de otra configuración")
+            if state.get("config_hash") != _digest(config) or state.get("last_session") != due_asof:
+                raise ValueError("Diario TFM desalineado con pronóstico ya registrado")
+            if state.get("forecast_hash") != _digest(previous):
+                raise ValueError("Pronóstico último distinto del registrado en el diario")
+            return {"status": "already_recorded", "session": due_asof, "changed": False}
         snapshot = live_panel(config)
         if snapshot is None:
             return {"status": "market_closed", "changed": False}
@@ -120,7 +136,6 @@ def run(config_path, output_dir, snapshot_csv=None):
         raise ValueError("El universo descargado no coincide con el TFM configurado")
     validate_panel(panel, asof)
     fingerprint = _digest(panel)
-    out = Path(output_dir)
     existing = sorted((out / "forecasts").glob("????-??-??.json"))
     if existing and existing[-1].stem > asof:
         raise ValueError("Sesión fuera de orden")
@@ -131,8 +146,6 @@ def run(config_path, output_dir, snapshot_csv=None):
     if previous and previous.get("config_hash") != _digest(config):
         raise ValueError("La configuración cambió: iniciar otra campaña")
     if previous and previous["asof"] == asof:
-        if previous.get("input_digest") != fingerprint:
-            raise ValueError("Datos revisados para una predicción ya registrada")
         if len(existing) > 1:
             earlier = _read(existing[-2])
             evaluation_path = out / "evaluations" / (earlier["asof"] + ".json")
