@@ -1,7 +1,10 @@
+import json
 import math
+import tempfile
 import unittest
 from pathlib import Path
 import sys
+from unittest.mock import patch
 
 import numpy as np
 import pandas as pd
@@ -10,7 +13,8 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "weekly_ml"))
 
 from data import build_dataset
-from paper import advance
+from paper import advance, digest
+import run as weekly_runner
 
 
 class WeeklyFeatureTests(unittest.TestCase):
@@ -117,6 +121,43 @@ class WeeklyPaperTests(unittest.TestCase):
         self.assertLess(trade["net_pnl"], 0)
         self.assertLess(state2["strategies"]["lgbm_return"]["nav"], 100000.0)
         self.assertEqual(len(state2["strategies"]["benchmark_spy"]["trades"]), 1)
+
+
+
+
+
+class WeeklyRunnerIdempotencyTests(unittest.TestCase):
+    def test_backup_does_not_recompute_a_frozen_weekly_forecast(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            config = {
+                "schema_version": 1,
+                "calendar": "XNYS",
+                "currency": "USD",
+                "universe_file": "weekly_ml/universe.json",
+                "models": ["lgbm_return"],
+                "paper_policy": {}
+            }
+            config_path = root / "config.json"
+            config_path.write_text(json.dumps(config), encoding="utf-8")
+            output = root / "state"
+            (output / "forecasts").mkdir(parents=True)
+            asof = "2026-10-02"
+            forecast = {"schema_version": 1, "asof": asof, "config_hash": digest(config)}
+            (output / "forecasts" / (asof + ".json")).write_text(json.dumps(forecast), encoding="utf-8")
+            ledger = {
+                "config_hash": digest(config),
+                "last_session": asof,
+                "forecast_hash": digest(forecast)
+            }
+            (output / "ledger.json").write_text(json.dumps(ledger), encoding="utf-8")
+
+            snapshot = ({}, {}, [], [], asof)
+            with patch.object(weekly_runner, "live_panel", return_value=snapshot), \
+                    patch.object(weekly_runner, "build_dataset", side_effect=AssertionError("must not recompute")):
+                result = weekly_runner.run(config_path, output)
+            self.assertEqual(result["status"], "already_recorded")
+            self.assertFalse(result["changed"])
 
 
 if __name__ == "__main__":

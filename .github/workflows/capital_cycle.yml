@@ -82,16 +82,7 @@ jobs:
       - name: Commit capital-cycle and dashboard state
         if: ${{ always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && !inputs.preflight_only }}
         run: |
-          if [ -f strategy_runtime/capital_cycle.json ]; then
-            git add -- strategy_runtime/capital_cycle.json
-          fi
-          if [ -d capital_cycle_state ]; then
-            git add -- capital_cycle_state
-          fi
-          if [ -f strategy_state/dashboard.json ] && [ -f strategy_state/dashboard.md ]; then
-            git add -- strategy_state/dashboard.json strategy_state/dashboard.md
-          fi
-          if ! git diff --cached --quiet; then
-            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Record MIDAS capital-cycle paper state'
-            git push
-          fi
+          python strategy_comparison/publish_state.py \
+            --message "Record MIDAS capital-cycle paper state" \\
+            --path strategy_runtime/capital_cycle.json \\
+            --path capital_cycle_state
