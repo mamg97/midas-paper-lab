@@ -10,7 +10,7 @@ from unittest.mock import patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from forecast import make_samples, validate_panel
 from market import eligible_session, contiguous_complete_panel, current_session_issues, intraday_close_fallback
-from run import evaluate, run
+from run import evaluate, run, _digest
 from paper import advance
 
 
@@ -141,6 +141,30 @@ class ForecastContractTests(unittest.TestCase):
         duplicate, changed = advance(config, bars, second, settled)
         self.assertFalse(changed)
         self.assertEqual(duplicate, settled)
+
+    def test_live_backup_skips_market_download_when_session_is_already_frozen(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            tickers = [f"T{number:02d}.MC" for number in range(31)]
+            config = {"schema_version": 1, "calendar": "XMAD", "currency": "EUR",
+                      "tickers": tickers, "models": ["lgbm", "mlp", "lstm", "arima"],
+                      "paper_policy": {}}
+            config_path = root / "config.json"
+            config_path.write_text(json.dumps(config), encoding="utf-8")
+            output = root / "state"
+            (output / "forecasts").mkdir(parents=True)
+            asof = "2026-10-02"
+            forecast = {"schema_version": 1, "asof": asof, "config_hash": _digest(config)}
+            (output / "forecasts" / (asof + ".json")).write_text(json.dumps(forecast), encoding="utf-8")
+            ledger = {"config_hash": _digest(config), "last_session": asof,
+                      "forecast_hash": _digest(forecast)}
+            (output / "ledger.json").write_text(json.dumps(ledger), encoding="utf-8")
+
+            with patch("run.eligible_session", return_value=asof), \
+                    patch("run.live_panel", side_effect=AssertionError("must not download market")):
+                result = run(config_path, output)
+            self.assertEqual(result["status"], "already_recorded")
+            self.assertFalse(result["changed"])
 
     def test_daily_run_is_idempotent_and_recovers_a_missing_ledger(self):
         with tempfile.TemporaryDirectory() as temporary:
