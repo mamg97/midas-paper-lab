@@ -27,7 +27,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: midas-capital-cycle
+  # Todos los writers paper comparten exclusión para evitar carreras de git push
+  # entre cierres/respaldos que actualizan strategy_state y strategy_runtime.
+  group: midas-paper-state-writer
   cancel-in-progress: false
 
 jobs:
