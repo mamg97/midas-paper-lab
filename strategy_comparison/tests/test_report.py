@@ -111,9 +111,13 @@ class ReportTests(unittest.TestCase):
         weekly = {"config_hash": _config_hash(weekly_config), "first_session": "2026-10-02",
                   "last_session": "2026-10-09", "strategies": {
                       key: {"nav": 101000.0,
+                            "pending": [],
                             "equity": [{"date": "2026-10-02", "nav": 100000.0},
                                        {"date": "2026-10-09", "nav": 101000.0}]}
                       for key in keys}}
+        weekly["strategies"]["ensemble_consensus"]["pending"] = [
+            {"ticker": "AMD"}, {"ticker": "INTC"}
+        ]
         result = build(self.registry, self.config, now=self.now,
                        weekly_config=weekly_config, weekly_state=weekly)
         self.assertEqual(result["counts"]["weekly_ml_with_diary"], 9)
@@ -122,6 +126,9 @@ class ReportTests(unittest.TestCase):
                          ("weekly_ml_demo", 1.0, 1.0))
         self.assertEqual(ensemble["currency"], "USD")
         self.assertEqual(ensemble["equity_history"][-1], {"date": "2026-10-09", "nav": 101000.0})
+        self.assertEqual(ensemble["activity_state"], "pending")
+        self.assertEqual(ensemble["activity_label"], "2 compras para próxima apertura")
+        self.assertEqual(ensemble["activity_tickers"], ["AMD", "INTC"])
 
 
     def test_tfg_corrected_uses_separate_weekly_ledger(self):
@@ -226,6 +233,8 @@ class ReportTests(unittest.TestCase):
                 {"date": "2026-09-30", "nav": 100000.0},
                 {"date": "2026-10-01", "nav": 101250.0},
             ],
+            "positions": {"OXY": {}, "QCOM": {}},
+            "pending": None,
         }
         result = build(self.registry, self.config, now=self.now,
                        capital_config=capital_config, capital_state=capital)
@@ -235,6 +244,8 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(row["return_pct"], 1.25)
         self.assertEqual(row["day_return_pct"], 1.25)
         self.assertEqual(row["currency"], "USD")
+        self.assertEqual(row["activity_label"], "2 posiciones abiertas")
+        self.assertEqual(row["activity_tickers"], ["OXY", "QCOM"])
         self.assertIn("underinvestment", row["note"])
 
 
