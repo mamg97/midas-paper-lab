@@ -129,6 +129,46 @@ TFM_IDS = {"tfm_lgbm_2023": "lgbm", "tfm_mlp_2023": "mlp",
            "tfm_lstm_2023": "lstm", "tfm_arima_2023": "arima"}
 
 
+def _activity_tickers(value):
+    if isinstance(value, dict):
+        return [str(ticker) for ticker in value if ticker]
+    if isinstance(value, list):
+        return [str(item.get("ticker")) for item in value
+                if isinstance(item, dict) and item.get("ticker")]
+    return []
+
+
+def _activity(positions=None, pending=None, *, pending_label="órdenes pendientes",
+              empty_label="Sin compras · en efectivo"):
+    position_tickers = _activity_tickers(positions)
+    pending_tickers = _activity_tickers(pending)
+    combined = []
+    for ticker in position_tickers + pending_tickers:
+        if ticker not in combined:
+            combined.append(ticker)
+    open_count = len(position_tickers)
+    pending_count = len(pending_tickers)
+    if open_count and pending_count:
+        state = "active_pending"
+        label = f"{open_count} posiciones · {pending_count} {pending_label}"
+    elif open_count:
+        state = "active"
+        label = f"{open_count} " + ("posición abierta" if open_count == 1 else "posiciones abiertas")
+    elif pending_count:
+        state = "pending"
+        label = f"{pending_count} {pending_label}"
+    else:
+        state = "cash"
+        label = empty_label
+    return {
+        "activity_state": state,
+        "activity_label": label,
+        "activity_tickers": combined[:12],
+        "open_positions_count": open_count,
+        "pending_orders_count": pending_count,
+    }
+
+
 def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
           tfm_config=None, tfm_state=None, weekly_config=None, weekly_state=None,
           tfg_config=None, tfg_state=None, capital_config=None, capital_state=None,
@@ -243,6 +283,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        return_pct=round(100 * (nav / capital - 1), 6),
                        day_return_pct=_daily_return(history, strategy_id),
                        equity_history=_equity_history(history, strategy_id))
+            row.update(_activity(book.get("positions"), book.get("pending")))
         rows.append(row)
     for strategy_key, item in weekly_tracks.items():
         capital_weekly = None if weekly_config is None else _equity(
@@ -270,6 +311,8 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        return_pct=round(100 * (nav / capital_weekly - 1), 6),
                        day_return_pct=_daily_return(history, strategy_key),
                        equity_history=_equity_history(history, strategy_key))
+            row.update(_activity(None, book.get("pending"),
+                                 pending_label="compras para próxima apertura"))
         rows.append(row)
     for strategy_key, item in tfg_tracks.items():
         capital_tfg = None if tfg_config is None else _equity(
@@ -294,6 +337,11 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        return_pct=round(100 * (nav / capital_tfg - 1), 6),
                        day_return_pct=_daily_return(history, item["id"]),
                        equity_history=_equity_history(history, item["id"]))
+            signal = tfg_state.get("pending_signal")
+            selections = signal.get("selections", []) if isinstance(signal, dict) else []
+            row.update(_activity(None, selections,
+                                 pending_label="compras para próxima apertura",
+                                 empty_label="Sin compras · esperando señal"))
         rows.append(row)
     for strategy_key, item in capital_tracks.items():
         capital_cc = None if capital_config is None else _equity(
@@ -318,6 +366,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        return_pct=round(100 * (nav / capital_cc - 1), 6),
                        day_return_pct=_daily_return(history, item["id"]),
                        equity_history=_equity_history(history, item["id"]))
+            row.update(_activity(capital_state.get("positions"), capital_state.get("pending")))
         rows.append(row)
     for strategy_key, item in btd_tracks.items():
         capital_btd = None if btd_config is None else _equity(
@@ -342,6 +391,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        return_pct=round(100 * (nav / capital_btd - 1), 6),
                        day_return_pct=_daily_return(history, item["id"]),
                        equity_history=_equity_history(history, item["id"]))
+            row.update(_activity(btd_state.get("positions"), btd_state.get("pending")))
         rows.append(row)
     for item in legacy_tracks:
         row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
@@ -387,6 +437,8 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                            return_pct=round(100 * (nav / capital_tfm - 1), 6),
                            day_return_pct=_daily_return(book["equity"], item["id"]),
                            equity_history=_equity_history(book["equity"], item["id"]))
+                row.update(_activity(None, book.get("pending"),
+                                     pending_label="compras para próxima apertura"))
             rows.append(row)
         else:
             rows.append({"id": item["id"], "label": item["label"],
@@ -396,6 +448,25 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                          "day_return_pct": None, "currency": None, "equity_history": [],
                          "note": item["blocker"], "kind": item["kind"], "source": item["source"]})
     for row in rows:
+        if "activity_state" not in row:
+            if row.get("status") == "programada_sin_diario":
+                row.update({
+                    "activity_state": "waiting",
+                    "activity_label": "Esperando primera sesión",
+                    "activity_tickers": [],
+                    "open_positions_count": 0,
+                    "pending_orders_count": 0,
+                })
+            elif row.get("group") in {"historica_pendiente", "diario_heredado"}:
+                row.update({
+                    "activity_state": "unknown",
+                    "activity_label": "Actividad actual no enlazada",
+                    "activity_tickers": [],
+                    "open_positions_count": 0,
+                    "pending_orders_count": 0,
+                })
+            else:
+                row.update(_activity())
         row.update(_risk_metrics(row.get("equity_history", [])))
 
     return {"schema_version": 1, "generated_at_utc": timestamp.isoformat(),
@@ -414,14 +485,14 @@ def markdown(report):
     lines = ["# MIDAS: todas las ideas en paralelo", "",
              "Actualizado: " + report["generated_at_utc"] + ". El tablero distingue resultados observados de ideas aún no ejecutadas.", "",
              "La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.", "",
-             "| Estrategia | Procedencia | Estado | Primera fecha | Última fecha | Último periodo | Acumulada | Vol. anual. | Máx. DD | Sharpe 0rf |", "| --- | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |"]
+             "| Estrategia | Procedencia | Estado | Actividad actual | Primera fecha | Última fecha | Último periodo | Acumulada | Vol. anual. | Máx. DD | Sharpe 0rf |", "| --- | --- | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |"]
     for row in report["tracks"]:
         value = "—" if row["return_pct"] is None else f"{row['return_pct']:.2f} %"
         daily = "—" if row["day_return_pct"] is None else f"{row['day_return_pct']:.2f} %"
         vol = "—" if row["annualized_volatility_pct"] is None else f"{row['annualized_volatility_pct']:.2f} %"
         drawdown = "—" if row["max_drawdown_pct"] is None else f"{row['max_drawdown_pct']:.2f} %"
         sharpe = "—" if row["sharpe_0rf"] is None else f"{row['sharpe_0rf']:.2f}"
-        lines.append(f"| {row['label']} | {row['provenance']} | {row['status']} | {row['first_session'] or '—'} | {row['last_session'] or '—'} | {daily} | {value} | {vol} | {drawdown} | {sharpe} |")
+        lines.append(f"| {row['label']} | {row['provenance']} | {row['status']} | {row.get('activity_label') or '—'} | {row['first_session'] or '—'} | {row['last_session'] or '—'} | {daily} | {value} | {vol} | {drawdown} | {sharpe} |")
     lines += ["", "## Qué impide activar las líneas restantes", ""]
     for row in report["tracks"]:
         if row["group"] == "historica_pendiente":
