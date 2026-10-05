@@ -2,7 +2,7 @@
   "schema_version": 1,
   "channel_url": "https://www.youtube.com/@Buy_The_Dip",
   "channel_id": "UCS5I8A7UAu43QgFxxu8VRbQ",
-  "source_hash": "29923a56077dc9a7ae0218f454451139acbc7ca4a5794d93eff3962f20935ff2",
+  "source_hash": "1f808f8eba0ccf9c204c44856f44d7eb1feb40debe3d11b57f31ac9b7c132be8",
   "videos": [
     {
       "video_id": "-EL1QLkTi_A",
@@ -78,7 +78,7 @@
     },
     {
       "video_id": "1K-zkyfi-SA",
-      "title": "Los datos de empleo HUNDEN la BOLSA",
+      "title": "Employment data SINKS the STOCK MARKET",
       "published_date": null,
       "duration_seconds": 647,
       "view_count": 1000,
@@ -126,7 +126,7 @@
     },
     {
       "video_id": "2F4_-qp2x9g",
-      "title": "The Asset Nobody Is Looking At: SILVER | Buy The Dip Podcast",
+      "title": "El Activo Que Nadie Está Mirando: PLATA | Buy The Dip Podcast",
       "published_date": null,
       "duration_seconds": 4765,
       "view_count": 8900,
@@ -489,7 +489,7 @@
       "title": "El metal más valioso del mundo",
       "published_date": null,
       "duration_seconds": null,
-      "view_count": 496,
+      "view_count": 497,
       "surfaces": [
         "short"
       ],
@@ -537,7 +537,7 @@
       "title": "What is happening in IRAN? - Can you INVEST in this market?",
       "published_date": null,
       "duration_seconds": 4017,
-      "view_count": 681,
+      "view_count": 684,
       "surfaces": [
         "long"
       ],
@@ -585,7 +585,7 @@
       "title": "Oil Prices Collapse What's Going On?",
       "published_date": null,
       "duration_seconds": 864,
-      "view_count": 889,
+      "view_count": 890,
       "surfaces": [
         "long"
       ],
@@ -633,7 +633,7 @@
       "title": "🔥 INVERTIR en SPACE X la empresa de ELON MUSK | 👉 IDEAS de INVERSIÓN",
       "published_date": null,
       "duration_seconds": 467,
-      "view_count": 422,
+      "view_count": 423,
       "surfaces": [
         "long"
       ],
@@ -642,7 +642,7 @@
     },
     {
       "video_id": "ARpaMofMpx0",
-      "title": "Nuestra CARTERA de INVERSIÓN en AGOSTO | BUY THE DIP PODCAST",
+      "title": "Our Investment Portfolio in August | Buy the Dip Podcast",
       "published_date": null,
       "duration_seconds": 3161,
       "view_count": 1300,
@@ -705,7 +705,7 @@
       "title": "NIKE explota en BOLSA - ¿BULL market en los METALES?",
       "published_date": null,
       "duration_seconds": 923,
-      "view_count": 408,
+      "view_count": 410,
       "surfaces": [
         "long"
       ],
@@ -846,7 +846,7 @@
     },
     {
       "video_id": "EBf4zbAkQoc",
-      "title": "TODO el MUNDO está ganando DINERO con el ORO",
+      "title": "EVERYONE is making MONEY with GOLD",
       "published_date": null,
       "duration_seconds": 819,
       "view_count": 451,
@@ -858,7 +858,7 @@
     },
     {
       "video_id": "EmjsXY2-kkM",
-      "title": "INVERTIR en KARELIA TOBACCO",
+      "title": "INVEST in KARELIA TOBACCO",
       "published_date": null,
       "duration_seconds": 646,
       "view_count": 495,
@@ -990,7 +990,7 @@
     },
     {
       "video_id": "HQX9Qdycuus",
-      "title": "Is the market ready? Oil prices are rising, and Europe's outlook is bleak.",
+      "title": "¿El MERCADO está PREPARADO? Sube el petróleo y Europa con malas perspectivas",
       "published_date": null,
       "duration_seconds": 1542,
       "view_count": 625,
@@ -1025,8 +1025,20 @@
       "url": "https://www.youtube.com/watch?v=IQbdClkmDTA"
     },
     {
+      "video_id": "IR4oaLZqqa4",
+      "title": "IMMINENT CRISIS?: Oil and interest rates on the rise",
+      "published_date": null,
+      "duration_seconds": 933,
+      "view_count": 1300,
+      "surfaces": [
+        "long"
+      ],
+      "format": "long",
+      "url": "https://www.youtube.com/watch?v=IR4oaLZqqa4"
+    },
+    {
       "video_id": "Inl1QLeoBCY",
-      "title": "How high will gold continue to rise? What's going on?",
+      "title": "¿Hasta dónde seguirá subiendo el ORO? ¿Qué pasa?",
       "published_date": null,
       "duration_seconds": 973,
       "view_count": 771,
@@ -1110,7 +1122,7 @@
     },
     {
       "video_id": "KAPa_BGXkRs",
-      "title": "INVESTING in URANIUM and the COMING BUBBLE | BUY THE DIP PODCAST",
+      "title": "INVERTIR en URANIO y la BURBUJA que viene | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 5829,
       "view_count": 3200,
@@ -1137,7 +1149,7 @@
       "title": "🔥 IDEAS de INVERSIÓN en COBRE | Filo Mining, NGEX, Marimaca.",
       "published_date": null,
       "duration_seconds": 2216,
-      "view_count": 712,
+      "view_count": 714,
       "surfaces": [
         "long"
       ],
@@ -1230,7 +1242,7 @@
     },
     {
       "video_id": "M6OXntqULU0",
-      "title": "OIL in 2025 by an expert - THE RISE BEGINS | BUY THE DIP PODCAST",
+      "title": "PETRÓLEO en 2025 por un experto - EMPIEZA LA SUBIDA  |  BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 4133,
       "view_count": 3600,
@@ -1317,7 +1329,7 @@
       "title": "Actualización IPCO 👉 Tesis de INVERSIÓN",
       "published_date": null,
       "duration_seconds": 842,
-      "view_count": 671,
+      "view_count": 672,
       "surfaces": [
         "long"
       ],
@@ -1401,7 +1413,7 @@
       "title": "We are INVESTING in these STOCKS (Our Portfolio) | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 3349,
-      "view_count": 2100,
+      "view_count": 2200,
       "surfaces": [
         "long"
       ],
@@ -1413,7 +1425,7 @@
       "title": "Our INVESTMENT PORTFOLIO and changes in June | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 2005,
-      "view_count": 904,
+      "view_count": 907,
       "surfaces": [
         "long"
       ],
@@ -1614,7 +1626,7 @@
     },
     {
       "video_id": "R5Uhmi5Qm5I",
-      "title": "ORO y URANIO: Estos dos metales HAN DESPERTADO",
+      "title": "GOLD and URANIUM: These two metals HAVE AWAKENED",
       "published_date": null,
       "duration_seconds": 489,
       "view_count": 585,
@@ -1710,7 +1722,7 @@
     },
     {
       "video_id": "T-PM0rSXDXY",
-      "title": "🔥 INVESTING in INTERNATIONAL PETROLEUM CORP 👉 Investment OPPORTUNITY?",
+      "title": "🔥 INVERTIR en INTERNATIONAL PETROLEUM CORP 👉 ¿Oportunidad de INVERSIÓN?",
       "published_date": null,
       "duration_seconds": 557,
       "view_count": 868,
@@ -1725,7 +1737,7 @@
       "title": "Actualización Howard Hughes  👉 Tesis de INVERSIÓN",
       "published_date": null,
       "duration_seconds": 287,
-      "view_count": 578,
+      "view_count": 580,
       "surfaces": [
         "long"
       ],
@@ -1833,7 +1845,7 @@
       "title": "Bond yields skyrocket above 5%: What does this mean for your portfolio?",
       "published_date": null,
       "duration_seconds": 744,
-      "view_count": 1000,
+      "view_count": 1100,
       "surfaces": [
         "long"
       ],
@@ -1842,7 +1854,7 @@
     },
     {
       "video_id": "Vg0SLGyOpZA",
-      "title": "Is the market changing trends? - American Eagle's stock price soars",
+      "title": "¿El MERCADO CAMBIA de TENDENCIA? -  American Eagle SE DISPARA en BOLSA",
       "published_date": null,
       "duration_seconds": 1220,
       "view_count": 753,
@@ -1905,7 +1917,7 @@
       "title": "🛢️ INVERTIR en DNOW (Distribution Now) | 👉 IDEAS de INVERSIÓN",
       "published_date": null,
       "duration_seconds": 858,
-      "view_count": 268,
+      "view_count": 269,
       "surfaces": [
         "long"
       ],
@@ -1914,7 +1926,7 @@
     },
     {
       "video_id": "WogbfbSXcR4",
-      "title": "IDEA de INVERSIÓN en BOLSA para 2023 👉 PROSEGUR CASH",
+      "title": "STOCK INVESTMENT IDEA for 2023 👉 PROSEGUR CASH",
       "published_date": null,
       "duration_seconds": 817,
       "view_count": 1200,
@@ -1938,7 +1950,7 @@
     },
     {
       "video_id": "X9s-_5nz4b4",
-      "title": "GOLD flies to HIGHS of $3,500",
+      "title": "El ORO vuela a MÁXIMOS 3500$",
       "published_date": null,
       "duration_seconds": 721,
       "view_count": 550,
@@ -1974,7 +1986,7 @@
     },
     {
       "video_id": "Y3wIDQMm5ag",
-      "title": "La LOCURA del ORO rompe MÁXIMOS HISTÓRICOS",
+      "title": "The GOLD RUSH breaks HISTORIC RECORDS",
       "published_date": null,
       "duration_seconds": 913,
       "view_count": 1100,
@@ -2013,7 +2025,7 @@
       "title": "🔥 UNIVERSAL MUSIC 👉 Invertir en Propiedad Intelectual",
       "published_date": null,
       "duration_seconds": 1373,
-      "view_count": 398,
+      "view_count": 399,
       "surfaces": [
         "long"
       ],
@@ -2037,7 +2049,7 @@
       "title": "How to Invest and Capitalize on Rising Oil Prices?",
       "published_date": null,
       "duration_seconds": 1120,
-      "view_count": 2900,
+      "view_count": 3000,
       "surfaces": [
         "long"
       ],
@@ -2058,7 +2070,7 @@
     },
     {
       "video_id": "Z9uiKsEQPWE",
-      "title": "Nuestra CARTERA de INVERSIÓN en ABRIL | BUY THE DIP PODCAST",
+      "title": "Our Investment Portfolio in April | Buy the Dip Podcast",
       "published_date": null,
       "duration_seconds": 3149,
       "view_count": 1100,
@@ -2301,7 +2313,7 @@
       "title": "El Lado Oscuro de las Inversiones: Nuestros Fracasos | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 2516,
-      "view_count": 491,
+      "view_count": 492,
       "surfaces": [
         "long"
       ],
@@ -2382,7 +2394,7 @@
     },
     {
       "video_id": "eb6TWuGxz-4",
-      "title": "WHAT IS THE BEST OIL COMPANY TO INVEST IN | BUY THE DIP PODCAST",
+      "title": "Cuál en la mejor empresa de PETRÓLEO para INVERTIR | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 1943,
       "view_count": 1300,
@@ -2490,10 +2502,10 @@
     },
     {
       "video_id": "gLjYJSeNGVE",
-      "title": "2 INVESTMENT IDEAS in FUNERAL HOMES",
+      "title": "2 IDEAS de INVERSIÓN en EMPRESAS FUNERARIAS",
       "published_date": null,
       "duration_seconds": 1165,
-      "view_count": 557,
+      "view_count": 558,
       "surfaces": [
         "long"
       ],
@@ -2649,7 +2661,7 @@
       "title": "Our Investment Portfolio for October-November | Buy the Dip Podcast",
       "published_date": null,
       "duration_seconds": 2883,
-      "view_count": 965,
+      "view_count": 966,
       "surfaces": [
         "long"
       ],
@@ -2670,7 +2682,7 @@
     },
     {
       "video_id": "jDj0JmcKMGo",
-      "title": "The End of Inflation? Why is Gold Falling?",
+      "title": "¿El FIN de la INFLACIÓN? ¿Por qué CAE el ORO?",
       "published_date": null,
       "duration_seconds": 1018,
       "view_count": 595,
@@ -2706,7 +2718,7 @@
     },
     {
       "video_id": "jf3HWs6bSnQ",
-      "title": "ENERGY: The Sector with the Most Opportunities in 2025?",
+      "title": "La ENERGÍA, ¿el sector con más OPORTUNIDADES en 2025?",
       "published_date": null,
       "duration_seconds": 1129,
       "view_count": 712,
@@ -2790,10 +2802,10 @@
     },
     {
       "video_id": "lsrRumn0OoA",
-      "title": "Is there URANIUM in SPAIN and CAN IT BE EXPLOITED?",
+      "title": "¿Hay URANIO en ESPAÑA y se PUEDE EXPLOTAR?",
       "published_date": null,
       "duration_seconds": 678,
-      "view_count": 423,
+      "view_count": 424,
       "surfaces": [
         "long"
       ],
@@ -2805,7 +2817,7 @@
       "title": "ORO: ¡El MEJOR ACTIVO de los últimos 20 años!",
       "published_date": null,
       "duration_seconds": 1081,
-      "view_count": 597,
+      "view_count": 598,
       "surfaces": [
         "long"
       ],
@@ -2862,7 +2874,7 @@
     },
     {
       "video_id": "n4QnU-5l760",
-      "title": "TRUMP DROP THE STOCK MARKET. WHAT OPPORTUNITIES ARE THERE IN THE FALLS?",
+      "title": "TRUMP hunde LA BOLSA ¿Qué OPORTUNIDADES hay EN LAS CAÍDAS?",
       "published_date": null,
       "duration_seconds": 1047,
       "view_count": 798,
@@ -2961,7 +2973,7 @@
       "title": "Is this the end of Berkshire Hathaway? - Warren Buffett retires",
       "published_date": null,
       "duration_seconds": 651,
-      "view_count": 353,
+      "view_count": 355,
       "surfaces": [
         "long"
       ],
@@ -2973,7 +2985,7 @@
       "title": "Are there investment opportunities in these sectors in 2026? | Buy the Dip Podcast",
       "published_date": null,
       "duration_seconds": 2626,
-      "view_count": 845,
+      "view_count": 847,
       "surfaces": [
         "long"
       ],
@@ -3021,7 +3033,7 @@
       "title": "Banca Monte di Pace  El Banco Más Antiguo del Mundo",
       "published_date": null,
       "duration_seconds": null,
-      "view_count": 172,
+      "view_count": 173,
       "surfaces": [
         "short"
       ],
@@ -3126,10 +3138,10 @@
     },
     {
       "video_id": "rAW0FLi__dg",
-      "title": "Why the Stock Market Must Fall by 50%",
+      "title": "Por qué La BOLSA DEBE CAER un 50%",
       "published_date": null,
       "duration_seconds": 890,
-      "view_count": 963,
+      "view_count": 964,
       "surfaces": [
         "long"
       ],
@@ -3210,7 +3222,7 @@
     },
     {
       "video_id": "sc944xFNM00",
-      "title": "Nuestra CARTERA de INVERSIÓN en SEPTIEMBRE | BUY THE DIP PODCAST",
+      "title": "Our September Investment Portfolio | Buy the Dip Podcast",
       "published_date": null,
       "duration_seconds": 2673,
       "view_count": 771,
@@ -3417,7 +3429,7 @@
       "title": "🔥 INVERTIR en KOREA TOBACCO",
       "published_date": null,
       "duration_seconds": 763,
-      "view_count": 304,
+      "view_count": 305,
       "surfaces": [
         "long"
       ],
@@ -3486,7 +3498,7 @@
     },
     {
       "video_id": "xQLuiuDKk-M",
-      "title": "INVEST in PLATINUM and PALLADIUM",
+      "title": "INVERTIR en PLATINO y PALADIO",
       "published_date": null,
       "duration_seconds": 2005,
       "view_count": 2300,
@@ -3525,7 +3537,7 @@
       "title": "¿En qué PAÍSES INVERTIR? | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 3363,
-      "view_count": 677,
+      "view_count": 678,
       "surfaces": [
         "long"
       ],
@@ -3585,7 +3597,7 @@
       "title": "Are these the BEST current INVESTMENT OPPORTUNITIES?",
       "published_date": null,
       "duration_seconds": 1239,
-      "view_count": 938,
+      "view_count": 942,
       "surfaces": [
         "long"
       ],

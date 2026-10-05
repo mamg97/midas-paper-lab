@@ -3,17 +3,17 @@
   "source_name": "Buy The Dip",
   "channel_url": "https://www.youtube.com/@Buy_The_Dip",
   "channel_id": "UCS5I8A7UAu43QgFxxu8VRbQ",
-  "generated_at_utc": "2026-10-01T15:49:38.752223+00:00",
+  "generated_at_utc": "2026-10-05T12:24:42.391241+00:00",
   "config_version": "2026-10-01-buy-the-dip-corpus-v1",
-  "manifest_count": 300,
+  "manifest_count": 301,
   "by_format": {
-    "long": 271,
+    "long": 272,
     "live": 27,
     "short": 2
   },
   "caption_coverage": {
     "available": 0,
-    "missing": 300,
+    "missing": 301,
     "pct": 0.0
   },
   "caption_transport": {
@@ -32,12 +32,12 @@
     }
   },
   "by_category": {
-    "portfolio_update": 46,
-    "company_or_theme": 165,
-    "macro_market": 40,
-    "sector_theme": 29,
+    "portfolio_update": 43,
+    "company_or_theme": 161,
+    "macro_market": 43,
+    "sector_theme": 33,
     "methodology": 6,
-    "guest_interview": 12,
+    "guest_interview": 13,
     "short": 2
   },
   "lexicon_aggregate": {
@@ -245,15 +245,6 @@
       "url": "https://www.youtube.com/watch?v=6hmNp6N8Gdo"
     },
     {
-      "video_id": "ARpaMofMpx0",
-      "title": "Nuestra CARTERA de INVERSIÓN en AGOSTO | BUY THE DIP PODCAST",
-      "published_date": null,
-      "category": "portfolio_update",
-      "guest_likely": false,
-      "score": 8.0,
-      "url": "https://www.youtube.com/watch?v=ARpaMofMpx0"
-    },
-    {
       "video_id": "FdAm8oWiw6k",
       "title": "Cartera de INVERSIÓN en NOVIEMBRE  | BUY THE DIP PODCAST",
       "published_date": null,
@@ -398,15 +389,6 @@
       "url": "https://www.youtube.com/watch?v=WEercPWuPJw"
     },
     {
-      "video_id": "Z9uiKsEQPWE",
-      "title": "Nuestra CARTERA de INVERSIÓN en ABRIL | BUY THE DIP PODCAST",
-      "published_date": null,
-      "category": "portfolio_update",
-      "guest_likely": false,
-      "score": 8.0,
-      "url": "https://www.youtube.com/watch?v=Z9uiKsEQPWE"
-    },
-    {
       "video_id": "aFYOC3YNR5E",
       "title": "¿GANANCIAS o PÉRDIDAS en ENERO? 📉📈 Nuestra CARTERA al DESCUBIERTO! | BUY THE DIP PODCAST",
       "published_date": null,
@@ -459,6 +441,24 @@
       "guest_likely": false,
       "score": 8.0,
       "url": "https://www.youtube.com/watch?v=i5EfibJeKz8"
+    },
+    {
+      "video_id": "jOSRF2SlWC4",
+      "title": "BUY THE DIP PODCAST: EPISODIO 26 NUESTRA CARTERA DE NOVIEMBRE 2020",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=jOSRF2SlWC4"
+    },
+    {
+      "video_id": "nVMmnYjkNpg",
+      "title": "Nuestra Cartera de INVERSIÓN en Mayo | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=nVMmnYjkNpg"
     }
   ],
   "methodology_note": "Corpus screening only. No trading rule is considered canonical until semantic review distinguishes host process from guest opinions and recurring themes."
