@@ -38,7 +38,9 @@ jobs:
           sudo apt-get install -y libgomp1
           python -m pip install -r tfm_shadow/requirements-live.txt
       - name: Verify chronology and paper accounting
-        run: python -m unittest discover -s tfm_shadow/tests -v
+        run: |
+          python -m unittest discover -s tfm_shadow/tests -v
+          python -m unittest discover -s strategy_comparison/tests -v
       - name: Record four forecasts and paper decisions
         id: execute
         if: ${{ !inputs.preflight_only }}
