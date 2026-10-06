@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-06T18:45:45.238166+00:00",
+  "generated_at_utc": "2026-10-06T23:08:38.029746+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
@@ -987,27 +987,37 @@
       "group": "tfm_demo_adaptado",
       "status": "demo_con_diario",
       "first_session": "2026-10-02",
-      "last_session": "2026-10-02",
+      "last_session": "2026-10-06",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
-      "day_return_pct": null,
+      "day_return_pct": 0.0,
       "currency": "EUR",
       "equity_history": [
         {
           "date": "2026-10-02",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-05",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-06",
           "nav": 100000.0
         }
       ],
       "note": "Modelo del TFM reimplementado; regla de cartera común provisional, distinta de la tesis.",
       "kind": "modelo predictivo",
       "source": "fuente histórica privada, no publicada",
-      "activity_state": "cash",
-      "activity_label": "Sin compras · en efectivo",
-      "activity_tickers": [],
+      "activity_state": "pending",
+      "activity_label": "1 compras para próxima apertura",
+      "activity_tickers": [
+        "REP.MC"
+      ],
       "open_positions_count": 0,
-      "pending_orders_count": 0,
-      "risk_observations": 1,
+      "pending_orders_count": 1,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -1019,37 +1029,44 @@
       "group": "tfm_demo_adaptado",
       "status": "demo_con_diario",
       "first_session": "2026-10-02",
-      "last_session": "2026-10-02",
+      "last_session": "2026-10-06",
       "initial_capital": 100000.0,
-      "last_equity": 100000.0,
-      "return_pct": 0.0,
-      "day_return_pct": null,
+      "last_equity": 99919.25338318852,
+      "return_pct": -0.080747,
+      "day_return_pct": 0.0,
       "currency": "EUR",
       "equity_history": [
         {
           "date": "2026-10-02",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-05",
+          "nav": 99919.25338318852
+        },
+        {
+          "date": "2026-10-06",
+          "nav": 99919.25338318852
         }
       ],
       "note": "Modelo del TFM reimplementado; regla de cartera común provisional, distinta de la tesis.",
       "kind": "modelo predictivo",
       "source": "fuente histórica privada, no publicada",
       "activity_state": "pending",
-      "activity_label": "7 compras para próxima apertura",
+      "activity_label": "6 compras para próxima apertura",
       "activity_tickers": [
         "ANA.MC",
+        "NTGY.MC",
         "ANE.MC",
-        "TEF.MC",
-        "AMS.MC",
-        "MAP.MC",
-        "GRF.MC",
-        "ELE.MC"
+        "MTS.MC",
+        "FDR.MC",
+        "IBE.MC"
       ],
       "open_positions_count": 0,
-      "pending_orders_count": 7,
-      "risk_observations": 1,
+      "pending_orders_count": 6,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": 0.0,
+      "max_drawdown_pct": -0.080747,
       "sharpe_0rf": null
     },
     {
@@ -1059,15 +1076,23 @@
       "group": "tfm_demo_adaptado",
       "status": "demo_con_diario",
       "first_session": "2026-10-02",
-      "last_session": "2026-10-02",
+      "last_session": "2026-10-06",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
-      "day_return_pct": null,
+      "day_return_pct": 0.0,
       "currency": "EUR",
       "equity_history": [
         {
           "date": "2026-10-02",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-05",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-06",
           "nav": 100000.0
         }
       ],
@@ -1079,7 +1104,7 @@
       "activity_tickers": [],
       "open_positions_count": 0,
       "pending_orders_count": 0,
-      "risk_observations": 1,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -1091,15 +1116,23 @@
       "group": "tfm_demo_adaptado",
       "status": "demo_con_diario",
       "first_session": "2026-10-02",
-      "last_session": "2026-10-02",
+      "last_session": "2026-10-06",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
-      "day_return_pct": null,
+      "day_return_pct": 0.0,
       "currency": "EUR",
       "equity_history": [
         {
           "date": "2026-10-02",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-05",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-06",
           "nav": 100000.0
         }
       ],
@@ -1111,7 +1144,7 @@
       "activity_tickers": [],
       "open_positions_count": 0,
       "pending_orders_count": 0,
-      "risk_observations": 1,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null

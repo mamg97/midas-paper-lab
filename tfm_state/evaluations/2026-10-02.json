@@ -1,0 +1,1001 @@
+{
+  "evaluated_at_session": "2026-10-06",
+  "forecast_asof": "2026-10-02",
+  "outcome_session": "2026-10-05",
+  "recorded_after_gap": true,
+  "rows": [
+    {
+      "absolute_return_error_pct": 0.1646476692459431,
+      "actual_return_pct": -0.052913282283395535,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": 0.11173438696254756,
+      "ticker": "ACS.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.20293715359356312,
+      "actual_return_pct": 0.29036670384998686,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.08742955025642374,
+      "ticker": "ACX.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.6225228560108098,
+      "actual_return_pct": -0.5473001957231993,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": 0.07522266028761049,
+      "ticker": "AENA.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.650114940056068,
+      "actual_return_pct": 0.6446722445340836,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": -0.0054426955219843975,
+      "ticker": "AMS.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.6639272065686606,
+      "actual_return_pct": -1.5977486402791397,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": 0.0661785662895209,
+      "ticker": "ANA.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.657099849952904,
+      "actual_return_pct": -2.636363289572974,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": 0.020736560379930324,
+      "ticker": "ANE.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.553352280856246,
+      "actual_return_pct": 1.6949136104436047,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.14156132958735856,
+      "ticker": "BBVA.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.4266557330445675,
+      "actual_return_pct": 0.5432987023690217,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.11664296932445417,
+      "ticker": "BKT.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.1127600994875984,
+      "actual_return_pct": 2.259418092662502,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.14665799317490347,
+      "ticker": "CABK.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.38037318430814704,
+      "actual_return_pct": -0.2644397174030644,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": 0.11593346690508266,
+      "ticker": "CLNX.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.3386814091738133,
+      "actual_return_pct": 0.33085754667281364,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": -0.007823862500999645,
+      "ticker": "COL.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.37014539197277596,
+      "actual_return_pct": 0.453349146744797,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.08320375477202102,
+      "ticker": "ELE.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.0983764131114913,
+      "actual_return_pct": -2.105898699135511,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": -0.007522286024019831,
+      "ticker": "ENG.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.7191960230300221,
+      "actual_return_pct": 0.6849253924053889,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": -0.0342706306246332,
+      "ticker": "FDR.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.7075768652926824,
+      "actual_return_pct": -2.6415891970868355,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": 0.0659876682058469,
+      "ticker": "FER.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.9947693592366136,
+      "actual_return_pct": 1.0035513053055833,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.00878194606896976,
+      "ticker": "GRF.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.4785144915990922,
+      "actual_return_pct": -1.3513455047096001,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": 0.12716898688949207,
+      "ticker": "IAG.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.5253421596747687,
+      "actual_return_pct": 0.6228996432152467,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.097557483540478,
+      "ticker": "IBE.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.6970958108450165,
+      "actual_return_pct": -0.6001494685966446,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": 0.09694634224837184,
+      "ticker": "ITX.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.8474828539809409,
+      "actual_return_pct": -0.7505725349720938,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": 0.09691031900884717,
+      "ticker": "LOG.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.032015365332196,
+      "actual_return_pct": 2.109307262577498,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.07729189724530183,
+      "ticker": "MAP.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.4476757431296847,
+      "actual_return_pct": -2.3506343802298546,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": 0.09704136289983012,
+      "ticker": "MEL.MC"
+    },
+    {
+      "absolute_return_error_pct": 3.3081988515217597,
+      "actual_return_pct": 3.220481869359215,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": -0.08771698216254453,
+      "ticker": "MRL.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.861372867576593,
+      "actual_return_pct": 0.980394579416588,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.11902171183999499,
+      "ticker": "MTS.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.9362648181157951,
+      "actual_return_pct": 0.9517358460890302,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.015471027973235074,
+      "ticker": "NTGY.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.0620325889495574,
+      "actual_return_pct": -1.0810800361494066,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": -0.019047447199849188,
+      "ticker": "RED.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.9254135461636892,
+      "actual_return_pct": 0.8990326009541194,
+      "direction_correct": false,
+      "model": "arima",
+      "predicted_return_pct": -0.026380945209569795,
+      "ticker": "REP.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.298958937521256,
+      "actual_return_pct": 2.391240153728136,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.09228121620687979,
+      "ticker": "SAB.MC"
+    },
+    {
+      "absolute_return_error_pct": 4.776314423151651,
+      "actual_return_pct": 4.966827821237096,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.19051339808544565,
+      "ticker": "SAN.MC"
+    },
+    {
+      "absolute_return_error_pct": 3.3637041031425285,
+      "actual_return_pct": 3.41081061670101,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.04710651355848139,
+      "ticker": "TEF.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.0668532690236043,
+      "actual_return_pct": 1.201921905881398,
+      "direction_correct": true,
+      "model": "arima",
+      "predicted_return_pct": 0.13506863685779358,
+      "ticker": "UNI.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.05138845762737709,
+      "actual_return_pct": -0.052913282283395535,
+      "direction_correct": true,
+      "model": "lgbm",
+      "predicted_return_pct": -0.10430173991077263,
+      "ticker": "ACS.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.316019987155558,
+      "actual_return_pct": 0.29036670384998686,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": -0.02565328330557115,
+      "ticker": "ACX.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.6373834537608758,
+      "actual_return_pct": -0.5473001957231993,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": 0.09008325803767647,
+      "ticker": "AENA.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.3610339133529372,
+      "actual_return_pct": 0.6446722445340836,
+      "direction_correct": true,
+      "model": "lgbm",
+      "predicted_return_pct": 0.28363833118114634,
+      "ticker": "AMS.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.6836761053557248,
+      "actual_return_pct": -1.5977486402791397,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": 0.08592746507658511,
+      "ticker": "ANA.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.8727891280089457,
+      "actual_return_pct": -2.636363289572974,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": 0.23642583843597187,
+      "ticker": "ANE.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.8085872709789785,
+      "actual_return_pct": 1.6949136104436047,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": -0.11367366053537387,
+      "ticker": "BBVA.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.5031452900364775,
+      "actual_return_pct": 0.5432987023690217,
+      "direction_correct": true,
+      "model": "lgbm",
+      "predicted_return_pct": 0.040153412332544214,
+      "ticker": "BKT.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.641957194008737,
+      "actual_return_pct": 2.259418092662502,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": -0.38253910134623537,
+      "ticker": "CABK.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.33005976195645825,
+      "actual_return_pct": -0.2644397174030644,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": 0.06562004455339387,
+      "ticker": "CLNX.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.26597599595550303,
+      "actual_return_pct": 0.33085754667281364,
+      "direction_correct": true,
+      "model": "lgbm",
+      "predicted_return_pct": 0.06488155071731061,
+      "ticker": "COL.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.46602366300658726,
+      "actual_return_pct": 0.453349146744797,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": -0.01267451626179028,
+      "ticker": "ELE.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.1325971454282833,
+      "actual_return_pct": -2.105898699135511,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": 0.026698446292772182,
+      "ticker": "ENG.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.7762255990197642,
+      "actual_return_pct": 0.6849253924053889,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": -0.09130020661437532,
+      "ticker": "FDR.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.650837924867866,
+      "actual_return_pct": -2.6415891970868355,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": 0.009248727781030475,
+      "ticker": "FER.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.9306416336164691,
+      "actual_return_pct": 1.0035513053055833,
+      "direction_correct": true,
+      "model": "lgbm",
+      "predicted_return_pct": 0.07290967168911422,
+      "ticker": "GRF.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.3353251854694603,
+      "actual_return_pct": -1.3513455047096001,
+      "direction_correct": true,
+      "model": "lgbm",
+      "predicted_return_pct": -0.016020319240139802,
+      "ticker": "IAG.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.6395419819780535,
+      "actual_return_pct": 0.6228996432152467,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": -0.01664233876280674,
+      "ticker": "IBE.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.684439445940821,
+      "actual_return_pct": -0.6001494685966446,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": 0.08428997734417631,
+      "ticker": "ITX.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.7924923009503648,
+      "actual_return_pct": -0.7505725349720938,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": 0.04191976597827107,
+      "ticker": "LOG.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.0218333004644817,
+      "actual_return_pct": 2.109307262577498,
+      "direction_correct": true,
+      "model": "lgbm",
+      "predicted_return_pct": 0.08747396211301606,
+      "ticker": "MAP.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.4216304865392835,
+      "actual_return_pct": -2.3506343802298546,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": 0.07099610630942887,
+      "ticker": "MEL.MC"
+    },
+    {
+      "absolute_return_error_pct": 3.2368872973180918,
+      "actual_return_pct": 3.220481869359215,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": -0.01640542795887656,
+      "ticker": "MRL.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.3785793992059592,
+      "actual_return_pct": 0.980394579416588,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": -0.39818481978937115,
+      "ticker": "MTS.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.0183050249080838,
+      "actual_return_pct": 0.9517358460890302,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": -0.06656917881905366,
+      "ticker": "NTGY.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.1419942977992759,
+      "actual_return_pct": -1.0810800361494066,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": 0.06091426164986924,
+      "ticker": "RED.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.7171876309586933,
+      "actual_return_pct": 0.8990326009541194,
+      "direction_correct": true,
+      "model": "lgbm",
+      "predicted_return_pct": 0.1818449699954261,
+      "ticker": "REP.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.3842121345019285,
+      "actual_return_pct": 2.391240153728136,
+      "direction_correct": true,
+      "model": "lgbm",
+      "predicted_return_pct": 0.007028019226207327,
+      "ticker": "SAB.MC"
+    },
+    {
+      "absolute_return_error_pct": 4.987498713113103,
+      "actual_return_pct": 4.966827821237096,
+      "direction_correct": false,
+      "model": "lgbm",
+      "predicted_return_pct": -0.02067089187600679,
+      "ticker": "SAN.MC"
+    },
+    {
+      "absolute_return_error_pct": 3.2305518250016485,
+      "actual_return_pct": 3.41081061670101,
+      "direction_correct": true,
+      "model": "lgbm",
+      "predicted_return_pct": 0.18025879169936143,
+      "ticker": "TEF.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.061245323243032,
+      "actual_return_pct": 1.201921905881398,
+      "direction_correct": true,
+      "model": "lgbm",
+      "predicted_return_pct": 0.14067658263836602,
+      "ticker": "UNI.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.14748698935115323,
+      "actual_return_pct": -0.052913282283395535,
+      "direction_correct": false,
+      "model": "lstm",
+      "predicted_return_pct": 0.0945737070677577,
+      "ticker": "ACS.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.2121801223970543,
+      "actual_return_pct": 0.29036670384998686,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.07818658145293256,
+      "ticker": "ACX.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.5717797166099547,
+      "actual_return_pct": -0.5473001957231993,
+      "direction_correct": false,
+      "model": "lstm",
+      "predicted_return_pct": 0.024479520886755424,
+      "ticker": "AENA.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.5191646200944033,
+      "actual_return_pct": 0.6446722445340836,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.12550762443968022,
+      "ticker": "AMS.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.6988387017280338,
+      "actual_return_pct": -1.5977486402791397,
+      "direction_correct": false,
+      "model": "lstm",
+      "predicted_return_pct": 0.1010900614488941,
+      "ticker": "ANA.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.756854177386292,
+      "actual_return_pct": -2.636363289572974,
+      "direction_correct": false,
+      "model": "lstm",
+      "predicted_return_pct": 0.12049088781331818,
+      "ticker": "ANE.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.6263392901673557,
+      "actual_return_pct": 1.6949136104436047,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.06857432027624899,
+      "ticker": "BBVA.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.47210190204527436,
+      "actual_return_pct": 0.5432987023690217,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.07119680032374731,
+      "ticker": "BKT.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.160591822405955,
+      "actual_return_pct": 2.259418092662502,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.09882627025654678,
+      "ticker": "CABK.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.4086757479408565,
+      "actual_return_pct": -0.2644397174030644,
+      "direction_correct": false,
+      "model": "lstm",
+      "predicted_return_pct": 0.1442360305377921,
+      "ticker": "CLNX.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.2593164353094535,
+      "actual_return_pct": 0.33085754667281364,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.07154111136336017,
+      "ticker": "COL.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.37579274029171383,
+      "actual_return_pct": 0.453349146744797,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.07755640645308315,
+      "ticker": "ELE.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.1751061492712997,
+      "actual_return_pct": -2.105898699135511,
+      "direction_correct": false,
+      "model": "lstm",
+      "predicted_return_pct": 0.06920745013578866,
+      "ticker": "ENG.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.6796992847408312,
+      "actual_return_pct": 0.6849253924053889,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.0052261076645576665,
+      "ticker": "FDR.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.652861350070057,
+      "actual_return_pct": -2.6415891970868355,
+      "direction_correct": false,
+      "model": "lstm",
+      "predicted_return_pct": 0.011272152983221595,
+      "ticker": "FER.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.8628800235203071,
+      "actual_return_pct": 1.0035513053055833,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.14067128178527621,
+      "ticker": "GRF.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.4355666442236514,
+      "actual_return_pct": -1.3513455047096001,
+      "direction_correct": false,
+      "model": "lstm",
+      "predicted_return_pct": 0.0842211395140513,
+      "ticker": "IAG.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.4933094529851578,
+      "actual_return_pct": 0.6228996432152467,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.1295901902300889,
+      "ticker": "IBE.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.6990987833472961,
+      "actual_return_pct": -0.6001494685966446,
+      "direction_correct": false,
+      "model": "lstm",
+      "predicted_return_pct": 0.0989493147506515,
+      "ticker": "ITX.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.7879349196484697,
+      "actual_return_pct": -0.7505725349720938,
+      "direction_correct": false,
+      "model": "lstm",
+      "predicted_return_pct": 0.03736238467637598,
+      "ticker": "LOG.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.0413451108074465,
+      "actual_return_pct": 2.109307262577498,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.06796215177005127,
+      "ticker": "MAP.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.4522564628788213,
+      "actual_return_pct": -2.3506343802298546,
+      "direction_correct": false,
+      "model": "lstm",
+      "predicted_return_pct": 0.10162208264896666,
+      "ticker": "MEL.MC"
+    },
+    {
+      "absolute_return_error_pct": 3.1759119935401925,
+      "actual_return_pct": 3.220481869359215,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.04456987581902272,
+      "ticker": "MRL.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.8832324655511314,
+      "actual_return_pct": 0.980394579416588,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.09716211386545659,
+      "ticker": "MTS.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.8465450906153471,
+      "actual_return_pct": 0.9517358460890302,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.10519075547368306,
+      "ticker": "NTGY.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.160211453552129,
+      "actual_return_pct": -1.0810800361494066,
+      "direction_correct": false,
+      "model": "lstm",
+      "predicted_return_pct": 0.07913141740272245,
+      "ticker": "RED.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.7781309004595505,
+      "actual_return_pct": 0.8990326009541194,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.12090170049456894,
+      "ticker": "REP.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.3180083595290224,
+      "actual_return_pct": 2.391240153728136,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.07323179419911341,
+      "ticker": "SAB.MC"
+    },
+    {
+      "absolute_return_error_pct": 4.892175205065974,
+      "actual_return_pct": 4.966827821237096,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.07465261617112251,
+      "ticker": "SAN.MC"
+    },
+    {
+      "absolute_return_error_pct": 3.2702587584589438,
+      "actual_return_pct": 3.41081061670101,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.14055185824206617,
+      "ticker": "TEF.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.083834540351658,
+      "actual_return_pct": 1.201921905881398,
+      "direction_correct": true,
+      "model": "lstm",
+      "predicted_return_pct": 0.11808736552973986,
+      "ticker": "UNI.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.33542871521020645,
+      "actual_return_pct": -0.052913282283395535,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": 0.2825154329268109,
+      "ticker": "ACS.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.60415226574262,
+      "actual_return_pct": 0.29036670384998686,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": -1.313785561892633,
+      "ticker": "ACX.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.3230231237367098,
+      "actual_return_pct": -0.5473001957231993,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": -0.8703233194599092,
+      "ticker": "AENA.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.2380084567841667,
+      "actual_return_pct": 0.6446722445340836,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": 0.8826807013182503,
+      "ticker": "AMS.MC"
+    },
+    {
+      "absolute_return_error_pct": 4.075026117091907,
+      "actual_return_pct": -1.5977486402791397,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": 2.477277476812767,
+      "ticker": "ANA.MC"
+    },
+    {
+      "absolute_return_error_pct": 4.088921202493845,
+      "actual_return_pct": -2.636363289572974,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": 1.452557912920871,
+      "ticker": "ANE.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.116730015917645,
+      "actual_return_pct": 1.6949136104436047,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": -0.4218164054740403,
+      "ticker": "BBVA.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.1861432477144884,
+      "actual_return_pct": 0.5432987023690217,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": -0.6428445453454668,
+      "ticker": "BKT.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.780062623741131,
+      "actual_return_pct": 2.259418092662502,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": -0.520644531078629,
+      "ticker": "CABK.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.6383852849885296,
+      "actual_return_pct": -0.2644397174030644,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": -0.902825002391594,
+      "ticker": "CLNX.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.2712670092549496,
+      "actual_return_pct": 0.33085754667281364,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": 0.05959053741786402,
+      "ticker": "COL.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.07962010452478019,
+      "actual_return_pct": 0.453349146744797,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": 0.3737290422200168,
+      "ticker": "ELE.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.095325804416248,
+      "actual_return_pct": -2.105898699135511,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": -0.010572894719262926,
+      "ticker": "ENG.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.9642918965930725,
+      "actual_return_pct": 0.6849253924053889,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": -0.2793665041876836,
+      "ticker": "FDR.MC"
+    },
+    {
+      "absolute_return_error_pct": 2.2858035177767633,
+      "actual_return_pct": -2.6415891970868355,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": -0.3557856793100722,
+      "ticker": "FER.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.4690813472338906,
+      "actual_return_pct": 1.0035513053055833,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": 0.5344699580716927,
+      "ticker": "GRF.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.5129288726191237,
+      "actual_return_pct": -1.3513455047096001,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": 0.16158336790952355,
+      "ticker": "IAG.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.4973062925614169,
+      "actual_return_pct": 0.6228996432152467,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": 0.12559335065382982,
+      "ticker": "IBE.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.17109453673583852,
+      "actual_return_pct": -0.6001494685966446,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": -0.4290549318608061,
+      "ticker": "ITX.MC"
+    },
+    {
+      "absolute_return_error_pct": 0.3682666019856562,
+      "actual_return_pct": -0.7505725349720938,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": -0.38230593298643756,
+      "ticker": "LOG.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.2579862754515059,
+      "actual_return_pct": 2.109307262577498,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": 0.8513209871259919,
+      "ticker": "MAP.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.1129821630406878,
+      "actual_return_pct": -2.3506343802298546,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": -1.2376522171891668,
+      "ticker": "MEL.MC"
+    },
+    {
+      "absolute_return_error_pct": 3.7361116978085196,
+      "actual_return_pct": 3.220481869359215,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": -0.5156298284493044,
+      "ticker": "MRL.MC"
+    },
+    {
+      "absolute_return_error_pct": 3.126518636823916,
+      "actual_return_pct": 0.980394579416588,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": -2.146124057407328,
+      "ticker": "MTS.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.2184675118263266,
+      "actual_return_pct": 0.9517358460890302,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": -0.26673166573729645,
+      "ticker": "NTGY.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.0022172156967102,
+      "actual_return_pct": -1.0810800361494066,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": -0.07886282045269644,
+      "ticker": "RED.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.1994390071404015,
+      "actual_return_pct": 0.8990326009541194,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": -0.3004064061862821,
+      "ticker": "REP.MC"
+    },
+    {
+      "absolute_return_error_pct": 3.887428414890548,
+      "actual_return_pct": 2.391240153728136,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": -1.4961882611624122,
+      "ticker": "SAB.MC"
+    },
+    {
+      "absolute_return_error_pct": 5.627845563026135,
+      "actual_return_pct": 4.966827821237096,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": -0.6610177417890384,
+      "ticker": "SAN.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.9853436484756237,
+      "actual_return_pct": 3.41081061670101,
+      "direction_correct": true,
+      "model": "mlp",
+      "predicted_return_pct": 1.4254669682253862,
+      "ticker": "TEF.MC"
+    },
+    {
+      "absolute_return_error_pct": 1.7949085671599252,
+      "actual_return_pct": 1.201921905881398,
+      "direction_correct": false,
+      "model": "mlp",
+      "predicted_return_pct": -0.5929866612785273,
+      "ticker": "UNI.MC"
+    }
+  ],
+  "schema_version": 1
+}
