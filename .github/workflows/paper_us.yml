@@ -68,6 +68,6 @@ jobs:
         if: ${{ always() && !inputs.preflight_only }}
         run: |
           python strategy_comparison/publish_state.py \
-            --message "Record MIDAS strategy comparison" \\
-            --path strategy_runtime/paper_us.json \\
+            --message "Record MIDAS strategy comparison" \
+            --path strategy_runtime/paper_us.json \
             --path paper_state

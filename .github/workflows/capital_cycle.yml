@@ -83,6 +83,6 @@ jobs:
         if: ${{ always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && !inputs.preflight_only }}
         run: |
           python strategy_comparison/publish_state.py \
-            --message "Record MIDAS capital-cycle paper state" \\
-            --path strategy_runtime/capital_cycle.json \\
+            --message "Record MIDAS capital-cycle paper state" \
+            --path strategy_runtime/capital_cycle.json \
             --path capital_cycle_state
