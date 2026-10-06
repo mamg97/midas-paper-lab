@@ -45,6 +45,46 @@ def _file_hash(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+def _bar_for_session(frame, day):
+    target = __import__("datetime").date.fromisoformat(day)
+    rows = frame.loc[frame.index.date == target]
+    if len(rows) != 1:
+        raise ValueError("Falta barra capital-cycle para " + day)
+    row = rows.iloc[0]
+    return {key: float(row[key]) for key in ("open", "high", "low", "close", "volume", "dividend", "split")}
+
+
+def _replay_nondecision_gap(config, panel, benchmark, state, asof):
+    """Restore missed mark-to-market sessions without inventing decisions."""
+    if not state or not state.get("last_session") or state["last_session"] >= asof:
+        return state, 0
+    benchmark_days = [
+        stamp.date().isoformat() for stamp in panel[benchmark].index
+        if state["last_session"] < stamp.date().isoformat() < asof
+    ]
+    recovered = 0
+    current = state
+    for day in benchmark_days:
+        context = calendar_context(day, config.get("calendar", "XNYS"))
+        if context["is_month_end"]:
+            raise ValueError("No se reconstruye retrospectivamente una decisión mensual perdida: " + day)
+        required = set(current.get("positions", {})) | {benchmark}
+        pending = current.get("pending")
+        if pending:
+            required |= set(pending.get("target_weights", {}))
+        missing = sorted(ticker for ticker in required if ticker not in panel)
+        if missing:
+            raise ValueError("No se puede recuperar valoración: " + ",".join(missing))
+        bars = {ticker: _bar_for_session(panel[ticker], day) for ticker in required}
+        current, changed = advance(
+            config, bars, day, bars[benchmark]["close"], decision=None, state=current,
+        )
+        if not changed:
+            raise ValueError("La recuperación capital-cycle no avanzó: " + day)
+        recovered += 1
+    return current, recovered
+
+
 def _month_index(day):
     year, month, _ = map(int, day.split("-"))
     return year * 12 + month
@@ -185,9 +225,16 @@ def run(config_path, output_dir, now=None):
         decision = None
         fundamental_failures = {}
 
+    recovered_sessions = 0
+    working_state = state
+    if not due:
+        working_state, recovered_sessions = _replay_nondecision_gap(
+            config, panel, benchmark, working_state, asof,
+        )
+
     bars = {ticker: current_bar(frame) for ticker, frame in panel.items()}
     updated, changed = advance(
-        config, bars, asof, bars[benchmark]["close"], decision=decision, state=state,
+        config, bars, asof, bars[benchmark]["close"], decision=decision, state=working_state,
     )
     updated["universe_hash"] = universe_hash
     if changed:
@@ -201,6 +248,7 @@ def run(config_path, output_dir, now=None):
         "session": asof,
         "month_end": context["is_month_end"],
         "decision_recorded": decision is not None,
+        "recovered_mark_sessions": recovered_sessions,
         "changed": changed,
         "nav": updated["nav"],
         "positions": len(updated["positions"]),
