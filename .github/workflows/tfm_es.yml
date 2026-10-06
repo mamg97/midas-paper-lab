@@ -72,6 +72,6 @@ jobs:
         if: ${{ always() && !inputs.preflight_only }}
         run: |
           python strategy_comparison/publish_state.py \
-            --message "Record MIDAS TFM shadow forecasts" \\
-            --path strategy_runtime/tfm_es.json \\
+            --message "Record MIDAS TFM shadow forecasts" \
+            --path strategy_runtime/tfm_es.json \
             --path tfm_state
