@@ -68,19 +68,10 @@ jobs:
         if: ${{ always() && github.event_name != 'pull_request' }}
         run: |
           python strategy_comparison/report.py             --registry strategy_comparison/registry.json             --paper-config paper_demo/config.json             --paper-state paper_state/state.json             --tfm-config tfm_shadow/config.json             --tfm-state tfm_state/ledger.json             --weekly-ml-config weekly_ml/config.json             --weekly-ml-state weekly_ml_state/ledger.json             --tfg-config tfg_ahp/config.json             --tfg-state tfg_state/ledger.json             --capital-cycle-config capital_cycle/config.json             --capital-cycle-state capital_cycle_state/ledger.json             --buy-the-dip-config buy_the_dip_strategy/config.json             --buy-the-dip-state buy_the_dip_state/ledger.json             --output strategy_state
-      - name: Commit Buy The Dip and dashboard state
+      - name: Commit buy the dip strategy and dashboard state
         if: ${{ always() && github.event_name != 'pull_request' }}
         run: |
-          if [ -f strategy_runtime/buy_the_dip_strategy.json ]; then
-            git add -- strategy_runtime/buy_the_dip_strategy.json
-          fi
-          if [ -d buy_the_dip_state ]; then
-            git add -- buy_the_dip_state
-          fi
-          if [ -f strategy_state/dashboard.json ] && [ -f strategy_state/dashboard.md ]; then
-            git add -- strategy_state/dashboard.json strategy_state/dashboard.md
-          fi
-          if ! git diff --cached --quiet; then
-            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Record MIDAS Buy The Dip paper state'
-            git push
-          fi
+          python strategy_comparison/publish_state.py \
+            --message "Record MIDAS Buy The Dip paper state" \
+            --path strategy_runtime/buy_the_dip_strategy.json \
+            --path buy_the_dip_state
