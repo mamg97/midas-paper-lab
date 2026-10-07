@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-07T03:59:38.906389+00:00",
+  "generated_at_utc": "2026-10-07T07:23:27.634025+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
@@ -882,11 +882,11 @@
       "group": "capital_cycle_demo",
       "status": "demo_con_diario",
       "first_session": "2026-09-30",
-      "last_session": "2026-10-02",
+      "last_session": "2026-10-06",
       "initial_capital": 100000.0,
-      "last_equity": 101536.39772830743,
-      "return_pct": 1.536398,
-      "day_return_pct": 0.904425,
+      "last_equity": 101952.13242630963,
+      "return_pct": 1.952132,
+      "day_return_pct": 0.074586,
       "currency": "USD",
       "equity_history": [
         {
@@ -900,6 +900,14 @@
         {
           "date": "2026-10-02",
           "nav": 101536.39772830743
+        },
+        {
+          "date": "2026-10-05",
+          "nav": 101876.1470326577
+        },
+        {
+          "date": "2026-10-06",
+          "nav": 101952.13242630963
         }
       ],
       "note": "Capital Cycle v1: underinvestment multianual + calidad + valoración normalizada + confirmación 6/12 meses; rebalance mensual y fills next-open.",
@@ -921,7 +929,7 @@
       ],
       "open_positions_count": 12,
       "pending_orders_count": 0,
-      "risk_observations": 3,
+      "risk_observations": 5,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
