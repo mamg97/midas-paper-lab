@@ -1,0 +1,781 @@
+{
+  "asof": "2026-10-07",
+  "config_hash": "d4399f019c25b16424a2f809a056b02adb63b641fda633d575a39a32f7b4be17",
+  "currency": "EUR",
+  "horizon": "next_market_session_close",
+  "input_digest": "7480897cb839e15b8ca9d89d60cf84d0bb8067ee1c8039e8c95be28e5bd19e10",
+  "library_versions": {
+    "lightgbm": "4.7.0",
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.1",
+    "statsmodels": "0.15.0",
+    "tensorflow": "2.21.0"
+  },
+  "models": {
+    "arima": {
+      "ACS.MC": {
+        "last_close": 93.3499984741211,
+        "next_close_predicted": 93.5044974653562,
+        "return_predicted_pct": 0.16550508169310127
+      },
+      "ACX.MC": {
+        "last_close": 16.65999984741211,
+        "next_close_predicted": 16.67188286000945,
+        "return_predicted_pct": 0.0713266068798118
+      },
+      "AENA.MC": {
+        "last_close": 25.34000015258789,
+        "next_close_predicted": 25.361454706836792,
+        "return_predicted_pct": 0.0846667486965525
+      },
+      "AMS.MC": {
+        "last_close": 52.0,
+        "next_close_predicted": 51.98818208144265,
+        "return_predicted_pct": -0.022726766456435923
+      },
+      "ANA.MC": {
+        "last_close": 211.0,
+        "next_close_predicted": 211.12382463028584,
+        "return_predicted_pct": 0.05868465890324745
+      },
+      "ANE.MC": {
+        "last_close": 21.459999084472656,
+        "next_close_predicted": 21.490465499668883,
+        "return_predicted_pct": 0.14196839000926892
+      },
+      "BBVA.MC": {
+        "last_close": 23.43000030517578,
+        "next_close_predicted": 23.458465783987542,
+        "return_predicted_pct": 0.12149158532222465
+      },
+      "BKT.MC": {
+        "last_close": 15.305000305175781,
+        "next_close_predicted": 15.314993816826485,
+        "return_predicted_pct": 0.0652957298362424
+      },
+      "CABK.MC": {
+        "last_close": 11.920000076293945,
+        "next_close_predicted": 11.935196554808403,
+        "return_predicted_pct": 0.12748723504356782
+      },
+      "CLNX.MC": {
+        "last_close": 22.90999984741211,
+        "next_close_predicted": 22.90309383940975,
+        "return_predicted_pct": -0.030144077033424695
+      },
+      "COL.MC": {
+        "last_close": 4.883999824523926,
+        "next_close_predicted": 4.885355756589452,
+        "return_predicted_pct": 0.02776273780186849
+      },
+      "ELE.MC": {
+        "last_close": 41.7599983215332,
+        "next_close_predicted": 41.802414932599895,
+        "return_predicted_pct": 0.1015723485908659
+      },
+      "ENG.MC": {
+        "last_close": 16.31999969482422,
+        "next_close_predicted": 16.318075026867582,
+        "return_predicted_pct": -0.011793308778341404
+      },
+      "FDR.MC": {
+        "last_close": 17.18000030517578,
+        "next_close_predicted": 17.183872989328297,
+        "return_predicted_pct": 0.02254181655251836
+      },
+      "FER.MC": {
+        "last_close": 45.16999816894531,
+        "next_close_predicted": 45.19773644680273,
+        "return_predicted_pct": 0.0614086317951012
+      },
+      "GRF.MC": {
+        "last_close": 9.9399995803833,
+        "next_close_predicted": 9.930920044717,
+        "return_predicted_pct": -0.091343421022058
+      },
+      "IAG.MC": {
+        "last_close": 5.118000030517578,
+        "next_close_predicted": 5.125900449168518,
+        "return_predicted_pct": 0.1543653498208467
+      },
+      "IBE.MC": {
+        "last_close": 20.860000610351562,
+        "next_close_predicted": 20.87857410265524,
+        "return_predicted_pct": 0.0890387907968698
+      },
+      "ITX.MC": {
+        "last_close": 53.36000061035156,
+        "next_close_predicted": 53.34188956182731,
+        "return_predicted_pct": -0.03394124497206962
+      },
+      "LOG.MC": {
+        "last_close": 34.58000183105469,
+        "next_close_predicted": 34.60282915269483,
+        "return_predicted_pct": 0.06601307238696803
+      },
+      "MAP.MC": {
+        "last_close": 4.248000144958496,
+        "next_close_predicted": 4.254039175567108,
+        "return_predicted_pct": 0.1421617326397499
+      },
+      "MEL.MC": {
+        "last_close": 10.0,
+        "next_close_predicted": 10.005436171123876,
+        "return_predicted_pct": 0.05436171123875766
+      },
+      "MRL.MC": {
+        "last_close": 12.270000457763672,
+        "next_close_predicted": 12.292875415421106,
+        "return_predicted_pct": 0.18642996580297466
+      },
+      "MTS.MC": {
+        "last_close": 55.540000915527344,
+        "next_close_predicted": 55.609198613871165,
+        "return_predicted_pct": 0.12459074037297854
+      },
+      "NTGY.MC": {
+        "last_close": 29.579999923706055,
+        "next_close_predicted": 29.58384064456252,
+        "return_predicted_pct": 0.012984181427903883
+      },
+      "RED.MC": {
+        "last_close": 14.65999984741211,
+        "next_close_predicted": 14.660577144915313,
+        "return_predicted_pct": 0.003937909339798576
+      },
+      "REP.MC": {
+        "last_close": 28.700000762939453,
+        "next_close_predicted": 28.722534236895516,
+        "return_predicted_pct": 0.07851384444965541
+      },
+      "SAB.MC": {
+        "last_close": 3.5989999771118164,
+        "next_close_predicted": 3.601394560347197,
+        "return_predicted_pct": 0.06653468326228065
+      },
+      "SAN.MC": {
+        "last_close": 12.26200008392334,
+        "next_close_predicted": 12.295793712252177,
+        "return_predicted_pct": 0.27559637985278146
+      },
+      "TEF.MC": {
+        "last_close": 3.433000087738037,
+        "next_close_predicted": 3.435859109371779,
+        "return_predicted_pct": 0.08328055813204498
+      },
+      "UNI.MC": {
+        "last_close": 3.2760000228881836,
+        "next_close_predicted": 3.279986352649661,
+        "return_predicted_pct": 0.1216828368017765
+      }
+    },
+    "lgbm": {
+      "ACS.MC": {
+        "last_close": 93.3499984741211,
+        "next_close_predicted": 93.38790389093138,
+        "return_predicted_pct": 0.040605696229126645
+      },
+      "ACX.MC": {
+        "last_close": 16.65999984741211,
+        "next_close_predicted": 16.674339268971796,
+        "return_predicted_pct": 0.08607095852951906
+      },
+      "AENA.MC": {
+        "last_close": 25.34000015258789,
+        "next_close_predicted": 25.354031960772375,
+        "return_predicted_pct": 0.05537414404098893
+      },
+      "AMS.MC": {
+        "last_close": 52.0,
+        "next_close_predicted": 52.057740868966455,
+        "return_predicted_pct": 0.1110401326277981
+      },
+      "ANA.MC": {
+        "last_close": 211.0,
+        "next_close_predicted": 211.06962881688776,
+        "return_predicted_pct": 0.032999439283288176
+      },
+      "ANE.MC": {
+        "last_close": 21.459999084472656,
+        "next_close_predicted": 21.377918704253513,
+        "return_predicted_pct": -0.3824808188297267
+      },
+      "BBVA.MC": {
+        "last_close": 23.43000030517578,
+        "next_close_predicted": 23.36824236071514,
+        "return_predicted_pct": -0.26358490677014623
+      },
+      "BKT.MC": {
+        "last_close": 15.305000305175781,
+        "next_close_predicted": 15.327714178968618,
+        "return_predicted_pct": 0.14840818908807404
+      },
+      "CABK.MC": {
+        "last_close": 11.920000076293945,
+        "next_close_predicted": 11.910453826472352,
+        "return_predicted_pct": -0.08008598792359244
+      },
+      "CLNX.MC": {
+        "last_close": 22.90999984741211,
+        "next_close_predicted": 22.903630333716393,
+        "return_predicted_pct": -0.02780232971688511
+      },
+      "COL.MC": {
+        "last_close": 4.883999824523926,
+        "next_close_predicted": 4.885617264253472,
+        "return_predicted_pct": 0.03311711276943502
+      },
+      "ELE.MC": {
+        "last_close": 41.7599983215332,
+        "next_close_predicted": 41.771905343117766,
+        "return_predicted_pct": 0.02851298386767696
+      },
+      "ENG.MC": {
+        "last_close": 16.31999969482422,
+        "next_close_predicted": 16.333024858246635,
+        "return_predicted_pct": 0.07981105187486917
+      },
+      "FDR.MC": {
+        "last_close": 17.18000030517578,
+        "next_close_predicted": 17.189586358163137,
+        "return_predicted_pct": 0.05579774631591948
+      },
+      "FER.MC": {
+        "last_close": 45.16999816894531,
+        "next_close_predicted": 45.20608200507009,
+        "return_predicted_pct": 0.079884519786388
+      },
+      "GRF.MC": {
+        "last_close": 9.9399995803833,
+        "next_close_predicted": 9.944617057619258,
+        "return_predicted_pct": 0.04645349528051531
+      },
+      "IAG.MC": {
+        "last_close": 5.118000030517578,
+        "next_close_predicted": 5.12084346583432,
+        "return_predicted_pct": 0.05555754786611258
+      },
+      "IBE.MC": {
+        "last_close": 20.860000610351562,
+        "next_close_predicted": 20.86881183988074,
+        "return_predicted_pct": 0.04223983351565582
+      },
+      "ITX.MC": {
+        "last_close": 53.36000061035156,
+        "next_close_predicted": 53.41769948452852,
+        "return_predicted_pct": 0.10813132218324291
+      },
+      "LOG.MC": {
+        "last_close": 34.58000183105469,
+        "next_close_predicted": 34.61685410465857,
+        "return_predicted_pct": 0.10657105741037995
+      },
+      "MAP.MC": {
+        "last_close": 4.248000144958496,
+        "next_close_predicted": 4.250701127329638,
+        "return_predicted_pct": 0.0635824453619195
+      },
+      "MEL.MC": {
+        "last_close": 10.0,
+        "next_close_predicted": 10.010200449421184,
+        "return_predicted_pct": 0.10200449421185792
+      },
+      "MRL.MC": {
+        "last_close": 12.270000457763672,
+        "next_close_predicted": 12.284848410870497,
+        "return_predicted_pct": 0.12101020825496213
+      },
+      "MTS.MC": {
+        "last_close": 55.540000915527344,
+        "next_close_predicted": 55.5061262500792,
+        "return_predicted_pct": -0.06099147441438266
+      },
+      "NTGY.MC": {
+        "last_close": 29.579999923706055,
+        "next_close_predicted": 29.598163147039067,
+        "return_predicted_pct": 0.06140373015504504
+      },
+      "RED.MC": {
+        "last_close": 14.65999984741211,
+        "next_close_predicted": 14.671584443584843,
+        "return_predicted_pct": 0.0790218028193056
+      },
+      "REP.MC": {
+        "last_close": 28.700000762939453,
+        "next_close_predicted": 28.808329200766668,
+        "return_predicted_pct": 0.37745099284839667
+      },
+      "SAB.MC": {
+        "last_close": 3.5989999771118164,
+        "next_close_predicted": 3.5977788604380527,
+        "return_predicted_pct": -0.03392933263488917
+      },
+      "SAN.MC": {
+        "last_close": 12.26200008392334,
+        "next_close_predicted": 12.270696999170013,
+        "return_predicted_pct": 0.07092574773406657
+      },
+      "TEF.MC": {
+        "last_close": 3.433000087738037,
+        "next_close_predicted": 3.4316056680708615,
+        "return_predicted_pct": -0.04061810753096534
+      },
+      "UNI.MC": {
+        "last_close": 3.2760000228881836,
+        "next_close_predicted": 3.270063645831933,
+        "return_predicted_pct": -0.18120808958411108
+      }
+    },
+    "lstm": {
+      "ACS.MC": {
+        "last_close": 93.3499984741211,
+        "next_close_predicted": 93.4831989749094,
+        "return_predicted_pct": 0.14268934436589217
+      },
+      "ACX.MC": {
+        "last_close": 16.65999984741211,
+        "next_close_predicted": 16.682519683186534,
+        "return_predicted_pct": 0.13517308511814438
+      },
+      "AENA.MC": {
+        "last_close": 25.34000015258789,
+        "next_close_predicted": 25.370862530721148,
+        "return_predicted_pct": 0.12179312528576836
+      },
+      "AMS.MC": {
+        "last_close": 52.0,
+        "next_close_predicted": 52.08676088170978,
+        "return_predicted_pct": 0.16684784944187878
+      },
+      "ANA.MC": {
+        "last_close": 211.0,
+        "next_close_predicted": 211.18662171871233,
+        "return_predicted_pct": 0.0884463121859378
+      },
+      "ANE.MC": {
+        "last_close": 21.459999084472656,
+        "next_close_predicted": 21.481878155626266,
+        "return_predicted_pct": 0.10195280562447244
+      },
+      "BBVA.MC": {
+        "last_close": 23.43000030517578,
+        "next_close_predicted": 23.472241992416244,
+        "return_predicted_pct": 0.18028888898960996
+      },
+      "BKT.MC": {
+        "last_close": 15.305000305175781,
+        "next_close_predicted": 15.334358629139908,
+        "return_predicted_pct": 0.1918217796715717
+      },
+      "CABK.MC": {
+        "last_close": 11.920000076293945,
+        "next_close_predicted": 11.950719377608532,
+        "return_predicted_pct": 0.2577122577010856
+      },
+      "CLNX.MC": {
+        "last_close": 22.90999984741211,
+        "next_close_predicted": 22.980412771732748,
+        "return_predicted_pct": 0.3073458087717691
+      },
+      "COL.MC": {
+        "last_close": 4.883999824523926,
+        "next_close_predicted": 4.891308259308159,
+        "return_predicted_pct": 0.1496403572239317
+      },
+      "ELE.MC": {
+        "last_close": 41.7599983215332,
+        "next_close_predicted": 41.81208870682131,
+        "return_predicted_pct": 0.12473751767667106
+      },
+      "ENG.MC": {
+        "last_close": 16.31999969482422,
+        "next_close_predicted": 16.33364383111584,
+        "return_predicted_pct": 0.08360377786004637
+      },
+      "FDR.MC": {
+        "last_close": 17.18000030517578,
+        "next_close_predicted": 17.20621524544993,
+        "return_predicted_pct": 0.1525898708293317
+      },
+      "FER.MC": {
+        "last_close": 45.16999816894531,
+        "next_close_predicted": 45.233221073736345,
+        "return_predicted_pct": 0.13996658701326786
+      },
+      "GRF.MC": {
+        "last_close": 9.9399995803833,
+        "next_close_predicted": 9.955524527274472,
+        "return_predicted_pct": 0.15618659503577076
+      },
+      "IAG.MC": {
+        "last_close": 5.118000030517578,
+        "next_close_predicted": 5.123561702940191,
+        "return_predicted_pct": 0.10866886263091058
+      },
+      "IBE.MC": {
+        "last_close": 20.860000610351562,
+        "next_close_predicted": 20.885869995922203,
+        "return_predicted_pct": 0.12401430879057883
+      },
+      "ITX.MC": {
+        "last_close": 53.36000061035156,
+        "next_close_predicted": 53.416285897051694,
+        "return_predicted_pct": 0.10548217027046454
+      },
+      "LOG.MC": {
+        "last_close": 34.58000183105469,
+        "next_close_predicted": 34.62400587088207,
+        "return_predicted_pct": 0.12725285568917485
+      },
+      "MAP.MC": {
+        "last_close": 4.248000144958496,
+        "next_close_predicted": 4.255730187597437,
+        "return_predicted_pct": 0.18196898246614535
+      },
+      "MEL.MC": {
+        "last_close": 10.0,
+        "next_close_predicted": 10.010309492701683,
+        "return_predicted_pct": 0.10309492701682821
+      },
+      "MRL.MC": {
+        "last_close": 12.270000457763672,
+        "next_close_predicted": 12.292644256820676,
+        "return_predicted_pct": 0.1845460326994249
+      },
+      "MTS.MC": {
+        "last_close": 55.540000915527344,
+        "next_close_predicted": 55.71352808485425,
+        "return_predicted_pct": 0.3124363818265336
+      },
+      "NTGY.MC": {
+        "last_close": 29.579999923706055,
+        "next_close_predicted": 29.616639996201364,
+        "return_predicted_pct": 0.1238677234273572
+      },
+      "RED.MC": {
+        "last_close": 14.65999984741211,
+        "next_close_predicted": 14.676894336779595,
+        "return_predicted_pct": 0.11524208419736214
+      },
+      "REP.MC": {
+        "last_close": 28.700000762939453,
+        "next_close_predicted": 28.7427501563474,
+        "return_predicted_pct": 0.148952586311957
+      },
+      "SAB.MC": {
+        "last_close": 3.5989999771118164,
+        "next_close_predicted": 3.6053547209430437,
+        "return_predicted_pct": 0.17656971024285822
+      },
+      "SAN.MC": {
+        "last_close": 12.26200008392334,
+        "next_close_predicted": 12.286867656212552,
+        "return_predicted_pct": 0.20280192561583787
+      },
+      "TEF.MC": {
+        "last_close": 3.433000087738037,
+        "next_close_predicted": 3.4386753376004426,
+        "return_predicted_pct": 0.16531458541689698
+      },
+      "UNI.MC": {
+        "last_close": 3.2760000228881836,
+        "next_close_predicted": 3.283832030296379,
+        "return_predicted_pct": 0.2390722635371133
+      }
+    },
+    "mlp": {
+      "ACS.MC": {
+        "last_close": 93.3499984741211,
+        "next_close_predicted": 91.8062572474258,
+        "return_predicted_pct": -1.6537131782848848
+      },
+      "ACX.MC": {
+        "last_close": 16.65999984741211,
+        "next_close_predicted": 16.592448374439318,
+        "return_predicted_pct": -0.4054710299609266
+      },
+      "AENA.MC": {
+        "last_close": 25.34000015258789,
+        "next_close_predicted": 25.221535384389313,
+        "return_predicted_pct": -0.46750105558494925
+      },
+      "AMS.MC": {
+        "last_close": 52.0,
+        "next_close_predicted": 52.185012766241336,
+        "return_predicted_pct": 0.35579378123334515
+      },
+      "ANA.MC": {
+        "last_close": 211.0,
+        "next_close_predicted": 209.08487193291026,
+        "return_predicted_pct": -0.9076436336918243
+      },
+      "ANE.MC": {
+        "last_close": 21.459999084472656,
+        "next_close_predicted": 21.361544151004633,
+        "return_predicted_pct": -0.4587834933285707
+      },
+      "BBVA.MC": {
+        "last_close": 23.43000030517578,
+        "next_close_predicted": 23.25431577872333,
+        "return_predicted_pct": -0.749827247819714
+      },
+      "BKT.MC": {
+        "last_close": 15.305000305175781,
+        "next_close_predicted": 15.233714338735972,
+        "return_predicted_pct": -0.46576912785622215
+      },
+      "CABK.MC": {
+        "last_close": 11.920000076293945,
+        "next_close_predicted": 11.91070212339887,
+        "return_predicted_pct": -0.07800296002989428
+      },
+      "CLNX.MC": {
+        "last_close": 22.90999984741211,
+        "next_close_predicted": 23.234403032315196,
+        "return_predicted_pct": 1.4159894677595657
+      },
+      "COL.MC": {
+        "last_close": 4.883999824523926,
+        "next_close_predicted": 4.8684906109724375,
+        "return_predicted_pct": -0.31755147642742343
+      },
+      "ELE.MC": {
+        "last_close": 41.7599983215332,
+        "next_close_predicted": 41.56672953951015,
+        "return_predicted_pct": -0.46280840467227224
+      },
+      "ENG.MC": {
+        "last_close": 16.31999969482422,
+        "next_close_predicted": 16.31048655428285,
+        "return_predicted_pct": -0.058291303426821844
+      },
+      "FDR.MC": {
+        "last_close": 17.18000030517578,
+        "next_close_predicted": 17.15523083043206,
+        "return_predicted_pct": -0.14417621829878735
+      },
+      "FER.MC": {
+        "last_close": 45.16999816894531,
+        "next_close_predicted": 45.11823469698634,
+        "return_predicted_pct": -0.11459702027297382
+      },
+      "GRF.MC": {
+        "last_close": 9.9399995803833,
+        "next_close_predicted": 9.920737951765018,
+        "return_predicted_pct": -0.19377896812285028
+      },
+      "IAG.MC": {
+        "last_close": 5.118000030517578,
+        "next_close_predicted": 5.096206601440528,
+        "return_predicted_pct": -0.4258192447655509
+      },
+      "IBE.MC": {
+        "last_close": 20.860000610351562,
+        "next_close_predicted": 20.75051413107614,
+        "return_predicted_pct": -0.5248632601721487
+      },
+      "ITX.MC": {
+        "last_close": 53.36000061035156,
+        "next_close_predicted": 54.09856395622094,
+        "return_predicted_pct": 1.3841142005648768
+      },
+      "LOG.MC": {
+        "last_close": 34.58000183105469,
+        "next_close_predicted": 34.596974822689596,
+        "return_predicted_pct": 0.049083258346328776
+      },
+      "MAP.MC": {
+        "last_close": 4.248000144958496,
+        "next_close_predicted": 4.231713709246114,
+        "return_predicted_pct": -0.3833906581126302
+      },
+      "MEL.MC": {
+        "last_close": 10.0,
+        "next_close_predicted": 10.11587364388591,
+        "return_predicted_pct": 1.158736438859116
+      },
+      "MRL.MC": {
+        "last_close": 12.270000457763672,
+        "next_close_predicted": 12.114509749210217,
+        "return_predicted_pct": -1.267242891218237
+      },
+      "MTS.MC": {
+        "last_close": 55.540000915527344,
+        "next_close_predicted": 55.23972707876171,
+        "return_predicted_pct": -0.5406442776663477
+      },
+      "NTGY.MC": {
+        "last_close": 29.579999923706055,
+        "next_close_predicted": 29.662703016534095,
+        "return_predicted_pct": 0.27959125436561943
+      },
+      "RED.MC": {
+        "last_close": 14.65999984741211,
+        "next_close_predicted": 14.664222602156514,
+        "return_predicted_pct": 0.02880460292194375
+      },
+      "REP.MC": {
+        "last_close": 28.700000762939453,
+        "next_close_predicted": 28.549845587582272,
+        "return_predicted_pct": -0.5231887504026749
+      },
+      "SAB.MC": {
+        "last_close": 3.5989999771118164,
+        "next_close_predicted": 3.567981296312566,
+        "return_predicted_pct": -0.8618694358576442
+      },
+      "SAN.MC": {
+        "last_close": 12.26200008392334,
+        "next_close_predicted": 12.133294319757464,
+        "return_predicted_pct": -1.0496310820827808
+      },
+      "TEF.MC": {
+        "last_close": 3.433000087738037,
+        "next_close_predicted": 3.449699203615702,
+        "return_predicted_pct": 0.4864292295625285
+      },
+      "UNI.MC": {
+        "last_close": 3.2760000228881836,
+        "next_close_predicted": 3.2525425240178913,
+        "return_predicted_pct": -0.716040864053832
+      }
+    }
+  },
+  "recorded_at_utc": "2026-10-07T23:39:08.662926+00:00",
+  "schema_version": 1,
+  "session_prices": {
+    "ACS.MC": {
+      "close": 93.3499984741211,
+      "open": 95.5
+    },
+    "ACX.MC": {
+      "close": 16.65999984741211,
+      "open": 16.940000534057617
+    },
+    "AENA.MC": {
+      "close": 25.34000015258789,
+      "open": 25.780000686645508
+    },
+    "AMS.MC": {
+      "close": 52.0,
+      "open": 52.47999954223633
+    },
+    "ANA.MC": {
+      "close": 211.0,
+      "open": 213.8000030517578
+    },
+    "ANE.MC": {
+      "close": 21.459999084472656,
+      "open": 22.200000762939453
+    },
+    "BBVA.MC": {
+      "close": 23.43000030517578,
+      "open": 23.969999313354492
+    },
+    "BKT.MC": {
+      "close": 15.305000305175781,
+      "open": 15.670000076293945
+    },
+    "CABK.MC": {
+      "close": 11.920000076293945,
+      "open": 12.234999656677246
+    },
+    "CLNX.MC": {
+      "close": 22.90999984741211,
+      "open": 22.93000030517578
+    },
+    "COL.MC": {
+      "close": 4.883999824523926,
+      "open": 4.920000076293945
+    },
+    "ELE.MC": {
+      "close": 41.7599983215332,
+      "open": 41.70000076293945
+    },
+    "ENG.MC": {
+      "close": 16.31999969482422,
+      "open": 16.239999771118164
+    },
+    "FDR.MC": {
+      "close": 17.18000030517578,
+      "open": 17.399999618530273
+    },
+    "FER.MC": {
+      "close": 45.16999816894531,
+      "open": 45.25
+    },
+    "GRF.MC": {
+      "close": 9.9399995803833,
+      "open": 9.855999946594238
+    },
+    "IAG.MC": {
+      "close": 5.118000030517578,
+      "open": 5.131999969482422
+    },
+    "IBE.MC": {
+      "close": 20.860000610351562,
+      "open": 21.010000228881836
+    },
+    "ITX.MC": {
+      "close": 53.36000061035156,
+      "open": 53.5
+    },
+    "LOG.MC": {
+      "close": 34.58000183105469,
+      "open": 34.400001525878906
+    },
+    "MAP.MC": {
+      "close": 4.248000144958496,
+      "open": 4.283999919891357
+    },
+    "MEL.MC": {
+      "close": 10.0,
+      "open": 10.010000228881836
+    },
+    "MRL.MC": {
+      "close": 12.270000457763672,
+      "open": 12.5600004196167
+    },
+    "MTS.MC": {
+      "close": 55.540000915527344,
+      "open": 57.540000915527344
+    },
+    "NTGY.MC": {
+      "close": 29.579999923706055,
+      "open": 29.420000076293945
+    },
+    "RED.MC": {
+      "close": 14.65999984741211,
+      "open": 14.680000305175781
+    },
+    "REP.MC": {
+      "close": 28.700000762939453,
+      "open": 28.889999389648438
+    },
+    "SAB.MC": {
+      "close": 3.5989999771118164,
+      "open": 3.63700008392334
+    },
+    "SAN.MC": {
+      "close": 12.26200008392334,
+      "open": 12.355999946594238
+    },
+    "TEF.MC": {
+      "close": 3.433000087738037,
+      "open": 3.3959999084472656
+    },
+    "UNI.MC": {
+      "close": 3.2760000228881836,
+      "open": 3.374000072479248
+    }
+  },
+  "source_family": "TFM_2023_corrected_port_2026",
+  "training": {
+    "asof": "2026-10-07",
+    "first_target": "2023-12-19",
+    "last_target": "2026-10-07",
+    "samples": 22134,
+    "tickers": 31,
+    "window": 50
+  }
+}

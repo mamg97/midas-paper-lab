@@ -1,6 +1,6 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-10-07T07:24:52.079765+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-10-07T23:39:09.998145+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
@@ -30,10 +30,10 @@ La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. L
 | Genético original S&P 500 | Agente genético S&P 500 original · 2026 | sin_diario_disponible | Actividad actual no enlazada | — | — | — | — | — | — | — |
 | TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo | TFG 2021 · MIDAS en R | sin_ejecucion_comparable | Actividad actual no enlazada | — | — | — | — | — | — | — |
 | MIDAS R cripto | MIDAS en R · experimento cripto | sin_ejecucion_comparable | Actividad actual no enlazada | — | — | — | — | — | — | — |
-| TFM: LightGBM (versión corregida 2026) | TFM · modelo reimplementado en 2026 | demo_con_diario | 1 compras para próxima apertura | 2026-10-02 | 2026-10-06 | 0.00 % | 0.00 % | — | 0.00 % | — |
-| TFM: red MLP (versión corregida 2026) | TFM · modelo reimplementado en 2026 | demo_con_diario | 6 compras para próxima apertura | 2026-10-02 | 2026-10-06 | 0.00 % | -0.08 % | — | -0.08 % | — |
-| TFM: red LSTM (versión corregida 2026) | TFM · modelo reimplementado en 2026 | demo_con_diario | Sin compras · en efectivo | 2026-10-02 | 2026-10-06 | 0.00 % | 0.00 % | — | 0.00 % | — |
-| TFM: ARIMA (versión corregida 2026) | TFM · modelo reimplementado en 2026 | demo_con_diario | Sin compras · en efectivo | 2026-10-02 | 2026-10-06 | 0.00 % | 0.00 % | — | 0.00 % | — |
+| TFM: LightGBM (versión corregida 2026) | TFM · modelo reimplementado en 2026 | demo_con_diario | 1 compras para próxima apertura | 2026-10-02 | 2026-10-07 | -0.14 % | -0.14 % | — | -0.14 % | — |
+| TFM: red MLP (versión corregida 2026) | TFM · modelo reimplementado en 2026 | demo_con_diario | 5 compras para próxima apertura | 2026-10-02 | 2026-10-07 | -1.70 % | -1.78 % | — | -1.78 % | — |
+| TFM: red LSTM (versión corregida 2026) | TFM · modelo reimplementado en 2026 | demo_con_diario | 2 compras para próxima apertura | 2026-10-02 | 2026-10-07 | 0.00 % | 0.00 % | — | 0.00 % | — |
+| TFM: ARIMA (versión corregida 2026) | TFM · modelo reimplementado en 2026 | demo_con_diario | Sin compras · en efectivo | 2026-10-02 | 2026-10-07 | 0.00 % | 0.00 % | — | 0.00 % | — |
 | MIDAS Python: LightGBM rentabilidad semanal | MIDAS Python · pipeline LightGBM semanal | sin_ejecucion_comparable | Actividad actual no enlazada | — | — | — | — | — | — | — |
 | MIDAS Python: LightGBM dirección semanal | MIDAS Python · pipeline LightGBM semanal | sin_ejecucion_comparable | Actividad actual no enlazada | — | — | — | — | — | — | — |
 | MIDAS Python: LightGBM precio semanal | MIDAS Python · pipeline LightGBM semanal | sin_ejecucion_comparable | Actividad actual no enlazada | — | — | — | — | — | — | — |
