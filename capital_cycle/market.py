@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import csv
 import math
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -114,30 +115,59 @@ def _extract_download(data, ticker):
     return out.loc[valid]
 
 
-def download_panel(tickers, *, period, asof, min_history=1):
+def _validated_download_frame(data, ticker, asof, min_history):
+    frame = _extract_download(data, ticker)
+    if frame is None:
+        return None, "download_empty"
+    frame = frame.loc[frame.index.date <= datetime.fromisoformat(asof).date()]
+    if frame.empty or frame.index[-1].date().isoformat() != asof:
+        return None, "missing_asof"
+    if len(frame) < min_history:
+        return None, f"history_{len(frame)}"
+    return frame, None
+
+
+def download_panel(tickers, *, period, asof, min_history=1, retry_attempts=3):
     import yfinance as yf
 
     tickers = list(dict.fromkeys(tickers))
     panel, failures = {}, {}
     for start in range(0, len(tickers), 60):
         chunk = tickers[start:start + 60]
+        # yfinance mantiene una cache SQLite interna. En Actions hemos observado
+        # OperationalError("database is locked") con descargas multihilo. La
+        # estrategia prioriza reproducibilidad frente a unos segundos de latencia.
         data = yf.download(
             chunk, period=period, interval="1d", auto_adjust=False, actions=True,
-            group_by="ticker", threads=True, progress=False,
+            group_by="ticker", threads=False, progress=False,
         )
         for ticker in chunk:
-            frame = _extract_download(data, ticker)
-            if frame is None:
-                failures[ticker] = "download_empty"
-                continue
-            frame = frame.loc[frame.index.date <= datetime.fromisoformat(asof).date()]
-            if frame.empty or frame.index[-1].date().isoformat() != asof:
-                failures[ticker] = "missing_asof"
-                continue
-            if len(frame) < min_history:
-                failures[ticker] = f"history_{len(frame)}"
-                continue
-            panel[ticker] = frame
+            frame, issue = _validated_download_frame(data, ticker, asof, min_history)
+            if issue:
+                failures[ticker] = issue
+            else:
+                panel[ticker] = frame
+
+    # Un fallo aislado del proveedor no debe tumbar una valoración completa.
+    # Reintentamos solo los símbolos que faltan, siempre single-threaded y sin
+    # inventar precios: la barra debe seguir siendo la sesión exacta asof.
+    for ticker in list(failures):
+        for attempt in range(1, max(1, int(retry_attempts)) + 1):
+            try:
+                data = yf.download(
+                    ticker, period=period, interval="1d", auto_adjust=False, actions=True,
+                    group_by="ticker", threads=False, progress=False,
+                )
+                frame, issue = _validated_download_frame(data, ticker, asof, min_history)
+            except Exception as exc:
+                frame, issue = None, type(exc).__name__
+            if issue is None:
+                panel[ticker] = frame
+                failures.pop(ticker, None)
+                break
+            failures[ticker] = issue
+            if attempt < retry_attempts:
+                time.sleep(min(2.0, 0.5 * attempt))
     return panel, failures
 
 
