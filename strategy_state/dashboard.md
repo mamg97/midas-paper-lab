@@ -1,20 +1,20 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-10-07T02:30:31.164498+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-10-07T02:40:11.237230+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
 | Estrategia | Procedencia | Estado | Actividad actual | Primera fecha | Última fecha | Último periodo | Acumulada | Vol. anual. | Máx. DD | Sharpe 0rf |
 | --- | --- | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
-| Referencia SPY | Campaña nueva 2026 · referencia SPY | demo_con_diario | 1 posición abierta | 2026-09-28 | 2026-10-02 | 0.70 % | 0.21 % | — | -0.66 % | — |
-| Referencia ocho acciones equiponderadas | Campaña nueva 2026 · referencia equiponderada | demo_con_diario | 8 posiciones abiertas | 2026-09-28 | 2026-10-02 | 0.36 % | -0.24 % | — | -0.61 % | — |
-| EMA/RSI fijo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-02 | 0.00 % | 0.00 % | — | 0.00 % | — |
-| Genético nuevo congelado, ocho acciones | MIDAS nuevo 2026 · genético congelado | demo_con_diario | 1 posición abierta | 2026-09-28 | 2026-10-02 | 0.02 % | 0.21 % | — | 0.00 % | — |
-| MACD, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 1 posición abierta | 2026-09-28 | 2026-10-02 | -0.08 % | -0.08 % | — | -0.08 % | — |
-| RSI reversión, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-02 | 0.00 % | 0.00 % | — | 0.00 % | — |
-| Bollinger ruptura, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-02 | 0.00 % | 0.00 % | — | 0.00 % | — |
-| Turtle 20/10 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-02 | 0.00 % | 0.00 % | — | 0.00 % | — |
-| Turtle 55/20 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-02 | 0.00 % | 0.00 % | — | 0.00 % | — |
+| Referencia SPY | Campaña nueva 2026 · referencia SPY | demo_con_diario | 1 posición abierta | 2026-09-28 | 2026-10-06 | 0.52 % | 1.37 % | — | -0.66 % | — |
+| Referencia ocho acciones equiponderadas | Campaña nueva 2026 · referencia equiponderada | demo_con_diario | 8 posiciones abiertas | 2026-09-28 | 2026-10-06 | 0.46 % | 0.60 % | — | -0.61 % | — |
+| EMA/RSI fijo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-06 | 0.00 % | 0.00 % | — | 0.00 % | — |
+| Genético nuevo congelado, ocho acciones | MIDAS nuevo 2026 · genético congelado | demo_con_diario | 1 posiciones · 1 órdenes pendientes | 2026-09-28 | 2026-10-06 | 0.04 % | 0.25 % | — | -0.00 % | — |
+| MACD, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 1 posiciones · 1 órdenes pendientes | 2026-09-28 | 2026-10-06 | 0.12 % | 0.26 % | — | -0.08 % | — |
+| RSI reversión, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-06 | 0.00 % | 0.00 % | — | 0.00 % | — |
+| Bollinger ruptura, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-06 | 0.00 % | 0.00 % | — | 0.00 % | — |
+| Turtle 20/10 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-06 | 0.00 % | 0.00 % | — | 0.00 % | — |
+| Turtle 55/20 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-06 | 0.00 % | 0.00 % | — | 0.00 % | — |
 | ML semanal · referencia SPY | Campaña ML semanal 2026 · referencia SPY | demo_con_diario | 1 compras para próxima apertura | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
 | ML semanal · referencia RSP | Campaña ML semanal 2026 · referencia RSP equiponderada | demo_con_diario | 1 compras para próxima apertura | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
 | ML semanal · LightGBM rentabilidad | MIDAS Python v2 · regresión semanal corregida 2026 | demo_con_diario | Sin compras · en efectivo | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
