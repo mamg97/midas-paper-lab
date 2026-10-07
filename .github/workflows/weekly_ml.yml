@@ -80,22 +80,11 @@ jobs:
             --tfg-config tfg_ahp/config.json \
             --tfg-state tfg_state/ledger.json \
             --output strategy_state
-      - name: Commit weekly ML and dashboard state
+      - name: Commit weekly ml and dashboard state
         if: ${{ always() && !inputs.preflight_only }}
         run: |
-          if [ -f strategy_runtime/weekly_ml.json ]; then
-            git add -- strategy_runtime/weekly_ml.json
-          fi
-          if [ -d weekly_ml_state ]; then
-            git add -- weekly_ml_state
-          fi
-          if [ -f WEEKLY_ML_DASHBOARD.md ]; then
-            git add -- WEEKLY_ML_DASHBOARD.md
-          fi
-          if [ -f strategy_state/dashboard.json ] && [ -f strategy_state/dashboard.md ]; then
-            git add -- strategy_state/dashboard.json strategy_state/dashboard.md
-          fi
-          if ! git diff --cached --quiet; then
-            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Record MIDAS weekly ML paper state'
-            git push
-          fi
+          python strategy_comparison/publish_state.py \
+            --message "Record MIDAS weekly ML paper state" \
+            --path strategy_runtime/weekly_ml.json \
+            --path weekly_ml_state \
+            --path WEEKLY_ML_DASHBOARD.md
