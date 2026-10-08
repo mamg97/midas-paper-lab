@@ -1,10 +1,10 @@
 {
   "event": "schedule",
-  "head_sha": "8a16112f59b0cd628b6e8c510a44f5e7930beefd",
+  "head_sha": "1578e95ab6a722645b4b6346c86e221cbe136371",
   "outcome": "success",
-  "recorded_at_utc": "2026-10-08T02:46:22.026240+00:00",
-  "run_id": 37719430057,
-  "run_number": 13,
+  "recorded_at_utc": "2026-10-08T23:48:51.761203+00:00",
+  "run_id": 37861395434,
+  "run_number": 14,
   "schema_version": 1,
   "workflow_key": "tfm_es",
   "workflow_name": "MIDAS TFM shadow forecasts"
