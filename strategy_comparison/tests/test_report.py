@@ -127,7 +127,8 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(ensemble["currency"], "USD")
         self.assertEqual(ensemble["equity_history"][-1], {"date": "2026-10-09", "nav": 101000.0})
         self.assertEqual(ensemble["activity_state"], "pending")
-        self.assertEqual(ensemble["activity_label"], "2 compras para próxima apertura")
+        self.assertEqual(ensemble["activity_label"], "2 señales congeladas · liquidación semanal pendiente")
+        self.assertIn("NO es una compra ejecutada", ensemble["note"])
         self.assertEqual(ensemble["activity_tickers"], ["AMD", "INTC"])
 
 
