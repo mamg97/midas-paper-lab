@@ -111,4 +111,6 @@ Workflow semanal: `.github/workflows/weekly_ml.yml`.
 
 Se programa después del cierre estadounidense del viernes y tiene un slot de respaldo el sábado. El estado vive en `weekly_ml_state/`.
 
+**Limitación operativa (08/10/2026):** este motor solo asienta las compras y ventas paper al procesar el siguiente cierre semanal. Antes del viernes siguiente, `pending` indica **señales congeladas**, no compras confirmadas; `nav` sigue siendo el último valor liquidado y **no existe mark-to-market ni diario de fills lunes-jueves**. La rentabilidad aparece al liquidar el periodo completo. Este modo no debe presentarse como cartera con valoración diaria. Una futura variante con fills next-open y NAV diario deberá registrar ejecuciones prospectivamente y conservar el ledger anterior como tramo independiente, sin fabricar fills pasados.
+
 No ejecuta dinero real.
