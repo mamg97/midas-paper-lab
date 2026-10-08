@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "attempted_at_utc": "2026-10-08T08:17:06.725874+00:00",
+  "attempted_at_utc": "2026-10-08T08:19:29.653402+00:00",
   "promoted": true,
   "reason": "non_regressing_candidate",
   "candidate_manifest_count": 302,
-  "previous_manifest_count": 301,
+  "previous_manifest_count": 302,
   "candidate_caption_coverage": 0,
   "previous_caption_coverage": 0,
   "caption_transport": {

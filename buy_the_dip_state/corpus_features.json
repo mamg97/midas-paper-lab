@@ -388,7 +388,7 @@
     },
     {
       "video_id": "1D6zbigy5C0",
-      "title": "El ORO en BOOM: ¿Fin del Ciclo? Otras Inversiones que NO Puedes Ignorar",
+      "title": "Gold Boom: End of the Cycle? Other Investments You Can't Ignore",
       "published_date": null,
       "duration_seconds": 1004,
       "view_count": 989,
@@ -397,83 +397,6 @@
       ],
       "format": "long",
       "url": "https://www.youtube.com/watch?v=1D6zbigy5C0",
-      "caption_available": false,
-      "caption_language": null,
-      "word_count": 0,
-      "category": "sector_theme",
-      "guest_likely": false,
-      "lexicon_counts": {
-        "quality": {
-          "count": 0,
-          "terms": {}
-        },
-        "cash_flow": {
-          "count": 0,
-          "terms": {}
-        },
-        "valuation": {
-          "count": 0,
-          "terms": {}
-        },
-        "balance_sheet": {
-          "count": 0,
-          "terms": {}
-        },
-        "capital_allocation": {
-          "count": 0,
-          "terms": {}
-        },
-        "contrarian": {
-          "count": 0,
-          "terms": {}
-        },
-        "cyclical": {
-          "count": 0,
-          "terms": {}
-        },
-        "macro": {
-          "count": 0,
-          "terms": {}
-        },
-        "portfolio": {
-          "count": 0,
-          "terms": {}
-        },
-        "entry": {
-          "count": 0,
-          "terms": {}
-        },
-        "exit": {
-          "count": 0,
-          "terms": {}
-        },
-        "risk": {
-          "count": 0,
-          "terms": {}
-        },
-        "technical": {
-          "count": 0,
-          "terms": {}
-        },
-        "management": {
-          "count": 0,
-          "terms": {}
-        }
-      },
-      "methodology_relevance_score": 3.0,
-      "topics": []
-    },
-    {
-      "video_id": "1K-zkyfi-SA",
-      "title": "Employment data SINKS the STOCK MARKET",
-      "published_date": null,
-      "duration_seconds": 647,
-      "view_count": 1000,
-      "surfaces": [
-        "long"
-      ],
-      "format": "long",
-      "url": "https://www.youtube.com/watch?v=1K-zkyfi-SA",
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
@@ -538,6 +461,83 @@
         }
       },
       "methodology_relevance_score": 2.0,
+      "topics": []
+    },
+    {
+      "video_id": "1K-zkyfi-SA",
+      "title": "Los datos de empleo HUNDEN la BOLSA",
+      "published_date": null,
+      "duration_seconds": 647,
+      "view_count": 1000,
+      "surfaces": [
+        "long"
+      ],
+      "format": "long",
+      "url": "https://www.youtube.com/watch?v=1K-zkyfi-SA",
+      "caption_available": false,
+      "caption_language": null,
+      "word_count": 0,
+      "category": "macro_market",
+      "guest_likely": false,
+      "lexicon_counts": {
+        "quality": {
+          "count": 0,
+          "terms": {}
+        },
+        "cash_flow": {
+          "count": 0,
+          "terms": {}
+        },
+        "valuation": {
+          "count": 0,
+          "terms": {}
+        },
+        "balance_sheet": {
+          "count": 0,
+          "terms": {}
+        },
+        "capital_allocation": {
+          "count": 0,
+          "terms": {}
+        },
+        "contrarian": {
+          "count": 0,
+          "terms": {}
+        },
+        "cyclical": {
+          "count": 0,
+          "terms": {}
+        },
+        "macro": {
+          "count": 0,
+          "terms": {}
+        },
+        "portfolio": {
+          "count": 0,
+          "terms": {}
+        },
+        "entry": {
+          "count": 0,
+          "terms": {}
+        },
+        "exit": {
+          "count": 0,
+          "terms": {}
+        },
+        "risk": {
+          "count": 0,
+          "terms": {}
+        },
+        "technical": {
+          "count": 0,
+          "terms": {}
+        },
+        "management": {
+          "count": 0,
+          "terms": {}
+        }
+      },
+      "methodology_relevance_score": -1.0,
       "topics": []
     },
     {
@@ -773,7 +773,7 @@
     },
     {
       "video_id": "2F4_-qp2x9g",
-      "title": "El Activo Que Nadie Está Mirando: PLATA | Buy The Dip Podcast",
+      "title": "The Asset Nobody Is Looking At: SILVER | Buy The Dip Podcast",
       "published_date": null,
       "duration_seconds": 4765,
       "view_count": 8900,
@@ -1389,7 +1389,7 @@
     },
     {
       "video_id": "4Ip-k8Y1nVI",
-      "title": "Nuestra CARTERA y RENTABILIDAD del AÑO 2025 | BUY THE DIP PODCAST",
+      "title": "Our Portfolio and Returns for 2025 | Buy the Dip Podcast",
       "published_date": null,
       "duration_seconds": 3526,
       "view_count": 876,
@@ -1401,7 +1401,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "portfolio_update",
+      "category": "company_or_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -1461,7 +1461,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 8.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -2082,7 +2082,7 @@
     },
     {
       "video_id": "5Vwg9I3k4os",
-      "title": "Will Donald Trump's \"One Big Beautiful Bill\" work? - OPEC increases production",
+      "title": "¿Funcionará la \"One Big Beautiful Bill\" de DONALD TRUMP? - La OPEP aumenta producción",
       "published_date": null,
       "duration_seconds": 1780,
       "view_count": 447,
@@ -3391,7 +3391,7 @@
     },
     {
       "video_id": "8Eud3puK3NY",
-      "title": "¿Qué ocurre en IRÁN? - ¿Se puede INVERTIR en este mercado?",
+      "title": "What is happening in IRAN? - Can you INVEST in this market?",
       "published_date": null,
       "duration_seconds": 4017,
       "view_count": 684,
@@ -3403,7 +3403,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "macro_market",
+      "category": "company_or_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -3463,7 +3463,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": -1.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -3776,7 +3776,7 @@
     },
     {
       "video_id": "9dOoU_5xxs4",
-      "title": "Entrevista a Rafael Valera Buy&Hold | BUY THE DIP PODCAST",
+      "title": "Interview with Rafael Valera from Buy&Hold | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 5330,
       "view_count": 889,
@@ -4084,7 +4084,7 @@
     },
     {
       "video_id": "ARpaMofMpx0",
-      "title": "Our Investment Portfolio in August | Buy the Dip Podcast",
+      "title": "Nuestra CARTERA de INVERSIÓN en AGOSTO | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 3161,
       "view_count": 1300,
@@ -4096,7 +4096,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "portfolio_update",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -4156,12 +4156,12 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 8.0,
       "topics": []
     },
     {
       "video_id": "Ac1ZqjTbEx0",
-      "title": "Our Midyear Investment Portfolio | Buy the Dip Podcast",
+      "title": "Nuestra CARTERA de INVERSIÓN a MITAD DE AÑO | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 2708,
       "view_count": 1000,
@@ -4173,7 +4173,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "portfolio_update",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -4233,7 +4233,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 8.0,
       "topics": []
     },
     {
@@ -4469,7 +4469,7 @@
     },
     {
       "video_id": "BVzSC7RRoJE",
-      "title": "Nike explodes on the stock market - bull market in metals?",
+      "title": "NIKE explota en BOLSA - ¿BULL market en los METALES?",
       "published_date": null,
       "duration_seconds": 923,
       "view_count": 410,
@@ -4481,7 +4481,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "macro_market",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -4541,7 +4541,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": -1.0,
       "topics": []
     },
     {
@@ -5393,7 +5393,7 @@
     },
     {
       "video_id": "EBf4zbAkQoc",
-      "title": "TODO el MUNDO está ganando DINERO con el ORO",
+      "title": "EVERYONE is making MONEY with GOLD",
       "published_date": null,
       "duration_seconds": 819,
       "view_count": 451,
@@ -5405,8 +5405,8 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "sector_theme",
-      "guest_likely": true,
+      "category": "company_or_theme",
+      "guest_likely": false,
       "lexicon_counts": {
         "quality": {
           "count": 0,
@@ -5465,7 +5465,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 0.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -6317,7 +6317,7 @@
     },
     {
       "video_id": "HQX9Qdycuus",
-      "title": "Is the market ready? Oil prices are rising, and Europe's outlook is bleak.",
+      "title": "¿El MERCADO está PREPARADO? Sube el petróleo y Europa con malas perspectivas",
       "published_date": null,
       "duration_seconds": 1542,
       "view_count": 625,
@@ -6329,7 +6329,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "macro_market",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -6389,7 +6389,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": -1.0,
       "topics": []
     },
     {
@@ -7164,7 +7164,7 @@
     },
     {
       "video_id": "KAPa_BGXkRs",
-      "title": "INVERTIR en URANIO y la BURBUJA que viene | BUY THE DIP PODCAST",
+      "title": "INVESTING in URANIUM and the COMING BUBBLE | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 5829,
       "view_count": 3200,
@@ -7176,7 +7176,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "sector_theme",
+      "category": "company_or_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -7236,7 +7236,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 3.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -8858,7 +8858,7 @@
     },
     {
       "video_id": "Nra5bmq3hZ4",
-      "title": "¿Por qué se HUNDE la BOLSA? TRUMP lo vuelve a hacer...",
+      "title": "Why is the stock market collapsing? TRUMP does it again...",
       "published_date": null,
       "duration_seconds": 931,
       "view_count": 1000,
@@ -8870,7 +8870,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "macro_market",
+      "category": "company_or_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -8930,7 +8930,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": -1.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -9089,7 +9089,7 @@
     },
     {
       "video_id": "O1I_LIAw36o",
-      "title": "Nuestra CARTERA de INVERSIÓN y cambios en Junio  | BUY THE DIP PODCAST",
+      "title": "Our INVESTMENT PORTFOLIO and changes in June | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 2005,
       "view_count": 908,
@@ -9101,7 +9101,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "portfolio_update",
+      "category": "company_or_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -9161,7 +9161,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 8.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -10398,7 +10398,7 @@
     },
     {
       "video_id": "R5Uhmi5Qm5I",
-      "title": "ORO y URANIO: Estos dos metales HAN DESPERTADO",
+      "title": "GOLD and URANIUM: These two metals HAVE AWAKENED",
       "published_date": null,
       "duration_seconds": 489,
       "view_count": 585,
@@ -10410,7 +10410,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "sector_theme",
+      "category": "company_or_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -10470,7 +10470,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 3.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -11784,7 +11784,7 @@
     },
     {
       "video_id": "Vax3e_R44DI",
-      "title": "La rentabilidad de los bonos se dispara más del 5% ¿Qué significa para tu cartera?",
+      "title": "Bond yields skyrocket above 5%: What does this mean for your portfolio?",
       "published_date": null,
       "duration_seconds": 744,
       "view_count": 1100,
@@ -11861,7 +11861,7 @@
     },
     {
       "video_id": "Vg0SLGyOpZA",
-      "title": "Is the market changing trends? - American Eagle's stock price soars",
+      "title": "¿El MERCADO CAMBIA de TENDENCIA? -  American Eagle SE DISPARA en BOLSA",
       "published_date": null,
       "duration_seconds": 1220,
       "view_count": 753,
@@ -11873,7 +11873,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "macro_market",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -11933,7 +11933,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": -1.0,
       "topics": []
     },
     {
@@ -12323,7 +12323,7 @@
     },
     {
       "video_id": "WogbfbSXcR4",
-      "title": "IDEA de INVERSIÓN en BOLSA para 2023 👉 PROSEGUR CASH",
+      "title": "STOCK INVESTMENT IDEA for 2023 👉 PROSEGUR CASH",
       "published_date": null,
       "duration_seconds": 817,
       "view_count": 1200,
@@ -12335,7 +12335,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "macro_market",
+      "category": "company_or_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -12395,7 +12395,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": -1.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -12477,7 +12477,7 @@
     },
     {
       "video_id": "X9s-_5nz4b4",
-      "title": "GOLD flies to HIGHS of $3,500",
+      "title": "El ORO vuela a MÁXIMOS 3500$",
       "published_date": null,
       "duration_seconds": 721,
       "view_count": 550,
@@ -12489,7 +12489,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "sector_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -12549,7 +12549,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 3.0,
       "topics": []
     },
     {
@@ -13247,7 +13247,7 @@
     },
     {
       "video_id": "Z9uiKsEQPWE",
-      "title": "Our Investment Portfolio in April | Buy the Dip Podcast",
+      "title": "Nuestra CARTERA de INVERSIÓN en ABRIL | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 3149,
       "view_count": 1100,
@@ -13259,7 +13259,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "portfolio_update",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -13319,7 +13319,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 8.0,
       "topics": []
     },
     {
@@ -13478,7 +13478,7 @@
     },
     {
       "video_id": "_KLgQ3tlpHI",
-      "title": "A WAR in IRAN could trigger a WORLD CRISIS",
+      "title": "Una GUERRA en IRÁN puede provocar una CRISIS MUNDIAL",
       "published_date": null,
       "duration_seconds": 852,
       "view_count": 982,
@@ -14787,7 +14787,7 @@
     },
     {
       "video_id": "ckJ0cRRc7DE",
-      "title": "El Lado Oscuro de las Inversiones: Nuestros Fracasos | BUY THE DIP PODCAST",
+      "title": "The Dark Side of Investing: Our Failures | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 2516,
       "view_count": 492,
@@ -14799,7 +14799,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "methodology",
+      "category": "company_or_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -14859,7 +14859,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 12.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -15711,7 +15711,7 @@
     },
     {
       "video_id": "f1TQOO-KNvc",
-      "title": "Inflation is relentless, and is oil about to wake up?",
+      "title": "La INFLACIÓN no da tregua y ¿El PETRÓLEO va a despertar?",
       "published_date": null,
       "duration_seconds": 907,
       "view_count": 1000,
@@ -15723,7 +15723,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "macro_market",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -15783,7 +15783,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": -1.0,
       "topics": []
     },
     {
@@ -16866,7 +16866,7 @@
     },
     {
       "video_id": "i9hrrD0WAcM",
-      "title": "Lemonade ($LMND) Tesis de inversión. ¿Invertir en la mejor aseguradora?",
+      "title": "Lemonade ($LMND) Investment Thesis: Investing in the Best Insurance Company?",
       "published_date": null,
       "duration_seconds": 584,
       "view_count": 1400,
@@ -17020,7 +17020,7 @@
     },
     {
       "video_id": "ijwCQJkwDog",
-      "title": "Nuestra CARTERA de INVERSIÓN en OCTUBRE-NOVIEMBRE | BUY THE DIP PODCAST",
+      "title": "Our Investment Portfolio for October-November | Buy the Dip Podcast",
       "published_date": null,
       "duration_seconds": 2883,
       "view_count": 967,
@@ -17032,7 +17032,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "portfolio_update",
+      "category": "company_or_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -17092,7 +17092,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 8.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -17174,7 +17174,7 @@
     },
     {
       "video_id": "jDj0JmcKMGo",
-      "title": "The End of Inflation? Why is Gold Falling?",
+      "title": "¿El FIN de la INFLACIÓN? ¿Por qué CAE el ORO?",
       "published_date": null,
       "duration_seconds": 1018,
       "view_count": 595,
@@ -17186,7 +17186,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "macro_market",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -17246,12 +17246,12 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": -1.0,
       "topics": []
     },
     {
       "video_id": "jIUJYS-dCXg",
-      "title": "MASTERCLASS sobre INVERTIR en el sector de DEFENSA | BUY THE DIP PODCAST",
+      "title": "MASTERCLASS on INVESTING in the DEFENSE Sector | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 6493,
       "view_count": 2200,
@@ -17405,7 +17405,7 @@
     },
     {
       "video_id": "jf3HWs6bSnQ",
-      "title": "ENERGY: The Sector with the Most Opportunities in 2025?",
+      "title": "La ENERGÍA, ¿el sector con más OPORTUNIDADES en 2025?",
       "published_date": null,
       "duration_seconds": 1129,
       "view_count": 712,
@@ -17417,7 +17417,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "sector_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -17477,12 +17477,12 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 3.0,
       "topics": []
     },
     {
       "video_id": "k-Rq0mP456g",
-      "title": "Gerunda Global: Nuevo Fondo de Inversión en España",
+      "title": "Gerunda Global: New Investment Fund in Spain",
       "published_date": null,
       "duration_seconds": 2961,
       "view_count": 3100,
@@ -19022,7 +19022,7 @@
     },
     {
       "video_id": "o9bXwd98NjE",
-      "title": "¿El FIN de BERKSHIRE HATHAWAY? - Warren Buffett se retira",
+      "title": "Is this the end of Berkshire Hathaway? - Warren Buffett retires",
       "published_date": null,
       "duration_seconds": 651,
       "view_count": 357,
@@ -19099,7 +19099,7 @@
     },
     {
       "video_id": "oFomcCtMb6M",
-      "title": "¿Hay OPORTUNIDAD de INVERSIÓN en estos sectores en 2026? | BUY THE DIP PODCAST",
+      "title": "Are there investment opportunities in these sectors in 2026? | Buy the Dip Podcast",
       "published_date": null,
       "duration_seconds": 2626,
       "view_count": 847,
@@ -20023,7 +20023,7 @@
     },
     {
       "video_id": "qHzEIugAass",
-      "title": "Nuestra CARTERA de INVERSIÓN en DICIEMBRE | BUY THE DIP PODCAST",
+      "title": "Our Investment Portfolio in December | Buy the Dip Podcast",
       "published_date": null,
       "duration_seconds": 2823,
       "view_count": 1300,
@@ -20035,7 +20035,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "portfolio_update",
+      "category": "company_or_theme",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -20095,7 +20095,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 8.0,
+      "methodology_relevance_score": 2.0,
       "topics": []
     },
     {
@@ -20177,7 +20177,7 @@
     },
     {
       "video_id": "rAW0FLi__dg",
-      "title": "Why the Stock Market Must Fall by 50%",
+      "title": "Por qué La BOLSA DEBE CAER un 50%",
       "published_date": null,
       "duration_seconds": 890,
       "view_count": 964,
@@ -20189,7 +20189,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "macro_market",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -20249,7 +20249,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": -1.0,
       "topics": []
     },
     {
@@ -20716,7 +20716,7 @@
     },
     {
       "video_id": "sc944xFNM00",
-      "title": "Our September Investment Portfolio | Buy the Dip Podcast",
+      "title": "Nuestra CARTERA de INVERSIÓN en SEPTIEMBRE | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 2673,
       "view_count": 772,
@@ -20728,7 +20728,7 @@
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
-      "category": "company_or_theme",
+      "category": "portfolio_update",
       "guest_likely": false,
       "lexicon_counts": {
         "quality": {
@@ -20788,7 +20788,7 @@
           "terms": {}
         }
       },
-      "methodology_relevance_score": 2.0,
+      "methodology_relevance_score": 8.0,
       "topics": []
     },
     {
@@ -22487,7 +22487,7 @@
     },
     {
       "video_id": "xQLuiuDKk-M",
-      "title": "INVERTIR en PLATINO y PALADIO",
+      "title": "INVEST in PLATINUM and PALLADIUM",
       "published_date": null,
       "duration_seconds": 2005,
       "view_count": 2300,
@@ -22496,83 +22496,6 @@
       ],
       "format": "long",
       "url": "https://www.youtube.com/watch?v=xQLuiuDKk-M",
-      "caption_available": false,
-      "caption_language": null,
-      "word_count": 0,
-      "category": "sector_theme",
-      "guest_likely": false,
-      "lexicon_counts": {
-        "quality": {
-          "count": 0,
-          "terms": {}
-        },
-        "cash_flow": {
-          "count": 0,
-          "terms": {}
-        },
-        "valuation": {
-          "count": 0,
-          "terms": {}
-        },
-        "balance_sheet": {
-          "count": 0,
-          "terms": {}
-        },
-        "capital_allocation": {
-          "count": 0,
-          "terms": {}
-        },
-        "contrarian": {
-          "count": 0,
-          "terms": {}
-        },
-        "cyclical": {
-          "count": 0,
-          "terms": {}
-        },
-        "macro": {
-          "count": 0,
-          "terms": {}
-        },
-        "portfolio": {
-          "count": 0,
-          "terms": {}
-        },
-        "entry": {
-          "count": 0,
-          "terms": {}
-        },
-        "exit": {
-          "count": 0,
-          "terms": {}
-        },
-        "risk": {
-          "count": 0,
-          "terms": {}
-        },
-        "technical": {
-          "count": 0,
-          "terms": {}
-        },
-        "management": {
-          "count": 0,
-          "terms": {}
-        }
-      },
-      "methodology_relevance_score": 3.0,
-      "topics": []
-    },
-    {
-      "video_id": "xVZl6vVVkdg",
-      "title": "Uranium mining in danger as Russia cuts off gas to Ukraine",
-      "published_date": null,
-      "duration_seconds": 1313,
-      "view_count": 1700,
-      "surfaces": [
-        "long"
-      ],
-      "format": "long",
-      "url": "https://www.youtube.com/watch?v=xVZl6vVVkdg",
       "caption_available": false,
       "caption_language": null,
       "word_count": 0,
@@ -22637,6 +22560,83 @@
         }
       },
       "methodology_relevance_score": 2.0,
+      "topics": []
+    },
+    {
+      "video_id": "xVZl6vVVkdg",
+      "title": "La Minería de URANIO en PELIGRO mientras RUSIA corta el gas a UCRANIA",
+      "published_date": null,
+      "duration_seconds": 1313,
+      "view_count": 1700,
+      "surfaces": [
+        "long"
+      ],
+      "format": "long",
+      "url": "https://www.youtube.com/watch?v=xVZl6vVVkdg",
+      "caption_available": false,
+      "caption_language": null,
+      "word_count": 0,
+      "category": "sector_theme",
+      "guest_likely": false,
+      "lexicon_counts": {
+        "quality": {
+          "count": 0,
+          "terms": {}
+        },
+        "cash_flow": {
+          "count": 0,
+          "terms": {}
+        },
+        "valuation": {
+          "count": 0,
+          "terms": {}
+        },
+        "balance_sheet": {
+          "count": 0,
+          "terms": {}
+        },
+        "capital_allocation": {
+          "count": 0,
+          "terms": {}
+        },
+        "contrarian": {
+          "count": 0,
+          "terms": {}
+        },
+        "cyclical": {
+          "count": 0,
+          "terms": {}
+        },
+        "macro": {
+          "count": 0,
+          "terms": {}
+        },
+        "portfolio": {
+          "count": 0,
+          "terms": {}
+        },
+        "entry": {
+          "count": 0,
+          "terms": {}
+        },
+        "exit": {
+          "count": 0,
+          "terms": {}
+        },
+        "risk": {
+          "count": 0,
+          "terms": {}
+        },
+        "technical": {
+          "count": 0,
+          "terms": {}
+        },
+        "management": {
+          "count": 0,
+          "terms": {}
+        }
+      },
+      "methodology_relevance_score": 3.0,
       "topics": []
     },
     {
@@ -23103,7 +23103,7 @@
     },
     {
       "video_id": "zSy6grQYrYU",
-      "title": "¿Estas son las MEJORES OPORTUNIDADES de INVERSIÓN actuales?",
+      "title": "Are these the BEST current INVESTMENT OPPORTUNITIES?",
       "published_date": null,
       "duration_seconds": 1239,
       "view_count": 943,
