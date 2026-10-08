@@ -18,6 +18,7 @@ DASHBOARD_CMD = [
     "--tfm-state", "tfm_state/ledger.json",
     "--weekly-ml-config", "weekly_ml/config.json",
     "--weekly-ml-state", "weekly_ml_state/ledger.json",
+    "--weekly-ml-daily-state", "weekly_ml_daily_state/ledger.json",
     "--tfg-config", "tfg_ahp/config.json",
     "--tfg-state", "tfg_state/ledger.json",
     "--output", "strategy_state",

@@ -44,6 +44,9 @@ jobs:
         id: execute
         if: ${{ !inputs.preflight_only }}
         run: python weekly_ml/run.py --output weekly_ml_state
+      - name: Freeze next Weekly ML signal for daily paper accounting
+        if: ${{ steps.execute.outcome == 'success' && !inputs.preflight_only }}
+        run: python weekly_ml/daily.py --phase signal
       - name: Refresh Weekly ML human dashboard
         if: ${{ always() && !inputs.preflight_only }}
         run: |
@@ -87,4 +90,5 @@ jobs:
             --message "Record MIDAS weekly ML paper state" \
             --path strategy_runtime/weekly_ml.json \
             --path weekly_ml_state \
+            --path weekly_ml_daily_state \
             --path WEEKLY_ML_DASHBOARD.md

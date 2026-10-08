@@ -114,3 +114,7 @@ Se programa después del cierre estadounidense del viernes y tiene un slot de re
 **Limitación operativa (08/10/2026):** este motor solo asienta las compras y ventas paper al procesar el siguiente cierre semanal. Antes del viernes siguiente, `pending` indica **señales congeladas**, no compras confirmadas; `nav` sigue siendo el último valor liquidado y **no existe mark-to-market ni diario de fills lunes-jueves**. La rentabilidad aparece al liquidar el periodo completo. Este modo no debe presentarse como cartera con valoración diaria. Una futura variante con fills next-open y NAV diario deberá registrar ejecuciones prospectivamente y conservar el ledger anterior como tramo independiente, sin fabricar fills pasados.
 
 No ejecuta dinero real.
+
+## Seguimiento diario prospectivo (v2, desde señal 09/10/2026)
+
+La simulación semanal clásica se conserva intacta en `weekly_ml_state/ledger.json`; sus liquidaciones diferidas no se mezclan con la cartera diaria. Tras un forecast semanal nuevo, `.github/workflows/weekly_ml.yml` congela las señales en `weekly_ml_daily_state/ledger.json`; `.github/workflows/weekly_ml_daily.yml` procesa cada cierre XNYS, registra las compras simuladas al siguiente open, valora NAV al cierre y liquida posiciones el último día bursátil de la semana. El dashboard público prioriza exclusivamente este ledger prospectivo desde su primera señal. No se retrotraen compras no registradas del 05/10. Nunca se envían órdenes reales.

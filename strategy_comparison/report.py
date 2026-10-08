@@ -172,7 +172,7 @@ def _activity(positions=None, pending=None, *, pending_label="órdenes pendiente
 def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
           tfm_config=None, tfm_state=None, weekly_config=None, weekly_state=None,
           tfg_config=None, tfg_state=None, capital_config=None, capital_state=None,
-          btd_config=None, btd_state=None):
+          btd_config=None, btd_state=None, weekly_daily_state=None):
     if registry.get("schema_version") != 1:
         raise ValueError("Versión de registro no válida")
     paper_names = registry.get("paper_tracks", {})
@@ -229,6 +229,11 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             raise ValueError("El diario weekly ML pertenece a otra configuración")
         if set(weekly_state.get("strategies", {})) != set(weekly_tracks):
             raise ValueError("Faltan carteras weekly ML")
+    if weekly_daily_state is not None:
+        if (weekly_config is None or weekly_daily_state.get("config_hash") != _config_hash(weekly_config)
+                or weekly_daily_state.get("engine") != "weekly_ml_daily_next_open_v1"
+                or set(weekly_daily_state.get("strategies", {})) != set(weekly_tracks)):
+            raise ValueError("Diario prospectivo Weekly ML inválido")
     if tfg_config is not None:
         if set(tfg_tracks) != {"tfg_corrected"}:
             raise ValueError("Registro TFG corregido incompleto")
@@ -296,23 +301,35 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                "currency": None if weekly_config is None else weekly_config.get("currency", "USD"),
                "equity_history": [],
                "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada."}
-        if weekly_state is not None:
-            book = weekly_state["strategies"][strategy_key]
+        source = weekly_daily_state if weekly_daily_state is not None else weekly_state
+        if source is not None:
+            book = source["strategies"][strategy_key]
             history = book.get("equity", [])
             if not history:
                 raise ValueError("Cartera weekly ML sin patrimonio: " + strategy_key)
             nav = _equity(history[-1].get("nav"), strategy_key)
-            if history[-1].get("date") != weekly_state.get("last_session"):
+            if history[-1].get("date") != source.get("last_session"):
                 raise ValueError("Patrimonio weekly ML sin fecha válida")
             row.update(status="demo_con_diario",
-                       first_session=weekly_state.get("first_session"),
-                       last_session=weekly_state.get("last_session"),
+                       first_session=source.get("first_session"),
+                       last_session=source.get("last_session"),
                        last_equity=nav,
                        return_pct=round(100 * (nav / capital_weekly - 1), 6),
                        day_return_pct=_daily_return(history, strategy_key),
                        equity_history=_equity_history(history, strategy_key))
-            row.update(_activity(None, book.get("pending"),
-                                 pending_label="señales congeladas · liquidación semanal pendiente"))
+            if weekly_daily_state is not None:
+                row["daily_mode"] = True
+                row["note"] = ("Campaña paper diaria prospectiva desde la señal del 09/10/2026. "
+                               "Las órdenes se simulan a la primera apertura y el patrimonio se valora "
+                               "al cierre de cada sesión; no incluye operaciones reconstruidas de semanas anteriores.")
+                positions = book.get("positions", {})
+                row["positions"] = [{"ticker": ticker, "shares": p["shares"]}
+                                    for ticker, p in positions.items()]
+                row.update(_activity(positions, book.get("pending"),
+                                     pending_label="señales para próxima apertura paper"))
+            else:
+                row.update(_activity(None, book.get("pending"),
+                                      pending_label="señales congeladas · liquidación semanal pendiente"))
         rows.append(row)
     for strategy_key, item in tfg_tracks.items():
         capital_tfg = None if tfg_config is None else _equity(
@@ -511,6 +528,7 @@ def main(argv=None):
     parser.add_argument("--tfm-state")
     parser.add_argument("--weekly-ml-config")
     parser.add_argument("--weekly-ml-state")
+    parser.add_argument("--weekly-ml-daily-state", default="weekly_ml_daily_state/ledger.json")
     parser.add_argument("--tfg-config")
     parser.add_argument("--tfg-state")
     parser.add_argument("--capital-cycle-config", default="capital_cycle/config.json")
@@ -525,6 +543,7 @@ def main(argv=None):
                    tfm_state=_read(args.tfm_state, optional=True) if args.tfm_state else None,
                    weekly_config=_read(args.weekly_ml_config) if args.weekly_ml_config else None,
                    weekly_state=_read(args.weekly_ml_state, optional=True) if args.weekly_ml_state else None,
+                   weekly_daily_state=_read(args.weekly_ml_daily_state, optional=True) if args.weekly_ml_daily_state else None,
                    tfg_config=_read(args.tfg_config) if args.tfg_config else None,
                    tfg_state=_read(args.tfg_state, optional=True) if args.tfg_state else None,
                    capital_config=_read(args.capital_cycle_config) if args.capital_cycle_config and Path(args.capital_cycle_config).exists() else None,
