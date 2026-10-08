@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-08T04:12:29.257730+00:00",
+  "generated_at_utc": "2026-10-08T08:50:52.066595+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
@@ -575,9 +575,9 @@
           "nav": 100000.0
         }
       ],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada.",
       "activity_state": "pending",
-      "activity_label": "1 compras para próxima apertura",
+      "activity_label": "1 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
         "SPY"
       ],
@@ -607,9 +607,9 @@
           "nav": 100000.0
         }
       ],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada.",
       "activity_state": "pending",
-      "activity_label": "1 compras para próxima apertura",
+      "activity_label": "1 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
         "RSP"
       ],
@@ -639,7 +639,7 @@
           "nav": 100000.0
         }
       ],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada.",
       "activity_state": "cash",
       "activity_label": "Sin compras · en efectivo",
       "activity_tickers": [],
@@ -669,7 +669,7 @@
           "nav": 100000.0
         }
       ],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada.",
       "activity_state": "cash",
       "activity_label": "Sin compras · en efectivo",
       "activity_tickers": [],
@@ -699,9 +699,9 @@
           "nav": 100000.0
         }
       ],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada.",
       "activity_state": "pending",
-      "activity_label": "10 compras para próxima apertura",
+      "activity_label": "10 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
         "APA",
         "DDOG",
@@ -740,9 +740,9 @@
           "nav": 100000.0
         }
       ],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada.",
       "activity_state": "pending",
-      "activity_label": "10 compras para próxima apertura",
+      "activity_label": "10 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
         "INTC",
         "QCOM",
@@ -781,9 +781,9 @@
           "nav": 100000.0
         }
       ],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada.",
       "activity_state": "pending",
-      "activity_label": "10 compras para próxima apertura",
+      "activity_label": "10 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
         "ENPH",
         "QCOM",
@@ -822,9 +822,9 @@
           "nav": 100000.0
         }
       ],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada.",
       "activity_state": "pending",
-      "activity_label": "10 compras para próxima apertura",
+      "activity_label": "10 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
         "MRNA",
         "DELL",
@@ -863,9 +863,9 @@
           "nav": 100000.0
         }
       ],
-      "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal.",
+      "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada.",
       "activity_state": "pending",
-      "activity_label": "10 compras para próxima apertura",
+      "activity_label": "10 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
         "AMD",
         "INTC",
