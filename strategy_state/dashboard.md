@@ -1,6 +1,6 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-10-08T02:52:02.337680+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-10-08T04:12:29.257730+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
@@ -25,7 +25,7 @@ La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. L
 | ML semanal · ARIMA | TFM/ML · ARIMA adaptado al horizonte semanal | demo_con_diario | 10 compras para próxima apertura | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
 | ML semanal · ensemble consenso | MIDAS nuevo 2026 · consenso de expertos semanales | demo_con_diario | 10 compras para próxima apertura | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
 | TFG corregido 2026 · técnico + AHP + MAD | TFG 2021 · arquitectura portada y corregida para paper 2026 | demo_con_diario | Sin compras · esperando señal | 2026-10-02 | 2026-10-02 | — | 0.00 % | — | 0.00 % | — |
-| Capital Cycle Inflection · underinvestment + calidad + giro | MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle | demo_con_diario | 12 posiciones abiertas | 2026-09-30 | 2026-10-06 | 0.07 % | 1.95 % | — | 0.00 % | — |
+| Capital Cycle Inflection · underinvestment + calidad + giro | MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle | demo_con_diario | 12 posiciones abiertas | 2026-09-30 | 2026-10-07 | -1.33 % | 0.60 % | — | -1.33 % | — |
 | Buy The Dip corpus v0 · deep value + special situations | MIDAS 2026 · Buy The Dip corpus v0 · deep value + special situations | demo_con_diario | 10 posiciones abiertas | 2026-10-01 | 2026-10-07 | -0.17 % | 0.15 % | — | -1.99 % | — |
 | Genético original S&P 500 | Agente genético S&P 500 original · 2026 | sin_diario_disponible | Actividad actual no enlazada | — | — | — | — | — | — | — |
 | TFG 2021: filtros técnicos, AHP y rentabilidad/riesgo | TFG 2021 · MIDAS en R | sin_ejecucion_comparable | Actividad actual no enlazada | — | — | — | — | — | — | — |
