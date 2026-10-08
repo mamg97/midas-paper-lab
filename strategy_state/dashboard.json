@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-08T02:46:22.804714+00:00",
+  "generated_at_utc": "2026-10-08T02:52:02.337680+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
@@ -20,11 +20,11 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-06",
+      "last_session": "2026-10-07",
       "initial_capital": 100000.0,
-      "last_equity": 101374.24195780903,
-      "return_pct": 1.374242,
-      "day_return_pct": 0.52254,
+      "last_equity": 101142.91407798995,
+      "return_pct": 1.142914,
+      "day_return_pct": -0.228192,
       "currency": "USD",
       "equity_history": [
         {
@@ -54,6 +54,10 @@
         {
           "date": "2026-10-06",
           "nav": 101374.24195780903
+        },
+        {
+          "date": "2026-10-07",
+          "nav": 101142.91407798995
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
@@ -64,7 +68,7 @@
       ],
       "open_positions_count": 1,
       "pending_orders_count": 0,
-      "risk_observations": 7,
+      "risk_observations": 8,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": -0.66188,
       "sharpe_0rf": null
@@ -76,11 +80,11 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-06",
+      "last_session": "2026-10-07",
       "initial_capital": 100000.0,
-      "last_equity": 100601.99692893849,
-      "return_pct": 0.601997,
-      "day_return_pct": 0.463794,
+      "last_equity": 100825.4195485053,
+      "return_pct": 0.82542,
+      "day_return_pct": 0.222086,
       "currency": "USD",
       "equity_history": [
         {
@@ -110,6 +114,10 @@
         {
           "date": "2026-10-06",
           "nav": 100601.99692893849
+        },
+        {
+          "date": "2026-10-07",
+          "nav": 100825.4195485053
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
@@ -127,7 +135,7 @@
       ],
       "open_positions_count": 8,
       "pending_orders_count": 0,
-      "risk_observations": 7,
+      "risk_observations": 8,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": -0.605434,
       "sharpe_0rf": null
@@ -139,7 +147,7 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-06",
+      "last_session": "2026-10-07",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
@@ -173,6 +181,10 @@
         {
           "date": "2026-10-06",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-07",
+          "nav": 100000.0
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
@@ -181,7 +193,7 @@
       "activity_tickers": [],
       "open_positions_count": 0,
       "pending_orders_count": 0,
-      "risk_observations": 7,
+      "risk_observations": 8,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -193,11 +205,11 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-06",
+      "last_session": "2026-10-07",
       "initial_capital": 100000.0,
-      "last_equity": 100253.89132500235,
-      "return_pct": 0.253891,
-      "day_return_pct": 0.044422,
+      "last_equity": 100527.87653911613,
+      "return_pct": 0.527877,
+      "day_return_pct": 0.273291,
       "currency": "USD",
       "equity_history": [
         {
@@ -227,18 +239,22 @@
         {
           "date": "2026-10-06",
           "nav": 100253.89132500235
+        },
+        {
+          "date": "2026-10-07",
+          "nav": 100527.87653911613
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "activity_state": "active_pending",
-      "activity_label": "1 posiciones · 1 órdenes pendientes",
+      "activity_state": "active",
+      "activity_label": "2 posiciones abiertas",
       "activity_tickers": [
-        "XOM",
-        "AMZN"
+        "AMZN",
+        "XOM"
       ],
-      "open_positions_count": 1,
-      "pending_orders_count": 1,
-      "risk_observations": 7,
+      "open_positions_count": 2,
+      "pending_orders_count": 0,
+      "risk_observations": 8,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": -0.000925,
       "sharpe_0rf": null
@@ -250,11 +266,11 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-06",
+      "last_session": "2026-10-07",
       "initial_capital": 100000.0,
-      "last_equity": 100263.29775859992,
-      "return_pct": 0.263298,
-      "day_return_pct": 0.118636,
+      "last_equity": 100113.40569341257,
+      "return_pct": 0.113406,
+      "day_return_pct": -0.149498,
       "currency": "USD",
       "equity_history": [
         {
@@ -284,20 +300,24 @@
         {
           "date": "2026-10-06",
           "nav": 100263.29775859992
+        },
+        {
+          "date": "2026-10-07",
+          "nav": 100113.40569341257
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "activity_state": "active_pending",
-      "activity_label": "1 posiciones · 1 órdenes pendientes",
+      "activity_state": "active",
+      "activity_label": "2 posiciones abiertas",
       "activity_tickers": [
         "MSFT",
         "XOM"
       ],
-      "open_positions_count": 1,
-      "pending_orders_count": 1,
-      "risk_observations": 7,
+      "open_positions_count": 2,
+      "pending_orders_count": 0,
+      "risk_observations": 8,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": -0.07611,
+      "max_drawdown_pct": -0.149498,
       "sharpe_0rf": null
     },
     {
@@ -307,7 +327,7 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-06",
+      "last_session": "2026-10-07",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
@@ -341,6 +361,10 @@
         {
           "date": "2026-10-06",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-07",
+          "nav": 100000.0
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
@@ -349,7 +373,7 @@
       "activity_tickers": [],
       "open_positions_count": 0,
       "pending_orders_count": 0,
-      "risk_observations": 7,
+      "risk_observations": 8,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -361,7 +385,7 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-06",
+      "last_session": "2026-10-07",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
@@ -395,15 +419,21 @@
         {
           "date": "2026-10-06",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-07",
+          "nav": 100000.0
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "activity_state": "cash",
-      "activity_label": "Sin compras · en efectivo",
-      "activity_tickers": [],
+      "activity_state": "pending",
+      "activity_label": "1 órdenes pendientes",
+      "activity_tickers": [
+        "AMZN"
+      ],
       "open_positions_count": 0,
-      "pending_orders_count": 0,
-      "risk_observations": 7,
+      "pending_orders_count": 1,
+      "risk_observations": 8,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -415,7 +445,7 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-06",
+      "last_session": "2026-10-07",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
@@ -449,15 +479,21 @@
         {
           "date": "2026-10-06",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-07",
+          "nav": 100000.0
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
-      "activity_state": "cash",
-      "activity_label": "Sin compras · en efectivo",
-      "activity_tickers": [],
+      "activity_state": "pending",
+      "activity_label": "1 órdenes pendientes",
+      "activity_tickers": [
+        "AMZN"
+      ],
       "open_positions_count": 0,
-      "pending_orders_count": 0,
-      "risk_observations": 7,
+      "pending_orders_count": 1,
+      "risk_observations": 8,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -469,7 +505,7 @@
       "group": "paper_nuevo",
       "status": "demo_con_diario",
       "first_session": "2026-09-28",
-      "last_session": "2026-10-06",
+      "last_session": "2026-10-07",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
@@ -503,6 +539,10 @@
         {
           "date": "2026-10-06",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-07",
+          "nav": 100000.0
         }
       ],
       "note": "Mismas reglas de contabilidad; variante nueva si el nombre indica adaptación.",
@@ -511,7 +551,7 @@
       "activity_tickers": [],
       "open_positions_count": 0,
       "pending_orders_count": 0,
-      "risk_observations": 7,
+      "risk_observations": 8,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
