@@ -295,7 +295,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                "return_pct": None, "day_return_pct": None,
                "currency": None if weekly_config is None else weekly_config.get("currency", "USD"),
                "equity_history": [],
-               "note": "Adaptación semanal corregida 2026; entrenamiento causal y ejecución paper semanal."}
+               "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada."}
         if weekly_state is not None:
             book = weekly_state["strategies"][strategy_key]
             history = book.get("equity", [])
@@ -312,7 +312,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        day_return_pct=_daily_return(history, strategy_key),
                        equity_history=_equity_history(history, strategy_key))
             row.update(_activity(None, book.get("pending"),
-                                 pending_label="compras para próxima apertura"))
+                                 pending_label="señales congeladas · liquidación semanal pendiente"))
         rows.append(row)
     for strategy_key, item in tfg_tracks.items():
         capital_tfg = None if tfg_config is None else _equity(
