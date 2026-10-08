@@ -1,0 +1,68 @@
+name: MIDAS Weekly ML daily paper
+
+on:
+  pull_request:
+    paths:
+      - 'weekly_ml/daily.py'
+      - 'weekly_ml/tests/**'
+      - '.github/workflows/weekly_ml_daily.yml'
+      - 'strategy_comparison/report.py'
+  schedule:
+    # XNYS close + market-data margin, Mon-Fri; Tuesday-Saturday backup.
+    - cron: '17 22 * * 1-5'
+    - cron: '27 1 * * 2-6'
+  workflow_dispatch:
+    inputs:
+      preflight_only:
+        description: 'Run tests without creating or valuing a paper session'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  # Serialize against Friday forecast/freeze and other daily writers.
+  group: midas-weekly-ml
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: weekly_ml/requirements-daily.txt
+      - name: Install lightweight live market dependencies
+        run: python -m pip install -r weekly_ml/requirements-daily.txt
+      - name: Test causal next-open and daily mark-to-market
+        run: |
+          python -m py_compile weekly_ml/daily.py strategy_comparison/report.py
+          python -m unittest discover -s weekly_ml/tests -p test_daily.py -v
+          python -m unittest discover -s strategy_comparison/tests -v
+      - name: Value one completed XNYS session
+        id: execute
+        if: ${{ github.event_name != 'pull_request' && !inputs.preflight_only }}
+        run: python weekly_ml/daily.py --phase daily
+      - name: Record daily runtime health
+        if: ${{ always() && github.event_name == 'schedule' && !inputs.preflight_only }}
+        run: |
+          python strategy_comparison/runtime_health.py \
+            --output strategy_runtime/weekly_ml_daily.json \
+            --workflow-key weekly_ml_daily \
+            --workflow-name "MIDAS Weekly ML daily paper" \
+            --outcome "${{ steps.execute.outcome }}" \
+            --run-id "$GITHUB_RUN_ID" \
+            --run-number "$GITHUB_RUN_NUMBER" \
+            --head-sha "$GITHUB_SHA"
+      - name: Publish daily ledger and refresh canonical comparison
+        if: ${{ always() && github.event_name != 'pull_request' && !inputs.preflight_only }}
+        run: |
+          python strategy_comparison/publish_state.py \
+            --message "Record MIDAS Weekly ML daily paper state" \
+            --path weekly_ml_daily_state \
+            --path strategy_runtime/weekly_ml_daily.json
