@@ -1,2 +1,4 @@
 faster-whisper==1.2.1
+# PyAV 19 removes av.open(metadata_errors), which faster-whisper 1.2.1 still calls.
+av>=11,<19
 huggingface-hub>=0.36,<2
