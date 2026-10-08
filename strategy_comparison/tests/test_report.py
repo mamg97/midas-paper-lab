@@ -132,6 +132,38 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(ensemble["activity_tickers"], ["AMD", "INTC"])
 
 
+    def test_weekly_daily_ledger_overrides_legacy_settlement_without_double_counting(self):
+        config = {"models": ["lgbm_return", "lgbm_direction", "lgbm_ranker",
+                             "mlp_return", "lstm_return", "arima_return",
+                             "ensemble_consensus"],
+                  "currency": "USD", "paper_policy": {"capital": 100000}}
+        keys = list(self.registry["weekly_ml_tracks"])
+        legacy = {"config_hash": _config_hash(config), "first_session": "2026-10-02",
+                  "last_session": "2026-10-09", "strategies": {
+                      key: {"nav": 105000.0, "pending": [],
+                            "equity": [{"date": "2026-10-02", "nav": 100000},
+                                       {"date": "2026-10-09", "nav": 105000}]}
+                      for key in keys}}
+        daily = {"config_hash": _config_hash(config),
+                 "engine": "weekly_ml_daily_next_open_v1",
+                 "first_session": "2026-10-09", "last_session": "2026-10-12",
+                 "strategies": {
+                     key: {"nav": 100100.0, "positions": {"AAA": {"shares": 2}},
+                           "pending": [], "equity": [
+                               {"date": "2026-10-09", "nav": 100000},
+                               {"date": "2026-10-12", "nav": 100100}]}
+                     for key in keys}}
+        result = build(self.registry, self.config, now=self.now,
+                       weekly_config=config, weekly_state=legacy, weekly_daily_state=daily)
+        row = next(x for x in result["tracks"] if x["id"] == "weekly_ml_ensemble_2026")
+        self.assertEqual(row["last_session"], "2026-10-12")
+        self.assertEqual(row["return_pct"], 0.1)
+        self.assertTrue(row["daily_mode"])
+        self.assertEqual(row["activity_state"], "active")
+        self.assertEqual(row["activity_tickers"], ["AAA"])
+        self.assertEqual(row["equity_history"][-1]["date"], "2026-10-12")
+        self.assertEqual(result["counts"]["weekly_ml_with_diary"], 9)
+
     def test_tfg_corrected_uses_separate_weekly_ledger(self):
         tfg_config = {
             "name": "TFG_2021_corrected_2026",
