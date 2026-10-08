@@ -21,7 +21,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: buy-the-dip-research-state
+  # PR checks do not publish evidence; separate them from main's serialized writers.
+  # Only real push/schedule/manual runs contend for the canonical research state.
+  group: ${{ github.event_name == 'pull_request' && format('{0}-pr-{1}', github.workflow, github.event.pull_request.number) || 'buy-the-dip-research-state' }}
   cancel-in-progress: false
 
 jobs:
