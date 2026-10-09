@@ -28,6 +28,7 @@ class ReportTests(unittest.TestCase):
         result = build(self.registry, self.config, now=self.now)
         self.assertEqual(result["counts"], {"paper_with_diary": 0, "legacy_with_diary": 0,
                                              "tfm_with_diary": 0, "weekly_ml_with_diary": 0,
+                                             "weekly_ml_legacy_with_ledger": 0,
                                              "tfg_with_diary": 0, "capital_cycle_with_diary": 0,
                                              "buy_the_dip_with_diary": 0,
                                              "historical_pending": len(self.registry["historical_ideas"])})
@@ -128,16 +129,27 @@ class ReportTests(unittest.TestCase):
         ]
         result = build(self.registry, self.config, now=self.now,
                        weekly_config=weekly_config, weekly_state=weekly)
-        self.assertEqual(result["counts"]["weekly_ml_with_diary"], 9)
+        self.assertEqual(result["counts"]["weekly_ml_with_diary"], 0)
+        self.assertEqual(result["counts"]["weekly_ml_legacy_with_ledger"], 9)
         ensemble = next(row for row in result["tracks"] if row["id"] == "weekly_ml_ensemble_2026")
-        self.assertEqual((ensemble["group"], ensemble["return_pct"], ensemble["day_return_pct"]),
-                         ("weekly_ml_demo", 1.0, 1.0))
-        self.assertEqual(ensemble["currency"], "USD")
-        self.assertEqual(ensemble["equity_history"][-1], {"date": "2026-10-09", "nav": 101000.0})
-        self.assertEqual(ensemble["activity_state"], "pending")
-        self.assertEqual(ensemble["activity_label"], "2 señales congeladas · liquidación semanal pendiente")
-        self.assertIn("NO es una compra ejecutada", ensemble["note"])
-        self.assertEqual(ensemble["activity_tickers"], ["AMD", "INTC"])
+        self.assertEqual(ensemble["group"], "weekly_ml_demo")
+        self.assertTrue(ensemble["daily_mode"])
+        self.assertEqual(ensemble["status"], "programada_sin_diario")
+        self.assertIsNone(ensemble["return_pct"])
+        self.assertIsNone(ensemble["last_session"])
+        self.assertEqual(ensemble["equity_history"], [])
+        old = next(row for row in result["tracks"] if row["id"] == "weekly_legacy_weekly_ml_ensemble_2026")
+        self.assertEqual(old["group"], "weekly_ml_legacy")
+        self.assertEqual(old["status"], "weekly_settled_demo")
+        self.assertEqual(old["return_pct"], 1.0)
+        self.assertIsNone(old["day_return_pct"])
+        self.assertEqual(old["currency"], "USD")
+        self.assertEqual(old["equity_history"][-1], {"date": "2026-10-09", "nav": 101000.0})
+        self.assertEqual(old["activity_state"], "pending")
+        self.assertEqual(old["activity_label"], "2 señales congeladas · liquidación semanal pendiente")
+        self.assertIn("NO participa en la competición diaria", old["note"])
+        self.assertEqual(old["activity_tickers"], ["AMD", "INTC"])
+        self.assertEqual(len(set(row["id"] for row in result["tracks"])), len(result["tracks"]))
 
 
     def test_weekly_daily_ledger_overrides_legacy_settlement_without_double_counting(self):
@@ -171,6 +183,37 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(row["activity_tickers"], ["AAA"])
         self.assertEqual(row["equity_history"][-1]["date"], "2026-10-12")
         self.assertEqual(result["counts"]["weekly_ml_with_diary"], 9)
+        self.assertEqual(result["counts"]["weekly_ml_legacy_with_ledger"], 9)
+        old = next(x for x in result["tracks"] if x["id"] == "weekly_legacy_weekly_ml_ensemble_2026")
+        self.assertEqual(old["group"], "weekly_ml_legacy")
+        self.assertEqual(old["last_session"], "2026-10-09")
+        self.assertEqual(old["return_pct"], 5.0)
+        self.assertIsNone(old["day_return_pct"])
+        self.assertEqual(old["last_equity"], 105000)
+        self.assertEqual(row["last_equity"], 100100)
+        self.assertNotEqual(row["initial_capital"], None)
+        self.assertEqual(row["first_session"], "2026-10-09")
+
+    def test_one_weekly_mark_never_counts_as_a_settled_return(self):
+        config = {"models": ["lgbm_return", "lgbm_direction", "lgbm_ranker",
+                             "mlp_return", "lstm_return", "arima_return", "ensemble_consensus"],
+                  "currency": "USD", "paper_policy": {"capital": 100000.0}}
+        keys = list(self.registry["weekly_ml_tracks"])
+        book = {"config_hash": _config_hash(config), "first_session": "2026-10-02",
+                "last_session": "2026-10-02", "strategies": {
+                    key: {"nav": 100000.0, "pending": [{"ticker": "AAA"}],
+                          "equity": [{"date": "2026-10-02", "nav": 100000.0}]}
+                    for key in keys}}
+        result = build(self.registry, self.config, now=self.now,
+                       weekly_config=config, weekly_state=book)
+        legacy = [x for x in result["tracks"] if x["group"] == "weekly_ml_legacy"]
+        forward = [x for x in result["tracks"] if x["group"] == "weekly_ml_demo"]
+        self.assertEqual(len(legacy), len(forward))
+        self.assertEqual(len(legacy), 9)
+        self.assertTrue(all(x["return_pct"] is None and
+                            x["status"] == "weekly_awaiting_first_settlement" for x in legacy))
+        self.assertTrue(all(x["return_pct"] is None and not x["equity_history"]
+                            for x in forward))
 
     def test_tfg_corrected_uses_separate_weekly_ledger(self):
         tfg_config = {
