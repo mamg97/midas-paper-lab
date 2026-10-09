@@ -1,0 +1,431 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-09T12:21:56.728085+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/137273587",
+    "published_date": "2024-12-27",
+    "youtube_video_id": "GuTe-zWK7Ag",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 33806253
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 4225.7240625,
+      "word_count": 11408,
+      "segment_count": 1740,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "GuTe-zWK7Ag",
+    "youtube_url": "https://www.youtube.com/watch?v=GuTe-zWK7Ag",
+    "title": "2024 TODO LO QUE HEMOS APRENDIDO  | BUY THE DIP PODCAST",
+    "category": "methodology",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/137273587",
+    "published_date": "2024-12-27",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio aborda el método Buy The Dip, enfatizando la importancia de la disciplina en hábitos como el ahorro, la inversión y el ejercicio para lograr resultados sostenibles. Se destaca la necesidad de ejecutar con rapidez, adaptarse al mercado, y priorizar decisiones basadas en impulso en lugar de planificación excesiva. Se menciona la importancia de minimizar pérdidas, manejar riesgos políticos y catastróficos, y diversificar inversiones evitando sobreconcentración en empresas no comprendidas. También se analizan libros de historia económica y política para entender patrones de inversión y riesgos, con un enfoque en lecturas inversivas y temas históricos. Finalmente, se alerta sobre riesgos de censura y se menciona la posibilidad de finalizar el programa, junto con una oferta de contenido premium.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Se subraya que invertir en empresas fuera de la competencia puede ser riesgoso debido a la falta de conocimiento y la dificultad para evaluar su valoración."
+      ],
+      "cycle_macro": [],
+      "entry": [
+        "Se refiere a la necesidad de focalizarse en áreas de valor y delegar tareas para optimizar el tiempo.",
+        "El speaker destaca la importancia de ejecutar con rapidez y adaptarse durante el proceso, en lugar de planificar demasiado."
+      ],
+      "sizing": [
+        "Se menciona la importancia de la disciplina en hábitos como el ejercicio, el ahorro, y la gestión de la cartera de inversión, para lograr resultados sostenibles."
+      ],
+      "add_hold": [],
+      "exit": [
+        "El speaker menciona que está considerando finalizar el programa, recordando la oferta de Navidad y animando a los espectadores a unirse a analysisinversión.com para acceder a análisis premium y contenido exclusivo."
+      ],
+      "risk": [
+        "Se destaca la importancia de tener un día de descanso para evitar el agotamiento y mantener un equilibrio entre trabajo y vida personal.",
+        "Se menciona la importancia de no subestimar las posibilidades de eventos negativos, como la deuda excesiva o fallos en proyectos, que pueden resultar en pérdidas superiores a las esperadas.",
+        "Se alerta sobre la influencia del sentimiento en las decisiones de inversión, especialmente en sectores como el petróleo o las minas, donde el juicio emocional puede llevar a errores en la gestión de riesgos."
+      ],
+      "technical": [],
+      "management": [
+        "El usuario menciona la importancia de la calidad de los análisis y la gestión del portfolio de inversión."
+      ],
+      "mistakes": [
+        "Se menciona la parálisis por análisis y la necesidad de tomar decisiones con impulso, incluso si no son perfectas."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El programa menciona la importancia de la suscripción premium para acceder a contenido exclusivo y la necesidad de mantener hábitos consistentes para lograr resultados a largo plazo.",
+          "timestamp": "00:02:12",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se destaca la necesidad de evitar vicios como el tabaquismo, el exceso de ocio, y el uso intensivo del teléfono, para mejorar la calidad de vida y la productividad.",
+          "timestamp": "00:07:00",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona la importancia de la disciplina en hábitos como el ejercicio, el ahorro, y la gestión de la cartera de inversión, para lograr resultados sostenibles.",
+          "timestamp": "00:04:01",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El programa destaca la importancia de la suscripción premium para acceder a contenido exclusivo y la necesidad de mantener hábitos consistentes para lograr resultados a largo plazo. Se menciona la importancia de evitar vicios como el tabaquismo, el exceso de ocio, y el uso intensivo del teléfono, para mejorar la calidad de vida y la productividad. Se destaca la necesidad de disciplina en hábitos como el ejercicio, el ahorro, y la gestión de la cartera de inversión, para lograr resultados sostenibles."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "mistake",
+          "paraphrase": "El habla sobre errores cometidos en operativa y la necesidad de mejorar en áreas clave.",
+          "timestamp": "00:18:21",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Menciona la importancia de adaptarse al mercado y no forzar ideas que no tienen sentido.",
+          "timestamp": "00:19:26",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se refiere a la necesidad de focalizarse en áreas de valor y delegar tareas para optimizar el tiempo.",
+          "timestamp": "00:20:00",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El habla sobre errores operativos, la importancia de adaptarse al mercado, y la necesidad de focalizarse en áreas de valor y delegar tareas para mejorar la eficiencia y los resultados."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El speaker destaca la importancia de ejecutar con rapidez y adaptarse durante el proceso, en lugar de planificar demasiado.",
+          "timestamp": "00:24:01",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "execution",
+          "paraphrase": "Se enfatiza la necesidad de no perderse en detalles planificatorios y priorizar la acción, incluso si no es perfecta.",
+          "timestamp": "00:24:06",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona la importancia de tener un día de descanso para evitar el agotamiento y mantener un equilibrio entre trabajo y vida personal.",
+          "timestamp": "00:22:08",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se subraya que invertir en empresas fuera de la competencia puede ser riesgoso debido a la falta de conocimiento y la dificultad para evaluar su valoración.",
+          "timestamp": "00:30:07",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se menciona la parálisis por análisis y la necesidad de tomar decisiones con impulso, incluso si no son perfectas.",
+          "timestamp": "00:26:00",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El speaker destaca la importancia de ejecutar con rapidez y adaptarse durante el proceso, en lugar de planificar demasiado. Se enfatiza la necesidad de no perderse en detalles planificatorios y priorizar la acción, incluso si no es perfecta. Se menciona la importancia de tener un día de descanso para evitar el agotamiento y mantener un equilibrio entre trabajo y vida personal. Se subraya que invertir en empresas fuera de la competencia puede ser riesgoso debido a la falta de conocimiento y la dificultad para evaluar su valoración. Se menciona la parálisis por análisis y la necesidad de tomar decisiones con impulso, incluso si no son perfectas."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "risk",
+          "paraphrase": "El speaker enfatiza la importancia de minimizar pérdidas y manejar riesgos políticos y catastróficos, destacando que estos últimos pueden afectar significativamente la inversión y la tesis.",
+          "timestamp": "00:31:13",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona la necesidad de aplicar descuentos adecuados para riesgos en la valoración, reconociendo que las posibilidades de eventos negativos suelen ser subestimadas.",
+          "timestamp": "00:32:55",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se sugiere diversificar las inversiones, evitando sobreconcentración en empresas no comprendidas, y priorizar sectores con mayor conocimiento y control.",
+          "timestamp": "00:31:33",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se alerta sobre la subestimación de riesgos políticos y catastróficos, que pueden tener un impacto profundo en la tesis y la inversión, requiriendo una evaluación más rigurosa.",
+          "timestamp": "00:32:03",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se destaca la necesidad de revisar constantemente los riesgos, incluyendo aspectos no empresariales como la seguridad jurídica, que pueden ser difíciles de cuantificar pero críticos para la inversión.",
+          "timestamp": "00:32:11",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona la importancia de no subestimar las posibilidades de eventos negativos, como la deuda excesiva o fallos en proyectos, que pueden resultar en pérdidas superiores a las esperadas.",
+          "timestamp": "00:33:15",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se alerta sobre la influencia del sentimiento en las decisiones de inversión, especialmente en sectores como el petróleo o las minas, donde el juicio emocional puede llevar a errores en la gestión de riesgos.",
+          "timestamp": "00:34:47",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se subraya la necesidad de mantener la convicción en las decisiones de inversión, incluso en ausencia de datos objetivos, y de revisar constantemente las posiciones para evitar errores basados en rumores o información no verificable.",
+          "timestamp": "00:34:09",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona la competencia entre posiciones en la cartera, donde cada inversor tiende a defender sus decisiones, lo que puede generar desequilibrios y la necesidad de justificación basada en análisis objetivo.",
+          "timestamp": "00:36:17",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El speaker enfatiza la importancia de minimizar pérdidas y manejar riesgos políticos y catastróficos, destacando que estos últimos pueden afectar significativamente la inversión y la tesis. Se sugiere diversificar las inversiones, evitando sobreconcentración en empresas no comprendidas, y priorizar sectores con mayor conocimiento y control. Se alerta sobre la subestimación de riesgos políticos y catastróficos, que pueden tener un impacto profundo en la tesis y la inversión, requiriendo una evaluación más rigurosa. Se destaca la necesidad de revisar constantemente los riesgos, incluyendo aspectos no empresariales como la seguridad jurídica, que pueden ser difíciles de cuantificar pero críticos para la inversión. Se menciona la importancia de no subestimar las posibilidades de eventos negativos, como la deuda excesiva o fallos en proyectos, que pueden resultar en pérdidas superiores a las esperadas. Se alerta sobre la influencia del sentimiento en las decisiones de inversión, especialmente en sectores como el petróleo o las minas, donde el juicio emocional puede llevar a errores en la gestión de riesgos. Se subraya la necesidad de mantener la convicción en las decisiones de inversión, incluso en ausencia de datos objetivos, y de revisar constantemente las posiciones para evitar errores basados en rumores o información no verificable. Se menciona la competencia entre posiciones en la cartera, donde cada inversor tiende a defender sus decisiones, lo que puede generar desequilibrios y la necesidad de justificación basada en análisis objetivo."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "idea_generation",
+          "paraphrase": "El análisis de libros sobre historia económica y política ayuda a entender patrones de inversión y riesgos.",
+          "timestamp": "00:39:41",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La evaluación de empresas mediante análisis histórico y de contabilidad es crucial para identificar fraudes y valor real.",
+          "timestamp": "00:43:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Los riesgos de inversión están influenciados por factores geopolíticos y la contabilidad de empresas, como la gestión de activos y la narrativa de los libros.",
+          "timestamp": "00:44:01",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento destaca la importancia de libros de historia económica y política en la formación de estrategias de inversión, enfatizando la evaluación de riesgos, la contabilidad de empresas y la influencia geopolítica en la toma de decisiones. Se mencionan libros como 'The Art of Military Innovation' y 'World Order' como referencias clave, mientras se analizan aspectos como la contabilidad de activos y la narrativa histórica para entender el valor real de las empresas."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "idea_generation",
+          "paraphrase": "El usuario se centra en leer sobre historia y economía, destacando la importancia de los libros de Stephensweig y otros autores. Se menciona un libro sobre el declino del Imperio Romano y un libro sobre hormigas como lectura inversiva.",
+          "timestamp": "00:52:01",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El usuario prioriza lecturas que ofrecen perspectivas históricas y culturales, como el libro sobre el Imperio Assyrio y el análisis de la Stasi, considerando su valor en entender contextos políticos y sociales.",
+          "timestamp": "00:56:01",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El usuario planea leer al menos cinco horas semanales de libros, con un objetivo de 12-15 libros este año, enfocándose en lecturas inversivas y temas de historia, como el libro sobre hormigas y el de los vikingos.",
+          "timestamp": "00:53:29",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El usuario ha adquirido varios libros de historia, incluyendo el de los vikingos, la biografía de un verdugo, y el de la Stasi, con un enfoque en entender la evolución de sociedades y sistemas políticos a lo largo del tiempo.",
+          "timestamp": "00:55:11",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "El usuario planea terminar varios libros este año, incluyendo el de las hormigas y el de los vikingos, con una expectativa de que estos lecturas aporten conocimientos sobre comportamiento colectivo y estructuras históricas.",
+          "timestamp": "00:54:07",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "chunk_summary": "El usuario se centra en la lectura de historias y economías, priorizando libros de autores como Stephensweig y otros, con un enfoque en entender contextos históricos y culturales. Planea leer al menos 12-15 libros este año, enfocándose en lecturas inversivas y temas de historia, con un objetivo de comprender la evolución de sociedades y sistemas políticos a lo largo del tiempo."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El usuario menciona tener libros planeados y menciona un libro sobre hormigas que podría ser de interés.",
+          "timestamp": "00:58:21",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El usuario compara la vida de las hormigas con la guerra y menciona la importancia de la colonia y la supervivencia.",
+          "timestamp": "01:00:01",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El usuario menciona la alta tasa de mortalidad de las hormigas al salir al exterior y la importancia de la supervivencia.",
+          "timestamp": "01:01:01",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El usuario describe el proceso de vida de las hormigas, desde la reina hasta las larvas y su estructura social.",
+          "timestamp": "01:01:13",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "management",
+          "paraphrase": "El usuario menciona la importancia de la calidad de los análisis y la gestión del portfolio de inversión.",
+          "timestamp": "01:06:11",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El usuario compara la vida de las hormigas con la guerra y menciona la importancia de la colonia y la supervivencia. También menciona la necesidad de mejorar la calidad de los análisis y la gestión del portfolio de inversión. Además, el usuario planea leer libros sobre hormigas y menciona objetivos personales como aprender italiano y francés."
+    },
+    {
+      "chunk": 8,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El speaker menciona que ha notado un cambio en cómo la gente se relaciona contigo en París, destacando que este lugar es el núcleo de la idiotez de Francia.",
+          "timestamp": "01:07:51",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "El speaker menciona que está considerando finalizar el programa, recordando la oferta de Navidad y animando a los espectadores a unirse a analysisinversión.com para acceder a análisis premium y contenido exclusivo.",
+          "timestamp": "01:08:52",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El speaker menciona que hay un riesgo de censura del video por parte de un grupo (Shadow Manning), lo que podría afectar la continuidad del contenido.",
+          "timestamp": "01:08:22",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El speaker discurre sobre cambios en la percepción en París, menciona un posible final del programa, anuncia una oferta de Navidad para suscriptores, y alerta sobre un riesgo de censura del contenido."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
