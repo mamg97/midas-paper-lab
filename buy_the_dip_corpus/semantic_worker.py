@@ -112,11 +112,22 @@ def load_llm(repo_id=LLM_REPO,filename=LLM_FILE):
     return Llama(model_path=path,n_ctx=16384,n_threads=4,n_batch=256,verbose=False)
 
 def chat_json(llm,system,prompt,max_tokens):
-    response=llm.create_chat_completion(
-        messages=[{"role":"system","content":system+"\n/no_think"},
-                  {"role":"user","content":prompt+"\n/no_think"}],
-        temperature=0.1,max_tokens=max_tokens)
-    return json_object(response["choices"][0]["message"]["content"])
+    """Bounded retry for truncated/invalid LLM output; never fabricate evidence."""
+    for attempt in range(2):
+        brevity = ("\nMantén la salida breve (máximo 5 evidencias). "
+                   "Conserva solo hechos sustentados. Cierra todo el JSON."
+                   if attempt else "")
+        response=llm.create_chat_completion(
+            messages=[{"role":"system","content":system+brevity+"\n/no_think"},
+                      {"role":"user","content":prompt+"\n/no_think"}],
+            temperature=0.1 if attempt == 0 else 0,
+            max_tokens=max_tokens,
+            response_format={"type":"json_object"})
+        try:
+            return json_object(response["choices"][0]["message"]["content"])
+        except (ValueError,json.JSONDecodeError):
+            if attempt == 1:
+                raise ValueError("llm_invalid_json_after_retry") from None
 
 def sanitize(value):
     if isinstance(value,dict):
