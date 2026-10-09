@@ -1,10 +1,10 @@
 {
   "event": "schedule",
-  "head_sha": "4b61b06a9d61161edc4ec8eab04d61df5735c3a4",
+  "head_sha": "8b8870a5c29fcb4c03aa05af9c02013b2ad84d4b",
   "outcome": "success",
-  "recorded_at_utc": "2026-10-08T02:52:01.739343+00:00",
-  "run_id": 37719928194,
-  "run_number": 9,
+  "recorded_at_utc": "2026-10-09T03:03:04.713335+00:00",
+  "run_id": 37877442149,
+  "run_number": 10,
   "schema_version": 1,
   "workflow_key": "paper_us",
   "workflow_name": "MIDAS paper comparison"
