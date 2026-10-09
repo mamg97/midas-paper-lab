@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-09T07:41:50.225406+00:00",
+  "generated_at_utc": "2026-10-09T10:50:09.036718+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
@@ -613,7 +613,7 @@
       ],
       "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada.",
       "activity_state": "pending",
-      "activity_label": "1 señales congeladas · liquidación semanal pendiente",
+      "activity_label": "1 señal congelada · liquidación semanal pendiente",
       "activity_tickers": [
         "SPY"
       ],
@@ -645,7 +645,7 @@
       ],
       "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada.",
       "activity_state": "pending",
-      "activity_label": "1 señales congeladas · liquidación semanal pendiente",
+      "activity_label": "1 señal congelada · liquidación semanal pendiente",
       "activity_tickers": [
         "RSP"
       ],
@@ -1197,7 +1197,7 @@
       "kind": "modelo predictivo",
       "source": "fuente histórica privada, no publicada",
       "activity_state": "pending",
-      "activity_label": "1 compras para próxima apertura",
+      "activity_label": "1 compra para próxima apertura",
       "activity_tickers": [
         "ACS.MC"
       ],
@@ -1304,7 +1304,7 @@
       "kind": "modelo predictivo",
       "source": "fuente histórica privada, no publicada",
       "activity_state": "pending",
-      "activity_label": "1 compras para próxima apertura",
+      "activity_label": "1 compra para próxima apertura",
       "activity_tickers": [
         "MTS.MC"
       ],
