@@ -67,9 +67,9 @@ class SemanticWorkerTests(unittest.TestCase):
     def test_publisher_configures_identity_before_rebase(self):
         workflow = (ROOT.parent / ".github/workflows/buy_the_dip_semantic.yml").read_text()
         publisher = workflow.split("- name: Commit semantic evidence", 1)[1]
-        self.assertLess(publisher.index("git config user.name"), publisher.index("git commit"))
+        self.assertLess(publisher.index("git config user.name"), publisher.index("\n            git commit -m"))
         self.assertLess(publisher.index("git config user.email"), publisher.index("git pull --rebase"))
-        self.assertLess(publisher.index("git commit"), publisher.index("git pull --rebase"))
+        self.assertLess(publisher.index("\n            git commit -m"), publisher.index("git pull --rebase"))
         self.assertIn("git push", publisher)
 
     def test_sanitizer_removes_verbatim_fields(self):
