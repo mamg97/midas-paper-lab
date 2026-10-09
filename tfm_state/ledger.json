@@ -7,8 +7,8 @@
     "share_precision": 6
   },
   "first_session": "2026-10-02",
-  "forecast_hash": "8780c5d6ff470413957d41d7a6060c367e8808bbd965e476ec8178d843c1b56b",
-  "last_session": "2026-10-08",
+  "forecast_hash": "c79894a94346c41da3402d1955dac34ace0596c642878a3e9091424b872dd430",
+  "last_session": "2026-10-09",
   "missed_decision_sessions": [
     "2026-10-05"
   ],
@@ -37,6 +37,11 @@
         },
         {
           "date": "2026-10-08",
+          "decision_recorded": true,
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-09",
           "decision_recorded": true,
           "nav": 100000.0
         }
@@ -72,14 +77,29 @@
           "date": "2026-10-08",
           "decision_recorded": true,
           "nav": 100442.26261521611
+        },
+        {
+          "date": "2026-10-09",
+          "decision_recorded": true,
+          "nav": 100090.24617379472
         }
       ],
-      "nav": 100442.26261521611,
+      "nav": 100090.24617379472,
       "pending": [
         {
-          "predicted_return_pct": 0.5524827530357432,
-          "signal_date": "2026-10-08",
-          "ticker": "ACS.MC"
+          "predicted_return_pct": 0.3907528789026715,
+          "signal_date": "2026-10-09",
+          "ticker": "AMS.MC"
+        },
+        {
+          "predicted_return_pct": 0.36545495347823054,
+          "signal_date": "2026-10-09",
+          "ticker": "SAN.MC"
+        },
+        {
+          "predicted_return_pct": 0.3640324002801304,
+          "signal_date": "2026-10-09",
+          "ticker": "CLNX.MC"
         }
       ],
       "trades": [
@@ -106,6 +126,18 @@
           "sell_price": 30.104940838813782,
           "signal_date": "2026-10-07",
           "ticker": "REP.MC"
+        },
+        {
+          "buy_commission": 15.0512880941055,
+          "buy_price": 93.0465,
+          "date": "2026-10-09",
+          "net_pnl": -352.0164414213941,
+          "predicted_return_pct": 0.5524827530357432,
+          "quantity": 161.760927,
+          "sell_commission": 14.72905199277098,
+          "sell_price": 91.05444847488404,
+          "signal_date": "2026-10-08",
+          "ticker": "ACS.MC"
         }
       ],
       "unfilled": []
@@ -136,16 +168,15 @@
           "date": "2026-10-08",
           "decision_recorded": true,
           "nav": 99544.68048375752
-        }
-      ],
-      "nav": 99544.68048375752,
-      "pending": [
+        },
         {
-          "predicted_return_pct": 0.3079329223799105,
-          "signal_date": "2026-10-08",
-          "ticker": "MTS.MC"
+          "date": "2026-10-09",
+          "decision_recorded": true,
+          "nav": 99987.78626502545
         }
       ],
+      "nav": 99987.78626502545,
+      "pending": [],
       "trades": [
         {
           "buy_commission": 14.985014944869699,
@@ -170,6 +201,18 @@
           "sell_price": 22.5687099237442,
           "signal_date": "2026-10-07",
           "ticker": "CLNX.MC"
+        },
+        {
+          "buy_commission": 14.91678524045459,
+          "buy_price": 55.56777091598511,
+          "date": "2026-10-09",
+          "net_pnl": 443.10578126793735,
+          "predicted_return_pct": 0.3079329223799105,
+          "quantity": 268.44311,
+          "sell_commission": 15.39019800496795,
+          "sell_price": 57.33132061004639,
+          "signal_date": "2026-10-08",
+          "ticker": "MTS.MC"
         }
       ],
       "unfilled": []
@@ -200,48 +243,63 @@
           "date": "2026-10-08",
           "decision_recorded": true,
           "nav": 98055.93156369808
+        },
+        {
+          "date": "2026-10-09",
+          "decision_recorded": true,
+          "nav": 97680.43680651282
         }
       ],
-      "nav": 98055.93156369808,
+      "nav": 97680.43680651282,
       "pending": [
         {
-          "predicted_return_pct": 1.8319148606824864,
-          "signal_date": "2026-10-08",
-          "ticker": "AENA.MC"
+          "predicted_return_pct": 1.7754914719336976,
+          "signal_date": "2026-10-09",
+          "ticker": "CLNX.MC"
         },
         {
-          "predicted_return_pct": 1.1691705144620614,
-          "signal_date": "2026-10-08",
-          "ticker": "IAG.MC"
+          "predicted_return_pct": 1.1399471188789976,
+          "signal_date": "2026-10-09",
+          "ticker": "AMS.MC"
         },
         {
-          "predicted_return_pct": 1.0195836203878004,
-          "signal_date": "2026-10-08",
-          "ticker": "SAN.MC"
+          "predicted_return_pct": 0.8658578562253936,
+          "signal_date": "2026-10-09",
+          "ticker": "CABK.MC"
         },
         {
-          "predicted_return_pct": 0.8894502650877039,
-          "signal_date": "2026-10-08",
+          "predicted_return_pct": 0.8222214168783856,
+          "signal_date": "2026-10-09",
+          "ticker": "UNI.MC"
+        },
+        {
+          "predicted_return_pct": 0.7436465587899204,
+          "signal_date": "2026-10-09",
+          "ticker": "ELE.MC"
+        },
+        {
+          "predicted_return_pct": 0.7382328171589684,
+          "signal_date": "2026-10-09",
           "ticker": "FDR.MC"
         },
         {
-          "predicted_return_pct": 0.77145466870676,
-          "signal_date": "2026-10-08",
-          "ticker": "COL.MC"
+          "predicted_return_pct": 0.7247157310486643,
+          "signal_date": "2026-10-09",
+          "ticker": "ITX.MC"
         },
         {
-          "predicted_return_pct": 0.4691211880769256,
-          "signal_date": "2026-10-08",
-          "ticker": "BBVA.MC"
-        },
-        {
-          "predicted_return_pct": 0.42159007495073464,
-          "signal_date": "2026-10-08",
+          "predicted_return_pct": 0.6898873294695511,
+          "signal_date": "2026-10-09",
           "ticker": "ACX.MC"
         },
         {
-          "predicted_return_pct": 0.3434980693101664,
-          "signal_date": "2026-10-08",
+          "predicted_return_pct": 0.6455040209533983,
+          "signal_date": "2026-10-09",
+          "ticker": "ACS.MC"
+        },
+        {
+          "predicted_return_pct": 0.6368860724911486,
+          "signal_date": "2026-10-09",
           "ticker": "FER.MC"
         }
       ],
@@ -461,6 +519,102 @@
           "sell_price": 51.17440076255799,
           "signal_date": "2026-10-07",
           "ticker": "AMS.MC"
+        },
+        {
+          "buy_commission": 11.63250934628969,
+          "buy_price": 24.952470534324643,
+          "date": "2026-10-09",
+          "net_pnl": -44.19005369972183,
+          "predicted_return_pct": 1.8319148606824864,
+          "quantity": 466.186678,
+          "sell_commission": 11.611563365301558,
+          "sell_price": 24.9075400762558,
+          "signal_date": "2026-10-08",
+          "ticker": "AENA.MC"
+        },
+        {
+          "buy_commission": 11.632509361492506,
+          "buy_price": 5.032515209913253,
+          "date": "2026-10-09",
+          "net_pnl": -221.82918819251427,
+          "predicted_return_pct": 1.1691705144620614,
+          "quantity": 2311.470284,
+          "sell_commission": 11.433746429090574,
+          "sell_price": 4.946525381803513,
+          "signal_date": "2026-10-08",
+          "ticker": "IAG.MC"
+        },
+        {
+          "buy_commission": 11.632509352532795,
+          "buy_price": 12.096045152664184,
+          "date": "2026-10-09",
+          "net_pnl": -44.48267473175656,
+          "predicted_return_pct": 1.0195836203878004,
+          "quantity": 961.678731,
+          "sell_commission": 11.611270457611182,
+          "sell_price": 12.073959923744201,
+          "signal_date": "2026-10-08",
+          "ticker": "SAN.MC"
+        },
+        {
+          "buy_commission": 11.632509362848976,
+          "buy_price": 17.24861977100372,
+          "date": "2026-10-09",
+          "net_pnl": -82.01725700130919,
+          "predicted_return_pct": 0.8894502650877039,
+          "quantity": 674.40233,
+          "sell_commission": 11.573698313524039,
+          "sell_price": 17.1614150762558,
+          "signal_date": "2026-10-08",
+          "ticker": "FDR.MC"
+        },
+        {
+          "buy_commission": 11.632509362036755,
+          "buy_price": 4.862430133581161,
+          "date": "2026-10-09",
+          "net_pnl": -92.21017522772672,
+          "predicted_return_pct": 0.77145466870676,
+          "quantity": 2392.324217,
+          "sell_commission": 11.563495191362426,
+          "sell_price": 4.833581965684891,
+          "signal_date": "2026-10-08",
+          "ticker": "COL.MC"
+        },
+        {
+          "buy_commission": 11.632509341404457,
+          "buy_price": 23.471729084014893,
+          "date": "2026-10-09",
+          "net_pnl": -183.33574900243366,
+          "predicted_return_pct": 0.4691211880769256,
+          "quantity": 495.596609,
+          "sell_commission": 11.472278380123551,
+          "sell_price": 23.148419847488405,
+          "signal_date": "2026-10-08",
+          "ticker": "BBVA.MC"
+        },
+        {
+          "buy_commission": 11.632509356169633,
+          "buy_price": 16.708350763320922,
+          "date": "2026-10-09",
+          "net_pnl": 319.6530706747817,
+          "predicted_return_pct": 0.42159007495073464,
+          "quantity": 696.20931,
+          "sell_commission": 11.97577070690749,
+          "sell_price": 17.20139408493042,
+          "signal_date": "2026-10-08",
+          "ticker": "ACX.MC"
+        },
+        {
+          "buy_commission": 11.632509348583831,
+          "buy_price": 44.69233316802978,
+          "date": "2026-10-09",
+          "net_pnl": -27.082730004605764,
+          "predicted_return_pct": 0.3434980693101664,
+          "quantity": 260.279751,
+          "sell_commission": 11.628687815743554,
+          "sell_price": 44.67765076255799,
+          "signal_date": "2026-10-08",
+          "ticker": "FER.MC"
         }
       ],
       "unfilled": []
