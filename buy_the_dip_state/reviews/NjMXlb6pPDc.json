@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-09T20:05:46.845675+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/93230826",
+    "published_date": "2022-10-02",
+    "youtube_video_id": "NjMXlb6pPDc",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 29840449
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 3730.050625,
+      "word_count": 10919,
+      "segment_count": 598,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "NjMXlb6pPDc",
+    "youtube_url": "https://www.youtube.com/watch?v=NjMXlb6pPDc",
+    "title": "Cómo buscar, analizar e INVERTIR en EMPRESAS  | BUY THE DIP PODCAST",
+    "category": "methodology",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/93230826",
+    "published_date": "2022-10-02",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute métodos de inversión basados en la observación de tendencias, la copia de estrategias de otros inversores y la evaluación de empresas a través de métricas como múltiplos y deuda. Se destacan la importancia de analizar dinámicas de oferta y demanda, asesorarse en conferencias con directivos y considerar mercados globales para mitigar riesgos. Se mencionan estrategias de entrada basadas en proyectos sólidos y buen management, aunque con riesgos de que las empresas no suban de precio. También se abordan aspectos de gestión de riesgos, como vender activos para compensar pérdidas fiscales y equilibrar entre riesgo y posibilidad de recuperar capital. Se destacan errores en decisiones de inversión, como vender demasiado pronto, y se sugiere que el éxito no siempre depende de habilidad, sino también de factores externos como suerte y oportunidades fortuitas.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [],
+      "cycle_macro": [],
+      "entry": [],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [],
+      "risk": [],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "low"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "idea_generation",
+          "paraphrase": "El podcast discute métodos para encontrar ideas de inversión, destacando la copia de estrategias de otros inversores y la observación de tendencias en el entorno local y global.",
+          "timestamp": "00:00:29",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona que el proceso de inversión no sigue un checklist fijo, sino que es dinámico y depende de la situación y análisis directo.",
+          "timestamp": "00:01:13",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se expone que las empresas cotizadas ya tienen inversores, por lo que las ideas originales no son necesariamente únicas, y se sugiere copiar ideas de otros inversores o fondos.",
+          "timestamp": "00:03:15",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se advierte que invertir en empresas con tendencias locales puede ser sesgado, y se sugiere considerar mercados globales con mayor diversidad de empresas cotizadas.",
+          "timestamp": "00:05:40",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se menciona un ejemplo de inversión basada en observaciones de comportamientos de consumidores (como la popularidad de una película o un producto), y la compra de opciones basada en suposiciones sobre el futuro del consumo.",
+          "timestamp": "00:07:14",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "management",
+          "paraphrase": "Se sugiere que la copia de estrategias de otros inversores o fondos puede ser útil, pero con la advertencia de que puede llevar a decisiones basadas en información limitada o sesgada.",
+          "timestamp": "00:08:21",
+          "scope": "hosts",
+          "confidence": 0.4,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast discute métodos para encontrar ideas de inversión, destacando la copia de estrategias de otros inversores y la observación de tendencias en el entorno local y global. Se menciona que el proceso de inversión no sigue un checklist fijo, sino que es dinámico y depende de la situación y análisis directo. Se expone que las empresas cotizadas ya tienen inversores, por lo que las ideas originales no son necesariamente únicas, y se sugiere copiar ideas de otros inversores o fondos. Se advierte que invertir en empresas con tendencias locales puede ser sesgado, y se sugiere considerar mercados globales con mayor diversidad de empresas cotizadas. Se menciona un ejemplo de inversión basada en observaciones de comportamientos de consumidores y la compra de opciones basada en suposiciones sobre el futuro del consumo. Se sugiere que la copia de estrategias de otros inversores o fondos puede ser útil, pero con la advertencia de que puede llevar a decisiones basadas en información limitada o sesgada."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona que a veces es útil copiar análisis de otros gestores, aunque no se deben fiar ciegamente de ellos.",
+          "timestamp": "00:10:48",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se destaca que la empresa Mti Food tuvo un buen rendimiento inicial, pero luego cayó significativamente, lo que muestra la importancia de evaluar el valor real de una empresa.",
+          "timestamp": "00:11:07",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista advierte sobre el riesgo de invertir en empresas con poca información, como las small caps, donde la falta de transparencia puede llevar a decisiones mal informadas.",
+          "timestamp": "00:14:12",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se menciona que el uso de screeners puede ser útil para encontrar empresas baratas, pero requiere una evaluación adicional para evitar invertir en empresas con poca calidad o rentabilidad.",
+          "timestamp": "00:16:28",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "management",
+          "paraphrase": "El analista comenta que algunos gestores tienen posiciones en opciones y derivados, lo que sugiere que la copia de estrategias puede ser sesgada y no siempre efectiva.",
+          "timestamp": "00:12:58",
+          "scope": "hosts",
+          "confidence": 0.4
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se destaca un error de inversión donde un gestor se metió en una empresa con poca información, lo que resultó en una pérdida significativa, mostrando la importancia de no actuar sin análisis.",
+          "timestamp": "00:10:54",
+          "scope": "hosts",
+          "confidence": 0.3
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento aborda estrategias de inversión, destacando la importancia de evaluar el valor real de una empresa, el riesgo asociado a invertir en small caps, y la necesidad de análisis adicional antes de tomar decisiones. También menciona la utilidad de herramientas como screeners, pero advierte sobre su limitación y la posibilidad de sesgos al copiar estrategias de otros gestores."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Analizar dinámicas de oferta y demanda para identificar gaps en el mercado y predecir tendencias de precios.",
+          "timestamp": "00:31:32",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Evaluar empresas basándose en métricas como múltiplos, track record de directivas, y análisis de deuda y liquidez.",
+          "timestamp": "00:27:13",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Asesorearse en conferencias y entrevistas con directivos para evaluar la honestidad y transparencia de las empresas.",
+          "timestamp": "00:27:45",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de dinámicas de oferta y demanda, junto con la evaluación de empresas a través de múltiplos, track record de directivas y análisis de deuda, son estrategias clave para identificar oportunidades de inversión en materias primas. Además, se recomienda asesorarse en conferencias y entrevistas con directivos para evaluar la honestidad y transparencia de las empresas, lo que ayuda a mitigar riesgos y tomar decisiones informadas."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Invertir en empresas de mierda puede ser rentable si la empresa tiene buenos proyectos y un buen management, aunque haya riesgos de que la empresa no suba de precio o se estancue.",
+          "timestamp": "00:32:31",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La valoración de una empresa en sectores como las mineras depende de factores como el ciclo macro, la calidad de la empresa, y la capacidad de la empresa para generar rentabilidad a través de proyectos sólidos.",
+          "timestamp": "00:34:01",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Invertir en empresas de mierda conlleva riesgos, pero si la empresa tiene buenos proyectos y un buen management, puede ser una estrategia de alto rendimiento si se evitan errores en la selección de empresas.",
+          "timestamp": "00:34:15",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La estrategia de inversión implica buscar empresas con proyectos sólidos, buen management y capacidad de generar rentabilidad, incluso si la empresa no es de alta calidad, pero con un buen desempeño en proyectos y una buena gestión.",
+          "timestamp": "00:34:30",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Invertir en empresas de mierda conlleva riesgos, pero si la empresa tiene buenos proyectos y un buen management, puede ser una estrategia de alto rendimiento si se evitan errores en la selección de empresas.",
+          "timestamp": "00:34:15",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La estrategia de inversión implica buscar empresas con proyectos sólidos, buen management y capacidad de generar rentabilidad, incluso si la empresa no es de alta calidad, pero con un buen desempeño en proyectos y una buena gestión.",
+          "timestamp": "00:34:30",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de inversión en empresas de mierda se basa en la selección de empresas con buenos proyectos y un buen management, aunque haya riesgos de que la empresa no suba de precio o se estancue. La estrategia implica buscar empresas con capacidad de generar rentabilidad a través de proyectos sólidos, aunque la empresa no sea de alta calidad, y considerar factores como el ciclo macro, la calidad de la empresa, y la capacidad de la empresa para generar rentabilidad. La valoración de una empresa en sectores como las mineras depende de factores como el ciclo macro, la calidad de la empresa, y la capacidad de la empresa para generar rentabilidad a través de proyectos sólidos."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "exit",
+          "paraphrase": "Se menciona la importancia de vender activos para compensar pérdidas fiscales y evitar que el estado se beneficie de las ganancias no declaradas.",
+          "timestamp": "00:44:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se destaca la dificultad de gestionar pérdidas al tener que equilibrar entre pagar impuestos y mantener posiciones perdedoras en el mercado.",
+          "timestamp": "00:44:08",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se plantea la estrategia de comprar activos baratos al final del año y venderlos para compensar pérdidas, manteniendo una postura de venta para evitar impuestos.",
+          "timestamp": "00:44:59",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona la necesidad de ajustar la estrategia de inversión cuando un activo se vende a un precio muy atractivo, lo que permite reinvertir en otros sectores.",
+          "timestamp": "00:46:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se refleja la dinámica de mercado donde el precio activo de un activo no refleja pérdidas reales si no se vende, lo que puede llevar a decisiones de compra o venta basadas en el precio en papel.",
+          "timestamp": "00:44:34",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se discute la importancia de evaluar el valor real de un activo, considerando tanto el precio activo como el valor en papel, para tomar decisiones de compra o venta.",
+          "timestamp": "00:44:40",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se menciona un error en la estrategia de inversión donde se vende un activo demasiado pronto, lo que puede llevar a perder oportunidades de recuperar capital inicial.",
+          "timestamp": "00:50:43",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se describe una estrategia de entrada basada en la percepción de que un activo está a un precio muy atractivo, lo que permite reinvertir en otros sectores.",
+          "timestamp": "00:46:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se destaca la necesidad de equilibrar entre el riesgo de perder capital y la posibilidad de recuperarlo mediante la venta parcial de activos.",
+          "timestamp": "00:44:08",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se refleja la dinámica de mercado donde el precio activo de un activo no refleja pérdidas reales si no se vende, lo que puede llevar a decisiones de compra o venta basadas en el precio en papel.",
+          "timestamp": "00:44:34",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento aborda estrategias de inversión enfocadas en la gestión de riesgos, la compensación de pérdidas fiscales, y la toma de decisiones de compra o venta basada en el precio activo y en papel. Se mencionan la importancia de vender activos para compensar pérdidas, la necesidad de ajustar estrategias de inversión cuando un activo se vende a un precio atractivo, y la dificultad de equilibrar entre el riesgo de perder capital y la posibilidad de recuperarlo mediante la venta parcial de activos. También se discuten errores en la estrategia de inversión donde se vende un activo demasiado pronto, lo que puede llevar a perder oportunidades de recuperar capital inicial."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "risk",
+          "paraphrase": "El éxito no depende solo de habilidades, sino también de factores externos como suerte y oportunidades accidentales.",
+          "timestamp": "00:57:59",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Las decisiones de inversión no siempre reflejan habilidad, pueden ser influenciadas por circunstancias fortuitas o errores en la evaluación del riesgo.",
+          "timestamp": "00:54:24",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La exitencia de un inversor exitoso no garantiza que todas sus decisiones hayan sido correctas, debido a la combinación de habilidad y factores aleatorios.",
+          "timestamp": "00:55:08",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento discute la relación entre éxito en inversiones, habilidad del inversor, y factores externos como suerte y circunstancias fortuitas. Se menciona que el éxito no siempre se debe a habilidad, sino también a oportunidades accidentales o errores en la evaluación del riesgo. Se ilustra con un ejemplo de un inversor que se volvió famoso accidentalmente debido a circunstancias fortuitas, lo que sugiere que la suerte y los factores externos pueden tener un impacto significativo en los resultados de las inversiones."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
