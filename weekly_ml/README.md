@@ -118,3 +118,12 @@ No ejecuta dinero real.
 ## Seguimiento diario prospectivo (v2, desde señal 09/10/2026)
 
 La simulación semanal clásica se conserva intacta en `weekly_ml_state/ledger.json`; sus liquidaciones diferidas no se mezclan con la cartera diaria. Tras un forecast semanal nuevo, `.github/workflows/weekly_ml.yml` congela las señales en `weekly_ml_daily_state/ledger.json`; `.github/workflows/weekly_ml_daily.yml` procesa cada cierre XNYS, registra las compras simuladas al siguiente open, valora NAV al cierre y liquida posiciones el último día bursátil de la semana. El dashboard público prioriza exclusivamente este ledger prospectivo desde su primera señal. No se retrotraen compras no registradas del 05/10. Nunca se envían órdenes reales.
+
+## Exposición dual sin mezclar libros (09/10/2026)
+
+El reporte canónico `strategy_comparison/report.py` conserva **dos campañas paper independientes por experto**:
+
+- `weekly_ml_demo`: solo la cartera diaria next-open, identificadores canónicos `weekly_ml_*`. Hasta disponer de `weekly_ml_daily_state/ledger.json` muestra **esperando primera sesión**, sin heredar fecha, capital marcado, compras ni resultados de la campaña semanal. Las señales del viernes 09/10 solo podrán convertirse en fills paper prospectivos desde la apertura siguiente.
+- `weekly_ml_legacy`: nueve filas de referencia con ID prefijado `weekly_legacy_`, alimentadas **exclusivamente** por `weekly_ml_state/ledger.json`, visibles en *Catálogo / histórico* y excluidas del ranking prospectivo. Tras observar **al menos dos puntos semanales en el ledger**, publica la rentabilidad semanal realmente liquidada. Antes de ello aparece como pendiente sin un retorno del 0 % inventado.
+
+El conteo de estrategias competidoras no suma los nueve libros de referencia. Las dos curvas y P&L se calculan contra sus propios capitales iniciales; no se combinan, enlazan ni comparan como una campaña continuada. Se conserva el ledger semanal íntegro, incluidos sus pendientes, sin retroconstruir fills lunes-jueves ni intervenir en un bróker.
