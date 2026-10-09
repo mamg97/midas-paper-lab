@@ -21,7 +21,7 @@ class ReportTests(unittest.TestCase):
         signal = _activity(None, [{"ticker": "XYZ"}], pending_label="señales congeladas · liquidación semanal pendiente")
         mixed = _activity({"AAA": {"shares": 10}}, [{"ticker": "BBB"}], pending_label="compras para próxima apertura")
         self.assertEqual(order["activity_label"], "1 compra para próxima apertura")
-        self.assertEqual(signal["activity_label"], "1 señal congeladas · liquidación semanal pendiente".replace("señal congeladas", "señal congelada"))
+        self.assertEqual(signal["activity_label"], "1 señal congelada · liquidación semanal pendiente")
         self.assertEqual(mixed["activity_label"], "1 posición · 1 compra para próxima apertura")
 
     def test_missing_runs_are_explicit_and_have_no_returns(self):
