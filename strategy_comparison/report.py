@@ -303,44 +303,74 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
     for strategy_key, item in weekly_tracks.items():
         capital_weekly = None if weekly_config is None else _equity(
             weekly_config["paper_policy"]["capital"], "capital weekly ML")
+        # Only the independent next-open ledger may enter the daily competition.
+        # Never substitute the old weekly ledger while the first daily signal is pending.
         row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
                "group": "weekly_ml_demo", "status": "programada_sin_diario",
+               "daily_mode": True,
                "first_session": None, "last_session": None,
                "initial_capital": capital_weekly, "last_equity": None,
                "return_pct": None, "day_return_pct": None,
                "currency": None if weekly_config is None else weekly_config.get("currency", "USD"),
                "equity_history": [],
-               "note": "Señales congeladas al cierre semanal. El motor actual no registra fills ni NAV diarios: simula entrada en la siguiente primera apertura y salida al último cierre semanal al procesar el viernes siguiente. Una señal pendiente NO es una compra ejecutada."}
-        source = weekly_daily_state if weekly_daily_state is not None else weekly_state
-        if source is not None:
-            book = source["strategies"][strategy_key]
+               "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. "
+                       "Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. "
+                       "No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas."}
+        if weekly_daily_state is not None:
+            book = weekly_daily_state["strategies"][strategy_key]
             history = book.get("equity", [])
             if not history:
-                raise ValueError("Cartera weekly ML sin patrimonio: " + strategy_key)
+                raise ValueError("Cartera weekly ML diaria sin patrimonio: " + strategy_key)
             nav = _equity(history[-1].get("nav"), strategy_key)
-            if history[-1].get("date") != source.get("last_session"):
-                raise ValueError("Patrimonio weekly ML sin fecha válida")
+            if history[-1].get("date") != weekly_daily_state.get("last_session"):
+                raise ValueError("Patrimonio weekly ML diario sin fecha válida")
             row.update(status="demo_con_diario",
-                       first_session=source.get("first_session"),
-                       last_session=source.get("last_session"),
+                       first_session=weekly_daily_state.get("first_session"),
+                       last_session=weekly_daily_state.get("last_session"),
                        last_equity=nav,
                        return_pct=round(100 * (nav / capital_weekly - 1), 6),
                        day_return_pct=_daily_return(history, strategy_key),
                        equity_history=_equity_history(history, strategy_key))
-            if weekly_daily_state is not None:
-                row["daily_mode"] = True
-                row["note"] = ("Campaña paper diaria prospectiva desde la señal del 09/10/2026. "
-                               "Las órdenes se simulan a la primera apertura y el patrimonio se valora "
-                               "al cierre de cada sesión; no incluye operaciones reconstruidas de semanas anteriores.")
-                positions = book.get("positions", {})
-                row["positions"] = [{"ticker": ticker, "shares": p["shares"]}
-                                    for ticker, p in positions.items()]
-                row.update(_activity(positions, book.get("pending"),
-                                     pending_label="señales para próxima apertura paper"))
-            else:
-                row.update(_activity(None, book.get("pending"),
-                                      pending_label="señales congeladas · liquidación semanal pendiente"))
+            positions = book.get("positions", {})
+            row["positions"] = [{"ticker": ticker, "shares": p["shares"]}
+                                for ticker, p in positions.items()]
+            row.update(_activity(positions, book.get("pending"),
+                                 pending_label="señales para próxima apertura paper"))
         rows.append(row)
+
+        # The original weekly settlement book is preserved as a separate reference,
+        # with distinct IDs and no transfer of cash, trades or performance.
+        if weekly_state is not None:
+            book = weekly_state["strategies"][strategy_key]
+            history = book.get("equity", [])
+            if not history:
+                raise ValueError("Cartera weekly ML con liquidación diferida sin patrimonio: " + strategy_key)
+            if history[-1].get("date") != weekly_state.get("last_session"):
+                raise ValueError("Patrimonio semanal sin fecha válida: " + strategy_key)
+            nav = _equity(history[-1].get("nav"), strategy_key)
+            settled = len(history) >= 2
+            legacy = {
+                "id": "weekly_legacy_" + item["id"],
+                "label": item["label"] + " · liquidación diferida",
+                "provenance": provenance[item["id"]] + " · libro semanal independiente",
+                "group": "weekly_ml_legacy",
+                "status": "weekly_settled_demo" if settled else "weekly_awaiting_first_settlement",
+                "daily_mode": False,
+                "first_session": weekly_state.get("first_session"),
+                "last_session": weekly_state.get("last_session"),
+                "initial_capital": capital_weekly, "last_equity": nav,
+                "return_pct": round(100 * (nav / capital_weekly - 1), 6) if settled else None,
+                "day_return_pct": None,
+                "currency": weekly_config.get("currency", "USD"),
+                "equity_history": _equity_history(history, strategy_key),
+                "note": "Libro semanal prospectivo desde 02/10/2026: liquidación al final de "
+                        "la siguiente semana, sin NAV diario ni fills registrados lunes-jueves. "
+                        "Resultado semanal separado; NO participa en la competición diaria ni "
+                        "se suma a la rentabilidad de la campaña diaria."
+            }
+            legacy.update(_activity(None, book.get("pending"),
+                                    pending_label="señales congeladas · liquidación semanal pendiente"))
+            rows.append(legacy)
     for strategy_key, item in tfg_tracks.items():
         capital_tfg = None if tfg_config is None else _equity(
             tfg_config["portfolio"]["capital"], "capital TFG")
@@ -484,7 +514,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                     "open_positions_count": 0,
                     "pending_orders_count": 0,
                 })
-            elif row.get("group") in {"historica_pendiente", "diario_heredado"}:
+            elif row.get("group") in {"historica_pendiente", "diario_heredado", "weekly_ml_legacy"}:
                 row.update({
                     "activity_state": "unknown",
                     "activity_label": "Actividad actual no enlazada",
@@ -502,6 +532,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        "legacy_with_diary": sum(x["status"] == "diario_heredado_observado" for x in rows),
                        "tfm_with_diary": sum(x["group"] == "tfm_demo_adaptado" and x["status"] == "demo_con_diario" for x in rows),
                        "weekly_ml_with_diary": sum(x["group"] == "weekly_ml_demo" and x["status"] == "demo_con_diario" for x in rows),
+                       "weekly_ml_legacy_with_ledger": sum(x["group"] == "weekly_ml_legacy" for x in rows),
                        "tfg_with_diary": sum(x["group"] == "tfg_demo_adaptado" and x["status"] == "demo_con_diario" for x in rows),
                        "capital_cycle_with_diary": sum(x["group"] == "capital_cycle_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "buy_the_dip_with_diary": sum(x["group"] == "buy_the_dip_demo" and x["status"] == "demo_con_diario" for x in rows),
