@@ -64,6 +64,14 @@ class SemanticWorkerTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"llm_invalid_json_after_retry"):
             worker.chat_json(Broken(),"Solo la fuente","Datos",1600)
 
+    def test_publisher_configures_identity_before_rebase(self):
+        workflow = (ROOT.parent / ".github/workflows/buy_the_dip_semantic.yml").read_text()
+        publisher = workflow.split("- name: Commit semantic evidence", 1)[1]
+        self.assertLess(publisher.index("git config user.name"), publisher.index("\n            git commit -m"))
+        self.assertLess(publisher.index("git config user.email"), publisher.index("git pull --rebase"))
+        self.assertLess(publisher.index("\n            git commit -m"), publisher.index("git pull --rebase"))
+        self.assertIn("git push", publisher)
+
     def test_sanitizer_removes_verbatim_fields(self):
         value={"summary":"ok","transcript":"secret","nested":{"quote":"literal","rule":"keep"}}
         clean=worker.sanitize(value)

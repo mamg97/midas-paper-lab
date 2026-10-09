@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from report import _config_hash, build, markdown
+from report import _config_hash, _activity, build, markdown
 
 
 class ReportTests(unittest.TestCase):
@@ -15,6 +15,14 @@ class ReportTests(unittest.TestCase):
         self.registry = json.loads((ROOT / "registry.json").read_text(encoding="utf-8"))
         self.config = {"capital": 100000.0, "strategies": {name: {} for name in self.registry["paper_tracks"]}}
         self.now = datetime(2026, 9, 28, tzinfo=timezone.utc)
+
+    def test_activity_uses_singular_for_one_pending_order_or_signal(self):
+        order = _activity(None, [{"ticker": "ABC"}], pending_label="compras para próxima apertura")
+        signal = _activity(None, [{"ticker": "XYZ"}], pending_label="señales congeladas · liquidación semanal pendiente")
+        mixed = _activity({"AAA": {"shares": 10}}, [{"ticker": "BBB"}], pending_label="compras para próxima apertura")
+        self.assertEqual(order["activity_label"], "1 compra para próxima apertura")
+        self.assertEqual(signal["activity_label"], "1 señal congelada · liquidación semanal pendiente")
+        self.assertEqual(mixed["activity_label"], "1 posición · 1 compra para próxima apertura")
 
     def test_missing_runs_are_explicit_and_have_no_returns(self):
         result = build(self.registry, self.config, now=self.now)

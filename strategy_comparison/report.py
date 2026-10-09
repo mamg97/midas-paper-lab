@@ -148,15 +148,25 @@ def _activity(positions=None, pending=None, *, pending_label="órdenes pendiente
             combined.append(ticker)
     open_count = len(position_tickers)
     pending_count = len(pending_tickers)
+    # Labels are already formatted for plural counts by the callers.
+    # Adjust only the initial noun when a single order/signal is pending.
+    single_pending_label = pending_label
+    if pending_count == 1 and pending_label.startswith("compras "):
+        single_pending_label = "compra " + pending_label[len("compras "):]
+    elif pending_count == 1 and pending_label.startswith("señales congeladas"):
+        single_pending_label = "señal congelada" + pending_label[len("señales congeladas"):]
+    elif pending_count == 1 and pending_label.startswith("señales "):
+        single_pending_label = "señal " + pending_label[len("señales "):]
+    resolved_pending_label = single_pending_label if pending_count == 1 else pending_label
     if open_count and pending_count:
         state = "active_pending"
-        label = f"{open_count} posiciones · {pending_count} {pending_label}"
+        label = f"{open_count} " + ("posición" if open_count == 1 else "posiciones") + f" · {pending_count} {resolved_pending_label}"
     elif open_count:
         state = "active"
         label = f"{open_count} " + ("posición abierta" if open_count == 1 else "posiciones abiertas")
     elif pending_count:
         state = "pending"
-        label = f"{pending_count} {pending_label}"
+        label = f"{pending_count} {resolved_pending_label}"
     else:
         state = "cash"
         label = empty_label

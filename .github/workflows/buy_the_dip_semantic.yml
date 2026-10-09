@@ -118,9 +118,10 @@ jobs:
         run: |
           git add -- buy_the_dip_state/reviews buy_the_dip_state/semantic_progress.json
           if ! git diff --cached --quiet; then
-            git -c user.name='github-actions[bot]' \
-              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
-              commit -m 'Review next Buy The Dip episode'
+            # Rebase recreates the commit, so local identity must persist beyond git commit.
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Review next Buy The Dip episode'
             git pull --rebase origin main
             git push
           fi
