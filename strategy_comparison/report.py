@@ -153,6 +153,8 @@ def _activity(positions=None, pending=None, *, pending_label="órdenes pendiente
     single_pending_label = pending_label
     if pending_count == 1 and pending_label.startswith("compras "):
         single_pending_label = "compra " + pending_label[len("compras "):]
+    elif pending_count == 1 and pending_label.startswith("señales congeladas"):
+        single_pending_label = "señal congelada" + pending_label[len("señales congeladas"):]
     elif pending_count == 1 and pending_label.startswith("señales "):
         single_pending_label = "señal " + pending_label[len("señales "):]
     resolved_pending_label = single_pending_label if pending_count == 1 else pending_label
