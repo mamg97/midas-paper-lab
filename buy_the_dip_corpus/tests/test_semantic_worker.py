@@ -42,6 +42,28 @@ class SemanticWorkerTests(unittest.TestCase):
         self.assertGreater(len(chunks),1)
         self.assertEqual("\n".join(chunks),text)
 
+    def test_semantic_json_uses_grammar_and_recovers_one_invalid_completion(self):
+        class Stub:
+            def __init__(self):
+                self.kwargs = []
+            def create_chat_completion(self, **kwargs):
+                self.kwargs.append(kwargs)
+                body = '{"evidence": [' if len(self.kwargs) == 1 else '{"evidence":[],"chunk_summary":"Validado"}'
+                return {"choices":[{"message":{"content":body}}]}
+        llm=Stub()
+        result=worker.chat_json(llm,"Extrae solo evidencia","Texto fuente",1600)
+        self.assertEqual(result["evidence"],[])
+        self.assertEqual(len(llm.kwargs),2)
+        self.assertTrue(all(call["response_format"] == {"type":"json_object"} for call in llm.kwargs))
+        self.assertEqual(llm.kwargs[1]["temperature"],0)
+
+    def test_semantic_json_rejects_twice_invalid_without_partial_evidence(self):
+        class Broken:
+            def create_chat_completion(self, **kwargs):
+                return {"choices":[{"message":{"content":'{"evidence": ['}}]}
+        with self.assertRaisesRegex(ValueError,"llm_invalid_json_after_retry"):
+            worker.chat_json(Broken(),"Solo la fuente","Datos",1600)
+
     def test_sanitizer_removes_verbatim_fields(self):
         value={"summary":"ok","transcript":"secret","nested":{"quote":"literal","rule":"keep"}}
         clean=worker.sanitize(value)
