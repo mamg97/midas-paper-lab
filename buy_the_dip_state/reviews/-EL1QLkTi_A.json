@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-10T19:26:03.357589+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/155252789",
+    "published_date": "2025-08-11",
+    "youtube_video_id": "-EL1QLkTi_A",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 25287157
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 3160.7901875,
+      "word_count": 8369,
+      "segment_count": 476,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "-EL1QLkTi_A",
+    "youtube_url": "https://www.youtube.com/watch?v=-EL1QLkTi_A",
+    "title": "Nuestra Cartera de INVERSIÓN en AGOSTO | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/155252789",
+    "published_date": "2025-08-11",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza la cartera de inversión de Albert y Martí, destacando compras y ventas de mineras, resultados de la cartera de petróleo, y riesgos geopolíticos en zonas petrolíferas. Se mencionan decisiones de rebalanceo, timing exitoso en ventas, y exposición a conflictos en zonas petrolíferas. Además, se discute una estrategia de inversión basada en la expansión de una empresa, la gestión de riesgos a través de hedge de petróleo, y la reducción de riesgos geopolíticos mediante acuerdos de paz en la región caucasica. También se analiza una empresa con activos en África, destacando su potencial de revalorización, riesgos políticos, y un alto margen de beneficio. Se menciona una IPO de 30 billones de dólares para Fanny y Freddy, valorada en 500 billones, con un plazo para la IPO programado para noviembre de 2025, aunque con incertidumbres sobre su éxito.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "La cartera de petróleo tiene licencias en 100% de los campos petroleros y 100% de los campos de gas, con un marge amplio de 80-195 millones dependiendo del precio del petróleo.",
+        "Un menor riesgo de conflicto reduce el costo del equity, lo que beneficia la valoración de empresas en zonas estables."
+      ],
+      "cycle_macro": [
+        "La empresa está en la parte baja del ciclo de precios del carbón, con precios bajos que afectan los resultados operativos."
+      ],
+      "entry": [
+        "La cartera de petróleo alcanzó 21,000 barriles diarios de producción, con ventas de 9 millones de barriles a 67,9 dólares, generando ingresos ajustados de 130 millones.",
+        "La empresa ha ampliado su terreno de exploración y ha realizado una recompra de acciones, lo que refleja una estrategia de crecimiento y consolidación."
+      ],
+      "sizing": [
+        "Se menciona que la IPO de 30 billones de dólares es una cantidad importante, lo que sugiere que la empresa está planeando un lanzamiento de capital de gran magnitud."
+      ],
+      "add_hold": [],
+      "exit": [
+        "La venta de posiciones fue motivada por riesgos de sobreconcentración y gestión de riesgo, con un timing exitoso que aprovechó la volatilidad del mercado.",
+        "Se menciona que la IPO está programada para noviembre de 2025, lo que sugiere un plazo específico para el lanzamiento y posiblemente un cierre de la operación."
+      ],
+      "risk": [
+        "La cartera tiene exposición a conflictos geopolíticos en zonas como el territorio disputado entre Tailandia y Camboya, donde existen pozos no explotados debido a disputas entre países.",
+        "El conflicto en el Caucaso afecta la estabilidad y el costo del capital, lo que influye en la valoración de las empresas.",
+        "Se menciona que hay especulaciones sobre la fusión de la empresa, lo que podría implicar riesgos y incertidumbres en el plan de la IPO."
+      ],
+      "technical": [
+        "El analista analiza la gráfica de una acción, señalando un aumento de 20% en una semana tras resultados positivos, y destacando un precio de 77 dólares por acción.",
+        "El timing de la IPO está programado para noviembre, lo que sugiere que los analistas están siguiendo un enfoque técnico para determinar la viabilidad del lanzamiento."
+      ],
+      "management": [
+        "La empresa no es una compañía normal, sino que es un GCS (Government Sponsored Enterprise), lo que sugiere que el manejo y la regulación son diferentes y pueden influir en la IPO."
+      ],
+      "mistakes": [
+        "Se menciona que hay especulaciones sobre la fusión de la empresa, lo que podría llevar a errores en el plan de la IPO si no se manejan adecuadamente."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Alberto compró una minera en secreto para usuarios de análisis previo y vendió varias posiciones por rebalanceo y gestión de riesgo.",
+          "timestamp": "00:01:28",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La minera vendida alcanzó precios de 0,85 dólares canadienses y tuvo un rally de 138% antes de la venta, lo que influyó en la decisión de reducir exposición.",
+          "timestamp": "00:04:01",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La venta de posiciones fue motivada por riesgos de sobreconcentración y gestión de riesgo, con un timing exitoso que aprovechó la volatilidad del mercado.",
+          "timestamp": "00:04:17",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La cartera de petróleo alcanzó 21,000 barriles diarios de producción, con ventas de 9 millones de barriles a 67,9 dólares, generando ingresos ajustados de 130 millones.",
+          "timestamp": "00:07:03",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La cartera de petróleo tiene licencias en 100% de los campos petroleros y 100% de los campos de gas, con un marge amplio de 80-195 millones dependiendo del precio del petróleo.",
+          "timestamp": "00:09:10",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La cartera tiene exposición a conflictos geopolíticos en zonas como el territorio disputado entre Tailandia y Camboya, donde existen pozos no explotados debido a disputas entre países.",
+          "timestamp": "00:10:47",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El programa analiza la cartera de inversión de Albert y Martí, destacando compras y ventas de mineras, resultados de la cartera de petróleo, y riesgos geopolíticos en zonas de explotación. Se mencionan decisiones de rebalanceo, timing exitoso en ventas, y exposición a conflictos en zonas petrolíferas."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa ha ampliado su terreno de exploración y ha realizado una recompra de acciones, lo que refleja una estrategia de crecimiento y consolidación.",
+          "timestamp": "00:11:18",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa ha realizado un hedge de 11.700 barriles diarios de petróleo a 14 dólares, lo que sugiere una estrategia de gestión de riesgos eficiente.",
+          "timestamp": "00:13:16",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa ha logrado un acuerdo de paz entre Armenia y Azerbaiján, lo que podría reducir riesgos geopolíticos y facilitar inversiones en la región.",
+          "timestamp": "00:16:13",
+          "scope": "hosts",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento muestra una estrategia de inversión basada en la expansión de la empresa, la gestión de riesgos a través de hedge de petróleo, y la reducción de riesgos geopolíticos mediante acuerdos de paz en la región caucasica."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "risk",
+          "paraphrase": "El conflicto en el Caucaso afecta la estabilidad y el costo del capital, lo que influye en la valoración de las empresas.",
+          "timestamp": "00:22:38",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Un menor riesgo de conflicto reduce el costo del equity, lo que beneficia la valoración de empresas en zonas estables.",
+          "timestamp": "00:23:27",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La paz y la estabilidad en el Caucaso pueden aumentar la confianza de los inversores, facilitando la entrada de capital en el sector.",
+          "timestamp": "00:23:57",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento discute cómo el conflicto en el Caucaso afecta la estabilidad y la valoración de empresas, sugiriendo que una reducción del riesgo de conflicto podría mejorar la confianza de los inversores y beneficiar la valoración de empresas en la región."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la producción de una mina en África y su potencial de revalorización al aumentar su producción, destacando la diversificación de activos y el riesgo país.",
+          "timestamp": "00:34:38",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista analiza el valor de una empresa con activos en África, destacando un margen de beneficio de 50% y un aumento del 100% en el ingreso neto, sugiriendo un alto potencial de valoración.",
+          "timestamp": "00:38:00",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista menciona riesgos políticos en África, como confiscaciones de minas por gobiernos locales, pero también destaca que los gobiernos no han actuado peor de lo esperado.",
+          "timestamp": "00:35:18",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El analista analiza la gráfica de una acción, señalando un aumento de 20% en una semana tras resultados positivos, y destacando un precio de 77 dólares por acción.",
+          "timestamp": "00:38:13",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El analista menciona que la empresa está en la parte baja del ciclo de precios del carbón, con precios bajos que afectan los resultados operativos.",
+          "timestamp": "00:44:30",
+          "scope": "hosts",
+          "confidence": 0.5
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El analista analiza una estrategia de inversión en una empresa con activos en África, destacando su potencial de revalorización, riesgos políticos, y un alto margen de beneficio. Se mencionan resultados positivos, un aumento en el precio de la acción, y un análisis de ciclo macro. Se destacan también riesgos de confiscación de minas por gobiernos locales, aunque los gobiernos no han actuado peor de lo esperado. La empresa tiene un activo con un alto potencial de valoración y se sugiere una posible entrada de inversión."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona que Fanny y Freddy están preparando una IPO de 30 billones de dólares, valorando a la empresa en 500 billones, lo que sugiere un alto nivel de interés y preparación para el lanzamiento.",
+          "timestamp": "00:46:00",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa se valora en 500 billones de dólares, lo que indica una valoración muy alta y sugiere que la IPO podría ser significativa para el mercado.",
+          "timestamp": "00:46:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona que la IPO de 30 billones de dólares es una cantidad importante, lo que sugiere que la empresa está planeando un lanzamiento de capital de gran magnitud.",
+          "timestamp": "00:46:00",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona que hay especulaciones sobre la fusión de la empresa, lo que podría implicar riesgos y incertidumbres en el plan de la IPO.",
+          "timestamp": "00:47:18",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se menciona que la IPO está programada para noviembre de 2025, lo que sugiere un plazo específico para el lanzamiento y posiblemente un cierre de la operación.",
+          "timestamp": "00:47:55",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se menciona que el timing de la IPO está programado para noviembre, lo que sugiere que los analistas están siguiendo un enfoque técnico para determinar la viabilidad del lanzamiento.",
+          "timestamp": "00:47:55",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "management",
+          "paraphrase": "Se menciona que la empresa no es una compañía normal, sino que es un GCS (Government Sponsored Enterprise), lo que sugiere que el manejo y la regulación son diferentes y pueden influir en la IPO.",
+          "timestamp": "00:48:28",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se menciona que hay especulaciones sobre la fusión de la empresa, lo que podría llevar a errores en el plan de la IPO si no se manejan adecuadamente.",
+          "timestamp": "00:47:18",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "other",
+          "paraphrase": "Se menciona que las preferentes de la empresa tienen una rentabilidad del 30-33% y un valor en dólares de 46, lo que sugiere que la IPO podría tener un impacto significativo en el valor de las acciones.",
+          "timestamp": "00:50:33",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe la preparación de una IPO de 30 billones de dólares para Fanny y Freddy, valorados en 500 billones, con un plazo para la IPO programado para noviembre de 2025. Se mencionan riesgos, especulaciones sobre fusión, y la viabilidad del lanzamiento, así como la rentabilidad de las preferentes de la empresa. La discusión abarca aspectos técnicos, de gestión y de riesgo, sugiriendo un alto nivel de interés y preparación para el lanzamiento, aunque con incertidumbres sobre su éxito."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
