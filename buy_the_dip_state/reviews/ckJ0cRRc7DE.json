@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-10T09:06:06.160309+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/160062049",
+    "published_date": "2025-10-03",
+    "youtube_video_id": "ckJ0cRRc7DE",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 20603088
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2575.281625,
+      "word_count": 6931,
+      "segment_count": 425,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "ckJ0cRRc7DE",
+    "youtube_url": "https://www.youtube.com/watch?v=ckJ0cRRc7DE",
+    "title": "El Lado Oscuro de las Inversiones: Nuestros Fracasos | BUY THE DIP PODCAST",
+    "category": "methodology",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/160062049",
+    "published_date": "2025-10-03",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza errores y riesgos en inversiones de empresas de defensa y terrenos, destacando problemas como retrasos, costos elevados, inflación y complejidad de activos. Se critican entradas en empresas por falta de ejecución, problemas de valoración, y errores en inversiones mineras. Se mencionan proyectos como Martí Go Gold y Dasa, que sufrieron de retrasos regulatorios, conflictos y caídas de valor. El speaker destaca que los errores son parte natural del negocio de inversión, y que se deben aprender de ellos para mejorar la estrategia. Se enfatiza la importancia de la ejecución operativa, la valoración cuidadosa y la gestión de riesgos en inversiones.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "La valoración de empresas como Hanty Toning Industries ha sido afectada por la inflación, retrasos en contratos y la necesidad de reinversiones, lo que ha reducido su rendimiento."
+      ],
+      "cycle_macro": [
+        "El precio del oro y la regulación mexicana influyeron en el desempeño de proyectos mineros, aumentando riesgos y complicando la inversión."
+      ],
+      "entry": [
+        "El inversor critica la entrada en la empresa 'Tesis' por su falta de ejecución operativa y por pagos de comisiones inadecuados."
+      ],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [
+        "La empresa 'Tesis' fue vendida por el CEO en una conferencia, con un mensaje crítico sobre la falta de ejecución y la dilución."
+      ],
+      "risk": [
+        "Empresas de terrenos como Fact Boy Holdings han sufrido impactos significativos por la inflación y la complejidad de sus activos, incluyendo residuos nucleares y deuda a largo plazo."
+      ],
+      "technical": [],
+      "management": [],
+      "mistakes": [
+        "El speaker menciona errores en inversiones, como el error de invertir en una empresa sin entender bien su modelo, lo que resultó en pérdidas significativas."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "mistake",
+          "paraphrase": "Empresas de defensa como Hanty Toning Industries han tenido problemas con retrasos, costos elevados y dificultades para obtener personal calificado, afectando su rendimiento.",
+          "timestamp": "00:06:16",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Empresas de terrenos como Fact Boy Holdings han sufrido impactos significativos por la inflación y la complejidad de sus activos, incluyendo residuos nucleares y deuda a largo plazo.",
+          "timestamp": "00:10:29",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La valoración de empresas como Hanty Toning Industries ha sido afectada por la inflación, retrasos en contratos y la necesidad de reinversiones, lo que ha reducido su rendimiento.",
+          "timestamp": "00:07:19",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast analiza errores y riesgos en inversiones de empresas de defensa y terrenos, destacando problemas como retrasos, costos elevados, inflación y complejidad de activos, afectando su rendimiento esperado."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El inversor critica la entrada en la empresa 'Tesis' por su falta de ejecución operativa y por pagos de comisiones inadecuados.",
+          "timestamp": "00:11:45",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La tesis de 'Tesis' se desmontó debido a problemas en la producción de armaduras y la dilución de acciones por deuda.",
+          "timestamp": "00:14:04",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La empresa 'Tesis' fue vendida por el CEO en una conferencia, con un mensaje crítico sobre la falta de ejecución y la dilución.",
+          "timestamp": "00:16:29",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El inversor menciona que las empresas de diarios enfrentan riesgos por la declinación del sector tradicional y el crecimiento lento del digital.",
+          "timestamp": "00:19:10",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "El inversor comete un error al invertir en 'Lion One Metals' por no prever los problemas operativos y de geometría del proyecto.",
+          "timestamp": "00:22:30",
+          "scope": "hosts",
+          "confidence": 0.4
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de inversión discute críticas a entradas en empresas por falta de ejecución, problemas de valoración, riesgos en sectores tradicionales, y errores en inversiones especulativas. Se destacan la desaprobación de una tesis por problemas operativos y la pérdida de una posición en una empresa minera por problemas de producción y geometría."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "mistake",
+          "paraphrase": "El proyecto de Martí Go Gold fue una mala inversión debido a problemas técnicos, retrasos regulatorios y riesgos elevados en México.",
+          "timestamp": "00:23:43",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La minería hacia lo abierto en México enfrenta regulaciones estrictas que aumentan el riesgo para proyectos como el de Martí Go Gold.",
+          "timestamp": "00:27:02",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa de uranio en Níger, Dasa, perdió valor debido a un conflicto con los franceses y falta de financiación, lo que afectó su proyección económica.",
+          "timestamp": "00:30:30",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La acción de Dasa cayó de 5 dólares a 0.73 dólares debido a un desastre en Níger, afectando su valoración actual.",
+          "timestamp": "00:30:42",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El precio del oro y la regulación mexicana influyeron en el desempeño de proyectos mineros, aumentando riesgos y complicando la inversión.",
+          "timestamp": "00:27:38",
+          "scope": "hosts",
+          "confidence": 0.4
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis identifica errores en inversiones mineras, riesgos regulatorios en México, y caídas de valoración en proyectos de uranio debido a conflictos y falta de financiación. Se destacan problemas técnicos, retrasos en permisos, y la influencia del precio del oro en el desempeño de activos mineros."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "mistake",
+          "paraphrase": "El speaker menciona errores en inversiones, como el error de invertir en una empresa sin entender bien su modelo, lo que resultó en pérdidas significativas.",
+          "timestamp": "00:39:57",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "El speaker comenta un error específico de invertir en una empresa (Barfor Capital) que no entendía completamente, lo que llevó a una caída del 50%.",
+          "timestamp": "00:40:15",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "El speaker destaca que algunos errores son comunes en inversiones, como invertir en empresas que pinta bien pero no se conocen bien, lo que genera pérdidas.",
+          "timestamp": "00:40:53",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "El speaker menciona que los errores son parte natural del negocio de inversión, y que no se puede evitar estar en error, aunque se puede minimizar el impacto.",
+          "timestamp": "00:38:28",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "El speaker comenta que algunos errores se deben a no tener conocimientos suficientes en un sector, lo que lleva a decisiones mal informadas.",
+          "timestamp": "00:39:40",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "El speaker destaca que los errores pueden ser inevitables, pero se deben aprender de ellos para mejorar la estrategia de inversión.",
+          "timestamp": "00:41:28",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El speaker discute errores comunes en inversiones, destacando que los errores son parte natural del proceso, y que se deben minimizar su impacto. Menciona ejemplos específicos de errores, como invertir en empresas sin entender bien su modelo, y resalta la importancia de la experiencia y la preparación en la inversión."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
