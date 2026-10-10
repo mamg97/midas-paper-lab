@@ -93,6 +93,33 @@ class WeeklyPaperTests(unittest.TestCase):
             "volume": [1_000_000] * 3,
         }, index=dates)
 
+    def test_unquoted_pending_order_cannot_settle_and_keeps_original_book(self):
+        config = self.config()
+        original_panel = {"AAA": self.frame(100), "SPY": self.frame(500), "RSP": self.frame(180)}
+        first = {"asof": "2026-09-18", "models": {
+            "lgbm_return": {"AAA": {"predicted_return": 0.02}}}}
+        state, _ = advance(config, original_panel, first)
+        second = {"asof": "2026-09-25", "models": {"lgbm_return": {}}}
+        # A diagnostic metric may skip AAA; an already committed paper order may not.
+        with self.assertRaisesRegex(ValueError, "Cotización ausente para liquidar orden paper: AAA"):
+            advance(config, {"SPY": self.frame(500), "RSP": self.frame(180)}, second, state)
+        self.assertEqual(state["last_session"], "2026-09-18")
+        self.assertEqual(state["strategies"]["lgbm_return"]["trades"], [])
+        self.assertEqual(len(state["strategies"]["lgbm_return"]["pending"]), 1)
+
+    def test_thursday_quote_cannot_replace_friday_close_for_paper_settlement(self):
+        config = self.config()
+        panel = {"AAA": self.frame(100), "SPY": self.frame(500), "RSP": self.frame(180)}
+        first = {"asof": "2026-09-18", "models": {
+            "lgbm_return": {"AAA": {"predicted_return": 0.02}}}}
+        state, _ = advance(config, panel, first)
+        truncated = panel["AAA"].drop(pd.Timestamp("2026-09-25"))
+        truncated.loc[pd.Timestamp("2026-09-24")] = truncated.iloc[-1]
+        with self.assertRaisesRegex(ValueError, "cierre semanal completo"):
+            advance(config, {**panel, "AAA": truncated},
+                    {"asof": "2026-09-25", "models": {"lgbm_return": {}}}, state)
+        self.assertEqual(state["strategies"]["lgbm_return"]["trades"], [])
+
     def test_next_week_open_close_and_costs(self):
         panel = {ticker: self.frame(price) for ticker, price in {
             "AAA": 100.0, "SPY": 500.0, "RSP": 180.0}.items()}
@@ -124,6 +151,57 @@ class WeeklyPaperTests(unittest.TestCase):
 
 
 
+
+
+class WeeklyDiagnosticMissingQuoteTests(unittest.TestCase):
+    def frame(self, through_friday=True):
+        dates = pd.to_datetime(["2026-10-02", "2026-10-05", "2026-10-08", "2026-10-09"])
+        if not through_friday:
+            dates = dates[:-1]
+        return pd.DataFrame({
+            "open": [100.0] * len(dates),
+            "high": [101.0] * len(dates),
+            "low": [99.0] * len(dates),
+            "close": [100.0, 101.0, 102.0, 103.0][:len(dates)],
+            "volume": [100000] * len(dates),
+        }, index=dates)
+
+    def test_missing_ticker_and_incomplete_last_close_are_reported_not_invented(self):
+        previous = {
+            "asof": "2026-10-02", "live_tickers": ["AAA", "BBB", "WBD"],
+            "models": {"lgbm_return": {
+                "AAA": {"predicted_return": 0.01},
+                "WBD": {"predicted_return": 0.02},
+                "BBB": {"predicted_return": 0.02}
+            }}
+        }
+        evaluated = weekly_runner.evaluate(previous, {
+            "AAA": self.frame(), "BBB": self.frame(through_friday=False)
+        }, "2026-10-09")
+        self.assertEqual(evaluated["actual_tickers"], 1)
+        self.assertEqual(evaluated["expected_tickers"], 3)
+        self.assertEqual(evaluated["missing_tickers"], {
+            "BBB": "weekly_final_close_unavailable",
+            "WBD": "vendor_history_unavailable"})
+        self.assertAlmostEqual(evaluated["metrics"]["lgbm_return"]["mae"],
+                               abs(.01 - .03))
+        self.assertEqual(evaluated["forecast_asof"], "2026-10-02")
+
+    def test_completely_missing_evaluation_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "Sin precios observados"):
+            weekly_runner.evaluate({
+                "asof": "2026-10-02",
+                "live_tickers": ["WBD"],
+                "models": {"lgbm_return": {"WBD": {"predicted_return": 0.01}}}
+            }, {}, "2026-10-09")
+
+    def test_widespread_vendor_data_loss_fails_closed(self):
+        previous = {"asof": "2026-10-02",
+                    "live_tickers": [f"ASSET{i:03}" for i in range(100)],
+                    "models": {}}
+        panel = {f"ASSET{i:03}": self.frame() for i in range(80)}
+        with self.assertRaisesRegex(ValueError, "Cobertura de evaluación semanal insuficiente"):
+            weekly_runner.evaluate(previous, panel, "2026-10-09")
 
 
 class WeeklyRunnerIdempotencyTests(unittest.TestCase):
