@@ -59,13 +59,31 @@ def _rank_ic(actual, score):
 
 
 def evaluate(previous, panel, current_asof):
+    # Diagnostic evaluation is not the book of executed trades. Missing vendor
+    # quotes may be excluded here, but NEVER imputed or used to settle positions.
+    from data import execution_window
+    expected = previous["live_tickers"]
     actual = {}
-    for ticker in previous["live_tickers"]:
-        from data import execution_window
+    missing = {}
+    for ticker in expected:
+        if ticker not in panel:
+            missing[ticker] = "vendor_history_unavailable"
+            continue
         window = execution_window(panel, ticker, previous["asof"])
-        if window is None or window["last_session"] > current_asof:
-            raise ValueError("No se puede evaluar el forecast semanal previo: " + ticker)
+        if window is None:
+            missing[ticker] = "next_week_window_unavailable"
+            continue
+        # A Thursday close cannot stand in for the actual Friday settlement.
+        if window["last_session"] != current_asof:
+            missing[ticker] = "weekly_final_close_unavailable"
+            continue
         actual[ticker] = float(window["close"] / window["open"] - 1)
+
+    if not actual:
+        raise ValueError("Sin precios observados para evaluar el forecast semanal previo")
+    coverage = len(actual) / len(expected)
+    if len(expected) >= 100 and coverage < 0.90:
+        raise ValueError(f"Cobertura de evaluación semanal insuficiente: {coverage:.1%}")
 
     metrics = {}
     for name, predictions in previous["models"].items():
@@ -103,6 +121,9 @@ def evaluate(previous, panel, current_asof):
         "forecast_asof": previous["asof"],
         "evaluated_at_session": current_asof,
         "actual_tickers": len(actual),
+        "expected_tickers": len(expected),
+        "coverage_pct": round(100.0 * coverage, 4),
+        "missing_tickers": missing,
         "metrics": metrics,
     }
 
