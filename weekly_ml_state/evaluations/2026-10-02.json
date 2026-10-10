@@ -1,0 +1,46 @@
+{
+  "actual_tickers": 489,
+  "coverage_pct": 99.7959,
+  "evaluated_at_session": "2026-10-09",
+  "expected_tickers": 490,
+  "forecast_asof": "2026-10-02",
+  "metrics": {
+    "arima_return": {
+      "direction_accuracy": 0.4948875255623722,
+      "mae": 0.03583260399792109,
+      "rank_ic": -0.05257416252229546
+    },
+    "ensemble_consensus": {
+      "direction_accuracy": 0.6319018404907976,
+      "mae": 0.030773003214132996,
+      "rank_ic": -0.08675834666086114
+    },
+    "lgbm_direction": {
+      "accuracy": 0.310838445807771,
+      "brier": 0.2583380624798062,
+      "rank_ic": -0.011563880975155504
+    },
+    "lgbm_ranker": {
+      "rank_ic": -0.15717522567920292
+    },
+    "lgbm_return": {
+      "direction_accuracy": 0.7055214723926381,
+      "mae": 0.03068459920385873,
+      "rank_ic": null
+    },
+    "lstm_return": {
+      "direction_accuracy": 0.6850715746421268,
+      "mae": 0.03009866024990436,
+      "rank_ic": -0.11174952330323665
+    },
+    "mlp_return": {
+      "direction_accuracy": 0.4785276073619632,
+      "mae": 0.03848231825899565,
+      "rank_ic": 0.04856508629802116
+    }
+  },
+  "missing_tickers": {
+    "WBD": "vendor_history_unavailable"
+  },
+  "schema_version": 1
+}

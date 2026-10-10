@@ -1,6 +1,6 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-10-10T04:02:59.102292+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-10-10T07:25:15.767042+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
@@ -15,24 +15,24 @@ La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. L
 | Bollinger ruptura, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 1 posición abierta | 2026-09-28 | 2026-10-09 | 0.48 % | 0.13 % | — | -0.35 % | — |
 | Turtle 20/10 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 1 posición abierta | 2026-09-28 | 2026-10-09 | 0.48 % | 0.13 % | — | -0.35 % | — |
 | Turtle 55/20 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-09 | 0.00 % | 0.00 % | — | 0.00 % | — |
-| ML semanal · referencia SPY | Campaña ML semanal 2026 · referencia SPY | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
-| ML semanal · referencia SPY · liquidación diferida | Campaña ML semanal 2026 · referencia SPY · libro semanal independiente | weekly_awaiting_first_settlement | 1 señal congelada · liquidación semanal pendiente | 2026-10-02 | 2026-10-02 | — | — | — | 0.00 % | — |
-| ML semanal · referencia RSP | Campaña ML semanal 2026 · referencia RSP equiponderada | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
-| ML semanal · referencia RSP · liquidación diferida | Campaña ML semanal 2026 · referencia RSP equiponderada · libro semanal independiente | weekly_awaiting_first_settlement | 1 señal congelada · liquidación semanal pendiente | 2026-10-02 | 2026-10-02 | — | — | — | 0.00 % | — |
-| ML semanal · LightGBM rentabilidad | MIDAS Python v2 · regresión semanal corregida 2026 | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
-| ML semanal · LightGBM rentabilidad · liquidación diferida | MIDAS Python v2 · regresión semanal corregida 2026 · libro semanal independiente | weekly_awaiting_first_settlement | Sin compras · en efectivo | 2026-10-02 | 2026-10-02 | — | — | — | 0.00 % | — |
-| ML semanal · LightGBM dirección | MIDAS Python v2 · clasificación semanal corregida 2026 | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
-| ML semanal · LightGBM dirección · liquidación diferida | MIDAS Python v2 · clasificación semanal corregida 2026 · libro semanal independiente | weekly_awaiting_first_settlement | Sin compras · en efectivo | 2026-10-02 | 2026-10-02 | — | — | — | 0.00 % | — |
-| ML semanal · LightGBM ranker | MIDAS nuevo 2026 · ranking cross-sectional que sustituye precio absoluto | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
-| ML semanal · LightGBM ranker · liquidación diferida | MIDAS nuevo 2026 · ranking cross-sectional que sustituye precio absoluto · libro semanal independiente | weekly_awaiting_first_settlement | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-02 | — | — | — | 0.00 % | — |
-| ML semanal · MLP | TFM/ML · MLP adaptado al horizonte semanal | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
-| ML semanal · MLP · liquidación diferida | TFM/ML · MLP adaptado al horizonte semanal · libro semanal independiente | weekly_awaiting_first_settlement | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-02 | — | — | — | 0.00 % | — |
-| ML semanal · LSTM | TFM/ML · LSTM adaptado al horizonte semanal | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
-| ML semanal · LSTM · liquidación diferida | TFM/ML · LSTM adaptado al horizonte semanal · libro semanal independiente | weekly_awaiting_first_settlement | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-02 | — | — | — | 0.00 % | — |
-| ML semanal · ARIMA | TFM/ML · ARIMA adaptado al horizonte semanal | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
-| ML semanal · ARIMA · liquidación diferida | TFM/ML · ARIMA adaptado al horizonte semanal · libro semanal independiente | weekly_awaiting_first_settlement | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-02 | — | — | — | 0.00 % | — |
-| ML semanal · ensemble consenso | MIDAS nuevo 2026 · consenso de expertos semanales | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
-| ML semanal · ensemble consenso · liquidación diferida | MIDAS nuevo 2026 · consenso de expertos semanales · libro semanal independiente | weekly_awaiting_first_settlement | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-02 | — | — | — | 0.00 % | — |
+| ML semanal · referencia SPY | Campaña ML semanal 2026 · referencia SPY | demo_con_diario | 1 señal para próxima apertura paper | 2026-10-09 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · referencia SPY · liquidación diferida | Campaña ML semanal 2026 · referencia SPY · libro semanal independiente | weekly_settled_demo | 1 señal congelada · liquidación semanal pendiente | 2026-10-02 | 2026-10-09 | — | 0.81 % | — | 0.00 % | — |
+| ML semanal · referencia RSP | Campaña ML semanal 2026 · referencia RSP equiponderada | demo_con_diario | 1 señal para próxima apertura paper | 2026-10-09 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · referencia RSP · liquidación diferida | Campaña ML semanal 2026 · referencia RSP equiponderada · libro semanal independiente | weekly_settled_demo | 1 señal congelada · liquidación semanal pendiente | 2026-10-02 | 2026-10-09 | — | 1.15 % | — | 0.00 % | — |
+| ML semanal · LightGBM rentabilidad | MIDAS Python v2 · regresión semanal corregida 2026 | demo_con_diario | 10 señales para próxima apertura paper | 2026-10-09 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · LightGBM rentabilidad · liquidación diferida | MIDAS Python v2 · regresión semanal corregida 2026 · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · LightGBM dirección | MIDAS Python v2 · clasificación semanal corregida 2026 | demo_con_diario | 10 señales para próxima apertura paper | 2026-10-09 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · LightGBM dirección · liquidación diferida | MIDAS Python v2 · clasificación semanal corregida 2026 · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · LightGBM ranker | MIDAS nuevo 2026 · ranking cross-sectional que sustituye precio absoluto | demo_con_diario | 10 señales para próxima apertura paper | 2026-10-09 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · LightGBM ranker · liquidación diferida | MIDAS nuevo 2026 · ranking cross-sectional que sustituye precio absoluto · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-09 | — | -1.62 % | — | -1.62 % | — |
+| ML semanal · MLP | TFM/ML · MLP adaptado al horizonte semanal | demo_con_diario | 10 señales para próxima apertura paper | 2026-10-09 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · MLP · liquidación diferida | TFM/ML · MLP adaptado al horizonte semanal · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-09 | — | -0.19 % | — | -0.19 % | — |
+| ML semanal · LSTM | TFM/ML · LSTM adaptado al horizonte semanal | demo_con_diario | 10 señales para próxima apertura paper | 2026-10-09 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · LSTM · liquidación diferida | TFM/ML · LSTM adaptado al horizonte semanal · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-09 | — | -2.45 % | — | -2.45 % | — |
+| ML semanal · ARIMA | TFM/ML · ARIMA adaptado al horizonte semanal | demo_con_diario | 10 señales para próxima apertura paper | 2026-10-09 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · ARIMA · liquidación diferida | TFM/ML · ARIMA adaptado al horizonte semanal · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-09 | — | 2.08 % | — | 0.00 % | — |
+| ML semanal · ensemble consenso | MIDAS nuevo 2026 · consenso de expertos semanales | demo_con_diario | 10 señales para próxima apertura paper | 2026-10-09 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
+| ML semanal · ensemble consenso · liquidación diferida | MIDAS nuevo 2026 · consenso de expertos semanales · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-09 | — | -2.44 % | — | -2.44 % | — |
 | TFG corregido 2026 · técnico + AHP + MAD | TFG 2021 · arquitectura portada y corregida para paper 2026 | demo_con_diario | Sin compras · esperando señal | 2026-10-02 | 2026-10-09 | 0.00 % | 0.00 % | — | 0.00 % | — |
 | Capital Cycle Inflection · underinvestment + calidad + giro | MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle | demo_con_diario | 12 posiciones abiertas | 2026-09-30 | 2026-10-09 | -0.66 % | 0.65 % | — | -1.33 % | — |
 | Buy The Dip corpus v0 · deep value + special situations | MIDAS 2026 · Buy The Dip corpus v0 · deep value + special situations | demo_con_diario | 10 posiciones abiertas | 2026-10-01 | 2026-10-09 | -0.00 % | 1.20 % | — | -1.99 % | — |
