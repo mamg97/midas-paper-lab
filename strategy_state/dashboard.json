@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-10T02:38:36.961653+00:00",
+  "generated_at_utc": "2026-10-10T02:48:17.230663+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 9,
@@ -1211,15 +1211,19 @@
       "group": "tfg_demo_adaptado",
       "status": "demo_con_diario",
       "first_session": "2026-10-02",
-      "last_session": "2026-10-02",
+      "last_session": "2026-10-09",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
-      "day_return_pct": null,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-10-02",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-09",
           "nav": 100000.0
         }
       ],
@@ -1229,7 +1233,7 @@
       "activity_tickers": [],
       "open_positions_count": 0,
       "pending_orders_count": 0,
-      "risk_observations": 1,
+      "risk_observations": 2,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
