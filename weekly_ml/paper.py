@@ -82,9 +82,14 @@ def _settle(book, panel, current_asof, pending, policy, benchmark=False):
     trades = []
     for order in pending:
         ticker = order["ticker"]
+        # Unlike diagnostic forecast scoring, an actual paper order requires
+        # observed OHLC throughout its execution window, including the close.
+        # Never manufacture fills or replace the official close with a stale bar.
+        if ticker not in panel:
+            raise ValueError("Cotización ausente para liquidar orden paper: " + ticker)
         window = execution_window(panel, ticker, order["signal_date"])
-        if window is None or window["last_session"] > current_asof:
-            raise ValueError("Aún no existe una semana completa para liquidar: " + ticker)
+        if window is None or window["last_session"] != current_asof:
+            raise ValueError("Aún no existe un cierre semanal completo para liquidar: " + ticker)
         raw_open = float(window["open"])
         raw_close = float(window["close"])
         buy = raw_open * (1 + float(policy["slippage"]))

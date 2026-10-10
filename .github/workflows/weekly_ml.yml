@@ -1,6 +1,12 @@
 name: MIDAS weekly ML paper
 
 on:
+  # One-off recovery after the Friday 09/10 failure, before the Monday NYSE open.
+  # Trigger only for the dedicated marker committed alongside the fix.
+  push:
+    branches: ['main']
+    paths:
+      - 'weekly_ml/recovery/2026-10-10.trigger'
   schedule:
     # Friday after XNYS close and vendor-delay margin, plus a Saturday backup slot.
     - cron: '17 23 * * 5'
