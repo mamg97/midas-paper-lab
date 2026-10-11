@@ -1,0 +1,443 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-11T20:17:27.435312+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/113628570",
+    "published_date": "2023-08-02",
+    "youtube_video_id": "3GH3BmBL5eA",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 35884137
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 4485.459625,
+      "word_count": 12270,
+      "segment_count": 1328,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "3GH3BmBL5eA",
+    "youtube_url": "https://www.youtube.com/watch?v=3GH3BmBL5eA",
+    "title": "🌹 La CARTERA de INVERSIÓN de PEDRO SANCHEZ | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/113628570",
+    "published_date": "2023-08-02",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza la cartera de inversión del presidente, destacando una diversificación geográfica con empresas como Ferrovial, Dazzle Aviation, DASALT, y OCP. Se enfatiza la estrategia de Buy The Dip, con enfoques en empresas con alta internacionalización, especialización en nichos, y posiciones de mercado sólidas. Se mencionan riesgos como la volatilidad del sector de aeropuertos, la dependencia geográfica, y críticas sobre la compra de aviones por parte de Croacia. También se analizan aspectos financieros como el crecimiento sostenido, la estructura de deuda, y múltiplos razonables. La cartera se describe como diversificada, con un enfoque en empresas con alta calidad y potencial de crecimiento, aunque con exposición a riesgos geopolíticos y de mercado.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "La cartera tiene una distribución antipatriótica con 77% en España, 4,6% en EE. UU. y 18% en Marruecos.",
+        "Dazzle Aviation tiene un 72% de exportaciones en su backlog, indicando una presencia internacional y un producto de alta calidad.",
+        "DASALT genera un flujo de caja muy alto y tiene un backlog significativo, lo que sugiere una valoración basada en el potencial de crecimiento.",
+        "OCP tiene una cuota de mercado mundial del 27% en fosfatos y 70% en reservas mundiales, considerada crucial para la producción global de fertilizantes.",
+        "La empresa a tres media cotiza a 8 veces el flujo de efectivo con un precio razonable para una empresa no endeudada."
+      ],
+      "cycle_macro": [
+        "El retraso del COVID-19 afectó la distribución de órdenes de Rafales, retrasadas hasta 2021-2022.",
+        "La cartera tiene exposición a riesgos geopolíticos en Marruecos y a la volatilidad del sector de aeropuertos debido al impacto del COVID-19."
+      ],
+      "entry": [
+        "El presi compró Ferrovial en 2018 con la intención de expulsarla de España para tributar en otros países, lo que debería aumentar su valor.",
+        "Dazzle Aviation vende un 72% de sus contratos al extranjero, reflejando una estrategia de expansión internacional.",
+        "DASALT se especializa en un nicho específico de defensa, fabricando solo un tipo de avión (Rafal) con versiones adaptadas a necesidades específicas."
+      ],
+      "sizing": [
+        "Ferrovial tiene un 81% de negocio en EE. UU. y Canadá, con activos en infraestructura, aeropuertos y concesiones.",
+        "OCP posee las mayores reservas mundiales de fosfatos, con un impacto global en la producción de fertilizantes.",
+        "La empresa a tres media ha crecido un 270% desde 2019, con un crecimiento acelerado y una deuda atractiva que permite reinversiones sin dilución."
+      ],
+      "add_hold": [
+        "La empresa tiene una posición sólida en el mercado de defensa, con un valor de mercado de 14 billones de euros."
+      ],
+      "exit": [],
+      "risk": [
+        "La cartera tiene exposición a riesgos geopolíticos en Marruecos y a la volatilidad del sector de aeropuertos debido al impacto del COVID-19.",
+        "La especialización de DASALT puede generar riesgos si no puede mantener su liderazgo en el nichio o si enfrenta competencia que logra imitar sus tecnologías o modelos."
+      ],
+      "technical": [
+        "El crecimiento anualizado del backlog de Rafales es del 14% y ha superado las expectativas en 2020-2022.",
+        "La empresa a tres media tiene un múltiplo de 15 veces el cash flow operativo, con una vida útil de activos no muy elevada, lo que sugiere un valor razonable."
+      ],
+      "management": [
+        "La empresa tiene relaciones estrechas con India y Francia, favoreciendo nuevos pedidos de Rafales."
+      ],
+      "mistakes": [
+        "El presidente de Croacia criticó la compra de Rafales, indicando problemas de presupuesto y falta de sistemas anti-drones."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La cartera del presi incluye 77% en España, 4,6% en EE. UU. y 18% en Marruecos, con una distribución antipatriótica.",
+          "timestamp": "00:02:34",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El presi compró Ferrovial en 2018 con la intención de expulsarla de España para tributar en otros países, lo que debería aumentar su valor.",
+          "timestamp": "00:06:14",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Ferrovial tiene un 81% de negocio en EE. UU. y Canadá, con activos en infraestructura, aeropuertos y concesiones, y un 6% en España.",
+          "timestamp": "00:07:53",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La cartera tiene exposición a riesgos geopolíticos en Marruecos y a la volatilidad del sector de aeropuertos debido al impacto del COVID-19.",
+          "timestamp": "00:09:35",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la cartera del presi muestra una distribución geográfica diversificada, con un enfoque en Ferrovial, una empresa de infraestructura con operaciones en EE. UU., Canadá y España, y una estrategia de inversión basada en la expulsión de la empresa de España para tributar en otros países, lo que podría aumentar su valor. La cartera también incluye exposición a riesgos como la volatilidad del sector de aeropuertos y la geografía de Marruecos."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa Dazzle Aviation tiene un 72% de su backlog en exportaciones, lo que indica una fuerte presencia internacional y un producto de alta calidad.",
+          "timestamp": "00:19:07",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa Dazzle Aviation vende un 72% de sus contratos al extranjero, lo que refleja una estrategia de expansión internacional y un posicionamiento competitivo en el mercado global.",
+          "timestamp": "00:19:14",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El 72% de exportaciones del backlog de Dazzle Aviation sugiere una alta competencia internacional y un producto que supera a otros países en términos de calidad y valor percibido.",
+          "timestamp": "00:19:17",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento destaca la estrategia de expansión internacional de Dazzle Aviation, resaltando su 72% de exportaciones en el backlog, lo que indica una fuerte presencia en el mercado global y un producto de alta calidad. La empresa se destaca por su éxito en ventas al extranjero, lo que refleja una estrategia de entrada y valoración basada en la internacionalización y la competencia global."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El cliente menciona que DASALT se especializa en un nicho específico, fabricando solo un tipo de avión (Rafal) y diferentes versiones para necesidades específicas, lo que refleja una estrategia de especialización en un sector con alta demanda.",
+          "timestamp": "00:21:57",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El cliente destaca que DASALT genera un flujo de caja muy alto (más de 4 billones de dólares anuales) y tiene un backlog significativo, lo que sugiere una valoración basada en el potencial de crecimiento y la capacidad de generar ingresos estables.",
+          "timestamp": "00:28:40",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El cliente señala que la empresa tiene un alto nivel de especialización, lo que puede generar riesgos si no puede mantener su liderazgo en el nichio o si enfrenta competencia que logra imitar sus tecnologías o modelos.",
+          "timestamp": "00:27:46",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe una estrategia de especialización de DASALT en un nichio específico de defensa, enfocado en fabricar aviones de un tipo específico (Rafal) con versiones adaptadas a necesidades específicas. Se destaca la alta generación de flujo de caja y el backlog significativo, lo que refleja una valoración basada en el potencial de crecimiento. Sin embargo, la especialización también implica riesgos si no se mantiene el liderazgo en el nichio o si la competencia logra imitar sus tecnologías."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El crecimiento anualizado del backlog de Rafales es del 14% y ha superado las expectativas en 2020-2022.",
+          "timestamp": "00:30:55",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa tiene una participación del 62% en las acciones, lo que es raro para una empresa de defensa importante.",
+          "timestamp": "00:36:02",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El presidente de Croacia criticó la compra de Rafales, señalando problemas de presupuesto y falta de sistemas anti-drones.",
+          "timestamp": "00:34:34",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El crecimiento de órdenes de Rafales ha sido sostenido, con 15 unidades en 2020, 51 en 2021 y 64 en 2022.",
+          "timestamp": "00:32:10",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El retraso del COVID-19 ha afectado la distribución de órdenes, retrasadas hasta 2021-2022.",
+          "timestamp": "00:31:44",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La empresa ha multiplicado su tamaño por 5 desde 2013 y genera dividendos constantes.",
+          "timestamp": "00:36:29",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "management",
+          "paraphrase": "La empresa tiene relaciones estrechas con India y Francia, favoreciendo nuevos pedidos de Rafales.",
+          "timestamp": "00:37:11",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "El presidente de Croacia criticó la compra de Rafales, indicando que no se tenían sistemas anti-drones.",
+          "timestamp": "00:34:34",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "quality",
+          "paraphrase": "La empresa tiene una calidad extrema, con una rentabilidad no espectacular pero constante.",
+          "timestamp": "00:38:01",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "add_hold",
+          "paraphrase": "La empresa tiene una posición sólida en el mercado de defensa, con un valor de mercado de 14 billones de euros.",
+          "timestamp": "00:37:17",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca el crecimiento sostenido del backlog de Rafales, la calidad de la empresa, su participación en acciones, y la crítica sobre la compra de Rafales por Croacia. Se mencionan factores como el retraso del COVID-19, la relación con India y Francia, y la rentabilidad constante de la empresa, que sugieren una estrategia de inversión basada en el crecimiento y la calidad de la empresa en el sector de defensa."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa OCP es una minera con una cuota de mercado mundial del 27% en fosfatos y 70% en reservas mundiales, considerada crucial para la producción global de fertilizantes.",
+          "timestamp": "00:45:01",
+          "scope": "hosts",
+          "confidence": 0.95,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa OCP tiene un 95% de propiedad del gobierno de Marruecos y un 5% del Banco de Marruecos, lo que sugiere un alto nivel de estabilidad y control estatal.",
+          "timestamp": "00:45:28",
+          "scope": "hosts",
+          "confidence": 0.85,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa OCP ha mostrado un crecimiento constante en sus ingresos desde 2017 hasta 2022, con un aumento anual significativo y beneficios por acción multiplicados por más de 6 veces.",
+          "timestamp": "00:46:31",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La empresa OCP posee las mayores reservas mundiales de fosfatos, con un impacto global en la producción de fertilizantes y un poder de mercado que la convierte en una empresa clave en la industria.",
+          "timestamp": "00:46:43",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La empresa OCP tiene un papel estratégico en la estabilidad económica de Marruecos, siendo un activo clave del gobierno y un factor importante en la geopolítica de los fertilizantes globales.",
+          "timestamp": "00:45:10",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca la importancia de la empresa OCP como una minera con una cuota de mercado mundial significativa en fosfatos, un alto nivel de propiedad estatal, un crecimiento constante en ingresos y beneficios, y un papel clave en la producción global de fertilizantes. La empresa se describe como una de las mejores mineras del mundo debido a sus reservas, estabilidad y poder de mercado, aunque no cotiza en bolsa."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa a tres media cotiza a 8 veces el flujo de efectivo, con un precio de 840 millones generando 100 millones anuales, lo que se considera razonable para una empresa no endeudada y con crecimiento de beneficios.",
+          "timestamp": "00:52:00",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La empresa a tres media ha mostrado un crecimiento en el operating income y un aumento en los beneficios anuales, con un buen desempeño en 2020 y recuperación en 2021 y 2022, lo que sugiere una mejora en su desempeño financiero.",
+          "timestamp": "00:52:12",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa a tres media se considera interesante debido a su crecimiento en beneficios y ventas, aunque no se ha analizado en profundidad, lo que genera curiosidad para un análisis más detallado.",
+          "timestamp": "00:54:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento destaca la cotización y el desempeño financiero de la empresa a tres media, señalando su crecimiento en beneficios y ventas, aunque no se ha analizado en profundidad. Se menciona que cotiza a 8 veces el flujo de efectivo con un precio razonable, y se sugiere un análisis más detallado debido a su potencial de crecimiento y rentabilidad."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "debt_structure|quality|balance_sheet|valuation|cycle_macro|entry|sizing|add_hold|exit|risk|technical|management|mistake|other",
+          "paraphrase": "La deuda tiene una estructura sólida con 83% fija a 3,1% y 96% sin recurso, permitiendo que un fallo en un activo no afecte toda la empresa.",
+          "timestamp": "01:01:25",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation|cycle_macro|entry|sizing|add_hold|exit|risk|technical|management|mistake|other",
+          "paraphrase": "La empresa ha crecido un 270% desde 2019, con un crecimiento acelerado y una deuda atractiva que permite reinversiones sin dilución.",
+          "timestamp": "01:01:55",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation|cycle_macro|entry|sizing|add_hold|exit|risk|technical|management|mistake|other",
+          "paraphrase": "La empresa opera en España, un país con alta irradiación solar, y tiene contratos a largo plazo ajustados a la inflación, lo que asegura estabilidad de ingresos.",
+          "timestamp": "01:03:49",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation|cycle_macro|entry|sizing|add_hold|exit|risk|technical|management|mistake|other",
+          "paraphrase": "La empresa tiene un múltiplo de 15 veces el cash flow operativo, con una vida útil de activos no muy elevada, lo que sugiere un valor razonable.",
+          "timestamp": "01:04:55",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation|cycle_macro|entry|sizing|add_hold|exit|risk|technical|management|mistake|other",
+          "paraphrase": "La empresa tiene un crecimiento anual del 270% desde 2019, con ventas que han pasado de 50 millones a 140 millones en 2022, indicando un potencial de crecimiento significativo.",
+          "timestamp": "01:01:19",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la empresa se basa en una estructura de deuda sólida, un crecimiento acelerado, operaciones en España con alta irradiación solar, y un múltiplo razonable. La deuda fija y sin recurso permite estabilidad, mientras que el crecimiento y los contratos a largo plazo aseguran ingresos. La empresa se considera un candidato para la Watchlist debido a su potencial de crecimiento y estructura financiera favorable."
+    },
+    {
+      "chunk": 8,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El speaker menciona que Prosegur tiene múltiplos atractivos y es popular en value investing español.",
+          "timestamp": "01:11:24",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se sugiere que Prosegur podría ser una buena inversión debido a su popularidad en fondos patricios y su posicionamiento en el valor investing.",
+          "timestamp": "01:11:24",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El speaker comenta que no hay una evaluación clara del riesgo de Prosegur, solo se menciona su popularidad y múltiplos.",
+          "timestamp": "01:11:24",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6,
+          "automation_hint": "null"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El programa discute la posibilidad de invertir en Prosegur, destacando su popularidad en value investing español y su atractivo múltiplos, aunque no se proporciona una evaluación clara del riesgo."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
