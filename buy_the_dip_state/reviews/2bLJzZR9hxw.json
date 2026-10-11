@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-11T09:48:30.549852+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/130686912",
+    "published_date": "2024-06-22",
+    "youtube_video_id": "2bLJzZR9hxw",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 32424062
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 4052.9501875,
+      "word_count": 11180,
+      "segment_count": 627,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "2bLJzZR9hxw",
+    "youtube_url": "https://www.youtube.com/watch?v=2bLJzZR9hxw",
+    "title": "Nuestra Cartera de INVERSIÓN en MAYO-JUNIO | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/130686912",
+    "published_date": "2024-06-22",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute la estrategia de inversión en una cartera, destacando decisiones de entrada y salida en activos, evaluación de riesgos asociados a commodities, y ajustes en posiciones debido a fluctuaciones de precios. Se mencionan ventas y compras en George Capital, una ampliación de capital en Adriatic Metals, y el impacto de factores macroeconómicos como el dólar y los precios de commodities en la valoración de empresas. También se analizan la volatilidad de activos, la posibilidad de errores en la gestión de empresas, y la valoración de Cineplex basada en su capacidad de generación de ingresos y crecimiento potencial. Se destacan decisiones de venta en empresas de defensa, una apuesta arriesgada que terminó en pérdida, y ajustes en la composición de la cartera debido a cambios de mercado y análisis de valoración.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Se menciona que la empresa 'Famine' subió bastante en precio, superando el dólar, lo que permitió vender parcialmente la posición."
+      ],
+      "cycle_macro": [
+        "Se observó una corrección en el mercado de commodities, con precios de oro y plata fluctuando, influyendo en la valoración de empresas."
+      ],
+      "entry": [
+        "Se realizaron ventas y compras de acciones en George Capital, con un ajuste de posición que implicó un 10% de reducción."
+      ],
+      "sizing": [
+        "Se menciona que la cartera tiene una composición de 21% y 13% en ciertos activos, con una rentabilidad que ha sufrido caídas recientes."
+      ],
+      "add_hold": [],
+      "exit": [
+        "Se menciona la venta de una posición en una empresa de defensa (Rain Metal) que tuvo una rentabilidad muy alta, pero se considera un error de omisión por no haberla mantenido."
+      ],
+      "risk": [
+        "Se menciona una apuesta arriesgada que terminó en pérdida debido a la entrada en 'chanteri leven' (quiebra estratégica), aunque la pérdida fue ligera y la posición era muy pequeña."
+      ],
+      "technical": [
+        "Se analizaron movimientos de precios en commodities, como el oro y la plata, que afectaron a empresas de cartera."
+      ],
+      "management": [],
+      "mistakes": [
+        "Se menciona un error de omisión en la gestión de la empresa 'Rain Metal', que fue vendida a pesar de su alta rentabilidad, considerado un error por no haberla mantenido."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El podcast menciona la venta de una posición en una empresa de defensa por considerar que hay oportunidades mejores.",
+          "timestamp": "00:06:45",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se menciona la venta de una posición en una empresa de defensa (Rain Metal) que tuvo una rentabilidad muy alta, pero se considera un error de omisión por no haberla mantenido.",
+          "timestamp": "00:07:01",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona una apuesta arriesgada que terminó en pérdida debido a la entrada en 'chanteri leven' (quiebra estratégica), aunque la pérdida fue ligera y la posición era muy pequeña.",
+          "timestamp": "00:10:52",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona que la empresa 'Famine' subió bastante en precio, superando el dólar, lo que permitió vender parcialmente la posición.",
+          "timestamp": "00:08:41",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona que la cartera tiene una composición de 21% y 13% en ciertos activos, con una rentabilidad que ha sufrido caídas recientes.",
+          "timestamp": "00:02:48",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se menciona un error de omisión en la gestión de la empresa 'Rain Metal', que fue vendida a pesar de su alta rentabilidad, considerado un error por no haberla mantenido.",
+          "timestamp": "00:07:01",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast discute la estrategia de inversión en una cartera, mencionando ventas de posiciones en empresas de defensa, una apuesta arriesgada que terminó en pérdida, y la revisión de oportunidades en el sector de defensa. Se destacan decisiones de entrada y salida, riesgos asumidos, y ajustes en la cartera debido a cambios de mercado y análisis de valoración."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se realizaron ventas y compras de acciones en George Capital, con un ajuste de posición que implicó un 10% de reducción.",
+          "timestamp": "00:11:40",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa aprovechó la caída de George Capital para ampliar su posición, valorando su potencial de crecimiento y dividendos elevados.",
+          "timestamp": "00:12:01",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se identificaron riesgos asociados a la volatilidad de commodities y el impacto del dólar en precios de activos.",
+          "timestamp": "00:18:16",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se analizaron movimientos de precios en commodities, como el oro y la plata, que afectaron a empresas de cartera.",
+          "timestamp": "00:18:22",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se observó una corrección en el mercado de commodities, con precios de oro y plata fluctuando, influyendo en la valoración de empresas.",
+          "timestamp": "00:18:37",
+          "scope": "hosts",
+          "confidence": 0.4
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se mencionó una posible error en la gestión de una empresa (Adriatic Metals) por una ampliación de capital que generó inquietud en el mercado.",
+          "timestamp": "00:20:18",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.3
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de inversión se centra en la toma de decisiones de entrada y salida en activos, evaluación de riesgos asociados a commodities, y ajustes en posiciones debido a fluctuaciones de precios. Se destacan ventas y compras en George Capital, una ampliación de capital en Adriatic Metals, y el impacto de factores macroeconómicos como el dólar y los precios de commodities en la valoración de empresas. Se mencionan también la volatilidad de activos y la posibilidad de errores en la gestión de empresas."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Los accionistas importantes están vendiendo parte de su posición en Adriatic Metals para mitigar riesgos y mantener la estabilidad del precio de la acción.",
+          "timestamp": "00:22:25",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa ha enfrentado caídas significativas en su valoración, con fluctuaciones del 17% en 2023 y caídas anteriores de hasta un 52% en 2020, lo que refleja volatilidad en el mercado.",
+          "timestamp": "00:26:50",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa de Valeura Energy ha mostrado una alta volatilidad relacionada con el precio del petróleo, con una capitalización en caja del 50% y una producción aumentada del 14% en el último trimestre.",
+          "timestamp": "00:28:13",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la estrategia de inversión se centra en la gestión de riesgos y la evaluación de la volatilidad de las acciones de Adriatic Metals y Valeura Energy. Los accionistas importantes están vendiendo parte de su posición en Adriatic para mitigar riesgos y mantener la estabilidad del precio, mientras que Valeura Energy muestra una alta volatilidad relacionada con el precio del petróleo, con una producción aumentada y una capitalización en caja significativa. La empresa también menciona la posibilidad de adquisiciones futuras basadas en su caja y el rendimiento de sus operaciones, aunque se advierte la necesidad de mantener una postura prudente ante la volatilidad del mercado."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis indica que la empresa sigue con su plan de recompras de acciones, lo que sugiere una estrategia de crecimiento a largo plazo.",
+          "timestamp": "00:33:11",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa ha generado casi el doble de flujo de caja en comparación con su mercado capitalizado, lo que refleja una valoración sólida.",
+          "timestamp": "00:34:13",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "A pesar de la volatilidad, la empresa ha multiplicado su valor en 10 años, lo que sugiere un manejo eficiente de riesgos.",
+          "timestamp": "00:34:24",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La empresa planea realizar un spin-off de un activo problemático, lo que podría reducir su deuda y mejorar su posición financiera.",
+          "timestamp": "00:35:45",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La empresa anticipa una reducción en el gasto de capital a partir de 2026, lo que podría tener un impacto positivo en sus operaciones.",
+          "timestamp": "00:33:29",
+          "scope": "hosts",
+          "confidence": 0.7
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis del fragmento muestra una estrategia de inversión basada en recompras de acciones, una valoración sólida, un manejo de riesgos eficiente, y planes de reducción de deuda mediante un spin-off. La empresa sigue su plan de crecimiento a largo plazo, con expectativas positivas sobre su futuro financiero y operativo."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista estima que Cineplex podría valer entre 750 millones y 460 millones de dólares basándose en su capacidad de generación de ingresos y su crecimiento potencial.",
+          "timestamp": "00:50:09",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista sugiere que Cineplex podría tener un valor de 750 millones de dólares si se alcanza un múltiplo de 10 veces su valor patrimonial, aunque esto depende de factores como el crecimiento del negocio y la demanda de películas.",
+          "timestamp": "00:53:33",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista menciona que el sector de cine enfrenta desafíos como la competencia con el streaming, lo que podría afectar las ventas y el crecimiento del negocio de Cineplex.",
+          "timestamp": "00:55:23",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de Cineplex se basa en la estimación de su valor financiero, la proyección de ingresos futuros y el impacto de factores como la competencia con el streaming. El analista considera que el negocio tiene potencial, aunque enfrenta riesgos relacionados con el mercado y la demanda de películas."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista menciona que la empresa está cotizando a menos de 4 de 500 millones, lo que sugiere un valor actual bajo comparado con su potencial futuro.",
+          "timestamp": "00:58:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista señala que los riesgos de dilución están exagerados, pero reconoce que la empresa tiene un buen desempeño operativo y potencial de crecimiento.",
+          "timestamp": "00:56:46",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista afirma que la empresa tiene una buena oportunidad de inversión debido a precios jugosos y un potencial de crecimiento, aunque reconoce que podría haber errores en la evaluación.",
+          "timestamp": "00:57:04",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El analista discute la valoración actual de una empresa de cine y minera, destacando que aunque los precios actuales son bajos, hay potencial de crecimiento. Se menciona que la empresa tiene un buen desempeño operativo y que los riesgos de dilución son exagerados. Sin embargo, se advierte que la evaluación podría tener errores, y se sugiere que la empresa podría ser adquirida por una mayor corporación si logra ampliar sus reservas."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "exit",
+          "paraphrase": "El programa finaliza con un despedida formal.",
+          "timestamp": "01:06:51",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Los presentadores despiden al público con un mensaje de despedida.",
+          "timestamp": "01:06:57",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El programa se cierra con una despedida formal, indicando el final de la transmisión."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
