@@ -712,7 +712,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        "buy_the_dip_with_diary": sum(x["group"] == "buy_the_dip_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "timesfm_with_diary": sum(x["group"] == "timesfm_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "timesfm_daily_with_diary": sum(x["group"] == "timesfm_daily_demo" and x["status"] == "demo_con_diario" for x in rows),
-                       "classic_sp500_with_diary": sum(x.get("classic_sp500_cohort") and x["status"] == "demo_con_diario" for x in rows),
+                       "classic_sp500_with_diary": sum(x.get("classic_sp500_cohort") is True and x["status"] == "demo_con_diario" for x in rows),
                        "historical_pending": sum(x["group"] == "historica_pendiente" for x in rows)}, "tracks": rows}
 
 
