@@ -1,0 +1,411 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-12T22:45:35.318372+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/109176703",
+    "published_date": "2023-05-29",
+    "youtube_video_id": "4kqQtHup884",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 23130949
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2891.311,
+      "word_count": 7799,
+      "segment_count": 449,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "4kqQtHup884",
+    "youtube_url": "https://www.youtube.com/watch?v=4kqQtHup884",
+    "title": "BUY THE DIP PODCAST EPISODIO 48: NUESTRA CARTERA DE INVERSIÓN EN MAYO",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/109176703",
+    "published_date": "2023-05-29",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza la cartera de inversión en mayo, destacando adquisiciones en empresas como Cinéplex, Meta, Westime y una empresa secreta con proyecciones de crecimiento y dividendos. Se mencionan decisiones de entrada y salida basadas en criterios de valoración, riesgo y proyecciones de mercado. Se discuten desafíos como la volatilidad del petróleo, la subvaloración de ciertas empresas y la posibilidad de recompraciones si se alcanzan objetivos de NCC. Se aborda la estrategia de inversión en proyectos mineros, cuestionando su rentabilidad y sostenibilidad. La cartera se ajusta según el rendimiento de las posiciones y la expectativa de crecimiento en sectores como el petróleo y el oro.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "La empresa está subvalorada y tiene un potencial de crecimiento significativo si se cumplen ciertos hitos, como el NCC del 15% y el aumento del payout ratio.",
+        "Se discute la viabilidad de un proyecto minero con un desconto de 5% sobre el valor neto actual, pero se considera que los resultados no son atractivos debido a una tasa de retorno (TIR) inferior al 30% requerido."
+      ],
+      "cycle_macro": [
+        "Se espera un aumento en la producción de EE. UU. y en el consumo chino, lo que podría impulsar los precios del petróleo a niveles más altos en el futuro."
+      ],
+      "entry": [
+        "Se menciona la adquisición de una posición en Cinéplex con una tesis de inversión basada en una IRR esperada del 45-50% y una proyección de crecimiento de 1,24 billones en 2025.",
+        "Se menciona la adquisición de una posición en una empresa con una valoración basada en EBIT y EVA, una proyección de crecimiento del 1,24 billones en 2025 y una tasa de dividendos del 7,22%.",
+        "Se menciona la adquisición de una posición en una empresa con una valoración basada en EBIT y EVA, una proyección de crecimiento del 1,24 billones en 2025 y una tasa de dividendos del 7,22%."
+      ],
+      "sizing": [
+        "Se detalla la composición de la cartera, mencionando empresas como Ipco, Adriatic, Georgia, Fanny's, Valeura, y una posición secreta con un peso de 6% en Meta."
+      ],
+      "add_hold": [
+        "La empresa está implementando un plan de inversión en nuevos pozos y reservas, lo que podría generar un aumento en su valoración en el futuro."
+      ],
+      "exit": [
+        "Se indica la venta del 50% de la posición en Meta debido a su buena rentabilidad y la reinvención en oportunidades con mayor rendimiento-riesgo."
+      ],
+      "risk": [
+        "Se menciona la exposición a riesgos como la volatilidad de acciones del sector petróleo y la volatilidad del mercado accionario, afectando la rentabilidad de la cartera."
+      ],
+      "technical": [
+        "El precio de las acciones está en un nivel significativamente bajo comparado con su valor neto de activos, lo que podría generar una revalorización."
+      ],
+      "management": [
+        "La empresa está utilizando su capital de forma eficiente y tiene una estrategia de inversión que permite un crecimiento sostenible en su producción."
+      ],
+      "mistakes": [
+        "Se menciona un error de sobreestimación en la adquisición de una posición en Westime, reconociendo que su potencial de crecimiento puede no ser realista."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adquisición de una posición en Cinéplex con una tesis de inversión basada en una IRR esperada del 45-50% y una proyección de crecimiento de 1,24 billones en 2025.",
+          "timestamp": "00:03:37",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se indica la venta del 50% de la posición en Meta debido a su buena rentabilidad y la reinvención en oportunidades con mayor rendimiento-riesgo.",
+          "timestamp": "00:03:01",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se detalla la composición de la cartera, mencionando empresas como Ipco, Adriatic, Georgia, Fanny's, Valeura, y una posición secreta con un peso de 6% en Meta.",
+          "timestamp": "00:02:39",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona la exposición a riesgos como la volatilidad de acciones del sector petróleo y la volatilidad del mercado accionario, afectando la rentabilidad de la cartera.",
+          "timestamp": "00:01:43",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se describe una empresa con un dividend yield del 8,12% y una proyección de revalorización del 120-140% para 2025, indicando una valoración basada en dividendos y crecimiento.",
+          "timestamp": "00:10:12",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adquisición de una posición en Westime, que inicialmente tenía un peso del 2,7% y se sugiere incrementarla debido a su potencial de crecimiento, aunque se reconoce un error de sobreestimación.",
+          "timestamp": "00:09:19",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adquisición de una posición en una empresa secreta con una proyección de revalorización del 120-140% para 2025 y un dividend yield del 7,22%, indicando una valoración basada en dividendos y crecimiento.",
+          "timestamp": "00:09:04",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adquisición de una posición en una empresa con un inventario seguro que se convierte en caja, una proyección de duplicación del EBIT en dos años y una valoración basada en EBIT y EVA.",
+          "timestamp": "00:10:48",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adquisición de una posición en una empresa con una valoración basada en EBIT y EVA, una proyección de crecimiento del 1,24 billones en 2025 y una tasa de dividendos del 7,22%.",
+          "timestamp": "00:09:11",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adquisición de una posición en una empresa con una valoración basada en EBIT y EVA, una proyección de crecimiento del 1,24 billones en 2025 y una tasa de dividendos del 7,22%.",
+          "timestamp": "00:09:11",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la cartera incluye la adquisición de posiciones en empresas como Cinéplex, Meta, Westime y una empresa secreta con proyecciones de crecimiento y dividendos, así como la venta de posiciones en empresas con rendimiento negativo. Se mencionan criterios de valoración basados en EBIT, EVA, dividendos y proyecciones de crecimiento, junto con decisiones de riesgo y ajustes en la cartera."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El valor de la empresa es significativamente inferior a su potencial, lo que sugiere un descuento importante y oportunidades de recompra.",
+          "timestamp": "00:12:37",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se espera que el precio de la empresa caiga más, lo que permitiría una recompra más rentable, aunque se menciona un riesgo de no rentabilidad.",
+          "timestamp": "00:12:55",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa tiene un potencial de recompra significativo si se alcanza el NCC del 15%, lo que generaría un impacto importante en su valoración.",
+          "timestamp": "00:13:48",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se espera una mejora en el valor de la empresa si el precio cae a $7, lo que permitiría una compra más estratégica.",
+          "timestamp": "00:14:48",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa está subvalorada y tiene un potencial de crecimiento significativo si se alcanzan ciertos hitos, como el NCC del 15%.",
+          "timestamp": "00:14:53",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se espera una recompra significativa si se alcanzan los objetivos de NCC y se mantiene un payout ratio alto, lo que generaría un impacto positivo en el valor de la empresa.",
+          "timestamp": "00:14:53",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa tiene un valor actual bajo, pero con potencial de crecimiento si se cumplen ciertos hitos, como el NCC del 15% y el aumento del payout ratio.",
+          "timestamp": "00:14:53",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa está subvalorada y tiene un potencial de crecimiento significativo si se alcanzan los objetivos de NCC y se mantiene un payout ratio alto.",
+          "timestamp": "00:14:53",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa tiene un valor actual bajo, pero con potencial de crecimiento significativo si se cumplen ciertos hitos, como el NCC del 15% y el aumento del payout ratio.",
+          "timestamp": "00:14:53",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa está subvalorada y tiene un potencial de crecimiento significativo si se alcanzan los objetivos de NCC y se mantiene un payout ratio alto.",
+          "timestamp": "00:14:53",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la empresa sugiere que su valor actual es significativamente inferior a su potencial, lo que permite oportunidades de recompra si se alcanzan ciertos hitos, como el NCC del 15% y el aumento del payout ratio. Se espera una mejora en el valor si el precio cae a $7, lo que permitiría una compra más estratégica. La empresa tiene un potencial de crecimiento significativo si se cumplen ciertos objetivos, lo que generaría un impacto positivo en su valoración."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa ha superado expectativas en producción y costos operativos, pero enfrenta un alto capex para el desarrollo de Black Rod, lo que afecta su cash flow.",
+          "timestamp": "00:23:03",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa ha realizado compras de acciones, utilizando su cash flow para recompraciones, lo que refleja una estrategia de valor para los accionistas.",
+          "timestamp": "00:26:18",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El precio del petróleo está en niveles bajos, lo que podría generar un cash flow negativo para la empresa en el año actual, afectando su capacidad de inversión.",
+          "timestamp": "00:27:04",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se espera un aumento en la producción de EE. UU. y en el consumo chino, lo que podría impulsar los precios del petróleo a niveles más altos en el futuro.",
+          "timestamp": "00:28:02",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El proyecto Black Rod requiere un alto capex, pero su producción en 2026 podría aumentar significativamente la producción de la empresa, generando valor a largo plazo.",
+          "timestamp": "00:29:24",
+          "scope": "hosts",
+          "confidence": 0.4
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la empresa hipco muestra que, a pesar de haber superado expectativas en producción y costos operativos, enfrenta desafíos financieros debido al alto capex para el desarrollo de Black Rod. La empresa ha implementado una estrategia de recompración de acciones, utilizando su cash flow, lo que refleja una postura de valor para los accionistas. Sin embargo, los bajos precios del petróleo y la expectativa de un aumento en la producción de EE. UU. y el consumo chino sugieren que los precios del petróleo podrían subir en el futuro, lo que podría beneficiar a la empresa a largo plazo. Aunque el proyecto Black Rod implica un alto costo inicial, su producción en 2026 podría generar un aumento significativo en la producción de la empresa, generando valor a largo plazo para los accionistas."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa ha ajustado su plan de inversión debido a cambios en el precio del petróleo y está utilizando capital de forma eficiente.",
+          "timestamp": "00:33:32",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa cotiza cerca de su valor neto de activos, lo que sugiere una posible revalorización en el futuro.",
+          "timestamp": "00:38:00",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa tiene un nivel de riesgo financiero moderado debido a su liquidez y capacidad de generar ingresos estables.",
+          "timestamp": "00:34:16",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El precio de las acciones está en un nivel significativamente bajo comparado con su valor neto de activos, lo que podría generar una revalorización.",
+          "timestamp": "00:38:00",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La empresa está produciendo 23,000 barriles de petróleo al día, lo que representa un crecimiento significativo en su capacidad de producción.",
+          "timestamp": "00:36:12",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La empresa está aprovechando un período positivo del petróleo, lo que ha permitido un aumento en su producción y en su valoración.",
+          "timestamp": "00:34:20",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "add_hold",
+          "paraphrase": "La empresa está implementando un plan de inversión en nuevos pozos y reservas, lo que podría generar un aumento en su valoración en el futuro.",
+          "timestamp": "00:36:12",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La empresa tiene la posibilidad de recomprar acciones si el precio de las acciones se revaloriza, lo que podría aumentar su valoración.",
+          "timestamp": "00:38:00",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "management",
+          "paraphrase": "La empresa está utilizando su capital de forma eficiente y tiene una estrategia de inversión que permite un crecimiento sostenible en su producción.",
+          "timestamp": "00:34:16",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "La empresa podría enfrentar riesgos si el precio del petróleo cae, lo que afectaría su capacidad de generar ingresos.",
+          "timestamp": "00:34:16",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la empresa muestra que ha ajustado su plan de inversión debido a cambios en el precio del petróleo y está utilizando capital de forma eficiente. La empresa cotiza cerca de su valor neto de activos, lo que sugiere una posible revalorización en el futuro. Además, la empresa tiene un nivel de riesgo financiero moderado debido a su liquidez y capacidad de generar ingresos estables. El precio de las acciones está en un nivel significativamente bajo comparado con su valor neto de activos, lo que podría generar una revalorización. La empresa está produciendo 23,000 barriles de petróleo al día, lo que representa un crecimiento significativo en su capacidad de producción. La empresa está aprovechando un período positivo del petróleo, lo que ha permitido un aumento en su producción y en su valoración. La empresa está implementando un plan de inversión en nuevos pozos y reservas, lo que podría generar un aumento en su valoración en el futuro. La empresa tiene la posibilidad de recomprar acciones si el precio de las acciones se revaloriza, lo que podría aumentar su valoración. La empresa está utilizando su capital de forma eficiente y tiene una estrategia de inversión que permite un crecimiento sostenible en su producción."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "Se discute la viabilidad de un proyecto minero con un desconto de 5% sobre el valor neto actual, pero se considera que los resultados no son atractivos debido a una tasa de retorno (TIR) inferior al 30% requerido.",
+          "timestamp": "00:44:14",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona que el proyecto tiene un 'reso significativo' debido a posibles incrementos en costes y capital, lo que genera inquietud sobre su sostenibilidad.",
+          "timestamp": "00:45:39",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se sugiere la posibilidad de 'descargar' (vender) el activo debido a la percepción de que el proyecto no es atractivo económicamente, aunque se mantiene la exploración en zonas ricas del sur.",
+          "timestamp": "00:45:45",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis discute la viabilidad de un proyecto minero, cuestionando su rentabilidad y sostenibilidad debido a una TIR insuficiente y riesgos de costes. Se sugiere la posibilidad de desinvertir, aunque se mantiene la exploración en zonas ricas del sur. La discusión se enmarca en una estrategia de inversión con enfoque en sectores como el oro, cobre y plomo, con un enfoque en la valoración y el riesgo."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
