@@ -6,7 +6,7 @@ Fuente canónica: https://www.youtube.com/@Buy_The_Dip
 - Captions utilizables: **0** (0.00 %)
 - Transporte captions: **blocked_or_unavailable** · canary=False
 - Formatos: **{'long': 274, 'live': 27, 'short': 2}**
-- Categorías derivadas: **{'portfolio_update': 50, 'company_or_theme': 148, 'macro_market': 46, 'sector_theme': 36, 'methodology': 6, 'guest_interview': 15, 'short': 2}**
+- Categorías derivadas: **{'portfolio_update': 48, 'company_or_theme': 158, 'macro_market': 42, 'sector_theme': 33, 'methodology': 6, 'guest_interview': 14, 'short': 2}**
 
 ## Señales recurrentes
 
@@ -38,7 +38,6 @@ Fuente canónica: https://www.youtube.com/@Buy_The_Dip
 - s/f · **Nuestra Cartera de INVERSIÓN en AGOSTO | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=-EL1QLkTi_A
 - s/f · **Nuestra Cartera de INVERSIÓN en MAYO-JUNIO | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=2bLJzZR9hxw
 - s/f · **🌹 La CARTERA de INVERSIÓN de PEDRO SANCHEZ | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=3GH3BmBL5eA
-- s/f · **Nuestra CARTERA y RENTABILIDAD del AÑO 2025 | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=4Ip-k8Y1nVI
 - s/f · **BUY THE DIP PODCAST EPISODIO 48: NUESTRA CARTERA DE INVERSIÓN EN MAYO** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=4kqQtHup884
 - s/f · **BUY THE DIP PODCAST: EPISODIO 2 NUESTRA CARTERA 1** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=5FB-DVk9PUg
 - s/f · **BUY THE DIP PODCAST: EPISODIO 18 NUESTRA CARTERA DE SEPTIEMBRE 2020** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=5K2CpG8Ke1I
@@ -54,6 +53,7 @@ Fuente canónica: https://www.youtube.com/@Buy_The_Dip
 - s/f · **Nuestra Cartera de INVERSIÓN en Junio | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=J-ttbHPHfOM
 - s/f · **BUY THE DIP PODCAST: EPISODIO 12 RESUMEN DEL MES DE JULIO** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=LAMPycsBl58
 - s/f · **Javier Acción y su cartera de INVERSIÓN | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=MEDzHAw8emY
+- s/f · **Nuestra CARTERA y RENTABILIDAD del AÑO | BUY THE DIP PODCAST** · portfolio_update · score 8.00 · https://www.youtube.com/watch?v=Nn-ENiVL-JE
 
 ## Topics no supervisados
 
