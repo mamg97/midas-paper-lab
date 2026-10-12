@@ -32,6 +32,7 @@ class ReportTests(unittest.TestCase):
                                              "tfg_with_diary": 0, "capital_cycle_with_diary": 0,
                                              "buy_the_dip_with_diary": 0,
                                              "timesfm_with_diary": 0,
+                                             "timesfm_daily_with_diary": 0,
                                              "historical_pending": len(self.registry["historical_ideas"])})
         self.assertTrue(all(item["return_pct"] is None for item in result["tracks"]))
         self.assertTrue(all(item["day_return_pct"] is None for item in result["tracks"]))
@@ -333,6 +334,38 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(row["activity_tickers"], ["OXY", "QCOM"])
         self.assertIn("underinvestment", row["note"])
 
+
+
+    def test_shared_sp500_campaign_policy_excludes_8_stock_and_ibex_ledgers(self):
+        weekly = {"universe_file": "weekly_ml/universe_sp500_2026-09-29.csv",
+                  "models": ["lgbm_return", "lgbm_direction", "lgbm_ranker",
+                             "mlp_return", "lstm_return", "arima_return",
+                             "ensemble_consensus"], "paper_policy": {"capital": 100000}}
+        daily = {"name": "MIDAS_timesfm_2p5_eur_daily_2026",
+                 "currency": "EUR", "initial_capital": 100000,
+                 "universe_file": "weekly_ml/universe_sp500_2026-09-29.csv"}
+        out = build(self.registry, self.config, now=self.now,
+                    weekly_config=weekly, timesfm_daily_config=daily)
+        paper = next(x for x in out["tracks"] if x["id"] == "ema_rsi_fixed")
+        self.assertFalse(paper["comparison_eligible"])
+        self.assertIn("8 activos", paper["comparison_exclusion_reason"])
+        tfm = next(x for x in out["tracks"] if x["id"] == "tfm_arima_2023")
+        self.assertFalse(tfm["comparison_eligible"])
+        day = next(x for x in out["tracks"] if x["id"] == "timesfm_2p5_daily_eur_paper")
+        self.assertTrue(day["comparison_eligible"])
+        self.assertEqual(day["comparison_universe_symbols"], 503)
+        self.assertIsNone(day["return_pct"])
+        weekly_model = next(x for x in out["tracks"] if x["id"] == "weekly_ml_arima_2026")
+        self.assertTrue(weekly_model["comparison_eligible"])
+
+    def test_small_universe_is_not_comparable_by_naming(self):
+        config = {"name": "MIDAS_timesfm_2p5_eur_daily_2026",
+                  "currency": "EUR", "initial_capital": 100000,
+                  "universe_file": "only_eight_stocks.csv"}
+        out = build(self.registry, self.config, now=self.now, timesfm_daily_config=config)
+        row = next(x for x in out["tracks"] if x["id"] == "timesfm_2p5_daily_eur_paper")
+        self.assertFalse(row["comparison_eligible"])
+        self.assertIsNone(row["return_pct"])
 
 if __name__ == "__main__":
     unittest.main()
