@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "name": "MIDAS_timesfm_2p5_eur_daily_2026",
+  "strategy_id": "timesfm_2p5_daily_eur_paper",
+  "calendar": "XNYS",
+  "currency": "EUR",
+  "initial_capital": 100000,
+  "model": {
+    "model_id": "google/timesfm-2.5-200m-pytorch",
+    "revision": "2d1b32066b7f3950c45913d4a3849f3c75cb0312",
+    "context_days": 512,
+    "horizon_sessions": 1,
+    "max_candidate_series": 503,
+    "min_history_days": 300,
+    "minimum_eligible_coverage": 0.9
+  },
+  "benchmark": "SPY",
+  "fx_ticker": "EURUSD=X",
+  "execution": {
+    "capital_fraction": 0.8,
+    "max_positions": 8,
+    "max_weight": 0.125,
+    "min_forecast_return": 0.006,
+    "risk_penalty": 0.35,
+    "market_sma_days": 200,
+    "commission": 0.001,
+    "slippage": 0.0005,
+    "share_precision": 6,
+    "min_notional_eur": 10
+  },
+  "strategy_version": "timesfm_25_1d_v2_sp500_20261013",
+  "universe_file": "weekly_ml/universe_sp500_2026-09-29.csv"
+}

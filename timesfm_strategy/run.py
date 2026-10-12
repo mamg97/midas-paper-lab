@@ -8,6 +8,7 @@ daily closes use current observed FX close (USD per EUR).
 from __future__ import annotations
 
 import argparse
+import csv
 import copy
 import hashlib
 import json
@@ -84,18 +85,37 @@ def _series(raw, ticker):
     return frame
 
 
+def load_universe(relative_path):
+    """Read frozen symbol snapshot. The S&P 500 may have >500 share-class tickers."""
+    path = ROOT / relative_path
+    if not path.is_file() or not str(path.resolve()).startswith(str(ROOT.resolve())):
+        raise ValueError("Unknown S&P 500 universe snapshot")
+    with path.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    if not rows or "symbol" not in rows[0]:
+        raise ValueError("Snapshot has no ticker symbols")
+    tickers = [row["symbol"].strip().replace(".", "-") for row in rows]
+    if len(tickers) != len(set(tickers)) or len(tickers) < 500:
+        raise ValueError("Duplicate or partial S&P 500 constituent snapshot")
+    return tickers
+
+
 def _download(tickers, start, end, allow_missing=False):
     import yfinance as yf
-    raw = yf.download(sorted(set(tickers)), start=start, end=end, interval="1d",
-                      auto_adjust=False, actions=True, group_by="ticker",
-                      threads=False, progress=False)
+    symbols = sorted(set(tickers))
     out = {}
-    for ticker in tickers:
-        try:
-            out[ticker] = _series(raw, ticker)
-        except ValueError:
-            if not allow_missing:
-                raise
+    for index in range(0, len(symbols), 40):
+        batch = symbols[index:index + 40]
+        # Isolated batches limit Yahoo response failures; never infer missing bars.
+        raw = yf.download(batch, start=start, end=end, interval="1d",
+                          auto_adjust=False, actions=True, group_by="ticker",
+                          threads=False, progress=False)
+        for ticker in batch:
+            try:
+                out[ticker] = _series(raw, ticker)
+            except ValueError:
+                if not allow_missing:
+                    raise
     return out
 
 
@@ -123,8 +143,13 @@ def _config(config):
         raise ValueError("Invalid risk exposure")
     if config["model"]["model_id"] != "google/timesfm-2.5-200m-pytorch":
         raise ValueError("Unexpected checkpoint")
-    if len(config["tickers"]) != len(set(config["tickers"])):
-        raise ValueError("Duplicate universe")
+    symbols = load_universe(config["universe_file"])
+    if len(symbols) < 500:
+        raise ValueError("TimesFM requires the full frozen S&P 500 constituent universe")
+    if config["model"]["max_candidate_series"] < len(symbols):
+        raise ValueError("S&P 500 would be silently truncated")
+    if not 0.8 <= config["model"]["minimum_eligible_coverage"] <= 1:
+        raise ValueError("Invalid forecast coverage requirement")
 
 
 def _check(state, config):
@@ -277,7 +302,7 @@ def process_day(state, config, date, previous, bars, *, fx_entry, fx_mark, week_
 def _market_frame(config, date, *, signal):
     start = (datetime.fromisoformat(date) - timedelta(days=1200 if signal else 8)).date().isoformat()
     end = (datetime.fromisoformat(date) + timedelta(days=1)).date().isoformat()
-    tickers = (config["tickers"] + [config["benchmark"]]) if signal else []
+    tickers = (load_universe(config["universe_file"]) + [config["benchmark"]]) if signal else []
     return _download(tickers, start, end, allow_missing=True)
 
 
@@ -293,7 +318,8 @@ def get_forecasts(config, day):
     regime_on = float(spy_row["Adj Close"]) >= float(
         prices_spy[-config["execution"]["market_sma_days"]:].mean())
     tickers, arrays, vols = [], [], {}
-    for ticker in config["tickers"]:
+    universe = load_universe(config["universe_file"])
+    for ticker in universe:
         try:
             frame = panel[ticker]
             row = _last_row(frame, day, ticker)
@@ -309,8 +335,10 @@ def get_forecasts(config, day):
             vols[ticker] = vol
         except (ValueError, KeyError, TypeError):
             continue
-    if len(tickers) < 18:
-        raise ValueError("Insufficient complete dated candidate series")
+    minimum_coverage = float(config["model"]["minimum_eligible_coverage"])
+    if len(tickers) < math.ceil(len(universe) * minimum_coverage):
+        raise ValueError(f"Incomplete S&P 500 coverage {len(tickers)}/{len(universe)}: "
+                         "refuse biased ranking")
     # Deliberate 2.5: 3.0 weights are non-commercial and not production-licensed.
     model = timesfm.TimesFM_2p5_200M_torch.from_pretrained(
         config["model"]["model_id"], revision=config["model"]["revision"],
@@ -330,7 +358,7 @@ def get_forecasts(config, day):
         expected = float(point[i, -1] / arrays[i][-1] - 1)
         if not math.isfinite(expected):
             continue
-        risk = vols[ticker] * math.sqrt(5 / 252)
+        risk = vols[ticker] * math.sqrt(config["model"]["horizon_sessions"] / 252)
         score = expected - config["execution"]["risk_penalty"] * risk
         ranked.append({"ticker": ticker, "predicted_return": expected,
                        "risk_5d": risk, "score": score})
@@ -347,7 +375,9 @@ def get_forecasts(config, day):
                       "revision": config["model"]["revision"],
                       "horizon": config["model"]["horizon_sessions"],
                       "market_regime_on": bool(regime_on), "scored": ranked,
-                      "candidate_count": len(tickers)}
+                      "candidate_count": len(tickers),
+                      "universe_count": len(universe),
+                      "candidate_coverage_pct": round(len(tickers) / len(universe) * 100, 2)}
 
 
 def _daily_bars(config, state, day, previous):
