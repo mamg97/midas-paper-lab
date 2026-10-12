@@ -10,41 +10,10 @@
     "revision": "2d1b32066b7f3950c45913d4a3849f3c75cb0312",
     "context_days": 512,
     "horizon_sessions": 1,
-    "max_candidate_series": 32,
-    "min_history_days": 300
+    "max_candidate_series": 503,
+    "min_history_days": 300,
+    "minimum_eligible_coverage": 0.9
   },
-  "tickers": [
-    "AAPL",
-    "MSFT",
-    "NVDA",
-    "AMZN",
-    "META",
-    "GOOGL",
-    "AVGO",
-    "AMD",
-    "ORCL",
-    "CRM",
-    "ADBE",
-    "QCOM",
-    "AMAT",
-    "LRCX",
-    "MU",
-    "JPM",
-    "V",
-    "MA",
-    "COST",
-    "WMT",
-    "JNJ",
-    "UNH",
-    "XOM",
-    "CAT",
-    "DE",
-    "LLY",
-    "HD",
-    "KO",
-    "PG",
-    "TSLA"
-  ],
   "benchmark": "SPY",
   "fx_ticker": "EURUSD=X",
   "execution": {
@@ -59,5 +28,6 @@
     "share_precision": 6,
     "min_notional_eur": 10
   },
-  "strategy_version": "timesfm_25_1d_v1_20261013"
+  "strategy_version": "timesfm_25_1d_v2_sp500_20261013",
+  "universe_file": "weekly_ml/universe_sp500_2026-09-29.csv"
 }
