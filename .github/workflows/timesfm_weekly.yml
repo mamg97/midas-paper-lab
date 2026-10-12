@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 65
     env:
-      HF_HOME: \${{ github.workspace }}/.hf-cache
+      HF_HOME: ${{ github.workspace }}/.hf-cache
       OMP_NUM_THREADS: '2'
       MKL_NUM_THREADS: '2'
     steps:
@@ -60,7 +60,7 @@ jobs:
             --output strategy_runtime/timesfm_weekly.json \
             --workflow-key timesfm_weekly \
             --workflow-name "MIDAS TimesFM 2.5 EUR weekly signal" \
-            --outcome "\${{ steps.execute.outcome }}" \
+            --outcome "${{ steps.execute.outcome }}" \
             --run-id "$GITHUB_RUN_ID" \
             --run-number "$GITHUB_RUN_NUMBER" \
             --head-sha "$GITHUB_SHA"
