@@ -43,7 +43,6 @@
     "coinbase_btc": "Bot Coinbase histórico · cripto",
     "markowitz_weights": "Módulo Markowitz · asignación de pesos",
     "midas_fundamental_filter": "MIDAS Python · filtro fundamental",
-    "timesfm_zero_shot": "Idea nueva 2026 · TimesFM",
     "weekly_ml_benchmark_spy": "Campaña ML semanal 2026 · referencia SPY",
     "weekly_ml_benchmark_rsp": "Campaña ML semanal 2026 · referencia RSP equiponderada",
     "weekly_ml_lgbm_return_2026": "MIDAS Python v2 · regresión semanal corregida 2026",
@@ -55,7 +54,9 @@
     "weekly_ml_ensemble_2026": "MIDAS nuevo 2026 · consenso de expertos semanales",
     "tfg_corrected_2026": "TFG 2021 · arquitectura portada y corregida para paper 2026",
     "capital_cycle_inflection_2026": "MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle",
-    "buy_the_dip_corpus_2026_v0": "MIDAS 2026 · Buy The Dip corpus v0 · deep value + special situations"
+    "buy_the_dip_corpus_2026_v0": "MIDAS 2026 · Buy The Dip corpus v0 · deep value + special situations",
+    "timesfm_2p5_eur_paper": "MIDAS 2026 · TimesFM 2.5 zero-shot 5 sesiones · EUR",
+    "timesfm_spy_eur": "Referencia SPY buy & hold convertida a EUR · mismas fechas"
   },
   "legacy_tracks": [
     {
@@ -206,13 +207,6 @@
       "kind": "filtro complementario",
       "source": "fuente histórica privada, no publicada",
       "blocker": "Definir datos conocidos en cada fecha y cartera receptora; no es una señal independiente."
-    },
-    {
-      "id": "timesfm_zero_shot",
-      "label": "TimesFM: predictor zero-shot (hipótesis)",
-      "kind": "modelo predictivo por estudiar",
-      "source": "research/TIMESFM.md",
-      "blocker": "Fijar universo, horizonte, versión del modelo y regla de órdenes; validar prospectivamente antes de activar una cartera."
     }
   ],
   "weekly_ml_tracks": {
@@ -269,6 +263,16 @@
     "buy_the_dip_corpus": {
       "id": "buy_the_dip_corpus_2026_v0",
       "label": "Buy The Dip corpus v0 · deep value + special situations"
+    }
+  },
+  "timesfm_tracks": {
+    "timesfm": {
+      "id": "timesfm_2p5_eur_paper",
+      "label": "TimesFM 2.5 · zero-shot semanal · EUR"
+    },
+    "benchmark_spy": {
+      "id": "timesfm_spy_eur",
+      "label": "Referencia SPY · EUR · inicio TimesFM"
     }
   }
 }

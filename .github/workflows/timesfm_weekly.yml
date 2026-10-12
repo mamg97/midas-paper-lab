@@ -1,0 +1,73 @@
+name: MIDAS TimesFM 2.5 EUR weekly signal
+
+on:
+  schedule:
+    - cron: '17 4 * * 6'
+  workflow_dispatch:
+    inputs:
+      run_signal:
+        description: 'Run heavy pretrained model for latest completed week'
+        type: boolean
+        default: false
+  pull_request:
+    paths:
+      - 'timesfm_strategy/**'
+      - '.github/workflows/timesfm_weekly.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: midas-timesfm-eur
+  cancel-in-progress: false
+
+jobs:
+  timesfm-weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    env:
+      HF_HOME: ${{ github.workspace }}/.hf-cache
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: timesfm_strategy/requirements-weekly.txt
+      - name: Test no-backfill and signal contract (no model download)
+        run: |
+          python -m unittest discover -s timesfm_strategy/tests -v
+          python timesfm_strategy/run.py --phase check
+      - name: Cache pinned pretrained weights
+        if: github.event_name != 'pull_request'
+        uses: actions/cache@v4
+        with:
+          path: .hf-cache
+          key: timesfm-2p5-200m-pytorch-2d1b320
+      - name: Install TimesFM 2.5 and its runtime
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.run_signal)
+        run: python -m pip install -r timesfm_strategy/requirements-weekly.txt
+      - name: Freeze next-week signals, never use later prices
+        id: execute
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.run_signal)
+        run: python timesfm_strategy/run.py --phase signal
+      - name: Record weekly runtime health
+        if: always() && github.event_name == 'schedule'
+        run: |
+          python strategy_comparison/runtime_health.py \
+            --output strategy_runtime/timesfm_weekly.json \
+            --workflow-key timesfm_weekly \
+            --workflow-name "MIDAS TimesFM 2.5 EUR weekly signal" \
+            --outcome "${{ steps.execute.outcome }}" \
+            --run-id "$GITHUB_RUN_ID" \
+            --run-number "$GITHUB_RUN_NUMBER" \
+            --head-sha "$GITHUB_SHA"
+      - name: Publish only TimesFM state and health
+        if: always() && github.event_name != 'pull_request'
+        run: |
+          python strategy_comparison/publish_state.py \
+            --message "Record MIDAS TimesFM 2.5 EUR weekly signal" \
+            --path timesfm_state \
+            --path strategy_runtime/timesfm_weekly.json

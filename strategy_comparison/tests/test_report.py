@@ -31,6 +31,7 @@ class ReportTests(unittest.TestCase):
                                              "weekly_ml_legacy_with_ledger": 0,
                                              "tfg_with_diary": 0, "capital_cycle_with_diary": 0,
                                              "buy_the_dip_with_diary": 0,
+                                             "timesfm_with_diary": 0,
                                              "historical_pending": len(self.registry["historical_ideas"])})
         self.assertTrue(all(item["return_pct"] is None for item in result["tracks"]))
         self.assertTrue(all(item["day_return_pct"] is None for item in result["tracks"]))
@@ -100,8 +101,8 @@ class ReportTests(unittest.TestCase):
                        tfm_config=tfm_config, tfm_state=tfm)
         self.assertEqual(result["counts"]["tfm_with_diary"], 4)
         self.assertEqual(result["counts"]["paper_with_diary"], 0)
-        self.assertEqual(result["counts"]["historical_pending"], 17)
-        self.assertIn("TimesFM: predictor zero-shot", markdown(result))
+        self.assertEqual(result["counts"]["historical_pending"], 16)
+        self.assertIn("TimesFM 2.5", markdown(result))
         lstm = next(row for row in result["tracks"] if row["id"] == "tfm_lstm_2023")
         self.assertEqual((lstm["group"], lstm["return_pct"]), ("tfm_demo_adaptado", .25))
         self.assertIn("versión corregida 2026", lstm["label"])

@@ -182,7 +182,8 @@ def _activity(positions=None, pending=None, *, pending_label="órdenes pendiente
 def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
           tfm_config=None, tfm_state=None, weekly_config=None, weekly_state=None,
           tfg_config=None, tfg_state=None, capital_config=None, capital_state=None,
-          btd_config=None, btd_state=None, weekly_daily_state=None):
+          btd_config=None, btd_state=None, weekly_daily_state=None,
+          timesfm_config=None, timesfm_state=None):
     if registry.get("schema_version") != 1:
         raise ValueError("Versión de registro no válida")
     paper_names = registry.get("paper_tracks", {})
@@ -206,7 +207,9 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
     if not isinstance(btd_tracks, dict):
         raise ValueError("Registro Buy The Dip inválido")
     btd_ids = [item["id"] for item in btd_tracks.values()]
-    ids = list(paper_names) + weekly_ids + tfg_ids + capital_ids + btd_ids + [x["id"] for x in legacy_tracks + ideas]
+    timesfm_tracks = registry.get("timesfm_tracks", {})
+    timesfm_ids = [item["id"] for item in timesfm_tracks.values()]
+    ids = list(paper_names) + weekly_ids + tfg_ids + capital_ids + btd_ids + timesfm_ids + [x["id"] for x in legacy_tracks + ideas]
     if len(ids) != len(set(ids)):
         raise ValueError("Ideas duplicadas")
     provenance = registry.get("provenance", {})
@@ -278,6 +281,25 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             raise ValueError("Diario Buy The Dip no reconocido")
         if not isinstance(btd_state.get("equity"), list) or not btd_state["equity"]:
             raise ValueError("Diario Buy The Dip sin patrimonio")
+    if timesfm_config is not None:
+        if set(timesfm_tracks) != {"timesfm", "benchmark_spy"}:
+            raise ValueError("Registro TimesFM incompleto")
+        if timesfm_config.get("name") != "MIDAS_timesfm_2p5_eur_weekly_2026":
+            raise ValueError("Configuración TimesFM no reconocida")
+        if (timesfm_config.get("currency") != "EUR" or
+                timesfm_config.get("initial_capital") != 100000):
+            raise ValueError("La campaña TimesFM debe ser de 100k EUR")
+    if timesfm_state is not None:
+        if timesfm_config is None or timesfm_state.get("config_hash") != _config_hash(timesfm_config):
+            raise ValueError("El diario TimesFM pertenece a otra configuración")
+        if timesfm_state.get("engine") != "timesfm_2p5_weekly_eur_v1":
+            raise ValueError("Motor TimesFM no reconocido")
+        if set(timesfm_state.get("books", {})) != set(timesfm_tracks):
+            raise ValueError("Faltan carteras TimesFM")
+        for book in timesfm_state["books"].values():
+            hist = book.get("equity", [])
+            if not hist or hist[-1].get("date") != timesfm_state.get("last_session"):
+                raise ValueError("Diario TimesFM sin NAV fechado")
     timestamp = now or datetime.now(timezone.utc)
     rows = []
     for strategy_id, label in paper_names.items():
@@ -450,6 +472,38 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        equity_history=_equity_history(history, item["id"]))
             row.update(_activity(btd_state.get("positions"), btd_state.get("pending")))
         rows.append(row)
+    for book_key, item in timesfm_tracks.items():
+        capital_tf = None if timesfm_config is None else _equity(timesfm_config["initial_capital"], "capital TimesFM")
+        row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
+               "group": "timesfm_demo", "status": "programada_sin_diario",
+               "first_session": None, "last_session": None,
+               "initial_capital": capital_tf, "last_equity": None,
+               "return_pct": None, "day_return_pct": None,
+               "currency": "EUR", "equity_history": [],
+               "note": "Campaña forward EUR: TimesFM 2.5, horizonte 5 sesiones, NAV EUR; referencia SPY EUR same-cohort.",
+               "period_returns_pct": {"5_sessions": None, "21_sessions": None, "63_sessions": None}}
+        if timesfm_state is not None:
+            book = timesfm_state["books"][book_key]
+            hist = book["equity"]
+            nav = _equity(book["nav"], item["id"])
+            periods = {}
+            for n in (5, 21, 63):
+                periods[f"{n}_sessions"] = (
+                    round(100 * (nav / _equity(hist[-(n + 1)]["nav"], item["id"]) - 1), 6)
+                    if len(hist) >= n + 1 else None)
+            row.update(status="demo_con_diario", first_session=timesfm_state["first_session"],
+                       last_session=timesfm_state["last_session"], last_equity=nav,
+                       return_pct=(round(100 * (nav / capital_tf - 1), 6)
+                                   if len(hist) >= 2 else None),
+                       day_return_pct=_daily_return(hist, item["id"]),
+                       equity_history=_equity_history(hist, item["id"]),
+                       period_returns_pct=periods,
+                       comparison_currency="EUR",
+                       comparison_reference="timesfm_spy_eur",
+                       comparison_observation_dates=[x["date"] for x in hist])
+            row.update(_activity(book.get("positions"), book.get("pending"),
+                                 pending_label="compras paper para próxima apertura"))
+        rows.append(row)
     for item in legacy_tracks:
         row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
                "group": "diario_heredado",
@@ -536,6 +590,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        "tfg_with_diary": sum(x["group"] == "tfg_demo_adaptado" and x["status"] == "demo_con_diario" for x in rows),
                        "capital_cycle_with_diary": sum(x["group"] == "capital_cycle_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "buy_the_dip_with_diary": sum(x["group"] == "buy_the_dip_demo" and x["status"] == "demo_con_diario" for x in rows),
+                       "timesfm_with_diary": sum(x["group"] == "timesfm_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "historical_pending": sum(x["group"] == "historica_pendiente" for x in rows)}, "tracks": rows}
 
 
@@ -576,6 +631,8 @@ def main(argv=None):
     parser.add_argument("--capital-cycle-state", default="capital_cycle_state/ledger.json")
     parser.add_argument("--buy-the-dip-config", default="buy_the_dip_strategy/config.json")
     parser.add_argument("--buy-the-dip-state", default="buy_the_dip_state/ledger.json")
+    parser.add_argument("--timesfm-config", default="timesfm_strategy/config.json")
+    parser.add_argument("--timesfm-state", default="timesfm_state/ledger.json")
     parser.add_argument("--output", required=True)
     args = parser.parse_args(argv)
     report = build(_read(args.registry), _read(args.paper_config),
@@ -590,7 +647,9 @@ def main(argv=None):
                    capital_config=_read(args.capital_cycle_config) if args.capital_cycle_config and Path(args.capital_cycle_config).exists() else None,
                    capital_state=_read(args.capital_cycle_state, optional=True) if args.capital_cycle_state else None,
                    btd_config=_read(args.buy_the_dip_config) if args.buy_the_dip_config and Path(args.buy_the_dip_config).exists() else None,
-                   btd_state=_read(args.buy_the_dip_state, optional=True) if args.buy_the_dip_state else None)
+                   btd_state=_read(args.buy_the_dip_state, optional=True) if args.buy_the_dip_state else None,
+                    timesfm_config=_read(args.timesfm_config) if args.timesfm_config and Path(args.timesfm_config).exists() else None,
+                    timesfm_state=_read(args.timesfm_state, optional=True) if args.timesfm_state else None)
     output = Path(args.output)
     _write(output / "dashboard.json", json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     _write(output / "dashboard.md", markdown(report))
