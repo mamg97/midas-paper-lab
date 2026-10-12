@@ -183,7 +183,8 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
           tfm_config=None, tfm_state=None, weekly_config=None, weekly_state=None,
           tfg_config=None, tfg_state=None, capital_config=None, capital_state=None,
           btd_config=None, btd_state=None, weekly_daily_state=None,
-          timesfm_config=None, timesfm_state=None, timesfm_daily_config=None, timesfm_daily_state=None):
+          timesfm_config=None, timesfm_state=None, timesfm_daily_config=None, timesfm_daily_state=None,
+          classic_sp500_config=None, classic_sp500_state=None):
     if registry.get("schema_version") != 1:
         raise ValueError("Versión de registro no válida")
     paper_names = registry.get("paper_tracks", {})
@@ -211,7 +212,9 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
     timesfm_ids = [item["id"] for item in timesfm_tracks.values()]
     timesfm_daily_tracks = registry.get("timesfm_daily_tracks", {})
     timesfm_daily_ids = [item["id"] for item in timesfm_daily_tracks.values()]
-    ids = list(paper_names) + weekly_ids + tfg_ids + capital_ids + btd_ids + timesfm_ids + timesfm_daily_ids + [x["id"] for x in legacy_tracks + ideas]
+    classic_sp500_tracks = registry.get("classic_sp500_tracks", {})
+    classic_sp500_ids = [item["id"] for item in classic_sp500_tracks.values()]
+    ids = list(paper_names) + weekly_ids + tfg_ids + capital_ids + btd_ids + timesfm_ids + timesfm_daily_ids + classic_sp500_ids + [x["id"] for x in legacy_tracks + ideas]
     if len(ids) != len(set(ids)):
         raise ValueError("Ideas duplicadas")
     provenance = registry.get("provenance", {})
@@ -318,6 +321,21 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
         for book in timesfm_daily_state["books"].values():
             if not book.get("equity") or book["equity"][-1]["date"] != timesfm_daily_state.get("last_session"):
                 raise ValueError("Diario TimesFM diario sin cierre observado")
+    if classic_sp500_config is not None:
+        if set(classic_sp500_tracks) != set(classic_sp500_config.get("strategies", {})) | {"benchmark_spy"}:
+            raise ValueError("Classic S&P 500: registry does not match strategies")
+        if (classic_sp500_config.get("name") != "MIDAS_classic_SP500_forward_2026"
+                or classic_sp500_config.get("universe_file") != "weekly_ml/universe_sp500_2026-09-29.csv"):
+            raise ValueError("Classic S&P 500 configuration is not common-universe")
+    if classic_sp500_state is not None:
+        if (classic_sp500_config is None
+                or classic_sp500_state.get("config_hash") != _config_hash(classic_sp500_config)
+                or classic_sp500_state.get("engine") != "classic_sp500_next_open_v2"
+                or set(classic_sp500_state.get("books", {})) != set(classic_sp500_tracks)):
+            raise ValueError("Classic S&P 500 forward ledger invalid")
+        for book in classic_sp500_state["books"].values():
+            if not book.get("equity") or book["equity"][-1].get("date") != classic_sp500_state.get("last_session"):
+                raise ValueError("Classic S&P 500 book lacks matching close")
     timestamp = now or datetime.now(timezone.utc)
     rows = []
     for strategy_id, label in paper_names.items():
@@ -339,6 +357,33 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        day_return_pct=_daily_return(history, strategy_id),
                        equity_history=_equity_history(history, strategy_id))
             row.update(_activity(book.get("positions"), book.get("pending")))
+        rows.append(row)
+    for name, item in classic_sp500_tracks.items():
+        init = None if classic_sp500_config is None else _equity(
+            classic_sp500_config["initial_capital"], "classic SP500 capital")
+        row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
+               "group": "paper_nuevo", "status": "programada_sin_diario",
+               "classic_sp500_cohort": True,
+               "first_session": None, "last_session": None,
+               "initial_capital": init, "last_equity": None,
+               "return_pct": None, "day_return_pct": None, "currency": "USD",
+               "equity_history": [], "note": "Nueva campaña S&P500 503 símbolos; las carteras originales de 8 títulos "
+                       "se conservan históricas y no transfieren NAV ni operaciones."}
+        if classic_sp500_state is not None:
+            book = classic_sp500_state["books"][name]
+            hist = book["equity"]
+            nav = _equity(book["nav"], item["id"])
+            row.update(status="demo_con_diario", first_session=classic_sp500_state["first_session"],
+                       last_session=classic_sp500_state["last_session"], last_equity=nav,
+                       return_pct=round(100 * (nav / init - 1), 6) if len(hist) >= 2 else None,
+                       day_return_pct=_daily_return(hist, item["id"]),
+                       equity_history=_equity_history(hist, item["id"]),
+                       evaluated_universe_symbols=(classic_sp500_state["coverage"][-1]["eligible"]
+                                                   if classic_sp500_state.get("coverage") else None),
+                       eligible_universe_symbols=(classic_sp500_state["coverage"][-1]["total"]
+                                                   if classic_sp500_state.get("coverage") else None))
+            row.update(_activity(book["positions"], book.get("pending"),
+                                 pending_label="compras paper para próxima apertura"))
         rows.append(row)
     for strategy_key, item in weekly_tracks.items():
         capital_weekly = None if weekly_config is None else _equity(
@@ -610,7 +655,10 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
     for row in rows:
         group = row["group"]
         if group == "paper_nuevo":
-            eligible = row["id"] == "benchmark_spy"  # benchmark, never a model
+            eligible = (row["id"] == "benchmark_spy" or
+                        (row.get("classic_sp500_cohort") is True and
+                         classic_sp500_config is not None and
+                         classic_sp500_config.get("universe_file") == expected_snapshot))
             reason = None if eligible else "Archivo histórico: estrategia de 8 activos, no S&P 500 completo"
         elif group == "tfm_demo_adaptado":
             eligible = False
@@ -664,6 +712,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        "buy_the_dip_with_diary": sum(x["group"] == "buy_the_dip_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "timesfm_with_diary": sum(x["group"] == "timesfm_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "timesfm_daily_with_diary": sum(x["group"] == "timesfm_daily_demo" and x["status"] == "demo_con_diario" for x in rows),
+                       "classic_sp500_with_diary": sum(x.get("classic_sp500_cohort") is True and x["status"] == "demo_con_diario" for x in rows),
                        "historical_pending": sum(x["group"] == "historica_pendiente" for x in rows)}, "tracks": rows}
 
 
@@ -708,6 +757,8 @@ def main(argv=None):
     parser.add_argument("--timesfm-state", default="timesfm_state/ledger.json")
     parser.add_argument("--timesfm-daily-config", default="timesfm_strategy/config-daily.json")
     parser.add_argument("--timesfm-daily-state", default="timesfm_daily_state/ledger.json")
+    parser.add_argument("--classic-sp500-config", default="classic_sp500/config.json")
+    parser.add_argument("--classic-sp500-state", default="classic_sp500_state/ledger.json")
     parser.add_argument("--output", required=True)
     args = parser.parse_args(argv)
     report = build(_read(args.registry), _read(args.paper_config),
@@ -726,7 +777,9 @@ def main(argv=None):
                     timesfm_config=_read(args.timesfm_config) if args.timesfm_config and Path(args.timesfm_config).exists() else None,
                     timesfm_state=_read(args.timesfm_state, optional=True) if args.timesfm_state else None,
                     timesfm_daily_config=_read(args.timesfm_daily_config) if args.timesfm_daily_config and Path(args.timesfm_daily_config).exists() else None,
-                    timesfm_daily_state=_read(args.timesfm_daily_state, optional=True) if args.timesfm_daily_state else None)
+                    timesfm_daily_state=_read(args.timesfm_daily_state, optional=True) if args.timesfm_daily_state else None,
+                    classic_sp500_config=_read(args.classic_sp500_config) if args.classic_sp500_config and Path(args.classic_sp500_config).exists() else None,
+                    classic_sp500_state=_read(args.classic_sp500_state, optional=True) if args.classic_sp500_state else None)
     output = Path(args.output)
     _write(output / "dashboard.json", json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     _write(output / "dashboard.md", markdown(report))

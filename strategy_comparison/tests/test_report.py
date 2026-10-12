@@ -33,6 +33,7 @@ class ReportTests(unittest.TestCase):
                                              "buy_the_dip_with_diary": 0,
                                              "timesfm_with_diary": 0,
                                              "timesfm_daily_with_diary": 0,
+                                             "classic_sp500_with_diary": 0,
                                              "historical_pending": len(self.registry["historical_ideas"])})
         self.assertTrue(all(item["return_pct"] is None for item in result["tracks"]))
         self.assertTrue(all(item["day_return_pct"] is None for item in result["tracks"]))
@@ -366,6 +367,23 @@ class ReportTests(unittest.TestCase):
         row = next(x for x in out["tracks"] if x["id"] == "timesfm_2p5_daily_eur_paper")
         self.assertFalse(row["comparison_eligible"])
         self.assertIsNone(row["return_pct"])
+
+
+    def test_classic_sp500_is_a_new_comparable_campaign_without_legacy_backfill(self):
+        conf = {"name": "MIDAS_classic_SP500_forward_2026",
+                "universe_file": "weekly_ml/universe_sp500_2026-09-29.csv",
+                "initial_capital": 100000,
+                "strategies": {name: {} for name in self.registry["classic_sp500_tracks"] if name != "benchmark_spy"}}
+        out = build(self.registry, self.config, now=self.now, classic_sp500_config=conf)
+        old = next(row for row in out["tracks"] if row["id"] == "ema_rsi_fixed")
+        new = next(row for row in out["tracks"] if row["id"] == "classic_sp500_ema_rsi_fixed")
+        self.assertFalse(old["comparison_eligible"])
+        self.assertTrue(new["comparison_eligible"])
+        self.assertEqual(new["comparison_universe_symbols"], 503)
+        self.assertIsNone(new["return_pct"])
+        self.assertIsNone(new["first_session"])
+        self.assertEqual(new["status"], "programada_sin_diario")
+        self.assertNotEqual(old["id"], new["id"])
 
 if __name__ == "__main__":
     unittest.main()

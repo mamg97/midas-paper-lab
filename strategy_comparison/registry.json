@@ -58,7 +58,16 @@
     "timesfm_2p5_eur_paper": "MIDAS 2026 · TimesFM 2.5 5 sesiones · S&P 500 503 símbolos · EUR",
     "timesfm_spy_eur": "Referencia SPY buy & hold convertida a EUR · mismas fechas",
     "timesfm_2p5_daily_eur_paper": "MIDAS 2026 · TimesFM 2.5 1 sesión · S&P 500 503 símbolos · EUR",
-    "timesfm_daily_spy_eur": "Referencia SPY en EUR, misma fecha y costes que TimesFM diario"
+    "timesfm_daily_spy_eur": "Referencia SPY en EUR, misma fecha y costes que TimesFM diario",
+    "classic_sp500_buy_hold_equal_weight": "MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones",
+    "classic_sp500_ema_rsi_fixed": "MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones",
+    "classic_sp500_genetic_frozen": "MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones",
+    "classic_sp500_macd_12_26_9": "MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones",
+    "classic_sp500_rsi_reversion_14": "MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones",
+    "classic_sp500_bollinger_breakout_20": "MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones",
+    "classic_sp500_turtle_20_10_long": "MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones",
+    "classic_sp500_turtle_55_20_long": "MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones",
+    "classic_sp500_benchmark_spy": "MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones"
   },
   "legacy_tracks": [
     {
@@ -285,6 +294,44 @@
     "benchmark_spy": {
       "id": "timesfm_daily_spy_eur",
       "label": "Referencia SPY · EUR · inicio TimesFM diario"
+    }
+  },
+  "classic_sp500_tracks": {
+    "buy_hold_equal_weight": {
+      "id": "classic_sp500_buy_hold_equal_weight",
+      "label": "S&P 500 v2 · Equiponderación S&P 500"
+    },
+    "ema_rsi_fixed": {
+      "id": "classic_sp500_ema_rsi_fixed",
+      "label": "S&P 500 v2 · EMA/RSI"
+    },
+    "genetic_frozen": {
+      "id": "classic_sp500_genetic_frozen",
+      "label": "S&P 500 v2 · Genético congelado (reglas)"
+    },
+    "macd_12_26_9": {
+      "id": "classic_sp500_macd_12_26_9",
+      "label": "S&P 500 v2 · MACD"
+    },
+    "rsi_reversion_14": {
+      "id": "classic_sp500_rsi_reversion_14",
+      "label": "S&P 500 v2 · RSI reversión"
+    },
+    "bollinger_breakout_20": {
+      "id": "classic_sp500_bollinger_breakout_20",
+      "label": "S&P 500 v2 · Bollinger ruptura"
+    },
+    "turtle_20_10_long": {
+      "id": "classic_sp500_turtle_20_10_long",
+      "label": "S&P 500 v2 · Turtle 20/10"
+    },
+    "turtle_55_20_long": {
+      "id": "classic_sp500_turtle_55_20_long",
+      "label": "S&P 500 v2 · Turtle 55/20"
+    },
+    "benchmark_spy": {
+      "id": "classic_sp500_benchmark_spy",
+      "label": "S&P 500 v2 · Referencia SPY · inicio clásicos S&P500"
     }
   }
 }
