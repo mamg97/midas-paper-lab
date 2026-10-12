@@ -84,12 +84,19 @@ def _series(raw, ticker):
     return frame
 
 
-def _download(tickers, start, end):
+def _download(tickers, start, end, allow_missing=False):
     import yfinance as yf
     raw = yf.download(sorted(set(tickers)), start=start, end=end, interval="1d",
                       auto_adjust=False, actions=True, group_by="ticker",
                       threads=False, progress=False)
-    return {ticker: _series(raw, ticker) for ticker in tickers}
+    out = {}
+    for ticker in tickers:
+        try:
+            out[ticker] = _series(raw, ticker)
+        except ValueError:
+            if not allow_missing:
+                raise
+    return out
 
 
 def _last_row(frame, day, ticker):
@@ -271,7 +278,7 @@ def _market_frame(config, date, *, signal):
     start = (datetime.fromisoformat(date) - timedelta(days=1200 if signal else 8)).date().isoformat()
     end = (datetime.fromisoformat(date) + timedelta(days=1)).date().isoformat()
     tickers = (config["tickers"] + [config["benchmark"]]) if signal else []
-    return _download(tickers, start, end)
+    return _download(tickers, start, end, allow_missing=True)
 
 
 def get_forecasts(config, day):
