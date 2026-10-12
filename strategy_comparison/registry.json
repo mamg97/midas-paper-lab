@@ -55,8 +55,10 @@
     "tfg_corrected_2026": "TFG 2021 · arquitectura portada y corregida para paper 2026",
     "capital_cycle_inflection_2026": "MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle",
     "buy_the_dip_corpus_2026_v0": "MIDAS 2026 · Buy The Dip corpus v0 · deep value + special situations",
-    "timesfm_2p5_eur_paper": "MIDAS 2026 · TimesFM 2.5 zero-shot 5 sesiones · EUR",
-    "timesfm_spy_eur": "Referencia SPY buy & hold convertida a EUR · mismas fechas"
+    "timesfm_2p5_eur_paper": "MIDAS 2026 · TimesFM 2.5 5 sesiones · S&P 500 503 símbolos · EUR",
+    "timesfm_spy_eur": "Referencia SPY buy & hold convertida a EUR · mismas fechas",
+    "timesfm_2p5_daily_eur_paper": "MIDAS 2026 · TimesFM 2.5 1 sesión · S&P 500 503 símbolos · EUR",
+    "timesfm_daily_spy_eur": "Referencia SPY en EUR, misma fecha y costes que TimesFM diario"
   },
   "legacy_tracks": [
     {
@@ -273,6 +275,16 @@
     "benchmark_spy": {
       "id": "timesfm_spy_eur",
       "label": "Referencia SPY · EUR · inicio TimesFM"
+    }
+  },
+  "timesfm_daily_tracks": {
+    "timesfm_daily": {
+      "id": "timesfm_2p5_daily_eur_paper",
+      "label": "TimesFM 2.5 · diario · S&P 500 · EUR"
+    },
+    "benchmark_spy": {
+      "id": "timesfm_daily_spy_eur",
+      "label": "Referencia SPY · EUR · inicio TimesFM diario"
     }
   }
 }
