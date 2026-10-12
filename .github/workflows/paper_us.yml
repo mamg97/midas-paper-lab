@@ -1,9 +1,8 @@
 name: MIDAS paper comparison
 
+# Archival: the 8-stock / IBEX-31 campaign is not eligible for the shared
+# S&P500 competition since 2026-10-13. Retain manual preflight and the diary.
 on:
-  schedule:
-    # NYSE ha cerrado tanto en horario de verano como de invierno.
-    - cron: '37 23 * * 1-5'
   workflow_dispatch:
     inputs:
       preflight_only:
