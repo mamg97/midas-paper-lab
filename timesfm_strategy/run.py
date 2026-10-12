@@ -330,7 +330,7 @@ def get_forecasts(config, day):
         expected = float(point[i, -1] / arrays[i][-1] - 1)
         if not math.isfinite(expected):
             continue
-        risk = vols[ticker] * math.sqrt(5 / 252)
+        risk = vols[ticker] * math.sqrt(config["model"]["horizon_sessions"] / 252)
         score = expected - config["execution"]["risk_penalty"] * risk
         ranked.append({"ticker": ticker, "predicted_return": expected,
                        "risk_5d": risk, "score": score})
