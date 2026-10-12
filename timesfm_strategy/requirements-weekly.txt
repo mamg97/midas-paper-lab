@@ -1,0 +1,2 @@
+-r requirements-daily.txt
+timesfm[torch]==2.0.2
