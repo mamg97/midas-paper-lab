@@ -1,0 +1,394 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-12T09:59:02.831975+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/166442461",
+    "published_date": "2026-01-11",
+    "youtube_video_id": "4Ip-k8Y1nVI",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 28681611
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 3585.097125,
+      "word_count": 9951,
+      "segment_count": 1192,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "4Ip-k8Y1nVI",
+    "youtube_url": "https://www.youtube.com/watch?v=4Ip-k8Y1nVI",
+    "title": "Nuestra CARTERA y RENTABILIDAD del AÑO 2025 | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/166442461",
+    "published_date": "2026-01-11",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio aborda la estrategia de inversión 'Buy the Dip' con enfoque en la evaluación de commodities y activos, destacando oportunidades en mercados volátiles. Se menciona la rentabilidad del 65% en 2024, la caída del dólar respecto al euro, y la depreciación de activos como el bitcoin. Se analizan eventos geopolíticos que afectan precios, como la caída de producción en Congo e Indonesia, y se resalta la importancia de la gestión de riesgos. Además, se discuten estrategias de entrada basadas en alianzas y recursos, con referencias a historias de guerra y conquista. El episodio también menciona un plan de suscripción para iPhone y la necesidad de mejorar estrategias de inversión, con una percepción general de desilusión en 2025.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "El año 2025 fue significativo para el análisis de inversión, con una rentabilidad del 65% y un rendimiento anualizado del 39,4%."
+      ],
+      "cycle_macro": [
+        "Se menciona la depreciación del dólar respecto al euro, contribuyendo a una buena rentabilidad en euros."
+      ],
+      "entry": [
+        "Se menciona que hay oportunidades en el mercado, aunque no todo está en máximo, y que se siguen encontrando cosas interesantes.",
+        "El cobre en Estados Unidos ha experimentado una caída significativa, pero sigue en máximos de 6 dólares por libra, afectado por eventos como la caída de producción en el Congo e Indonesia, y la demanda creciente."
+      ],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [
+        "Se anuncia la cierre del análisis de inversión como parte de la apertura de un fondo de inversión propio, con un cierre programado para enero 2025."
+      ],
+      "risk": [
+        "Se señala que el bitcoin no ha tenido un buen rendimiento este año, con una caída del 3,4% en un año, lo que sugiere un riesgo elevado para inversionistas."
+      ],
+      "technical": [
+        "Se menciona la subida de precios de los metales preciosos, como el platino y el paladio, con una subida del 10% en un año, destacando su rendimiento como inversión."
+      ],
+      "management": [],
+      "mistakes": [
+        "El año 2025 ha sido desastroso, con muchos proyectos no materializándose, lo que ha llevado a una sensación de desilusión y frustración, aunque se ha obtenido una rentabilidad moderada."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El anuncio de Amics Corporate con la tarjeta de cashback y gestión de gastos se presentó en 00:00:07.",
+          "timestamp": "00:00:07",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El programa menciona que el año 2025 fue significativo para el análisis de inversión, con una rentabilidad del 65% y un rendimiento anualizado del 39,4%.",
+          "timestamp": "00:07:54",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se anuncia la cierre del análisis de inversión como parte de la apertura de un fondo de inversión propio, con un cierre programado para enero 2025.",
+          "timestamp": "00:05:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe la presentación de un nuevo producto de Amics Corporate, el cierre del análisis de inversión en 2025 debido a la apertura de un fondo de inversión, y la rentabilidad anual del 65% del análisis de inversión en 2024. Se menciona la transición de formatos de contenido y la suscripción a un podcast de inversión."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona que hay oportunidades en el mercado, aunque no todo está en máximo, y que se siguen encontrando cosas interesantes.",
+          "timestamp": "00:09:23",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se destaca la rentabilidad del dólar respecto al euro, con una depreciación del 11.8% este año, lo que ha contribuido a una buena rentabilidad en euros.",
+          "timestamp": "00:11:45",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se menciona la subida de precios de los metales preciosos, como el platino y el paladio, con una subida del 10% en un año, destacando su rendimiento como inversión.",
+          "timestamp": "00:14:55",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se señala que el bitcoin no ha tenido un buen rendimiento este año, con una caída del 3,4% en un año, lo que sugiere un riesgo elevado para inversionistas.",
+          "timestamp": "00:16:49",
+          "scope": "hosts",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento destaca oportunidades de inversión en el mercado, con énfasis en la rentabilidad de los metales preciosos y la depreciación del dólar respecto al euro. También se menciona el rendimiento del bitcoin, que no ha sido tan exitoso, y se sugiere que las inversiones en commodities pueden ser más rentables que en activos como el bitcoin. Se resalta la importancia de seguir oportunidades en el mercado y la necesidad de evaluar riesgos y beneficios en cada inversión."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El cobre en Estados Unidos ha experimentado una caída significativa, pero sigue en máximos de 6 dólares por libra, afectado por eventos como la caída de producción en el Congo e Indonesia, y la demanda creciente.",
+          "timestamp": "00:18:21",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El gas natural europeo ha caído un 70% desde 60 euros hasta 27 euros, con reservas por debajo de la media en Europa y un invierno frío que podría aumentar la demanda, aunque el precio sigue siendo bajo.",
+          "timestamp": "00:20:01",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El petróleo está en un nivel bajo, con volatilidad por temas como Irán, pero se anticipa una posible caída en la oferta y producción de gas debido a la baja en el petróleo, lo que podría afectar el mercado del gas.",
+          "timestamp": "00:23:31",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Los precios de productos agrícolas como el cacao y los huevos han caído significativamente, con el cacao recuperando mínimos y los huevos cayendo de 8 dólares a 50 centavos, reflejando volatilidad en mercados agrícolas.",
+          "timestamp": "00:25:21",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El año 2025 ha sido desastroso, con muchos proyectos no materializándose, lo que ha llevado a una sensación de desilusión y frustración, aunque se ha obtenido una rentabilidad moderada.",
+          "timestamp": "00:26:59",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la estrategia de inversión se basa en la evaluación de commodities como el cobre, el gas natural y el petróleo, así como en productos agrícolas, con un enfoque en la volatilidad, los eventos geopolíticos y la demanda. Se destacan caídas significativas en precios, eventos que afectan la producción y la oferta, y una percepción general de desilusión en el año 2025."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El año pasado tuve un mal momento con el fondo y me sentí frustrado por no lograr mis metas.",
+          "timestamp": "00:34:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El año pasado tuve un mal momento con el fondo y me sentí frustrado por no lograr mis metas.",
+          "timestamp": "00:34:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El año pasado tuve un mal momento con el fondo y me sentí frustrado por no lograr mis metas.",
+          "timestamp": "00:34:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El año pasado tuve un mal momento con el fondo y me sentí frustrado por no lograr mis metas.",
+          "timestamp": "00:34:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El año pasado tuve un mal momento con el fondo y me sentí frustrado por no lograr mis metas.",
+          "timestamp": "00:34:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "add_hold",
+          "paraphrase": "El año pasado tuve un mal momento con el fondo y me sentí frustrado por no lograr mis metas.",
+          "timestamp": "00:34:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "El año pasado tuve un mal momento con el fondo y me sentí frustrado por no lograr mis metas.",
+          "timestamp": "00:34:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "El año pasado tuve un mal momento con el fondo y me sentí frustrado por no lograr mis metas.",
+          "timestamp": "00:34:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "other",
+          "paraphrase": "El año pasado tuve un mal momento con el fondo y me sentí frustrado por no lograr mis metas.",
+          "timestamp": "00:34:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El año pasado tuve un mal momento con el fondo y me sentí frustrado por no lograr mis metas. A pesar de ello, me di cuenta de que necesito mejorar mis estrategias de inversión y tomar decisiones más informadas. Estoy planeando retomar mis proyectos y enfocarme en el crecimiento sostenible, así como en la mejora de mis hábitos personales y financieros. Aunque el año pasado fue desafiante, estoy optimista sobre el futuro y me siento motivado para seguir avanzando en mis metas."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El hablante menciona libros sobre historia y civilización, destacando el interés en temas como la expansión de los mongoles, la evolución de las civilizaciones, y la relación entre geografía, animales y desarrollo humano.",
+          "timestamp": "00:43:22",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El hablante valora libros que explican fenómenos históricos complejos, como la extinción de animales en Australia y la expansión de civilizaciones, destacando su impacto en la comprensión de la historia.",
+          "timestamp": "00:38:19",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El hablante menciona la posibilidad de un escenario apocalíptico, como una guerra nuclear, que podría tener consecencias similares a los eventos del Cretáceo, destacando la importancia de la preparación y la toma de decisiones rápidas en situaciones críticas.",
+          "timestamp": "00:41:12",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El hablante discute libros sobre historia y civilización, destacando temas como la expansión de los mongoles, la evolución de las civilizaciones, y la relación entre geografía, animales y desarrollo humano. Valora libros que explican fenómenos históricos complejos y menciona la posibilidad de escenarios apocalípticos, como una guerra nuclear, que podrían tener consecuencias similares a los eventos del Cretáceo, destacando la importancia de la preparación y la toma de decisiones rápidas en situaciones críticas."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "idea_generation",
+          "paraphrase": "Se menciona una idea de Subotai, un general mongol, que utilizó una estrategia de alianza y ofreció recursos para ganar una victoria.",
+          "timestamp": "00:48:49",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se describe una estrategia de entrada basada en la alianza y la ofrenda de recursos para asegurar una victoria en combates.",
+          "timestamp": "00:48:49",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona un riesgo asociado a la guerra y la violencia, con referencias a la crueldad y el desprecio por la vida humana.",
+          "timestamp": "00:57:02",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se describe una técnica de combate que implica el secuestro y el sacrificio humano, con una narrativa personal y cruda.",
+          "timestamp": "00:56:19",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "management",
+          "paraphrase": "Se menciona una forma de gestión de recursos y alianzas, basada en la ofrenda de tesoro y la retórica de victoria.",
+          "timestamp": "00:49:16",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se refleja un error en la estrategia de guerra, donde la alianza se rompe y se enfrenta a una pérdida de recursos y vidas.",
+          "timestamp": "00:49:31",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "other",
+          "paraphrase": "Se menciona una narrativa histórica que combina estrategias militares, crueles prácticas y la descripción de la vida en tierras conquistadas.",
+          "timestamp": "00:58:06",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe estrategias militares y prácticas crueles de conquista, con referencias a alianzas, ofertas de recursos, y narrativas históricas. Se mencionan ejemplos de estrategias de entrada y gestión de riesgos, así como errores en la guerra, basados en la narrativa de soldados y generales históricos. La discusión abarca temas de violencia, desprecio por la vida humana y la descripción de la vida en tierras conquistadas."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Aumento significativo en la batería sin intercambio, adquiriendo el último iPhone cada año con el plan Simple Plan, que sigue el buen juego temporada tras temporada.",
+          "timestamp": "00:59:21",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El plan Simple Plan se mantiene alineado con el buen juego temporada tras temporada, ofreciendo un plan de suscripción para el iPhone cada año.",
+          "timestamp": "00:59:27",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se recomienda visitar la tienda Horizon o llamar al número 844-464-8796 para obtener más información sobre el plan Simple Plan y su alineación con el buen juego temporada tras temporada.",
+          "timestamp": "00:59:32",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe un plan de suscripción (Simple Plan) que proporciona un nuevo iPhone cada año, con un aumento en la batería sin intercambio, y sugiere contactar con la tienda Horizon o un número telefónico para más información. El plan se alinea con el 'buen juego' temporada tras temporada, lo que implica una estrategia de adquisición regular y un enfoque en la actualización de dispositivos."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
