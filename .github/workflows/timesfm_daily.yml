@@ -47,7 +47,7 @@ jobs:
             --output strategy_runtime/timesfm_daily.json \
             --workflow-key timesfm_daily \
             --workflow-name "MIDAS TimesFM EUR daily paper" \
-            --outcome "\${{ steps.execute.outcome }}" \
+            --outcome "${{ steps.execute.outcome }}" \
             --run-id "$GITHUB_RUN_ID" \
             --run-number "$GITHUB_RUN_NUMBER" \
             --head-sha "$GITHUB_SHA"
