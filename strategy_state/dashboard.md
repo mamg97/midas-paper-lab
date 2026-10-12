@@ -1,6 +1,6 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-10-12T22:47:48.226129+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-10-12T22:54:19.646120+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
@@ -15,6 +15,15 @@ La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. L
 | Bollinger ruptura, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 1 posición abierta | 2026-09-28 | 2026-10-09 | 0.48 % | 0.13 % | — | -0.35 % | — |
 | Turtle 20/10 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 1 posición abierta | 2026-09-28 | 2026-10-09 | 0.48 % | 0.13 % | — | -0.35 % | — |
 | Turtle 55/20 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-09 | 0.00 % | 0.00 % | — | 0.00 % | — |
+| S&P 500 v2 · Equiponderación S&P 500 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
+| S&P 500 v2 · EMA/RSI | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
+| S&P 500 v2 · Genético congelado (reglas) | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
+| S&P 500 v2 · MACD | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
+| S&P 500 v2 · RSI reversión | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
+| S&P 500 v2 · Bollinger ruptura | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
+| S&P 500 v2 · Turtle 20/10 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
+| S&P 500 v2 · Turtle 55/20 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
+| S&P 500 v2 · Referencia SPY · inicio clásicos S&P500 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | programada_sin_diario | Esperando primera sesión | — | — | — | — | — | — | — |
 | ML semanal · referencia SPY | Campaña ML semanal 2026 · referencia SPY | demo_con_diario | 1 señal para próxima apertura paper | 2026-10-09 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
 | ML semanal · referencia SPY · liquidación diferida | Campaña ML semanal 2026 · referencia SPY · libro semanal independiente | weekly_settled_demo | 1 señal congelada · liquidación semanal pendiente | 2026-10-02 | 2026-10-09 | — | 0.81 % | — | 0.00 % | — |
 | ML semanal · referencia RSP | Campaña ML semanal 2026 · referencia RSP equiponderada | demo_con_diario | 1 señal para próxima apertura paper | 2026-10-09 | 2026-10-09 | — | 0.00 % | — | 0.00 % | — |
