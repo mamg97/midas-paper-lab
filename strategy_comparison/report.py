@@ -183,7 +183,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
           tfm_config=None, tfm_state=None, weekly_config=None, weekly_state=None,
           tfg_config=None, tfg_state=None, capital_config=None, capital_state=None,
           btd_config=None, btd_state=None, weekly_daily_state=None,
-          timesfm_config=None, timesfm_state=None):
+          timesfm_config=None, timesfm_state=None, timesfm_daily_config=None, timesfm_daily_state=None):
     if registry.get("schema_version") != 1:
         raise ValueError("Versión de registro no válida")
     paper_names = registry.get("paper_tracks", {})
@@ -209,7 +209,9 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
     btd_ids = [item["id"] for item in btd_tracks.values()]
     timesfm_tracks = registry.get("timesfm_tracks", {})
     timesfm_ids = [item["id"] for item in timesfm_tracks.values()]
-    ids = list(paper_names) + weekly_ids + tfg_ids + capital_ids + btd_ids + timesfm_ids + [x["id"] for x in legacy_tracks + ideas]
+    timesfm_daily_tracks = registry.get("timesfm_daily_tracks", {})
+    timesfm_daily_ids = [item["id"] for item in timesfm_daily_tracks.values()]
+    ids = list(paper_names) + weekly_ids + tfg_ids + capital_ids + btd_ids + timesfm_ids + timesfm_daily_ids + [x["id"] for x in legacy_tracks + ideas]
     if len(ids) != len(set(ids)):
         raise ValueError("Ideas duplicadas")
     provenance = registry.get("provenance", {})
@@ -300,6 +302,22 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             hist = book.get("equity", [])
             if not hist or hist[-1].get("date") != timesfm_state.get("last_session"):
                 raise ValueError("Diario TimesFM sin NAV fechado")
+    if timesfm_daily_config is not None:
+        if set(timesfm_daily_tracks) != {"timesfm_daily", "benchmark_spy"}:
+            raise ValueError("Registro de TimesFM diario incompleto")
+        if timesfm_daily_config.get("name") != "MIDAS_timesfm_2p5_eur_daily_2026":
+            raise ValueError("Configuración TimesFM diario no reconocida")
+        if timesfm_daily_config.get("currency") != "EUR" or timesfm_daily_config.get("initial_capital") != 100000:
+            raise ValueError("TimesFM diario debe ser una campaña EUR 100k")
+    if timesfm_daily_state is not None:
+        if (timesfm_daily_config is None
+                or timesfm_daily_state.get("config_hash") != _config_hash(timesfm_daily_config)
+                or timesfm_daily_state.get("engine") != "timesfm_2p5_daily_eur_v1"
+                or set(timesfm_daily_state.get("books", {})) != set(timesfm_daily_tracks)):
+            raise ValueError("Diario TimesFM diario ajeno o incompleto")
+        for book in timesfm_daily_state["books"].values():
+            if not book.get("equity") or book["equity"][-1]["date"] != timesfm_daily_state.get("last_session"):
+                raise ValueError("Diario TimesFM diario sin cierre observado")
     timestamp = now or datetime.now(timezone.utc)
     rows = []
     for strategy_id, label in paper_names.items():
@@ -504,6 +522,33 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             row.update(_activity(book.get("positions"), book.get("pending"),
                                  pending_label="compras paper para próxima apertura"))
         rows.append(row)
+    for book_key, item in timesfm_daily_tracks.items():
+        capital_day = None if timesfm_daily_config is None else _equity(
+            timesfm_daily_config["initial_capital"], "capital TimesFM diario")
+        row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
+               "group": "timesfm_daily_demo", "status": "programada_sin_diario",
+               "first_session": None, "last_session": None,
+               "initial_capital": capital_day, "last_equity": None,
+               "return_pct": None, "day_return_pct": None, "currency": "EUR",
+               "equity_history": [], "period_returns_pct": {"5_sessions": None, "21_sessions": None, "63_sessions": None},
+               "note": "TimesFM 2.5: predicción de una sesión sobre el S&P 500 canónico; cartera intradía ficticia, EUR 100k, "
+                       "fills next-open, cierre del mismo día; referencia SPY EUR de misma cohorte."}
+        if timesfm_daily_state is not None:
+            book = timesfm_daily_state["books"][book_key]
+            history = book["equity"]
+            nav = _equity(book["nav"], item["id"])
+            periods = {f"{n}_sessions": round(100 * (nav / _equity(history[-(n + 1)]["nav"], item["id"]) - 1), 6)
+                       if len(history) >= n + 1 else None for n in (5, 21, 63)}
+            row.update(status="demo_con_diario", first_session=timesfm_daily_state["first_session"],
+                       last_session=timesfm_daily_state["last_session"], last_equity=nav,
+                       return_pct=round(100 * (nav / capital_day - 1), 6) if len(history) >= 2 else None,
+                       day_return_pct=_daily_return(history, item["id"]),
+                       equity_history=_equity_history(history, item["id"]),
+                       period_returns_pct=periods,
+                       comparison_currency="EUR", comparison_reference="timesfm_daily_spy_eur")
+            row.update(_activity(book.get("positions"), book.get("pending"),
+                                 pending_label="compras paper para próxima apertura"))
+        rows.append(row)
     for item in legacy_tracks:
         row = {"id": item["id"], "label": item["label"], "provenance": provenance[item["id"]],
                "group": "diario_heredado",
@@ -558,6 +603,33 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                          "initial_capital": None, "last_equity": None, "return_pct": None,
                          "day_return_pct": None, "currency": None, "equity_history": [],
                          "note": item["blocker"], "kind": item["kind"], "source": item["source"]})
+    # Universe contract: eligible forward strategies must share the frozen S&P500
+    # 503-symbol snapshot. Old 8-symbol and 31-IBEX books stay observable but
+    # cannot enter the common forward competition or contaminate its ranking.
+    expected_snapshot = "weekly_ml/universe_sp500_2026-09-29.csv"
+    for row in rows:
+        group = row["group"]
+        if group == "paper_nuevo":
+            eligible = row["id"] == "benchmark_spy"  # benchmark, never a model
+            reason = None if eligible else "Archivo histórico: estrategia de 8 activos, no S&P 500 completo"
+        elif group == "tfm_demo_adaptado":
+            eligible = False
+            reason = "Archivo histórico: 31 activos IBEX, no S&P 500; usar modelos Weekly ML S&P 500 para competición"
+        elif group in {"weekly_ml_demo", "tfg_demo_adaptado", "capital_cycle_demo",
+                       "buy_the_dip_demo", "timesfm_demo", "timesfm_daily_demo"}:
+            source = {"weekly_ml_demo": weekly_config, "tfg_demo_adaptado": tfg_config,
+                      "capital_cycle_demo": capital_config, "buy_the_dip_demo": btd_config,
+                      "timesfm_demo": timesfm_config,
+                      "timesfm_daily_demo": timesfm_daily_config}[group]
+            eligible = bool(source and source.get("universe_file") == expected_snapshot)
+            reason = None if eligible else "Falta acreditar universo S&P 500 congelado en configuración"
+        else:
+            eligible = False
+            reason = "Campaña archivada o todavía no normalizada al universo S&P 500"
+        row["comparison_eligible"] = eligible
+        row["comparison_universe_id"] = "SP500_2026-09-29_503" if eligible else None
+        row["comparison_universe_symbols"] = 503 if eligible else None
+        row["comparison_exclusion_reason"] = reason
     for row in rows:
         if "activity_state" not in row:
             if row.get("status") == "programada_sin_diario":
@@ -591,6 +663,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                        "capital_cycle_with_diary": sum(x["group"] == "capital_cycle_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "buy_the_dip_with_diary": sum(x["group"] == "buy_the_dip_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "timesfm_with_diary": sum(x["group"] == "timesfm_demo" and x["status"] == "demo_con_diario" for x in rows),
+                       "timesfm_daily_with_diary": sum(x["group"] == "timesfm_daily_demo" and x["status"] == "demo_con_diario" for x in rows),
                        "historical_pending": sum(x["group"] == "historica_pendiente" for x in rows)}, "tracks": rows}
 
 
@@ -633,6 +706,8 @@ def main(argv=None):
     parser.add_argument("--buy-the-dip-state", default="buy_the_dip_state/ledger.json")
     parser.add_argument("--timesfm-config", default="timesfm_strategy/config.json")
     parser.add_argument("--timesfm-state", default="timesfm_state/ledger.json")
+    parser.add_argument("--timesfm-daily-config", default="timesfm_strategy/config-daily.json")
+    parser.add_argument("--timesfm-daily-state", default="timesfm_daily_state/ledger.json")
     parser.add_argument("--output", required=True)
     args = parser.parse_args(argv)
     report = build(_read(args.registry), _read(args.paper_config),
@@ -649,7 +724,9 @@ def main(argv=None):
                    btd_config=_read(args.buy_the_dip_config) if args.buy_the_dip_config and Path(args.buy_the_dip_config).exists() else None,
                    btd_state=_read(args.buy_the_dip_state, optional=True) if args.buy_the_dip_state else None,
                     timesfm_config=_read(args.timesfm_config) if args.timesfm_config and Path(args.timesfm_config).exists() else None,
-                    timesfm_state=_read(args.timesfm_state, optional=True) if args.timesfm_state else None)
+                    timesfm_state=_read(args.timesfm_state, optional=True) if args.timesfm_state else None,
+                    timesfm_daily_config=_read(args.timesfm_daily_config) if args.timesfm_daily_config and Path(args.timesfm_daily_config).exists() else None,
+                    timesfm_daily_state=_read(args.timesfm_daily_state, optional=True) if args.timesfm_daily_state else None)
     output = Path(args.output)
     _write(output / "dashboard.json", json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     _write(output / "dashboard.md", markdown(report))
