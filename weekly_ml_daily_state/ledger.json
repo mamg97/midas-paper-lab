@@ -6,18 +6,23 @@
   "first_session": "2026-10-09",
   "gap_sessions": [],
   "initial_capital": 100000.0,
-  "last_session": "2026-10-09",
+  "last_session": "2026-10-12",
   "last_signal_session": "2026-10-09",
   "schema_version": 1,
   "signal_hash": "a2807413aa681718988cb86800a8f166f0c854f47f9f7ec905969ae268cfa14a",
   "strategies": {
     "arima_return": {
-      "cash": 100000.0,
+      "cash": 5000.002324230349,
       "equity": [
         {
           "date": "2026-10-09",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-12",
+          "decision_recorded": false,
+          "nav": 98065.48501686993
         }
       ],
       "events": [
@@ -25,81 +30,186 @@
           "count": 10,
           "date": "2026-10-09",
           "type": "signal_frozen"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509337374412,
+          "price": 194.9674301147461,
+          "shares": 48.677409,
+          "ticker": "PTC",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.49050927969825,
+          "price": 224.61225,
+          "shares": 42.252857,
+          "ticker": "MRNA",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509314826644,
+          "price": 582.0208454589844,
+          "shares": 16.306133,
+          "ticker": "DELL",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509327081977,
+          "price": 1002.9512372131347,
+          "shares": 9.462583,
+          "ticker": "MU",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509190546275,
+          "price": 434.78729232788083,
+          "shares": 21.827936,
+          "ticker": "HUM",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509271099224,
+          "price": 276.5181948852539,
+          "shares": 34.321464,
+          "ticker": "CRWD",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509421985331,
+          "price": 72.88642347335815,
+          "shares": 130.209564,
+          "ticker": "HPE",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490508965384615,
+          "price": 600.2299576721191,
+          "shares": 15.811455,
+          "ticker": "AMD",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509187654997,
+          "price": 620.5101122131347,
+          "shares": 15.294689,
+          "ticker": "DE",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509287534747,
+          "price": 421.62070866394043,
+          "shares": 22.50959,
+          "ticker": "PANW",
+          "type": "buy"
         }
       ],
-      "nav": 100000.0,
-      "pending": [
-        {
-          "predicted_return": 0.05938794275606706,
-          "score": 0.05938794275606706,
-          "signal_date": "2026-10-09",
-          "ticker": "PTC"
+      "nav": 98065.48501686993,
+      "pending": [],
+      "positions": {
+        "AMD": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490508965384615,
+          "entry_price": 600.2299576721191,
+          "shares": 15.811455,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.04999653139178774,
-          "score": 0.04999653139178774,
-          "signal_date": "2026-10-09",
-          "ticker": "MRNA"
+        "CRWD": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509271099224,
+          "entry_price": 276.5181948852539,
+          "shares": 34.321464,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.044942852880556675,
-          "score": 0.044942852880556675,
-          "signal_date": "2026-10-09",
-          "ticker": "DELL"
+        "DE": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509187654997,
+          "entry_price": 620.5101122131347,
+          "shares": 15.294689,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.04475965475128674,
-          "score": 0.04475965475128674,
-          "signal_date": "2026-10-09",
-          "ticker": "MU"
+        "DELL": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509314826644,
+          "entry_price": 582.0208454589844,
+          "shares": 16.306133,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.04325201336416724,
-          "score": 0.04325201336416724,
-          "signal_date": "2026-10-09",
-          "ticker": "HUM"
+        "HPE": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509421985331,
+          "entry_price": 72.88642347335815,
+          "shares": 130.209564,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.04142215959154017,
-          "score": 0.04142215959154017,
-          "signal_date": "2026-10-09",
-          "ticker": "CRWD"
+        "HUM": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509190546275,
+          "entry_price": 434.78729232788083,
+          "shares": 21.827936,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.04118567495874572,
-          "score": 0.04118567495874572,
-          "signal_date": "2026-10-09",
-          "ticker": "HPE"
+        "MRNA": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.49050927969825,
+          "entry_price": 224.61225,
+          "shares": 42.252857,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.039640746818737034,
-          "score": 0.039640746818737034,
-          "signal_date": "2026-10-09",
-          "ticker": "AMD"
+        "MU": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509327081977,
+          "entry_price": 1002.9512372131347,
+          "shares": 9.462583,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.0367399876097835,
-          "score": 0.0367399876097835,
-          "signal_date": "2026-10-09",
-          "ticker": "DE"
+        "PANW": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509287534747,
+          "entry_price": 421.62070866394043,
+          "shares": 22.50959,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.036575988255889064,
-          "score": 0.036575988255889064,
-          "signal_date": "2026-10-09",
-          "ticker": "PANW"
+        "PTC": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509337374412,
+          "entry_price": 194.9674301147461,
+          "shares": 48.677409,
+          "signal_date": "2026-10-09"
         }
-      ],
-      "positions": {},
+      },
       "trades": []
     },
     "benchmark_rsp": {
-      "cash": 100000.0,
+      "cash": 5000.000043372464,
       "equity": [
         {
           "date": "2026-10-09",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-12",
+          "decision_recorded": false,
+          "nav": 99804.30496912106
         }
       ],
       "events": [
@@ -107,26 +217,42 @@
           "count": 1,
           "date": "2026-10-09",
           "type": "signal_frozen"
-        }
-      ],
-      "nav": 100000.0,
-      "pending": [
+        },
         {
-          "score": 1.0,
-          "signal_date": "2026-10-09",
-          "ticker": "RSP"
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 94.90509486176578,
+          "price": 213.41665255737303,
+          "shares": 444.693953,
+          "ticker": "RSP",
+          "type": "buy"
         }
       ],
-      "positions": {},
+      "nav": 99804.30496912106,
+      "pending": [],
+      "positions": {
+        "RSP": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 94.90509486176578,
+          "entry_price": 213.41665255737303,
+          "shares": 444.693953,
+          "signal_date": "2026-10-09"
+        }
+      },
       "trades": []
     },
     "benchmark_spy": {
-      "cash": 100000.0,
+      "cash": 5000.000041677005,
       "equity": [
         {
           "date": "2026-10-09",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-12",
+          "decision_recorded": false,
+          "nav": 99774.83355797338
         }
       ],
       "events": [
@@ -134,26 +260,42 @@
           "count": 1,
           "date": "2026-10-09",
           "type": "signal_frozen"
-        }
-      ],
-      "nav": 100000.0,
-      "pending": [
+        },
         {
-          "score": 1.0,
-          "signal_date": "2026-10-09",
-          "ticker": "SPY"
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 94.90509486345954,
+          "price": 779.1694193115234,
+          "shares": 121.8029,
+          "ticker": "SPY",
+          "type": "buy"
         }
       ],
-      "positions": {},
+      "nav": 99774.83355797338,
+      "pending": [],
+      "positions": {
+        "SPY": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 94.90509486345954,
+          "entry_price": 779.1694193115234,
+          "shares": 121.8029,
+          "signal_date": "2026-10-09"
+        }
+      },
       "trades": []
     },
     "ensemble_consensus": {
-      "cash": 100000.0,
+      "cash": 5000.001242899274,
       "equity": [
         {
           "date": "2026-10-09",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-12",
+          "decision_recorded": false,
+          "nav": 97895.36950059992
         }
       ],
       "events": [
@@ -161,101 +303,186 @@
           "count": 10,
           "date": "2026-10-09",
           "type": "signal_frozen"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509485838379,
+          "price": 391.9558897705078,
+          "shares": 24.213208,
+          "ticker": "WDC",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.49050919359806,
+          "price": 394.28704133605953,
+          "shares": 24.070051,
+          "ticker": "TER",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509460327376,
+          "price": 41.310645915985106,
+          "shares": 229.735199,
+          "ticker": "SMCI",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509461062352,
+          "price": 118.26910408401488,
+          "shares": 80.245044,
+          "ticker": "CSCO",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509257069236,
+          "price": 403.28152656555176,
+          "shares": 23.533211,
+          "ticker": "ADI",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509316362171,
+          "price": 222.88138927459715,
+          "shares": 42.580986,
+          "ticker": "GNRC",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509421985331,
+          "price": 72.88642347335815,
+          "shares": 130.209564,
+          "ticker": "HPE",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509432602972,
+          "price": 155.08749950408935,
+          "shares": 61.194548,
+          "ticker": "GLW",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509356225386,
+          "price": 143.54173622131347,
+          "shares": 66.116724,
+          "ticker": "CDW",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509278366025,
+          "price": 214.90740305328367,
+          "shares": 44.160923,
+          "ticker": "ANET",
+          "type": "buy"
         }
       ],
-      "nav": 100000.0,
-      "pending": [
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.01602471240796345,
-          "rank_dispersion": 0.019451306166844245,
-          "score": 0.9587593728698023,
-          "signal_date": "2026-10-09",
-          "ticker": "WDC"
+      "nav": 97895.36950059992,
+      "pending": [],
+      "positions": {
+        "ADI": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509257069236,
+          "entry_price": 403.28152656555176,
+          "shares": 23.533211,
+          "signal_date": "2026-10-09"
         },
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.017669770306091934,
-          "rank_dispersion": 0.15461326383282528,
-          "score": 0.8967280163599182,
-          "signal_date": "2026-10-09",
-          "ticker": "TER"
+        "ANET": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509278366025,
+          "entry_price": 214.90740305328367,
+          "shares": 44.160923,
+          "signal_date": "2026-10-09"
         },
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.019938829967060596,
-          "rank_dispersion": 0.13618132364825433,
-          "score": 0.8905930470347648,
-          "signal_date": "2026-10-09",
-          "ticker": "SMCI"
+        "CDW": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509356225386,
+          "entry_price": 143.54173622131347,
+          "shares": 66.116724,
+          "signal_date": "2026-10-09"
         },
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.010756018641632625,
-          "rank_dispersion": 0.1405284807640648,
-          "score": 0.8391274710293116,
-          "signal_date": "2026-10-09",
-          "ticker": "CSCO"
+        "CSCO": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509461062352,
+          "entry_price": 118.26910408401488,
+          "shares": 80.245044,
+          "signal_date": "2026-10-09"
         },
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.005854794253238744,
-          "rank_dispersion": 0.133033094827682,
-          "score": 0.8128834355828221,
-          "signal_date": "2026-10-09",
-          "ticker": "ADI"
+        "GLW": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509432602972,
+          "entry_price": 155.08749950408935,
+          "shares": 61.194548,
+          "signal_date": "2026-10-09"
         },
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.010601594673980513,
-          "rank_dispersion": 0.132543193624008,
-          "score": 0.8101567825494206,
-          "signal_date": "2026-10-09",
-          "ticker": "GNRC"
+        "GNRC": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509316362171,
+          "entry_price": 222.88138927459715,
+          "shares": 42.580986,
+          "signal_date": "2026-10-09"
         },
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.019324375011950553,
-          "rank_dispersion": 0.24822559533751645,
-          "score": 0.8098159509202455,
-          "signal_date": "2026-10-09",
-          "ticker": "HPE"
+        "HPE": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509421985331,
+          "entry_price": 72.88642347335815,
+          "shares": 130.209564,
+          "signal_date": "2026-10-09"
         },
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.007349574288503466,
-          "rank_dispersion": 0.15731364360799518,
-          "score": 0.8077709611451942,
-          "signal_date": "2026-10-09",
-          "ticker": "GLW"
+        "SMCI": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509460327376,
+          "entry_price": 41.310645915985106,
+          "shares": 229.735199,
+          "signal_date": "2026-10-09"
         },
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.006149785139238811,
-          "rank_dispersion": 0.10595479073964245,
-          "score": 0.807430129516019,
-          "signal_date": "2026-10-09",
-          "ticker": "CDW"
+        "TER": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.49050919359806,
+          "entry_price": 394.28704133605953,
+          "shares": 24.070051,
+          "signal_date": "2026-10-09"
         },
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.006538614240677934,
-          "rank_dispersion": 0.1563600156742424,
-          "score": 0.8012951601908657,
-          "signal_date": "2026-10-09",
-          "ticker": "ANET"
+        "WDC": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509485838379,
+          "entry_price": 391.9558897705078,
+          "shares": 24.213208,
+          "signal_date": "2026-10-09"
         }
-      ],
-      "positions": {},
+      },
       "trades": []
     },
     "lgbm_direction": {
-      "cash": 100000.0,
+      "cash": 5000.001385049894,
       "equity": [
         {
           "date": "2026-10-09",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-12",
+          "decision_recorded": false,
+          "nav": 99959.48428286341
         }
       ],
       "events": [
@@ -263,81 +490,186 @@
           "count": 10,
           "date": "2026-10-09",
           "type": "signal_frozen"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509461062352,
+          "price": 118.26910408401488,
+          "shares": 80.245044,
+          "ticker": "CSCO",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509257069236,
+          "price": 403.28152656555176,
+          "shares": 23.533211,
+          "ticker": "ADI",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509300087071,
+          "price": 222.52120866394043,
+          "shares": 42.649909,
+          "ticker": "ROST",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509439118618,
+          "price": 181.86088927459716,
+          "shares": 52.185544,
+          "ticker": "SBAC",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509471058575,
+          "price": 28.43421007633209,
+          "shares": 333.770815,
+          "ticker": "PFE",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509488400267,
+          "price": 158.66929133605956,
+          "shares": 59.813146,
+          "ticker": "RJF",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509437784883,
+          "price": 157.04848622131348,
+          "shares": 60.430442,
+          "ticker": "JCI",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509276698461,
+          "price": 280.9003897705078,
+          "shares": 33.786031,
+          "ticker": "TXN",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509348342142,
+          "price": 156.67830610656736,
+          "shares": 60.573219,
+          "ticker": "ICE",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509041807085,
+          "price": 568.6041673278809,
+          "shares": 16.690889,
+          "ticker": "MSCI",
+          "type": "buy"
         }
       ],
-      "nav": 100000.0,
-      "pending": [
-        {
-          "direction_probability": 0.6202758468083179,
-          "score": 0.6202758468083179,
-          "signal_date": "2026-10-09",
-          "ticker": "CSCO"
+      "nav": 99959.48428286341,
+      "pending": [],
+      "positions": {
+        "ADI": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509257069236,
+          "entry_price": 403.28152656555176,
+          "shares": 23.533211,
+          "signal_date": "2026-10-09"
         },
-        {
-          "direction_probability": 0.6181952734144371,
-          "score": 0.6181952734144371,
-          "signal_date": "2026-10-09",
-          "ticker": "ADI"
+        "CSCO": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509461062352,
+          "entry_price": 118.26910408401488,
+          "shares": 80.245044,
+          "signal_date": "2026-10-09"
         },
-        {
-          "direction_probability": 0.6174965894813975,
-          "score": 0.6174965894813975,
-          "signal_date": "2026-10-09",
-          "ticker": "ROST"
+        "ICE": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509348342142,
+          "entry_price": 156.67830610656736,
+          "shares": 60.573219,
+          "signal_date": "2026-10-09"
         },
-        {
-          "direction_probability": 0.6156448574619765,
-          "score": 0.6156448574619765,
-          "signal_date": "2026-10-09",
-          "ticker": "SBAC"
+        "JCI": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509437784883,
+          "entry_price": 157.04848622131348,
+          "shares": 60.430442,
+          "signal_date": "2026-10-09"
         },
-        {
-          "direction_probability": 0.6134639416517458,
-          "score": 0.6134639416517458,
-          "signal_date": "2026-10-09",
-          "ticker": "PFE"
+        "MSCI": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509041807085,
+          "entry_price": 568.6041673278809,
+          "shares": 16.690889,
+          "signal_date": "2026-10-09"
         },
-        {
-          "direction_probability": 0.6131161405774521,
-          "score": 0.6131161405774521,
-          "signal_date": "2026-10-09",
-          "ticker": "RJF"
+        "PFE": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509471058575,
+          "entry_price": 28.43421007633209,
+          "shares": 333.770815,
+          "signal_date": "2026-10-09"
         },
-        {
-          "direction_probability": 0.6129870768752178,
-          "score": 0.6129870768752178,
-          "signal_date": "2026-10-09",
-          "ticker": "JCI"
+        "RJF": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509488400267,
+          "entry_price": 158.66929133605956,
+          "shares": 59.813146,
+          "signal_date": "2026-10-09"
         },
-        {
-          "direction_probability": 0.6126320895316896,
-          "score": 0.6126320895316896,
-          "signal_date": "2026-10-09",
-          "ticker": "TXN"
+        "ROST": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509300087071,
+          "entry_price": 222.52120866394043,
+          "shares": 42.649909,
+          "signal_date": "2026-10-09"
         },
-        {
-          "direction_probability": 0.6119652326909373,
-          "score": 0.6119652326909373,
-          "signal_date": "2026-10-09",
-          "ticker": "ICE"
+        "SBAC": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509439118618,
+          "entry_price": 181.86088927459716,
+          "shares": 52.185544,
+          "signal_date": "2026-10-09"
         },
-        {
-          "direction_probability": 0.6115713003526265,
-          "score": 0.6115713003526265,
-          "signal_date": "2026-10-09",
-          "ticker": "MSCI"
+        "TXN": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509276698461,
+          "entry_price": 280.9003897705078,
+          "shares": 33.786031,
+          "signal_date": "2026-10-09"
         }
-      ],
-      "positions": {},
+      },
       "trades": []
     },
     "lgbm_ranker": {
-      "cash": 100000.0,
+      "cash": 5000.000955701822,
       "equity": [
         {
           "date": "2026-10-09",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-12",
+          "decision_recorded": false,
+          "nav": 99094.23575542352
         }
       ],
       "events": [
@@ -345,71 +677,186 @@
           "count": 10,
           "date": "2026-10-09",
           "type": "signal_frozen"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509473258017,
+          "price": 20.78038545799255,
+          "shares": 456.70517,
+          "ticker": "CMCSA",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509421985331,
+          "price": 72.88642347335815,
+          "shares": 130.209564,
+          "ticker": "HPE",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509231524271,
+          "price": 265.6827627868652,
+          "shares": 35.721208,
+          "ticker": "HII",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509488616034,
+          "price": 75.79788213729859,
+          "shares": 125.208109,
+          "ticker": "SWKS",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509418715265,
+          "price": 272.60623622131345,
+          "shares": 34.813985,
+          "ticker": "EXPE",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509355991444,
+          "price": 228.42415255737305,
+          "shares": 41.547749,
+          "ticker": "IBM",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509327081977,
+          "price": 1002.9512372131347,
+          "shares": 9.462583,
+          "ticker": "MU",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509314826644,
+          "price": 582.0208454589844,
+          "shares": 16.306133,
+          "ticker": "DELL",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.49050946706835,
+          "price": 36.20809362602234,
+          "shares": 262.110167,
+          "ticker": "LVS",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509451280502,
+          "price": 54.40719106864929,
+          "shares": 174.434836,
+          "ticker": "COO",
+          "type": "buy"
         }
       ],
-      "nav": 100000.0,
-      "pending": [
-        {
-          "score": 0.28420373534916493,
-          "signal_date": "2026-10-09",
-          "ticker": "CMCSA"
+      "nav": 99094.23575542352,
+      "pending": [],
+      "positions": {
+        "CMCSA": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509473258017,
+          "entry_price": 20.78038545799255,
+          "shares": 456.70517,
+          "signal_date": "2026-10-09"
         },
-        {
-          "score": 0.2700183939741915,
-          "signal_date": "2026-10-09",
-          "ticker": "HPE"
+        "COO": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509451280502,
+          "entry_price": 54.40719106864929,
+          "shares": 174.434836,
+          "signal_date": "2026-10-09"
         },
-        {
-          "score": 0.26202360336357344,
-          "signal_date": "2026-10-09",
-          "ticker": "HII"
+        "DELL": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509314826644,
+          "entry_price": 582.0208454589844,
+          "shares": 16.306133,
+          "signal_date": "2026-10-09"
         },
-        {
-          "score": 0.22655957188062895,
-          "signal_date": "2026-10-09",
-          "ticker": "SWKS"
+        "EXPE": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509418715265,
+          "entry_price": 272.60623622131345,
+          "shares": 34.813985,
+          "signal_date": "2026-10-09"
         },
-        {
-          "score": 0.22617985061087525,
-          "signal_date": "2026-10-09",
-          "ticker": "EXPE"
+        "HII": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509231524271,
+          "entry_price": 265.6827627868652,
+          "shares": 35.721208,
+          "signal_date": "2026-10-09"
         },
-        {
-          "score": 0.22177934581485811,
-          "signal_date": "2026-10-09",
-          "ticker": "IBM"
+        "HPE": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509421985331,
+          "entry_price": 72.88642347335815,
+          "shares": 130.209564,
+          "signal_date": "2026-10-09"
         },
-        {
-          "score": 0.21383719886069555,
-          "signal_date": "2026-10-09",
-          "ticker": "MU"
+        "IBM": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509355991444,
+          "entry_price": 228.42415255737305,
+          "shares": 41.547749,
+          "signal_date": "2026-10-09"
         },
-        {
-          "score": 0.19912607599407042,
-          "signal_date": "2026-10-09",
-          "ticker": "DELL"
+        "LVS": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.49050946706835,
+          "entry_price": 36.20809362602234,
+          "shares": 262.110167,
+          "signal_date": "2026-10-09"
         },
-        {
-          "score": 0.1893584774305664,
-          "signal_date": "2026-10-09",
-          "ticker": "LVS"
+        "MU": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509327081977,
+          "entry_price": 1002.9512372131347,
+          "shares": 9.462583,
+          "signal_date": "2026-10-09"
         },
-        {
-          "score": 0.17124455709530048,
-          "signal_date": "2026-10-09",
-          "ticker": "COO"
+        "SWKS": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509488616034,
+          "entry_price": 75.79788213729859,
+          "shares": 125.208109,
+          "signal_date": "2026-10-09"
         }
-      ],
-      "positions": {},
+      },
       "trades": []
     },
     "lgbm_return": {
-      "cash": 100000.0,
+      "cash": 5000.002274991159,
       "equity": [
         {
           "date": "2026-10-09",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-12",
+          "decision_recorded": false,
+          "nav": 98292.0884738033
         }
       ],
       "events": [
@@ -417,81 +864,186 @@
           "count": 10,
           "date": "2026-10-09",
           "type": "signal_frozen"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509243376936,
+          "price": 501.27049900817866,
+          "shares": 18.93291,
+          "ticker": "AMAT",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.49050919359806,
+          "price": 394.28704133605953,
+          "shares": 24.070051,
+          "ticker": "TER",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.4905087699435,
+          "price": 767.3834999999999,
+          "shares": 12.367361,
+          "ticker": "STX",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.49050931906845,
+          "price": 209.0044438934326,
+          "shares": 45.40817,
+          "ticker": "PLTR",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509485838379,
+          "price": 391.9558897705078,
+          "shares": 24.213208,
+          "ticker": "WDC",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.4905094616047,
+          "price": 76.91843725204467,
+          "shares": 123.384065,
+          "ticker": "ON",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509017217832,
+          "price": 1366.0426653442382,
+          "shares": 6.947447,
+          "ticker": "MPWR",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509469565442,
+          "price": 74.67731938934325,
+          "shares": 127.086906,
+          "ticker": "MCHP",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.49050923356124,
+          "price": 315.00743110656737,
+          "shares": 30.12789,
+          "ticker": "LRCX",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509438601944,
+          "price": 141.63077755737305,
+          "shares": 67.008807,
+          "ticker": "ORCL",
+          "type": "buy"
         }
       ],
-      "nav": 100000.0,
-      "pending": [
-        {
-          "predicted_return": 0.01702174236885837,
-          "score": 0.01702174236885837,
-          "signal_date": "2026-10-09",
-          "ticker": "AMAT"
+      "nav": 98292.0884738033,
+      "pending": [],
+      "positions": {
+        "AMAT": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509243376936,
+          "entry_price": 501.27049900817866,
+          "shares": 18.93291,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.013873411671344508,
-          "score": 0.013873411671344508,
-          "signal_date": "2026-10-09",
-          "ticker": "TER"
+        "LRCX": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.49050923356124,
+          "entry_price": 315.00743110656737,
+          "shares": 30.12789,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.013872709022897828,
-          "score": 0.013872709022897828,
-          "signal_date": "2026-10-09",
-          "ticker": "STX"
+        "MCHP": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509469565442,
+          "entry_price": 74.67731938934325,
+          "shares": 127.086906,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.013788902577835882,
-          "score": 0.013788902577835882,
-          "signal_date": "2026-10-09",
-          "ticker": "PLTR"
+        "MPWR": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509017217832,
+          "entry_price": 1366.0426653442382,
+          "shares": 6.947447,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.013550229095243851,
-          "score": 0.013550229095243851,
-          "signal_date": "2026-10-09",
-          "ticker": "WDC"
+        "ON": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.4905094616047,
+          "entry_price": 76.91843725204467,
+          "shares": 123.384065,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.013174186085384695,
-          "score": 0.013174186085384695,
-          "signal_date": "2026-10-09",
-          "ticker": "ON"
+        "ORCL": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509438601944,
+          "entry_price": 141.63077755737305,
+          "shares": 67.008807,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.012401931775582931,
-          "score": 0.012401931775582931,
-          "signal_date": "2026-10-09",
-          "ticker": "MPWR"
+        "PLTR": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.49050931906845,
+          "entry_price": 209.0044438934326,
+          "shares": 45.40817,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.011495764471014655,
-          "score": 0.011495764471014655,
-          "signal_date": "2026-10-09",
-          "ticker": "MCHP"
+        "STX": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.4905087699435,
+          "entry_price": 767.3834999999999,
+          "shares": 12.367361,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.011246485438417534,
-          "score": 0.011246485438417534,
-          "signal_date": "2026-10-09",
-          "ticker": "LRCX"
+        "TER": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.49050919359806,
+          "entry_price": 394.28704133605953,
+          "shares": 24.070051,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.011188755881124349,
-          "score": 0.011188755881124349,
-          "signal_date": "2026-10-09",
-          "ticker": "ORCL"
+        "WDC": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509485838379,
+          "entry_price": 391.9558897705078,
+          "shares": 24.213208,
+          "signal_date": "2026-10-09"
         }
-      ],
-      "positions": {},
+      },
       "trades": []
     },
     "lstm_return": {
-      "cash": 100000.0,
+      "cash": 5000.000578282867,
       "equity": [
         {
           "date": "2026-10-09",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-12",
+          "decision_recorded": false,
+          "nav": 98329.46660754806
         }
       ],
       "events": [
@@ -499,81 +1051,186 @@
           "count": 10,
           "date": "2026-10-09",
           "type": "signal_frozen"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509425427398,
+          "price": 102.57125664138793,
+          "shares": 92.526013,
+          "ticker": "INTC",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509477634173,
+          "price": 32.79638877868652,
+          "shares": 289.376661,
+          "ticker": "ENPH",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509388918191,
+          "price": 181.5507367172241,
+          "shares": 52.274695,
+          "ticker": "FSLR",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.49050945314632,
+          "price": 175.27759744262696,
+          "shares": 54.145593,
+          "ticker": "QCOM",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509470604383,
+          "price": 29.204595534324643,
+          "shares": 324.966304,
+          "ticker": "MGM",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509460327376,
+          "price": 41.310645915985106,
+          "shares": 229.735199,
+          "ticker": "SMCI",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509443008868,
+          "price": 107.0034719467163,
+          "shares": 88.693472,
+          "ticker": "AKAM",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509457711411,
+          "price": 43.761871679306026,
+          "shares": 216.867083,
+          "ticker": "APTV",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509327081977,
+          "price": 1002.9512372131347,
+          "shares": 9.462583,
+          "ticker": "MU",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509423529652,
+          "price": 225.74281988525388,
+          "shares": 42.041246,
+          "ticker": "NXPI",
+          "type": "buy"
         }
       ],
-      "nav": 100000.0,
-      "pending": [
-        {
-          "predicted_return": 0.014133933931589127,
-          "score": 0.014133933931589127,
-          "signal_date": "2026-10-09",
-          "ticker": "INTC"
+      "nav": 98329.46660754806,
+      "pending": [],
+      "positions": {
+        "AKAM": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509443008868,
+          "entry_price": 107.0034719467163,
+          "shares": 88.693472,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.014066966250538826,
-          "score": 0.014066966250538826,
-          "signal_date": "2026-10-09",
-          "ticker": "ENPH"
+        "APTV": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509457711411,
+          "entry_price": 43.761871679306026,
+          "shares": 216.867083,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.013391259126365185,
-          "score": 0.013391259126365185,
-          "signal_date": "2026-10-09",
-          "ticker": "FSLR"
+        "ENPH": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509477634173,
+          "entry_price": 32.79638877868652,
+          "shares": 289.376661,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.012434525415301323,
-          "score": 0.012434525415301323,
-          "signal_date": "2026-10-09",
-          "ticker": "QCOM"
+        "FSLR": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509388918191,
+          "entry_price": 181.5507367172241,
+          "shares": 52.274695,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.011170570738613605,
-          "score": 0.011170570738613605,
-          "signal_date": "2026-10-09",
-          "ticker": "MGM"
+        "INTC": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509425427398,
+          "entry_price": 102.57125664138793,
+          "shares": 92.526013,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.010990669019520283,
-          "score": 0.010990669019520283,
-          "signal_date": "2026-10-09",
-          "ticker": "SMCI"
+        "MGM": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509470604383,
+          "entry_price": 29.204595534324643,
+          "shares": 324.966304,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.010617513209581375,
-          "score": 0.010617513209581375,
-          "signal_date": "2026-10-09",
-          "ticker": "AKAM"
+        "MU": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509327081977,
+          "entry_price": 1002.9512372131347,
+          "shares": 9.462583,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.010530644096434116,
-          "score": 0.010530644096434116,
-          "signal_date": "2026-10-09",
-          "ticker": "APTV"
+        "NXPI": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509423529652,
+          "entry_price": 225.74281988525388,
+          "shares": 42.041246,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.010222739540040493,
-          "score": 0.010222739540040493,
-          "signal_date": "2026-10-09",
-          "ticker": "MU"
+        "QCOM": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.49050945314632,
+          "entry_price": 175.27759744262696,
+          "shares": 54.145593,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.009899737313389778,
-          "score": 0.009899737313389778,
-          "signal_date": "2026-10-09",
-          "ticker": "NXPI"
+        "SMCI": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509460327376,
+          "entry_price": 41.310645915985106,
+          "shares": 229.735199,
+          "signal_date": "2026-10-09"
         }
-      ],
-      "positions": {},
+      },
       "trades": []
     },
     "mlp_return": {
-      "cash": 100000.0,
+      "cash": 5000.001046138199,
       "equity": [
         {
           "date": "2026-10-09",
           "decision_recorded": true,
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-12",
+          "decision_recorded": false,
+          "nav": 98896.17827831536
         }
       ],
       "events": [
@@ -581,72 +1238,172 @@
           "count": 10,
           "date": "2026-10-09",
           "type": "signal_frozen"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509460327376,
+          "price": 41.310645915985106,
+          "shares": 229.735199,
+          "ticker": "SMCI",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509379200612,
+          "price": 366.1930147705078,
+          "shares": 25.916686,
+          "ticker": "TPL",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509459287999,
+          "price": 97.04849999999999,
+          "shares": 97.791408,
+          "ticker": "ALB",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509214918196,
+          "price": 278.1690137786865,
+          "shares": 34.11778,
+          "ticker": "RCL",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509477999751,
+          "price": 104.3421459159851,
+          "shares": 90.955667,
+          "ticker": "GDDY",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509459287999,
+          "price": 104.05199999999999,
+          "shares": 91.209294,
+          "ticker": "CHTR",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.49050931906845,
+          "price": 209.0044438934326,
+          "shares": 45.40817,
+          "ticker": "PLTR",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.49050919359806,
+          "price": 394.28704133605953,
+          "shares": 24.070051,
+          "ticker": "TER",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509438601944,
+          "price": 141.63077755737305,
+          "shares": 67.008807,
+          "ticker": "ORCL",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-12",
+          "execution": "simulated_next_open",
+          "fee": 9.490509457711411,
+          "price": 43.761871679306026,
+          "shares": 216.867083,
+          "ticker": "APTV",
+          "type": "buy"
         }
       ],
-      "nav": 100000.0,
-      "pending": [
-        {
-          "predicted_return": 0.10183364513623994,
-          "score": 0.10183364513623994,
-          "signal_date": "2026-10-09",
-          "ticker": "SMCI"
+      "nav": 98896.17827831536,
+      "pending": [],
+      "positions": {
+        "ALB": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509459287999,
+          "entry_price": 97.04849999999999,
+          "shares": 97.791408,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.09748042565260864,
-          "score": 0.09748042565260864,
-          "signal_date": "2026-10-09",
-          "ticker": "TPL"
+        "APTV": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509457711411,
+          "entry_price": 43.761871679306026,
+          "shares": 216.867083,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.0838295342880785,
-          "score": 0.0838295342880785,
-          "signal_date": "2026-10-09",
-          "ticker": "ALB"
+        "CHTR": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509459287999,
+          "entry_price": 104.05199999999999,
+          "shares": 91.209294,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.07741993282825954,
-          "score": 0.07741993282825954,
-          "signal_date": "2026-10-09",
-          "ticker": "RCL"
+        "GDDY": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509477999751,
+          "entry_price": 104.3421459159851,
+          "shares": 90.955667,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.07647834321393253,
-          "score": 0.07647834321393253,
-          "signal_date": "2026-10-09",
-          "ticker": "GDDY"
+        "ORCL": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509438601944,
+          "entry_price": 141.63077755737305,
+          "shares": 67.008807,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.0720060985051569,
-          "score": 0.0720060985051569,
-          "signal_date": "2026-10-09",
-          "ticker": "CHTR"
+        "PLTR": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.49050931906845,
+          "entry_price": 209.0044438934326,
+          "shares": 45.40817,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.06779550003868301,
-          "score": 0.06779550003868301,
-          "signal_date": "2026-10-09",
-          "ticker": "PLTR"
+        "RCL": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509214918196,
+          "entry_price": 278.1690137786865,
+          "shares": 34.11778,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.06502619570786017,
-          "score": 0.06502619570786017,
-          "signal_date": "2026-10-09",
-          "ticker": "TER"
+        "SMCI": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509460327376,
+          "entry_price": 41.310645915985106,
+          "shares": 229.735199,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.061975813809180755,
-          "score": 0.061975813809180755,
-          "signal_date": "2026-10-09",
-          "ticker": "ORCL"
+        "TER": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.49050919359806,
+          "entry_price": 394.28704133605953,
+          "shares": 24.070051,
+          "signal_date": "2026-10-09"
         },
-        {
-          "predicted_return": 0.0567615465033258,
-          "score": 0.0567615465033258,
-          "signal_date": "2026-10-09",
-          "ticker": "APTV"
+        "TPL": {
+          "entry_date": "2026-10-12",
+          "entry_fee": 9.490509379200612,
+          "entry_price": 366.1930147705078,
+          "shares": 25.916686,
+          "signal_date": "2026-10-09"
         }
-      ],
-      "positions": {},
+      },
       "trades": []
     }
   }
