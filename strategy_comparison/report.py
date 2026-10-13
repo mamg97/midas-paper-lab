@@ -655,8 +655,7 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
     for row in rows:
         group = row["group"]
         if group == "paper_nuevo":
-            eligible = (row["id"] == "benchmark_spy" or
-                        (row.get("classic_sp500_cohort") is True and
+            eligible = ((row.get("classic_sp500_cohort") is True and
                          classic_sp500_config is not None and
                          classic_sp500_config.get("universe_file") == expected_snapshot))
             reason = None if eligible else "Archivo histórico: estrategia de 8 activos, no S&P 500 completo"
