@@ -1,0 +1,2438 @@
+{
+  "books": {
+    "benchmark_spy": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "date": "2026-10-12",
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "nav": 100000.0,
+      "pending": {
+        "SPY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        }
+      },
+      "positions": {},
+      "signal_counts": [
+        {
+          "buys": 1,
+          "date": "2026-10-12"
+        }
+      ],
+      "trades": []
+    },
+    "bollinger_breakout_20": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "date": "2026-10-12",
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "nav": 100000.0,
+      "pending": {
+        "BDX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "COST": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EBAY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GEHC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KMI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MCK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MSFT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "RMD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        }
+      },
+      "positions": {},
+      "signal_counts": [
+        {
+          "buys": 8,
+          "date": "2026-10-12"
+        }
+      ],
+      "trades": []
+    },
+    "buy_hold_equal_weight": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "date": "2026-10-12",
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "nav": 100000.0,
+      "pending": {
+        "A": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AAPL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ABBV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ABNB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ABT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ACGL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ACN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ADBE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ADI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ADM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ADP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ADSK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AEE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AEP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AES": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AFL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AIG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AIZ": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AJG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AKAM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ALB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ALGN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ALL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ALLE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AMAT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AMCR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AMD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AME": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AMGN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AMP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AMT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AMZN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ANET": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AON": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AOS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "APA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "APD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "APH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "APO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "APTV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ARE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ATO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AVB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AVGO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AVY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AWK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AXON": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AXP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "AZO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BAC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BALL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BAX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BBY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BDX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BEN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BF-B": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BIIB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BKNG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BKR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BLDR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BLK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BMY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BRK-B": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BRO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BSX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BXP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "C": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CAG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CAH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CARR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CAT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CBOE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CBRE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CCI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CCL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CDNS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CDW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CEG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CF": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CFG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CHD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CHRW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CHTR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CINF": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CLX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CMCSA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CME": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CMG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CMI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CMS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CNC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CNP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "COF": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "COIN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "COO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "COP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "COR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "COST": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CPAY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CPB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CPRT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CPT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CRL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CRM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CRWD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CSCO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CSGP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CSX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CTAS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CTRA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CTSH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CTVA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CVS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CVX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CZR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "D": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DAL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DASH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DAY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DDOG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DECK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DELL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DGX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DHI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DHR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DIS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DLR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DLTR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DOC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DOV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DOW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DPZ": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DRI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DTE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DUK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DVA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DVN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "DXCM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EBAY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ECL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ED": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EFX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EIX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ELV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EMN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EMR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ENPH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EOG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EPAM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EQIX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EQR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EQT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ERIE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ES": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ESS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ETN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ETR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EVRG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EXC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EXE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EXPD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EXPE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EXR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "F": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FANG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FAST": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FCX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FDS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FDX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FFIV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FICO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FIS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FITB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FOX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FOXA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FRT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FSLR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FTNT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FTV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GDDY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GEHC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GEN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GEV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GILD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GIS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GLW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GNRC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GOOG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GOOGL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GPC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GPN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GRMN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GWW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HAL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HAS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HBAN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HCA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HIG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HII": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HLT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HOLX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HON": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HPE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HPQ": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HRL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HSIC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HST": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HSY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HUBB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HUM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HWM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IBM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ICE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IDXX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IEX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IFF": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "INCY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "INTC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "INTU": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "INVH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IPG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IQV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IRM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ISRG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ITW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IVZ": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "J": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "JBHT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "JBL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "JCI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "JKHY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "JNJ": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "JPM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "K": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KDP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KEY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KEYS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KHC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KIM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KKR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KLAC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KMB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KMI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KMX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KVUE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "L": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LDOS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LEN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LHX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LII": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LIN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LKQ": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LLY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LMT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LNT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LOW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LRCX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LULU": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LUV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LVS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LYB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "LYV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MAA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MAR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MAS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MCD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MCHP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MCK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MCO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MDLZ": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MDT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MET": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "META": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MGM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MHK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MKC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MKTX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MLM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MMC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MMM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MNST": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MOH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MOS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MPC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MPWR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MRK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MRNA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MSCI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MSFT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MSI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MTB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MTCH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MTD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MU": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NCLH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NDAQ": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NDSN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NEE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NEM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NFLX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NKE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NOC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NOW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NRG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NSC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NTAP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NTRS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NUE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NVDA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NVR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NWS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NWSA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NXPI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "O": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ODFL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "OKE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "OMC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ON": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ORCL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ORLY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "OTIS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "OXY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PANW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PAYC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PAYX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PCAR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PCG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PEG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PEP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PFE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PFG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PGR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PHM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PKG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PLD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PLTR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PNC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PNR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PNW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PODD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "POOL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PPG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PPL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PRU": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PSA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PSKY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PSX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PTC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PWR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PYPL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "QCOM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "RCL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "REG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "REGN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "RF": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "RJF": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "RL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "RMD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ROK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ROL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ROP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ROST": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "RSG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "RTX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "RVTY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SBAC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SBUX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SCHW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SHW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SJM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SLB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SMCI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SNA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SNPS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SOLV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SPG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SPGI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SRE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "STE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "STLD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "STT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "STX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "STZ": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SWK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SWKS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SYF": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SYK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SYY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "T": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TAP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TDG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TDY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TECH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TEL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TER": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TFC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TGT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TJX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TKO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TMO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TMUS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TPL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TPR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TRGP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TRMB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TROW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TRV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TSCO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TSLA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TSN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TTD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TTWO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TXN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TXT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TYL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "UAL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "UBER": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "UDR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "UHS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ULTA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "UNH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "UNP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "UPS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "URI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "USB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "V": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "VICI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "VLO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "VLTO": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "VMC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "VRSK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "VRSN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "VRTX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "VST": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "VTR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "VTRS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "VZ": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WAB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WAT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WBA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WBD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WDAY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WDC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WEC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WELL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WFC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WMB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WMT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WRB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WSM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WST": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WTW": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "WYNN": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "XEL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "XOM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "XYL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "XYZ": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "YUM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ZBH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ZBRA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ZTS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        }
+      },
+      "positions": {},
+      "signal_counts": [
+        {
+          "buys": 503,
+          "date": "2026-10-12"
+        }
+      ],
+      "trades": []
+    },
+    "ema_rsi_fixed": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "date": "2026-10-12",
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "nav": 100000.0,
+      "pending": {
+        "CHD": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CTAS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "FDS": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HST": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KDP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MSCI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "PYPL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        }
+      },
+      "positions": {},
+      "signal_counts": [
+        {
+          "buys": 8,
+          "date": "2026-10-12"
+        }
+      ],
+      "trades": []
+    },
+    "genetic_frozen": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "date": "2026-10-12",
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "nav": 100000.0,
+      "pending": {
+        "ACGL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BF-B": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "GEHC": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IFF": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NDAQ": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ODFL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ORLY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TYL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        }
+      },
+      "positions": {},
+      "signal_counts": [
+        {
+          "buys": 8,
+          "date": "2026-10-12"
+        }
+      ],
+      "trades": []
+    },
+    "macd_12_26_9": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "date": "2026-10-12",
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "nav": 100000.0,
+      "pending": {
+        "BSX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CTSH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "EG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MDT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MRNA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MTCH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "SJM": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ZBH": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        }
+      },
+      "positions": {},
+      "signal_counts": [
+        {
+          "buys": 8,
+          "date": "2026-10-12"
+        }
+      ],
+      "trades": []
+    },
+    "rsi_reversion_14": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "date": "2026-10-12",
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "nav": 100000.0,
+      "pending": {
+        "ALB": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ARE": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "BMY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "INCY": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "IP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        }
+      },
+      "positions": {},
+      "signal_counts": [
+        {
+          "buys": 5,
+          "date": "2026-10-12"
+        }
+      ],
+      "trades": []
+    },
+    "turtle_20_10_long": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "date": "2026-10-12",
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "nav": 100000.0,
+      "pending": {
+        "ABBV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ISRG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MAR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MCK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MSFT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NTAP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "RL": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "TJX": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        }
+      },
+      "positions": {},
+      "signal_counts": [
+        {
+          "buys": 8,
+          "date": "2026-10-12"
+        }
+      ],
+      "trades": []
+    },
+    "turtle_55_20_long": {
+      "cash": 100000.0,
+      "equity": [
+        {
+          "date": "2026-10-12",
+          "nav": 100000.0
+        }
+      ],
+      "events": [],
+      "nav": 100000.0,
+      "pending": {
+        "ABBV": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "CCI": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "HCA": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "ISRG": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "KR": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MCK": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "MSFT": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        },
+        "NTAP": {
+          "side": "buy",
+          "signal_date": "2026-10-12"
+        }
+      },
+      "positions": {},
+      "signal_counts": [
+        {
+          "buys": 8,
+          "date": "2026-10-12"
+        }
+      ],
+      "trades": []
+    }
+  },
+  "config_hash": "1a8667a1eef23ff6f0fef8ec727ad6056eb0cf37cf341ef5dd210944d27eff30",
+  "coverage": [
+    {
+      "date": "2026-10-12",
+      "eligible": 503,
+      "missing": {},
+      "ticker_coverage_pct": 100.0,
+      "total": 503
+    }
+  ],
+  "currency": "USD",
+  "engine": "classic_sp500_next_open_v2",
+  "first_session": "2026-10-12",
+  "initial_capital": 100000,
+  "last_session": "2026-10-12",
+  "schema_version": 1,
+  "strategy_id": "classic_sp500_us_2026"
+}
