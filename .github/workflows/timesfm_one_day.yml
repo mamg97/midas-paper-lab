@@ -54,7 +54,7 @@ jobs:
           python strategy_comparison/runtime_health.py \
             --output strategy_runtime/timesfm_one_day.json \
             --workflow-key timesfm_one_day \
-            --workflow-name "MIDAS TimesFM EUR one-day signal" \
+            --workflow-name "MIDAS TimesFM 2.5 EUR daily 1-session signal" \
             --outcome "${{ steps.execute.outcome }}" \
             --run-id "$GITHUB_RUN_ID" \
             --run-number "$GITHUB_RUN_NUMBER" \
