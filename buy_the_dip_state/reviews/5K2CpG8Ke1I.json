@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-13T10:00:23.256066+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/56995096",
+    "published_date": "2020-09-24",
+    "youtube_video_id": "5K2CpG8Ke1I",
+    "match_score": 0.922911,
+    "audio_bytes_processed_transiently": 12195257
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 1524.4016875,
+      "word_count": 4128,
+      "segment_count": 240,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "5K2CpG8Ke1I",
+    "youtube_url": "https://www.youtube.com/watch?v=5K2CpG8Ke1I",
+    "title": "BUY THE DIP PODCAST: EPISODIO 18 NUESTRA CARTERA DE SEPTIEMBRE 2020",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/56995096",
+    "published_date": "2020-09-24",
+    "source": "official_podcast_mirror",
+    "match_score": 0.922911
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute la estrategia de inversión en una cartera con un rendimiento del 5%, destacando decisiones de entrada y salida en inversiones, análisis de riesgos y valoración de empresas. Se mencionan eventos macroeconómicos como las elecciones de Estados Unidos, posibles ajustes en la cartera debido a curvas de mercado, y una posición específica en Greenworth Financial con un alto potencial de ganancia. También se aborda la posibilidad de que el tema de las elecciones afecte la estabilidad del director de la FHFA, influyendo en la recapitalización de empresas. Además, se discute la preocupación por futuros eventos como lockdowns y posibles olas de contagios, con expectativas de que las comodidades se beneficien de estos eventos. El participante menciona que su cartera representa el 40% de su inversión y espera actualizaciones en los próximos meses debido a factores como elecciones, publicaciones de informes y posibles impactos del frío y la gripe.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "La cartera de inversiones tiene un rendimiento del 5% y se espera que mejore con eventos futuros como las elecciones de Estados Unidos."
+      ],
+      "cycle_macro": [
+        "Las elecciones de Estados Unidos en noviembre podrían impactar directamente la cartera debido a su relación con Fannie Mae y Freddy Mac."
+      ],
+      "entry": [
+        "Los miembros de MyLow's ProRewards ahorran más con descuentos por volumen en pedidos de 2.000 dólares o más."
+      ],
+      "sizing": [
+        "La posición en Greenworth Financial representa un 2,3% de la cartera, con un potencial de 70% de ganancia si se cumple el acuerdo de adquisición."
+      ],
+      "add_hold": [],
+      "exit": [
+        "Se menciona la decisión de cerrar una posición corta en Nicolá tras el dimito del CEO, lo que influyó en el movimiento de la acción."
+      ],
+      "risk": [
+        "Se espera que haya curvas en los próximos meses, lo que implica posibles ajustes en la cartera y un riesgo de pérdida de liquidez."
+      ],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Los miembros de MyLow's ProRewards ahorran más con descuentos por volumen en pedidos de 2.000 dólares o más.",
+          "timestamp": "00:00:05",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La cartera de inversiones tiene un rendimiento del 5% y se espera que mejore con eventos futuros como las elecciones de Estados Unidos.",
+          "timestamp": "00:01:40",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se espera que haya curvas en los próximos meses, lo que implica posibles ajustes en la cartera y un riesgo de pérdida de liquidez.",
+          "timestamp": "00:02:15",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Las elecciones de Estados Unidos en noviembre podrían impactar directamente la cartera debido a su relación con Fannie Mae y Freddy Mac.",
+          "timestamp": "00:02:54",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La posición en Greenworth Financial representa un 2,3% de la cartera, con un potencial de 70% de ganancia si se cumple el acuerdo de adquisición.",
+          "timestamp": "00:04:12",
+          "scope": "hosts",
+          "confidence": 0.9
+        }
+      ],
+      "chunk_summary": "El podcast discute la estrategia de inversión en una cartera con un rendimiento del 5%, mencionando descuentos para miembros de MyLow's ProRewards, posibles ajustes por eventos macroeconómicos como las elecciones de Estados Unidos, y una posición específica en Greenworth Financial con un alto potencial de ganancia si se cumple un acuerdo de adquisición."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la decisión de vender acciones de Sanofi debido a cambios regulatorios que dificultan la aprobación de vacunas antes de las elecciones.",
+          "timestamp": "00:11:25",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se discute la posibilidad de que el tema de las elecciones afecte la estabilidad del director de la FHFA, lo que podría influir en la recapitalización de empresas.",
+          "timestamp": "00:15:28",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se menciona la decisión de cerrar una posición corta en Nicolá tras el dimito del CEO, lo que influyó en el movimiento de la acción.",
+          "timestamp": "00:18:29",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se analiza la valoración de empresas como Fánima, destacando la tabla de preferentes más baratas y la liquidez de cada tramo.",
+          "timestamp": "00:13:40",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona la decisión de comprar acciones en grandes cantidades, aunque se reconoce que 'un montón son muchas muchas muchas muchas'.",
+          "timestamp": "00:12:23",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona la posibilidad de que el mercado esté en un ciclo de volatilidad elevada, con movimientos pre-market significativos.",
+          "timestamp": "00:18:55",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.5
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe decisiones de entrada y salida en inversiones, análisis de riesgos y valoración de empresas, con mención a cambios regulatorios, elecciones, y volatilidad del mercado. Se destacan decisiones de venta de acciones de Sanofi, cierre de posiciones cortas, y análisis de valoración de empresas como Fánima, con referencias a políticas regulatorias y posibles impactos en la recapitalización."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El participante menciona que tiene una cartera que considera que representa el 40% de su inversión y menciona que espera actualizaciones en los próximos meses debido a factores como elecciones, publicaciones de informes y posibles impactos del frío y la gripe.",
+          "timestamp": "00:22:28",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El participante expresa preocupación por posibles futuros lockdowns y menciona que espera una segunda ola de contagios, comparando la situación con el coronavirus y mencionando que ha publicado un video sobre comodidades rentables en caso de un segundo encierro.",
+          "timestamp": "00:23:40",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El participante menciona que el mercado ha tenido un rally importante y que espera que las comodidades, en general, se beneficien de futuros eventos como lockdowns, destacando que ciertas comodidades tienen dinámicas interesantes y podrían ser rentables en caso de una segunda ola.",
+          "timestamp": "00:24:33",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El participante discute sobre su cartera de inversión, menciona que representa el 40% de su inversión, expresa preocupación por futuros eventos como lockdowns y posibles olas de contagios, y menciona que espera actualizaciones en los próximos meses debido a factores como elecciones y publicaciones de informes. También menciona que ha publicado un video sobre comodidades rentables en caso de un segundo encierro y espera que el mercado tenga un rally importante."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
