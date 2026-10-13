@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-13T09:40:39.890111+00:00",
+  "generated_at_utc": "2026-10-13T14:21:52.028824+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 18,
@@ -80,10 +80,10 @@
       ],
       "open_positions_count": 1,
       "pending_orders_count": 0,
-      "comparison_eligible": true,
-      "comparison_universe_id": "SP500_2026-09-29_503",
-      "comparison_universe_symbols": 503,
-      "comparison_exclusion_reason": null,
+      "comparison_eligible": false,
+      "comparison_universe_id": null,
+      "comparison_universe_symbols": null,
+      "comparison_exclusion_reason": "Archivo histórico: estrategia de 8 activos, no S&P 500 completo",
       "risk_observations": 10,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": -0.66188,
