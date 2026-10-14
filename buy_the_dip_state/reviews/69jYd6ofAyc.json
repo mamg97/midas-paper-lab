@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-14T19:37:12.156179+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/88773274",
+    "published_date": "2022-06-21",
+    "youtube_video_id": "69jYd6ofAyc",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 24225795
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 3028.2188125,
+      "word_count": 8101,
+      "segment_count": 1384,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "69jYd6ofAyc",
+    "youtube_url": "https://www.youtube.com/watch?v=69jYd6ofAyc",
+    "title": "Cartera de INVERSIÓN en JUNIO | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/88773274",
+    "published_date": "2022-06-21",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute la estrategia de inversión en la cartera, destacando una rentabilidad del 42% desde el inicio con una posición principal en IRCO, que generó 100 millones de FreeCastflow. Se analizan factores como el precio del petróleo, la política gubernamental y el riesgo elevado debido a la volatilidad del mercado. Se menciona un ciclo macro alcista en metales preciosos, con expectativas de crecimiento a largo plazo en sectores como la defensa y las armas. También se aborda la posibilidad de valorización en Orison, con un potencial de 40-50% si se produce, y se menciona un análisis negativo de un analista que causó una caída en las acciones. Se destacan oportunidades en plata con un valor contable bajo y una estrategia de inversión flexible que permite la adición de fondos y fracciones de acciones. La cartera tiene un riesgo elevado, pero se espera un crecimiento en sectores como el petróleo y la minería.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [],
+      "cycle_macro": [
+        "El mercado de vivienda muestra una caída de precios, pero con una demanda estable y una oferta limitada, lo que sugiere un posible estancamiento o ligera recuperación.",
+        "El análisis identifica un ciclo macro alcista en metales preciosos, con expectativas de crecimiento a largo plazo y una demanda estable en sectores como la defensa y las armas."
+      ],
+      "entry": [
+        "La cartera ha tenido una rentabilidad de 42% desde el inicio, con una posición principal en IRCO, que ha generado 100 millones de FreeCastflow en el primer trimestre de 2022.",
+        "Se menciona la adquisición de una posición en Orison con un 4% a 29%, destacando su rendimiento y potencial de valorización."
+      ],
+      "sizing": [
+        "Se menciona que la empresa tiene un 61% de aumento en las reservas de Z-West, lo que podría llevar a una producción de petróleo."
+      ],
+      "add_hold": [
+        "Se menciona que la empresa tiene una posición en cartera con un 4% a 29%, y que se espera que se mantenga o se aumente."
+      ],
+      "exit": [],
+      "risk": [
+        "La cartera ha tenido una rentabilidad positiva de 3,68% desde el inicio, mientras que el Standard & Poor's ha caído un 15,83%, lo que refleja un riesgo elevado en la cartera.",
+        "El riesgo de ejecución es bajo en proyectos como Howard Hughes, con una ejecución estable y una estrategia clara de expansión y adquisición de activos."
+      ],
+      "technical": [
+        "La rentabilidad de Fanny ha sido del 42,89% desde su inicio, con un 8,15% de carretera, lo que refleja un buen desempeño en el mercado."
+      ],
+      "management": [
+        "La administración Biden no está recapitulando empresas de forma drástica, lo que sugiere que las comunes no enfrentarán un impacto inmediato."
+      ],
+      "mistakes": [
+        "Se menciona un análisis de un analista que dio un downgrade a la empresa debido a noticias negativas sobre drills en otros pozos, lo que causó una caída en las acciones."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [
+      "Orison: una posición con potencial de valorización del 40-50% si se produce, con un 4% a 29% en la cartera."
+    ],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El precio del petróleo está en 120-110 dólares, con un rango de 100-120 dólares durante el año, y se espera que suba a 140-150 dólares si no hay intervención gubernamental.",
+          "timestamp": "00:04:01",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La cartera ha tenido una rentabilidad positiva de 3,68% desde el inicio, mientras que el Standard & Poor's ha caído un 15,83%, lo que refleja un riesgo elevado en la cartera.",
+          "timestamp": "00:01:13",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La cartera ha tenido una rentabilidad de 42% desde el inicio, con una posición principal en IRCO, que ha generado 100 millones de dólares de FreeCastflow en el primer trimestre de 2022.",
+          "timestamp": "00:03:38",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast discute la rentabilidad de la cartera de inversiones, destacando una posición principal en IRCO con un 42% de rentabilidad desde el inicio, mientras que otros activos han tenido una caída significativa. Se analizan factores como el precio del petróleo y la política gubernamental, que influyen en la cartera. Se menciona un riesgo elevado debido a la volatilidad del mercado y la posibilidad de una recesión."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El proyecto tiene un presupuesto fijo y un contingency del 15-20% para cubrir costes imprevistos, lo que permite mantener la producción dentro de un año.",
+          "timestamp": "00:10:05",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa se espera generar 200 millones de free cash flow en un año, con un precio actual de 300, lo que sugiere un potencial de crecimiento.",
+          "timestamp": "00:10:45",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La inflación y los cambios en los tipos de interés podrían afectar la rentabilidad, pero el contingency y la opcionalidad de exploración actúan como mitigadores.",
+          "timestamp": "00:10:55",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "La rentabilidad de Fanny ha sido del 42,89% desde su inicio, con un 8,15% de carretera, lo que refleja un buen desempeño en el mercado.",
+          "timestamp": "00:12:31",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "management",
+          "paraphrase": "La administración Biden no está recapitulando empresas de forma drástica, lo que sugiere que las comunes no enfrentarán un impacto inmediato.",
+          "timestamp": "00:14:01",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El mercado de vivienda muestra una caída de precios, pero con una demanda estable y una oferta limitada, lo que sugiere un posible estancamiento o ligera recuperación.",
+          "timestamp": "00:18:11",
+          "scope": "hosts",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis del proyecto muestra un presupuesto fijo con un contingency del 15-20% para manejar costes imprevistos, lo que permite mantener la producción dentro de un año. La empresa se espera generar 200 millones de free cash flow en un año, con un precio actual de 300, lo que sugiere un potencial de crecimiento. La inflación y los cambios en los tipos de interés podrían afectar la rentabilidad, pero el contingency y la opcionalidad de exploración actúan como mitigadores. La rentabilidad de Fanny ha sido del 42,89% desde su inicio, con un 8,15% de carretera, lo que refleja un buen desempeño en el mercado. La administración Biden no está recapitulando empresas de forma drástica, lo que sugiere que las comunes no enfrentarán un impacto inmediato. El mercado de vivienda muestra una caída de precios, pero con una demanda estable y una oferta limitada, lo que sugiere un posible estancamiento o ligera recuperación."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adquisición de una posición en Orison con un 4% a 29%, destacando su rendimiento y potencial de valorización.",
+          "timestamp": "00:23:21",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se indica que Orison tiene un peso menor (5.52%) a pesar de un buen comportamiento, pero se menciona que su valorización podría ser del 40-50% si se produce.",
+          "timestamp": "00:19:15",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona la posibilidad de pérdida del 50% si la empresa no logra su objetivo, aunque se menciona la opcionalidad de adquisición por parte de West African Resources.",
+          "timestamp": "00:24:47",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona que el sentimiento en la plata y el oro ha sido negativo, pero Orison ha tenido un buen rendimiento en comparación con otros activos.",
+          "timestamp": "00:23:15",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona que la empresa tiene un 61% de aumento en las reservas de Z-West, lo que podría llevar a una producción de petróleo.",
+          "timestamp": "00:24:05",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se menciona un análisis de un analista que dio un downgrade a la empresa debido a noticias negativas sobre drills en otros pozos, lo que causó una caída en las acciones.",
+          "timestamp": "00:24:15",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se menciona que la empresa tiene una gráfica con un buen comportamiento a largo plazo, con posibilidades de generar oro en 3-4 meses.",
+          "timestamp": "00:21:31",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "management",
+          "paraphrase": "Se menciona que el analista es un outsider que ha pirateado programas de Microsoft desde hace tiempo, lo que le da una perspectiva única sobre la empresa.",
+          "timestamp": "00:20:01",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "quality",
+          "paraphrase": "Se menciona que la empresa tiene una buena reputación y que su director es Roberto, quien ha comentado sobre Microsoft y su relación con la empresa.",
+          "timestamp": "00:19:23",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "add_hold",
+          "paraphrase": "Se menciona que la empresa tiene una posición en cartera con un 4% a 29%, y que se espera que se mantenga o se aumente.",
+          "timestamp": "00:23:21",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis menciona la adquisición de una posición en Orison con un 4% a 29%, destacando su rendimiento y potencial de valorización. Se menciona que la empresa tiene un peso menor (5.52%) a pesar de un buen comportamiento, pero se espera una valorización del 40-50% si se produce. También se menciona la posibilidad de pérdida del 50% si no se logra el objetivo, aunque hay opcionalidad de adquisición por parte de West African Resources. Se destaca el buen rendimiento de Orison en comparación con otros activos, y se menciona un análisis negativo de un analista que causó una caída en las acciones. Se menciona que la empresa tiene una gráfica con buen comportamiento a largo plazo y posibilidades de generar oro en 3-4 meses. También se menciona la reputación de la empresa y la perspectiva de su director, Roberto, quien ha comentado sobre Microsoft y su relación con la empresa."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de Fica muestra que cotiza a 70 millones, con un precio que ha caído desde 4,5 a 3,4, lo que sugiere que podría subir nuevamente.",
+          "timestamp": "00:35:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa Fica tiene un precio de 3,4 millones, con un rendimiento negativo de 17 millones en el último ejercicio, lo que indica que cotiza a niveles bajos.",
+          "timestamp": "00:34:21",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La empresa Fica tiene un proyecto con 3,3 millones de valor, lo que sugiere que podría seguir creciendo si se mantienen los niveles de producción y minerales.",
+          "timestamp": "00:35:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de Fica muestra que cotiza a 70 millones, con un precio que ha caído desde 4,5 a 3,4, lo que sugiere que podría subir nuevamente. La empresa tiene un precio de 3,4 millones, con un rendimiento negativo de 17 millones en el último ejercicio, lo que indica que cotiza a niveles bajos. La empresa tiene un proyecto con 3,3 millones de valor, lo que sugiere que podría seguir creciendo si se mantienen los niveles de producción y minerales."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista entra en un ciclo alcista con metales preciosos, destacando la plata como muy barata y con un proyecto sólido.",
+          "timestamp": "00:38:25",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La plata se valora a bajo costo, con un valor contable reducido y múltiplos de 1-1.5 veces el valor contable, lo que la hace una inversión atractiva a largo plazo.",
+          "timestamp": "00:41:23",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El riesgo de ejecución es bajo en proyectos como Howard Hughes, con una ejecución estable y una estrategia clara de expansión y adquisición de activos.",
+          "timestamp": "00:39:23",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El análisis identifica un ciclo macro alcista en metales preciosos, con expectativas de crecimiento a largo plazo y una demanda estable en sectores como la defensa y las armas.",
+          "timestamp": "00:43:01",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El tamaño del mercado para armas y materiales de defensa se estima en crecimiento constante, con un impacto positivo en empresas como Ammoink y Gunbroker.",
+          "timestamp": "00:43:45",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis identifica oportunidades de inversión en metales preciosos, especialmente plata, con un ciclo macro alcista y un valor contable bajo. Se destacan proyectos con bajo riesgo de ejecución, como Howard Hughes, y un crecimiento a largo plazo en sectores como armas y defensa. La estrategia se basa en una valoración atractiva y un entorno macro favorable, con expectativas de estabilidad y crecimiento en el largo plazo."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Los participantes están autorizados a invertir en fondos y pueden solicitar la adición de fondos en cualquier momento.",
+          "timestamp": "00:47:42",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se permite la inversión en fondos con fracciones de acciones, lo que facilita el acceso a activos como Amazon.",
+          "timestamp": "00:48:44",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se ha implementado una plataforma para el registro en un portafolio de inversión, con un enlace proporcionado para acceder a la página web.",
+          "timestamp": "00:49:28",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe la implementación de una estrategia de inversión que permite a los participantes acceder a fondos y a fracciones de acciones, con la posibilidad de solicitar la adición de fondos en cualquier momento. También se menciona la creación de una plataforma para el registro en un portafolio de inversión, con un enlace proporcionado para acceder a la página web. La estrategia se basa en la autorización de inversiones, la flexibilidad en la adición de fondos y la facilitación del acceso a activos mediante fracciones de acciones."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
