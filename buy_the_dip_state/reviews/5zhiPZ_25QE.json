@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-14T09:13:12.380580+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/89810843",
+    "published_date": "2022-07-14",
+    "youtube_video_id": "5zhiPZ_25QE",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 48937840
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 6117.2245,
+      "word_count": 16504,
+      "segment_count": 2159,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "5zhiPZ_25QE",
+    "youtube_url": "https://www.youtube.com/watch?v=5zhiPZ_25QE",
+    "title": "La Cartera de INVERSIÓN del DIABLO vs la de JESUCRISTO  | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/89810843",
+    "published_date": "2022-07-14",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza estrategias de inversión en sectores de alto riesgo, como empresas de defensa, cárceles privadas, y recursos energéticos, destacando su potencial como hedges en períodos de volatilidad. Se discuten oportunidades en sectores como el agua en regiones críticas, servicios funerarios con monopolios locales, y empresas de defensa en contextos geopolíticos. Se mencionan riesgos asociados a regulaciones, escasez de recursos, y controversias de reputación, así como la importancia de factores macroeconómicos como el gasto militar y la demanda estable en sectores específicos. Se sugieren entradas en sectores con demanda estable, aunque con limitaciones en la inversión extranjera y dependencia de factores naturales.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [],
+      "cycle_macro": [],
+      "entry": [],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [],
+      "risk": [],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "low"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El podcast discute la inclusión de empresas como Altisores y WWW en una cartera de inversión, destacando su comportamiento en períodos de crisis y su potencial como hedges.",
+          "timestamp": "00:07:37",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona que Altisores ha tenido un buen rendimiento durante la crisis, aunque posteriormente enfrentó problemas por fraudes y regulaciones, lo que afectó su valoración.",
+          "timestamp": "00:08:09",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La cartera del diablo incluye empresas con alto riesgo, como Altisores y WWW, que se benefician de situaciones adversas y pueden generar volatilidad significativa.",
+          "timestamp": "00:09:19",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast analiza la estrategia de inversión en empresas de alto riesgo, como Altisores y WWW, que se benefician de crisis económicas y situaciones adversas, destacando su potencial como hedges y su comportamiento en períodos de volatilidad."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "risk",
+          "paraphrase": "El análisis de riesgos menciona la tensión geopolítica y la expansión militar de China, destacando la importancia de la seguridad marítima y las rutas comerciales.",
+          "timestamp": "00:17:15",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se destaca un aumento en el gasto militar global, especialmente en 2022, con un gasto militar mundial que supera los dos trillones, aunque la inversión porcentual sobre el PIB es baja.",
+          "timestamp": "00:15:15",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa de defensa Lockheed Martin se destaca como un actor clave en el sector de defensa, con contratos significativos en Europa y un buen desempeño en el contexto de la ampliación militar.",
+          "timestamp": "00:13:30",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se sugiere una entrada en el sector de defensa, enfocado en empresas con experiencia en proyectos de ampliación militar y en países con políticas expansionistas, como China y Japón.",
+          "timestamp": "00:16:09",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca la importancia del gasto militar global en 2022, con un aumento significativo en el sector de defensa, especialmente en empresas como Lockheed Martin. Se menciona la tensión geopolítica, la expansión militar de China y la necesidad de inversión continua en defensa. Se sugiere una estrategia de entrada en el sector de defensa, enfocada en países con políticas expansionistas y en empresas con experiencia en proyectos de ampliación militar."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de la saturación de cárceles en Estados Unidos y la tendencia a la alza de los centros de detención de inmigrantes sugieren oportunidades para empresas como G-group y Core Civic.",
+          "timestamp": "00:22:04",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La saturación de cárceles y la necesidad de albergar a inmigrantes refuerzan la demanda de centros privados de detención, beneficiando a G-group más que a Core Civic.",
+          "timestamp": "00:22:19",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La alta tasa de ocupación en cárceles estadounidenses y la posibilidad de que se prohíban las cárceles privadas crean un entorno de riesgo para las empresas de privadas, pero también potencian la demanda en el largo plazo.",
+          "timestamp": "00:25:00",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento discute la saturación de cárceles en Estados Unidos, la tendencia a la alza de centros de detención de inmigrantes y el impacto en empresas privadas de cárceles, destacando la demanda de centros privados como G-group y el riesgo asociado a la regulación. Se menciona la relación entre la reinserción social y la tasa de reincidencia, lo que beneficia a las empresas de cárceles, aunque también plantea desafíos para la sociedad."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de la empresa Tesis se basa en la reputación del CEO, quien es conocido por su estilo de vida y sus comentarios directos, lo que refleja la cultura de la empresa.",
+          "timestamp": "00:38:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El CEO de Tesis es famoso por su enfoque directo y su capacidad para generar atención mediática, lo que influye en la percepción del valor de la empresa.",
+          "timestamp": "00:38:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa Tesis enfrenta riesgos de reputación debido a la polémica del CEO, quien ha sido criticado por comentarios inapropiados sobre la industria de los estrictis.",
+          "timestamp": "00:39:35",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la empresa Tesis se basa en la reputación del CEO, quien es conocido por su estilo de vida y sus comentarios directos, lo que refleja la cultura de la empresa. El CEO es famoso por su enfoque directo y su capacidad para generar atención mediática, lo que influye en la percepción del valor de la empresa. La empresa Tesis enfrenta riesgos de reputación debido a la polémica del CEO, quien ha sido criticado por comentarios inapropiados sobre la industria de los estrictis."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El tío que fundó Playboy se involucró en causas sociales y luchó contra el racismo, aunque su imagen pública era conflictiva.",
+          "timestamp": "00:44:51",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Playboy ha experimentado fluctuaciones significativas en su valor de mercado, con un cierre en 2025 a 6 dólares, una caída del 90% en un año.",
+          "timestamp": "00:47:10",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Gaspromo es una empresa rusa con poder de influencia global, capaz de controlar el suministro de gas y afectar la economía de Europa, lo que representa un riesgo geopolítico significativo.",
+          "timestamp": "00:48:48",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe la historia de Playboy, su fundador y su impacto en la industria, así como las fluctuaciones de su valor de mercado. También menciona la empresa rusa Gaspromo y su papel en la geopolítica energética, destacando el riesgo asociado a su influencia global."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona el riesgo ambiental y de seguridad en Norilsk, con un vertido de diésel que causó un daño ecológico grave y un alto número de accidentes laborales.",
+          "timestamp": "00:54:01",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se destaca la importancia de los yacimientos de niquel y otros metales en Norilsk, subrayando su valor económico y su relevancia para la industria actual.",
+          "timestamp": "00:53:02",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se discute la posibilidad de inversiones en empresas rusas, destacando las limitaciones en la inversión extranjera y la monopolización de recursos por parte de empresas estatales.",
+          "timestamp": "00:56:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona la escasez de agua en California y el impacto en la construcción y el uso de recursos hídricos, relacionado con la gestión de recursos en zonas secas.",
+          "timestamp": "01:00:02",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento aborda riesgos ambientales y de seguridad en Norilsk, valoración de recursos minerales, posibilidad de inversiones en empresas rusas con limitaciones, y escasez de agua en California con impacto en la construcción y uso de recursos hídricos."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Una empresa que opera en el sector de agua en Arizona y Colorado, donde el agua es un recurso limitado y se ha convertido en un tema de especulación.",
+          "timestamp": "01:01:16",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa está relacionada con el agua en una región donde el recurso es crítico, lo que sugiere un valor potencial para inversiones en infraestructura o especulación.",
+          "timestamp": "01:01:16",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El riesgo de escasez de agua en Arizona y Colorado, junto con la dependencia de la lluvia, puede afectar la sostenibilidad de la empresa y la inversión.",
+          "timestamp": "01:01:16",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El sector de agua en Estados Unidos es un área de inversión con potencial, especialmente en regiones donde el recurso es crítico y la demanda es estable.",
+          "timestamp": "01:01:16",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Una empresa de exportación de agua en Hawaii, que se especializa en satisfacer la demanda de una región con escasez de recursos hídricos y cultivo específico.",
+          "timestamp": "01:01:49",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa de Hawaii tiene un valor potencial basado en su rol como exportador de agua en una región con necesidades específicas de agua y cultivo.",
+          "timestamp": "01:01:49",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El riesgo de escasez de agua en Hawaii y su dependencia de la lluvia puede afectar la sostenibilidad de la empresa y la inversión.",
+          "timestamp": "01:01:49",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El sector de exportación de agua en Estados Unidos es un área de inversión con potencial, especialmente en regiones donde el recurso es crítico y la demanda es estable.",
+          "timestamp": "01:01:49",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Una empresa de servicios funerarios en Estados Unidos, con un enfoque en la industria de cementerios y funerales, que opera en un sector con demanda estable y monopolios locales.",
+          "timestamp": "01:07:00",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa de servicios funerarios tiene un valor potencial basado en la demanda estable de servicios funerales y la existencia de monopolios locales en regiones con limitaciones de terreno.",
+          "timestamp": "01:07:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El riesgo de escasez de terreno en cementerios y la dependencia de la demanda de servicios funerales puede afectar la sostenibilidad de la empresa y la inversión.",
+          "timestamp": "01:07:00",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El sector de servicios funerarios en Estados Unidos es un área de inversión con potencial, especialmente en regiones con demanda estable y limitaciones de terreno para cementerios.",
+          "timestamp": "01:07:00",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe tres sectores de inversión potencial: 1) una empresa relacionada con el agua en Arizona y Colorado, donde el recurso es crítico y se ha convertido en un tema de especulación; 2) una empresa de exportación de agua en Hawaii, que se especializa en satisfacer la demanda de una región con escasez de recursos hídricos y cultivo específico; y 3) una empresa de servicios funerarios en Estados Unidos, con un enfoque en la industria de cementerios y funerales, que opera en un sector con demanda estable y monopolios locales. Cada sector tiene un potencial de inversión basado en la demanda estable, la escasez de recursos críticos y la existencia de monopolios locales, aunque también implica riesgos asociados a la dependencia de factores naturales y la limitación de terreno."
+    },
+    {
+      "chunk": 8,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Discusión sobre el monopolio en el sector funerario y la competencia en el mercado de nicho de las aerolíneas regionales.",
+          "timestamp": "01:11:33",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Menciones a empresas como Taysol y Asca Group, destacando su modelo de negocio, su relación con la religión y su margen de beneficio.",
+          "timestamp": "01:16:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Análisis de riesgos asociados a la dependencia de capellanes y la inflación en el sector funerario, y a la regulación en el sector de aerolíneas.",
+          "timestamp": "01:16:31",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Referencia a la estabilidad a largo plazo en el sector de aerolíneas regionales y su resistencia a la regulación.",
+          "timestamp": "01:19:01",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Mención a la existencia de múltiples empresas en el sector funerario y aerolíneas, con una estructura de mercado dominada por empresas grandes.",
+          "timestamp": "01:11:53",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "management",
+          "paraphrase": "Descripción de la estructura de gestión de Taysol, incluyendo la contratación de capellanes y su impacto en los costos.",
+          "timestamp": "01:16:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Reconocimiento de errores en la evaluación de riesgos, como la dependencia de capellanes y la regulación en el sector funerario.",
+          "timestamp": "01:16:31",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "quality",
+          "paraphrase": "Análisis de la calidad de las empresas en el sector funerario y aerolíneas, destacando su modelo de negocio y su resistencia a la regulación.",
+          "timestamp": "01:16:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento discute el monopolio en el sector funerario y la competencia en el mercado de aerolíneas regionales, destacando empresas como Taysol y Asca Group. Se analizan aspectos como el modelo de negocio, los riesgos asociados a la regulación, y la estabilidad a largo plazo en el sector. Se mencionan la dependencia de capellanes en el sector funerario y la estructura de mercado dominada por empresas grandes."
+    },
+    {
+      "chunk": 9,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Discusión sobre la naturaleza de Brookfield y su estrategia de inversión, con mención a su enfoque de maximizar valor para accionistas, aunque con críticas a su método.",
+          "timestamp": "01:21:42",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Análisis de la capitalización de mercado de una empresa que fabrica dispositivos no letales, con referencias a su valoración histórica y actual, destacando su crecimiento potencial.",
+          "timestamp": "01:30:43",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Reconocimiento de riesgos asociados a la adquisición de activos sagrados por empresas, con mención a la posibilidad de sacrilegio y la falta de regulación en ciertos países.",
+          "timestamp": "01:25:40",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento aborda la discusión sobre la estrategia de inversión en Brookfield, su enfoque de maximizar valor para accionistas, y el análisis de una empresa que fabrica dispositivos no letales. Se menciona la capitalización de mercado de dicha empresa, su crecimiento potencial, y se discute el riesgo asociado a la adquisición de activos sagrados por empresas, con referencias a la posibilidad de sacrilegio y la falta de regulación en ciertos países."
+    },
+    {
+      "chunk": 10,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Discusión sobre armas y defensa personal en contextos legales y prácticos.",
+          "timestamp": "01:32:08",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Análisis de riesgos asociados al uso de armas de gas y táser en situaciones de autodefensa.",
+          "timestamp": "01:32:34",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Comparación de costos y efectividad de diferentes herramientas de defensa personal.",
+          "timestamp": "01:34:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento aborda debates sobre la legalidad y efectividad de armas de gas, táser y otras herramientas de defensa personal en contextos legales y prácticos. Se discuten aspectos como el uso en situaciones de autodefensa, los riesgos asociados, y la comparación de costos y eficacia entre diferentes opciones. Se mencionan también consideraciones sobre la seguridad y el impacto en la toma de decisiones en situaciones de estrés."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
