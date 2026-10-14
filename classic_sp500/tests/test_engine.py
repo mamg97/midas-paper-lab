@@ -70,5 +70,48 @@ class SAndP500ClassicTests(unittest.TestCase):
         self.assertEqual(self.book["currency"], "USD")
 
 
+    def test_missing_mandatory_close_gets_isolated_same_session_retry(self):
+        from unittest.mock import patch
+        synthetic = object()
+        quoted = {"Open": 101.0, "High": 103.0, "Low": 99.0, "Close": 102.0}
+        calls = []
+
+        def download(symbols, start, end, allow_missing=False):
+            calls.append(list(symbols))
+            if len(calls) == 1:
+                return {"SPY": synthetic}
+            self.assertEqual(symbols, ["SYNTH"])
+            return {"SYNTH": synthetic}
+
+        with patch.object(classic.market, "_download", side_effect=download), \\
+             patch.object(classic.market, "_last_row", return_value=quoted):
+            frames, bars = classic.fetch_live(
+                self.config, "2026-10-14", "2026-10-13", ["AAPL"], required={"SYNTH"})
+        self.assertEqual(len(calls), 2)
+        self.assertIn("SYNTH", frames)
+        self.assertEqual(bars["SYNTH"]["close"], 102.0)
+
+    def test_isolated_retry_never_fabricates_missing_mandatory_close(self):
+        from unittest.mock import patch
+        with patch.object(classic.market, "_download", side_effect=[
+            {}, {"SYNTH": object()}
+        ]) as download, patch.object(
+            classic.market, "_last_row", side_effect=ValueError("Missing exact dated OHLC")
+        ):
+            frames, bars = classic.fetch_live(
+                self.config, "2026-10-14", "2026-10-13", ["AAPL"], required={"SYNTH"})
+        self.assertNotIn("SYNTH", bars)
+        self.assertEqual(download.call_count, 2)
+        self.assertEqual(frames, {})
+
+    def test_non_held_missing_symbols_are_not_individually_refetched(self):
+        from unittest.mock import patch
+        with patch.object(classic.market, "_download", return_value={}) as download:
+            frames, bars = classic.fetch_live(
+                self.config, "2026-10-14", "2026-10-13", ["AAPL"], required=set())
+        self.assertEqual((frames, bars), ({}, {}))
+        self.assertEqual(download.call_count, 1)
+
+
 if __name__ == "__main__":
     unittest.main()
