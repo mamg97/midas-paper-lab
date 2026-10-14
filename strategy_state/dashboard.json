@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-14T05:17:07.093300+00:00",
+  "generated_at_utc": "2026-10-14T06:26:35.183917+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 18,
@@ -1087,11 +1087,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-13",
       "initial_capital": 100000.0,
-      "last_equity": 99774.83355797338,
-      "return_pct": -0.225166,
-      "day_return_pct": -0.225166,
+      "last_equity": 99763.87546015845,
+      "return_pct": -0.236125,
+      "day_return_pct": -0.010983,
       "currency": "USD",
       "equity_history": [
         {
@@ -1101,6 +1101,10 @@
         {
           "date": "2026-10-12",
           "nav": 99774.83355797338
+        },
+        {
+          "date": "2026-10-13",
+          "nav": 99763.87546015845
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
@@ -1121,9 +1125,9 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 2,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": -0.225166,
+      "max_drawdown_pct": -0.236125,
       "sharpe_0rf": null
     },
     {
@@ -1175,11 +1179,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-13",
       "initial_capital": 100000.0,
-      "last_equity": 99804.30496912106,
-      "return_pct": -0.195695,
-      "day_return_pct": -0.195695,
+      "last_equity": 99853.22157537071,
+      "return_pct": -0.146778,
+      "day_return_pct": 0.049013,
       "currency": "USD",
       "equity_history": [
         {
@@ -1189,6 +1193,10 @@
         {
           "date": "2026-10-12",
           "nav": 99804.30496912106
+        },
+        {
+          "date": "2026-10-13",
+          "nav": 99853.22157537071
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
@@ -1209,7 +1217,7 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 2,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": -0.195695,
       "sharpe_0rf": null
@@ -1263,11 +1271,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-13",
       "initial_capital": 100000.0,
-      "last_equity": 98292.0884738033,
-      "return_pct": -1.707912,
-      "day_return_pct": -1.707912,
+      "last_equity": 97599.50454367654,
+      "return_pct": -2.400495,
+      "day_return_pct": -0.704618,
       "currency": "USD",
       "equity_history": [
         {
@@ -1277,6 +1285,10 @@
         {
           "date": "2026-10-12",
           "nav": 98292.0884738033
+        },
+        {
+          "date": "2026-10-13",
+          "nav": 97599.50454367654
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
@@ -1342,9 +1354,9 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 2,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": -1.707912,
+      "max_drawdown_pct": -2.400495,
       "sharpe_0rf": null
     },
     {
@@ -1405,11 +1417,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-13",
       "initial_capital": 100000.0,
-      "last_equity": 99959.48428286341,
-      "return_pct": -0.040516,
-      "day_return_pct": -0.040516,
+      "last_equity": 99968.84477385326,
+      "return_pct": -0.031155,
+      "day_return_pct": 0.009364,
       "currency": "USD",
       "equity_history": [
         {
@@ -1419,6 +1431,10 @@
         {
           "date": "2026-10-12",
           "nav": 99959.48428286341
+        },
+        {
+          "date": "2026-10-13",
+          "nav": 99968.84477385326
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
@@ -1484,7 +1500,7 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 2,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": -0.040516,
       "sharpe_0rf": null
@@ -1547,11 +1563,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-13",
       "initial_capital": 100000.0,
-      "last_equity": 99094.23575542352,
-      "return_pct": -0.905764,
-      "day_return_pct": -0.905764,
+      "last_equity": 98985.30811229287,
+      "return_pct": -1.014692,
+      "day_return_pct": -0.109923,
       "currency": "USD",
       "equity_history": [
         {
@@ -1561,6 +1577,10 @@
         {
           "date": "2026-10-12",
           "nav": 99094.23575542352
+        },
+        {
+          "date": "2026-10-13",
+          "nav": 98985.30811229287
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
@@ -1626,9 +1646,9 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 2,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": -0.905764,
+      "max_drawdown_pct": -1.014692,
       "sharpe_0rf": null
     },
     {
@@ -1689,11 +1709,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-13",
       "initial_capital": 100000.0,
-      "last_equity": 98896.17827831536,
-      "return_pct": -1.103822,
-      "day_return_pct": -1.103822,
+      "last_equity": 99645.32566571867,
+      "return_pct": -0.354674,
+      "day_return_pct": 0.757509,
       "currency": "USD",
       "equity_history": [
         {
@@ -1703,6 +1723,10 @@
         {
           "date": "2026-10-12",
           "nav": 98896.17827831536
+        },
+        {
+          "date": "2026-10-13",
+          "nav": 99645.32566571867
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
@@ -1768,7 +1792,7 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 2,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": -1.103822,
       "sharpe_0rf": null
@@ -1831,11 +1855,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-13",
       "initial_capital": 100000.0,
-      "last_equity": 98329.46660754806,
-      "return_pct": -1.670533,
-      "day_return_pct": -1.670533,
+      "last_equity": 98637.83526216332,
+      "return_pct": -1.362165,
+      "day_return_pct": 0.313608,
       "currency": "USD",
       "equity_history": [
         {
@@ -1845,6 +1869,10 @@
         {
           "date": "2026-10-12",
           "nav": 98329.46660754806
+        },
+        {
+          "date": "2026-10-13",
+          "nav": 98637.83526216332
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
@@ -1910,7 +1938,7 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 2,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": -1.670533,
       "sharpe_0rf": null
@@ -1973,11 +2001,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-13",
       "initial_capital": 100000.0,
-      "last_equity": 98065.48501686993,
-      "return_pct": -1.934515,
-      "day_return_pct": -1.934515,
+      "last_equity": 97486.76231156902,
+      "return_pct": -2.513238,
+      "day_return_pct": -0.590139,
       "currency": "USD",
       "equity_history": [
         {
@@ -1987,6 +2015,10 @@
         {
           "date": "2026-10-12",
           "nav": 98065.48501686993
+        },
+        {
+          "date": "2026-10-13",
+          "nav": 97486.76231156902
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
@@ -2052,9 +2084,9 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 2,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": -1.934515,
+      "max_drawdown_pct": -2.513238,
       "sharpe_0rf": null
     },
     {
@@ -2115,11 +2147,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-13",
       "initial_capital": 100000.0,
-      "last_equity": 97895.36950059992,
-      "return_pct": -2.10463,
-      "day_return_pct": -2.10463,
+      "last_equity": 97594.37310822331,
+      "return_pct": -2.405627,
+      "day_return_pct": -0.307467,
       "currency": "USD",
       "equity_history": [
         {
@@ -2129,6 +2161,10 @@
         {
           "date": "2026-10-12",
           "nav": 97895.36950059992
+        },
+        {
+          "date": "2026-10-13",
+          "nav": 97594.37310822331
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
@@ -2194,9 +2230,9 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 2,
+      "risk_observations": 3,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": -2.10463,
+      "max_drawdown_pct": -2.405627,
       "sharpe_0rf": null
     },
     {
