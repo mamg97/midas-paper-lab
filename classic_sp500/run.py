@@ -241,22 +241,44 @@ def freeze(config, state, day, decisions, coverage):
     return new
 
 
-def fetch_live(config, session, previous, symbols):
+def _dated_bar(frame, session, ticker):
+    """Never substitute another session's OHLC or a previous close."""
+    row = market._last_row(frame, session, ticker)
+    return {"open": market._positive(row["Open"], "open"),
+            "high": market._positive(row["High"], "high"),
+            "low": market._positive(row["Low"], "low"),
+            "close": market._positive(row["Close"], "close"),
+            "split": float(row.get("Stock Splits", 0)),
+            "dividend": float(row.get("Dividends", 0))}
+
+
+def fetch_live(config, session, previous, symbols, required=()):
     start = (datetime.fromisoformat(session) - timedelta(days=config["execution"]["history_calendar_days"])).date().isoformat()
     end = (datetime.fromisoformat(session) + timedelta(days=1)).date().isoformat()
     frames = market._download(symbols + [config["benchmark_ticker"]], start, end, allow_missing=True)
     today = {}
     for ticker, frame in frames.items():
         try:
-            row = market._last_row(frame, session, ticker)
-            today[ticker] = {"open": market._positive(row["Open"], "open"),
-                             "high": market._positive(row["High"], "high"),
-                             "low": market._positive(row["Low"], "low"),
-                             "close": market._positive(row["Close"], "close"),
-                             "split": float(row.get("Stock Splits", 0)),
-                             "dividend": float(row.get("Dividends", 0))}
-        except ValueError:
+            today[ticker] = _dated_bar(frame, session, ticker)
+        except (ValueError, TypeError, KeyError):
             continue
+
+    # Yahoo bulk downloads can return an unusable OHLC column for an otherwise
+    # active constituent, particularly within 40-symbol batches. Retry ONLY
+    # existing positions and next-open pending orders as isolated reads.
+    # Keep the frozen universe, eligibility denominator and strict dated-price
+    # contract unchanged. A missing mandatory bar still fails the entire day.
+    for ticker in sorted(set(required) - set(today)):
+        try:
+            recovered = market._download([ticker], start, end, allow_missing=True)
+            frame = recovered.get(ticker)
+            if frame is None:
+                continue
+            row = _dated_bar(frame, session, ticker)
+        except (ValueError, TypeError, KeyError):
+            continue
+        frames[ticker] = frame
+        today[ticker] = row
     return frames, today
 
 
@@ -275,15 +297,15 @@ def run(config_path, state_path):
             return {"status": "already_recorded", "session": day}
         if previous != state["last_session"]:
             raise ValueError("Forward S&P500 classic ledger has a missing market session")
-    frames, today = fetch_live(config, day, previous, symbols)
+    needed = {ticker for book in state["books"].values()
+              for ticker in set(book["positions"]) | set(book["pending"])} if state else set()
+    frames, today = fetch_live(config, day, previous, symbols, required=needed)
     decisions, coverage = rank_signals(config, frames, day)
     if state is None:
         fresh = initialize(config, day, decisions, coverage)
         market.atomic_write(state_path, fresh)
         return {"status": "first_signal_frozen", "date": day, "eligible": coverage["eligible"],
                 "universe": coverage["total"]}
-    needed = {ticker for b in state["books"].values()
-              for ticker in set(b["positions"]) | set(b["pending"])}
     if not needed <= set(today):
         raise ValueError("Missing dated bar for held position or pending order: " +
                          ",".join(sorted(needed - set(today))))
