@@ -83,8 +83,8 @@ class SAndP500ClassicTests(unittest.TestCase):
             self.assertEqual(symbols, ["SYNTH"])
             return {"SYNTH": synthetic}
 
-        with patch.object(classic.market, "_download", side_effect=download), \\
-             patch.object(classic.market, "_last_row", return_value=quoted):
+        with (patch.object(classic.market, "_download", side_effect=download),
+              patch.object(classic.market, "_last_row", return_value=quoted)):
             frames, bars = classic.fetch_live(
                 self.config, "2026-10-14", "2026-10-13", ["AAPL"], required={"SYNTH"})
         self.assertEqual(len(calls), 2)
