@@ -1,5 +1,11 @@
 name: MIDAS classic S&P500 503 paper
 on:
+  # Run once on a merged engine change, independently of nightly schedules.
+  # State-only publisher commits do not match this path and cannot loop.
+  push:
+    branches: [main]
+    paths:
+      - 'classic_sp500/run.py'
   schedule:
     - cron: '47 23 * * 1-5'
     - cron: '17 2 * * 2-6'

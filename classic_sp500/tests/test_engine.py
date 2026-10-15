@@ -104,6 +104,75 @@ class SAndP500ClassicTests(unittest.TestCase):
         self.assertEqual(download.call_count, 2)
         self.assertEqual(frames, {})
 
+    def test_flat_gap_recovery_marks_missing_session_without_backdating_trades(self):
+        state = classic.initialize(
+            self.config, "2026-10-12", self.fake, self.diagnostic)
+        frozen = copy.deepcopy(state)
+        resumed, missed, expired = classic.recover_flat_gap(
+            self.config, state, "2026-10-14", "2026-10-13",
+            self.fake, self.diagnostic)
+        self.assertEqual(state, frozen)
+        self.assertEqual(missed, ["2026-10-13"])
+        self.assertEqual(resumed["missed_sessions"], ["2026-10-13"])
+        self.assertGreater(expired, 0)
+        self.assertEqual(resumed["last_session"], "2026-10-14")
+        for book in resumed["books"].values():
+            self.assertEqual(book["positions"], {})
+            self.assertEqual(book["trades"], [])
+            self.assertEqual(book["nav"], 100000)
+            self.assertEqual([v["date"] for v in book["equity"]],
+                             ["2026-10-12", "2026-10-14"])
+            self.assertEqual(book["events"][-1]["type"], "missed_session_unfilled")
+            self.assertTrue(all(order["signal_date"] == "2026-10-14"
+                                for order in book["pending"].values()))
+        self.assertEqual(
+            resumed["books"]["benchmark_spy"]["pending"]["SPY"]["signal_date"],
+            "2026-10-14")
+
+    def test_gap_with_any_live_position_fails_closed(self):
+        from unittest.mock import patch
+        from tempfile import TemporaryDirectory
+        import json
+        state = classic.initialize(
+            self.config, "2026-10-12", self.fake, self.diagnostic)
+        state["books"]["benchmark_spy"]["positions"]["SPY"] = {"shares": 2}
+        with TemporaryDirectory() as td:
+            path = Path(td) / "ledger.json"
+            path.write_text(json.dumps(state), encoding="utf-8")
+            with patch.object(classic.market, "calendar",
+                              return_value=("2026-10-14", "2026-10-13",
+                                            "2026-10-15", False)):
+                with self.assertRaisesRegex(ValueError, "open positions"):
+                    classic.run(
+                        Path(__file__).resolve().parents[1] / "config.json", path)
+            self.assertEqual(json.loads(path.read_text(encoding="utf-8")), state)
+
+    def test_daily_run_recovers_cash_only_gap_then_is_idempotent(self):
+        from unittest.mock import patch
+        from tempfile import TemporaryDirectory
+        import json
+        state = classic.initialize(
+            self.config, "2026-10-12", self.fake, self.diagnostic)
+        with TemporaryDirectory() as td:
+            path = Path(td) / "ledger.json"
+            path.write_text(json.dumps(state), encoding="utf-8")
+            with (patch.object(classic.market, "calendar",
+                               return_value=("2026-10-14", "2026-10-13",
+                                             "2026-10-15", False)),
+                  patch.object(classic, "fetch_live", return_value=({}, {})) as fetch,
+                  patch.object(classic, "rank_signals",
+                               return_value=(self.fake, self.diagnostic))):
+                outcome = classic.run(
+                    Path(__file__).resolve().parents[1] / "config.json", path)
+                self.assertEqual(outcome["status"], "flat_gap_recovered_no_backfill")
+                self.assertEqual(outcome["missed_sessions"], ["2026-10-13"])
+                self.assertEqual(fetch.call_args.kwargs["required"], set())
+                unchanged = path.read_text(encoding="utf-8")
+                second = classic.run(
+                    Path(__file__).resolve().parents[1] / "config.json", path)
+                self.assertEqual(second["status"], "already_recorded")
+                self.assertEqual(path.read_text(encoding="utf-8"), unchanged)
+
     def test_non_held_missing_symbols_are_not_individually_refetched(self):
         from unittest.mock import patch
         with patch.object(classic.market, "_download", return_value={}) as download:
