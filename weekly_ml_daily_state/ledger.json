@@ -6,7 +6,7 @@
   "first_session": "2026-10-09",
   "gap_sessions": [],
   "initial_capital": 100000.0,
-  "last_session": "2026-10-13",
+  "last_session": "2026-10-14",
   "last_signal_session": "2026-10-09",
   "schema_version": 1,
   "signal_hash": "a2807413aa681718988cb86800a8f166f0c854f47f9f7ec905969ae268cfa14a",
@@ -28,6 +28,11 @@
           "date": "2026-10-13",
           "decision_recorded": false,
           "nav": 97486.76231156902
+        },
+        {
+          "date": "2026-10-14",
+          "decision_recorded": false,
+          "nav": 94437.75699874689
         }
       ],
       "events": [
@@ -127,7 +132,7 @@
           "type": "buy"
         }
       ],
-      "nav": 97486.76231156902,
+      "nav": 94437.75699874689,
       "pending": [],
       "positions": {
         "AMD": {
@@ -220,6 +225,11 @@
           "date": "2026-10-13",
           "decision_recorded": false,
           "nav": 99853.22157537071
+        },
+        {
+          "date": "2026-10-14",
+          "decision_recorded": false,
+          "nav": 99315.13890662458
         }
       ],
       "events": [
@@ -238,7 +248,7 @@
           "type": "buy"
         }
       ],
-      "nav": 99853.22157537071,
+      "nav": 99315.13890662458,
       "pending": [],
       "positions": {
         "RSP": {
@@ -268,6 +278,11 @@
           "date": "2026-10-13",
           "decision_recorded": false,
           "nav": 99763.87546015845
+        },
+        {
+          "date": "2026-10-14",
+          "decision_recorded": false,
+          "nav": 98739.50890797339
         }
       ],
       "events": [
@@ -286,7 +301,7 @@
           "type": "buy"
         }
       ],
-      "nav": 99763.87546015845,
+      "nav": 98739.50890797339,
       "pending": [],
       "positions": {
         "SPY": {
@@ -316,6 +331,11 @@
           "date": "2026-10-13",
           "decision_recorded": false,
           "nav": 97594.37310822331
+        },
+        {
+          "date": "2026-10-14",
+          "decision_recorded": false,
+          "nav": 93130.9032851153
         }
       ],
       "events": [
@@ -415,7 +435,7 @@
           "type": "buy"
         }
       ],
-      "nav": 97594.37310822331,
+      "nav": 93130.9032851153,
       "pending": [],
       "positions": {
         "ADI": {
@@ -508,6 +528,11 @@
           "date": "2026-10-13",
           "decision_recorded": false,
           "nav": 99968.84477385326
+        },
+        {
+          "date": "2026-10-14",
+          "decision_recorded": false,
+          "nav": 99480.80410233894
         }
       ],
       "events": [
@@ -607,7 +632,7 @@
           "type": "buy"
         }
       ],
-      "nav": 99968.84477385326,
+      "nav": 99480.80410233894,
       "pending": [],
       "positions": {
         "ADI": {
@@ -700,6 +725,11 @@
           "date": "2026-10-13",
           "decision_recorded": false,
           "nav": 98985.30811229287
+        },
+        {
+          "date": "2026-10-14",
+          "decision_recorded": false,
+          "nav": 97147.41504971139
         }
       ],
       "events": [
@@ -799,7 +829,7 @@
           "type": "buy"
         }
       ],
-      "nav": 98985.30811229287,
+      "nav": 97147.41504971139,
       "pending": [],
       "positions": {
         "CMCSA": {
@@ -892,6 +922,11 @@
           "date": "2026-10-13",
           "decision_recorded": false,
           "nav": 97599.50454367654
+        },
+        {
+          "date": "2026-10-14",
+          "decision_recorded": false,
+          "nav": 93009.19524435597
         }
       ],
       "events": [
@@ -991,7 +1026,7 @@
           "type": "buy"
         }
       ],
-      "nav": 97599.50454367654,
+      "nav": 93009.19524435597,
       "pending": [],
       "positions": {
         "AMAT": {
@@ -1084,6 +1119,11 @@
           "date": "2026-10-13",
           "decision_recorded": false,
           "nav": 98637.83526216332
+        },
+        {
+          "date": "2026-10-14",
+          "decision_recorded": false,
+          "nav": 94484.13417647066
         }
       ],
       "events": [
@@ -1183,7 +1223,7 @@
           "type": "buy"
         }
       ],
-      "nav": 98637.83526216332,
+      "nav": 94484.13417647066,
       "pending": [],
       "positions": {
         "AKAM": {
@@ -1276,6 +1316,11 @@
           "date": "2026-10-13",
           "decision_recorded": false,
           "nav": 99645.32566571867
+        },
+        {
+          "date": "2026-10-14",
+          "decision_recorded": false,
+          "nav": 96370.30492638813
         }
       ],
       "events": [
@@ -1375,7 +1420,7 @@
           "type": "buy"
         }
       ],
-      "nav": 99645.32566571867,
+      "nav": 96370.30492638813,
       "pending": [],
       "positions": {
         "ALB": {
