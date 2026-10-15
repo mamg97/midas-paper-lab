@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-15T19:04:00.674208+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/150527294",
+    "published_date": "2025-06-18",
+    "youtube_video_id": "Ac1ZqjTbEx0",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 21664914
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2708.0098125,
+      "word_count": 8020,
+      "segment_count": 451,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "Ac1ZqjTbEx0",
+    "youtube_url": "https://www.youtube.com/watch?v=Ac1ZqjTbEx0",
+    "title": "Nuestra CARTERA de INVERSIÓN a MITAD DE AÑO | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/150527294",
+    "published_date": "2025-06-18",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio presenta una estrategia de inversión basada en el método Buy The Dip, enfocada en la evaluación de activos según su potencial de crecimiento anual, con una estructura de cartera que prioriza la rentabilidad en dólares, la gestión del riesgo sin hedge de monedas, y una rotación de activos basada en el rendimiento y la diversificación geográfica y sectorial. Se analizan empresas en sectores como la minería y el cinematografía, destacando crecimiento orgánico, expansión de producción, y recuperación post-pandemia. La estrategia incluye la adquisición y venta de activos con valoración elevada, con un enfoque en la diversificación y el manejo de riesgos geopolíticos. Se mencionan errores en la valoración de activos y la necesidad de revisión constante de inversiones con alto potencial de crecimiento.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "La cartera se estructura con un rating de Strongbuy, Hold o Sell según el potencial de crecimiento anual, con un enfoque en la rentabilidad en dólares.",
+        "El análisis de valoración indica una rentabilidad del 36% desde 2022, considerando el cash y los dividendos no reinvertidos."
+      ],
+      "cycle_macro": [
+        "El aumento de la vida útil de los activos y la producción de petróleo a 24,000 barriles diarios reflejan una estrategia de crecimiento orgánico.",
+        "La recuperación del box office y el flujo de caja de Cine Flex, aunque lenta, sugiere una tendencia positiva en el sector cinematográfico post-pandemia."
+      ],
+      "entry": [
+        "Se menciona la ampliación de posición en tres empresas, con un enfoque en la diversificación geográfica y sectorial.",
+        "La estrategia incluye sectores cíclicos y sensibles al ciclo económico, con una distribución de activos en verde (cíclicos) y azul (sensibles)."
+      ],
+      "sizing": [
+        "La empresa tiene un 30% de caja y un flujo de efectivo ajustado de 80 millones de dólares, lo que respalda su estrategia de inversión.",
+        "La empresa tiene un 30% de caja y un flujo de efectivo ajustado de 80 millones de dólares, lo que respalda su estrategia de inversión."
+      ],
+      "add_hold": [
+        "Se menciona la ampliación de posición en tres empresas, con un enfoque en la diversificación geográfica y sectorial."
+      ],
+      "exit": [
+        "Se describe la decisión de vender un 45% de medicamentos, destacando la estrategia de rotación de activos y la toma de decisiones basada en el rendimiento."
+      ],
+      "risk": [
+        "Se menciona la importancia del riesgo en la evaluación de activos, con una política de no hedge de monedas y una base de cálculo en dólares.",
+        "Se busca diversificar la cartera con activos defensivos, aunque no se ha confirmado la inclusión de sectores como el real estate o utilities."
+      ],
+      "technical": [
+        "La empresa Londing Gold ha mostrado un crecimiento en su producción de oro, lo que sugiere que la estrategia de inversión está basada en la evaluación técnica de la empresa, considerando factores como la expansión de la planta y la recuperación de oro, que son indicadores clave de su desempeño en el mercado."
+      ],
+      "management": [
+        "La empresa West African tiene un proyecto de producción de oro en el tercer trimestre de 2025, lo que sugiere que la estrategia de inversión está enfocada en empresas con potencial de crecimiento en la minería, con un tamaño de mercado que puede aumentar significativamente con la producción de oro."
+      ],
+      "mistakes": [
+        "La empresa Adriatic ha sido una inversión con alta rentabilidad, pero el analista sugiere que no se debe fiar demasiado de ella, lo que indica que la estrategia de inversión debe incluir la revisión constante de las empresas con alto potencial de crecimiento, evitando riesgos asociados a la sobreestimación de su valoración."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El podcast discute la cartera de inversión, destacando la rotación de activos y la estrategia de rating basada en el potencial de crecimiento anual.",
+          "timestamp": "00:01:02",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La cartera se estructura con un rating de Strongbuy, Hold o Sell según el potencial de crecimiento anual, con un enfoque en la rentabilidad en dólares.",
+          "timestamp": "00:02:05",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona la importancia del riesgo en la evaluación de activos, con una política de no hedge de monedas y una base de cálculo en dólares.",
+          "timestamp": "00:04:06",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se describe la decisión de vender un 45% de medicamentos, destacando la estrategia de rotación de activos y la toma de decisiones basada en el rendimiento.",
+          "timestamp": "00:06:06",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "add_hold",
+          "paraphrase": "Se menciona la ampliación de posición en tres empresas, con un enfoque en la diversificación geográfica y sectorial.",
+          "timestamp": "00:08:48",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast presenta una estrategia de inversión basada en el rating de activos según su potencial de crecimiento anual, con una estructura de cartera que prioriza la rentabilidad en dólares, la gestión del riesgo sin hedge de monedas, y una rotación de activos basada en el rendimiento y la diversificación geográfica y sectorial."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa tiene un valor bajo con un flujo de efectivo ajustado positivo y una ampliación de vida útil de activos.",
+          "timestamp": "00:10:44",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El proyecto de desarrollo de wasana tiene un costo estimado de 120 millones de dólares y se espera un aumento de producción a 10,000 barriles diarios en 2027.",
+          "timestamp": "00:10:57",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa ha reservado fondos para costos de comisión y ha optimizado la tecnología para mejorar la eficiencia productiva.",
+          "timestamp": "00:14:32",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El aumento de la vida útil de los activos y la producción de petróleo a 24,000 barriles diarios reflejan una estrategia de crecimiento orgánico.",
+          "timestamp": "00:11:00",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La empresa tiene un 30% de caja y un flujo de efectivo ajustado de 80 millones de dólares, lo que respalda su estrategia de inversión.",
+          "timestamp": "00:10:10",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la empresa muestra una estrategia de inversión en desarrollo de activos petroleros con un enfoque en crecimiento orgánico, aumento de vida útil de activos, y una gestión de riesgos mediante reservas de caja y optimización tecnológica. La empresa tiene un valor bajo con un flujo de efectivo positivo y un plan de expansión con un costo estimado de 120 millones de dólares, con expectativas de aumento de producción a 10,000 barriles diarios en 2027."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El análisis de la cotización de Cine Flex muestra una recuperación del 24% en el flujo de caja potencial, comparado con los niveles pre-pandemia, indicando una mejora en su valoración.",
+          "timestamp": "00:21:13",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La recuperación del box office y el flujo de caja de Cine Flex, aunque lenta, sugiere una tendencia positiva en el sector cinematográfico post-pandemia.",
+          "timestamp": "00:24:05",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La estrategia de inversión en Cine Flex se basa en la recuperación del sector cinematográfico y el potencial de crecimiento del flujo de caja, aunque con un retraso en su recuperación comparado con otros actores del sector.",
+          "timestamp": "00:24:16",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la cotización y el flujo de caja de Cine Flex muestra una recuperación del 24% en el valor potencial, indicando una mejora en su valoración post-pandemia. La tendencia positiva en el sector cinematográfico sugiere una posible estrategia de entrada basada en la recuperación del sector, aunque con un retraso en su recuperación comparado con otros actores del sector."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de la empresa Londing Gold muestra un crecimiento significativo con ingresos record y una expansión de planta, lo que sugiere una estrategia de inversión basada en la expansión y la producción de oro.",
+          "timestamp": "00:33:14",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa Adriatic se vende a Dan de Precios Metales con un 24% de acciones, reflejando una valoración basada en la adquisición de activos y la generación de cash flow, lo que apoya una estrategia de inversión en adquisiciones de empresas con potencial de crecimiento.",
+          "timestamp": "00:35:03",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa West African enfrenta riesgos políticos en Burkina Faso, lo que sugiere que la estrategia de inversión debe considerar factores geopolíticos y la estabilidad del entorno en el que opera la empresa, afectando su potencial de crecimiento.",
+          "timestamp": "00:38:14",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La empresa Adriatic se vende a Dan de Precios Metales, lo que indica que la estrategia de inversión incluye la venta de activos con valoración elevada, lo que puede ser una señal de que la empresa ha alcanzado su punto de máxima rentabilidad y se retira del mercado.",
+          "timestamp": "00:35:12",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La empresa Londing Gold ha experimentado un crecimiento significativo en el primer trimestre de 2025, lo que sugiere que la estrategia de inversión está alineada con un ciclo macro positivo, donde la expansión de la minería y la producción de oro son factores clave en el crecimiento del mercado.",
+          "timestamp": "00:33:20",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La empresa West African tiene un proyecto de producción de oro en el tercer trimestre de 2025, lo que sugiere que la estrategia de inversión está enfocada en empresas con potencial de crecimiento en la minería, con un tamaño de mercado que puede aumentar significativamente con la producción de oro.",
+          "timestamp": "00:37:39",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "La empresa Adriatic ha sido una inversión con alta rentabilidad, pero el analista sugiere que no se debe fiar demasiado de ella, lo que indica que la estrategia de inversión debe incluir la revisión constante de las empresas con alto potencial de crecimiento, evitando riesgos asociados a la sobreestimación de su valoración.",
+          "timestamp": "00:35:41",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "La empresa Londing Gold ha mostrado un crecimiento en su producción de oro, lo que sugiere que la estrategia de inversión está basada en la evaluación técnica de la empresa, considerando factores como la expansión de la planta y la recuperación de oro, que son indicadores clave de su desempeño en el mercado.",
+          "timestamp": "00:33:27",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "management",
+          "paraphrase": "La empresa West African tiene un proyecto de producción de oro en el tercer trimestre de 2025, lo que sugiere que la estrategia de inversión está enfocada en empresas con potencial de crecimiento en la minería, con un tamaño de mercado que puede aumentar significativamente con la producción de oro.",
+          "timestamp": "00:37:39",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "quality",
+          "paraphrase": "La empresa Londing Gold ha experimentado un crecimiento significativo en el primer trimestre de 2025, lo que sugiere que la estrategia de inversión está alineada con un ciclo macro positivo, donde la expansión de la minería y la producción de oro son factores clave en el crecimiento del mercado.",
+          "timestamp": "00:33:20",
+          "scope": "hosts",
+          "confidence": 0.7
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de las empresas mencionadas sugiere una estrategia de inversión basada en la expansión y producción de oro, con un enfoque en empresas con alto potencial de crecimiento, aunque con riesgos como la estabilidad política y la valoración de activos. La estrategia incluye la adquisición y venta de empresas con valoración elevada, así como la evaluación técnica y macroeconómica de los activos mineros, considerando factores como la expansión de la planta, la producción de oro y la estabilidad del entorno político."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El análisis de valoración indica una rentabilidad del 36% desde 2022, considerando el cash y los dividendos no reinvertidos.",
+          "timestamp": "00:42:15",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La estrategia incluye sectores cíclicos y sensibles al ciclo económico, con una distribución de activos en verde (cíclicos) y azul (sensibles).",
+          "timestamp": "00:42:29",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se busca diversificar la cartera con activos defensivos, aunque no se ha confirmado la inclusión de sectores como el real estate o utilities.",
+          "timestamp": "00:43:38",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de valoración y estrategia de inversión se centra en una rentabilidad del 36% desde 2022, con una distribución de activos en sectores cíclicos y sensibles al ciclo económico. La cartera se ajusta con activos defensivos, aunque no se ha confirmado la inclusión de sectores específicos como el real estate o utilities."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
