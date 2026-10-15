@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-15T07:40:48.175949+00:00",
+  "generated_at_utc": "2026-10-15T09:12:09.574769+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 18,
@@ -679,15 +679,19 @@
       "status": "demo_con_diario",
       "classic_sp500_cohort": true,
       "first_session": "2026-10-12",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-14",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
-      "return_pct": null,
-      "day_return_pct": null,
+      "return_pct": 0.0,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-10-12",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-14",
           "nav": 100000.0
         }
       ],
@@ -716,7 +720,7 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 1,
+      "risk_observations": 2,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -729,15 +733,19 @@
       "status": "demo_con_diario",
       "classic_sp500_cohort": true,
       "first_session": "2026-10-12",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-14",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
-      "return_pct": null,
-      "day_return_pct": null,
+      "return_pct": 0.0,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-10-12",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-14",
           "nav": 100000.0
         }
       ],
@@ -747,14 +755,14 @@
       "activity_state": "pending",
       "activity_label": "8 compras paper para próxima apertura",
       "activity_tickers": [
-        "CHD",
-        "CTAS",
-        "EL",
-        "FDS",
-        "HST",
-        "KDP",
-        "MSCI",
-        "PYPL"
+        "BAX",
+        "BF-B",
+        "CNP",
+        "RSG",
+        "STLD",
+        "STZ",
+        "YUM",
+        "ZTS"
       ],
       "open_positions_count": 0,
       "pending_orders_count": 8,
@@ -762,7 +770,7 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 1,
+      "risk_observations": 2,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -775,15 +783,19 @@
       "status": "demo_con_diario",
       "classic_sp500_cohort": true,
       "first_session": "2026-10-12",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-14",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
-      "return_pct": null,
-      "day_return_pct": null,
+      "return_pct": 0.0,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-10-12",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-14",
           "nav": 100000.0
         }
       ],
@@ -793,14 +805,14 @@
       "activity_state": "pending",
       "activity_label": "8 compras paper para próxima apertura",
       "activity_tickers": [
-        "ACGL",
-        "BF-B",
-        "GEHC",
-        "IFF",
-        "NDAQ",
-        "ODFL",
-        "ORLY",
-        "TYL"
+        "ABT",
+        "DRI",
+        "IDXX",
+        "KVUE",
+        "LH",
+        "MNST",
+        "SJM",
+        "WELL"
       ],
       "open_positions_count": 0,
       "pending_orders_count": 8,
@@ -808,7 +820,7 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 1,
+      "risk_observations": 2,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -821,15 +833,19 @@
       "status": "demo_con_diario",
       "classic_sp500_cohort": true,
       "first_session": "2026-10-12",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-14",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
-      "return_pct": null,
-      "day_return_pct": null,
+      "return_pct": 0.0,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-10-12",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-14",
           "nav": 100000.0
         }
       ],
@@ -839,14 +855,14 @@
       "activity_state": "pending",
       "activity_label": "8 compras paper para próxima apertura",
       "activity_tickers": [
-        "BSX",
-        "CTSH",
-        "EG",
-        "MDT",
-        "MRNA",
-        "MTCH",
-        "SJM",
-        "ZBH"
+        "AAPL",
+        "DHR",
+        "EW",
+        "GILD",
+        "MMM",
+        "PFE",
+        "REGN",
+        "UHS"
       ],
       "open_positions_count": 0,
       "pending_orders_count": 8,
@@ -854,7 +870,7 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 1,
+      "risk_observations": 2,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -867,15 +883,19 @@
       "status": "demo_con_diario",
       "classic_sp500_cohort": true,
       "first_session": "2026-10-12",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-14",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
-      "return_pct": null,
-      "day_return_pct": null,
+      "return_pct": 0.0,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-10-12",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-14",
           "nav": 100000.0
         }
       ],
@@ -883,21 +903,24 @@
       "evaluated_universe_symbols": 503,
       "eligible_universe_symbols": 503,
       "activity_state": "pending",
-      "activity_label": "5 compras paper para próxima apertura",
+      "activity_label": "8 compras paper para próxima apertura",
       "activity_tickers": [
-        "ALB",
-        "ARE",
-        "BMY",
-        "INCY",
-        "IP"
+        "BEN",
+        "BXP",
+        "CZR",
+        "IVZ",
+        "NTRS",
+        "PNC",
+        "PNR",
+        "STT"
       ],
       "open_positions_count": 0,
-      "pending_orders_count": 5,
+      "pending_orders_count": 8,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 1,
+      "risk_observations": 2,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -910,15 +933,19 @@
       "status": "demo_con_diario",
       "classic_sp500_cohort": true,
       "first_session": "2026-10-12",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-14",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
-      "return_pct": null,
-      "day_return_pct": null,
+      "return_pct": 0.0,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-10-12",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-14",
           "nav": 100000.0
         }
       ],
@@ -928,14 +955,14 @@
       "activity_state": "pending",
       "activity_label": "8 compras paper para próxima apertura",
       "activity_tickers": [
-        "BDX",
+        "ABBV",
+        "CAH",
         "COST",
-        "EBAY",
-        "GEHC",
-        "KMI",
-        "MCK",
-        "MSFT",
-        "RMD"
+        "DLTR",
+        "LLY",
+        "PFE",
+        "PM",
+        "WMT"
       ],
       "open_positions_count": 0,
       "pending_orders_count": 8,
@@ -943,7 +970,7 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 1,
+      "risk_observations": 2,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -956,15 +983,19 @@
       "status": "demo_con_diario",
       "classic_sp500_cohort": true,
       "first_session": "2026-10-12",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-14",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
-      "return_pct": null,
-      "day_return_pct": null,
+      "return_pct": 0.0,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-10-12",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-14",
           "nav": 100000.0
         }
       ],
@@ -974,14 +1005,14 @@
       "activity_state": "pending",
       "activity_label": "8 compras paper para próxima apertura",
       "activity_tickers": [
-        "ABBV",
-        "ISRG",
-        "MAR",
-        "MCK",
-        "MSFT",
-        "NTAP",
-        "RL",
-        "TJX"
+        "COST",
+        "HCA",
+        "LW",
+        "MPC",
+        "MTD",
+        "PSX",
+        "ULTA",
+        "VLO"
       ],
       "open_positions_count": 0,
       "pending_orders_count": 8,
@@ -989,7 +1020,7 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 1,
+      "risk_observations": 2,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -1002,15 +1033,19 @@
       "status": "demo_con_diario",
       "classic_sp500_cohort": true,
       "first_session": "2026-10-12",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-14",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
-      "return_pct": null,
-      "day_return_pct": null,
+      "return_pct": 0.0,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-10-12",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-14",
           "nav": 100000.0
         }
       ],
@@ -1021,13 +1056,13 @@
       "activity_label": "8 compras paper para próxima apertura",
       "activity_tickers": [
         "ABBV",
-        "CCI",
         "HCA",
-        "ISRG",
-        "KR",
         "MCK",
-        "MSFT",
-        "NTAP"
+        "MPC",
+        "MTD",
+        "PSX",
+        "ULTA",
+        "VLO"
       ],
       "open_positions_count": 0,
       "pending_orders_count": 8,
@@ -1035,7 +1070,7 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 1,
+      "risk_observations": 2,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -1048,15 +1083,19 @@
       "status": "demo_con_diario",
       "classic_sp500_cohort": true,
       "first_session": "2026-10-12",
-      "last_session": "2026-10-12",
+      "last_session": "2026-10-14",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
-      "return_pct": null,
-      "day_return_pct": null,
+      "return_pct": 0.0,
+      "day_return_pct": 0.0,
       "currency": "USD",
       "equity_history": [
         {
           "date": "2026-10-12",
+          "nav": 100000.0
+        },
+        {
+          "date": "2026-10-14",
           "nav": 100000.0
         }
       ],
@@ -1074,7 +1113,7 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 1,
+      "risk_observations": 2,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
