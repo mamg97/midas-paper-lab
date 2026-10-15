@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-15T08:06:22.804673+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/164523336",
+    "published_date": "2025-12-18",
+    "youtube_video_id": "6hmNp6N8Gdo",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 22579827
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2822.373875,
+      "word_count": 7809,
+      "segment_count": 441,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "6hmNp6N8Gdo",
+    "youtube_url": "https://www.youtube.com/watch?v=6hmNp6N8Gdo",
+    "title": "Nuestra Cartera de INVERSIÓN en Diciembre | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/164523336",
+    "published_date": "2025-12-18",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute la estrategia de inversión 'Buy the Dip' en el contexto de una actualización de portafolio. Se mencionan decisiones de entrada y salida en activos, análisis de valoración y riesgos, y cambios en la suscripción del podcast. Se destacan descubrimientos de yacimientos de oro, posiciones de inversión ajustadas, y expectativas sobre el mercado de petróleo. También se abordan temas como la valoración de empresas, riesgos geopolíticos, y la posibilidad de cambios en la oferta de películas en cines debido a la compra de Warner por Netflix. El programa anuncia el fin de la suscripción en 2026 y un cierre de acceso al discord privado, con una oferta limitada de descuento para la suscripción anual. La discusión incluye opiniones sobre la valoración de acciones preferentes y comunes, así como la incertidumbre sobre su rendimiento potencial.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "El precio del oro ha subido significativamente, alcanzando máximos históricos, mientras que el precio del petróleo ha caído, con expectativas de una sobreferta en 2026.",
+        "Valeura tiene una caja de 250 millones de dólares sin deuda y una situación de valoración que requiere una oferta directa de compra de acciones a 8 dólares.",
+        "La expansión del yacimiento y la descubrimiento de nuevas zonas con alta mineralización de oro sugiere un potencial de crecimiento significativo para el activo."
+      ],
+      "cycle_macro": [],
+      "entry": [
+        "Se ha reducido posición en hipco debido a su alto capex en 2026 y una valoración prudente, con un enfoque en empresas con producción estable y bajo capex.",
+        "Se recomienda reducir posición en distrito por riesgos de capitalización.",
+        "El yacimiento de Fruta del Norte Sur está experimentando un crecimiento potencial debido a la expansión del yacimiento y la descubrimiento de nuevas zonas con alta mineralización de oro."
+      ],
+      "sizing": [
+        "El descuento de 40 euros se aplica a la suscripción anual con el código 'última navidad', validando la oferta limitada al periodo de enero.",
+        "Se ha encontrado un drill de oro de 2 kilos en un metro, lo que indica una alta concentración de oro en el yacimiento."
+      ],
+      "add_hold": [],
+      "exit": [
+        "La suscripción no se renovará a partir de enero 2026, y el acceso al discord privado se cerrará después de la oferta navideña."
+      ],
+      "risk": [
+        "Se mencionan riesgos como conflictos en Indonesia, tensiones en el Sudeste Asiático, y posibles evacuaciones en minas debido a problemas de explotación.",
+        "La compra de Warner por Netflix podría reducir la oferta de películas en cines, afectando negativamente a las exhibidoras y aumentando la competencia en streaming.",
+        "El análisis identifica que las preferentes de la serie pueden ser volátiles y dependen de la liquidez del mercado, lo que introduce un riesgo significativo para los inversores."
+      ],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [
+      "El yacimiento de Fruta del Norte Sur descubre una nueva zona con alta mineralización de oro, lo que sugiere un potencial de crecimiento significativo para el activo."
+    ],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El programa anuncia un cierre de la suscripción y un cambio de enfoque hacia un nuevo proyecto de fondo de inversión.",
+          "timestamp": "00:00:18",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La suscripción no se renovará a partir de enero 2026, y el acceso al discord privado se cerrará después de la oferta navideña.",
+          "timestamp": "00:01:58",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El descuento de 40 euros se aplica a la suscripción anual con el código 'última navidad', validando la oferta limitada al periodo de enero.",
+          "timestamp": "00:06:48",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El programa anuncia el fin de la suscripción en 2026, el cierre del acceso al discord privado y una oferta limitada de descuento para la suscripción anual con un código específico, reflejando un cambio de enfoque hacia un nuevo proyecto de fondo de inversión."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El precio del oro ha subido significativamente, alcanzando máximos históricos, mientras que el precio del petróleo ha caído, con expectativas de una sobreferta en 2026.",
+          "timestamp": "00:17:12",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se ha reducido posición en hipco debido a su alto capex en 2026 y una valoración prudente, con un enfoque en empresas con producción estable y bajo capex.",
+          "timestamp": "00:16:14",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se mencionan riesgos como conflictos en Indonesia, tensiones en el Sudeste Asiático, y posibles evacuaciones en minas debido a problemas de explotación.",
+          "timestamp": "00:21:04",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        }
+      ],
+      "chunk_summary": "El análisis discute la valoración de activos como el oro y el petróleo, decisiones de entrada en posiciones de inversión, y riesgos geopolíticos y operativos en sectores mineros. Se destacan movimientos de precios, expectativas de sobreferta en petróleo, y tensiones geopolíticas que afectan la industria minera."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "Valeura tiene una caja de 250 millones de dólares sin deuda y una situación de valoración que requiere una oferta directa de compra de acciones a 8 dólares.",
+          "timestamp": "00:23:05",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se recomienda reducir posición en distrito debido a la caída de su capitalización y el riesgo de no cumplir los requisitos de los ETFs.",
+          "timestamp": "00:26:11",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La compra de Warner por Netflix podría reducir la oferta de películas en cines, afectando negativamente a las exhibidoras y aumentando la competencia en streaming.",
+          "timestamp": "00:28:11",
+          "scope": "hosts",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de Valeura muestra una sólida operación y una valoración que requiere una oferta directa. Se recomienda reducir posición en distrito por riesgos de capitalización. La compra de Warner por Netflix podría afectar la oferta en cines y aumentar la competencia en streaming."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El análisis de valoración de barri sugiere que las acciones preferentes de Freddy son más atractivas que las comunes debido a una mayor rentabilidad esperada, aunque el autor no está de acuerdo con esta conclusión.",
+          "timestamp": "00:40:10",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El análisis identifica que las preferentes de la serie pueden ser volátiles y dependen de la liquidez del mercado, lo que introduce un riesgo significativo para los inversores.",
+          "timestamp": "00:41:15",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El autor sugiere que, a pesar de la incertidumbre, las preferentes de Freddy podrían ser una opción más segura que otras acciones, aunque con un potencial de rendimiento no excesivamente alto.",
+          "timestamp": "00:41:46",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de valoración y riesgo de las acciones de Freddy y Fan se discuten en el fragmento, destacando la opinión de Barri sobre las preferentes de Freddy y la incertidumbre sobre su valoración. Se menciona la posibilidad de que las preferentes sean más atractivas que otras acciones, aunque con un riesgo significativo debido a la volatilidad del mercado y la dependencia de la liquidez."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El yacimiento de Fruta del Norte Sur está descubriendo una nueva zona (este del yacimiento) con alta mineralización de oro.",
+          "timestamp": "00:44:51",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se ha encontrado un drill de oro de 2 kilos en un metro, lo que indica una alta concentración de oro en el yacimiento.",
+          "timestamp": "00:45:26",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "parrafrase": "La expansión del yacimiento y la descubrimiento de nuevas zonas con mineralización de oro sugieren un potencial de crecimiento significativo para el activo.",
+          "timestamp": "00:44:51",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la conversación muestra que el yacimiento de Fruta del Norte Sur está experimentando un crecimiento potencial debido a la expansión del yacimiento y la descubrimiento de nuevas zonas con alta mineralización de oro. Se han encontrado drills de oro de alta concentración, lo que sugiere un potencial significativo para el activo. La discusión también menciona la exploración de yacimientos adicionales y la posibilidad de ampliación de la exploración de otros yacimientos, lo que podría influir en la valoración del activo."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
