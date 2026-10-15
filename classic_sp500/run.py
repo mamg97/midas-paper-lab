@@ -241,6 +241,48 @@ def freeze(config, state, day, decisions, coverage):
     return new
 
 
+def recover_flat_gap(config, state, day, previous, decisions, coverage):
+    """Resume an interrupted flat campaign without backdating nonexistent fills.
+
+    Expire the 12th's unfilled orders; generate new decisions at the last
+    observed close. Missing sessions are metadata, NEVER synthetic NAV rows.
+    An invested portfolio must still fail closed: no prices may be inferred.
+    """
+    validate_state(state, config)
+    if any(book["positions"] for book in state["books"].values()):
+        raise ValueError("Missed market session with open positions: manual review required")
+    import pandas_market_calendars as calendars
+    sessions = calendars.get_calendar("XNYS").valid_days(
+        start_date=state["last_session"], end_date=day)
+    observed = [str(session.date()) for session in sessions]
+    missed = observed[1:-1]
+    if (len(observed) < 3 or observed[0] != state["last_session"]
+            or observed[-1] != day or missed[-1] != previous):
+        raise ValueError("Cannot verify exact missed XNYS market sessions")
+
+    result = copy.deepcopy(state)
+    expired = 0
+    for book in result["books"].values():
+        if book["positions"] or book["trades"]:
+            raise ValueError("Flat-gap recovery cannot rewrite executed trading history")
+        count = len(book["pending"])
+        expired += count
+        book["events"].append({
+            "date": day, "type": "missed_session_unfilled",
+            "missed_sessions": missed, "expired_pending_orders": count,
+            "reason": "past opening fills never executed or inferred"
+        })
+        book["pending"] = {}
+        # Portfolio was fully in cash: only a real observed day gets a NAV.
+        if not math.isclose(book["nav"], book["cash"], rel_tol=0, abs_tol=1e-7):
+            raise ValueError("Flat-gap recovery requires cash-only NAV")
+        book["equity"].append({"date": day, "nav": book["cash"]})
+    result["last_session"] = day
+    result.setdefault("missed_sessions", []).extend(missed)
+    result = freeze(config, result, day, decisions, coverage)
+    return result, missed, expired
+
+
 def _dated_bar(frame, session, ticker):
     """Never substitute another session's OHLC or a previous close."""
     row = market._last_row(frame, session, ticker)
@@ -295,12 +337,21 @@ def run(config_path, state_path):
         validate_state(state, config)
         if day <= state["last_session"]:
             return {"status": "already_recorded", "session": day}
-        if previous != state["last_session"]:
-            raise ValueError("Forward S&P500 classic ledger has a missing market session")
+    gap = state is not None and previous != state["last_session"]
+    if gap and any(book["positions"] for book in state["books"].values()):
+        raise ValueError("Missed market session with open positions: manual review required")
+    # No stale next-open order may be filled after its intended session.
     needed = {ticker for book in state["books"].values()
-              for ticker in set(book["positions"]) | set(book["pending"])} if state else set()
+              for ticker in set(book["positions"]) | set(book["pending"])} if state and not gap else set()
     frames, today = fetch_live(config, day, previous, symbols, required=needed)
     decisions, coverage = rank_signals(config, frames, day)
+    if gap:
+        recovered, missed, expired = recover_flat_gap(
+            config, state, day, previous, decisions, coverage)
+        market.atomic_write(state_path, recovered)
+        return {"status": "flat_gap_recovered_no_backfill", "date": day,
+                "missed_sessions": missed, "expired_pending_orders": expired,
+                "eligible": coverage["eligible"], "universe": coverage["total"]}
     if state is None:
         fresh = initialize(config, day, decisions, coverage)
         market.atomic_write(state_path, fresh)
