@@ -1,0 +1,350 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-16T08:21:17.313659+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/95908061",
+    "published_date": "2022-11-08",
+    "youtube_video_id": "FdAm8oWiw6k",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 28481872
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 3560.228625,
+      "word_count": 9424,
+      "segment_count": 1656,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "FdAm8oWiw6k",
+    "youtube_url": "https://www.youtube.com/watch?v=FdAm8oWiw6k",
+    "title": "Cartera de INVERSIÓN en NOVIEMBRE  | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/95908061",
+    "published_date": "2022-11-08",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza una cartera de inversión basada en el método Buy The Dip, destacando empresas como Meta, Pax Global, TVC Bank y Georgia Capital por su potencial de diversificación y valoración. Se menciona la adquisición de una concesión de exploración en México por Gogold, con resultados positivos en el drilling y reservas de plata y oro. El analista también discute la estrategia de mantener posiciones a largo plazo en proyectos mineros, como Adriatic, con un potencial de crecimiento y volatilidad en su precio. Se aborda la valorización de empresas con ventajas competitivas sostenibles, la expansión de producción en petróleo y minerales, y la posibilidad de una opa por parte de Fresnillo. Además, se menciona la creación de una reserva estratégica durante la crisis del 73, la estrategia de recompras de acciones y la influencia en elecciones. El análisis también incluye riesgos como la dilución de materiales y la estabilidad del precio de la plata, así como la posibilidad de un 'oleón' en el corto y mediano plazo debido a la demanda de migraciones y el título 'Fortitude'.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Pax Global es considerada una buena opción por su bajo precio, buen desempeño y caja, con una investigación del FBI que no ha encontrado nada."
+      ],
+      "cycle_macro": [
+        "La posibilidad de un 'oleón' en el corto y mediano plazo debido a la creciente demanda de migraciones y la estabilidad del título 'Fortitude'."
+      ],
+      "entry": [
+        "Incluyen empresas como Meta y Pax Global en la cartera debido a su potencial de diversificación y valoración especial.",
+        "Se menciona la adquisición de una concesión de exploración en México por Gogold, con resultados positivos en el drilling y la identificación de reservas de plata y oro."
+      ],
+      "sizing": [
+        "TVC Bank y Georgia Capital muestran resultados trimestrales excelentes, con ROE del 30% y eficiencia operativa del 30%, lo que refleja un desempeño sólido y rentable."
+      ],
+      "add_hold": [],
+      "exit": [],
+      "risk": [
+        "Se menciona el riesgo de que la guerra en Georgia afecte al turismo y a la economía local, aunque se subraya que el impacto ha sido limitado hasta ahora y que la empresa Gogold sigue siendo resiliente ante posibles consecuencias."
+      ],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Incluyen empresas como Meta y Pax Global en la cartera debido a su potencial de diversificación y valoración especial.",
+          "timestamp": "00:02:00",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Pax Global es considerada una buena opción por su bajo precio, buen desempeño y caja, con una investigación del FBI que no ha encontrado nada.",
+          "timestamp": "00:03:40",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "TVC Bank y Georgia Capital muestran resultados trimestrales excelentes, con ROE del 30% y eficiencia operativa del 30%, lo que refleja un desempeño sólido y rentable.",
+          "timestamp": "00:05:50",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca la inclusión de Meta y Pax Global en la cartera por su potencial de diversificación y valoración especial, mientras que TVC Bank y Georgia Capital se destacan por sus excelentes resultados financieros y eficiencia operativa, reflejando una estrategia de inversión basada en el desempeño y la valoración de las empresas."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adquisición de una concesión de exploración en México por parte de Gogold, con resultados positivos en el drilling y la identificación de reservas de plata y oro.",
+          "timestamp": "00:14:39",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se destaca la posibilidad de que Gogold pueda aumentar sus reservas y su valoración a largo plazo debido a la expansión de un proyecto de exploración en México, con datos positivos en el drilling y una proyección prometora para la empresa.",
+          "timestamp": "00:15:43",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona el riesgo de que la guerra en Georgia afecte al turismo y a la economía local, aunque se subraya que el impacto ha sido limitado hasta ahora y que la empresa Gogold sigue siendo resiliente ante posibles consecuencias.",
+          "timestamp": "00:10:09",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento destaca la adquisición de una concesión de exploración en México por Gogold, con resultados positivos en el drilling y la identificación de reservas de plata y oro. Se menciona la posibilidad de que el proyecto crezca a largo plazo, aunque se subraya el riesgo de que la guerra en Georgia afecte al turismo y a la economía local. Además, se analiza la valoración de Gogold en el contexto de su expansión y resiliencia ante posibles impactos."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la decisión de no vender inmuebles y mantener una posición a largo plazo, aunque no espera beneficios inmediatos hasta 2023.",
+          "timestamp": "00:17:53",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista destaca la potencial valorización de empresas que compran 'performing loans' con ventajas competitivas sostenibles, destacando la oportunidad en el sector de minerales.",
+          "timestamp": "00:18:47",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista señala la falta de confianza en la directiva de Altisores y menciona la posibilidad de que la empresa no sea un buen inverso a largo plazo.",
+          "timestamp": "00:18:27",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la decisión de mantener una exposición al sector mediante la compra de empresas que operan con 'performing loans' y con ventajas sostenibles.",
+          "timestamp": "00:18:37",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El analista destaca la importancia de la expansión del depósito de Adriatic en Rupees y la posibilidad de aumentar la vida útil del proyecto mediante la descuberta de nuevos depósitos.",
+          "timestamp": "00:20:03",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista menciona la potencial valorización de la empresa Adriatic, destacando la existencia de un depósito polimetálico con buenos resultados de perforación y la posibilidad de ampliación de reservas.",
+          "timestamp": "00:20:19",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista señala la volatilidad del precio de la acción de Adriatic y la posibilidad de que la empresa no refleje su valor real en la cotización actual.",
+          "timestamp": "00:25:00",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la decisión de mantener una posición en Adriatic, considerándolo una oportunidad de inversión con un potencial de crecimiento a largo plazo.",
+          "timestamp": "00:25:44",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El analista discute la estrategia de inversión en empresas de minerales, destacando la posibilidad de mantener posiciones a largo plazo en proyectos con potencial de crecimiento, la importancia de la volatilidad en el precio de las acciones y la necesidad de evaluar riesgos asociados a empresas como Altisores. También menciona la posibilidad de ampliación de reservas en proyectos mineros y la valorización de empresas con ventajas competitivas sostenibles."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa reporta un récord en producción y un free cash flow de 117 millones, lo que indica una alta generación de valor a largo plazo.",
+          "timestamp": "00:31:32",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Los resultados del trimestre de ICO muestran una producción récord de 50 mil barriles al día, con un capex estable y una estrategia de expansión en Canadá, Francia y Malasia.",
+          "timestamp": "00:32:00",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El sector del petróleo enfrenta un equilibrio entre alta demanda y ofertas, con inventarios en Estados Unidos en declive debido a la exportación de petróleo a Europa y al exterior.",
+          "timestamp": "00:35:32",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de los resultados de la empresa ICO muestra una producción récord y un free cash flow sólido, reflejando una estrategia de valor a largo plazo. Aunque el sector del petróleo enfrenta desafíos, la empresa mantiene un equilibrio entre expansión y control de costos, con un enfoque en Canadá, Francia y Malasia. La volatilidad de los precios y los inventarios se manejan con una estrategia conservadora, lo que sugiere una resiliencia en el negocio a largo plazo."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis menciona que la reserva estratégica fue creada durante la crisis del 73 y se utiliza para influir en las elecciones, especialmente en las midterms del 8 de noviembre.",
+          "timestamp": "00:36:04",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se destaca que la empresa está realizando recompras de acciones, con un monto de 176 millones de dólares en recompras hasta octubre de 2022, y que su estrategia de distribución de dividendos depende del precio del petróleo.",
+          "timestamp": "00:39:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona que la empresa ha aumentado su producción de petróleo en un 500% y sus reservas probadas han multiplicado por 9, lo que refleja un crecimiento significativo en su capacidad operativa y valoración.",
+          "timestamp": "00:43:00",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento aborda la estrategia de inversión en la empresa Ipco, destacando la creación de una reserva estratégica durante la crisis del 73, la influencia en las elecciones, y la estrategia de recompras de acciones basada en el precio del petróleo. También se menciona el crecimiento de producción y reservas, así como la estrategia de distribución de dividendos dependiendo del precio del barril."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la adquisición del complejo de Valenciana por Pantestining y su impacto en la producción de plata, que aumentó un 85%.",
+          "timestamp": "00:49:28",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista sugiere que la empresa puede ser un candidato a una opa por parte de Fresnillo debido a su posición en el mercado y su capacidad de crecimiento.",
+          "timestamp": "00:51:17",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista señala que la empresa enfrenta riesgos como la dilución de materiales y la posibilidad de que el precio de la plata caiga, afectando su operación.",
+          "timestamp": "00:50:38",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El analista menciona la posibilidad de un 'oleón' en el corto y mediano plazo debido a la creciente demanda de migraciones y la estabilidad del título 'Fortitude'.",
+          "timestamp": "00:46:52",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El analista destaca que la empresa ha ampliado su capacidad de producción, pasando de dos minas operativas a cinco, con importantes sinergias entre las minas y la planta de procesado.",
+          "timestamp": "00:50:08",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El analista analiza la estrategia de inversión en una empresa minera, destacando la adquisición del complejo de Valenciana, el aumento de producción de plata, el potencial de una opa por parte de Fresnillo, los riesgos de dilución y el impacto macroeconómico del título 'Fortitude' en el mercado. Sugiere que la empresa tiene un buen potencial de crecimiento a corto y mediano plazo, aunque enfrenta desafíos como la estabilidad del precio de la plata y la gestión de recursos."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El comentarista expresa confianza en la estrategia administrativa y menciona la posibilidad de comprar en el mercado si hay cambios en el juicio de Lambert.",
+          "timestamp": "00:56:42",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El comentarista destaca la volatilidad de las empresas y su resistencia al cambio, sugiriendo una evaluación basada en la estabilidad administrativa.",
+          "timestamp": "00:56:58",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El comentarista reconoce la posibilidad de que el juicio no tenga impacto significativo, lo que implica un manejo de riesgos basado en la expectativa de resultados futuros.",
+          "timestamp": "00:56:20",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El comentarista discute la estrategia de inversión basada en la administración y la volatilidad de las empresas, mencionando la confianza en el resultado final del juicio y la posibilidad de acciones futuras. Destaca la resistencia de las empresas y la expectativa de un cambio significativo en el futuro, aunque no se especifica cuándo o cómo se logrará."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
