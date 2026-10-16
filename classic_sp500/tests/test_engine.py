@@ -51,6 +51,77 @@ class SAndP500ClassicTests(unittest.TestCase):
         self.assertEqual(updated["last_session"], "2026-10-14")
         self.assertEqual(len(updated["books"]["macd_12_26_9"]["equity"]), 2)
 
+    def test_missing_buy_bar_stays_unfilled_without_blocking_other_fills(self):
+        original = copy.deepcopy(self.book)
+        today = {"AAPL": {"open": 100, "high": 105, "low": 99, "close": 103},
+                 "SPY": {"open": 400, "high": 405, "low": 399, "close": 404}}
+        result, changed = classic.settle(
+            self.config, self.book, "2026-10-14", self.day, today)
+        self.assertTrue(changed)
+        holdings = result["books"]["buy_hold_equal_weight"]
+        self.assertIn("AAPL", holdings["positions"])
+        self.assertNotIn("MSFT", holdings["positions"])
+        self.assertEqual(holdings["pending"], {})
+        unfilled = [e for e in holdings["events"]
+                    if e["type"] == "unfilled_missing_dated_bar"]
+        self.assertEqual([e["ticker"] for e in unfilled], ["MSFT"])
+        self.assertEqual(unfilled[0]["date"], "2026-10-14")
+        self.assertIn("SPY", result["books"]["benchmark_spy"]["positions"])
+        self.assertEqual(original, self.book)
+        # A missing buy cannot increase any other weight.
+        budget = self.config["initial_capital"] * self.config["execution"]["capital_fraction"] / 503
+        self.assertLessEqual(holdings["positions"]["AAPL"]["cost"], budget + 1e-7)
+
+    def test_missing_benchmark_buy_never_fabricates_a_fill(self):
+        today = {"AAPL": {"open": 100, "high": 105, "low": 99, "close": 103},
+                 "MSFT": {"open": 200, "high": 204, "low": 197, "close": 202}}
+        result, changed = classic.settle(
+            self.config, self.book, "2026-10-14", self.day, today)
+        self.assertTrue(changed)
+        benchmark = result["books"]["benchmark_spy"]
+        self.assertEqual(benchmark["positions"], {})
+        self.assertEqual(benchmark["nav"], 100000)
+        self.assertEqual(benchmark["events"][0]["type"], "unfilled_missing_dated_bar")
+        self.assertEqual(benchmark["events"][0]["ticker"], "SPY")
+
+    def test_missing_existing_holding_is_still_fatal(self):
+        today = {"AAPL": {"open": 100, "high": 105, "low": 99, "close": 103},
+                 "MSFT": {"open": 200, "high": 204, "low": 197, "close": 202},
+                 "SPY": {"open": 400, "high": 405, "low": 399, "close": 404}}
+        invested, _ = classic.settle(
+            self.config, self.book, "2026-10-14", self.day, today)
+        original = copy.deepcopy(invested)
+        with self.assertRaisesRegex(ValueError, "Missing dated bar for held position"):
+            classic.settle(self.config, invested, "2026-10-15", "2026-10-14",
+                           {"SPY": today["SPY"], "MSFT": today["MSFT"]})
+        self.assertEqual(invested, original)
+
+    def test_daily_runner_publishes_explicit_missing_buy_diagnostic(self):
+        from unittest.mock import patch
+        from tempfile import TemporaryDirectory
+        import json
+        today = {"AAPL": {"open": 100, "high": 105, "low": 99, "close": 103},
+                 "SPY": {"open": 400, "high": 405, "low": 399, "close": 404}}
+        with TemporaryDirectory() as td:
+            path = Path(td) / "ledger.json"
+            path.write_text(json.dumps(self.book), encoding="utf-8")
+            with (patch.object(classic.market, "calendar",
+                               return_value=("2026-10-14", "2026-10-13",
+                                             "2026-10-15", False)),
+                  patch.object(classic, "fetch_live", return_value=({}, today)),
+                  patch.object(classic, "rank_signals",
+                               return_value=(self.fake, self.diagnostic))):
+                result = classic.run(
+                    Path(__file__).resolve().parents[1] / "config.json", path)
+            self.assertEqual(result["status"], "paper_recorded")
+            self.assertEqual(result["unfilled_pending_buys_missing_bar"], ["MSFT"])
+            persisted = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(persisted["last_session"], "2026-10-14")
+            self.assertEqual(persisted["coverage"][-1]
+                             ["unfilled_pending_buys_missing_bar"], ["MSFT"])
+            self.assertNotIn("MSFT",
+                             persisted["books"]["buy_hold_equal_weight"]["positions"])
+
     def test_no_retroactive_reconstruction(self):
         with self.assertRaisesRegex(ValueError, "Missing market session"):
             classic.settle(self.config, self.book, "2026-10-15", "2026-10-14", {})

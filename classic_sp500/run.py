@@ -161,6 +161,15 @@ def settle(config, state, day, previous, today):
         return copy.deepcopy(state), False
     if previous != state["last_session"]:
         raise ValueError("Missing market session: never replay old opens")
+    # Existing holdings or exit signals require a real dated bar. Missing
+    # prices for new, unfilled BUY requests must not prevent other portfolios
+    # from proceeding, but an existing exposure is never marked with stale data.
+    required = {ticker for book in state["books"].values()
+                for ticker in set(book["positions"]) |
+                {t for t, order in book["pending"].items() if order["side"] == "sell"}}
+    if not required <= set(today):
+        raise ValueError("Missing dated bar for held position or pending sell: " +
+                         ",".join(sorted(required - set(today))))
     result = copy.deepcopy(state)
     p = config["execution"]
     for name, book in result["books"].items():
@@ -194,6 +203,16 @@ def settle(config, state, day, previous, today):
                              nav_at_open * (p["capital_fraction"] if name == BENCHMARK else p["max_weight"]))
             for ticker in buy_list:
                 if ticker in book["positions"]:
+                    continue
+                if ticker not in today:
+                    # No same-session OHLC => no evidence of an executable fill.
+                    # Keep the remaining buy budgets unchanged; never redistribute
+                    # unavailable constituents' cash or use a later day's price.
+                    book["events"].append({
+                        "date": day, "ticker": ticker,
+                        "type": "unfilled_missing_dated_bar",
+                        "reason": "required same-session OHLC unavailable",
+                    })
                     continue
                 price = market._positive(today[ticker]["open"], "buy open") * (1 + p["slippage"])
                 scale = 10 ** p["fractional_precision"]
@@ -309,7 +328,8 @@ def fetch_live(config, session, previous, symbols, required=()):
     # active constituent, particularly within 40-symbol batches. Retry ONLY
     # existing positions and next-open pending orders as isolated reads.
     # Keep the frozen universe, eligibility denominator and strict dated-price
-    # contract unchanged. A missing mandatory bar still fails the entire day.
+    # contract unchanged. Missing held/sell bars remain fatal; missing new BUY
+    # bars are explicitly recorded as unfilled rather than backdated.
     for ticker in sorted(set(required) - set(today)):
         try:
             recovered = market._download([ticker], start, end, allow_missing=True)
@@ -357,15 +377,25 @@ def run(config_path, state_path):
         market.atomic_write(state_path, fresh)
         return {"status": "first_signal_frozen", "date": day, "eligible": coverage["eligible"],
                 "universe": coverage["total"]}
-    if not needed <= set(today):
-        raise ValueError("Missing dated bar for held position or pending order: " +
-                         ",".join(sorted(needed - set(today))))
+    critical = {ticker for book in state["books"].values()
+                for ticker in set(book["positions"]) |
+                {t for t, order in book["pending"].items() if order["side"] == "sell"}}
+    if not critical <= set(today):
+        raise ValueError("Missing dated bar for held position or pending sell: " +
+                         ",".join(sorted(critical - set(today))))
+    # Persist explicit execution quality, without silently reducing the frozen
+    # 503-symbol denominator or inventing a price for missing BUY candidates.
+    unfilled_buys = sorted({ticker for book in state["books"].values()
+                            for ticker, order in book["pending"].items()
+                            if order["side"] == "buy" and ticker not in today})
+    coverage["unfilled_pending_buys_missing_bar"] = unfilled_buys
     updated, changed = settle(config, state, day, previous, today)
     if changed:
         updated = freeze(config, updated, day, decisions, coverage)
         market.atomic_write(state_path, updated)
     return {"status": "paper_recorded", "date": day, "eligible": coverage["eligible"],
-            "universe": coverage["total"], "models": len(config["strategies"])}
+            "universe": coverage["total"], "models": len(config["strategies"]),
+            "unfilled_pending_buys_missing_bar": unfilled_buys}
 
 
 def main():
