@@ -1,10 +1,10 @@
 {
   "event": "schedule",
-  "head_sha": "a6bc1137941229b37f84db629aa8ee1848dd34d3",
-  "outcome": "success",
-  "recorded_at_utc": "2026-10-15T06:08:58.492749+00:00",
-  "run_id": 38690663989,
-  "run_number": 21,
+  "head_sha": "59d16f9318dadff6a876d1f7d3bfd5836bdfe676",
+  "outcome": "failure",
+  "recorded_at_utc": "2026-10-16T00:24:16.030252+00:00",
+  "run_id": 38829247713,
+  "run_number": 22,
   "schema_version": 1,
   "workflow_key": "weekly_ml_daily",
   "workflow_name": "MIDAS Weekly ML daily paper"
