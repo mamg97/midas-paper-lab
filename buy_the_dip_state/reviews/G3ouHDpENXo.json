@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-16T18:46:00.547259+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/102957412",
+    "published_date": "2023-02-12",
+    "youtube_video_id": "G3ouHDpENXo",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 17126340
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2140.787,
+      "word_count": 5940,
+      "segment_count": 800,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "G3ouHDpENXo",
+    "youtube_url": "https://www.youtube.com/watch?v=G3ouHDpENXo",
+    "title": "Cartera de INVERSIÓN en FEBRERO  | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/102957412",
+    "published_date": "2023-02-12",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute una estrategia de inversión basada en el método Buy The Dip, analizando una cartera de activos con decisiones de compra/venta, rentabilidad, tamaño, gestión de riesgos y posibles impactos macroeconómicos. Se analizan empresas como Gogold, Meta, Ipco, Guanajuato, Resources y Haya, destacando su valoración, crecimiento potencial y decisiones estratégicas. Se menciona la adquisición de un activo productivo de petróleo con alto potencial de retorno a largo plazo, basado en la valorización del petróleo a 75-95 dólares por barril. Se destacan riesgos como la inflación de costes y problemas contractuales, pero se consideran decisiones estratégicas a largo plazo. El análisis también incluye una proyección de producción en los Ricos Sur y un entorno positivo para el sector minero.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Se menciona una rentabilidad del 13,6% en euros y 10,3% en dólares, comparada con un estándar de 0%."
+      ],
+      "cycle_macro": [
+        "Se menciona la posibilidad de una adquisición de China (white) que podría afectar la cartera, aunque no se materializó."
+      ],
+      "entry": [
+        "El podcast discute la estrategia de inversión, destacando la cartera de activos y decisiones de compra/venta.",
+        "La empresa Gogold tiene un proyecto de producción en los Ricos Sur con un 100% de participación, con una producción estimada entre 140.000 y 150.000 onzas de oro en 2023."
+      ],
+      "sizing": [
+        "La cartera tiene una posición de 4% en una nueva posición no identificada, con un peso de 8% en una empresa con alto rendimiento."
+      ],
+      "add_hold": [
+        "Se menciona que la empresa prioriza la adquisición de activos en producción, no en desarrollo, lo que refuerza la decisión de invertir en este activo específico."
+      ],
+      "exit": [],
+      "risk": [
+        "Se menciona la reducción de exposición a empresas como Fanny Freddy y la consideración de riesgos en el sector de seguros de vivienda.",
+        "La empresa enfrenta riesgos como la inflación de costes y problemas contractuales con el suministro energético, lo que podría afectar su producción y beneficios."
+      ],
+      "technical": [
+        "El drill 118 de Gogold muestra los mejores resultados de la empresa, con 12.000 gramos de plata por tonelada y 44 gramos de oro, indicando una alta mineralización en la zona de los Ricos Sur."
+      ],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El podcast discute la estrategia de inversión, destacando la cartera de activos y decisiones de compra/venta.",
+          "timestamp": "00:01:02",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona una rentabilidad del 13,6% en euros y 10,3% en dólares, comparada con un estándar de 0%.",
+          "timestamp": "00:01:55",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La cartera tiene una posición de 4% en una nueva posición no identificada, con un peso de 8% en una empresa con alto rendimiento.",
+          "timestamp": "00:04:56",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona la reducción de exposición a empresas como Fanny Freddy y la consideración de riesgos en el sector de seguros de vivienda.",
+          "timestamp": "00:03:34",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona la posibilidad de una adquisición de China (white) que podría afectar la cartera, aunque no se materializó.",
+          "timestamp": "00:04:16",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast discute la estrategia de inversión, destacando la cartera de activos, decisiones de compra/venta, rentabilidad, tamaño de la cartera, gestión de riesgos y posibles impactos macroeconómicos."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de la empresa Gogold incluye un plan para 2023 con drilling en los Ricos Sur, adquisición de propiedades y actualización de recursos minerales y PIA.",
+          "timestamp": "00:10:02",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa Gogold ha realizado una ampliación de capital de 65 millones de dólares, lo que refleja su capacidad financiera para llevar a cabo proyectos de exploración y producción.",
+          "timestamp": "00:10:22",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El drill 118 de Gogold muestra los mejores resultados de la empresa, con 12.000 gramos de plata por tonelada y 44 gramos de oro, indicando una alta mineralización en la zona de los Ricos Sur.",
+          "timestamp": "00:10:52",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa enfrenta riesgos como la inflación de costes y problemas contractuales con el suministro energético, lo que podría afectar su producción y beneficios.",
+          "timestamp": "00:11:00",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa Gogold tiene un proyecto de producción en los Ricos Sur con un 100% de participación, con una producción estimada entre 140.000 y 150.000 onzas de oro en 2023, según el guía de la empresa.",
+          "timestamp": "00:11:50",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El sector minero está experimentando un reanudamiento de actividades, con posibles adquisiciones y funciones, lo que sugiere un entorno positivo para las empresas mineras.",
+          "timestamp": "00:15:32",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa Gogold tiene un proyecto de exploración en el P17S con buenos resultados, lo que podría aumentar su valor y posibilidades de producción en el futuro.",
+          "timestamp": "00:15:18",
+          "scope": "hosts",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de Gogold incluye un plan de drilling en 2023, una ampliación de capital, y resultados técnicos prometedores, aunque enfrenta riesgos como la inflación de costes. La empresa tiene un proyecto de producción en los Ricos Sur con una producción estimada para 2023, y el sector minero muestra un entorno positivo con posibles adquisiciones. La empresa también tiene un proyecto de exploración en el P17S con buenos resultados, lo que sugiere un futuro prometedor."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona que la empresa Meta es la más barata de todas las fans y lo analiza en profundidad.",
+          "timestamp": "00:19:14",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista destaca que la empresa Ipco tiene un Free Cashflow de 430 millones de dólares y una posición de caja sólida, lo que refleja una valoración positiva.",
+          "timestamp": "00:24:39",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista señala que la empresa Ipco está invirtiendo en Black Rod, lo que podría afectar su Free Cashflow y causar una caída en su acción, pero considera que a largo plazo es una decisión estratégica.",
+          "timestamp": "00:25:22",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona que la empresa Guanajuato está desarrollando cinco minas adquiridas y ha aumentado su producción de plata, lo que sugiere un crecimiento positivo.",
+          "timestamp": "00:21:10",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El analista comenta que la empresa Resources está en una fase de permisos ambientales y tiene ofertas de financiación para un proyecto de oro en Namibia, lo que indica un desarrollo positivo.",
+          "timestamp": "00:22:40",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista destaca que la empresa Haya, con su CEO, está en una fase crítica de financiación de un proyecto, lo que sugiere un crecimiento potencial.",
+          "timestamp": "00:24:05",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El analista analiza varias empresas, destacando su valoración, crecimiento potencial y decisiones estratégicas, como la adquisición de activos y la inversión en proyectos, mientras menciona riesgos y oportunidades de inversión en diferentes sectores."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la decisión de adquirir un activo productivo con alto potencial de generación de Free Cash Flow, basada en la valorización del petróleo a 75 y 95 dólares por barril.",
+          "timestamp": "00:29:09",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se establece que el activo tiene 1.000 millones de barriles de petróleo, lo que representa una inversión significativa y un alto potencial de retorno a largo plazo.",
+          "timestamp": "00:30:39",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se afirma que el riesgo de ampliar capital o endeudarse es limitado debido a la cantidad de caja disponible, lo que permite a la empresa detener operaciones sin afectar a los accionistas.",
+          "timestamp": "00:31:28",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona que el precio del petróleo se mantendrá por encima de 85 dólares hasta 100 dólares, lo que favorece la generación de Free Cash Flow a pesar de la inversión en capex.",
+          "timestamp": "00:31:44",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se indica que la producción aumentará de 20.000 a 30.000 barriles, lo que generará un aumento significativo en el Free Cash Flow y justifica la adquisición del activo.",
+          "timestamp": "00:30:01",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "add_hold",
+          "paraphrase": "Se menciona que la empresa prioriza la adquisición de activos en producción, no en desarrollo, lo que refuerza la decisión de invertir en este activo específico.",
+          "timestamp": "00:31:06",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se afirma que la decisión de adquirir el activo es correcta porque permite a la empresa mantener y aumentar la producción, manteniendo un alto ritmo de recompras de acciones.",
+          "timestamp": "00:32:16",
+          "scope": "hosts",
+          "confidence": 0.7
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de inversión se centra en la adquisición de un activo productivo con alto potencial de generación de Free Cash Flow, basado en la valorización del petróleo a 75 y 95 dólares por barril. Se establece que el activo tiene 1.000 millones de barriles de petróleo, lo que representa una inversión significativa y un alto potencial de retorno a largo plazo. Se afirma que el riesgo de ampliar capital o endeudarse es limitado debido a la cantidad de caja disponible, lo que permite a la empresa detener operaciones sin afectar a los accionistas. Se menciona que el precio del petróleo se mantendrá por encima de 85 dólares hasta 100 dólares, lo que favorece la generación de Free Cash Flow a pesar de la inversión en capex. Se indica que la producción aumentará de 20.000 a 30.000 barriles, lo que generará un aumento significativo en el Free Cash Flow y justifica la adquisición del activo. Se menciona que la empresa prioriza la adquisición de activos en producción, no en desarrollo, lo que refuerza la decisión de invertir en este activo específico."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
