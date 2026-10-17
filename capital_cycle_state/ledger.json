@@ -1,7 +1,7 @@
 {
   "benchmark_first_close": 762.6300048828125,
-  "benchmark_last_close": 771.7899780273438,
-  "cash": 5000.000882622999,
+  "benchmark_last_close": 763.25,
+  "cash": 5058.431937582999,
   "config_hash": "bc315edf86812951eee7cd9d925332c32a5b8b7160111d4d72cb24fdcf8f7e6d",
   "currency": "USD",
   "equity": [
@@ -87,6 +87,13 @@
       "cash": 5000.000882622999,
       "date": "2026-10-15",
       "nav": 103772.61945342128,
+      "positions": 12
+    },
+    {
+      "benchmark_close": 763.25,
+      "cash": 5058.431937582999,
+      "date": "2026-10-16",
+      "nav": 103694.64759814294,
       "positions": 12
     }
   ],
@@ -225,11 +232,18 @@
       "targets": 12,
       "ticker": null,
       "type": "rebalance_filled"
+    },
+    {
+      "amount": 58.43105496,
+      "date": "2026-10-16",
+      "per_share": 1.02,
+      "ticker": "EOG",
+      "type": "dividend"
     }
   ],
   "first_session": "2026-09-30",
   "first_signal_session": "2026-09-30",
-  "last_session": "2026-10-15",
+  "last_session": "2026-10-16",
   "last_signal_session": "2026-09-30",
   "market_hashes": {
     "2026-09-30": "51f8326ab8e0311408d2f438d440aecbd2c4ecb6558ac86c45d43fd83cccbd65",
@@ -243,9 +257,10 @@
     "2026-10-12": "26eaff1e2019c551813e2e9f3646e284f49e5d8cb2a05b201d2bd574f6bf2407",
     "2026-10-13": "0f2a8a75141a028c0000447528cdf0582848b2bc0ea7498c242267043db396de",
     "2026-10-14": "52019abbca4e12d7a0dee0363d71c551d4b8355b9fa1e4d352c6b556121a4d37",
-    "2026-10-15": "b7ada3169de8301d71c54961dd93fd7f69452e113587bed177615e11ac657f3d"
+    "2026-10-15": "b7ada3169de8301d71c54961dd93fd7f69452e113587bed177615e11ac657f3d",
+    "2026-10-16": "c8f7a1a54a4727e0ee9fd597b07702fddf239e142d326afa57d5c7402b77cb29"
   },
-  "nav": 103772.61945342128,
+  "nav": 103694.64759814294,
   "pending": null,
   "positions": {
     "ADI": {
