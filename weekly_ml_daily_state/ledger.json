@@ -7,9 +7,9 @@
   "gap_sessions": [],
   "initial_capital": 100000.0,
   "last_session": "2026-10-16",
-  "last_signal_session": "2026-10-09",
+  "last_signal_session": "2026-10-16",
   "schema_version": 1,
-  "signal_hash": "a2807413aa681718988cb86800a8f166f0c854f47f9f7ec905969ae268cfa14a",
+  "signal_hash": "41140defb1117e7dcff7312ddc7fe61b55d7d63a5bdf74ac19861f57ed7e3b38",
   "strategies": {
     "arima_return": {
       "cash": 89037.72638050203,
@@ -230,10 +230,76 @@
           "shares": 48.677409,
           "ticker": "PTC",
           "type": "sell"
+        },
+        {
+          "count": 10,
+          "date": "2026-10-16",
+          "type": "signal_frozen"
         }
       ],
       "nav": 89037.72638050203,
-      "pending": [],
+      "pending": [
+        {
+          "predicted_return": 0.09389108909814504,
+          "score": 0.09389108909814504,
+          "signal_date": "2026-10-16",
+          "ticker": "DELL"
+        },
+        {
+          "predicted_return": 0.06480237410613386,
+          "score": 0.06480237410613386,
+          "signal_date": "2026-10-16",
+          "ticker": "MRNA"
+        },
+        {
+          "predicted_return": 0.05576907386230598,
+          "score": 0.05576907386230598,
+          "signal_date": "2026-10-16",
+          "ticker": "CRWD"
+        },
+        {
+          "predicted_return": 0.05568268806212064,
+          "score": 0.05568268806212064,
+          "signal_date": "2026-10-16",
+          "ticker": "SMCI"
+        },
+        {
+          "predicted_return": 0.04779868220855059,
+          "score": 0.04779868220855059,
+          "signal_date": "2026-10-16",
+          "ticker": "ANET"
+        },
+        {
+          "predicted_return": 0.047665508497313956,
+          "score": 0.047665508497313956,
+          "signal_date": "2026-10-16",
+          "ticker": "LW"
+        },
+        {
+          "predicted_return": 0.04714861845866197,
+          "score": 0.04714861845866197,
+          "signal_date": "2026-10-16",
+          "ticker": "WDC"
+        },
+        {
+          "predicted_return": 0.043359092916531464,
+          "score": 0.043359092916531464,
+          "signal_date": "2026-10-16",
+          "ticker": "MU"
+        },
+        {
+          "predicted_return": 0.04069525433512794,
+          "score": 0.04069525433512794,
+          "signal_date": "2026-10-16",
+          "ticker": "PANW"
+        },
+        {
+          "predicted_return": 0.04020214342921018,
+          "score": 0.04020214342921018,
+          "signal_date": "2026-10-16",
+          "ticker": "AMD"
+        }
+      ],
       "positions": {},
       "trades": [
         {
@@ -415,10 +481,21 @@
           "shares": 444.693953,
           "ticker": "RSP",
           "type": "sell"
+        },
+        {
+          "count": 1,
+          "date": "2026-10-16",
+          "type": "signal_frozen"
         }
       ],
       "nav": 100061.76762473409,
-      "pending": [],
+      "pending": [
+        {
+          "score": 1.0,
+          "signal_date": "2026-10-16",
+          "ticker": "RSP"
+        }
+      ],
       "positions": {},
       "trades": [
         {
@@ -492,10 +569,21 @@
           "shares": 121.8029,
           "ticker": "SPY",
           "type": "sell"
+        },
+        {
+          "count": 1,
+          "date": "2026-10-16",
+          "type": "signal_frozen"
         }
       ],
       "nav": 97826.66085457122,
-      "pending": [],
+      "pending": [
+        {
+          "score": 1.0,
+          "signal_date": "2026-10-16",
+          "ticker": "SPY"
+        }
+      ],
       "positions": {},
       "trades": [
         {
@@ -731,10 +819,96 @@
           "shares": 24.213208,
           "ticker": "WDC",
           "type": "sell"
+        },
+        {
+          "count": 10,
+          "date": "2026-10-16",
+          "type": "signal_frozen"
         }
       ],
       "nav": 87153.67295416383,
-      "pending": [],
+      "pending": [
+        {
+          "positive_votes": 5,
+          "predicted_return": 0.028340851094832965,
+          "rank_dispersion": 0.035295415040217076,
+          "score": 0.9727334696659851,
+          "signal_date": "2026-10-16",
+          "ticker": "MU"
+        },
+        {
+          "positive_votes": 5,
+          "predicted_return": 0.022231905743714878,
+          "rank_dispersion": 0.04080880585438518,
+          "score": 0.9502385821404226,
+          "signal_date": "2026-10-16",
+          "ticker": "WDC"
+        },
+        {
+          "positive_votes": 5,
+          "predicted_return": 0.035223866180187885,
+          "rank_dispersion": 0.10876748480866089,
+          "score": 0.9441036128152692,
+          "signal_date": "2026-10-16",
+          "ticker": "DELL"
+        },
+        {
+          "positive_votes": 5,
+          "predicted_return": 0.015388112227058721,
+          "rank_dispersion": 0.08522102830128032,
+          "score": 0.9115541922290388,
+          "signal_date": "2026-10-16",
+          "ticker": "STX"
+        },
+        {
+          "positive_votes": 5,
+          "predicted_return": 0.010928720533910391,
+          "rank_dispersion": 0.12800258435239126,
+          "score": 0.8905930470347648,
+          "signal_date": "2026-10-16",
+          "ticker": "KLAC"
+        },
+        {
+          "positive_votes": 5,
+          "predicted_return": 0.009497121848980574,
+          "rank_dispersion": 0.08417644267502149,
+          "score": 0.8711656441717791,
+          "signal_date": "2026-10-16",
+          "ticker": "CDW"
+        },
+        {
+          "positive_votes": 5,
+          "predicted_return": 0.010525777574895024,
+          "rank_dispersion": 0.07298652894887499,
+          "score": 0.8646898432174505,
+          "signal_date": "2026-10-16",
+          "ticker": "IT"
+        },
+        {
+          "positive_votes": 5,
+          "predicted_return": 0.01046916190776965,
+          "rank_dispersion": 0.08523874697526485,
+          "score": 0.8628152692569871,
+          "signal_date": "2026-10-16",
+          "ticker": "PTC"
+        },
+        {
+          "positive_votes": 5,
+          "predicted_return": 0.020566609324377587,
+          "rank_dispersion": 0.16500941901463734,
+          "score": 0.8522494887525564,
+          "signal_date": "2026-10-16",
+          "ticker": "ANET"
+        },
+        {
+          "positive_votes": 4,
+          "predicted_return": 0.013285102721120089,
+          "rank_dispersion": 0.29379548045862686,
+          "score": 0.8476482617586911,
+          "signal_date": "2026-10-16",
+          "ticker": "SMCI"
+        }
+      ],
       "positions": {},
       "trades": [
         {
@@ -1078,10 +1252,76 @@
           "shares": 33.786031,
           "ticker": "TXN",
           "type": "sell"
+        },
+        {
+          "count": 10,
+          "date": "2026-10-16",
+          "type": "signal_frozen"
         }
       ],
       "nav": 99314.10274179855,
-      "pending": [],
+      "pending": [
+        {
+          "direction_probability": 0.6021744234677776,
+          "score": 0.6021744234677776,
+          "signal_date": "2026-10-16",
+          "ticker": "GDDY"
+        },
+        {
+          "direction_probability": 0.598298149720603,
+          "score": 0.598298149720603,
+          "signal_date": "2026-10-16",
+          "ticker": "CDW"
+        },
+        {
+          "direction_probability": 0.5974149719136685,
+          "score": 0.5974149719136685,
+          "signal_date": "2026-10-16",
+          "ticker": "UPS"
+        },
+        {
+          "direction_probability": 0.596714734037321,
+          "score": 0.596714734037321,
+          "signal_date": "2026-10-16",
+          "ticker": "TYL"
+        },
+        {
+          "direction_probability": 0.5967045408248197,
+          "score": 0.5967045408248197,
+          "signal_date": "2026-10-16",
+          "ticker": "AAPL"
+        },
+        {
+          "direction_probability": 0.5967045408248197,
+          "score": 0.5967045408248197,
+          "signal_date": "2026-10-16",
+          "ticker": "ON"
+        },
+        {
+          "direction_probability": 0.5958304266658023,
+          "score": 0.5958304266658023,
+          "signal_date": "2026-10-16",
+          "ticker": "EIX"
+        },
+        {
+          "direction_probability": 0.5958304266658023,
+          "score": 0.5958304266658023,
+          "signal_date": "2026-10-16",
+          "ticker": "MO"
+        },
+        {
+          "direction_probability": 0.5954709506920727,
+          "score": 0.5954709506920727,
+          "signal_date": "2026-10-16",
+          "ticker": "DELL"
+        },
+        {
+          "direction_probability": 0.5954709506920727,
+          "score": 0.5954709506920727,
+          "signal_date": "2026-10-16",
+          "ticker": "KLAC"
+        }
+      ],
       "positions": {},
       "trades": [
         {
@@ -1425,10 +1665,66 @@
           "shares": 125.208109,
           "ticker": "SWKS",
           "type": "sell"
+        },
+        {
+          "count": 10,
+          "date": "2026-10-16",
+          "type": "signal_frozen"
         }
       ],
       "nav": 97192.79806216282,
-      "pending": [],
+      "pending": [
+        {
+          "score": 0.48972219579418075,
+          "signal_date": "2026-10-16",
+          "ticker": "DELL"
+        },
+        {
+          "score": 0.44874355967627355,
+          "signal_date": "2026-10-16",
+          "ticker": "STX"
+        },
+        {
+          "score": 0.4471253722801825,
+          "signal_date": "2026-10-16",
+          "ticker": "MU"
+        },
+        {
+          "score": 0.43780943686417223,
+          "signal_date": "2026-10-16",
+          "ticker": "HPE"
+        },
+        {
+          "score": 0.4143236165567487,
+          "signal_date": "2026-10-16",
+          "ticker": "MRNA"
+        },
+        {
+          "score": 0.3982177743775433,
+          "signal_date": "2026-10-16",
+          "ticker": "WDC"
+        },
+        {
+          "score": 0.3567575325970442,
+          "signal_date": "2026-10-16",
+          "ticker": "TER"
+        },
+        {
+          "score": 0.313418865787466,
+          "signal_date": "2026-10-16",
+          "ticker": "PLTR"
+        },
+        {
+          "score": 0.3087245209569109,
+          "signal_date": "2026-10-16",
+          "ticker": "ORCL"
+        },
+        {
+          "score": 0.3067514429977383,
+          "signal_date": "2026-10-16",
+          "ticker": "INTC"
+        }
+      ],
       "positions": {},
       "trades": [
         {
@@ -1772,10 +2068,76 @@
           "shares": 24.213208,
           "ticker": "WDC",
           "type": "sell"
+        },
+        {
+          "count": 10,
+          "date": "2026-10-16",
+          "type": "signal_frozen"
         }
       ],
       "nav": 88064.3797293889,
-      "pending": [],
+      "pending": [
+        {
+          "predicted_return": 0.014742951850308912,
+          "score": 0.014742951850308912,
+          "signal_date": "2026-10-16",
+          "ticker": "HPE"
+        },
+        {
+          "predicted_return": 0.01464602524005407,
+          "score": 0.01464602524005407,
+          "signal_date": "2026-10-16",
+          "ticker": "SMCI"
+        },
+        {
+          "predicted_return": 0.01406733484187187,
+          "score": 0.01406733484187187,
+          "signal_date": "2026-10-16",
+          "ticker": "DELL"
+        },
+        {
+          "predicted_return": 0.014019130340685717,
+          "score": 0.014019130340685717,
+          "signal_date": "2026-10-16",
+          "ticker": "LRCX"
+        },
+        {
+          "predicted_return": 0.013644438410536874,
+          "score": 0.013644438410536874,
+          "signal_date": "2026-10-16",
+          "ticker": "TER"
+        },
+        {
+          "predicted_return": 0.013622902198444626,
+          "score": 0.013622902198444626,
+          "signal_date": "2026-10-16",
+          "ticker": "GLW"
+        },
+        {
+          "predicted_return": 0.013600223362570996,
+          "score": 0.013600223362570996,
+          "signal_date": "2026-10-16",
+          "ticker": "KLAC"
+        },
+        {
+          "predicted_return": 0.013500883328013535,
+          "score": 0.013500883328013535,
+          "signal_date": "2026-10-16",
+          "ticker": "ANET"
+        },
+        {
+          "predicted_return": 0.013425307544611863,
+          "score": 0.013425307544611863,
+          "signal_date": "2026-10-16",
+          "ticker": "JBL"
+        },
+        {
+          "predicted_return": 0.0134074054718224,
+          "score": 0.0134074054718224,
+          "signal_date": "2026-10-16",
+          "ticker": "CRWD"
+        }
+      ],
       "positions": {},
       "trades": [
         {
@@ -2119,10 +2481,76 @@
           "shares": 229.735199,
           "ticker": "SMCI",
           "type": "sell"
+        },
+        {
+          "count": 10,
+          "date": "2026-10-16",
+          "type": "signal_frozen"
         }
       ],
       "nav": 92421.39974018345,
-      "pending": [],
+      "pending": [
+        {
+          "predicted_return": 0.013718264177441597,
+          "score": 0.013718264177441597,
+          "signal_date": "2026-10-16",
+          "ticker": "MGM"
+        },
+        {
+          "predicted_return": 0.013281157240271568,
+          "score": 0.013281157240271568,
+          "signal_date": "2026-10-16",
+          "ticker": "AXON"
+        },
+        {
+          "predicted_return": 0.012053155340254307,
+          "score": 0.012053155340254307,
+          "signal_date": "2026-10-16",
+          "ticker": "FICO"
+        },
+        {
+          "predicted_return": 0.011924180202186108,
+          "score": 0.011924180202186108,
+          "signal_date": "2026-10-16",
+          "ticker": "SMCI"
+        },
+        {
+          "predicted_return": 0.011463525705039501,
+          "score": 0.011463525705039501,
+          "signal_date": "2026-10-16",
+          "ticker": "NCLH"
+        },
+        {
+          "predicted_return": 0.011259295046329498,
+          "score": 0.011259295046329498,
+          "signal_date": "2026-10-16",
+          "ticker": "WYNN"
+        },
+        {
+          "predicted_return": 0.01118364930152893,
+          "score": 0.01118364930152893,
+          "signal_date": "2026-10-16",
+          "ticker": "UAL"
+        },
+        {
+          "predicted_return": 0.010864288546144962,
+          "score": 0.010864288546144962,
+          "signal_date": "2026-10-16",
+          "ticker": "BLDR"
+        },
+        {
+          "predicted_return": 0.010438017547130585,
+          "score": 0.010438017547130585,
+          "signal_date": "2026-10-16",
+          "ticker": "ORCL"
+        },
+        {
+          "predicted_return": 0.010378027334809303,
+          "score": 0.010378027334809303,
+          "signal_date": "2026-10-16",
+          "ticker": "FSLR"
+        }
+      ],
       "positions": {},
       "trades": [
         {
@@ -2466,10 +2894,76 @@
           "shares": 25.916686,
           "ticker": "TPL",
           "type": "sell"
+        },
+        {
+          "count": 10,
+          "date": "2026-10-16",
+          "type": "signal_frozen"
         }
       ],
       "nav": 94309.9991100305,
-      "pending": [],
+      "pending": [
+        {
+          "predicted_return": 0.10130050290221579,
+          "score": 0.10130050290221579,
+          "signal_date": "2026-10-16",
+          "ticker": "MU"
+        },
+        {
+          "predicted_return": 0.09159475375125073,
+          "score": 0.09159475375125073,
+          "signal_date": "2026-10-16",
+          "ticker": "GLW"
+        },
+        {
+          "predicted_return": 0.08190167059826411,
+          "score": 0.08190167059826411,
+          "signal_date": "2026-10-16",
+          "ticker": "STX"
+        },
+        {
+          "predicted_return": 0.06418912567513288,
+          "score": 0.06418912567513288,
+          "signal_date": "2026-10-16",
+          "ticker": "AMAT"
+        },
+        {
+          "predicted_return": 0.06129776089952991,
+          "score": 0.06129776089952991,
+          "signal_date": "2026-10-16",
+          "ticker": "APA"
+        },
+        {
+          "predicted_return": 0.05970103551750604,
+          "score": 0.05970103551750604,
+          "signal_date": "2026-10-16",
+          "ticker": "AMD"
+        },
+        {
+          "predicted_return": 0.056380397518503905,
+          "score": 0.056380397518503905,
+          "signal_date": "2026-10-16",
+          "ticker": "DELL"
+        },
+        {
+          "predicted_return": 0.044005450606398204,
+          "score": 0.044005450606398204,
+          "signal_date": "2026-10-16",
+          "ticker": "HPE"
+        },
+        {
+          "predicted_return": 0.04314844879575959,
+          "score": 0.04314844879575959,
+          "signal_date": "2026-10-16",
+          "ticker": "LRCX"
+        },
+        {
+          "predicted_return": 0.04282118940453592,
+          "score": 0.04282118940453592,
+          "signal_date": "2026-10-16",
+          "ticker": "SLB"
+        }
+      ],
       "positions": {},
       "trades": [
         {
