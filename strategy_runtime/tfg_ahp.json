@@ -1,10 +1,10 @@
 {
   "event": "schedule",
-  "head_sha": "3dc6292f86bdc4260b9c36d3a78e2f83686fe438",
+  "head_sha": "a363bbeb88ddb8a3fda8af9165d45b67cd68c17c",
   "outcome": "success",
-  "recorded_at_utc": "2026-10-17T01:35:37.548337+00:00",
-  "run_id": 38991425406,
-  "run_number": 5,
+  "recorded_at_utc": "2026-10-17T07:13:29.384141+00:00",
+  "run_id": 39012752421,
+  "run_number": 6,
   "schema_version": 1,
   "workflow_key": "tfg_ahp",
   "workflow_name": "MIDAS TFG corrected paper"
