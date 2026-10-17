@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-17T07:38:24.239821+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/181689912",
+    "published_date": "2026-10-05",
+    "youtube_video_id": "HBXcRvP29f8",
+    "match_score": 0.866,
+    "audio_bytes_processed_transiently": 21904569
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2737.97225,
+      "word_count": 7731,
+      "segment_count": 457,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "HBXcRvP29f8",
+    "youtube_url": "https://www.youtube.com/watch?v=HBXcRvP29f8",
+    "title": "Nuestra Cartera de INVERSIÓN en Octubre | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/181689912",
+    "published_date": "2026-10-05",
+    "source": "official_podcast_mirror",
+    "match_score": 0.866
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute la estrategia de inversión en el método Buy The Dip, enfocándose en la reducción de posiciones en George Capital, la adquisición de nuevas posiciones en secretas, y la influencia de políticas macroeconómicas y riesgos de censura en la valoración y el timing de inversiones. Se analiza el segmento de cine con márgenes del 16% y potencial de crecimiento, aunque el management actual no prioriza crecimiento sobre optimización. Se sugiere que el segmento podría ser una oportunidad de inversión si se logran ajustes en la dirección del negocio y se mejora la rentabilidad. Se menciona la necesidad de actuar rápidamente para aprovechar oportunidades de crecimiento y mejorar la rentabilidad del negocio, mientras se alerta sobre los riesgos macroeconómicos como la inflación y la subida de tipos de interés. Se identifican bancos con depósitos no asegurados y estructura financiera inadecuada, mientras que la empresa Valeura Energy muestra un crecimiento sostenido en producción y desarrollo de yacimientos, con nuevas licencias y proyectos de exploración en Tailandia y Surafí. Se destaca la distribución de excedente de caja por parte de Wav, su buen desempeño operativo y la posibilidad de diversificación en Australia. Se sugiere una estrategia de inversión basada en la valoración de activos con buenos márgenes y la adquisición de nuevos activos en regiones estratégicas.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "El análisis valora el segmento de cine con márgenes del 16% y potencial de crecimiento, aunque el management actual no prioriza crecimiento sobre optimización.",
+        "La empresa Valeura Energy muestra crecimiento sostenido en producción y desarrollo de yacimientos, con nuevas licencias y proyectos de exploración en Tailandia y Surafí."
+      ],
+      "cycle_macro": [
+        "Se menciona la influencia de políticas macroeconómicas en el mercado, afectando la valoración y el timing de las inversiones.",
+        "Se menciona la subida de tipos de interés y su relación con la inflación, lo que podría generar efectos negativos en la economía."
+      ],
+      "entry": [
+        "Se menciona la reducción de posición en George Capital y la adquisición de nuevas posiciones en secretas, con un enfoque en la valoración y el timing de inversiones.",
+        "Se describe la adquisición de nuevas posiciones en secretas, con un enfoque en la valoración y el timing de inversiones."
+      ],
+      "sizing": [
+        "Se menciona la posibilidad de ajustar estrategias para maximizar el valor del negocio y mejorar su posición en el mercado.",
+        "La empresa está desarrollando un tercer activo (Toega) y se sugiere diversificar en Australia."
+      ],
+      "add_hold": [],
+      "exit": [
+        "Se sugiere la posibilidad de vender el negocio a un múltiplo más alto, considerando su crecimiento y rentabilidad.",
+        "Se sugiere comprar activos en Australia si es posible, ya que se considera mejor que los actuales."
+      ],
+      "risk": [
+        "Se señala la posibilidad de censura por políticas, lo que introduce un riesgo de inestabilidad en la comunicación y las decisiones de inversión.",
+        "Se alerta sobre la inflación y su impacto en la demanda, lo que podría afectar la rentabilidad y la liquidez."
+      ],
+      "technical": [
+        "El análisis de los tipos de interés y su impacto en el precio del oro sugiere que el oro podría subir significativamente a largo plazo."
+      ],
+      "management": [
+        "Se sugiere que la gestión del negocio debe mejorar para optimizar los márgenes y aumentar la rentabilidad."
+      ],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El podcast menciona la reducción de posición en George Capital y la adquisición de nuevas posiciones en secretas, con un enfoque en la valoración y el timing de inversiones.",
+          "timestamp": "00:02:11",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona que la valoración de George Capital ha sufrido una caída, lo que influye en la decisión de reducir posiciones y ajustar la cartera.",
+          "timestamp": "00:02:44",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se señala la posibilidad de censura por políticas, lo que introduce un riesgo de inestabilidad en la comunicación y las decisiones de inversión.",
+          "timestamp": "00:02:11",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona la influencia de políticas macroeconómicas en el mercado, afectando la valoración y el timing de las inversiones.",
+          "timestamp": "00:02:11",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se describe la adquisición de nuevas posiciones en secretas, con un enfoque en la valoración y el timing de inversiones.",
+          "timestamp": "00:04:26",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona que la valoración de George Capital ha sufrido una caída, lo que influye en la decisión de reducir posiciones y ajustar la cartera.",
+          "timestamp": "00:02:44",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se señala la posibilidad de censura por políticas, lo que introduce un riesgo de inestabilidad en la comunicación y las decisiones de inversión.",
+          "timestamp": "00:02:11",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona la influencia de políticas macroeconómicas en el mercado, afectando la valoración y el timing de las inversiones.",
+          "timestamp": "00:02:11",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast discute la reducción de posiciones en George Capital, la adquisición de nuevas posiciones en secretas, y la influencia de políticas macroeconómicas y riesgos de censura en la valoración y el timing de inversiones."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El análisis valora el segmento de cine con márgenes del 16% y potencial de crecimiento, aunque el management actual no prioriza crecimiento sobre optimización.",
+          "timestamp": "00:11:15",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El segmento de cine enfrenta riesgos de disrupción y no está en su mejor momento, con márgenes que no reflejan su potencial real.",
+          "timestamp": "00:11:46",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis sugiere que el segmento podría ser una oportunidad de inversión si se logran ajustes en la dirección del negocio y se mejora la rentabilidad.",
+          "timestamp": "00:11:52",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis valora el segmento de cine con márgenes del 16% y potencial de crecimiento, aunque el management actual no prioriza crecimiento sobre optimización. El segmento enfrenta riesgos de disrupción y no está en su mejor momento, con márgenes que no reflejan su potencial real. Se sugiere que el segmento podría ser una oportunidad de inversión si se logran ajustes en la dirección del negocio y se mejora la rentabilidad."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la necesidad de actuar rápidamente para aprovechar oportunidades de crecimiento y mejorar la rentabilidad del negocio.",
+          "timestamp": "00:21:40",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se observa un aumento en el box office y se sugiere que el negocio tiene potencial para generar mayores ingresos.",
+          "timestamp": "00:22:20",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se alerta sobre la inflación y su impacto en la demanda, lo que podría afectar la rentabilidad y la liquidez.",
+          "timestamp": "00:24:47",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona la subida de tipos de interés y su relación con la inflación, lo que podría generar efectos negativos en la economía.",
+          "timestamp": "00:24:27",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "management",
+          "paraphrase": "Se sugiere que la gestión del negocio debe mejorar para optimizar los márgenes y aumentar la rentabilidad.",
+          "timestamp": "00:21:53",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona la posibilidad de ajustar estrategias para maximizar el valor del negocio y mejorar su posición en el mercado.",
+          "timestamp": "00:21:53",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se sugiere la posibilidad de vender el negocio a un múltiplo más alto, considerando su crecimiento y rentabilidad.",
+          "timestamp": "00:22:05",
+          "scope": "hosts",
+          "confidence": 0.7
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento aborda la necesidad de actuar rápidamente para aprovechar oportunidades de crecimiento y mejorar la rentabilidad del negocio, mientras se alerta sobre los riesgos macroeconómicos como la inflación y la subida de tipos de interés. Se sugiere una mejora en la gestión para optimizar márgenes y considera la posibilidad de vender el negocio a un múltiplo más alto. Se menciona el impacto de la inflación en la demanda y la liquidez, lo que podría afectar la rentabilidad del negocio."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de los depósitos no asegurados y su relación con la financiación a corto y largo plazo identifica bancos con riesgos elevados.",
+          "timestamp": "00:33:18",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa Valeura Energy muestra crecimiento sostenido en producción y desarrollo de yacimientos, con nuevas licencias y proyectos de exploración en Tailandia y Surafí.",
+          "timestamp": "00:36:20",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Los bancos con un alto porcentaje de depósitos no asegurados y estructura financiera inadecuada pueden enfrentar problemas durante una corrida bancaria.",
+          "timestamp": "00:33:48",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El análisis de los tipos de interés y su impacto en el precio del oro sugiere que el oro podría subir significativamente a largo plazo.",
+          "timestamp": "00:42:05",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa Valeura Energy está desarrollando proyectos de exploración y producción en nuevas zonas, con expectativas de aumento de producción en 2025.",
+          "timestamp": "00:38:04",
+          "scope": "hosts",
+          "confidence": 0.8
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de riesgos en el sector bancario identifica bancos con depósitos no asegurados y estructura financiera inadecuada, mientras que la empresa Valeura Energy muestra un crecimiento sostenido en producción y desarrollo de yacimientos, con nuevas licencias y proyectos de exploración en Tailandia y Surafí. El análisis de tipos de interés sugiere que el oro podría subir significativamente a largo plazo."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Wav está repartiendo excedente de caja y ha pagado un dividendo con una yield del 5%.",
+          "timestamp": "00:43:38",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa opera con buenos márgenes, no tiene deuda, tiene caja neta y está funcionando eficientemente.",
+          "timestamp": "00:44:08",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La empresa está desarrollando un tercer activo (Toega) y se sugiere diversificar en Australia.",
+          "timestamp": "00:44:16",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se sugiere comprar activos en Australia si es posible, ya que se considera mejor que los actuales.",
+          "timestamp": "00:44:23",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca la distribución de excedente de caja por parte de Wav, su buen desempeño operativo y la posibilidad de diversificación en Australia. Se sugiere una estrategia de inversión basada en la valoración de activos con buenos márgenes y la adquisición de nuevos activos en regiones estratégicas."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
