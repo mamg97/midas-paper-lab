@@ -14,6 +14,10 @@
         {
           "date": "2026-10-15",
           "nav": 100543.48582403809
+        },
+        {
+          "date": "2026-10-16",
+          "nav": 99486.28206233581
         }
       ],
       "events": [
@@ -33,7 +37,7 @@
           "type": "buy"
         }
       ],
-      "nav": 100543.48582403809,
+      "nav": 99486.28206233581,
       "pending": {},
       "positions": {
         "SPY": {
@@ -58,6 +62,10 @@
         {
           "buys": 0,
           "date": "2026-10-15"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-16"
         }
       ],
       "trades": []
@@ -76,6 +84,10 @@
         {
           "date": "2026-10-15",
           "nav": 98815.31702361869
+        },
+        {
+          "date": "2026-10-16",
+          "nav": 99525.13915010996
         }
       ],
       "events": [
@@ -137,7 +149,7 @@
           "type": "buy"
         }
       ],
-      "nav": 98815.31702361869,
+      "nav": 99525.13915010996,
       "pending": {},
       "positions": {
         "ABBV": {
@@ -225,12 +237,16 @@
         {
           "buys": 0,
           "date": "2026-10-15"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-16"
         }
       ],
       "trades": []
     },
     "buy_hold_equal_weight": {
-      "cash": 7455.323470383022,
+      "cash": 7457.147278763023,
       "equity": [
         {
           "date": "2026-10-12",
@@ -243,6 +259,10 @@
         {
           "date": "2026-10-15",
           "nav": 100646.66303478436
+        },
+        {
+          "date": "2026-10-16",
+          "nav": 100390.26786123197
         }
       ],
       "events": [
@@ -3272,61 +3292,139 @@
           "shares": 2.45872,
           "ticker": "ZTS",
           "type": "buy"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "AVB",
+          "type": "unfilled_missing_dated_bar"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "BK",
+          "type": "unfilled_missing_dated_bar"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "CTRA",
+          "type": "unfilled_missing_dated_bar"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "DAY",
+          "type": "unfilled_missing_dated_bar"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "EA",
+          "type": "unfilled_missing_dated_bar"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "EQR",
+          "type": "unfilled_missing_dated_bar"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "FI",
+          "type": "unfilled_missing_dated_bar"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "HOLX",
+          "type": "unfilled_missing_dated_bar"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "IPG",
+          "type": "unfilled_missing_dated_bar"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "K",
+          "type": "unfilled_missing_dated_bar"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "MMC",
+          "type": "unfilled_missing_dated_bar"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "WBA",
+          "type": "unfilled_missing_dated_bar"
+        },
+        {
+          "date": "2026-10-16",
+          "reason": "required same-session OHLC unavailable",
+          "ticker": "WBD",
+          "type": "unfilled_missing_dated_bar"
         }
       ],
-      "nav": 100646.66303478436,
+      "nav": 100390.26786123197,
       "pending": {
         "AVB": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         },
         "BK": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         },
         "CTRA": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         },
         "DAY": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         },
         "EA": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         },
         "EQR": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         },
         "FI": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         },
         "HOLX": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         },
         "IPG": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         },
         "K": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         },
         "MMC": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         },
         "WBA": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         },
         "WBD": {
           "side": "buy",
-          "signal_date": "2026-10-15"
+          "signal_date": "2026-10-16"
         }
       },
       "positions": {
@@ -4736,7 +4834,7 @@
         },
         "EOG": {
           "cost": 188.86666483434746,
-          "dividends": 0.0,
+          "dividends": 1.24100238,
           "entry_date": "2026-10-15",
           "entry_price": 155.0775,
           "shares": 1.216669,
@@ -7625,7 +7723,7 @@
         },
         "WSM": {
           "cost": 188.86672051362478,
-          "dividends": 0.0,
+          "dividends": 0.582806,
           "entry_date": "2026-10-15",
           "entry_price": 246.04295816802977,
           "shares": 0.76685,
@@ -7753,6 +7851,10 @@
         {
           "buys": 13,
           "date": "2026-10-15"
+        },
+        {
+          "buys": 13,
+          "date": "2026-10-16"
         }
       ],
       "trades": []
@@ -7771,6 +7873,10 @@
         {
           "date": "2026-10-15",
           "nav": 100264.52577095128
+        },
+        {
+          "date": "2026-10-16",
+          "nav": 100755.69283409244
         }
       ],
       "events": [
@@ -7832,7 +7938,7 @@
           "type": "buy"
         }
       ],
-      "nav": 100264.52577095128,
+      "nav": 100755.69283409244,
       "pending": {},
       "positions": {
         "BAX": {
@@ -7920,6 +8026,10 @@
         {
           "buys": 0,
           "date": "2026-10-15"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-16"
         }
       ],
       "trades": []
@@ -7938,6 +8048,10 @@
         {
           "date": "2026-10-15",
           "nav": 100564.05436455322
+        },
+        {
+          "date": "2026-10-16",
+          "nav": 101140.74307369607
         }
       ],
       "events": [
@@ -7999,7 +8113,7 @@
           "type": "buy"
         }
       ],
-      "nav": 100564.05436455322,
+      "nav": 101140.74307369607,
       "pending": {},
       "positions": {
         "ABT": {
@@ -8087,6 +8201,10 @@
         {
           "buys": 0,
           "date": "2026-10-15"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-16"
         }
       ],
       "trades": []
@@ -8105,6 +8223,10 @@
         {
           "date": "2026-10-15",
           "nav": 99811.38942075326
+        },
+        {
+          "date": "2026-10-16",
+          "nav": 99229.27944590827
         }
       ],
       "events": [
@@ -8166,7 +8288,7 @@
           "type": "buy"
         }
       ],
-      "nav": 99811.38942075326,
+      "nav": 99229.27944590827,
       "pending": {},
       "positions": {
         "AAPL": {
@@ -8254,6 +8376,10 @@
         {
           "buys": 0,
           "date": "2026-10-15"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-16"
         }
       ],
       "trades": []
@@ -8272,6 +8398,10 @@
         {
           "date": "2026-10-15",
           "nav": 101448.95257703691
+        },
+        {
+          "date": "2026-10-16",
+          "nav": 100768.67567919599
         }
       ],
       "events": [
@@ -8333,7 +8463,7 @@
           "type": "buy"
         }
       ],
-      "nav": 101448.95257703691,
+      "nav": 100768.67567919599,
       "pending": {},
       "positions": {
         "BEN": {
@@ -8421,6 +8551,10 @@
         {
           "buys": 0,
           "date": "2026-10-15"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-16"
         }
       ],
       "trades": []
@@ -8439,6 +8573,10 @@
         {
           "date": "2026-10-15",
           "nav": 99209.85926620034
+        },
+        {
+          "date": "2026-10-16",
+          "nav": 98723.99243266626
         }
       ],
       "events": [
@@ -8500,7 +8638,7 @@
           "type": "buy"
         }
       ],
-      "nav": 99209.85926620034,
+      "nav": 98723.99243266626,
       "pending": {},
       "positions": {
         "COST": {
@@ -8588,6 +8726,10 @@
         {
           "buys": 0,
           "date": "2026-10-15"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-16"
         }
       ],
       "trades": []
@@ -8606,6 +8748,10 @@
         {
           "date": "2026-10-15",
           "nav": 99189.15573042184
+        },
+        {
+          "date": "2026-10-16",
+          "nav": 98865.0045970975
         }
       ],
       "events": [
@@ -8667,7 +8813,7 @@
           "type": "buy"
         }
       ],
-      "nav": 99189.15573042184,
+      "nav": 98865.0045970975,
       "pending": {},
       "positions": {
         "ABBV": {
@@ -8755,6 +8901,10 @@
         {
           "buys": 0,
           "date": "2026-10-15"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-16"
         }
       ],
       "trades": []
@@ -8797,13 +8947,35 @@
         "WBA",
         "WBD"
       ]
+    },
+    {
+      "date": "2026-10-16",
+      "eligible": 503,
+      "missing": {},
+      "ticker_coverage_pct": 100.0,
+      "total": 503,
+      "unfilled_pending_buys_missing_bar": [
+        "AVB",
+        "BK",
+        "CTRA",
+        "DAY",
+        "EA",
+        "EQR",
+        "FI",
+        "HOLX",
+        "IPG",
+        "K",
+        "MMC",
+        "WBA",
+        "WBD"
+      ]
     }
   ],
   "currency": "USD",
   "engine": "classic_sp500_next_open_v2",
   "first_session": "2026-10-12",
   "initial_capital": 100000,
-  "last_session": "2026-10-15",
+  "last_session": "2026-10-16",
   "missed_sessions": [
     "2026-10-13"
   ],
