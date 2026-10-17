@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-17T18:58:33.264444+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/111377988",
+    "published_date": "2023-06-28",
+    "youtube_video_id": "J-ttbHPHfOM",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 38188555
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 4773.511875,
+      "word_count": 13205,
+      "segment_count": 2305,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "J-ttbHPHfOM",
+    "youtube_url": "https://www.youtube.com/watch?v=J-ttbHPHfOM",
+    "title": "Nuestra Cartera de INVERSIÓN en Junio | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/111377988",
+    "published_date": "2023-06-28",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute transacciones de inversión en acciones de empresas como Cineplex, Adriatic, y posiciones secretas, así como ventas de Meta. Se analizan oportunidades en empresas de valor, como Fanny Ma, Freddie Mac, Geo Group y mineras, con enfoque en situaciones especiales y riesgos moderados. Se menciona una empresa con alta volatilidad y liquidez, posibilidades de pérdida significativa, y un potencial de rentabilidad extremadamente alta. También se analiza una empresa con preferentes acumulativas y un valor par elevado, que podría generar ganancias si se cumplen condiciones específicas, aunque con un riesgo elevado de no pagar dividendos. Se evalúa un proyecto de minería de oro con TIR baja y riesgo elevado, sugiriendo reducir la posición. Se destacan oportunidades en Babcock, con contratos a largo plazo con la Royal Navy, márgenes de 7,3%, y un valor atractivo en comparación con competidores. Se mencionan decisiones de entrada y salida en activos mineros basadas en valoración, riesgo y crecimiento potencial, con enfoque en tesis a largo plazo y gestión de riesgos.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Se destacan empresas con alta potencial, como Georgia Capital, que crece a doble dígito y tiene un TAM grande, sugiriendo una valoración positiva.",
+        "Babcock tiene márgenes de 7,3% con oportunidades de mejora en segmentos específicos.",
+        "Babcock es un negocio estable con retornos sobre capital elevados, aunque su valor actual es atractivo en comparación con competidores europeos."
+      ],
+      "cycle_macro": [
+        "La empresa tiene activos con valor real, pero su valor está subestimado debido a directivos que diluyen el capital y no generan valor."
+      ],
+      "entry": [
+        "Se menciona que Fanny Ma y Freddie Mac están en una situación especial, con un timing pésimo y pérdidas, pero se confía en la tesis administrativa.",
+        "El activo está entrando en producción con resultados de exploración prometedores, lo que podría elevar su valor.",
+        "Babcock es un negocio estable con retornos sobre capital elevados, aunque su valor actual es atractivo en comparación con competidores."
+      ],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [
+        "Se menciona la posibilidad de vender Meta debido a su crecimiento excesivo y reinvertir en empresas con más potencial.",
+        "La empresa tiene potencial de crecimiento, pero su valor está subestimado por directivos que diluyen el capital."
+      ],
+      "risk": [
+        "Se destaca que las empresas en sectores cíclicos, como las mineras, están muy baratas, pero con riesgos significativos, aunque a precios actuales se consideran atractivas.",
+        "La empresa tiene un alto riesgo de volatilidad y liquidez extremadamente alta, con posibilidades de pérdida del 100% y rentabilidades potenciales del 2000% en días cortos.",
+        "El proyecto tiene un riesgo elevado debido a la ubicación en Bosnia, un país con menos conocimiento en la minería."
+      ],
+      "technical": [
+        "Se reportan hallazgos de mineralización de cobre, oro, zinc y plomo con concentraciones superiores a 6 gramos de oro y 4,25% de cobre."
+      ],
+      "management": [
+        "La empresa está ampliando su equipo de construcción y continúa con exploración, lo que refleja una estrategia de crecimiento sostenible."
+      ],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El podcast discute transacciones de inversión, incluyendo compras de acciones de Cineplex, Adriatic, y posiciones secretas, así como ventas de Meta.",
+          "timestamp": "00:01:49",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se menciona la posibilidad de vender Meta debido a su crecimiento excesivo y reinvertir en empresas con más potencial.",
+          "timestamp": "00:05:16",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se destacan empresas con alta potencial, como Georgia Capital, que crece a doble dígito y tiene un TAM grande, sugiriendo una valoración positiva.",
+          "timestamp": "00:09:19",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast discute transacciones de inversión, incluyendo compras y ventas de acciones, y analiza la valoración de empresas con alto potencial de crecimiento."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona que Fanny Ma y Freddie Mac están en una situación especial, con un timing pésimo y pérdidas, pero se confía en la tesis administrativa.",
+          "timestamp": "00:10:33",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se indica que Geo Group está muy atractiva a precios actuales, pero no se ampliarán las posiciones por ahora debido a la evaluación de otras oportunidades más atractivas.",
+          "timestamp": "00:12:21",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se destaca que las empresas en sectores cíclicos, como las mineras, están muy baratas, pero con riesgos significativos, aunque a precios actuales se consideran atractivas.",
+          "timestamp": "00:16:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis menciona oportunidades en empresas de valor, como Fanny Ma, Freddie Mac, Geo Group y mineras, con enfoque en situaciones especiales y riesgos moderados. Se confía en tesis a largo plazo, aunque hay pérdidas temporales, y se consideran oportunidades atractivas a precios actuales, con una evaluación de riesgo moderado."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa tiene un alto riesgo de volatilidad y liquidez extremadamente alta, con posibilidades de pérdida del 100% y rentabilidades potenciales del 2000% en días cortos.",
+          "timestamp": "00:25:00",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa cotiza a céntimos, con un valor par elevado (decenas de dólares), y tiene preferentes acumulativas que guardan dividendos pendientes, lo que podría generar un valor superior al par en caso de reestructuración.",
+          "timestamp": "00:26:16",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa tiene un alto potencial de rentabilidad si se cumplen condiciones específicas, pero con un 70% de posibilidades de que salga mal, lo que la hace poco estable para inversiones a largo plazo.",
+          "timestamp": "00:24:32",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca una empresa con alta volatilidad y liquidez, posibilidades de pérdida significativa, y un potencial de rentabilidad extremadamente alto. También menciona una empresa con preferentes acumulativas y un valor par elevado, que podría generar ganancias si se cumplen condiciones específicas, aunque con un riesgo elevado de no pagar dividendos. Ambas empresas son consideradas de alto riesgo, pero con potencial de retorno elevado."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa tiene activos con valor real, pero hay directivos que diluyen el capital y no generan valor.",
+          "timestamp": "00:27:20",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa tiene activos rentables, pero su valor está subestimado debido a directivos que no generan valor.",
+          "timestamp": "00:27:30",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa tiene un alto riesgo de dilución por directivos que no generan valor, afectando su capital.",
+          "timestamp": "00:29:34",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La empresa tiene potencial de crecimiento, pero su valor está subestimado por directivos que diluyen el capital.",
+          "timestamp": "00:31:00",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La empresa tiene activos con valor real, pero su valor está subestimado debido a directivos que diluyen el capital y no generan valor.",
+          "timestamp": "00:31:12",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis identifica que la empresa tiene activos con valor real, pero su valor está subestimado debido a directivos que diluyen el capital y no generan valor. A pesar de esto, la empresa tiene potencial de crecimiento, pero su valor está subestimado por directivos que diluyen el capital. La empresa tiene un alto riesgo de dilución por directivos que no generan valor, afectando su capital. La empresa tiene activos con valor real, pero hay directivos que diluyen el capital y no generan valor. La empresa tiene un alto riesgo de dilución por directivos que no generan valor, afectando su capital."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El activo está entrando en producción y se espera que el primer concentrado esté listo para noviembre.",
+          "timestamp": "00:38:28",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa podría valer entre 5 y 6 dólares, con potencial para duplicar su valor si se considera la exploración.",
+          "timestamp": "00:42:00",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El proyecto tiene un riesgo reducido debido a los avances en exploración y construcción, aunque se menciona la posibilidad de retrasos.",
+          "timestamp": "00:38:48",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se reportan hallazgos de mineralización de cobre, oro, zinc y plomo con concentraciones superiores a 6 gramos de oro y 4,25% de cobre.",
+          "timestamp": "00:36:04",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "management",
+          "paraphrase": "La empresa está ampliando su equipo de construcción y continúa con exploración, lo que refleja una estrategia de crecimiento sostenible.",
+          "timestamp": "00:38:54",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El activo está en fase de producción con resultados de exploración prometedores, lo que podría elevar su valor. La empresa tiene un riesgo reducido y una estrategia de crecimiento sostenible, aunque se menciona la posibilidad de retrasos en la construcción. La valoración se basa en la mineralización y el potencial de producción, con un precio actual de 3 dólares y un potencial de duplicación si se considera la exploración."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El precio del petróleo y el hype influyeron en la valoración del activo, pero su impacto ha disminuido. La empresa ha mejorado su posición con proyectos de capex y una vida útil ampliada de 6 años a 15 años, generando un IRR del 480%.",
+          "timestamp": "00:45:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La discusión sobre el precio del petróleo y el hype ha llevado a una decisión de entrada, aunque se menciona que el precio actual no es ideal. Sin embargo, se espera que la acción vaya a subir con un P.A. y un buen desempeño en el futuro.",
+          "timestamp": "00:45:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona que el activo tiene un riesgo elevado debido a la dependencia del precio del oro y la tasa de descuento, pero se espera que la vida útil del proyecto se alargue con exploraciones adicionales, reduciendo el riesgo a largo plazo.",
+          "timestamp": "00:45:02",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis discute la valoración de un activo minero basado en el precio del petróleo y el oro, mencionando el impacto del hype, la dependencia del precio del oro, la vida útil del proyecto, y el IRR alto. Se sugiere una posible entrada en el mercado, aunque se advierte el riesgo asociado a la volatilidad del precio del oro y la tasa de descuento."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona que no considera el proyecto de oro como atractivo debido a una tasa interna de retorno (TIR) baja y sugiere reducir la posición si no hay mejoras en los números del proyecto.",
+          "timestamp": "00:54:25",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista compara el proyecto con otras empresas, señalando que aunque cotiza a los mismos múltiplos que Adriatic Metals, su TIR es significativamente inferior, lo que sugiere un valoración no atractiva.",
+          "timestamp": "00:57:01",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista menciona que el proyecto tiene un riesgo elevado debido a la ubicación en Bosnia, un país con menos conocimiento en la minería, y sugiere que el riesgo no es comparable al de Adriatic Metals.",
+          "timestamp": "00:57:15",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El analista evalúa un proyecto de minería de oro, considera que no es atractivo debido a una TIR baja y un riesgo elevado, sugiere reducir la posición y esperar precios más asequibles. Compara el proyecto con otras empresas, destacando que aunque cotiza a los mismos múltiplos, su TIR es significativamente inferior, lo que sugiere una valoración no atractiva. Finalmente, menciona que el proyecto tiene un riesgo elevado debido a la ubicación en Bosnia, un país con menos conocimiento en la minería, y sugiere que el riesgo no es comparable al de Adriatic Metals."
+    },
+    {
+      "chunk": 8,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis destaca la importancia de Babcock en la defensa británica, destacando su negocio de astilleros irreplicables y su rol en la flota naval.",
+          "timestamp": "01:11:44",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Babcock tiene contratos de larga duración con la Royal Navy, incluyendo mantenimiento de submarinos nucleares y reparaciones de la flota militar británica.",
+          "timestamp": "01:12:00",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa ha enfrentado problemas financieros y operativos, incluyendo adquisiciones fallidas y impactos del Brexit, pero mantiene un negocio core sólido.",
+          "timestamp": "01:10:28",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca la importancia de Babcock en la defensa británica, resaltando su negocio de astilleros irreplicables, contratos a largo plazo con la Royal Navy, y su resiliencia frente a desafíos financieros y operativos, aunque con una historia de problemas pasados."
+    },
+    {
+      "chunk": 9,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "Bacock tiene márgenes de 7,3% con oportunidades de mejora en segmentos específicos.",
+          "timestamp": "01:15:54",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Bacock es un negocio estable con retornos sobre capital elevados, aunque su valor actual es atractivo en comparación con competidores europeos.",
+          "timestamp": "01:14:10",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Bacock enfrenta desafíos operativos como acceso limitado y falta de espacio, pero ha mejorado su eficiencia y reducido deuda.",
+          "timestamp": "01:12:36",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca que Bacock tiene un negocio estable con márgenes de 7,3%, oportunidades de mejora en segmentos específicos, y un valor atractivo en comparación con competidores europeos. Aunque enfrenta desafíos operativos, ha mejorado su eficiencia y reducido deuda, lo que sugiere un potencial de crecimiento a largo plazo."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
