@@ -13,13 +13,15 @@ from pathlib import Path
 VALID_OUTCOMES = {"success", "failure", "cancelled", "skipped"}
 
 
-def build_record(workflow_key, workflow_name, outcome, run_id, run_number, head_sha, recorded_at=None):
+def build_record(workflow_key, workflow_name, outcome, run_id, run_number, head_sha, recorded_at=None, run_attempt=1):
     if not workflow_key or not workflow_name:
         raise ValueError("workflow identity required")
     if outcome not in VALID_OUTCOMES:
         raise ValueError("unknown workflow outcome: " + str(outcome))
-    if not str(run_id).isdigit() or not str(run_number).isdigit():
+    if not str(run_id).isdigit() or not str(run_number).isdigit() or not str(run_attempt).isdigit():
         raise ValueError("GitHub run identifiers must be numeric")
+    if min(int(run_id), int(run_number), int(run_attempt)) < 1:
+        raise ValueError("GitHub run identifiers must be positive")
     stamp = recorded_at or datetime.now(timezone.utc).isoformat()
     if not isinstance(stamp, str) or not stamp:
         raise ValueError("recorded_at required")
@@ -31,6 +33,7 @@ def build_record(workflow_key, workflow_name, outcome, run_id, run_number, head_
         "outcome": outcome,
         "run_id": int(run_id),
         "run_number": int(run_number),
+        "run_attempt": int(run_attempt),
         "head_sha": str(head_sha or "")[:40],
         "recorded_at_utc": stamp,
     }
@@ -56,11 +59,12 @@ def main(argv=None):
     parser.add_argument("--outcome", required=True)
     parser.add_argument("--run-id", required=True)
     parser.add_argument("--run-number", required=True)
+    parser.add_argument("--run-attempt", default=os.environ.get("GITHUB_RUN_ATTEMPT", "1"))
     parser.add_argument("--head-sha", default="")
     args = parser.parse_args(argv)
     record = build_record(
         args.workflow_key, args.workflow_name, args.outcome,
-        args.run_id, args.run_number, args.head_sha,
+        args.run_id, args.run_number, args.head_sha, run_attempt=args.run_attempt,
     )
     atomic_write(args.output, record)
     print(json.dumps(record, ensure_ascii=False))
