@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import time
 import sys
@@ -43,11 +44,65 @@ def existing(paths):
     return [path for path in paths if Path(path).exists()]
 
 
+def runtime_rank(record):
+    """Compare only GitHub scheduled run identity, never P&L or timestamp."""
+    if not isinstance(record, dict) or record.get("event") != "schedule":
+        return None
+    try:
+        run = int(record["run_number"])
+        attempt = int(record.get("run_attempt", 1))
+        if run < 1 or attempt < 1:
+            return None
+        return (record["workflow_key"], run, attempt)
+    except (KeyError, TypeError, ValueError):
+        return None
+
+
+def should_restore_runtime(candidate, current):
+    source, target = runtime_rank(candidate), runtime_rank(current)
+    return (source is not None
+            and (target is None or (source[0] == target[0]
+            and source[1:] > target[1:])))
+
+
+def preserve_newer_runtime(records):
+    """Rebase keeps upstream for conflicts; restore only a truly newer owned run.
+
+    Never overwrite a newer workflow attempt or another workflow's state.
+    """
+    changed = []
+    for path, candidate in records.items():
+        existing_record = None
+        try:
+            existing_record = json.loads(Path(path).read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            pass
+        if should_restore_runtime(candidate, existing_record):
+            Path(path).parent.mkdir(parents=True, exist_ok=True)
+            Path(path).write_text(
+                json.dumps(candidate, sort_keys=True, indent=2, ensure_ascii=False) + "\\n",
+                encoding="utf-8",
+            )
+            changed.append(path)
+    return changed
+
+
 def publish(message, paths, attempts=8):
     git("config", "user.name", "github-actions[bot]")
     git("config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com")
 
     tracked = list(dict.fromkeys(existing(paths) + existing(DASHBOARD_PATHS)))
+    # Save only public, owned runtime stamps before rebase. State writers may
+    # concurrently update the same path; a later successful retry must survive.
+    runtime_records = {}
+    for path in tracked:
+        if path.startswith("strategy_runtime/") and path.endswith(".json"):
+            try:
+                candidate = json.loads(Path(path).read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                continue
+            if runtime_rank(candidate) is not None:
+                runtime_records[path] = candidate
     if tracked:
         git("add", "--", *tracked)
     if git("diff", "--cached", "--quiet", check=False).returncode == 0:
@@ -65,7 +120,9 @@ def publish(message, paths, attempts=8):
         # Si el rebase ha descartado nuestro commit porque exactamente el mismo
         # estado ya llegó a main desde otro run concurrente, el objetivo está
         # cumplido. No creemos un commit nuevo solo por regenerar dashboard.
-        if commits_ahead_of_main() == 0:
+        upstream_ahead = commits_ahead_of_main()
+        restored = preserve_newer_runtime(runtime_records)
+        if upstream_ahead == 0 and not restored:
             print(f"MIDAS publish: owned state already upstream on attempt {attempt}")
             return 0
 
@@ -73,7 +130,13 @@ def publish(message, paths, attempts=8):
         tracked = list(dict.fromkeys(existing(paths) + existing(DASHBOARD_PATHS)))
         if tracked:
             git("add", "--", *tracked)
-        if git("diff", "--cached", "--quiet", check=False).returncode != 0:
+        staged = git("diff", "--cached", "--quiet", check=False).returncode != 0
+        if upstream_ahead == 0:
+            if not staged:
+                print(f"MIDAS publish: no owned changes after rebase on attempt {attempt}")
+                return 0
+            git("commit", "-m", message)
+        elif staged:
             git("commit", "--amend", "--no-edit")
         pushed = git("push", "origin", "HEAD:main", check=False)
         if pushed.returncode == 0:
