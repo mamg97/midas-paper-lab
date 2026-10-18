@@ -111,11 +111,34 @@ def _extract_download(data, ticker):
     return out.loc[valid]
 
 
-def download_panel(tickers, *, period, asof, min_history=1):
+def download_panel(tickers, *, period, asof, min_history=1, required=()):
+    """Only retry active exposure and benchmark with exact dated Yahoo bars.
+
+    Recovery must not use a prior close or pretend a missing daily mark exists.
+    """
     import yfinance as yf
 
     tickers = list(dict.fromkeys(tickers))
+    required = set(required)
+    if not required <= set(tickers):
+        raise ValueError("Required quote outside requested symbols")
     panel, failures = {}, {}
+
+    def absorb(ticker, data):
+        frame = _extract_download(data, ticker)
+        if frame is None:
+            failures[ticker] = "download_empty"
+            return
+        frame = frame.loc[frame.index.date <= datetime.fromisoformat(asof).date()]
+        if frame.empty or frame.index[-1].date().isoformat() != asof:
+            failures[ticker] = "missing_asof"
+            return
+        if len(frame) < min_history:
+            failures[ticker] = f"history_{len(frame)}"
+            return
+        panel[ticker] = frame
+        failures.pop(ticker, None)
+
     for start in range(0, len(tickers), 60):
         chunk = tickers[start:start + 60]
         data = yf.download(
@@ -123,18 +146,20 @@ def download_panel(tickers, *, period, asof, min_history=1):
             group_by="ticker", threads=True, progress=False,
         )
         for ticker in chunk:
-            frame = _extract_download(data, ticker)
-            if frame is None:
-                failures[ticker] = "download_empty"
-                continue
-            frame = frame.loc[frame.index.date <= datetime.fromisoformat(asof).date()]
-            if frame.empty or frame.index[-1].date().isoformat() != asof:
-                failures[ticker] = "missing_asof"
-                continue
-            if len(frame) < min_history:
-                failures[ticker] = f"history_{len(frame)}"
-                continue
-            panel[ticker] = frame
+            absorb(ticker, data)
+
+    # Yahoo can drop all tickers in a batch transiently. Retry at most once per
+    # required symbol, in isolation, on the same closed session. This must not
+    # download or reweight every one of the 503 candidates.
+    for ticker in sorted(required - set(panel)):
+        try:
+            data = yf.download(
+                [ticker], period=period, interval="1d", auto_adjust=False,
+                actions=True, group_by="ticker", threads=False, progress=False,
+            )
+            absorb(ticker, data)
+        except Exception as exc:
+            failures[ticker] = "isolated_retry_" + type(exc).__name__
     return panel, failures
 
 
