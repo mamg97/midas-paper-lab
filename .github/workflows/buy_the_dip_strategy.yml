@@ -17,6 +17,8 @@ on:
   schedule:
     # Daily valuation after XNYS close. Fundamentals/ranking are monthly.
     - cron: '27 23 * * 1-5'
+    # Backup after vendor settlement; within audit grace for the same XNYS close.
+    - cron: '17 4 * * 2-6'
   workflow_dispatch:
     inputs:
       record_session:
@@ -63,6 +65,7 @@ jobs:
             --outcome "${{ steps.execute.outcome }}" \
             --run-id "$GITHUB_RUN_ID" \
             --run-number "$GITHUB_RUN_NUMBER" \
+            --run-attempt "$GITHUB_RUN_ATTEMPT" \
             --head-sha "$GITHUB_SHA"
       - name: Refresh all-strategy dashboard
         if: ${{ always() && github.event_name != 'pull_request' }}
