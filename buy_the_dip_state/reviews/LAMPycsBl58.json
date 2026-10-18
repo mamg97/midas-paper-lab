@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-18T08:07:31.282526+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/55187496",
+    "published_date": "2020-08-14",
+    "youtube_video_id": "LAMPycsBl58",
+    "match_score": 0.91098,
+    "audio_bytes_processed_transiently": 29322597
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 3665.3191875,
+      "word_count": 10644,
+      "segment_count": 898,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "LAMPycsBl58",
+    "youtube_url": "https://www.youtube.com/watch?v=LAMPycsBl58",
+    "title": "BUY THE DIP PODCAST: EPISODIO 12 RESUMEN DEL MES DE JULIO",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/55187496",
+    "published_date": "2020-08-14",
+    "source": "official_podcast_mirror",
+    "match_score": 0.91098
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza la estrategia de inversión en el mercado del oro, destacando la corrección de precios y su impacto en las empresas mineras, así como la adición de nuevas tesis de inversión basada en análisis de mercado. Se menciona la posibilidad de correcciones futuras y la importancia de mantener un enfoque positivo a largo plazo. También se discuten factores como la volatilidad política y económica, la política monetaria, y el impacto de eventos globales como los sucesos en China. Se analizan errores históricos, como los decisiones políticas de Napoleón, y se reflejan hábitos de vida y reflexión personal del speaker, incluyendo lectura histórica y autocuidado. Se mencionan aspectos técnicos como el impacto de la infraestructura eléctrica en el cobre y la valoración de empresas con alto crecimiento. Se discuten riesgos, estrategias de entrada y salida, y la necesidad de mantener contenidos actualizados.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "El precio del oro ha experimentado una corrección desde los 2100 dólares hasta alrededor de 1600-1500 dólares, afectando los cálculos de valor presente neto (NPV) de las empresas mineras.",
+        "El re-rating del oro a 2.000 no se reflejó en las acciones, sugiriendo que los analistas no ajustaron los precios de las mineras."
+      ],
+      "cycle_macro": [
+        "El secretario del tesoro mencionó un tweet sobre usar el efectivo para estimular la economía, indicando un aumento en la demanda de dinero y posibles políticas monetarias expansivas."
+      ],
+      "entry": [
+        "Se menciona la adición de la tesis de Adriatic a la cartera, indicando una estrategia de inversión basada en la revisión de análisis de tesis y la incorporación de activos según el análisis de mercado.",
+        "Se menciona la posibilidad de que la cartera se ajuste si gana un demócrata, reflejando una estrategia basada en la volatilidad política y económica."
+      ],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [
+        "Se menciona un lanzamiento de producto con fecha establecida para el 10 de septiembre de 2020."
+      ],
+      "risk": [
+        "Se advierte la posibilidad de correcciones en el mercado del oro, lo que implica un riesgo de fluctuación en los precios que puede afectar a las empresas mineras y a la cartera de inversión.",
+        "Se advierte la posibilidad de que la volatilidad política y económica afecte a la cartera, especialmente si gana un candidato con un historial de políticas económicas distintas.",
+        "La dependencia de figuras como Tallien para el poder político de Napoleón representa un riesgo, ya que su influencia y lealtad pueden afectar la estabilidad del gobierno."
+      ],
+      "technical": [
+        "Se menciona la posibilidad de que los precios del petróleo recuperen su nivel, lo que podría multiplicar los bonos de Chispic Energy por 50, sugiriendo una estrategia basada en la volatilidad del petróleo.",
+        "Se analiza el impacto de factores como la infraestructura eléctrica en el precio del cobre."
+      ],
+      "management": [],
+      "mistakes": [
+        "Napoleón tuvo un error al no fusilar a los ministros Fouché y Tallien, quienes eran críticos y peligrosos, lo que podría haber evitado problemas políticos."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El precio del oro ha experimentado una corrección desde los 2100 dólares hasta alrededor de 1600-1500 dólares, lo que afecta los cálculos de valor presente neto (NPV) de las empresas mineras.",
+          "timestamp": "00:07:43",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adición de la tesis de Adriatic a la cartera, indicando una estrategia de inversión basada en la revisión de análisis de tesis y la incorporación de activos según el análisis de mercado.",
+          "timestamp": "00:06:14",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se advierte la posibilidad de correcciones en el mercado del oro, lo que implica un riesgo de fluctuación en los precios que puede afectar a las empresas mineras y a la cartera de inversión.",
+          "timestamp": "00:09:12",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento aborda la estrategia de inversión en el mercado del oro, destacando la corrección de precios, el impacto en los cálculos de valor presente neto (NPV) de las empresas mineras, y la adición de nuevas tesis de inversión basada en análisis de mercado. Se menciona la posibilidad de correcciones futuras y la importancia de mantener un enfoque positivo a largo plazo, considerando factores como los experimentos monetarios."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El re-rating del oro a 2.000 no se reflejó en las acciones, lo que sugiere que los analistas no ajustaron los precios de las mineras.",
+          "timestamp": "00:10:42",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El secretario del tesoro mencionó un tweet sobre usar el efectivo para estimular la economía, lo que indica un aumento en la demanda de dinero y posibles políticas monetarias expansivas.",
+          "timestamp": "00:11:23",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la posibilidad de que la cartera se ajuste si gana un demócrata, lo que refleja una estrategia basada en la volatilidad política y económica.",
+          "timestamp": "00:14:53",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se advierte la posibilidad de que la volatilidad política y económica afecte a la cartera, especialmente si gana un candidato con un historial de políticas económicas distintas.",
+          "timestamp": "00:14:53",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se menciona la posibilidad de que los precios del petróleo recuperen su nivel, lo que podría multiplicar los bonos de Chispic Energy por 50, sugiriendo una estrategia basada en la volatilidad del petróleo.",
+          "timestamp": "00:19:19",
+          "scope": "hosts",
+          "confidence": 0.4,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis discute la estrategia de inversión basada en la volatilidad del oro, el petróleo y la política económica, destacando la posibilidad de ajustes en la cartera según la volatilidad política y económica, así como la influencia de las políticas monetarias y la volatilidad del petróleo en los bonos."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El speaker menciona que ya no tiene posición en Rock Rose y que vendió toda su posición en esa empresa debido a la falta de contraparte.",
+          "timestamp": "00:20:02",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El speaker comenta que la empresa Fánima fue robada por sus accionistas, lo que le causó una pérdida financiera significativa.",
+          "timestamp": "00:20:24",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "parrafe": "El speaker menciona la posibilidad de que los eventos en China afecten a los mercados financieros, sugiriendo que no se puede predecir con certeza lo que ocurrirá en ese país.",
+          "timestamp": "00:21:15",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El speaker analiza la estrategia de inversión en el petróleo y otros activos, menciona la venta de posiciones en Rock Rose y Fánima, y explica la incertidumbre sobre los efectos de los eventos en China en los mercados financieros."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El equipo discute la actualización de contenidos y la necesidad de mantenerlos al día.",
+          "timestamp": "00:29:34",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona una empresa con capitalización de 200 millones y un crecimiento del 370% desde 2016.",
+          "timestamp": "00:33:33",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se analiza el impacto de factores como la infraestructura eléctrica en el precio del cobre.",
+          "timestamp": "00:37:02",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se discute la posibilidad de que las empresas sufran pérdidas debido a la volatilidad del mercado.",
+          "timestamp": "00:37:38",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se menciona un lanzamiento de producto con fecha establecida para el 10 de septiembre de 2020.",
+          "timestamp": "00:34:12",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de inversión discute la actualización de contenidos, la valoración de una empresa con alta capitalización y crecimiento, el análisis técnico de factores como la infraestructura eléctrica, la gestión de riesgos en el mercado y el lanzamiento de un nuevo producto con una fecha establecida."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El usuario menciona que este mes ha sido muy difícil, con un ritmo de vida similar al de un proletario ruso, trabajando y emborrachándose repetidamente.",
+          "timestamp": "00:41:13",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El usuario describe una rutina de vida que incluye el uso de desinfectante, el cuidado de la piel, y la adicción a la música y los audiolibros, lo que refleja un estilo de vida moderado pero con hábitos de autocuidado.",
+          "timestamp": "00:41:53",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "El usuario menciona que ha terminado una biografía sobre Napoleón, lo que sugiere un interés en lectura histórica y un análisis personal de la vida y el legado de un líder histórico.",
+          "timestamp": "00:47:01",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe una serie de actividades y reflexiones del usuario sobre su vida diaria, incluyendo un ritmo de trabajo y ocio, hábitos de autocuidado, y un interés en lectura histórica. Se destacan momentos de dificultad, rutina, y un enfoque en el autocuidado y la reflexión personal, con referencias a un libro sobre Napoleón que reflejan un interés en historia y análisis crítico."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "mistake",
+          "paraphrase": "Napoleón tuvo un error al no fusilar a los ministros Fouché y Tallien, quienes eran críticos y peligrosos, lo que podría haber evitado problemas políticos.",
+          "timestamp": "00:51:51",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de la vida de Tallien muestra su influencia política y su rol como figura clave en la historia francesa, destacando su conexión con Napoleón y su importancia en la política.",
+          "timestamp": "00:53:08",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La dependencia de figuras como Tallien para el poder político de Napoleón representa un riesgo, ya que su influencia y lealtad pueden afectar la estabilidad del gobierno.",
+          "timestamp": "00:54:14",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento discute errores políticos de Napoleón, como no fusilar a Fouché y Tallien, y analiza la influencia de figuras clave en la política francesa, destacando su importancia y riesgos para la estabilidad del gobierno."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
