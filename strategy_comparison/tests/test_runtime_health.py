@@ -24,6 +24,15 @@ class RuntimeHealthTests(unittest.TestCase):
             atomic_write(path, row)
             self.assertEqual(json.loads(path.read_text())["run_number"], 7)
 
+    def test_retry_attempt_explicit_and_validated(self):
+        rec = build_record("buy_the_dip_strategy", "MIDAS Buy The Dip paper",
+                           "success", "38990573157", "58", "a" * 40,
+                           run_attempt=2)
+        self.assertEqual(rec["run_attempt"], 2)
+        for invalid in (0, "-1", "nan"):
+            with self.assertRaises(ValueError):
+                build_record("x", "X", "success", "12", "4", "", run_attempt=invalid)
+
     def test_rejects_unknown_outcome(self):
         with self.assertRaises(ValueError):
             build_record("x", "X", "maybe", "1", "1", "c" * 40)
