@@ -80,7 +80,7 @@ def preserve_newer_runtime(records):
         if should_restore_runtime(candidate, existing_record):
             Path(path).parent.mkdir(parents=True, exist_ok=True)
             Path(path).write_text(
-                json.dumps(candidate, sort_keys=True, indent=2, ensure_ascii=False) + "\\n",
+                json.dumps(candidate, sort_keys=True, indent=2, ensure_ascii=False) + "\n",
                 encoding="utf-8",
             )
             changed.append(path)
