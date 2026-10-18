@@ -161,6 +161,7 @@ def run(config_path, output_dir, now=None):
         panel, price_failures = download_panel(
             requested, period=config["history_period"], asof=asof,
             min_history=int(config["price_min_history_days"]),
+            required=active | {benchmark},
         )
         if benchmark not in panel:
             raise ValueError("Benchmark sin historial completo")
@@ -176,6 +177,7 @@ def run(config_path, output_dir, now=None):
         requested = sorted(active | {benchmark})
         panel, price_failures = download_panel(
             requested, period="6mo", asof=asof, min_history=1,
+            required=active | {benchmark},
         )
         missing = sorted(set(requested) - set(panel))
         if missing:
