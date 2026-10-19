@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-19T09:06:22.109172+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/166442461",
+    "published_date": "2026-01-11",
+    "youtube_video_id": "Nn-ENiVL-JE",
+    "match_score": 0.915556,
+    "audio_bytes_processed_transiently": 28203049
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 3525.27675,
+      "word_count": 9724,
+      "segment_count": 1683,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "Nn-ENiVL-JE",
+    "youtube_url": "https://www.youtube.com/watch?v=Nn-ENiVL-JE",
+    "title": "Nuestra CARTERA y RENTABILIDAD del AÑO | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/166442461",
+    "published_date": "2026-01-11",
+    "source": "official_podcast_mirror",
+    "match_score": 0.915556
+  },
+  "analysis": {
+    "episode_summary": "El episodio aborda la cierre del análisis de inversión, la suscripción final con descuento, la apertura de un fondo de inversión, la publicación de artículos y tesis, y la rentabilidad del año con oportunidades futuras en el mercado. Se analizan eventos que afectan la oferta y demanda de recursos como cobre, gas natural y petróleo, con impactos en precios y riesgos de inversión. Se mencionan accidentes en minas, caídas de precios, condiciones climáticas extremas y fracasos de proyectos de inversión. El hablante refleja su experiencia en el año 2025, destacando la terminación de un curso de CFA, la gestión de proyectos de inversión, y la dificultad en la estructuración del fondo. Menciona desafíos en la toma de decisiones y la necesidad de reorganización, así como una percepción negativa del año, pero con intenciones de mejorar en 2026. Se identifican libros como referencias para comprender temas históricos, culturales y de estrategia, destacando su valor para analizar patrones de poder, evolución humana y riesgos globales. Se describen estrategias militares históricas, como la derrota de los mongoles por parte de los europeos en Hungría, la expansión de los mamelucos en Egipto con ejércitos de esclavos, y la resistencia de los moriscos contra los mongoles. Se menciona la crudeza y el desprecio por la vida en una cultura que practica sacrificios humanos, lo que sugiere un entorno de alto riesgo y violencia.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Se menciona que el análisis de inversión cerrará sus puertas en enero, con una suscripción especial de 200 euros con descuento de 40 euros.",
+        "La caída del precio del gas natural en Europa (70% desde 60€ a 27€) refleja un desequilibrio entre oferta y demanda."
+      ],
+      "sizing": [
+        "Se menciona que el año ha tenido 12 artículos en análisis de inversión, con 9 tesis nuevas y 318 páginas publicadas."
+      ],
+      "entry": [
+        "Se ha comprado una posición en platino con un 10% de la cartera, aprovechando la subida del 10% en un año, lo que indica una estrategia de entrada basada en la volatilidad del mercado.",
+        "Un accidente en una mina grande en Indonesia redujo producción, causando un exceso de oferta en cobre."
+      ],
+      "exit": [
+        "El hablante menciona que ha terminado el año 2025 con una percepción negativa, pero con la intención de retomar proyectos y mejorar su enfoque en el futuro, especialmente en 2026."
+      ],
+      "add_hold": [],
+      "risk": [
+        "Se señala que, a pesar de la rentabilidad positiva, hay oportunidades aún en el mercado y no todo está en máximo.",
+        "El frío en Europa y la nevada en España y Francia aumenta la demanda de gas, pero las reservas están por debajo de la media de 5 años.",
+        "El narrador menciona la crudeza y el desprecio por la vida en una cultura que practica sacrificios humanos, lo que sugiere un entorno de alto riesgo y violencia."
+      ],
+      "technical": [
+        "El gráfico de los emperadores romanos muestra que muchos murieron de forma inesperada, lo que refleja la volatilidad en el mercado.",
+        "El usuario analiza la evolución de los mongoles y su expansión, destacando la importancia de factores geográficos y logísticos en la capacidad de un imperio para mantener su poder y expandirse."
+      ],
+      "management": [],
+      "mistakes": [
+        "Proyectos de inversión en sectores como cacao o huevos no se materializaron, reflejando riesgos de mercado y falta de rentabilidad."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "low"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El programa comienza con un anuncio sobre la suscripción final y la cierre del análisis de inversión.",
+          "timestamp": "00:02:50",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona que el análisis de inversión cerrará sus puertas en enero, con una suscripción especial de 200 euros con descuento de 40 euros.",
+          "timestamp": "00:02:58",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se indica que el cierre del análisis de inversión está relacionado con la apertura de un fondo de inversión propio, con expectativas de rendimiento anual del 65%.",
+          "timestamp": "00:05:54",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona que el año ha tenido 12 artículos en análisis de inversión, con 9 tesis nuevas y 318 páginas publicadas.",
+          "timestamp": "00:06:54",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se señala que, a pesar de la rentabilidad positiva, hay oportunidades aún en el mercado y no todo está en máximo.",
+          "timestamp": "00:08:54",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El episodio aborda la cierre del análisis de inversión, la suscripción final con descuento, la apertura de un fondo de inversión, la publicación de artículos y tesis, y la rentabilidad del año con oportunidades futuras en el mercado."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El análisis del mercado muestra que el dolar ha depreciado un 11.8% respecto al euro este año, lo que ha contribuido a una buena rentabilidad en euros.",
+          "timestamp": "00:10:40",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El gráfico de los emperadores romanos muestra que muchos murieron de forma inesperada, lo que refleja la volatilidad en el mercado.",
+          "timestamp": "00:09:34",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se ha comprado una posición en platino con un 10% de la cartera, aprovechando la subida del 10% en un año, lo que indica una estrategia de entrada basada en la volatilidad del mercado.",
+          "timestamp": "00:14:40",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis del mercado este año muestra una rentabilidad significativa en euros debido a la depreciación del dolar, junto con una volatilidad en commodities como el platino y la plata, y una estrategia de inversión basada en la volatilidad y la correlación entre divisas y commodities."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Un accidente en una mina grande en Indonesia redujo producción, causando un exceso de oferta en cobre.",
+          "timestamp": "00:18:52",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La caída del precio del gas natural en Europa (70% desde 60€ a 27€) refleja un desequilibrio entre oferta y demanda.",
+          "timestamp": "00:19:38",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El frío en Europa y la nevada en España y Francia aumentan la demanda de gas, pero las reservas están por debajo de la media de 5 años.",
+          "timestamp": "00:20:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La caída del precio del petróleo a 50 dólares y la volatilidad por temas geopolíticos afectan la producción de gas y la inversión en energía.",
+          "timestamp": "00:23:30",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Proyectos de inversión en sectores como cacao o huevos no se materializaron, reflejando riesgos de mercado y falta de rentabilidad.",
+          "timestamp": "00:26:34",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe eventos que afectan la oferta y demanda de recursos como cobre, gas natural y petróleo, con impactos en precios y riesgos de inversión. Se mencionan accidentes en minas, caídas de precios, condiciones climáticas extremas y fracasos de proyectos de inversión, todos estos factores influyen en la estrategia de inversión."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El hablante menciona que ha terminado un curso de CFA con el instructor Paco Lodeiro y que ha estado trabajando en proyectos de inversión, aunque no ha tenido tiempo para disfrutar de todo.",
+          "timestamp": "00:27:54",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El hablante describe su experiencia en el año 2025, indicando que ha tenido dificultades en la gestión de proyectos y en la estructuración del fondo de inversión, lo que ha llevado a decisiones de cierre de proyectos.",
+          "timestamp": "00:30:00",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "El hablante menciona que ha terminado el año 2025 con una percepción negativa, pero con la intención de retomar proyectos y mejorar su enfoque en el futuro, especialmente en 2026.",
+          "timestamp": "00:31:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El hablante refleja su experiencia en el año 2025, destacando la terminación de un curso de CFA, la gestión de proyectos de inversión, y la dificultad en la estructuración del fondo. Menciona desafíos en la toma de decisiones y la necesidad de reorganización, así como una percepción negativa del año, pero con intenciones de mejorar en 2026."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "idea_generation",
+          "paraphrase": "El usuario menciona libros como 'Armadillos germenes y acero', 'Daimon', 'Children of Fash', 'Hibiborgh', 'Guerra nuclear' y 'Empire of Fans' como referencias para entender temas históricos, culturales y de estrategia.",
+          "timestamp": "00:37:06",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El usuario valora libros como 'Daimon' y 'Empire of Fans' por su capacidad para explicar conceptos complejos de historia y biología, destacando su impacto en la comprensión de temas como la evolución humana y la violencia animal.",
+          "timestamp": "00:37:22",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El usuario menciona la importancia de adquirir libros como 'Genghis Khan' para entender la expansión y caída de imperios, destacando la relevancia de la historia para analizar patrones de poder y destrucción.",
+          "timestamp": "00:45:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El usuario menciona la posibilidad de una crisis nuclear y su impacto en la historia, destacando la necesidad de preparación y análisis de escenarios extremos para mitigar riesgos globales.",
+          "timestamp": "00:40:00",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El usuario analiza la evolución de los mongoles y su expansión, destacando la importancia de factores geográficos y logísticos en la capacidad de un imperio para mantener su poder y expandirse.",
+          "timestamp": "00:45:40",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El usuario identifica libros como referencias para comprender temas históricos, culturales y de estrategia, destacando su valor para analizar patrones de poder, evolución humana y riesgos globales. Menciona la importancia de estudiar la historia para entender la violencia, la expansión de imperios y la preparación ante crisis extremas."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Los caballeros medievales europeos lograron derrotar a los mongoles por primera vez en Hungría, combinando número, experiencia y estrategia.",
+          "timestamp": "00:47:04",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La expansión de los mamelucos en Egipto fue posible gracias a su ejército de esclavos capturados de conflictos con los mongoles, con experiencia y números ventajosos.",
+          "timestamp": "00:47:20",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Los mongoles enfrentaron resistencia en Egipto debido a la cultura de los moriscos, que rechazaban la sangre y evitaban enfrentamientos directos, influyendo en tácticas militares.",
+          "timestamp": "00:50:30",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Los mongoles desarrollaron tácticas de asesinato en masa, como el uso de soldados por familia, incluyendo animales, para controlar zonas estratégicas.",
+          "timestamp": "00:51:22",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "management",
+          "paraphrase": "El libro de un soldado español del siglo XVI describe la vida en el Mediterráneo, la adquisición de armas de los moriscos, y la revolución morisca que llevó a su ejecución.",
+          "timestamp": "00:52:00",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La conquista de Tenochtitlan por los españoles fue marcada por la desorganización de los indígenas, descrito como 'como una puta cabra', y la rápida toma de poder por Cortés.",
+          "timestamp": "00:55:28",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe estrategias militares históricas, como la derrota de los mongoles por parte de los europeos en Hungría, la expansión de los mamelucos en Egipto con ejércitos de esclavos, y la resistencia de los moriscos contra los mongoles. También menciona la cultura de los moriscos que rechazaba la sangre, tácticas de asesinato en masa de los mongoles, y la conquista de Tenochtitlan por los españoles, destacando la desorganización de los indígenas."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Un narrador describe una situación en la que se llega a un pueblo con soldados, donde se capturan y sacrifican personas en una fiesta ritual, lo que refleja una cultura con una parte turbia y cruda.",
+          "timestamp": "00:55:38",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El narrador menciona la crudeza y el desprecio por la vida en una cultura que practica sacrificios humanos, lo que sugiere un entorno de alto riesgo y violencia.",
+          "timestamp": "00:56:00",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "El narrador comenta que el libro describe la experiencia de un soldado en una guerra, destacando la destrucción y el caos, lo que refleja la complejidad de la guerra y su impacto psicológico.",
+          "timestamp": "00:57:45",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe una narrativa en primera persona que aborda temas de violencia, sacrificio humano y la crudeza de la guerra, reflejando una cultura con aspectos oscuros y crudos. El narrador menciona un libro que ilustra estas experiencias, destacando la destrucción y el caos, lo que sugiere una estrategia de inversión basada en la comprensión de riesgos y la psicología de los entornos de alta violencia."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
