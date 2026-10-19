@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-19T20:19:41.571390+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/143752941",
+    "published_date": "2025-03-25",
+    "youtube_video_id": "Oshx709ObyM",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 20948741
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2618.4881875,
+      "word_count": 7088,
+      "segment_count": 413,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "Oshx709ObyM",
+    "youtube_url": "https://www.youtube.com/watch?v=Oshx709ObyM",
+    "title": "Nuestra CARTERA de INVERSIÓN en Febrero-Marzo | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/143752941",
+    "published_date": "2025-03-25",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute la cartera de inversión, destacando la estrategia de Buy The Dip aplicada a activos mineros. Se mencionan decisiones de entrada y salida en empresas como Valeura, Cineplex, Hipco, y AlfaMin, basadas en análisis de valoración, riesgo y ciclos macroeconómicos. Valeura muestra un buen rendimiento con flujo de caja positivo y recompras de acciones, mientras que Cineplex podría beneficiarse de una mejora en el box office. Hipco tiene una posición razonable con un 26% de rentabilidad anual, y su producción de petróleo crece orgánicamente. AlfaMin enfrenta riesgos por conflictos en Kibu, lo que afecta su valoración. Se analizan oportunidades de reanudar la producción del cobre panamá en Franco Nevada, y se consideran ajustes en la cartera basados en cambios en el ciclo del petróleo y el mercado canadiense. La estrategia se basa en la valoración de activos, el riesgo macroeconómico y la gestión de posiciones en función de eventos específicos.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Valeura tiene un flujo de caja operativo positivo, caja en cuenta de 259 millones, y recompra de acciones."
+      ],
+      "cycle_macro": [
+        "El precio del petróleo está en una corrección de 9-10%, pero Valeura ha superado a otros activos en rendimiento."
+      ],
+      "entry": [
+        "Valeura aumenta su producción de 23,000 a 26,000 barriles diarios en 2024, con planes para 2025."
+      ],
+      "sizing": [
+        "Valeura aumenta su producción de 23,000 a 26,000 barriles diarios en 2024, con planes para 2025."
+      ],
+      "add_hold": [],
+      "exit": [
+        "Se espera que AlfaMin corte el dividendo y su acción caiga, lo que podría afectar la posición en la cartera, aunque se considera una oportunidad para ampliar la inversión."
+      ],
+      "risk": [
+        "Valeura enfrenta costos de desmantelamiento de activos, pero ha reducido los costes de desmantelamiento un 54%."
+      ],
+      "technical": [],
+      "management": [
+        "Se menciona que los miedos del mercado son infundados, pero la empresa tiene potencial operativo y un nuevo management que está poniendo las pilas."
+      ],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Vendieron una posición secreta y adquirieron una nueva en Alfa MIN y una tesis secreta.",
+          "timestamp": "00:02:41",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Valeura tiene un flujo de caja operativo positivo, caja en cuenta de 259 millones, y recompra de acciones.",
+          "timestamp": "00:06:45",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Valeura aumenta su producción de 23,000 a 26,000 barriles diarios en 2024, con planes para 2025.",
+          "timestamp": "00:06:13",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Valeura enfrenta costos de desmantelamiento de activos, pero ha reducido los costes de desmantelamiento un 54%.",
+          "timestamp": "00:07:13",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El precio del petróleo está en una corrección de 9-10%, pero Valeura ha superado a otros activos en rendimiento.",
+          "timestamp": "00:04:11",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast discute la cartera de inversión, destacando la venta de una posición secreta y la adquisición de nuevas posiciones, el buen rendimiento de Valeura con flujo de caja positivo y recompras de acciones, el aumento de producción de Valeura, la reducción de costos de desmantelamiento, y la relación entre el precio del petróleo y el rendimiento de la cartera."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa sigue en cartera y se sigue vigilando por su potencial de crecimiento a pesar de diluciones y problemas operativos.",
+          "timestamp": "00:11:12",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La valoración de la empresa se mantiene estable a pesar de diluciones, aunque se menciona que podría haber cambiado para peor.",
+          "timestamp": "00:13:31",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona que los miedos del mercado son infundados, pero la empresa tiene potencial operativo y un nuevo management que está poniendo las pilas.",
+          "timestamp": "00:17:30",
+          "scope": "hosts",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis menciona que la empresa sigue en cartera y se sigue vigilando por su potencial de crecimiento a pesar de diluciones y problemas operativos. Se menciona que la valoración se mantiene estable, aunque podría haber cambiado para peor. Se señala que los miedos del mercado son infundados, pero la empresa tiene potencial operativo y un nuevo management que está poniendo las pilas."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "risk",
+          "paraphrase": "El análisis señala una recesión potencial en Canadá debido a conflictos geopolíticos, lo que afecta a empresas como Cineplex.",
+          "timestamp": "00:24:11",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Cineplex podría recomprar acciones debido a su apalancamiento operativo alto y una posible mejora en el box office.",
+          "timestamp": "00:25:40",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El mercado canadiense está en un pico de pesimismo, peor que la crisis del 2008, lo que influye en la valoración de activos.",
+          "timestamp": "00:24:47",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Hipco muestra una caída de precios, pero mantiene una posición razonable en el portafolio con un 26% de rentabilidad anual.",
+          "timestamp": "00:27:19",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Las reservas de petróleo en Hipco aumentaron un 70% desde 2013, reflejando un crecimiento orgánico significativo.",
+          "timestamp": "00:30:12",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis identifica riesgos macroeconómicos en Canadá y oportunidades de inversión en Cineplex y Hipco, destacando una recesión potencial, una mejora en la valoración de Cineplex, un pico de pesimismo en el mercado canadiense, una posición razonable en Hipco y un crecimiento orgánico en sus reservas de petróleo."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El activo de cobre panamá fue cerrado, lo que provocó una caída en el rendimiento de Franco Nevada, y se están analizando opciones para reanudar su producción.",
+          "timestamp": "00:34:00",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "West Africán se destaca por su alta rentabilidad y se ha ampliado la posición en la cartera debido a su potencial de crecimiento con el activo de Quiaca.",
+          "timestamp": "00:34:49",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa AlfaMin enfrenta riesgos debido a la presencia de milicias en Kibu, lo que ha causado una caída en su valoración y posibles interrupciones en la producción.",
+          "timestamp": "00:37:02",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se espera que AlfaMin corte el dividendo y su acción caiga, lo que podría afectar la posición en la cartera, aunque se considera una oportunidad para ampliar la inversión.",
+          "timestamp": "00:40:09",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona la posibilidad de que el activo de cobre panamá regrese a producción, lo que podría influir en la estrategia de inversión en Franco Nevada.",
+          "timestamp": "00:34:37",
+          "scope": "hosts",
+          "confidence": 0.7
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la conversación aborda la estrategia de inversión en activos mineros, destacando la posibilidad de reanudar la producción del cobre panamá, la rentabilidad de West Africán, y los riesgos asociados a la presencia de milicias en AlfaMin. Se mencionan decisiones de entrada y salida en la cartera, así como la expectativa de que el activo de cobre regrese a producción, influyendo en la estrategia de inversión."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
