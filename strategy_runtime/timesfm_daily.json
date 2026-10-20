@@ -1,11 +1,11 @@
 {
   "event": "schedule",
-  "head_sha": "305120d3a830ecd8479cfb24ec333ff8bedf1e6d",
+  "head_sha": "1536b9f4e3791833b74bdff503f15e2d3019e9a5",
   "outcome": "success",
-  "recorded_at_utc": "2026-10-20T05:10:55.631379+00:00",
+  "recorded_at_utc": "2026-10-20T07:24:41.837481+00:00",
   "run_attempt": 1,
-  "run_id": 39373466073,
-  "run_number": 19,
+  "run_id": 39386284808,
+  "run_number": 20,
   "schema_version": 1,
   "workflow_key": "timesfm_daily",
   "workflow_name": "MIDAS TimesFM EUR daily paper"
