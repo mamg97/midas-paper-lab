@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-20T08:23:14.377505+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/62602471",
+    "published_date": "2020-12-17",
+    "youtube_video_id": "PQtYShldu5k",
+    "match_score": 0.922029,
+    "audio_bytes_processed_transiently": 19099734
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2387.46125,
+      "word_count": 6525,
+      "segment_count": 839,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "PQtYShldu5k",
+    "youtube_url": "https://www.youtube.com/watch?v=PQtYShldu5k",
+    "title": "BUY THE DIP PODCAST: EPISODIO 29 NUESTRA CARTERA DE DICIEMBRE 2020",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/62602471",
+    "published_date": "2020-12-17",
+    "source": "official_podcast_mirror",
+    "match_score": 0.922029
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza la cartera de inversión de diciembre 2020, destacando el rendimiento de activos en el sector del uranio, la volatilidad generada por noticias sobre cierres de minas, y la expectativa de un buen año para las commodities en 2021. Se mencionan expansión minera en West African, volatilidad extrema de Bang Gold, y la decisión de la US Navy de desmantelar un buque por costos elevados. También se discuten retrasos en adquisiciones, revalorizaciones de mercados, riesgos de incumplimiento, mejoras en ratings, y descubrimientos mineros. El speaker analiza su estrategia de inversión en Fannie Mae, mencionando la compra de más acciones después de una caída del mercado y expresando preocupación por el riesgo de pérdida. El episodio incluye estrategias de interacción en redes sociales, promoción de contenido, participación activa del público, y anuncios de futuras transmisiones.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "El precio del uranio no ha subido significativamente, pero el sector ha experimentado revalorizaciones que reflejan el flujo de dinero hacia las commodities."
+      ],
+      "cycle_macro": [
+        "La decisión de la US Navy de no reducir su flota debido a la situación con China y los planes estratégicos implica una necesidad de contratos adicionales para Huntington Ingalls."
+      ],
+      "entry": [
+        "El podcast discute la cartera de inversión, destacando el rendimiento de activos como NextGen, Energy Fools y Global Atomic en el sector del uranio, que ha tenido un buen desempeño este 2020."
+      ],
+      "sizing": [
+        "La empresa de Bang Gold tiene una capitalización de 20 millones, lo que contribuye a su volatilidad alta y a la necesidad de análisis detallados."
+      ],
+      "add_hold": [],
+      "exit": [],
+      "risk": [
+        "Se señala que las noticias sobre cierres de minas por problemas sanitarios (como en Sigur Lake) han generado volatilidad en el sector, pero también han impulsado el precio de las acciones."
+      ],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "low"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El podcast discute la cartera de inversión, destacando el rendimiento de activos como NextGen, Energy Fools y Global Atomic en el sector del uranio, que ha tenido un buen desempeño este 2020.",
+          "timestamp": "00:01:56",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona que el precio del uranio no ha subido significativamente, pero el sector ha experimentado revalorizaciones que reflejan el flujo de dinero hacia las commodities.",
+          "timestamp": "00:07:59",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se señala que las noticias sobre cierres de minas por problemas sanitarios (como en Sigur Lake) han generado volatilidad en el sector, pero también han impulsado el precio de las acciones.",
+          "timestamp": "00:03:25",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast analiza la cartera de inversión, destacando el rendimiento de activos en el sector del uranio, la volatilidad generada por noticias sobre cierres de minas, y la expectativa de un buen año para las commodities en 2021."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de West African muestra una expansión de minas con 6 metros a 20 gramos y 6,5 metros a 16 gramos toneladas, asegurada por la ampliación de la mina.",
+          "timestamp": "00:14:02",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa de Bang Gold experimentó una volatilidad extrema, subiendo un 8% en dos minutos y luego un 18% en un día, debido a un anuncio de resultados de oro.",
+          "timestamp": "00:17:20",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La US Navy decidió desmantelar el buque 'von Herrn Richard' por costos de reparación elevados (3,5 billones), afectando a Huntington Ingalls y la US Navy.",
+          "timestamp": "00:11:09",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La decisión de la US Navy de no reducir su flota debido a la situación con China y los planes estratégicos implica una necesidad de contratos adicionales para Huntington Ingalls.",
+          "timestamp": "00:12:03",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La empresa de Bang Gold tiene una capitalización de 20 millones, lo que contribuye a su volatilidad alta y a la necesidad de análisis detallados.",
+          "timestamp": "00:19:11",
+          "scope": "hosts",
+          "confidence": 0.4,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca la expansión minera en West African, la volatilidad extrema de Bang Gold, y la decisión de la US Navy de desmantelar un buque por costos elevados, afectando a Huntington Ingalls. Además, se menciona la estrategia de venta de Regulus por razones de rendimiento y la necesidad de contratos adicionales para Huntington Ingalls debido a los planes estratégicos."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se informa sobre un retraso en la adquisición de una empresa, lo que lleva a una revalorización del mercado.",
+          "timestamp": "00:21:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El mercado reacciona positivamente al retraso en la adquisición, con un aumento del 9,4% en las acciones.",
+          "timestamp": "00:21:17",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona que la adquisición fue retrasada debido a cuestiones regulatorias, aunque se sugiere que podría no realizarse este diciembre.",
+          "timestamp": "00:21:25",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se informa sobre la adquisición de una empresa de pagos digitales por parte de Capital One, con una dilución de acciones y un monto financiero.",
+          "timestamp": "00:22:35",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La acción de Alliance Data Systems sube a 72 dólares por acción, indicando una valorización positiva.",
+          "timestamp": "00:23:26",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona que la empresa tiene una alta tasa de incumplimiento y de cobros netos, lo que sugiere riesgos.",
+          "timestamp": "00:23:49",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Moody's mejora el rating de una institución bancaria, indicando una mejora en su solvencia.",
+          "timestamp": "00:24:10",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona una cartera de acciones de bancos georgianos, con una exposición limitada a Georgia Capital.",
+          "timestamp": "00:24:30",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se informa sobre una financiación de 20 millones para Adriatic Metals, con una deuda convertible y un premium significativo.",
+          "timestamp": "00:27:00",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La acción de Adriatic Metals cae significativamente, reflejando una valorización ajustada y un riesgo elevado.",
+          "timestamp": "00:27:34",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se reportan descubrimientos de oro en proyectos de Serbia, indicando potencial de valorización.",
+          "timestamp": "00:29:20",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe eventos financieros y reacciones de mercados, incluyendo retrasos en adquisiciones, revalorizaciones, riesgos de incumplimiento, mejoras en ratings, exposiciones de carteras y descubrimientos mineros. Se destacan reacciones de mercado a noticas de adquisición, cambios en valoraciones y análisis de riesgos."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El speaker menciona que compró más acciones de Fannie Mae después de una caída significativa en el mercado.",
+          "timestamp": "00:33:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El speaker expresa preocupación por la volatilidad del mercado y el riesgo de perder grandes sumas de dinero en un día.",
+          "timestamp": "00:33:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El speaker analiza el valor de las acciones de Fannie Mae, considerando la posibilidad de que el gobierno no pueda garantizar el proceso de privatización.",
+          "timestamp": "00:35:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El speaker discute su estrategia de inversión en Fannie Mae, mencionando la compra de más acciones después de una caída del mercado, expresando preocupación por el riesgo de pérdida y analizando el valor de las acciones en el contexto de la privatización y la regulación gubernamental."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Compartir contenido en redes sociales y comentar sobre eventos recientes para generar interacción.",
+          "timestamp": "00:39:22",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Incentivar la participación activa del público mediante comentarios y reacciones en tiempo real.",
+          "timestamp": "00:39:24",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Promover la exposición de contenido en redes sociales para aumentar la visibilidad y el engagement.",
+          "timestamp": "00:39:26",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Mencionar la actividad reciente en los carteles para mantener el interés del público.",
+          "timestamp": "00:39:28",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Destacar la movilidad reciente en los carteles para captar atención y generar conversación.",
+          "timestamp": "00:39:30",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Reconocer la participación del público en la plataforma como Martí para fomentar la lealtad.",
+          "timestamp": "00:39:32",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Indicar la distribución de la cartera en Fandime para destacar la estrategia de inversión.",
+          "timestamp": "00:39:34",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Anunciar el cierre del episodio y la programación futura para mantener la atención del público.",
+          "timestamp": "00:39:36",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Recibir comentarios y reacciones en tiempo real para mantener la interacción con el público.",
+          "timestamp": "00:39:38",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Anunciar un baile deep como parte de la promoción del contenido para aumentar la participación.",
+          "timestamp": "00:39:40",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Finalizar el episodio con un mensaje de despedida y recordatorio de la próxima transmisión.",
+          "timestamp": "00:39:42",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El episodio incluye estrategias de interacción en redes sociales, promoción de contenido, participación activa del público, y anuncios de futuras transmisiones. Se destacan aspectos como la movilidad reciente en los carteles, la distribución de la cartera en Fandime, y la promoción de un baile deep para aumentar la participación."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
