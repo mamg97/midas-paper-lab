@@ -1,79 +1,179 @@
 {
   "books": {
     "benchmark_spy": {
-      "cash": 100000.0,
+      "cash": 20000.000623123196,
       "equity": [
         {
           "date": "2026-10-16",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-19",
+          "nav": 99714.3584978734
         }
       ],
-      "events": [],
-      "nav": 100000.0,
-      "pending": [
+      "events": [
         {
-          "signal_date": "2026-10-16",
+          "date": "2026-10-19",
+          "event": "buy",
+          "fx": 1.1213151216506958,
+          "price_eur": 684.5654541151421,
+          "shares": 116.745709,
           "ticker": "SPY"
         }
       ],
-      "positions": {},
+      "nav": 99714.3584978734,
+      "pending": [],
+      "positions": {
+        "SPY": {
+          "cost_eur": 79999.9993768768,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-19",
+          "entry_fx": 1.1213151216506958,
+          "entry_price_eur": 684.5654541151421,
+          "shares": 116.745709,
+          "signal_date": "2026-10-16"
+        }
+      },
       "trades": []
     },
     "timesfm": {
-      "cash": 100000.0,
+      "cash": 20000.001055326935,
       "equity": [
         {
           "date": "2026-10-16",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-19",
+          "nav": 100152.02792482822
         }
       ],
-      "events": [],
-      "nav": 100000.0,
-      "pending": [
+      "events": [
         {
-          "predicted_return": 0.0284881591796875,
-          "score": 0.013690319373195842,
-          "signal_date": "2026-10-16",
+          "date": "2026-10-19",
+          "event": "buy",
+          "fx": 1.1213151216506958,
+          "price_eur": 455.9427498376881,
+          "shares": 25.040762,
           "ticker": "NOC"
         },
         {
-          "predicted_return": 0.02084946632385254,
-          "score": 0.009165556100092913,
-          "signal_date": "2026-10-16",
+          "date": "2026-10-19",
+          "event": "buy",
+          "fx": 1.1213151216506958,
+          "price_eur": 33.65589252533921,
+          "shares": 339.231956,
           "ticker": "LVS"
         },
         {
-          "predicted_return": 0.018622756004333496,
-          "score": 0.007774840413426567,
-          "signal_date": "2026-10-16",
+          "date": "2026-10-19",
+          "event": "buy",
+          "fx": 1.1213151216506958,
+          "price_eur": 25.500672711497952,
+          "shares": 447.719728,
           "ticker": "BF-B"
         },
         {
-          "predicted_return": 0.01965320110321045,
-          "score": 0.007271870089818546,
-          "signal_date": "2026-10-16",
+          "date": "2026-10-19",
+          "event": "buy",
+          "fx": 1.1213151216506958,
+          "price_eur": 482.68363213697916,
+          "shares": 23.653493,
           "ticker": "LMT"
         },
         {
-          "predicted_return": 0.020309925079345703,
-          "score": 0.00724630416863609,
-          "signal_date": "2026-10-16",
+          "date": "2026-10-19",
+          "event": "buy",
+          "fx": 1.1213151216506958,
+          "price_eur": 116.2787915817455,
+          "shares": 98.187761,
           "ticker": "STZ"
         },
         {
-          "predicted_return": 0.015127778053283691,
-          "score": 0.0059573243737069525,
-          "signal_date": "2026-10-16",
+          "date": "2026-10-19",
+          "event": "buy",
+          "fx": 1.1213151216506958,
+          "price_eur": 130.5548855101271,
+          "shares": 87.450992,
           "ticker": "TJX"
         },
         {
-          "predicted_return": 0.018674850463867188,
-          "score": 0.005040606898755063,
-          "signal_date": "2026-10-16",
+          "date": "2026-10-19",
+          "event": "buy",
+          "fx": 1.1213151216506958,
+          "price_eur": 273.52102621729136,
+          "shares": 41.741413,
           "ticker": "HD"
         }
       ],
-      "positions": {},
+      "nav": 100152.02792482822,
+      "pending": [],
+      "positions": {
+        "BF-B": {
+          "cost_eur": 11428.571404459093,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-19",
+          "entry_fx": 1.1213151216506958,
+          "entry_price_eur": 25.500672711497952,
+          "shares": 447.719728,
+          "signal_date": "2026-10-16"
+        },
+        "HD": {
+          "cost_eur": 11428.571273639307,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-19",
+          "entry_fx": 1.1213151216506958,
+          "entry_price_eur": 273.52102621729136,
+          "shares": 41.741413,
+          "signal_date": "2026-10-16"
+        },
+        "LMT": {
+          "cost_eur": 11428.571067880579,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-19",
+          "entry_fx": 1.1213151216506958,
+          "entry_price_eur": 482.68363213697916,
+          "shares": 23.653493,
+          "signal_date": "2026-10-16"
+        },
+        "LVS": {
+          "cost_eur": 11428.571406548896,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-19",
+          "entry_fx": 1.1213151216506958,
+          "entry_price_eur": 33.65589252533921,
+          "shares": 339.231956,
+          "signal_date": "2026-10-16"
+        },
+        "NOC": {
+          "cost_eur": 11428.571038195396,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-19",
+          "entry_fx": 1.1213151216506958,
+          "entry_price_eur": 455.9427498376881,
+          "shares": 25.040762,
+          "signal_date": "2026-10-16"
+        },
+        "STZ": {
+          "cost_eur": 11428.571351394434,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-19",
+          "entry_fx": 1.1213151216506958,
+          "entry_price_eur": 116.2787915817455,
+          "shares": 98.187761,
+          "signal_date": "2026-10-16"
+        },
+        "TJX": {
+          "cost_eur": 11428.571402555346,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-19",
+          "entry_fx": 1.1213151216506958,
+          "entry_price_eur": 130.5548855101271,
+          "shares": 87.450992,
+          "signal_date": "2026-10-16"
+        }
+      },
       "trades": []
     }
   },
@@ -84,12 +184,16 @@
     {
       "date": "2026-10-16",
       "nav": 100000.0
+    },
+    {
+      "date": "2026-10-19",
+      "nav": 100152.02792482822
     }
   ],
   "first_session": "2026-10-16",
   "fx_method": "previous_XNYS_session_EURUSD_close_at_open; current_EURUSD_close_at_mark",
   "initial_capital": 100000.0,
-  "last_session": "2026-10-16",
+  "last_session": "2026-10-19",
   "last_signal_session": "2026-10-16",
   "schema_version": 1,
   "signals": [
