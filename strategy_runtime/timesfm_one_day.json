@@ -1,11 +1,11 @@
 {
   "event": "schedule",
-  "head_sha": "ffd9fcb7b4ee3da3be1698851f2b987ac86022bc",
+  "head_sha": "26129929a55c46efa38ac0b8641a8d5f2c99a038",
   "outcome": "success",
-  "recorded_at_utc": "2026-10-20T02:46:19.138870+00:00",
+  "recorded_at_utc": "2026-10-20T07:52:39.124373+00:00",
   "run_attempt": 1,
-  "run_id": 39360317027,
-  "run_number": 17,
+  "run_id": 39389148045,
+  "run_number": 18,
   "schema_version": 1,
   "workflow_key": "timesfm_one_day",
   "workflow_name": "MIDAS TimesFM 2.5 EUR daily 1-session signal"
