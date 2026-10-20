@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-20T19:20:32.551479+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/55771542",
+    "published_date": "2020-08-27",
+    "youtube_video_id": "QtJsr_sWF4Y",
+    "match_score": 0.943182,
+    "audio_bytes_processed_transiently": 22925524
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2865.6849375,
+      "word_count": 7724,
+      "segment_count": 1077,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "QtJsr_sWF4Y",
+    "youtube_url": "https://www.youtube.com/watch?v=QtJsr_sWF4Y",
+    "title": "BUY THE DIP PODCAST: EPISODIO 14 ¡NOTICIA IMPORTANTE! Y NUESTRA CARTERA AGOSTO 2020",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/55771542",
+    "published_date": "2020-08-27",
+    "source": "official_podcast_mirror",
+    "match_score": 0.943182
+  },
+  "analysis": {
+    "episode_summary": "El episodio presenta una estrategia de creación de una comunidad de inversión con análisis de calidad, un sistema de premium para usuarios y un proceso de filtraje. Se detallan pasos para participar, el lanzamiento oficial el 10 de septiembre, y se advierte sobre la volatilidad del mercado minero. Se mencionan oportunidades de inversión en empresas como Huntington Ingalls, Nick Jen, minas de oro y uranio, con análisis técnicos y gestión de proyectos mineros. También se analiza Energy Fuels, destacando su valor contable superior a su cotización, pero con críticas sobre su gestión y promesas. Se menciona el ROE alto del banco georgiano y la posibilidad de ampliar posiciones en bancos de la ex-Unión Soviética, aunque se señala un error previo en la venta de Sberbank.",
+    "process": {
+      "idea_generation": [],
+      "quality": [
+        "El análisis de calidad se enfoca en identificar oportunidades de inversión en activos baratos y con potencial, como minas de oro y uranio, con una estrategia flexible y oportunistas."
+      ],
+      "balance_sheet": [],
+      "valuation": [
+        "Se menciona que la valoración de Huntington Ingalls no ha cambiado significativamente, a pesar de retrasos y ajustes en dividendos y recompras.",
+        "El ROE del 20% de Georgia es notable, especialmente comparado con bancos americanos que tienen un ROE del 2,6%."
+      ],
+      "cycle_macro": [
+        "El análisis sugiere que el sector de los metales, especialmente el cobre, está en una tendencia descendente, lo que podría afectar a empresas como Energy Fuels y otros participantes en el sector."
+      ],
+      "entry": [
+        "Se menciona la posibilidad de comprar acciones de empresas como Apple si se encuentran a precios razonables, reflejando una estrategia de entrada basada en la valoración y el momento del mercado.",
+        "Se sugiere ampliar la posición en bancos de la zona ex-unión soviética debido a su monopolio y buen desempeño, aunque se menciona un error previo en la venta de Sberbank."
+      ],
+      "sizing": [
+        "La cartera de inversiones incluye una participación en Energy Fuels con un 15% de peso, lo que refleja una exposición moderada a la empresa, aunque se menciona la posibilidad de aumentar la posición si se confirman los planes de expansión."
+      ],
+      "add_hold": [],
+      "exit": [
+        "Se menciona la posibilidad de cerrar una posición a corto plazo en Apple debido a cambios en la liquidez y el precio del oro, reflejando una estrategia de salida basada en factores macroeconómicos y mercado."
+      ],
+      "risk": [
+        "Se advierte que la minería es un mercado volátil, con fluctuaciones normales de 15-20% que no afectan significativamente la calidad de los análisis.",
+        "El coste de riesgo del banco ha caído del 40,2% al 38,5%, lo que se considera un nivel muy bueno, aunque se espera una mejora hacia el 33%."
+      ],
+      "technical": [
+        "Se analizan datos técnicos de minas de oro como Osino, destacando resultados positivos de perforaciones y análisis de recuperación de yacimientos, lo que sugiere una estrategia basada en señales técnicas y análisis de precios."
+      ],
+      "management": [
+        "Se menciona la adquisición de nuevos directivos para mejorar la gestión de proyectos de desarrollo minero, reflejando una estrategia de gestión que prioriza la eficiencia y la planificación a largo plazo."
+      ],
+      "mistakes": [
+        "Se comenta que algunos análisis son 'malísimos' o 'hechos por un niño de diez años', lo que sugiere que no todos los análisis son de alta calidad."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "idea_generation",
+          "paraphrase": "Los anfitriones anuncian la creación de una comunidad de inversión con análisis de calidad y un sistema de premium para usuarios.",
+          "timestamp": "00:00:07",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona que los análisis de inversión serán revisados por un filtro de calidad y que los buenos análisis darán acceso a una cuenta premium de por vida.",
+          "timestamp": "00:03:44",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se describe un proceso para participar en la comunidad: registrarse como usuario no premium, consumir análisis existentes, y luego convertirse en premium al lanzamiento oficial el 10 de septiembre.",
+          "timestamp": "00:02:51",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se advierte que la minería es un mercado volátil, con fluctuaciones normales de 15-20% que no afectan significativamente la calidad de los análisis.",
+          "timestamp": "00:05:46",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se detalla un proceso técnico: los analistas suben análisis a YouTube en 'oculto', los filtran los anfitrones, y los buenos análisis se publican en la web y en el podcast.",
+          "timestamp": "00:03:39",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "management",
+          "paraphrase": "Se menciona que los analistas deben redactar, grabar y subir análisis siguiendo pautas, y que los anfitrones evalúan la calidad antes de publicarlos.",
+          "timestamp": "00:03:33",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se comenta que algunos análisis son 'malísimos' o 'hechos por un niño de diez años', lo que sugiere que no todos los análisis son de alta calidad.",
+          "timestamp": "00:02:12",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "other",
+          "paraphrase": "Se menciona que el 10 de septiembre se lanzará oficialmente la comunidad de análisis de inversión, con un proceso de registro y un sistema de premium.",
+          "timestamp": "00:01:46",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast presenta una estrategia de creación de una comunidad de inversión con análisis de calidad, un sistema de premium para usuarios, y un proceso de filtraje de calidad. Se detallan los pasos para participar, el lanzamiento oficial el 10 de septiembre, y se advierte sobre la volatilidad del mercado minero. Se mencionan que algunos análisis son de baja calidad y que los buenos análisis darán acceso a una cuenta premium de por vida."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona que la valoración de Huntington Ingalls no ha cambiado significativamente, a pesar de retrasos y ajustes en dividendos y recompras.",
+          "timestamp": "00:19:00",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se señala que los retrasos en la fabricación de submarinos y posibles problemas de calidad afectan la valoración y el rendimiento de la empresa.",
+          "timestamp": "00:18:01",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona que se espera una revalorización de Nick Jen, alcanzando un 90%, lo que sugiere una posible entrada en la estrategia de inversión.",
+          "timestamp": "00:16:37",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis discute la valoración y riesgos de Huntington Ingalls, mencionando retrasos en la fabricación de submarinos y ajustes en dividendos. También se menciona una posible revalorización de Nick Jen, sugiriendo una entrada en la estrategia de inversión."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "quality",
+          "paraphrase": "El análisis de calidad se enfoca en identificar oportunidades de inversión en activos baratos y con potencial, como minas de oro y uranio, con una estrategia flexible y oportunistas.",
+          "timestamp": "00:20:43",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la posibilidad de comprar acciones de empresas como Apple si se encuentran a precios razonables, reflejando una estrategia de entrada basada en la valoración y el momento del mercado.",
+          "timestamp": "00:21:21",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "parphrase": "Se menciona la posibilidad de cerrar una posición a corto plazo en Apple debido a cambios en la liquidez y el precio del oro, reflejando una estrategia de salida basada en factores macroeconómicos y mercado.",
+          "timestamp": "00:21:43",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se analizan datos técnicos de minas de oro como Osino, destacando resultados positivos de perforaciones y análisis de recuperación de yacimientos, lo que sugiere una estrategia basada en señales técnicas y análisis de precios.",
+          "timestamp": "00:26:01",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "management",
+          "paraphrase": "Se menciona la adquisición de nuevos directivos para mejorar la gestión de proyectos de desarrollo minero, reflejando una estrategia de gestión que prioriza la eficiencia y la planificación a largo plazo.",
+          "timestamp": "00:26:31",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de inversión se centra en identificar oportunidades de calidad en activos baratos y con potencial, como minas de oro y uranio, con una estrategia flexible y oportunistas. Se mencionan decisiones de entrada y salida basadas en factores macroeconómicos y técnicos, así como la gestión de proyectos mineros con enfoque en eficiencia y planificación a largo plazo."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El análisis de Energy Fuels muestra que su valor contable es significativamente superior a su cotización actual, lo que sugiere una posible oportunidad de inversión.",
+          "timestamp": "00:30:59",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa Energy Fuels se considera una buena inversión debido a su potencial de crecimiento en tierras raras y proyectos de expansión, aunque hay críticas sobre su gestión y promesas.",
+          "timestamp": "00:30:59",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa Energy Fuels ha sido criticada por su falta de resultados concretos y por prometer demasiado, lo que genera dudas sobre su capacidad de cumplir con sus objetivos.",
+          "timestamp": "00:31:01",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El precio de Energy Fuels está en una zona baja, con una cotización de 1,72, lo que podría indicar una oportunidad de compra si se confirman los planes de expansión y generación de ingresos.",
+          "timestamp": "00:32:43",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La cartera de inversiones incluye una participación en Energy Fuels con un 15% de peso, lo que refleja una exposición moderada a la empresa, aunque se menciona la posibilidad de aumentar la posición si se confirman los planes de expansión.",
+          "timestamp": "00:32:57",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El análisis sugiere que el sector de los metales, especialmente el cobre, está en una tendencia descendente, lo que podría afectar a empresas como Energy Fuels y otros participantes en el sector.",
+          "timestamp": "00:34:25",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se menciona que Energy Fuels ha sido criticada por su falta de resultados concretos y por prometer demasiado, lo que podría llevar a una sobrevaloración si no se cumplen sus objetivos.",
+          "timestamp": "00:31:01",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "other",
+          "paraphrase": "La empresa Energy Fuels tiene un potencial de crecimiento en tierras raras y proyectos de expansión, pero su valor contable es significativamente superior a su cotización actual, lo que sugiere una oportunidad de inversión si se confirman los planes de expansión.",
+          "timestamp": "00:30:59",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de Energy Fuels sugiere que su valor contable es significativamente superior a su cotización actual, lo que podría indicar una oportunidad de inversión. Sin embargo, la empresa ha sido criticada por su falta de resultados concretos y por prometer demasiado, lo que genera dudas sobre su capacidad de cumplir con sus objetivos. Aunque se menciona que su precio está en una zona baja, se sugiere que la exposición a la empresa es moderada, pero se considera una buena inversión debido a su potencial de crecimiento en tierras raras y proyectos de expansión. Además, se menciona que el sector de los metales está en una tendencia descendente, lo que podría afectar a empresas como Energy Fuels y otros participantes en el sector."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El ROE del 20% de Georgia es notable, especialmente comparado con bancos americanos que tienen un ROE del 2,6%.",
+          "timestamp": "00:39:03",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El coste de riesgo del banco ha caído del 40,2% al 38,5%, lo que se considera un nivel muy bueno, aunque se espera una mejora hacia el 33%.",
+          "timestamp": "00:39:19",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se sugiere ampliar la posición en bancos de la zona ex-unión soviética debido a su monopolio y buen desempeño, aunque se menciona un error previo en la venta de Sberbank.",
+          "timestamp": "00:40:03",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca el alto ROE del banco georgiano, la mejora en el coste de riesgo y la posibilidad de ampliar posiciones en bancos de la ex-Unión Soviética. Se menciona un error previo en la venta de Sberbank y se sugiere una estrategia de compra de petróleo y ajuste de posiciones en fondos de inversión."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
