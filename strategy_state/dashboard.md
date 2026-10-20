@@ -1,6 +1,6 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-10-18T10:44:04.891005+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-10-20T01:05:39.080767+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
