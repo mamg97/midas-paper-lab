@@ -1,0 +1,445 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-21T08:51:23.347422+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/132317303",
+    "published_date": "2024-08-02",
+    "youtube_video_id": "RAWJ2N968kM",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 41149797
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 5143.6669375,
+      "word_count": 14448,
+      "segment_count": 855,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "RAWJ2N968kM",
+    "youtube_url": "https://www.youtube.com/watch?v=RAWJ2N968kM",
+    "title": "Nuestra Cartera de INVERSIÓN en JULIO | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/132317303",
+    "published_date": "2024-08-02",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza la estrategia de inversión en el método Buy The Dip, enfocándose en la adquisición de activos en momentos de sobreventa, como la empresa minera Adriatic, con un análisis de riesgos y potencial de crecimiento. Se discuten decisiones de entrada y salida en la cartera, con ejemplos de empresas en diferentes etapas de desarrollo, incluyendo una minera en bulking, un proyecto de uranio en corrección, y una empresa con activos petrolíferos. También se aborda el impacto de factores macroeconómicos, como las elecciones en EE. UU., en el mercado de valores, y se mencionan riesgos asociados a la volatilidad y la dependencia de precios de metales preciosos. La estrategia se basa en la valoración atractiva, la vida útil de los activos y la gestión de riesgos, con una atención a la calidad de las empresas y la posibilidad de incrementar posiciones en momentos de sobreventa.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [],
+      "cycle_macro": [],
+      "entry": [],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [],
+      "risk": [],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "low"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se realizaron pequeñas compras y ventas en la cartera durante julio, con una compra significativa en Warner Bros Discovery y una venta de una posición que había alcanzado su máximo.",
+          "timestamp": "00:01:49",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa minera en turn around fue adquirida a precios relativamente bajos, con un múltiple que se considera atractivo para los accionistas, y tiene una vida útil de casi una década.",
+          "timestamp": "00:04:35",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La inversión en la empresa minera tiene riesgos asociados al éxito del turn around y a la posibilidad de fallos en la expansión, aunque actualmente está en un buen momento de recuperación.",
+          "timestamp": "00:05:01",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El resumen de la cartera de julio muestra actividades limitadas en compras y ventas, con una pequeña compra en Warner Bros Discovery y una venta de una posición que había alcanzado su máximo. Se adquirió una empresa minera en un sector de bulking, valorada a precios relativamente bajos con un múltiple atractivo, y se espera un buen rendimiento a largo plazo debido a su vida útil prolongada. Sin embargo, existen riesgos asociados al éxito del turn around y a la expansión de la empresa."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El operador de la mina de Adriatic cambia a un contratista, lo que implica pagos por equipo y afecta la producción.",
+          "timestamp": "00:15:14",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La acción de Adriatic ha caído un 33,61% desde máximos anteriores debido a problemas de licencias y tailings, pero se espera una mejora en 2025 con mayor producción y cashflow.",
+          "timestamp": "00:17:11",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Existen riesgos legales con las licencias de concesión en Bosnia y problemas con la ubicación de los tailings, pero se buscan alternativas dentro de las concesiones de exploración.",
+          "timestamp": "00:19:12",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la estrategia de inversión en Adriatic incluye el cambio de operador, caída de la acción debido a riesgos legales, y expectativas de mejora en 2025 con mayor producción y cashflow. Se destacan los desafíos en la licencia y tailings, pero se buscan soluciones alternativas y se espera una mejora en la operación y financiación de la empresa."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa menciona preparativos para perforación de un yacimiento con hierro, plata, plomo y cinc en Droskovac, completados en el segundo trimestre de 2024.",
+          "timestamp": "00:21:56",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista menciona que la acción de Adriatic está en un nivel de sobreventa, con fluctuaciones históricas en 2020, 2022 y 2023, y sugiere que los momentos de sobreventa suelen ser buenos para ampliar posiciones.",
+          "timestamp": "00:24:03",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista señala que el tema del trimestre constitucional afecta a todas las empresas mineras con concesiones en el país, pero afirma que no es un impedimento para el proyecto de Adriatic.",
+          "timestamp": "00:22:20",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El analista menciona que la empresa tiene una posición importante en la cartera, con un valor de acción alrededor de 6 dólares, y sugiere que no se incrementará la posición a menos que haya una mejora en la viabilidad del proyecto.",
+          "timestamp": "00:23:14",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.5
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El analista menciona que el proyecto de Adriatic está en una etapa de sobreventa, con fluctuaciones históricas en 2020, 2022 y 2023, y sugiere que los momentos de sobreventa suelen ser buenos para ampliar posiciones.",
+          "timestamp": "00:24:03",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona que la empresa tiene preparativos para perforación de un yacimiento con hierro, plata, plomo y cinc en Droskovac, completados en el segundo trimestre de 2024.",
+          "timestamp": "00:21:56",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista señala que el tema del trimestre constitucional afecta a todas las empresas mineras con concesiones en el país, pero afirma que no es un impedimento para el proyecto de Adriatic.",
+          "timestamp": "00:22:20",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista menciona que la acción de Adriatic está en un nivel de sobreventa, con fluctuaciones históricas en 2020, 2022 y 2023, y sugiere que los momentos de sobreventa suelen ser buenos para ampliar posiciones.",
+          "timestamp": "00:24:03",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El analista menciona que la empresa tiene una posición importante en la cartera, con un valor de acción alrededor de 6 dólares, y sugiere que no se incrementará la posición a menos que haya una mejora en la viabilidad del proyecto.",
+          "timestamp": "00:23:14",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.5
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El analista menciona que el proyecto de Adriatic está en una etapa de sobreventa, con fluctuaciones históricas en 2020, 2022 y 2023, y sugiere que los momentos de sobreventa suelen ser buenos para ampliar posiciones.",
+          "timestamp": "00:24:03",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El analista discute el estado actual del proyecto de Adriatic, mencionando preparativos para perforación en Droskovac, fluctuaciones históricas de sobreventa en la acción, y el impacto del trimestre constitucional. Sugiere que los momentos de sobreventa suelen ser buenos para ampliar posiciones, aunque el analista mantiene su posición en la acción a pesar de la volatilidad. También menciona que el proyecto tiene una posición importante en la cartera, con un valor de acción alrededor de 6 dólares, y que no se incrementará la posición a menos que haya una mejora en la viabilidad del proyecto."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de las elecciones en EE. UU. enfatiza la importancia de los 'swing states' y la competencia entre candidatos como Tram y Javís en estados clave.",
+          "timestamp": "00:33:56",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona que las campañas políticas en EE. UU. son extremadamente costosas, con ejemplos como la campaña de Javís que levantó 200 millones en su primera semana.",
+          "timestamp": "00:33:43",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se señala que el liderazgo de Tram en ciertos estados puede ser vulnerable, con comentarios sobre su elección de sucesor como 'avance' que se considera un error estratégico.",
+          "timestamp": "00:34:35",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se anticipa que los resultados de las elecciones dependerán de la evolución de los 'swing states', con un análisis de cómo Tram y Javís podrían mantener o perder liderazgo en estados clave.",
+          "timestamp": "00:37:01",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se menciona la volatilidad del mercado en relación con las elecciones, con referencias a cómo los cambios en el liderazgo de los candidatos afectan la percepción de riesgo y el valor de las acciones.",
+          "timestamp": "00:37:07",
+          "scope": "hosts",
+          "confidence": 0.4
+        },
+        {
+          "stage": "management",
+          "paraphrase": "Se critica la elección de 'avance' como sucesor de Tram, considerado un error estratégico por su falta de habilidad para ganar elecciones, lo que podría afectar el liderazgo de Tram en estados clave.",
+          "timestamp": "00:34:35",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se señala que Tram se equivocó al elegir a 'avance' como sucesor, lo que podría llevar a una pérdida de liderazgo en ciertos estados, especialmente en estados como Michigan y Georgia.",
+          "timestamp": "00:34:35",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se analiza la dinámica de los 'swing states' y cómo su evolución en las elecciones puede determinar el resultado general, con un enfoque en la competencia entre Tram y Javís en estados clave.",
+          "timestamp": "00:34:01",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona la importancia de los 'swing states' en la determinación del resultado electoral, con un análisis de cómo ciertos estados como Georgia, Nevada y Arizona podrían cambiar de apoyo entre los candidatos.",
+          "timestamp": "00:34:01",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "quality",
+          "paraphrase": "Se critica la gestión de Tram en temas como la frontera, con comentarios sobre cómo su enfoque podría afectar su liderazgo en ciertos estados y la percepción de riesgo en las elecciones.",
+          "timestamp": "00:34:28",
+          "scope": "hosts",
+          "confidence": 0.4
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis se centra en la competencia electoral en EE. UU., destacando la importancia de los 'swing states', la volatilidad de las campañas políticas, y la crítica a la elección de sucesores por parte de Tram. Se mencionan los costos elevados de las campañas, la evolución del liderazgo de los candidatos, y la percepción de riesgo en el mercado. Se anticipan resultados que dependerán de la dinámica en estados clave, con un enfoque en cómo los errores estratégicos podrían afectar el resultado final."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la posibilidad de comprar más activos, incluso con un nivel de liquidez ya existente, y se sugiere que ciertos activos, como el uranio, pueden estar en una corrección.",
+          "timestamp": "00:44:23",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se señala que el banco en cuestión está cotizando a un precio muy bajo, con un P/Tangible Book Value de 0,75 y un ROE del 30%, lo que sugiere una valoración muy atractiva.",
+          "timestamp": "00:52:04",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona que el uranio está en una corrección, con precios que han caído de 210 a 84 dólares, lo que sugiere un riesgo elevado en este momento.",
+          "timestamp": "00:46:13",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se sugiere que el uranio está en un ciclo de corrección, con un patrón que parece coincidir con el mes de agosto, lo que podría indicar un posible reto en el próximo ciclo.",
+          "timestamp": "00:46:26",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona que el uranio tiene un déficit estructural en el sector, lo que sugiere que existen oportunidades de inversión a largo plazo.",
+          "timestamp": "00:47:39",
+          "scope": "hosts",
+          "confidence": 0.7
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento aborda la posibilidad de adquirir más activos, especialmente en el uranio, que está en una corrección. Se menciona que el uranio tiene un déficit estructural y que su valoración parece muy atractiva, aunque con riesgos. También se señala que ciertos bancos están cotizando a precios bajos, lo que podría representar una oportunidad de inversión. Sin embargo, se advierte que el mercado puede cambiar de dirección, especialmente en el mes de agosto, lo que podría afectar las decisiones de inversión."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de los bancos griegos muestra una fragmentación del mercado y una falta de líderes destacados, con bancos que no destacan por su calidad o tamaño.",
+          "timestamp": "00:55:51",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa Dipco ha alcanzado máximos históricos y ha publicado resultados positivos, con un buen desempeño en producción y costos operativos bajísimos.",
+          "timestamp": "00:58:05",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa tiene una estrategia de hedge efectiva para protegerse contra fluctuaciones del precio del petróleo, con contratos que cubren riesgos significativos.",
+          "timestamp": "01:01:07",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La empresa está considerando la venta del activo de Ferguson, un proyecto estrella, para optimizar el uso de recursos y financiar futuros proyectos de capex.",
+          "timestamp": "01:05:44",
+          "scope": "hosts",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de los bancos griegos muestra una fragmentación del mercado y una falta de líderes destacados, mientras que la empresa Dipco ha alcanzado máximos históricos y ha publicado resultados positivos. La empresa tiene una estrategia de hedge efectiva para protegerse contra fluctuaciones del precio del petróleo y está considerando la venta de un activo estrella para optimizar recursos y financiar proyectos futuros."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa está valorada a un 47% por debajo del valor neto de activos (NAP), pero con un potencial de crecimiento significativo debido a activos petrolíferos en desarrollo.",
+          "timestamp": "01:10:19",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El activo de Blacrot tiene riesgos operativos debido a problemas de producción en el campo de Guasana, lo que podría afectar la generación de cash flow y la valoración de la empresa.",
+          "timestamp": "01:15:45",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa Valeura tiene una posición de caja sólida (145 millones de dólares, 40% del market cap) y está explorando opciones de inversión, recompra de acciones o adquisición, lo que sugiere una estrategia de entrada positiva.",
+          "timestamp": "01:13:37",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de valoración de Valeura muestra un descuento significativo respecto al NAP, pero con potencial de crecimiento por activos petrolíferos. Sin embargo, riesgos operativos en Guasana y una posición de caja sólida influyen en la estrategia de entrada y valoración de la empresa."
+    },
+    {
+      "chunk": 8,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "La inversión en Abrazilver se basa en el apalancamiento con el precio de la plata y el oro, aprovechando la subida de los metales preciosos.",
+          "timestamp": "01:19:02",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El proyecto de Abrazilver tiene un valor neto presente de 500 millones, pero con un descuento del 5%, lo que reduce su valor a un 26% de tasa interna de retorno (TIR).",
+          "timestamp": "01:21:41",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El proyecto de Abrazilver tiene 13 años de vida útil, con 14 millones de onzas de plata y 44 mil onzas de oro anuales, y un costo por onza muy bajo, cubierto en un 60% por la plata.",
+          "timestamp": "01:21:14",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El proyecto tiene un riesgo elevado debido a la dependencia de los precios de los metales preciosos, lo que hace que su valor se vea muy influenciado por fluctuaciones en estos precios.",
+          "timestamp": "01:22:00",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El proyecto de Abrazilver ha aumentado sus reservas en un 25-34%, con descubrimientos en zonas como la 'Jack Son', que tiene una alta ley de plata, y está en su cuarta campaña de perforación.",
+          "timestamp": "01:23:42",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de inversión en Abrazilver se centra en el apalancamiento con los precios de los metales preciosos, el valor neto presente y el riesgo elevado asociado a la dependencia de estos precios. El proyecto tiene una vida útil de 13 años, con un costo por onza muy bajo y reservas en aumento, aunque su TIR es baja debido al descuento del 5%. La subida de los precios de la plata y el oro ha hecho que la acción se haya valorado en un 50%, aprovechando el apalancamiento del proyecto."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
