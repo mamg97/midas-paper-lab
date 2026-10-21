@@ -26,6 +26,20 @@ ENGINE = "classic_sp500_next_open_v2"
 BENCHMARK = "benchmark_spy"
 CAMPAIGN = "classic_sp500_us_2026"
 
+# Public issuer-confirmed *same security* ticker transition, not a portfolio
+# substitution. SEC 2026-10-06 8-K: https://www.sec.gov/Archives/edgar/data/
+# 2041610/000110465926113913/tm2626659d7_8k.htm
+# Skydance Class B moved Nasdaq->NYSE, ticker PSKY->SKYD effective Oct 6.
+# Only the market-data identity changes; books preserve their frozen IDs,
+# cost basis, positions, stop/target and prior equity unchanged.
+VERIFIED_TICKER_RENAMES = {"PSKY": ("SKYD", "2026-10-06")}
+
+
+def verified_price_symbol(ticker, session):
+    change = VERIFIED_TICKER_RENAMES.get(ticker)
+    return change[0] if change and session >= change[1] else None
+
+
 
 def verify_config(config):
     if (config.get("name") != "MIDAS_classic_SP500_forward_2026"
@@ -351,6 +365,9 @@ def reconcile_invested_gap(config, state, day, previous, symbols):
                                for ticker, order in book["pending"].items()
                                if order["side"] == "buy" and ticker not in today})
         coverage["unfilled_pending_buys_missing_bar"] = unfilled_buys
+        coverage["verified_price_source_aliases"] = {
+            t: b["verified_price_source_symbol"] for t, b in today.items()
+            if "verified_price_source_symbol" in b}
         # An original signal dated prior must settle ONLY at this session's
         # verified open; new signals are frozen after its close, not before.
         settled, changed = settle(config, result, session, prior, today)
@@ -397,16 +414,23 @@ def fetch_live(config, session, previous, symbols, required=()):
     # contract unchanged. Missing held/sell bars remain fatal; missing new BUY
     # bars are explicitly recorded as unfilled rather than backdated.
     for ticker in sorted(set(required) - set(today)):
-        try:
-            recovered = market._download([ticker], start, end, allow_missing=True)
-            frame = recovered.get(ticker)
-            if frame is None:
+        alias = verified_price_symbol(ticker, session)
+        for source in [ticker] + ([alias] if alias else []):
+            try:
+                recovered = market._download([source], start, end, allow_missing=True)
+                frame = recovered.get(source)
+                if frame is None:
+                    continue
+                row = _dated_bar(frame, session, ticker)
+            except (ValueError, TypeError, KeyError):
                 continue
-            row = _dated_bar(frame, session, ticker)
-        except (ValueError, TypeError, KeyError):
-            continue
-        frames[ticker] = frame
-        today[ticker] = row
+            if source != ticker:
+                # Price only, verified issuer rename; never synthesize the bar
+                # or create a trade under the new display symbol.
+                row["verified_price_source_symbol"] = source
+            frames[ticker] = frame
+            today[ticker] = row
+            break
     return frames, today
 
 
@@ -465,6 +489,9 @@ def run(config_path, state_path):
                             for ticker, order in book["pending"].items()
                             if order["side"] == "buy" and ticker not in today})
     coverage["unfilled_pending_buys_missing_bar"] = unfilled_buys
+    coverage["verified_price_source_aliases"] = {
+        t: b["verified_price_source_symbol"] for t, b in today.items()
+        if "verified_price_source_symbol" in b}
     updated, changed = settle(config, state, day, previous, today)
     if changed:
         updated = freeze(config, updated, day, decisions, coverage)
