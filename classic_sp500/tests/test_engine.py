@@ -210,13 +210,116 @@ class SAndP500ClassicTests(unittest.TestCase):
         with TemporaryDirectory() as td:
             path = Path(td) / "ledger.json"
             path.write_text(json.dumps(state), encoding="utf-8")
-            with patch.object(classic.market, "calendar",
-                              return_value=("2026-10-14", "2026-10-13",
-                                            "2026-10-15", False)):
-                with self.assertRaisesRegex(ValueError, "open positions"):
+            with (patch.object(classic.market, "calendar",
+                               return_value=("2026-10-14", "2026-10-13",
+                                             "2026-10-15", False)),
+                  patch.object(classic, "fetch_live", return_value=({}, {}))):
+                with self.assertRaisesRegex(
+                        ValueError, "Gap reconciliation requires real same-session OHLC"):
                     classic.run(
                         Path(__file__).resolve().parents[1] / "config.json", path)
             self.assertEqual(json.loads(path.read_text(encoding="utf-8")), state)
+
+    def _invested_state_oct16(self):
+        orders = self.fake
+        base = classic.initialize(self.config, "2026-10-15", orders, self.diagnostic)
+        bars = {
+            "AAPL": {"open": 100, "low": 99, "high": 104, "close": 101},
+            "MSFT": {"open": 200, "low": 198, "high": 205, "close": 203},
+            "SPY": {"open": 400, "low": 399, "high": 404, "close": 402},
+        }
+        state, _ = classic.settle(self.config, base, "2026-10-16", "2026-10-15", bars)
+        return classic.freeze(self.config, state, "2026-10-16",
+                              orders, self.diagnostic)
+
+    def test_invested_gap_replays_both_dated_sessions_and_freezes_new_signals(self):
+        from unittest.mock import patch
+        from tempfile import TemporaryDirectory
+        import json
+        initial = self._invested_state_oct16()
+        self.assertIn("AAPL", initial["books"]["buy_hold_equal_weight"]["positions"])
+        original = copy.deepcopy(initial)
+        calls = []
+        priced = {
+            "AAPL": {"open": 102, "low": 101, "high": 106, "close": 104},
+            "MSFT": {"open": 204, "low": 203, "high": 210, "close": 208},
+            "SPY": {"open": 405, "low": 404, "high": 408, "close": 406},
+        }
+
+        def prices(_config, session, previous, symbols, *, required=()):
+            calls.append(("prices", session, previous, tuple(sorted(required))))
+            self.assertEqual(previous, "2026-10-16" if session == "2026-10-19"
+                             else "2026-10-19")
+            self.assertTrue({"AAPL", "MSFT", "SPY"} <= set(required))
+            return {}, priced
+
+        def signals(_config, panel, session):
+            calls.append(("signals", session))
+            return self.fake, self.diagnostic
+
+        with TemporaryDirectory() as td:
+            path = Path(td) / "ledger.json"
+            path.write_text(json.dumps(initial), encoding="utf-8")
+            with (patch.object(classic.market, "calendar",
+                               return_value=("2026-10-20", "2026-10-19",
+                                             "2026-10-21", False)),
+                  patch.object(classic, "fetch_live", side_effect=prices),
+                  patch.object(classic, "rank_signals", side_effect=signals)):
+                out = classic.run(Path(__file__).resolve().parents[1] / "config.json", path)
+                self.assertEqual(out["status"], "dated_paper_sessions_reconciled")
+                self.assertEqual(out["late_recorded_sessions"],
+                                 ["2026-10-19", "2026-10-20"])
+                ledger_text = path.read_text(encoding="utf-8")
+                repeat = classic.run(Path(__file__).resolve().parents[1] / "config.json", path)
+                self.assertEqual(repeat["status"], "already_recorded")
+                self.assertEqual(ledger_text, path.read_text(encoding="utf-8"))
+        updated = json.loads(ledger_text)
+        self.assertEqual(initial, original)
+        self.assertEqual(updated["last_session"], "2026-10-20")
+        self.assertEqual(
+            [point["date"] for point in updated["books"]["benchmark_spy"]["equity"]],
+            ["2026-10-15", "2026-10-16", "2026-10-19", "2026-10-20"])
+        self.assertEqual(updated["late_recorded_sessions"], ["2026-10-19", "2026-10-20"])
+        self.assertTrue(all(x.get("late_recorded_verified_date")
+                            for x in updated["coverage"][-2:]))
+        self.assertEqual([x[:2] for x in calls],
+                         [("prices", "2026-10-19"), ("signals", "2026-10-19"),
+                          ("prices", "2026-10-20"), ("signals", "2026-10-20")])
+
+    def test_invested_gap_is_atomic_if_second_day_lacks_held_prices(self):
+        from unittest.mock import patch
+        from tempfile import TemporaryDirectory
+        import json
+        state = self._invested_state_oct16()
+        bars = {
+            "AAPL": {"open": 102, "low": 101, "high": 106, "close": 104},
+            "MSFT": {"open": 204, "low": 203, "high": 210, "close": 208},
+            "SPY": {"open": 405, "low": 404, "high": 408, "close": 406},
+        }
+
+        def prices(_config, session, previous, symbols, *, required=()):
+            return {}, bars if session == "2026-10-19" else {"SPY": bars["SPY"]}
+
+        with TemporaryDirectory() as td:
+            path = Path(td) / "ledger.json"
+            path.write_text(json.dumps(state), encoding="utf-8")
+            before = path.read_bytes()
+            with (patch.object(classic.market, "calendar",
+                               return_value=("2026-10-20", "2026-10-19",
+                                             "2026-10-21", False)),
+                  patch.object(classic, "fetch_live", side_effect=prices),
+                  patch.object(classic, "rank_signals",
+                               return_value=(self.fake, self.diagnostic))):
+                with self.assertRaisesRegex(ValueError, "2026-10-20 AAPL,MSFT"):
+                    classic.run(
+                        Path(__file__).resolve().parents[1] / "config.json", path)
+            self.assertEqual(path.read_bytes(), before)
+
+    def test_invested_gap_older_than_three_sessions_requires_review(self):
+        state = self._invested_state_oct16()
+        with self.assertRaisesRegex(ValueError, "bounded reconciliation"):
+            classic.market_sessions_after(
+                state["last_session"], "2026-10-23", "2026-10-22")
 
     def test_daily_run_recovers_cash_only_gap_then_is_idempotent(self):
         from unittest.mock import patch

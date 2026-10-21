@@ -302,6 +302,72 @@ def recover_flat_gap(config, state, day, previous, decisions, coverage):
     return result, missed, expired
 
 
+def market_sessions_after(last_session, day, previous, *, max_reconcile=3):
+    """Verify every XNYS date before considering a delayed paper settlement."""
+    import pandas_market_calendars as calendars
+    sessions = calendars.get_calendar("XNYS").valid_days(
+        start_date=last_session, end_date=day)
+    observed = [str(session.date()) for session in sessions]
+    if (len(observed) < 3 or observed[0] != last_session
+            or observed[-1] != day or observed[-2] != previous):
+        raise ValueError("Cannot verify exact missed XNYS market sessions")
+    if len(observed) - 1 > max_reconcile:
+        raise ValueError("Invested gap exceeds bounded reconciliation window")
+    return observed
+
+
+def required_live_quotes(state):
+    """Only held exposures and pending sells require a valid mark to proceed."""
+    return {ticker for book in state["books"].values()
+            for ticker in set(book["positions"]) |
+            {ticker for ticker, order in book["pending"].items()
+             if order["side"] == "sell"}}
+
+
+def reconcile_invested_gap(config, state, day, previous, symbols):
+    """Delayed, deterministic paper settlement on EXACT historical XNYS bars.
+
+    This is a disclosed late calculation from previously frozen strategy rules;
+    it is not a claim that GitHub Actions executed successfully on those dates.
+    All sessions must pass their dated price and coverage checks before we
+    return a replacement ledger. No partial state is published on a failure.
+    """
+    validate_state(state, config)
+    observed = market_sessions_after(state["last_session"], day, previous)
+    result = copy.deepcopy(state)
+    late = []
+    for i, session in enumerate(observed[1:], start=1):
+        prior = observed[i - 1]
+        needed = {ticker for book in result["books"].values()
+                  for ticker in set(book["positions"]) | set(book["pending"])}
+        frames, today = fetch_live(config, session, prior, symbols, required=needed)
+        missing = required_live_quotes(result) - set(today)
+        if missing:
+            raise ValueError(
+                "Gap reconciliation requires real same-session OHLC for held/sell: "
+                + session + " " + ",".join(sorted(missing)))
+        decisions, coverage = rank_signals(config, frames, session)
+        unfilled_buys = sorted({ticker for book in result["books"].values()
+                               for ticker, order in book["pending"].items()
+                               if order["side"] == "buy" and ticker not in today})
+        coverage["unfilled_pending_buys_missing_bar"] = unfilled_buys
+        # An original signal dated prior must settle ONLY at this session's
+        # verified open; new signals are frozen after its close, not before.
+        settled, changed = settle(config, result, session, prior, today)
+        if not changed:
+            raise ValueError("Repeated reconciliation session")
+        coverage["late_recorded_verified_date"] = True
+        coverage["reconciliation_kind"] = "deterministic_frozen_signal_replay"
+        result = freeze(config, settled, session, decisions, coverage)
+        late.append(session)
+    result.setdefault("late_recorded_sessions", []).extend(late)
+    result["reconciliation_note"] = (
+        "Late paper calculations from exact historical market bars and "
+        "previously frozen strategy policies; original scheduled runs failed."
+    )
+    return result, late
+
+
 def _dated_bar(frame, session, ticker):
     """Never substitute another session's OHLC or a previous close."""
     row = market._last_row(frame, session, ticker)
@@ -359,7 +425,17 @@ def run(config_path, state_path):
             return {"status": "already_recorded", "session": day}
     gap = state is not None and previous != state["last_session"]
     if gap and any(book["positions"] for book in state["books"].values()):
-        raise ValueError("Missed market session with open positions: manual review required")
+        # Never skip held exposures or treat future prices as historic prices.
+        # Reconcile the exact missed XNYS sessions in memory; publish atomically
+        # only after all their mandatory bars and signal coverage have passed.
+        reconciled, late = reconcile_invested_gap(
+            config, state, day, previous, symbols)
+        market.atomic_write(state_path, reconciled)
+        return {"status": "dated_paper_sessions_reconciled",
+                "date": day, "late_recorded_sessions": late,
+                "books": len(reconciled["books"]),
+                "eligible": reconciled["coverage"][-1]["eligible"],
+                "universe": reconciled["coverage"][-1]["total"]}
     # No stale next-open order may be filled after its intended session.
     needed = {ticker for book in state["books"].values()
               for ticker in set(book["positions"]) | set(book["pending"])} if state and not gap else set()
