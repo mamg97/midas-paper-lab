@@ -162,6 +162,45 @@ class SAndP500ClassicTests(unittest.TestCase):
         self.assertIn("SYNTH", frames)
         self.assertEqual(bars["SYNTH"]["close"], 102.0)
 
+    def test_issuer_confirmed_rename_only_after_effective_session(self):
+        self.assertIsNone(classic.verified_price_symbol("PSKY", "2026-10-05"))
+        self.assertEqual(classic.verified_price_symbol("PSKY", "2026-10-06"), "SKYD")
+        self.assertEqual(classic.verified_price_symbol("PSKY", "2026-10-19"), "SKYD")
+        self.assertIsNone(classic.verified_price_symbol("SPY", "2026-10-19"))
+
+    def test_renamed_held_security_reads_skyd_but_preserves_psky_key(self):
+        from unittest.mock import patch
+        synthetic = object()
+        quotes = {"Open": 6.89, "High": 6.96, "Low": 6.61, "Close": 6.80}
+        calls = []
+
+        def download(symbols, start, end, allow_missing=False):
+            calls.append(tuple(symbols))
+            return {"SKYD": synthetic} if symbols == ["SKYD"] else {}
+
+        with (patch.object(classic.market, "_download", side_effect=download),
+              patch.object(classic.market, "_last_row", return_value=quotes)):
+            frames, bars = classic.fetch_live(
+                self.config, "2026-10-19", "2026-10-16",
+                ["PSKY"], required={"PSKY"})
+        self.assertEqual(calls[-2:], [("PSKY",), ("SKYD",)])
+        self.assertEqual(list(frames), ["PSKY"])
+        self.assertEqual(bars["PSKY"]["close"], 6.80)
+        self.assertEqual(bars["PSKY"]["verified_price_source_symbol"], "SKYD")
+        self.assertNotIn("SKYD", bars)
+
+    def test_renamed_symbol_never_supplies_prior_or_missing_dated_prices(self):
+        from unittest.mock import patch
+        with (patch.object(classic.market, "_download",
+                           side_effect=[{}, {}, {"SKYD": object()}]) as download,
+              patch.object(classic.market, "_last_row",
+                           side_effect=ValueError("not the requested session"))):
+            frames, bars = classic.fetch_live(
+                self.config, "2026-10-19", "2026-10-16",
+                ["PSKY"], required={"PSKY"})
+        self.assertEqual((frames, bars), ({}, {}))
+        self.assertEqual(download.call_count, 3)
+
     def test_isolated_retry_never_fabricates_missing_mandatory_close(self):
         from unittest.mock import patch
         with patch.object(classic.market, "_download", side_effect=[
