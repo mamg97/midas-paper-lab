@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-22T08:11:03.826190+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/99864570",
+    "published_date": "2022-12-15",
+    "youtube_video_id": "TPJq4dhSZV4",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 27544182
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 3443.0171875,
+      "word_count": 9598,
+      "segment_count": 550,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "TPJq4dhSZV4",
+    "youtube_url": "https://www.youtube.com/watch?v=TPJq4dhSZV4",
+    "title": "Cartera de INVERSIÓN en DICIEMBRE  | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/99864570",
+    "published_date": "2022-12-15",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute decisiones de compra y venta en una cartera de inversión, enfocándose en la estrategia de 'Buy the Dip' durante el periodo de Navidad. Se mencionan ventas de acciones de Altisodes Portfolio Solutions, Benfica, y Centencorp, y compras de Fanny May, Meta Platforms, y Westime, basadas en rentabilidades y análisis de mercado. Se anticipa una posible subida del mercado durante el periodo de Navidad, lo que influyó en las decisiones. También se analiza la valoración de Meta, destacando su subvaloración y riesgos macroeconómicos, así como la posibilidad de una recesión en 2023 que motivó la adquisición de activos protegentes. Se menciona una posición secreta en un sector poco conocido relacionado con el petróleo en un país con potencial de escasez, y se sugiere una entrada en Meta basada en su valoración actual. Se destacan desafíos como la regulación en Estados Unidos y la volatilidad histórica de las tecnológicas, así como el impacto del precio del petróleo en las empresas petrolíferas. Se menciona el potencial de crecimiento de proyectos mineros a largo plazo y la necesidad de diversificación de riesgos.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "La empresa de royalties de oro se valora como 'por excelencia' y se espera un análisis detallado en la industria de las materias primas."
+      ],
+      "cycle_macro": [
+        "Se anticipó una posible subida del mercado durante el periodo de Navidad, lo que influyó en la decisión de vender ciertas acciones y comprar otras."
+      ],
+      "entry": [
+        "Se sugiere una entrada en Meta basada en su valoración actual, considerando que su capitalización bursátil refleja grandes inversiones en tecnología y metaverso, aunque el mercado percibe estas inversiones como inútiles."
+      ],
+      "sizing": [
+        "Las acciones de Fanny May representan casi el 5% de la cartera, y las de Meta Platforms casi el 4%, mientras que Westime representa el 2,7%."
+      ],
+      "add_hold": [],
+      "exit": [
+        "Se vendieron acciones de Centencorp a 83 por acción con una rentabilidad del 9,3% y Kidel a 85,66 con una pérdida del 13%."
+      ],
+      "risk": [
+        "Se mencionó la posibilidad de una recesión en 2023, lo que motivó la adquisición de activos que protejan contra una caída del mercado."
+      ],
+      "technical": [
+        "La empresa Guanajuato ha mostrado una mejora en los costes por onza y un aumento en la producción, lo que sugiere un buen desempeño técnico."
+      ],
+      "management": [],
+      "mistakes": [
+        "Se mencionó un error en la descripción de la rentabilidad de Centencorp, que fue corregido al indicar un 1,91% en lugar de 9,3%."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [
+      "Una posición secreta en un sector poco conocido relacionado con el petróleo en un país con potencial de escasez."
+    ],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se vendieron acciones de Altisodes Portfolio Solutions, Benfica, Centencorp, Kidel, y se compraron acciones de Fanny May, Meta Platforms, y Westime.",
+          "timestamp": "00:01:31",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Las acciones de Altisodes Portfolio Solutions se vendieron a 14,76 de media con una rentabilidad del 58%, mientras que las de Benfica se vendieron a 3,87 euros con una rentabilidad del 23%.",
+          "timestamp": "00:01:31",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Las acciones de Fanny May representan casi el 5% de la cartera, y las de Meta Platforms casi el 4%, mientras que Westime representa el 2,7%.",
+          "timestamp": "00:04:52",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se vendieron acciones de Centencorp a 83 por acción con una rentabilidad del 9,3% y Kidel a 85,66 con una pérdida del 13%.",
+          "timestamp": "00:02:49",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se mencionó la posibilidad de una recesión en 2023, lo que motivó la adquisición de activos que protejan contra una caída del mercado.",
+          "timestamp": "00:02:17",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se anticipó una posible subida del mercado durante el periodo de Navidad, lo que influyó en la decisión de vender ciertas acciones y comprar otras.",
+          "timestamp": "00:02:24",
+          "scope": "hosts",
+          "confidence": 0.4,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se mencionó un error en la descripción de la rentabilidad de Centencorp, que fue corregido al indicar un 1,91% en lugar de 9,3%.",
+          "timestamp": "00:02:57",
+          "scope": "hosts",
+          "confidence": 0.3,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "other",
+          "paraphrase": "Se mencionó una posición secreta de un sector poco conocido, relacionada con el petróleo en un país con potencial de escasez, que aún no se ha comentado en detalle.",
+          "timestamp": "00:06:17",
+          "scope": "hosts",
+          "confidence": 0.2,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast discute las decisiones de compra y venta de acciones en la cartera, detallando las rentabilidades de ciertas posiciones, la estrategia de diversificación, y la posibilidad de una recesión en 2023. Se mencionan específicos cambios en la composición de la cartera, como la venta de acciones de Altisodes Portfolio Solutions, Benfica, y Centencorp, y la compra de acciones de Fanny May, Meta Platforms, y Westime. También se menciona una posición secreta en un sector poco conocido, y se anticipa una posible subida del mercado durante el periodo de Navidad, lo que influyó en las decisiones de venta y compra."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona una nueva concesión en la zona de Eagle con descubrimientos de alta calidad, como 2,5 kilos de plata en 4,8 metros, lo que mejora los fundamentales de la empresa.",
+          "timestamp": "00:11:20",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa ha mostrado un aumento significativo en las onzas de plata y oro, con un 22% y 29% respectivamente, lo que sugiere un valor positivo para la acción.",
+          "timestamp": "00:13:18",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona un posible riesgo de conflicto en Burkina Faso debido a la presencia de grupos armados, aunque la mina tiene una base militar y no está en zonas directas de conflicto.",
+          "timestamp": "00:16:15",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "El analista sugiere considerar la posibilidad de salir de una posición en Mali debido a la deterioración de la situación y la falta de expectativas positivas.",
+          "timestamp": "00:17:12",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "La empresa Guanajuato ha mostrado una mejora en los costes por onza y un aumento en la producción, lo que sugiere un buen desempeño técnico.",
+          "timestamp": "00:18:10",
+          "scope": "hosts",
+          "confidence": 0.8
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la estrategia de inversión se basa en descubrimientos de alta calidad en proyectos de oro y plata, mejora en los fundamentales de la empresa, riesgos de conflicto en Burkina Faso, posibilidad de salida de posiciones en Mali y un buen desempeño técnico en Guanajuato. La estrategia se centra en mantener posiciones en empresas con buen desempeño y en evaluar riesgos y oportunidades en diferentes zonas geográficas."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El análisis de valoración sugiere que Meta está subvalorada debido a la percepción del mercado sobre sus gastos operativos y la falta de contabilización adecuada de sus inversiones.",
+          "timestamp": "00:21:38",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se sugiere una entrada en Meta basada en su valoración actual, considerando que su capitalización bursátil refleja grandes inversiones en tecnología y metaverso, aunque el mercado percibe estas inversiones como inútiles.",
+          "timestamp": "00:28:02",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El análisis de riesgo indica que los tipos de interés y la inflación podrían afectar la valoración de Meta, especialmente si los tipos de interés aumentan, lo que podría impactar negativamente su valoración.",
+          "timestamp": "00:22:12",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento analiza la valoración de Meta, sugiere una entrada en el mercado basada en su subvaloración y menciona factores de riesgo relacionados con los tipos de interés y la inflación. Se destacan los gastos operativos y la percepción del mercado sobre las inversiones en tecnología y metaverso, así como la posibilidad de que los tipos de interés afecten la valoración de Meta."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Meta ha invertido en Instagram y WhatsApp a precios altos, pero ahora estas adquisiciones han sido exitosas.",
+          "timestamp": "00:32:46",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Meta está cotizando a un precio muy bajo, con una relación de valoración de 6 veces, lo que sugiere una oportunidad de inversión.",
+          "timestamp": "00:41:04",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Meta enfrenta desafíos como un exceso de personal y posibles regulaciones que podrían afectar su crecimiento.",
+          "timestamp": "00:34:13",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La inversión en infraestructura y datacenters de Meta es un indicador de su enfoque estratégico y su capacidad de adaptación a cambios macroeconómicos.",
+          "timestamp": "00:33:35",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Meta ha monetizado WhatsApp y Messenger, lo que podría generar nuevos ingresos y valor para los accionistas.",
+          "timestamp": "00:42:41",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "WhatsApp y Instagram han crecido a pesar de los desafíos, lo que refleja su sólida base de usuarios y su capacidad de adaptación al mercado.",
+          "timestamp": "00:37:10",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La regulación en Estados Unidos podría limitar el crecimiento de TikTok, lo que podría beneficiar a Meta y a otras plataformas como Instagram.",
+          "timestamp": "00:40:12",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La valoración de Meta es muy baja, lo que sugiere que su crecimiento podría ser más sostenible en el futuro, incluso con desafíos macroeconómicos.",
+          "timestamp": "00:41:27",
+          "scope": "hosts",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de Meta revela que, a pesar de desafíos como un exceso de personal y posibles regulaciones, la empresa ha invertido en adquisiciones exitosas como Instagram y WhatsApp, y su valoración actual sugiere una oportunidad de inversión. La estrategia de Meta parece enfocada en la adaptación a cambios macroeconómicos y en la monetización de sus plataformas, lo que podría generar beneficios a largo plazo, aunque con riesgos asociados a regulaciones y a la sostenibilidad de su crecimiento."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la posibilidad de invertir en Meta a pesar de su volatilidad histórica, destacando su potencial futuro y comparándolo con otras tecnológicas.",
+          "timestamp": "00:44:09",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se analizan los multiplicadores de precios de Meta (11x) y otras tecnológicas (24x), destacando la relación entre el precio del petróleo y el valor de las empresas petrolíferas.",
+          "timestamp": "00:45:01",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona la volatilidad histórica de las tecnológicas (caídas del 30% en 2018 y 2020), destacando la necesidad de diversificación y la importancia de factores macroeconómicos como el precio del petróleo.",
+          "timestamp": "00:45:32",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se analiza el ciclo del petróleo y su impacto en las empresas petrolíferas, destacando la producción récord y el anuncio de recompra de acciones por parte de una empresa, con expectativas de crecimiento a largo plazo.",
+          "timestamp": "00:47:02",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona el potencial de crecimiento de empresas como Adriatic Metals, con un proyecto de exploración que tiene 10 años de vida y un impacto positivo en los costos y la producción, destacando la necesidad de espera para ver resultados concretos.",
+          "timestamp": "00:50:13",
+          "scope": "hosts",
+          "confidence": 0.4
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis aborda la inversión en tecnológicas como Meta, la volatilidad histórica de los mercados, el impacto del precio del petróleo en las empresas petrolíferas, y el potencial de crecimiento de proyectos de exploración minera. Se destacan la diversificación de riesgos, la relación entre factores macroeconómicos y el valor de las empresas, así como la necesidad de espera para ver resultados concretos en proyectos a largo plazo."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona que está priorizando una empresa llamada Brugfield y menciona que tiene parecidos con otra empresa, ambas con una parte de gestión y spin-offs.",
+          "timestamp": "00:55:22",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona que la empresa de royalties de oro es 'por excelencia' y que se espera que el análisis sea detallado y largo, con un enfoque en la industria de las materias primas.",
+          "timestamp": "00:55:48",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se sugiere que la empresa de 'gente no publicaron solo minas en el congo' podría ser relevante para inversiones en materias primas, aunque no se especifica claramente el motivo de la decisión de dejarla en el análisis.",
+          "timestamp": "00:56:04",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.5,
+          "automation_hint": "null"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El episodio aborda la estrategia de inversión en empresas relacionadas con las materias primas, destacando la priorización de una empresa llamada Brugfield, la valoración de una empresa de royalties de oro como 'por excelencia', y la consideración de posibles salidas de inversión en sectores específicos. Se menciona que el análisis será detallado y que se espera que la espera merezca la pena, aunque no se especifica claramente el motivo de ciertas decisiones en el análisis."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
