@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-23T19:08:54.340926+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/104745835",
+    "published_date": "2023-03-17",
+    "youtube_video_id": "WEercPWuPJw",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 18910816
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2363.7943125,
+      "word_count": 6354,
+      "segment_count": 1010,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "WEercPWuPJw",
+    "youtube_url": "https://www.youtube.com/watch?v=WEercPWuPJw",
+    "title": "Cartera de INVERSIÓN en MARZO   | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/104745835",
+    "published_date": "2023-03-17",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute la actualización de una cartera de inversión, destacando la adición de empresas como Lico Inc y Alico, la venta de Tecnologis, y el análisis de una empresa con potencial de crecimiento debido a un PIA financiado. Se menciona el impacto del virus chino en la producción de naranjas en Florida, el aumento en el precio del zumo de naranja debido a la escasez, y la estrategia de reducción de costes y aumento de productividad de una empresa. También se analiza el riesgo de caída de precios del zumo, la elasticidad de la demanda, y el valor de activos de una empresa con un descuento del NAP del 57%. Se destacan proyectos mineros de oro en Fiji y Brookfield, resultados prometedores en exploración, y una estrategia de inversión basada en movimientos de precios específicos, con un criterio de cierre basado en el valor de las acciones y un nivel de riesgo aceptable.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Una empresa tiene un PIA financiado y potencial de aumento en los números si se actualiza el PIA.",
+        "La empresa ha reducido costes operativos y aumentado la densidad de árboles por acre, mejorando la productividad a un costo fijo.",
+        "La empresa tiene un valor de activos de 366.5 millones con un descuento del NAP del 57%.",
+        "Se destaca la mineralización encontrada en el proyecto de Go Gold con resultados prometedores en exploración."
+      ],
+      "cycle_macro": [
+        "Se menciona una tendencia de aumento en el precio del zumo de naranja debido a la escasez causada por el virus chino.",
+        "La demanda de zumo de naranja ha mostrado elasticidad, lo que implica que una caída de precios podría aumentar el consumo y beneficiar la empresa."
+      ],
+      "entry": [
+        "Se menciona la adición de nuevas empresas a la cartera, como Lico Inc y Alico, y la venta de Tecnologis.",
+        "La empresa ha reducido significativamente su deuda y ha realizado una tendera para recomprar acciones, lo que sugiere una estrategia de entrada basada en la mejora de la estructura de deuda y el valor de los activos."
+      ],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [
+        "Se menciona la posibilidad de salir de la inversión cuando las acciones de juniors alcanzan un nivel determinado."
+      ],
+      "risk": [
+        "Se menciona un virus que afecta a las naranjas en Florida, reduciendo la producción y aumentando los costes de mantenimiento, pero con una mejora en la resistencia de los árboles.",
+        "El riesgo principal es la posibilidad de que los precios del zumo caigan, afectando la rentabilidad de la empresa.",
+        "La empresa enfrenta riesgos de desvalorización de activos debido a la reducción de los precios de los terrenos de rancho y la falta de acción de la directiva para mejorar el valor."
+      ],
+      "technical": [
+        "Se describe un análisis de la producción de naranjas, el impacto del virus en la densidad de plantación y el aumento del yield del zumo, con un impacto en los costes y beneficios.",
+        "Se describe un drill exitoso de Jack Zone con 32 kilos de plata en un metro, indicando un alto potencial de mineralización y un impacto positivo en el proyecto."
+      ],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adición de nuevas empresas a la cartera, como Lico Inc y Alico, y la venta de Tecnologis.",
+          "timestamp": "00:01:02",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se describe una empresa con un PIA (Proyecto de Inversión Autorizada) que está financiado y a punto de producir, con potencial de aumento en los números si se actualiza el PIA.",
+          "timestamp": "00:03:01",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona un virus que afecta a las naranjas en Florida, reduciendo la producción y aumentando los costes de mantenimiento, pero con una mejora en la resistencia de los árboles.",
+          "timestamp": "00:08:16",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se describe un análisis de la producción de naranjas, el impacto del virus en la densidad de plantación y el aumento del yield del zumo, con un impacto en los costes y beneficios.",
+          "timestamp": "00:09:04",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona una tendencia de aumento en el precio del zumo de naranja, atribuida a la escasez causada por el virus chino y la reducción de la producción.",
+          "timestamp": "00:10:47",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El programa discute la actualización de la cartera de inversión, la adición de nuevas empresas como Lico Inc y Alico, la venta de Tecnologis, y el análisis de una empresa con potencial de crecimiento debido a un PIA financiado y a la mejora en la producción de naranjas en Florida. También se menciona el impacto del virus chino en la producción de naranjas y el aumento en el precio del zumo de naranja debido a la escasez."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa ha reducido costes operativos y aumentado la densidad de árboles por acre, mejorando la productividad a un costo fijo.",
+          "timestamp": "00:14:00",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El riesgo principal es la posibilidad de que los precios del zumo caigan, afectando la rentabilidad de la empresa.",
+          "timestamp": "00:16:51",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La demanda de zumo de naranja ha mostrado elasticidad, lo que implica que una caída de precios podría aumentar el consumo y beneficiar la empresa.",
+          "timestamp": "00:17:31",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca la estrategia de reducción de costes y aumento de productividad de la empresa, junto con el riesgo de caída de precios del zumo y la elasticidad de la demanda. La empresa también tiene potencial de valoración como activo físico, con precios de terrenos estables en la industria."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa tiene un valor de activos de 366.5 millones, con un descuento del NAP del 57% respecto a su valor actual.",
+          "timestamp": "00:22:13",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa enfrenta riesgos de desvalorización de activos debido a la reducción de los precios de los terrenos de rancho y la falta de acción de la directiva para mejorar el valor.",
+          "timestamp": "00:21:01",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa ha reducido significativamente su deuda (47% desde 2015 y 32% desde 2018) y ha realizado una tendera para recomprar acciones, lo que sugiere una estrategia de entrada basada en la mejora de la estructura de deuda y el valor de los activos.",
+          "timestamp": "00:23:15",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca que la empresa tiene un valor de activos de 366.5 millones con un descuento del NAP del 57%, lo que sugiere una posible estrategia de inversión basada en la mejora de la estructura de deuda y la valorización de activos. Sin embargo, existen riesgos de desvalorización de activos y falta de acción de la directiva para mejorar el valor, lo que complica la estrategia de entrada. La empresa ha reducido su deuda significativamente y ha realizado una tendera para recomprar acciones, lo que podría ser un indicador de una estrategia de entrada basada en la mejora de la estructura de deuda y el valor de los activos."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la minera de oro en Fiji y la empresa Brookfield, destacando su desempeño en la pipeline de análisis.",
+          "timestamp": "00:29:48",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se destaca la mineralización encontrada en el proyecto de Go Gold en el Río Rico Sur, con resultados prometedores en exploración y potencial para mejorar las economías del proyecto.",
+          "timestamp": "00:30:32",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona la caída de la calificación crediticia de Hipco, con una calidad de B+ y B1, y la dificultad para ampliar deuda debido a la turbulencia del mercado.",
+          "timestamp": "00:34:24",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se describe un drill exitoso de Jack Zone con 32 kilos de plata en un metro, indicando un alto potencial de mineralización y un impacto positivo en el proyecto.",
+          "timestamp": "00:33:00",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se señala la volatilidad y la euforia en el mercado, con un entorno de alta volatilidad y miedo, lo que afecta las decisiones de inversión y el análisis de empresas.",
+          "timestamp": "00:36:54",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de inversión se centra en la minera de oro en Fiji, el desempeño de Brookfield, la mineralización en Go Gold y el proyecto de Jack Zone, destacando resultados prometedores en exploración y el impacto del mercado en la volatilidad y las decisiones de inversión."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El participante menciona la posibilidad de comprar acciones si hay un descenso del 50% o un aumento del 10%, lo que sugiere una estrategia basada en movimientos de precios específicos.",
+          "timestamp": "00:38:46",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se menciona la posibilidad de salir de la inversión cuando las acciones de juniors alcanzan un nivel determinado, lo que indica un criterio de cierre basado en el valor de las acciones.",
+          "timestamp": "00:39:02",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El participante sugiere que se pueden 'endeudar' con las acciones de juniors, lo que implica un nivel de riesgo aceptable para el inversor.",
+          "timestamp": "00:39:00",
+          "scope": "hosts",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El episodio discute una estrategia de inversión basada en la compra de acciones cuando haya un descenso del 50% o un aumento del 10%, con un criterio de salida cuando las acciones de juniors alcanzan un nivel determinado. Se menciona un nivel de riesgo aceptable mediante la 'endeudación' con acciones, sugiriendo una postura de inversión conservadora."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
