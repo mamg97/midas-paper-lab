@@ -1,11 +1,11 @@
 {
   "event": "schedule",
-  "head_sha": "12ff34778d1ea485268497ed87c2c6a2eadc4a27",
+  "head_sha": "294ef944644f935e10550d99e10bec6a92b93335",
   "outcome": "success",
-  "recorded_at_utc": "2026-10-23T02:02:48.534293+00:00",
+  "recorded_at_utc": "2026-10-23T07:40:47.204002+00:00",
   "run_attempt": 1,
-  "run_id": 39887155619,
-  "run_number": 30,
+  "run_id": 39919324318,
+  "run_number": 31,
   "schema_version": 1,
   "workflow_key": "classic_sp500",
   "workflow_name": "MIDAS classic S&P500 503 paper"
