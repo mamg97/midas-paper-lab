@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-23T08:11:52.985283+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/146029744",
+    "published_date": "2025-05-03",
+    "youtube_video_id": "UwtrHnG2GT8",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 25192071
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 3148.9045,
+      "word_count": 8465,
+      "segment_count": 485,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "UwtrHnG2GT8",
+    "youtube_url": "https://www.youtube.com/watch?v=UwtrHnG2GT8",
+    "title": "Nuestra Cartera de INVERSIÓN en ABRIL | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/146029744",
+    "published_date": "2025-05-03",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute la estrategia de inversión Buy The Dip, destacando una cartera con ganancias del 10,6% frente a una caída del mercado del -4,5%. Se menciona una empresa recientemente incorporada, Royal Dees, que mostró buen rendimiento en caídas del mercado. Se analiza la volatilidad del mercado en abril, con caídas del 12% y un PIB en descenso, y se considera la política de Trump y su impacto macroeconómico. La cartera está diversificada geográficamente y sectorialmente, con exposición a sectores descorrelacionados y activos valorados baratos. Se destacan activos contracíclicos, empresas resistentes a crisis, y una posición en un negocio antrifrágil. Se menciona una empresa con volatilidad significativa en su valoración, una posición financiera sólida, y una posible reducción de posición en Alfamín. La estrategia se basa en señales macroeconómicas, gestión de riesgos y diversificación en diferentes segmentos económicos.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Una empresa recientemente incorporada a la cartera, Royal Dees, ha mostrado buen rendimiento en las caídas del mercado.",
+        "Se destacan activos con valoraciones baratas, como empresas de royalties en sectores subyacentes con precios mínimos, y una posición en una empresa con múltiplos bajos y un historial de dividendos consistentes."
+      ],
+      "sizing": [
+        "Se menciona una estrategia de diversificación sectorial con exposición a sectores financieros, energéticos, industriales y de recursos naturales, con un enfoque en activos descorrelacionados."
+      ],
+      "add_hold": [],
+      "exit": [
+        "La empresa ha experimentado una caída en su valoración debido a factores macroeconómicos y sectoriales, lo que sugiere que la estrategia de inversión podría ajustarse en el futuro."
+      ],
+      "risk": [
+        "Se describe una estrategia de mitigación del riesgo con activos contracíclicos, empresas resistentes a crisis, y una posición en un negocio antrifrágil que podría beneficiarse de una crisis económica."
+      ],
+      "technical": [
+        "Se menciona un gráfico que ilustra la sensibilidad del portafolio a diferentes escenarios económicos, con posiciones específicas diseñadas para mitigar riesgos en situaciones extremas."
+      ],
+      "management": [
+        "Se menciona una empresa con una sólida posición financiera y un proyecto de expansión con potencial de doblar la producción de West African Resources."
+      ],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [
+          "00:02:11",
+          "00:01:41",
+          "00:04:51",
+          "00:07:52",
+          "00:11:10",
+          "00:20:16",
+          "00:11:16",
+          "00:23:02",
+          "00:25:10",
+          "00:30:13",
+          "00:27:35",
+          "00:25:47",
+          "00:25:23",
+          "00:34:14",
+          "00:37:30",
+          "00:38:03",
+          "00:45:24",
+          "00:45:54",
+          "00:49:12",
+          "00:50:09"
+        ],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El podcast discute la rentabilidad de la cartera, destacando una ganancia del 10,6% frente al mercado negativo del -4,5%.",
+          "timestamp": "00:02:11",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona una empresa recientemente incorporada a la cartera, Royal Dees, que ha mostrado buen rendimiento en las caídas del mercado.",
+          "timestamp": "00:01:41",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se señala la volatilidad del mercado en abril, con una caída del 12% y un rendimiento negativo del -3-4% para el año, lo que generó oportunidades de inversión.",
+          "timestamp": "00:04:51",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se analiza la situación macroeconómica, mencionando la política de Trump y su impacto en el PIB, con una caída en las órdenes manufactureras y un PIB en descenso.",
+          "timestamp": "00:07:52",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast discute la rentabilidad de la cartera, destacando una ganancia del 10,6% frente al mercado negativo del -4,5%, menciona una empresa recientemente incorporada a la cartera, Royal Dees, que ha mostrado buen rendimiento en las caídas del mercado, se señala la volatilidad del mercado en abril, con una caída del 12% y un rendimiento negativo del -3-4% para el año, lo que generó oportunidades de inversión, y se analiza la situación macroeconómica, mencionando la política de Trump y su impacto en el PIB, con una caída en las órdenes manufactureras y un PIB en descenso."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El uso del indicador de ventas de camiones en EE. UU. para predecir crisis económicas, aunque con fallos históricos, ha mostrado una correlación significativa en periodos recientes.",
+          "timestamp": "00:11:10",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La volatilidad de mercados y la incertidumbre sobre recesiones futuras, reflejada en la caída del índice S&P y la caída del oro, sugieren una percepción de riesgo elevada en la economía actual.",
+          "timestamp": "00:20:16",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La tendencia de gasto en EE. UU. en aumento, junto con la inestabilidad en infraestructuras y carreteras, sugiere una posible aceleración económica que podría llevar a una recesión técnica, aunque no necesariamente grave.",
+          "timestamp": "00:11:16",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis del fragmento muestra una estrategia de inversión basada en indicadores macroeconómicos como las ventas de camiones en EE. UU. para predecir crisis, junto con la percepción de riesgo elevada y la incertidumbre sobre recesiones futuras. Se destacan fallos históricos del indicador, la volatilidad de mercados, y la tendencia de gasto en aumento, que sugieren una posible aceleración económica con implicaciones para la recesión técnica. La estrategia se basa en la interpretación de señales macroeconómicas y la gestión de riesgos en un contexto de incertidumbre."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El portafolio está diversificado geográficamente con activos en Estados Unidos, Canadá, Gran Bretaña y otros países, aunque algunos activos no coinciden con la ubicación de las empresas.",
+          "timestamp": "00:23:02",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona una estrategia de diversificación sectorial con exposición a sectores financieros, energéticos, industriales y de recursos naturales, con un enfoque en activos descorrelacionados.",
+          "timestamp": "00:25:10",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se destacan activos con valoraciones baratas, como empresas de royalties en sectores subyacentes con precios mínimos, y una posición en una empresa con múltiplos bajos y un historial de dividendos consistentes.",
+          "timestamp": "00:30:13",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se describe una estrategia de mitigación del riesgo con activos contracíclicos, empresas resistentes a crisis, y una posición en un negocio antrifrágil que podría beneficiarse de una crisis económica.",
+          "timestamp": "00:27:35",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona una estrategia de diversificación en diferentes segmentos económicos, incluyendo empresas con baja correlación con el ciclo económico y activos en situaciones especiales no dependientes del desempeño económico general.",
+          "timestamp": "00:25:47",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se menciona un gráfico que ilustra la sensibilidad del portafolio a diferentes escenarios económicos, con posiciones específicas diseñadas para mitigar riesgos en situaciones extremas.",
+          "timestamp": "00:25:23",
+          "scope": "hosts",
+          "confidence": 0.7
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El portafolio está diversificado geográficamente y sectorialmente, con exposición a activos descorrelacionados y valoraciones baratas. La estrategia incluye activos contracíclicos, empresas resistentes a crisis, y una posición en un negocio antrifrágil. Se menciona una estrategia de diversificación en diferentes segmentos económicos, con un enfoque en activos no dependientes del desempeño general del mercado. Se destacan activos con múltiplos bajos y un historial de dividendos consistentes, así como una estrategia de mitigación del riesgo mediante la diversificación en sectores y geografías distintas."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa ha tenido una volatilidad significativa en su valoración, pasando de 0,69 dólares a 4,73 dólares y luego a 12 dólares, con una recuperación parcial posterior.",
+          "timestamp": "00:34:14",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa ha mantenido una posición financiera sólida con 238 millones de dólares en efectivo, sin deuda, y ha realizado compras de acciones, lo que refleja una estrategia de inversión conservadora.",
+          "timestamp": "00:37:30",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La empresa ha experimentado una caída en su valoración debido a factores macroeconómicos y sectoriales, lo que sugiere que la estrategia de inversión podría ajustarse en el futuro.",
+          "timestamp": "00:38:03",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis del fragmento muestra una volatilidad significativa en el valor de la empresa, una posición financiera sólida con efectivo y sin deuda, y una posible ajuste en la estrategia de inversión debido a factores macroeconómicos. La empresa ha mantenido una recuperación parcial en su valoración y ha realizado compras de acciones, reflejando una estrategia de inversión conservadora."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa tiene una posición de caja sólida con 331 millones de dólares en efectivo y un flujo de caja operativo de 73 millones de dólares australianos.",
+          "timestamp": "00:45:24",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa está considerando la expansión de Quiaca, un proyecto con potencial de doblar la producción de West African Resources.",
+          "timestamp": "00:45:54",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa enfrenta riesgos operativos y geográficos, como la posibilidad de interrupciones en la producción debido a eventos como la evacuación de la mina.",
+          "timestamp": "00:49:12",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La empresa ha decidido declarar un dividendo final para 2024, indicando una posible reducción de su posición en Alfamín.",
+          "timestamp": "00:50:09",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la cartera de inversiones menciona una empresa con una sólida posición financiera y un proyecto de expansión con potencial de crecimiento, aunque enfrenta riesgos operativos. Se mencionan decisiones de entrada y salida de inversiones, así como un dividendo final para 2024, reflejando una estrategia de inversión basada en la valoración financiera y el riesgo operativo."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
