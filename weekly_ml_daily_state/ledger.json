@@ -6,7 +6,7 @@
   "first_session": "2026-10-09",
   "gap_sessions": [],
   "initial_capital": 100000.0,
-  "last_session": "2026-10-21",
+  "last_session": "2026-10-22",
   "last_signal_session": "2026-10-16",
   "schema_version": 1,
   "signal_hash": "41140defb1117e7dcff7312ddc7fe61b55d7d63a5bdf74ac19861f57ed7e3b38",
@@ -58,6 +58,11 @@
           "date": "2026-10-21",
           "decision_recorded": false,
           "nav": 91956.78030914272
+        },
+        {
+          "date": "2026-10-22",
+          "decision_recorded": false,
+          "nav": 87248.48923812195
         }
       ],
       "events": [
@@ -342,7 +347,7 @@
           "type": "buy"
         }
       ],
-      "nav": 91956.78030914272,
+      "nav": 87248.48923812195,
       "pending": [],
       "positions": {
         "AMD": {
@@ -586,6 +591,11 @@
           "date": "2026-10-21",
           "decision_recorded": false,
           "nav": 100911.01063125838
+        },
+        {
+          "date": "2026-10-22",
+          "decision_recorded": false,
+          "nav": 101610.48761233807
         }
       ],
       "events": [
@@ -627,7 +637,7 @@
           "type": "buy"
         }
       ],
-      "nav": 100911.01063125838,
+      "nav": 101610.48761233807,
       "pending": [],
       "positions": {
         "RSP": {
@@ -700,6 +710,11 @@
           "date": "2026-10-21",
           "decision_recorded": false,
           "nav": 98396.19004144926
+        },
+        {
+          "date": "2026-10-22",
+          "decision_recorded": false,
+          "nav": 97291.92046109549
         }
       ],
       "events": [
@@ -741,7 +756,7 @@
           "type": "buy"
         }
       ],
-      "nav": 98396.19004144926,
+      "nav": 97291.92046109549,
       "pending": [],
       "positions": {
         "SPY": {
@@ -814,6 +829,11 @@
           "date": "2026-10-21",
           "decision_recorded": false,
           "nav": 89990.86466241677
+        },
+        {
+          "date": "2026-10-22",
+          "decision_recorded": false,
+          "nav": 86755.43236001114
         }
       ],
       "events": [
@@ -1098,7 +1118,7 @@
           "type": "buy"
         }
       ],
-      "nav": 89990.86466241677,
+      "nav": 86755.43236001114,
       "pending": [],
       "positions": {
         "ANET": {
@@ -1342,6 +1362,11 @@
           "date": "2026-10-21",
           "decision_recorded": false,
           "nav": 101254.12540275758
+        },
+        {
+          "date": "2026-10-22",
+          "decision_recorded": false,
+          "nav": 101393.19484862871
         }
       ],
       "events": [
@@ -1626,7 +1651,7 @@
           "type": "buy"
         }
       ],
-      "nav": 101254.12540275758,
+      "nav": 101393.19484862871,
       "pending": [],
       "positions": {
         "AAPL": {
@@ -1870,6 +1895,11 @@
           "date": "2026-10-21",
           "decision_recorded": false,
           "nav": 100769.06350999676
+        },
+        {
+          "date": "2026-10-22",
+          "decision_recorded": false,
+          "nav": 93616.11292676759
         }
       ],
       "events": [
@@ -2154,7 +2184,7 @@
           "type": "buy"
         }
       ],
-      "nav": 100769.06350999676,
+      "nav": 93616.11292676759,
       "pending": [],
       "positions": {
         "DELL": {
@@ -2398,6 +2428,11 @@
           "date": "2026-10-21",
           "decision_recorded": false,
           "nav": 88295.47281650896
+        },
+        {
+          "date": "2026-10-22",
+          "decision_recorded": false,
+          "nav": 82539.6712247888
         }
       ],
       "events": [
@@ -2682,7 +2717,7 @@
           "type": "buy"
         }
       ],
-      "nav": 88295.47281650896,
+      "nav": 82539.6712247888,
       "pending": [],
       "positions": {
         "ANET": {
@@ -2926,6 +2961,11 @@
           "date": "2026-10-21",
           "decision_recorded": false,
           "nav": 94039.20503120657
+        },
+        {
+          "date": "2026-10-22",
+          "decision_recorded": false,
+          "nav": 94486.4956932943
         }
       ],
       "events": [
@@ -3210,7 +3250,7 @@
           "type": "buy"
         }
       ],
-      "nav": 94039.20503120657,
+      "nav": 94486.4956932943,
       "pending": [],
       "positions": {
         "AXON": {
@@ -3454,6 +3494,11 @@
           "date": "2026-10-21",
           "decision_recorded": false,
           "nav": 94710.6204325726
+        },
+        {
+          "date": "2026-10-22",
+          "decision_recorded": false,
+          "nav": 88905.51290345023
         }
       ],
       "events": [
@@ -3738,7 +3783,7 @@
           "type": "buy"
         }
       ],
-      "nav": 94710.6204325726,
+      "nav": 88905.51290345023,
       "pending": [],
       "positions": {
         "AMAT": {
