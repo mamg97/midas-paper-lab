@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-24T08:24:14.159867+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/139506871",
+    "published_date": "2025-02-08",
+    "youtube_video_id": "aFYOC3YNR5E",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 29176101
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 3646.955125,
+      "word_count": 9425,
+      "segment_count": 1767,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "aFYOC3YNR5E",
+    "youtube_url": "https://www.youtube.com/watch?v=aFYOC3YNR5E",
+    "title": "¿GANANCIAS o PÉRDIDAS en ENERO? 📉📈 Nuestra CARTERA al DESCUBIERTO! | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/139506871",
+    "published_date": "2025-02-08",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute estrategias de inversión basadas en análisis de mercado y diversificación, destacando la adquisición de posiciones en Uranio, WAZ, y WAF, así como la valoración de empresas como Fanny y Freddy. Se menciona un rendimiento anual positivo del 3% influenciado por factores macroeconómicos como el petróleo y el oro. Se analizan riesgos como retrasos en minas y dependencia del precio del petróleo, aunque se mantienen posiciones significativas. Se destacan decisiones de inversión basadas en análisis de estrés y estrategias de reducción de riesgo. Se menciona la posibilidad de adquisición de una empresa de oro y plata, su valor atractivo y rendimiento, así como la neutralidad política del CEO de una empresa en Irakli. Se sugiere la compra de acciones de una empresa con proyecciones de crecimiento y valoración atractiva, aunque con riesgos asociados a la dependencia del petróleo.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Se menciona la valoración de empresas como Fanny y Freddy, con una discrepancia entre su valor actual y la valoración de Ackman."
+      ],
+      "cycle_macro": [
+        "El mercado ha mostrado un aumento en la cartera, con un 3% de rentabilidad anual, influenciado por factores macroeconómicos como el petróleo y el oro."
+      ],
+      "entry": [
+        "Se menciona la adquisición de posiciones en Uranio a través de Sprott, en WAZ y en empresas nuevas, así como la expectativa de aumento de producción en WAF."
+      ],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [],
+      "risk": [
+        "Aunque las empresas tienen un modelo seguro, existen riesgos de impacto negativo en los ratings y las hipótesis, requiriendo un análisis de estrés para evaluar su solidez."
+      ],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El programa comienza con un anuncio sobre Geico y una discusión sobre inversiones.",
+          "timestamp": "00:00:00",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona la importancia de Fanny en la cartera y su reducción.",
+          "timestamp": "00:03:08",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la compra de nuevas empresas y la reinvésión de capital.",
+          "timestamp": "00:05:30",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adquisición de posiciones en Uranio a través de Sprott.",
+          "timestamp": "00:06:18",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adquisición de posiciones en WAZ y en empresas nuevas.",
+          "timestamp": "00:06:21",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la reinvésión de capital en empresas nuevas y la adquisición de posiciones en Uranio.",
+          "timestamp": "00:06:41",
+          "scope": "hosts",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adquisición de posiciones en WAF y la expectativa de aumento de producción.",
+          "timestamp": "00:08:19",
+          "scope": "hosts",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El programa comienza con un anuncio sobre Geico y una discusión sobre inversiones. Se discuten estrategias de inversión, la reducción de posiciones en Fanny, la adquisición de nuevas empresas y la reinvésión de capital. Se mencionan adquisiciones de posiciones en Uranio a través de Sprott, en WAZ y en empresas nuevas, así como la expectativa de aumento de producción en WAF. Se destacan decisiones de inversión basadas en análisis de mercado y estrategias de diversificación y reducción de riesgo."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El mercado ha mostrado un aumento en la cartera, con un 3% de rentabilidad anual, influenciado por factores macroeconómicos como el petróleo y el oro.",
+          "timestamp": "00:09:01",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Las empresas de seguros hipotecarios (Fannie Mae y Freddie Mac) tienen una estructura financiera sólida, con un modelo recurrente y seguro, lo que sugiere que su valoración es estable y no presenta riesgos significativos.",
+          "timestamp": "00:14:00",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Aunque las empresas tienen un modelo seguro, existen riesgos de impacto negativo en los ratings y las hipótesis, especialmente en escenarios extremos, lo que requiere análisis de estrés para evaluar su solidez.",
+          "timestamp": "00:13:20",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis del mercado muestra un rendimiento positivo anual de 3%, influenciado por factores macroeconómicos como el petróleo y el oro. Las empresas de seguros hipotecarios (Fannie Mae y Freddie Mac) tienen una estructura financiera sólida y un modelo recurrente, lo que sugiere una valoración estable. Sin embargo, existen riesgos de impacto negativo en los ratings y las hipótesis, requiriendo un análisis de estrés para evaluar su solidez."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El nuevo director de la FHFA, un activista sin experiencia administrativa, podría impulsar cambios positivos en la gestión de las preferentes del gobierno.",
+          "timestamp": "00:20:00",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La valoración de Ackman considera a Fanny y Freddy por encima de 30 dólares por acción, aunque su precio actual es de 6,5 dólares.",
+          "timestamp": "00:21:24",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El retraso en la mina de Adriatic Metals afecta la producción y el ramp up de la operación, pero no impide que la empresa siga generando cash flow positivo.",
+          "timestamp": "00:25:12",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca la posibilidad de que el nuevo director de la FHFA, un activista sin experiencia administrativa, pueda impulsar cambios positivos en la gestión de las preferentes del gobierno, mientras que la valoración de Ackman muestra una discrepancia entre la valoración actual y el precio de mercado de Fanny y Freddy. Además, el retraso en la mina de Adriatic Metals afecta la producción, pero la empresa sigue generando cash flow positivo, lo que sugiere que las operaciones siguen siendo viables a pesar de los retrasos."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "risk",
+          "paraphrase": "El riesgo operativo es el principal concerno, ya que se menciona que la mina puede enfrentar retrasos inesperados y dificultades en la operación, pero el equipo está manteniendo la posición significativa en Adriatic Metals.",
+          "timestamp": "00:30:20",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona que se invierte en países con menos problemas de grupos ecologistas radicales para evitar conflictos, lo que sugiere una estrategia de entrada basada en evitar riesgos locales.",
+          "timestamp": "00:28:38",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La rentabilidad de Londres Gold se menciona como 23,84% en un año, lo que refleja una valoración positiva de la empresa y su potencial de crecimiento.",
+          "timestamp": "00:34:46",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe el riesgo operativo asociado a una mina, la estrategia de inversión en países con menos conflictos ambientales, y la valoración positiva de Londres Gold, destacando la rentabilidad anual del 23,84% y la mantención de la posición en Adriatic Metals."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona que la empresa tiene un depósito de oro y plata con un alto potencial de producción y un buen historial de dividendos, sugiriendo que podría ser adquirida por una empresa mayor.",
+          "timestamp": "00:37:30",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista afirma que la empresa tiene una capitalización de 9.5 billones de canadá$ y un buen rendimiento, lo que sugiere que su valor actual es atractivo para inversiones.",
+          "timestamp": "00:37:30",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista indica que la empresa tiene un alto riesgo de ser adquirida por una empresa mayor debido a su tamaño y valor, pero también menciona que si no se adquiere, podría mantenerse con buen rendimiento.",
+          "timestamp": "00:37:30",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El analista discute la posibilidad de adquisición de una empresa de oro y plata, destacando su potencial de producción, buen historial de dividendos y valor atractivo. Sugiere que la empresa podría ser adquirida por una empresa mayor, pero también reconoce que si no se adquiere, podría mantenerse con buen rendimiento."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis indica que Irakli no tiene acciones políticas significativas y que el Board defiende su posición, lo que sugiere una estrategia de inversión basada en la neutralidad política del CEO.",
+          "timestamp": "00:50:00",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa Baleura Energy se valora en 777 millones de dólares canadienses, con un crecimiento en producción y ventas que reflejan una mejora en su valoración.",
+          "timestamp": "00:55:50",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La sanción de Irakli no afecta directamente a la empresa, lo que sugiere que el riesgo político es limitado y que la estrategia de inversión prioriza la estabilidad operativa.",
+          "timestamp": "00:47:12",
+          "scope": "hosts",
+          "confidence": 0.7
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento muestra una discusión sobre la estrategia de inversión en una empresa con un CEO que no tiene influencia política significativa, destacando la valoración de la empresa y la neutralidad en riesgos políticos. Se menciona la defensa del CEO por parte del Board y la mejora en la producción y ventas de la empresa, lo que sugiere una estrategia basada en la estabilidad operativa y la valoración financiera."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona un ingreso trimestral de 226 millones de dólares, proyectado a 679 millones anuales, y una proyección de ventas anuales de 800 millones de dólares.",
+          "timestamp": "00:56:38",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El enterprise value se estima en 250 millones de dólares, con un valor en efectivo de 260 millones y activos fiscales de 400 millones, lo que sugiere una valoración atractiva.",
+          "timestamp": "00:57:24",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona la dependencia del precio del petróleo, con un posible impacto en las ganancias si el precio no se estabiliza, lo que introduce un riesgo significativo.",
+          "timestamp": "00:59:12",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se sugiere la compra de acciones de la empresa debido a su bajo precio actual y la proyección de crecimiento en 2025, lo que refuerza la estrategia de inversión.",
+          "timestamp": "00:59:00",
+          "scope": "hosts",
+          "confidence": 0.8
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis menciona ingresos trimestrales de 226 millones de dólares, proyecciones anuales de 679 millones y ventas de 800 millones, un enterprise value de 250 millones, activos fiscales de 400 millones, y una valoración atractiva. Se sugiere la compra de acciones debido a su bajo precio y proyección de crecimiento, aunque existe riesgo por la dependencia del precio del petróleo."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
