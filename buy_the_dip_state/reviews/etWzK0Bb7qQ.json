@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-24T18:07:22.991524+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/125841900",
+    "published_date": "2024-03-13",
+    "youtube_video_id": "etWzK0Bb7qQ",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 36631658
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 4578.899625,
+      "word_count": 12299,
+      "segment_count": 691,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "etWzK0Bb7qQ",
+    "youtube_url": "https://www.youtube.com/watch?v=etWzK0Bb7qQ",
+    "title": "Nuestra Cartera de INVERSIÓN en Marzo | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/125841900",
+    "published_date": "2024-03-13",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio presenta una estrategia de inversión basada en la selección de empresas con situaciones especiales, precios atractivos y crecimiento potencial. Se destacan resultados positivos de la cartera, ajustes de posiciones, y reinversiones en nuevas oportunidades. Se mencionan riesgos temporales y una atención a la estabilidad a largo plazo, con un enfoque en dividendos y estructuras de costes eficientes. La estrategia se basa en la diversificación geográfica y sectorial, con un enfoque en sectores como las telecomunicaciones y las commodities, y una participación limitada en Estados Unidos. Se prioriza la entrada en sectores con expectativas de crecimiento moderado, como el cine, y se menciona la gestión de riesgos mediante la evaluación técnica y la liquidez. La estrategia incluye la venta de activos cuando se alcanza el precio objetivo o se detectan errores en la evaluación. La cartera ha tenido buenos resultados, superando a la estanda SAPURS con una rentabilidad del 25%. Se destacan posiciones a precios atractivos con multiplicadores no muy exigentes y crecimiento claro por delante. Se menciona la venta de una posición secreta con un 100% de venta y reinversión en nuevas posiciones. Se señala una empresa con problemas temporales pero considerada estable a medio plazo con un dividendo yield del 20%. La estrategia reconoce errores en la evaluación de empresas, especialmente en sectores volátiles, y ajusta la posición en activos para compensar pérdidas. La empresa de cines enfrenta desafíos operativos pero espera un crecimiento moderado en 2024. La empresa de petróleo tiene una posición financiera sólida con 600 millones invertidos en Black Rot y un manejo eficiente de riesgos financieros. La empresa está ejecutando un plan de inversión estratégica con un enfoque e",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Se destacan posiciones a precios atractivos con multiplicadores no muy exigentes y crecimiento claro por delante.",
+        "La revalorización de las acciones comunes ha sido mayor que la de las preferentes, especialmente en Fanny, que cotiza a un premium sobre las acciones comunes de Freddy."
+      ],
+      "cycle_macro": [
+        "La empresa está aprovechando un ciclo macro favorable con un enfoque en la inversión en capex y en la gestión de divisas, lo que sugiere una estrategia de crecimiento sostenible."
+      ],
+      "entry": [
+        "Se menciona la adición de nuevas posiciones en Estados Unidos, con situaciones especiales y estructura de costes eficiente.",
+        "La estrategia de inversión se basa en la diversificación geográfica y sectorial, con un enfoque en sectores como el de las telecomunicaciones y las commodities, y una participación limitada en Estados Unidos.",
+        "La empresa está ejecutando un plan de inversión estratégica con un enfoque en el capex y la gestión de divisas, con un objetivo de maximizar el valor a largo plazo.",
+        "La empresa está considerando una estrategia de entrada en nuevos mercados, como América, con un enfoque en la expansión de la marca y el crecimiento de ventas."
+      ],
+      "sizing": [
+        "La empresa tiene un tamaño de operación significativo con un volumen de producción de 15 millones de barriles diarios, lo que refleja una escala operativa sólida."
+      ],
+      "add_hold": [],
+      "exit": [
+        "Se menciona la venta de una posición secreta que se considera ya cumplida, con un 100% de venta y reinversión en nuevas posiciones.",
+        "La estrategia incluye la venta de activos cuando se alcanza el precio objetivo o cuando se detectan errores en la evaluación de las empresas."
+      ],
+      "risk": [
+        "Se señala que una empresa tiene problemas temporales, pero se considera estable a medio plazo con un dividendo yield del 20%.",
+        "La estrategia reconoce los riesgos asociados a sectores volátiles como las commodities y las acciones de empresas grandes, y prioriza la diversificación para mitigar impactos negativos.",
+        "La empresa de Panamá tiene activos más diversificados y estables, aunque con riesgos en ciertos momentos, lo que permite una estrategia de entrada basada en su diversificación y estabilidad."
+      ],
+      "technical": [
+        "La estrategia utiliza análisis técnicos para decidir la entrada y salida en activos, basándose en la tendencia de precios y la liquidez en estructurados."
+      ],
+      "management": [],
+      "mistakes": [
+        "La estrategia reconoce errores en la evaluación de empresas, especialmente en sectores con alta volatilidad, y ajusta la posición en activos para compensar pérdidas."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El podcast menciona que la cartera ha tenido buenos resultados, superando a la estanda SAPURS con una rentabilidad del 25%.",
+          "timestamp": "00:02:20",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se destaca que algunas posiciones en la cartera están a precios atractivos, con multiplicadores no muy exigentes y crecimiento claro por delante.",
+          "timestamp": "00:05:10",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se menciona la venta de una posición secreta que se considera ya cumplida, con un 100% de venta y reinversión en nuevas posiciones.",
+          "timestamp": "00:07:13",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se señala que una empresa tiene problemas temporales, pero se considera estable a medio plazo con un dividen yield del 20%.",
+          "timestamp": "00:09:06",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adición de nuevas posiciones en Estados Unidos, con situaciones especiales y estructura de costes eficiente.",
+          "timestamp": "00:09:54",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast presenta una estrategia de inversión basada en la selección de empresas con situaciones especiales, precios atractivos y crecimiento potencial. Se destacan resultados positivos de la cartera, ajustes de posiciones, y reinversiones en nuevas oportunidades. Se mencionan riesgos temporales y una atención a la estabilidad a largo plazo, con un enfoque en dividendos y estructuras de costes eficientes."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La revalorización de las acciones comunes ha sido mayor que la de las preferentes, especialmente en Fanny, que cotiza a un premium sobre las acciones comunes de Freddy.",
+          "timestamp": "00:11:33",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La estrategia de inversión se basa en la diversificación geográfica y sectorial, con un enfoque en sectores como el de las telecomunicaciones y las commodities, y una participación limitada en Estados Unidos.",
+          "timestamp": "00:12:04",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La estrategia incluye la venta de activos cuando se alcanza el precio objetivo o cuando se detectan errores en la evaluación de las empresas.",
+          "timestamp": "00:12:22",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La estrategia reconoce los riesgos asociados a sectores volátiles como las commodities y las acciones de empresas grandes, y prioriza la diversificación para mitigar impactos negativos.",
+          "timestamp": "00:12:35",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "La estrategia utiliza análisis técnicos para decidir la entrada y salida en activos, basándose en la tendencia de precios y la liquidez en estructurados.",
+          "timestamp": "00:12:52",
+          "scope": "hosts",
+          "confidence": 0.4,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "La estrategia reconoce errores en la evaluación de empresas, especialmente en sectores con alta volatilidad, y ajusta la posición en activos para compensar pérdidas.",
+          "timestamp": "00:15:31",
+          "scope": "hosts",
+          "confidence": 0.3,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "La estrategia de inversión se basa en la revalorización de activos, la diversificación geográfica y sectorial, y la gestión de riesgos mediante la evaluación técnica y la liquidez. Se prioriza la entrada en sectores como las commodities y las telecomunicaciones, con una participación limitada en Estados Unidos. La salida se decide cuando se alcanza el precio objetivo o se detectan errores en la evaluación. La estrategia reconoce los riesgos asociados a sectores volátiles y prioriza la diversificación para mitigar impactos negativos."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de la industria del cine muestra una tendencia estable con un ligero declino estructural debido a mejoras en la tecnología y accesibilidad del cine, pero con expectativas de crecimiento moderado en 2024.",
+          "timestamp": "00:22:37",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La industria del cine enfrenta desafíos operativos como retrasos en la producción de películas y una caída en el número de estrenos, pero analistas anticipan un impacto moderado en el box office de 2024.",
+          "timestamp": "00:23:02",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El riesgo de caída del box office en 2024 es mitigado por el apalancamiento operativo y la expectativa de un aumento en el número de asistentes a pesar de la reducción en el número de películas.",
+          "timestamp": "00:24:10",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa de cines (Cinesa) enfrenta desafíos de retrasos en la producción y operaciones, pero espera un crecimiento moderado en 2024 con un impacto positivo en el flujo de efectivo.",
+          "timestamp": "00:27:31",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa de cines (Cinesa) ha ajustado su estrategia de deuda y dividendos, con un aumento en el dividendo y un vencimiento prolongado, reflejando una mejora en su situación financiera.",
+          "timestamp": "00:29:14",
+          "scope": "hosts",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la industria del cine muestra una tendencia estable con un ligero declino estructural debido a mejoras en la tecnología y accesibilidad del cine, pero con expectativas de crecimiento moderado en 2024. La empresa de cines enfrenta desafíos operativos como retrasos en la producción y una caída en el número de estrenos, pero espera un impacto moderado en el box office de 2024. El riesgo de caída del box office en 2024 es mitigado por el apalancamiento operativo y la expectativa de un aumento en el número de asistentes a pesar de la reducción en el número de películas. La empresa de cines ha ajustado su estrategia de deuda y dividendos, con un aumento en el dividendo y un vencimiento prolongado, reflejando una mejora en su situación financiera."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa está comprando acciones y utilizando el capital de manera eficiente para aumentar la producción y generar valor.",
+          "timestamp": "00:34:12",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa tiene un buen flujo de caja positivo y está posicionada para incrementar la producción a partir de 2026, lo que refleja una valoración sólida.",
+          "timestamp": "00:38:01",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La empresa ha invertido 327 millones de dólares en capex y tiene 517 millones de dólares en caja, lo que muestra un enfoque sólido de inversión y gestión del capital.",
+          "timestamp": "00:37:29",
+          "scope": "hosts",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento destaca la estrategia de inversión de la empresa en el petróleo, enfocada en la adquisición de acciones, el uso eficiente del capital, y la planificación de incrementos de producción a largo plazo. Se menciona una valoración sólida y un flujo de caja positivo, lo que refleja una estrategia de inversión bien estructurada y con potencial de crecimiento."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa está ejecutando un plan de inversión estratégica con un enfoque en el capex y la gestión de divisas, con un objetivo de maximizar el valor a largo plazo.",
+          "timestamp": "00:45:55",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa tiene una posición financiera sólida con 600 millones invertidos en Black Rot y un manejo eficiente de riesgos financieros, lo que sugiere una valoración atractiva.",
+          "timestamp": "00:46:15",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa ha implementado estrategias de hedge para mitigar riesgos de cambio de divisas, lo que refleja una gestión cuidadosa del riesgo en el contexto de fluctuaciones de moneda.",
+          "timestamp": "00:46:37",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La empresa está posicionada para generar un flujo positivo de caja a partir de 2026, con un enfoque en la producción de petróleo y una estrategia de recompras de acciones que reflejan una visión a largo plazo.",
+          "timestamp": "00:47:35",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La empresa está aprovechando un ciclo macro favorable con un enfoque en la inversión en capex y en la gestión de divisas, lo que sugiere una estrategia de crecimiento sostenible.",
+          "timestamp": "00:47:12",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La empresa tiene un tamaño de operación significativo con un volumen de producción de 15 millones de barriles diarios, lo que refleja una escala operativa sólida.",
+          "timestamp": "00:47:42",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa está considerando una estrategia de entrada en nuevos mercados, como América, con un enfoque en la expansión de la marca y el crecimiento de ventas, lo que sugiere una visión de expansión a largo plazo.",
+          "timestamp": "00:53:07",
+          "scope": "hosts",
+          "confidence": 0.6
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "La empresa está ejecutando una estrategia de inversión y valoración a largo plazo, con un enfoque en el capex, la gestión de riesgos financieros, y la expansión de mercados. La posición financiera sólida y la estrategia de recompras de acciones reflejan una visión a largo plazo, mientras que la gestión de divisas y el crecimiento de ventas sugieren una estrategia de crecimiento sostenible."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "risk",
+          "paraphrase": "El análisis menciona un riesgo significativo relacionado con la producción en Panamá debido a una licencia constitucional que paralizó una mina clave, causando una caída del 20% en los ingresos y un 32% en la cotización.",
+          "timestamp": "01:06:36",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa está cotizando a niveles exigentes, pero a un precio que refleja un bajo gasto operativo y una opción legal de indemnización, lo que podría generar valor en el futuro si se resuelven los conflictos legales.",
+          "timestamp": "01:07:13",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se sugiere una posible adquisición por parte de la empresa en 2024, aprovechando el cash neto generado y la oportunidad de aumentar las reservas de petróleo, lo que podría impulsar la cotización si se logra una integración efectiva.",
+          "timestamp": "01:03:56",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca un riesgo significativo relacionado con la producción en Panamá, una empresa cotizada a niveles exigentes con potencial de valoración futura si se resuelven conflictos legales, y sugiere una posible adquisición en 2024 aprovechando el cash neto generado y la expansión de reservas de petróleo."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa de Panamá ha mostrado estabilidad en sus ingresos y beneficios de exploración, con una caída del 5.3% en 2023 pero compensada parcialmente por el aumento del precio del oro, lo que sugiere un valor sólido.",
+          "timestamp": "01:10:06",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa Londres Gold ha aumentado su producción y mejora su recuperación de yacimientos, con un 88.4% de recuperación y un aumento de capacidad de 4500 a 5000 toneladas, lo que refuerza su potencial de crecimiento.",
+          "timestamp": "01:12:44",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa de Panamá tiene activos más diversificados y estables, aunque con riesgos en ciertos momentos, lo que permite una estrategia de entrada basada en su diversificación y estabilidad.",
+          "timestamp": "01:10:48",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la empresa de Panamá y Londres Gold muestra estabilidad y crecimiento potencial, con una caída moderada en 2023 compensada por el aumento del oro, y una mejora en la producción y recuperación de Londres Gold, lo que sugiere una estrategia de inversión basada en su diversificación y estabilidad, con un enfoque en el crecimiento a largo plazo y el precio del oro."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
