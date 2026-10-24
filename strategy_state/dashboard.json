@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-24T08:52:45.592176+00:00",
+  "generated_at_utc": "2026-10-24T08:56:49.768253+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 18,
@@ -2942,11 +2942,20 @@
         "2026-10-22",
         "2026-10-23"
       ],
-      "activity_state": "cash",
-      "activity_label": "Sin compras · en efectivo",
-      "activity_tickers": [],
+      "activity_state": "pending",
+      "activity_label": "8 compras paper para próxima apertura",
+      "activity_tickers": [
+        "LKQ",
+        "CBRE",
+        "BKNG",
+        "HBAN",
+        "LDOS",
+        "IBM",
+        "NOC",
+        "OTIS"
+      ],
       "open_positions_count": 0,
-      "pending_orders_count": 0,
+      "pending_orders_count": 8,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
