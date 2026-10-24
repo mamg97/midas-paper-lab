@@ -1,6 +1,6 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-10-24T04:57:22.932404+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-10-24T06:09:37.726571+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
@@ -24,23 +24,23 @@ La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. L
 | S&P 500 v2 · Turtle 20/10 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-22 | 0.80 % | -0.37 % | — | -1.84 % | — |
 | S&P 500 v2 · Turtle 55/20 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-22 | 0.07 % | -0.84 % | — | -1.79 % | — |
 | S&P 500 v2 · Referencia SPY · inicio clásicos S&P500 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 1 posición abierta | 2026-10-12 | 2026-10-22 | -1.12 % | -0.43 % | — | -1.12 % | — |
-| ML semanal · referencia SPY | Campaña ML semanal 2026 · referencia SPY | demo_con_diario | 1 posición abierta | 2026-10-09 | 2026-10-22 | -1.12 % | -2.71 % | — | -2.71 % | — |
+| ML semanal · referencia SPY | Campaña ML semanal 2026 · referencia SPY | demo_con_diario | Sin compras · en efectivo | 2026-10-09 | 2026-10-23 | -0.64 % | -3.33 % | 9.96 % | -3.33 % | -8.51 |
 | ML semanal · referencia SPY · liquidación diferida | Campaña ML semanal 2026 · referencia SPY · libro semanal independiente | weekly_settled_demo | 1 señal congelada · liquidación semanal pendiente | 2026-10-02 | 2026-10-23 | — | -2.55 % | — | -3.33 % | — |
-| ML semanal · referencia RSP | Campaña ML semanal 2026 · referencia RSP equiponderada | demo_con_diario | 1 posición abierta | 2026-10-09 | 2026-10-22 | 0.69 % | 1.61 % | — | -1.13 % | — |
+| ML semanal · referencia RSP | Campaña ML semanal 2026 · referencia RSP equiponderada | demo_con_diario | Sin compras · en efectivo | 2026-10-09 | 2026-10-23 | -0.87 % | 0.72 % | 12.03 % | -1.13 % | 1.56 |
 | ML semanal · referencia RSP · liquidación diferida | Campaña ML semanal 2026 · referencia RSP equiponderada · libro semanal independiente | weekly_settled_demo | 1 señal congelada · liquidación semanal pendiente | 2026-10-02 | 2026-10-23 | — | 1.88 % | — | 0.00 % | — |
-| ML semanal · LightGBM rentabilidad | MIDAS Python v2 · regresión semanal corregida 2026 | demo_con_diario | 10 posiciones abiertas | 2026-10-09 | 2026-10-22 | -6.52 % | -17.46 % | — | -17.46 % | — |
+| ML semanal · LightGBM rentabilidad | MIDAS Python v2 · regresión semanal corregida 2026 | demo_con_diario | Sin compras · en efectivo | 2026-10-09 | 2026-10-23 | 0.91 % | -16.71 % | 45.07 % | -17.46 % | -9.92 |
 | ML semanal · LightGBM rentabilidad · liquidación diferida | MIDAS Python v2 · regresión semanal corregida 2026 · libro semanal independiente | weekly_settled_demo | Sin compras · en efectivo | 2026-10-02 | 2026-10-23 | — | -16.70 % | — | -16.70 % | — |
-| ML semanal · LightGBM dirección | MIDAS Python v2 · clasificación semanal corregida 2026 | demo_con_diario | 10 posiciones abiertas | 2026-10-09 | 2026-10-22 | 0.14 % | 1.39 % | — | -1.05 % | — |
+| ML semanal · LightGBM dirección | MIDAS Python v2 · clasificación semanal corregida 2026 | demo_con_diario | Sin compras · en efectivo | 2026-10-09 | 2026-10-23 | -0.89 % | 0.49 % | 10.63 % | -1.05 % | 1.22 |
 | ML semanal · LightGBM dirección · liquidación diferida | MIDAS Python v2 · clasificación semanal corregida 2026 · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-23 | — | 0.51 % | — | -0.69 % | — |
-| ML semanal · LightGBM ranker | MIDAS nuevo 2026 · ranking cross-sectional que sustituye precio absoluto | demo_con_diario | 10 posiciones abiertas | 2026-10-09 | 2026-10-22 | -7.10 % | -6.38 % | — | -7.10 % | — |
+| ML semanal · LightGBM ranker | MIDAS nuevo 2026 · ranking cross-sectional que sustituye precio absoluto | demo_con_diario | Sin compras · en efectivo | 2026-10-09 | 2026-10-23 | 0.01 % | -6.37 % | 41.91 % | -7.10 % | -3.75 |
 | ML semanal · LightGBM ranker · liquidación diferida | MIDAS nuevo 2026 · ranking cross-sectional que sustituye precio absoluto · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-23 | — | -7.88 % | — | -7.88 % | — |
-| ML semanal · MLP | TFM/ML · MLP adaptado al horizonte semanal | demo_con_diario | 10 posiciones abiertas | 2026-10-09 | 2026-10-22 | -6.13 % | -11.09 % | — | -11.09 % | — |
+| ML semanal · MLP | TFM/ML · MLP adaptado al horizonte semanal | demo_con_diario | Sin compras · en efectivo | 2026-10-09 | 2026-10-23 | 1.61 % | -9.67 % | 40.51 % | -11.09 % | -6.11 |
 | ML semanal · MLP · liquidación diferida | TFM/ML · MLP adaptado al horizonte semanal · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-23 | — | -9.78 % | — | -9.78 % | — |
-| ML semanal · LSTM | TFM/ML · LSTM adaptado al horizonte semanal | demo_con_diario | 10 posiciones abiertas | 2026-10-09 | 2026-10-22 | 0.48 % | -5.51 % | — | -8.53 % | — |
+| ML semanal · LSTM | TFM/ML · LSTM adaptado al horizonte semanal | demo_con_diario | Sin compras · en efectivo | 2026-10-09 | 2026-10-23 | -1.78 % | -7.19 % | 33.28 % | -8.53 % | -5.48 |
 | ML semanal · LSTM · liquidación diferida | TFM/ML · LSTM adaptado al horizonte semanal · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-23 | — | -9.46 % | — | -9.84 % | — |
-| ML semanal · ARIMA | TFM/ML · ARIMA adaptado al horizonte semanal | demo_con_diario | 10 posiciones abiertas | 2026-10-09 | 2026-10-22 | -5.12 % | -12.75 % | — | -12.75 % | — |
+| ML semanal · ARIMA | TFM/ML · ARIMA adaptado al horizonte semanal | demo_con_diario | Sin compras · en efectivo | 2026-10-09 | 2026-10-23 | 1.00 % | -11.88 % | 41.46 % | -12.75 % | -7.45 |
 | ML semanal · ARIMA · liquidación diferida | TFM/ML · ARIMA adaptado al horizonte semanal · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-23 | — | -10.04 % | — | -11.87 % | — |
-| ML semanal · ensemble consenso | MIDAS nuevo 2026 · consenso de expertos semanales | demo_con_diario | 10 posiciones abiertas | 2026-10-09 | 2026-10-22 | -3.60 % | -13.24 % | — | -13.35 % | — |
+| ML semanal · ensemble consenso | MIDAS nuevo 2026 · consenso de expertos semanales | demo_con_diario | Sin compras · en efectivo | 2026-10-09 | 2026-10-23 | -0.77 % | -13.91 % | 37.72 % | -13.91 % | -9.76 |
 | ML semanal · ensemble consenso · liquidación diferida | MIDAS nuevo 2026 · consenso de expertos semanales · libro semanal independiente | weekly_settled_demo | 10 señales congeladas · liquidación semanal pendiente | 2026-10-02 | 2026-10-23 | — | -16.00 % | — | -16.00 % | — |
 | TFG corregido 2026 · técnico + AHP + MAD | TFG 2021 · arquitectura portada y corregida para paper 2026 | demo_con_diario | Sin compras · esperando señal | 2026-10-02 | 2026-10-23 | 0.00 % | 0.00 % | — | 0.00 % | — |
 | Capital Cycle Inflection · underinvestment + calidad + giro | MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle | demo_con_diario | 12 posiciones abiertas | 2026-09-30 | 2026-10-23 | 0.24 % | 5.68 % | 12.32 % | -1.33 % | 6.71 |
