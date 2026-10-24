@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-24T00:40:57.005354+00:00",
+  "generated_at_utc": "2026-10-24T01:42:31.590083+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 18,
@@ -1422,10 +1422,10 @@
       "status": "weekly_settled_demo",
       "daily_mode": false,
       "first_session": "2026-10-02",
-      "last_session": "2026-10-16",
+      "last_session": "2026-10-23",
       "initial_capital": 100000.0,
-      "last_equity": 98617.26670709564,
-      "return_pct": -1.382733,
+      "last_equity": 97452.76485350072,
+      "return_pct": -2.547235,
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [
@@ -1440,6 +1440,10 @@
         {
           "date": "2026-10-16",
           "nav": 98617.26670709564
+        },
+        {
+          "date": "2026-10-23",
+          "nav": 97452.76485350072
         }
       ],
       "note": "Libro semanal prospectivo desde 02/10/2026: liquidación al final de la siguiente semana, sin NAV diario ni fills registrados lunes-jueves. Resultado semanal separado; NO participa en la competición diaria ni se suma a la rentabilidad de la campaña diaria.",
@@ -1454,9 +1458,9 @@
       "comparison_universe_id": null,
       "comparison_universe_symbols": null,
       "comparison_exclusion_reason": "Campaña archivada o todavía no normalizada al universo S&P 500",
-      "risk_observations": 3,
+      "risk_observations": 4,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": -2.173339,
+      "max_drawdown_pct": -3.328505,
       "sharpe_0rf": null
     },
     {
@@ -1546,10 +1550,10 @@
       "status": "weekly_settled_demo",
       "daily_mode": false,
       "first_session": "2026-10-02",
-      "last_session": "2026-10-16",
+      "last_session": "2026-10-23",
       "initial_capital": 100000.0,
-      "last_equity": 101208.53928374074,
-      "return_pct": 1.208539,
+      "last_equity": 101877.33943000576,
+      "return_pct": 1.877339,
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [
@@ -1564,6 +1568,10 @@
         {
           "date": "2026-10-16",
           "nav": 101208.53928374074
+        },
+        {
+          "date": "2026-10-23",
+          "nav": 101877.33943000576
         }
       ],
       "note": "Libro semanal prospectivo desde 02/10/2026: liquidación al final de la siguiente semana, sin NAV diario ni fills registrados lunes-jueves. Resultado semanal separado; NO participa en la competición diaria ni se suma a la rentabilidad de la campaña diaria.",
@@ -1578,7 +1586,7 @@
       "comparison_universe_id": null,
       "comparison_universe_symbols": null,
       "comparison_exclusion_reason": "Campaña archivada o todavía no normalizada al universo S&P 500",
-      "risk_observations": 3,
+      "risk_observations": 4,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
@@ -1715,10 +1723,10 @@
       "status": "weekly_settled_demo",
       "daily_mode": false,
       "first_session": "2026-10-02",
-      "last_session": "2026-10-16",
+      "last_session": "2026-10-23",
       "initial_capital": 100000.0,
-      "last_equity": 88064.37972938888,
-      "return_pct": -11.93562,
+      "last_equity": 83303.10859468838,
+      "return_pct": -16.696891,
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [
@@ -1733,32 +1741,25 @@
         {
           "date": "2026-10-16",
           "nav": 88064.37972938888
+        },
+        {
+          "date": "2026-10-23",
+          "nav": 83303.10859468838
         }
       ],
       "note": "Libro semanal prospectivo desde 02/10/2026: liquidación al final de la siguiente semana, sin NAV diario ni fills registrados lunes-jueves. Resultado semanal separado; NO participa en la competición diaria ni se suma a la rentabilidad de la campaña diaria.",
-      "activity_state": "pending",
-      "activity_label": "10 señales congeladas · liquidación semanal pendiente",
-      "activity_tickers": [
-        "HPE",
-        "SMCI",
-        "DELL",
-        "LRCX",
-        "TER",
-        "GLW",
-        "KLAC",
-        "ANET",
-        "JBL",
-        "CRWD"
-      ],
+      "activity_state": "cash",
+      "activity_label": "Sin compras · en efectivo",
+      "activity_tickers": [],
       "open_positions_count": 0,
-      "pending_orders_count": 10,
+      "pending_orders_count": 0,
       "comparison_eligible": false,
       "comparison_universe_id": null,
       "comparison_universe_symbols": null,
       "comparison_exclusion_reason": "Campaña archivada o todavía no normalizada al universo S&P 500",
-      "risk_observations": 3,
+      "risk_observations": 4,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": -11.93562,
+      "max_drawdown_pct": -16.696891,
       "sharpe_0rf": null
     },
     {
@@ -1893,10 +1894,10 @@
       "status": "weekly_settled_demo",
       "daily_mode": false,
       "first_session": "2026-10-02",
-      "last_session": "2026-10-16",
+      "last_session": "2026-10-23",
       "initial_capital": 100000.0,
-      "last_equity": 99314.10274179852,
-      "return_pct": -0.685897,
+      "last_equity": 100506.33817479112,
+      "return_pct": 0.506338,
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [
@@ -1911,22 +1912,26 @@
         {
           "date": "2026-10-16",
           "nav": 99314.10274179852
+        },
+        {
+          "date": "2026-10-23",
+          "nav": 100506.33817479112
         }
       ],
       "note": "Libro semanal prospectivo desde 02/10/2026: liquidación al final de la siguiente semana, sin NAV diario ni fills registrados lunes-jueves. Resultado semanal separado; NO participa en la competición diaria ni se suma a la rentabilidad de la campaña diaria.",
       "activity_state": "pending",
       "activity_label": "10 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
-        "GDDY",
-        "CDW",
-        "UPS",
-        "TYL",
-        "AAPL",
-        "ON",
-        "EIX",
-        "MO",
-        "DELL",
-        "KLAC"
+        "ROST",
+        "LMT",
+        "SOLV",
+        "LVS",
+        "WRB",
+        "TKO",
+        "WMT",
+        "MAR",
+        "KO",
+        "ESS"
       ],
       "open_positions_count": 0,
       "pending_orders_count": 10,
@@ -1934,7 +1939,7 @@
       "comparison_universe_id": null,
       "comparison_universe_symbols": null,
       "comparison_exclusion_reason": "Campaña archivada o todavía no normalizada al universo S&P 500",
-      "risk_observations": 3,
+      "risk_observations": 4,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": -0.685897,
       "sharpe_0rf": null
@@ -2071,10 +2076,10 @@
       "status": "weekly_settled_demo",
       "daily_mode": false,
       "first_session": "2026-10-02",
-      "last_session": "2026-10-16",
+      "last_session": "2026-10-23",
       "initial_capital": 100000.0,
-      "last_equity": 95617.71084198591,
-      "return_pct": -4.382289,
+      "last_equity": 92121.11294229668,
+      "return_pct": -7.878887,
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [
@@ -2089,22 +2094,26 @@
         {
           "date": "2026-10-16",
           "nav": 95617.71084198591
+        },
+        {
+          "date": "2026-10-23",
+          "nav": 92121.11294229668
         }
       ],
       "note": "Libro semanal prospectivo desde 02/10/2026: liquidación al final de la siguiente semana, sin NAV diario ni fills registrados lunes-jueves. Resultado semanal separado; NO participa en la competición diaria ni se suma a la rentabilidad de la campaña diaria.",
       "activity_state": "pending",
       "activity_label": "10 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
-        "DELL",
         "STX",
         "MU",
-        "HPE",
-        "MRNA",
-        "WDC",
         "TER",
-        "PLTR",
-        "ORCL",
-        "INTC"
+        "MRNA",
+        "GLW",
+        "HPE",
+        "AKAM",
+        "WDC",
+        "DELL",
+        "VST"
       ],
       "open_positions_count": 0,
       "pending_orders_count": 10,
@@ -2112,9 +2121,9 @@
       "comparison_universe_id": null,
       "comparison_universe_symbols": null,
       "comparison_exclusion_reason": "Campaña archivada o todavía no normalizada al universo S&P 500",
-      "risk_observations": 3,
+      "risk_observations": 4,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": -4.382289,
+      "max_drawdown_pct": -7.878887,
       "sharpe_0rf": null
     },
     {
@@ -2249,10 +2258,10 @@
       "status": "weekly_settled_demo",
       "daily_mode": false,
       "first_session": "2026-10-02",
-      "last_session": "2026-10-16",
+      "last_session": "2026-10-23",
       "initial_capital": 100000.0,
-      "last_equity": 94126.48875045154,
-      "return_pct": -5.873511,
+      "last_equity": 90217.00385450856,
+      "return_pct": -9.782996,
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [
@@ -2267,22 +2276,26 @@
         {
           "date": "2026-10-16",
           "nav": 94126.48875045154
+        },
+        {
+          "date": "2026-10-23",
+          "nav": 90217.00385450856
         }
       ],
       "note": "Libro semanal prospectivo desde 02/10/2026: liquidación al final de la siguiente semana, sin NAV diario ni fills registrados lunes-jueves. Resultado semanal separado; NO participa en la competición diaria ni se suma a la rentabilidad de la campaña diaria.",
       "activity_state": "pending",
       "activity_label": "10 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
-        "MU",
-        "GLW",
-        "STX",
-        "AMAT",
-        "APA",
-        "AMD",
-        "DELL",
-        "HPE",
-        "LRCX",
-        "SLB"
+        "CEG",
+        "NRG",
+        "VST",
+        "AXON",
+        "QCOM",
+        "LUV",
+        "GDDY",
+        "HPQ",
+        "APH",
+        "TER"
       ],
       "open_positions_count": 0,
       "pending_orders_count": 10,
@@ -2290,9 +2303,9 @@
       "comparison_universe_id": null,
       "comparison_universe_symbols": null,
       "comparison_exclusion_reason": "Campaña archivada o todavía no normalizada al universo S&P 500",
-      "risk_observations": 3,
+      "risk_observations": 4,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": -5.873511,
+      "max_drawdown_pct": -9.782996,
       "sharpe_0rf": null
     },
     {
@@ -2427,10 +2440,10 @@
       "status": "weekly_settled_demo",
       "daily_mode": false,
       "first_session": "2026-10-02",
-      "last_session": "2026-10-16",
+      "last_session": "2026-10-23",
       "initial_capital": 100000.0,
-      "last_equity": 90161.31498247455,
-      "return_pct": -9.838685,
+      "last_equity": 90535.56977336342,
+      "return_pct": -9.46443,
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [
@@ -2445,22 +2458,26 @@
         {
           "date": "2026-10-16",
           "nav": 90161.31498247455
+        },
+        {
+          "date": "2026-10-23",
+          "nav": 90535.56977336342
         }
       ],
       "note": "Libro semanal prospectivo desde 02/10/2026: liquidación al final de la siguiente semana, sin NAV diario ni fills registrados lunes-jueves. Resultado semanal separado; NO participa en la competición diaria ni se suma a la rentabilidad de la campaña diaria.",
       "activity_state": "pending",
       "activity_label": "10 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
-        "MGM",
-        "AXON",
-        "FICO",
         "SMCI",
-        "NCLH",
-        "WYNN",
-        "UAL",
+        "MGM",
+        "KLAC",
+        "LKQ",
         "BLDR",
-        "ORCL",
-        "FSLR"
+        "NRG",
+        "F",
+        "AXON",
+        "WYNN",
+        "DECK"
       ],
       "open_positions_count": 0,
       "pending_orders_count": 10,
@@ -2468,7 +2485,7 @@
       "comparison_universe_id": null,
       "comparison_universe_symbols": null,
       "comparison_exclusion_reason": "Campaña archivada o todavía no normalizada al universo S&P 500",
-      "risk_observations": 3,
+      "risk_observations": 4,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": -9.838685,
       "sharpe_0rf": null
@@ -2605,10 +2622,10 @@
       "status": "weekly_settled_demo",
       "daily_mode": false,
       "first_session": "2026-10-02",
-      "last_session": "2026-10-16",
+      "last_session": "2026-10-23",
       "initial_capital": 100000.0,
-      "last_equity": 90891.32765517029,
-      "return_pct": -9.108672,
+      "last_equity": 89964.44580131033,
+      "return_pct": -10.035554,
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [
@@ -2623,22 +2640,26 @@
         {
           "date": "2026-10-16",
           "nav": 90891.32765517029
+        },
+        {
+          "date": "2026-10-23",
+          "nav": 89964.44580131033
         }
       ],
       "note": "Libro semanal prospectivo desde 02/10/2026: liquidación al final de la siguiente semana, sin NAV diario ni fills registrados lunes-jueves. Resultado semanal separado; NO participa en la competición diaria ni se suma a la rentabilidad de la campaña diaria.",
       "activity_state": "pending",
       "activity_label": "10 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
-        "DELL",
+        "HAS",
+        "LKQ",
+        "ROP",
         "MRNA",
-        "CRWD",
-        "SMCI",
-        "ANET",
-        "LW",
-        "WDC",
-        "MU",
-        "PANW",
-        "AMD"
+        "POOL",
+        "VLO",
+        "MPC",
+        "PAYC",
+        "WDAY",
+        "EFX"
       ],
       "open_positions_count": 0,
       "pending_orders_count": 10,
@@ -2646,9 +2667,9 @@
       "comparison_universe_id": null,
       "comparison_universe_symbols": null,
       "comparison_exclusion_reason": "Campaña archivada o todavía no normalizada al universo S&P 500",
-      "risk_observations": 3,
+      "risk_observations": 4,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": -10.960967,
+      "max_drawdown_pct": -11.86896,
       "sharpe_0rf": null
     },
     {
@@ -2783,10 +2804,10 @@
       "status": "weekly_settled_demo",
       "daily_mode": false,
       "first_session": "2026-10-02",
-      "last_session": "2026-10-16",
+      "last_session": "2026-10-23",
       "initial_capital": 100000.0,
-      "last_equity": 85030.63879082374,
-      "return_pct": -14.969361,
+      "last_equity": 84004.64257267193,
+      "return_pct": -15.995357,
       "day_return_pct": null,
       "currency": "USD",
       "equity_history": [
@@ -2801,22 +2822,26 @@
         {
           "date": "2026-10-16",
           "nav": 85030.63879082374
+        },
+        {
+          "date": "2026-10-23",
+          "nav": 84004.64257267193
         }
       ],
       "note": "Libro semanal prospectivo desde 02/10/2026: liquidación al final de la siguiente semana, sin NAV diario ni fills registrados lunes-jueves. Resultado semanal separado; NO participa en la competición diaria ni se suma a la rentabilidad de la campaña diaria.",
       "activity_state": "pending",
       "activity_label": "10 señales congeladas · liquidación semanal pendiente",
       "activity_tickers": [
-        "MU",
-        "WDC",
-        "DELL",
-        "STX",
-        "KLAC",
-        "CDW",
-        "IT",
+        "DDOG",
+        "HPQ",
+        "AXON",
+        "IBM",
         "PTC",
-        "ANET",
-        "SMCI"
+        "NTAP",
+        "GDDY",
+        "LUV",
+        "CEG",
+        "VST"
       ],
       "open_positions_count": 0,
       "pending_orders_count": 10,
@@ -2824,9 +2849,9 @@
       "comparison_universe_id": null,
       "comparison_universe_symbols": null,
       "comparison_exclusion_reason": "Campaña archivada o todavía no normalizada al universo S&P 500",
-      "risk_observations": 3,
+      "risk_observations": 4,
       "annualized_volatility_pct": null,
-      "max_drawdown_pct": -14.969361,
+      "max_drawdown_pct": -15.995357,
       "sharpe_0rf": null
     },
     {

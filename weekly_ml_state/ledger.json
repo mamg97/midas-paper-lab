@@ -7,8 +7,8 @@
     "share_precision": 6
   },
   "first_session": "2026-10-02",
-  "forecast_hash": "41140defb1117e7dcff7312ddc7fe61b55d7d63a5bdf74ac19861f57ed7e3b38",
-  "last_session": "2026-10-16",
+  "forecast_hash": "55158e338cadd258d1a5d73bee628f0f17b34376801319d2c35c194825a07aa2",
+  "last_session": "2026-10-23",
   "missed_signal_weeks": [],
   "schema_version": 1,
   "strategies": {
@@ -28,69 +28,74 @@
           "date": "2026-10-16",
           "decision_recorded": true,
           "nav": 90891.32765517029
-        }
-      ],
-      "nav": 90891.32765517029,
-      "pending": [
-        {
-          "predicted_return": 0.09389108909814504,
-          "score": 0.09389108909814504,
-          "signal_date": "2026-10-16",
-          "ticker": "DELL"
         },
         {
-          "predicted_return": 0.06480237410613386,
-          "score": 0.06480237410613386,
-          "signal_date": "2026-10-16",
+          "date": "2026-10-23",
+          "decision_recorded": true,
+          "nav": 89964.44580131033
+        }
+      ],
+      "nav": 89964.44580131033,
+      "pending": [
+        {
+          "predicted_return": 0.1240338635005986,
+          "score": 0.1240338635005986,
+          "signal_date": "2026-10-23",
+          "ticker": "HAS"
+        },
+        {
+          "predicted_return": 0.09783211181859985,
+          "score": 0.09783211181859985,
+          "signal_date": "2026-10-23",
+          "ticker": "LKQ"
+        },
+        {
+          "predicted_return": 0.07130624757059606,
+          "score": 0.07130624757059606,
+          "signal_date": "2026-10-23",
+          "ticker": "ROP"
+        },
+        {
+          "predicted_return": 0.07097294118108091,
+          "score": 0.07097294118108091,
+          "signal_date": "2026-10-23",
           "ticker": "MRNA"
         },
         {
-          "predicted_return": 0.05576907386230598,
-          "score": 0.05576907386230598,
-          "signal_date": "2026-10-16",
-          "ticker": "CRWD"
+          "predicted_return": 0.06918988359808331,
+          "score": 0.06918988359808331,
+          "signal_date": "2026-10-23",
+          "ticker": "POOL"
         },
         {
-          "predicted_return": 0.05568268806212064,
-          "score": 0.05568268806212064,
-          "signal_date": "2026-10-16",
-          "ticker": "SMCI"
+          "predicted_return": 0.051535790183195665,
+          "score": 0.051535790183195665,
+          "signal_date": "2026-10-23",
+          "ticker": "VLO"
         },
         {
-          "predicted_return": 0.04779868220855059,
-          "score": 0.04779868220855059,
-          "signal_date": "2026-10-16",
-          "ticker": "ANET"
+          "predicted_return": 0.04824555816926593,
+          "score": 0.04824555816926593,
+          "signal_date": "2026-10-23",
+          "ticker": "MPC"
         },
         {
-          "predicted_return": 0.047665508497313956,
-          "score": 0.047665508497313956,
-          "signal_date": "2026-10-16",
-          "ticker": "LW"
+          "predicted_return": 0.044414046420825117,
+          "score": 0.044414046420825117,
+          "signal_date": "2026-10-23",
+          "ticker": "PAYC"
         },
         {
-          "predicted_return": 0.04714861845866197,
-          "score": 0.04714861845866197,
-          "signal_date": "2026-10-16",
-          "ticker": "WDC"
+          "predicted_return": 0.03624867280421112,
+          "score": 0.03624867280421112,
+          "signal_date": "2026-10-23",
+          "ticker": "WDAY"
         },
         {
-          "predicted_return": 0.043359092916531464,
-          "score": 0.043359092916531464,
-          "signal_date": "2026-10-16",
-          "ticker": "MU"
-        },
-        {
-          "predicted_return": 0.04069525433512794,
-          "score": 0.04069525433512794,
-          "signal_date": "2026-10-16",
-          "ticker": "PANW"
-        },
-        {
-          "predicted_return": 0.04020214342921018,
-          "score": 0.04020214342921018,
-          "signal_date": "2026-10-16",
-          "ticker": "AMD"
+          "predicted_return": 0.034520119906823306,
+          "score": 0.034520119906823306,
+          "signal_date": "2026-10-23",
+          "ticker": "EFX"
         }
       ],
       "trades": [
@@ -473,6 +478,196 @@
           "signal_date": "2026-10-09",
           "ticker": "PANW",
           "week": "2026-10-10/2026-10-16"
+        },
+        {
+          "buy_commission": 8.62605005465331,
+          "buy_price": 470.08408737831064,
+          "close": 456.44000244140625,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -2.8539287535778612,
+          "last_session": "2026-10-23",
+          "net_pnl": -271.5545468047785,
+          "net_return_pct": -3.1449303194675315,
+          "open": 469.8491627969122,
+          "predicted_return": 0.09389108909814504,
+          "quantity": 18.350015,
+          "score": 0.09389108909814504,
+          "sell_commission": 8.371493050954141,
+          "sell_price": 456.2117824401856,
+          "signal_date": "2026-10-16",
+          "ticker": "DELL",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.626050031461341,
+          "buy_price": 217.37863927459716,
+          "close": 200.10000610351562,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -7.902608658033527,
+          "last_session": "2026-10-23",
+          "net_pnl": -706.1858501784018,
+          "net_return_pct": -8.17848687679218,
+          "open": 217.27000427246094,
+          "predicted_return": 0.06480237410613386,
+          "quantity": 39.682142,
+          "score": 0.06480237410613386,
+          "sell_commission": 7.936426657972374,
+          "sell_price": 199.9999561004639,
+          "signal_date": "2026-10-16",
+          "ticker": "MRNA",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.62604985525918,
+          "buy_price": 234.29708267211913,
+          "close": 257.57000732421875,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 9.988049953020806,
+          "last_session": "2026-10-23",
+          "net_pnl": 833.9870949368324,
+          "net_return_pct": 9.658580172567333,
+          "open": 234.17999267578125,
+          "predicted_return": 0.05576907386230598,
+          "quantity": 36.816719,
+          "score": 0.05576907386230598,
+          "sell_commission": 9.478141141192465,
+          "sell_price": 257.4412223205567,
+          "signal_date": "2026-10-16",
+          "ticker": "CRWD",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.626050061595999,
+          "buy_price": 33.0165,
+          "close": 32.939998626708984,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -0.18182234330610392,
+          "last_session": "2026-10-23",
+          "net_pnl": -41.517959274407986,
+          "net_return_pct": -0.48082821796123776,
+          "open": 33.0,
+          "predicted_return": 0.05568268806212064,
+          "quantity": 261.264824,
+          "score": 0.05568268806212064,
+          "sell_commission": 8.601759912295481,
+          "sell_price": 32.92352862739563,
+          "signal_date": "2026-10-16",
+          "ticker": "SMCI",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.626049978485375,
+          "buy_price": 182.9614301147461,
+          "close": 172.3699951171875,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -5.741783934139299,
+          "last_session": "2026-10-23",
+          "net_pnl": -520.1645334011091,
+          "net_return_pct": -6.024134914690582,
+          "open": 182.8699951171875,
+          "predicted_return": 0.04779868220855059,
+          "quantity": 47.146822,
+          "score": 0.04779868220855059,
+          "sell_commission": 8.122634129191944,
+          "sell_price": 172.28381011962892,
+          "signal_date": "2026-10-16",
+          "ticker": "ANET",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.626050046676378,
+          "buy_price": 52.89643393135071,
+          "close": 53.83000183105469,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 1.8157800615936193,
+          "last_session": "2026-10-23",
+          "net_pnl": 130.45185395340377,
+          "net_return_pct": 1.5107903584584026,
+          "open": 52.869998931884766,
+          "predicted_return": 0.047665508497313956,
+          "quantity": 163.074321,
+          "score": 0.047665508497313956,
+          "sell_commission": 8.773901852528986,
+          "sell_price": 53.803086830139165,
+          "signal_date": "2026-10-16",
+          "ticker": "LW",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.626049991600357,
+          "buy_price": 342.13097145080565,
+          "close": 343.6700134277344,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 0.5000649243731559,
+          "last_session": "2026-10-23",
+          "net_pnl": 17.18442597147441,
+          "net_return_pct": 0.19901645283157965,
+          "open": 341.9599914550781,
+          "predicted_return": 0.04714861845866197,
+          "quantity": 25.212713,
+          "score": 0.04714861845866197,
+          "sell_commission": 8.660520988551985,
+          "sell_price": 343.49817842102055,
+          "signal_date": "2026-10-16",
+          "ticker": "WDC",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.626049418619337,
+          "buy_price": 914.0067627868652,
+          "close": 877.5499877929688,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -3.940671061358325,
+          "last_session": "2026-10-23",
+          "net_pnl": -365.11010999121027,
+          "net_return_pct": -4.228417284965702,
+          "open": 913.5499877929688,
+          "predicted_return": 0.043359092916531464,
+          "quantity": 9.437621,
+          "score": 0.043359092916531464,
+          "sell_commission": 8.277843201247993,
+          "sell_price": 877.1112127990723,
+          "signal_date": "2026-10-16",
+          "ticker": "MU",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.626049877504002,
+          "buy_price": 356.178,
+          "close": 380.54998779296875,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 6.8960639867889695,
+          "last_session": "2026-10-23",
+          "net_pnl": 567.8038780637944,
+          "net_return_pct": 6.5758562665128695,
+          "open": 356.0,
+          "predicted_return": 0.04069525433512794,
+          "quantity": 24.218368,
+          "score": 0.04069525433512794,
+          "sell_commission": 9.211691496942244,
+          "sell_price": 380.35971279907227,
+          "signal_date": "2026-10-16",
+          "ticker": "PANW",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.626049845080814,
+          "buy_price": 552.0559193115234,
+          "close": 516.7899780273438,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -6.341304398805181,
+          "last_session": "2026-10-23",
+          "net_pnl": -571.7761071355462,
+          "net_return_pct": -6.621859512660411,
+          "open": 551.780029296875,
+          "predicted_return": 0.04020214342921018,
+          "quantity": 15.625319,
+          "score": 0.04020214342921018,
+          "sell_commission": 8.070970758548897,
+          "sell_price": 516.5315830383302,
+          "signal_date": "2026-10-16",
+          "ticker": "AMD",
+          "week": "2026-10-17/2026-10-23"
         }
       ],
       "unfilled": []
@@ -493,13 +688,18 @@
           "date": "2026-10-16",
           "decision_recorded": true,
           "nav": 101208.53928374074
+        },
+        {
+          "date": "2026-10-23",
+          "decision_recorded": true,
+          "nav": 101877.33943000576
         }
       ],
-      "nav": 101208.53928374074,
+      "nav": 101877.33943000576,
       "pending": [
         {
           "score": 1.0,
-          "signal_date": "2026-10-16",
+          "signal_date": "2026-10-23",
           "ticker": "RSP"
         }
       ],
@@ -539,6 +739,24 @@
           "signal_date": "2026-10-09",
           "ticker": "RSP",
           "week": "2026-10-10/2026-10-16"
+        },
+        {
+          "buy_commission": 96.05206024007242,
+          "buy_price": 214.5071938934326,
+          "close": 216.5399932861328,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 0.9981340720940812,
+          "last_session": "2026-10-23",
+          "net_pnl": 668.8001462650136,
+          "net_return_pct": 0.6955936318084444,
+          "open": 214.39999389648438,
+          "quantity": 447.780135,
+          "score": 1.0,
+          "sell_commission": 96.91382627285036,
+          "sell_price": 216.43172328948975,
+          "signal_date": "2026-10-16",
+          "ticker": "RSP",
+          "week": "2026-10-17/2026-10-23"
         }
       ],
       "unfilled": []
@@ -559,13 +777,18 @@
           "date": "2026-10-16",
           "decision_recorded": true,
           "nav": 98617.26670709564
+        },
+        {
+          "date": "2026-10-23",
+          "decision_recorded": true,
+          "nav": 97452.76485350072
         }
       ],
-      "nav": 98617.26670709564,
+      "nav": 97452.76485350072,
       "pending": [
         {
           "score": 1.0,
-          "signal_date": "2026-10-16",
+          "signal_date": "2026-10-23",
           "ticker": "SPY"
         }
       ],
@@ -605,6 +828,24 @@
           "signal_date": "2026-10-09",
           "ticker": "SPY",
           "week": "2026-10-10/2026-10-16"
+        },
+        {
+          "buy_commission": 93.59280980409648,
+          "buy_price": 767.6135954589844,
+          "close": 759.969970703125,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -0.9462625223781496,
+          "last_session": "2026-10-23",
+          "net_pnl": -1164.5018535949202,
+          "net_return_pct": -1.2429785124678738,
+          "open": 767.22998046875,
+          "quantity": 121.926983,
+          "score": 1.0,
+          "sell_commission": 92.61451527558121,
+          "sell_price": 759.5899857177735,
+          "signal_date": "2026-10-16",
+          "ticker": "SPY",
+          "week": "2026-10-17/2026-10-23"
         }
       ],
       "unfilled": []
@@ -625,89 +866,94 @@
           "date": "2026-10-16",
           "decision_recorded": true,
           "nav": 85030.63879082374
+        },
+        {
+          "date": "2026-10-23",
+          "decision_recorded": true,
+          "nav": 84004.64257267193
         }
       ],
-      "nav": 85030.63879082374,
+      "nav": 84004.64257267193,
       "pending": [
         {
           "positive_votes": 5,
-          "predicted_return": 0.028340851094832965,
-          "rank_dispersion": 0.035295415040217076,
-          "score": 0.9727334696659851,
-          "signal_date": "2026-10-16",
-          "ticker": "MU"
+          "predicted_return": 0.009592971435169378,
+          "rank_dispersion": 0.1544672325970988,
+          "score": 0.836577868852459,
+          "signal_date": "2026-10-23",
+          "ticker": "DDOG"
         },
         {
           "positive_votes": 5,
-          "predicted_return": 0.022231905743714878,
-          "rank_dispersion": 0.04080880585438518,
-          "score": 0.9502385821404226,
-          "signal_date": "2026-10-16",
-          "ticker": "WDC"
+          "predicted_return": 0.010775682284748627,
+          "rank_dispersion": 0.16016020869317027,
+          "score": 0.8010587431693988,
+          "signal_date": "2026-10-23",
+          "ticker": "HPQ"
         },
         {
           "positive_votes": 5,
-          "predicted_return": 0.035223866180187885,
-          "rank_dispersion": 0.10876748480866089,
-          "score": 0.9441036128152692,
-          "signal_date": "2026-10-16",
-          "ticker": "DELL"
+          "predicted_return": 0.015573279277842451,
+          "rank_dispersion": 0.263265679597745,
+          "score": 0.7832991803278689,
+          "signal_date": "2026-10-23",
+          "ticker": "AXON"
         },
         {
           "positive_votes": 5,
-          "predicted_return": 0.015388112227058721,
-          "rank_dispersion": 0.08522102830128032,
-          "score": 0.9115541922290388,
-          "signal_date": "2026-10-16",
-          "ticker": "STX"
+          "predicted_return": 0.010244299055982498,
+          "rank_dispersion": 0.1748944864604479,
+          "score": 0.7409494535519126,
+          "signal_date": "2026-10-23",
+          "ticker": "IBM"
         },
         {
           "positive_votes": 5,
-          "predicted_return": 0.010928720533910391,
-          "rank_dispersion": 0.12800258435239126,
-          "score": 0.8905930470347648,
-          "signal_date": "2026-10-16",
-          "ticker": "KLAC"
-        },
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.009497121848980574,
-          "rank_dispersion": 0.08417644267502149,
-          "score": 0.8711656441717791,
-          "signal_date": "2026-10-16",
-          "ticker": "CDW"
-        },
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.010525777574895024,
-          "rank_dispersion": 0.07298652894887499,
-          "score": 0.8646898432174505,
-          "signal_date": "2026-10-16",
-          "ticker": "IT"
-        },
-        {
-          "positive_votes": 5,
-          "predicted_return": 0.01046916190776965,
-          "rank_dispersion": 0.08523874697526485,
-          "score": 0.8628152692569871,
-          "signal_date": "2026-10-16",
+          "predicted_return": 0.00958417062135656,
+          "rank_dispersion": 0.19340290937256574,
+          "score": 0.7231898907103824,
+          "signal_date": "2026-10-23",
           "ticker": "PTC"
         },
         {
           "positive_votes": 5,
-          "predicted_return": 0.020566609324377587,
-          "rank_dispersion": 0.16500941901463734,
-          "score": 0.8522494887525564,
-          "signal_date": "2026-10-16",
-          "ticker": "ANET"
+          "predicted_return": 0.006507883094148423,
+          "rank_dispersion": 0.15322838296792363,
+          "score": 0.7091871584699453,
+          "signal_date": "2026-10-23",
+          "ticker": "NTAP"
+        },
+        {
+          "positive_votes": 5,
+          "predicted_return": 0.005493524524893249,
+          "rank_dispersion": 0.1768424187619064,
+          "score": 0.7088456284153005,
+          "signal_date": "2026-10-23",
+          "ticker": "GDDY"
+        },
+        {
+          "positive_votes": 5,
+          "predicted_return": 0.005411294958275633,
+          "rank_dispersion": 0.1876542937923204,
+          "score": 0.7050887978142075,
+          "signal_date": "2026-10-23",
+          "ticker": "LUV"
         },
         {
           "positive_votes": 4,
-          "predicted_return": 0.013285102721120089,
-          "rank_dispersion": 0.29379548045862686,
-          "score": 0.8476482617586911,
-          "signal_date": "2026-10-16",
-          "ticker": "SMCI"
+          "predicted_return": 0.006755702953699698,
+          "rank_dispersion": 0.22613190823266005,
+          "score": 0.7003073770491803,
+          "signal_date": "2026-10-23",
+          "ticker": "CEG"
+        },
+        {
+          "positive_votes": 4,
+          "predicted_return": 0.006694738345336191,
+          "rank_dispersion": 0.3014677976652382,
+          "score": 0.6989412568306012,
+          "signal_date": "2026-10-23",
+          "ticker": "VST"
         }
       ],
       "trades": [
@@ -1130,6 +1376,216 @@
           "signal_date": "2026-10-09",
           "ticker": "ANET",
           "week": "2026-10-10/2026-10-16"
+        },
+        {
+          "buy_commission": 8.069840657199782,
+          "buy_price": 914.0067627868652,
+          "close": 877.5499877929688,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -3.940671061358325,
+          "last_session": "2026-10-23",
+          "net_pnl": -341.5677637554454,
+          "net_return_pct": -4.228417284965724,
+          "open": 913.5499877929688,
+          "positive_votes": 5,
+          "predicted_return": 0.028340851094832965,
+          "quantity": 8.829082,
+          "rank_dispersion": 0.035295415040217076,
+          "score": 0.9727334696659851,
+          "sell_commission": 7.744086820922458,
+          "sell_price": 877.1112127990723,
+          "signal_date": "2026-10-16",
+          "ticker": "MU",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.069840828693353,
+          "buy_price": 342.13097145080565,
+          "close": 343.6700134277344,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 0.5000649243731559,
+          "last_session": "2026-10-23",
+          "net_pnl": 16.076371277386897,
+          "net_return_pct": 0.19901645283157965,
+          "open": 341.9599914550781,
+          "positive_votes": 5,
+          "predicted_return": 0.022231905743714878,
+          "quantity": 23.586993,
+          "rank_dispersion": 0.04080880585438518,
+          "score": 0.9502385821404226,
+          "sell_commission": 8.102089129929363,
+          "sell_price": 343.49817842102055,
+          "signal_date": "2026-10-16",
+          "ticker": "WDC",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.069840451374159,
+          "buy_price": 470.08408737831064,
+          "close": 456.44000244140625,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -2.8539287535778612,
+          "last_session": "2026-10-23",
+          "net_pnl": -254.0446499470072,
+          "net_return_pct": -3.1449303194675093,
+          "open": 469.8491627969122,
+          "positive_votes": 5,
+          "predicted_return": 0.035223866180187885,
+          "quantity": 17.166802,
+          "rank_dispersion": 0.10876748480866089,
+          "score": 0.9441036128152692,
+          "sell_commission": 7.831697339217743,
+          "sell_price": 456.2117824401856,
+          "signal_date": "2026-10-16",
+          "ticker": "DELL",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.069840513805,
+          "buy_price": 665.3325,
+          "close": 630.489990234375,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -5.1894751527255645,
+          "last_session": "2026-10-23",
+          "net_pnl": -442.1428542814565,
+          "net_return_pct": -5.473480577128065,
+          "open": 665.0,
+          "positive_votes": 5,
+          "predicted_return": 0.015388112227058721,
+          "quantity": 12.129034,
+          "rank_dispersion": 0.08522102830128032,
+          "score": 0.9115541922290388,
+          "sell_commission": 7.6434109109482975,
+          "sell_price": 630.1747452392578,
+          "signal_date": "2026-10-16",
+          "ticker": "STX",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.069840711998225,
+          "buy_price": 172.82637549591064,
+          "close": 145.61000061035156,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -15.705687171514027,
+          "last_session": "2026-10-23",
+          "net_pnl": -1289.0884132010851,
+          "net_return_pct": -15.958191227663232,
+          "open": 172.74000549316406,
+          "positive_votes": 5,
+          "predicted_return": 0.010928720533910391,
+          "quantity": 46.69334,
+          "rank_dispersion": 0.12800258435239126,
+          "score": 0.8905930470347648,
+          "sell_commission": 6.795617757266403,
+          "sell_price": 145.53719561004638,
+          "signal_date": "2026-10-16",
+          "ticker": "KLAC",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.069840804385901,
+          "buy_price": 150.84538927459715,
+          "close": 165.11000061035156,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 9.511173264926342,
+          "last_session": "2026-10-23",
+          "net_pnl": 741.8051950547933,
+          "net_return_pct": 9.183131971092994,
+          "open": 150.77000427246094,
+          "positive_votes": 5,
+          "predicted_return": 0.009497121848980574,
+          "quantity": 53.497431,
+          "rank_dispersion": 0.08417644267502149,
+          "score": 0.8711656441717791,
+          "sell_commission": 8.82854438462971,
+          "sell_price": 165.02744561004639,
+          "signal_date": "2026-10-16",
+          "ticker": "CDW",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.06984080248015,
+          "buy_price": 202.5112086639404,
+          "close": 230.27999877929688,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 13.769079893754622,
+          "last_session": "2026-10-23",
+          "net_pnl": 1084.724783923226,
+          "net_return_pct": 13.42828401828453,
+          "open": 202.41000366210938,
+          "positive_votes": 5,
+          "predicted_return": 0.010525777574895024,
+          "quantity": 39.84886,
+          "rank_dispersion": 0.07298652894887499,
+          "score": 0.8646898432174505,
+          "sell_commission": 9.171807234440296,
+          "sell_price": 230.16485877990723,
+          "signal_date": "2026-10-16",
+          "ticker": "IT",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.069840824577604,
+          "buy_price": 193.70680561065672,
+          "close": 193.8000030517578,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 0.09813668757154836,
+          "last_session": "2026-10-23",
+          "net_pnl": -16.29377635999481,
+          "net_return_pct": -0.2017078058288213,
+          "open": 193.61000061035156,
+          "positive_votes": 5,
+          "predicted_return": 0.01046916190776965,
+          "quantity": 41.660079,
+          "rank_dispersion": 0.08523874697526485,
+          "score": 0.8628152692569871,
+          "sell_commission": 8.069686575617805,
+          "sell_price": 193.70310305023193,
+          "signal_date": "2026-10-16",
+          "ticker": "PTC",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.069840827286491,
+          "buy_price": 182.9614301147461,
+          "close": 172.3699951171875,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -5.741783934139299,
+          "last_session": "2026-10-23",
+          "net_pnl": -486.62423693535493,
+          "net_return_pct": -6.024134914690549,
+          "open": 182.8699951171875,
+          "positive_votes": 5,
+          "predicted_return": 0.020566609324377587,
+          "quantity": 44.106787,
+          "rank_dispersion": 0.16500941901463734,
+          "score": 0.8522494887525564,
+          "sell_commission": 7.598885316494917,
+          "sell_price": 172.28381011962892,
+          "signal_date": "2026-10-16",
+          "ticker": "ANET",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.069840829963,
+          "buy_price": 33.0165,
+          "close": 32.939998626708984,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -0.18182234330610392,
+          "last_session": "2026-10-23",
+          "net_pnl": -38.840873926877066,
+          "net_return_pct": -0.48082821796127106,
+          "open": 33.0,
+          "positive_votes": 4,
+          "predicted_return": 0.013285102721120089,
+          "quantity": 244.418422,
+          "rank_dispersion": 0.29379548045862686,
+          "score": 0.8476482617586911,
+          "sell_commission": 8.047116913779867,
+          "sell_price": 32.92352862739563,
+          "signal_date": "2026-10-16",
+          "ticker": "SMCI",
+          "week": "2026-10-17/2026-10-23"
         }
       ],
       "unfilled": []
@@ -1150,69 +1606,74 @@
           "date": "2026-10-16",
           "decision_recorded": true,
           "nav": 99314.10274179852
+        },
+        {
+          "date": "2026-10-23",
+          "decision_recorded": true,
+          "nav": 100506.33817479112
         }
       ],
-      "nav": 99314.10274179852,
+      "nav": 100506.33817479112,
       "pending": [
         {
-          "direction_probability": 0.6021744234677776,
-          "score": 0.6021744234677776,
-          "signal_date": "2026-10-16",
-          "ticker": "GDDY"
+          "direction_probability": 0.5830678923202716,
+          "score": 0.5830678923202716,
+          "signal_date": "2026-10-23",
+          "ticker": "ROST"
         },
         {
-          "direction_probability": 0.598298149720603,
-          "score": 0.598298149720603,
-          "signal_date": "2026-10-16",
-          "ticker": "CDW"
+          "direction_probability": 0.574412570130167,
+          "score": 0.574412570130167,
+          "signal_date": "2026-10-23",
+          "ticker": "LMT"
         },
         {
-          "direction_probability": 0.5974149719136685,
-          "score": 0.5974149719136685,
-          "signal_date": "2026-10-16",
-          "ticker": "UPS"
+          "direction_probability": 0.5736319004329803,
+          "score": 0.5736319004329803,
+          "signal_date": "2026-10-23",
+          "ticker": "SOLV"
         },
         {
-          "direction_probability": 0.596714734037321,
-          "score": 0.596714734037321,
-          "signal_date": "2026-10-16",
-          "ticker": "TYL"
+          "direction_probability": 0.5730760155742161,
+          "score": 0.5730760155742161,
+          "signal_date": "2026-10-23",
+          "ticker": "LVS"
         },
         {
-          "direction_probability": 0.5967045408248197,
-          "score": 0.5967045408248197,
-          "signal_date": "2026-10-16",
-          "ticker": "AAPL"
+          "direction_probability": 0.5713818707127751,
+          "score": 0.5713818707127751,
+          "signal_date": "2026-10-23",
+          "ticker": "WRB"
         },
         {
-          "direction_probability": 0.5967045408248197,
-          "score": 0.5967045408248197,
-          "signal_date": "2026-10-16",
-          "ticker": "ON"
+          "direction_probability": 0.5689767348127374,
+          "score": 0.5689767348127374,
+          "signal_date": "2026-10-23",
+          "ticker": "TKO"
         },
         {
-          "direction_probability": 0.5958304266658023,
-          "score": 0.5958304266658023,
-          "signal_date": "2026-10-16",
-          "ticker": "EIX"
+          "direction_probability": 0.5659728357688901,
+          "score": 0.5659728357688901,
+          "signal_date": "2026-10-23",
+          "ticker": "WMT"
         },
         {
-          "direction_probability": 0.5958304266658023,
-          "score": 0.5958304266658023,
-          "signal_date": "2026-10-16",
-          "ticker": "MO"
+          "direction_probability": 0.5655680544603101,
+          "score": 0.5655680544603101,
+          "signal_date": "2026-10-23",
+          "ticker": "MAR"
         },
         {
-          "direction_probability": 0.5954709506920727,
-          "score": 0.5954709506920727,
-          "signal_date": "2026-10-16",
-          "ticker": "DELL"
+          "direction_probability": 0.5654340699585007,
+          "score": 0.5654340699585007,
+          "signal_date": "2026-10-23",
+          "ticker": "KO"
         },
         {
-          "direction_probability": 0.5954709506920727,
-          "score": 0.5954709506920727,
-          "signal_date": "2026-10-16",
-          "ticker": "KLAC"
+          "direction_probability": 0.5638510498810009,
+          "score": 0.5638510498810009,
+          "signal_date": "2026-10-23",
+          "ticker": "ESS"
         }
       ],
       "trades": [
@@ -1405,6 +1866,196 @@
           "signal_date": "2026-10-09",
           "ticker": "MSCI",
           "week": "2026-10-10/2026-10-16"
+        },
+        {
+          "buy_commission": 9.42541428644484,
+          "buy_price": 105.72283316802978,
+          "close": 112.79000091552734,
+          "direction_probability": 0.6021744234677776,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 6.737960509092233,
+          "last_session": "2026-10-23",
+          "net_pnl": 605.5493713956494,
+          "net_return_pct": 6.41822638861278,
+          "open": 105.66999816894531,
+          "quantity": 89.152116,
+          "score": 0.6021744234677776,
+          "sell_commission": 10.050439511638572,
+          "sell_price": 112.73360591506959,
+          "signal_date": "2026-10-16",
+          "ticker": "GDDY",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.425414252710572,
+          "buy_price": 150.84538927459715,
+          "close": 165.11000061035156,
+          "direction_probability": 0.598298149720603,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 9.511173264926342,
+          "last_session": "2026-10-23",
+          "net_pnl": 866.4137778782679,
+          "net_return_pct": 9.183131971092973,
+          "open": 150.77000427246094,
+          "quantity": 62.48394,
+          "score": 0.598298149720603,
+          "sell_commission": 10.311565009851401,
+          "sell_price": 165.02744561004639,
+          "signal_date": "2026-10-16",
+          "ticker": "CDW",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.425414323986,
+          "buy_price": 97.298625,
+          "close": 101.05999755859375,
+          "direction_probability": 0.5974149719136685,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 3.9177352787596487,
+          "last_session": "2026-10-23",
+          "net_pnl": 340.26269827714714,
+          "net_return_pct": 3.6064491577479263,
+          "open": 97.25,
+          "quantity": 96.870992,
+          "score": 0.5974149719136685,
+          "sell_commission": 9.784887323911045,
+          "sell_price": 101.00946755981445,
+          "signal_date": "2026-10-16",
+          "ticker": "UPS",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.425414011060877,
+          "buy_price": 356.8583326721191,
+          "close": 390.1400146484375,
+          "direction_probability": 0.596714734037321,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 9.380964074166931,
+          "last_session": "2026-10-23",
+          "net_pnl": 854.1655274662262,
+          "net_return_pct": 9.053312822647364,
+          "open": 356.67999267578125,
+          "quantity": 26.412201,
+          "score": 0.596714734037321,
+          "sell_commission": 10.299304256794958,
+          "sell_price": 389.9449446411133,
+          "signal_date": "2026-10-16",
+          "ticker": "TYL",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.425414273955228,
+          "buy_price": 340.9503887786865,
+          "close": 347.7300109863281,
+          "direction_probability": 0.5967045408248197,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 2.0394425236007985,
+          "last_session": "2026-10-23",
+          "net_pnl": 163.57963134390593,
+          "net_return_pct": 1.7337828383876763,
+          "open": 340.7799987792969,
+          "quantity": 27.644533,
+          "score": 0.5967045408248197,
+          "sell_commission": 9.608027346920009,
+          "sell_price": 347.55614598083497,
+          "signal_date": "2026-10-16",
+          "ticker": "AAPL",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.425414284773806,
+          "buy_price": 73.00648622131347,
+          "close": 72.25,
+          "direction_probability": 0.5967045408248197,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -0.9867085222123428,
+          "last_session": "2026-10-23",
+          "net_pnl": -121.0776145004329,
+          "net_return_pct": -1.2833033560974427,
+          "open": 72.97000122070312,
+          "quantity": 129.103793,
+          "score": 0.5967045408248197,
+          "sell_commission": 9.323085169727873,
+          "sell_price": 72.213875,
+          "signal_date": "2026-10-16",
+          "ticker": "ON",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.425414295749203,
+          "buy_price": 55.40769106864929,
+          "close": 57.349998474121094,
+          "direction_probability": 0.5958304266658023,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 3.557236128585184,
+          "last_session": "2026-10-23",
+          "net_pnl": 306.3520649557249,
+          "net_return_pct": 3.247029884668451,
+          "open": 55.380001068115234,
+          "quantity": 170.110216,
+          "score": 0.5958304266658023,
+          "sell_commission": 9.750942717718395,
+          "sell_price": 57.32132347488404,
+          "signal_date": "2026-10-16",
+          "ticker": "EIX",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.425414325986997,
+          "buy_price": 74.28712499999999,
+          "close": 74.30999755859375,
+          "direction_probability": 0.5958304266658023,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 0.08080479271885821,
+          "last_session": "2026-10-23",
+          "net_pnl": -20.66114636743805,
+          "net_return_pct": -0.2189877828995601,
+          "open": 74.25,
+          "quantity": 126.878168,
+          "score": 0.5958304266658023,
+          "sell_commission": 9.42360219614169,
+          "sell_price": 74.27284255981446,
+          "signal_date": "2026-10-16",
+          "ticker": "MO",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.425413942717507,
+          "buy_price": 470.08408737831064,
+          "close": 456.44000244140625,
+          "direction_probability": 0.5954709506920727,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -2.8539287535778612,
+          "last_session": "2026-10-23",
+          "net_pnl": -296.719123520661,
+          "net_return_pct": -3.1449303194675093,
+          "open": 469.8491627969122,
+          "quantity": 20.050485,
+          "score": 0.5954709506920727,
+          "sell_commission": 9.147267500640204,
+          "sell_price": 456.2117824401856,
+          "signal_date": "2026-10-16",
+          "ticker": "DELL",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.425414239303803,
+          "buy_price": 172.82637549591064,
+          "close": 145.61000061035156,
+          "direction_probability": 0.5954709506920727,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -15.705687171514027,
+          "last_session": "2026-10-23",
+          "net_pnl": -1505.6297539358093,
+          "net_return_pct": -15.958191227663242,
+          "open": 172.74000549316406,
+          "quantity": 54.536897,
+          "score": 0.5954709506920727,
+          "sell_commission": 7.937147046653952,
+          "sell_price": 145.53719561004638,
+          "signal_date": "2026-10-16",
+          "ticker": "KLAC",
+          "week": "2026-10-17/2026-10-23"
         }
       ],
       "unfilled": []
@@ -1425,59 +2076,64 @@
           "date": "2026-10-16",
           "decision_recorded": true,
           "nav": 95617.71084198591
-        }
-      ],
-      "nav": 95617.71084198591,
-      "pending": [
-        {
-          "score": 0.48972219579418075,
-          "signal_date": "2026-10-16",
-          "ticker": "DELL"
         },
         {
-          "score": 0.44874355967627355,
-          "signal_date": "2026-10-16",
+          "date": "2026-10-23",
+          "decision_recorded": true,
+          "nav": 92121.11294229668
+        }
+      ],
+      "nav": 92121.11294229668,
+      "pending": [
+        {
+          "score": 0.6406045494888635,
+          "signal_date": "2026-10-23",
           "ticker": "STX"
         },
         {
-          "score": 0.4471253722801825,
-          "signal_date": "2026-10-16",
+          "score": 0.6069010661931535,
+          "signal_date": "2026-10-23",
           "ticker": "MU"
         },
         {
-          "score": 0.43780943686417223,
-          "signal_date": "2026-10-16",
-          "ticker": "HPE"
-        },
-        {
-          "score": 0.4143236165567487,
-          "signal_date": "2026-10-16",
-          "ticker": "MRNA"
-        },
-        {
-          "score": 0.3982177743775433,
-          "signal_date": "2026-10-16",
-          "ticker": "WDC"
-        },
-        {
-          "score": 0.3567575325970442,
-          "signal_date": "2026-10-16",
+          "score": 0.6026052212076239,
+          "signal_date": "2026-10-23",
           "ticker": "TER"
         },
         {
-          "score": 0.313418865787466,
-          "signal_date": "2026-10-16",
-          "ticker": "PLTR"
+          "score": 0.5422061138868923,
+          "signal_date": "2026-10-23",
+          "ticker": "MRNA"
         },
         {
-          "score": 0.3087245209569109,
-          "signal_date": "2026-10-16",
-          "ticker": "ORCL"
+          "score": 0.5286001579872317,
+          "signal_date": "2026-10-23",
+          "ticker": "GLW"
         },
         {
-          "score": 0.3067514429977383,
-          "signal_date": "2026-10-16",
-          "ticker": "INTC"
+          "score": 0.5169884293287041,
+          "signal_date": "2026-10-23",
+          "ticker": "HPE"
+        },
+        {
+          "score": 0.5159565124674188,
+          "signal_date": "2026-10-23",
+          "ticker": "AKAM"
+        },
+        {
+          "score": 0.48843226361693226,
+          "signal_date": "2026-10-23",
+          "ticker": "WDC"
+        },
+        {
+          "score": 0.48304659111304155,
+          "signal_date": "2026-10-23",
+          "ticker": "DELL"
+        },
+        {
+          "score": 0.4621972769307878,
+          "signal_date": "2026-10-23",
+          "ticker": "VST"
         }
       ],
       "trades": [
@@ -1840,6 +2496,186 @@
           "signal_date": "2026-10-09",
           "ticker": "COO",
           "week": "2026-10-10/2026-10-16"
+        },
+        {
+          "buy_commission": 9.074607581418306,
+          "buy_price": 470.08408737831064,
+          "close": 456.44000244140625,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -2.8539287535778612,
+          "last_session": "2026-10-23",
+          "net_pnl": -285.6754752859215,
+          "net_return_pct": -3.1449303194674982,
+          "open": 469.8491627969122,
+          "quantity": 19.304222,
+          "score": 0.48972219579418075,
+          "sell_commission": 8.806813527241044,
+          "sell_price": 456.2117824401856,
+          "signal_date": "2026-10-16",
+          "ticker": "DELL",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.0746076913275,
+          "buy_price": 665.3325,
+          "close": 630.489990234375,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -5.1894751527255645,
+          "last_session": "2026-10-23",
+          "net_pnl": -497.19358632481635,
+          "net_return_pct": -5.4734805771280755,
+          "open": 665.0,
+          "quantity": 13.639207,
+          "score": 0.44874355967627355,
+          "sell_commission": 8.595083796490503,
+          "sell_price": 630.1747452392578,
+          "signal_date": "2026-10-16",
+          "ticker": "STX",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.07460737752462,
+          "buy_price": 914.0067627868652,
+          "close": 877.5499877929688,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -3.940671061358325,
+          "last_session": "2026-10-23",
+          "net_pnl": -384.09597916092025,
+          "net_return_pct": -4.228417284965724,
+          "open": 913.5499877929688,
+          "quantity": 9.928381,
+          "score": 0.4471253722801825,
+          "sell_commission": 8.708294300041265,
+          "sell_price": 877.1112127990723,
+          "signal_date": "2026-10-16",
+          "ticker": "MU",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.074607883243937,
+          "buy_price": 56.95846530532837,
+          "close": 56.689998626708984,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -0.42157329559152634,
+          "last_session": "2026-10-23",
+          "net_pnl": -65.38988716433778,
+          "net_return_pct": -0.7198609950117674,
+          "open": 56.93000030517578,
+          "quantity": 159.31974,
+          "score": 0.43780943686417223,
+          "sell_commission": 9.02731992388673,
+          "sell_price": 56.66165362739563,
+          "signal_date": "2026-10-16",
+          "ticker": "HPE",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.074607810303524,
+          "buy_price": 217.37863927459716,
+          "close": 200.10000610351562,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -7.902608658033527,
+          "last_session": "2026-10-23",
+          "net_pnl": -742.9077744949172,
+          "net_return_pct": -8.178486876792167,
+          "open": 217.27000427246094,
+          "quantity": 41.745628,
+          "score": 0.4143236165567487,
+          "sell_commission": 8.349123767386295,
+          "sell_price": 199.9999561004639,
+          "signal_date": "2026-10-16",
+          "ticker": "MRNA",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.074607644340366,
+          "buy_price": 342.13097145080565,
+          "close": 343.6700134277344,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 0.5000649243731559,
+          "last_session": "2026-10-23",
+          "net_pnl": 18.078022204392255,
+          "net_return_pct": 0.19901645283157965,
+          "open": 341.9599914550781,
+          "quantity": 26.523783,
+          "score": 0.3982177743775433,
+          "sell_commission": 9.110871145334434,
+          "sell_price": 343.49817842102055,
+          "signal_date": "2026-10-16",
+          "ticker": "WDC",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.0746077013325,
+          "buy_price": 341.67075,
+          "close": 308.8500061035156,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -9.56075955973188,
+          "last_session": "2026-10-23",
+          "net_pnl": -893.0777392134432,
+          "net_return_pct": -9.831670778768508,
+          "open": 341.5,
+          "quantity": 26.55951,
+          "score": 0.3567575325970442,
+          "sell_commission": 8.19880337319358,
+          "sell_price": 308.69558110046387,
+          "signal_date": "2026-10-16",
+          "ticker": "TER",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.07460778473148,
+          "buy_price": 187.0884926147461,
+          "close": 196.75,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 5.216719771937828,
+          "last_session": "2026-10-23",
+          "net_pnl": 445.2405563101802,
+          "net_return_pct": 4.901542536064474,
+          "open": 186.9949951171875,
+          "quantity": 48.504361,
+          "score": 0.313418865787466,
+          "sell_commission": 9.538461410236627,
+          "sell_price": 196.65162500000002,
+          "signal_date": "2026-10-16",
+          "ticker": "PLTR",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.07460780952054,
+          "buy_price": 130.72533366394043,
+          "close": 126.16000366210938,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -3.444053171494721,
+          "last_session": "2026-10-23",
+          "net_pnl": -339.11993631496625,
+          "net_return_pct": -3.7332870165956655,
+          "open": 130.66000366210938,
+          "quantity": 69.417362,
+          "score": 0.3087245209569109,
+          "sell_commission": 8.753315796811904,
+          "sell_price": 126.09692366027832,
+          "signal_date": "2026-10-16",
+          "ticker": "ORCL",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 9.074607879736233,
+          "buy_price": 94.57726377868651,
+          "close": 86.95999908447266,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -8.008039556308688,
+          "last_session": "2026-10-23",
+          "net_pnl": -752.4561002444789,
+          "net_return_pct": -8.283601956258636,
+          "open": 94.52999877929688,
+          "quantity": 95.949148,
+          "score": 0.3067514429977383,
+          "sell_commission": 8.339565953324815,
+          "sell_price": 86.91651908493043,
+          "signal_date": "2026-10-16",
+          "ticker": "INTC",
+          "week": "2026-10-17/2026-10-23"
         }
       ],
       "unfilled": []
@@ -1860,71 +2696,15 @@
           "date": "2026-10-16",
           "decision_recorded": true,
           "nav": 88064.37972938888
+        },
+        {
+          "date": "2026-10-23",
+          "decision_recorded": true,
+          "nav": 83303.10859468838
         }
       ],
-      "nav": 88064.37972938888,
-      "pending": [
-        {
-          "predicted_return": 0.014742951850308912,
-          "score": 0.014742951850308912,
-          "signal_date": "2026-10-16",
-          "ticker": "HPE"
-        },
-        {
-          "predicted_return": 0.01464602524005407,
-          "score": 0.01464602524005407,
-          "signal_date": "2026-10-16",
-          "ticker": "SMCI"
-        },
-        {
-          "predicted_return": 0.01406733484187187,
-          "score": 0.01406733484187187,
-          "signal_date": "2026-10-16",
-          "ticker": "DELL"
-        },
-        {
-          "predicted_return": 0.014019130340685717,
-          "score": 0.014019130340685717,
-          "signal_date": "2026-10-16",
-          "ticker": "LRCX"
-        },
-        {
-          "predicted_return": 0.013644438410536874,
-          "score": 0.013644438410536874,
-          "signal_date": "2026-10-16",
-          "ticker": "TER"
-        },
-        {
-          "predicted_return": 0.013622902198444626,
-          "score": 0.013622902198444626,
-          "signal_date": "2026-10-16",
-          "ticker": "GLW"
-        },
-        {
-          "predicted_return": 0.013600223362570996,
-          "score": 0.013600223362570996,
-          "signal_date": "2026-10-16",
-          "ticker": "KLAC"
-        },
-        {
-          "predicted_return": 0.013500883328013535,
-          "score": 0.013500883328013535,
-          "signal_date": "2026-10-16",
-          "ticker": "ANET"
-        },
-        {
-          "predicted_return": 0.013425307544611863,
-          "score": 0.013425307544611863,
-          "signal_date": "2026-10-16",
-          "ticker": "JBL"
-        },
-        {
-          "predicted_return": 0.0134074054718224,
-          "score": 0.0134074054718224,
-          "signal_date": "2026-10-16",
-          "ticker": "CRWD"
-        }
-      ],
+      "nav": 83303.10859468838,
+      "pending": [],
       "trades": [
         {
           "buy_commission": 9.490509243376936,
@@ -2115,6 +2895,196 @@
           "signal_date": "2026-10-09",
           "ticker": "ORCL",
           "week": "2026-10-10/2026-10-16"
+        },
+        {
+          "buy_commission": 8.357758314271498,
+          "buy_price": 56.95846530532837,
+          "close": 56.689998626708984,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -0.42157329559152634,
+          "last_session": "2026-10-23",
+          "net_pnl": -60.22440640395507,
+          "net_return_pct": -0.7198609950117674,
+          "open": 56.93000030517578,
+          "predicted_return": 0.014742951850308912,
+          "quantity": 146.734261,
+          "score": 0.014742951850308912,
+          "sell_commission": 8.314205872053869,
+          "sell_price": 56.66165362739563,
+          "signal_date": "2026-10-16",
+          "ticker": "HPE",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.357758312761,
+          "buy_price": 33.0165,
+          "close": 32.939998626708984,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -0.18182234330610392,
+          "last_session": "2026-10-23",
+          "net_pnl": -40.22664681711285,
+          "net_return_pct": -0.48082821796123776,
+          "open": 33.0,
+          "predicted_return": 0.01464602524005407,
+          "quantity": 253.138834,
+          "score": 0.01464602524005407,
+          "sell_commission": 8.334223647904551,
+          "sell_price": 32.92352862739563,
+          "signal_date": "2026-10-16",
+          "ticker": "SMCI",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.357758023295714,
+          "buy_price": 470.08408737831064,
+          "close": 456.44000244140625,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -2.8539287535778612,
+          "last_session": "2026-10-23",
+          "net_pnl": -263.1085117684579,
+          "net_return_pct": -3.1449303194675093,
+          "open": 469.8491627969122,
+          "predicted_return": 0.01406733484187187,
+          "quantity": 17.779283,
+          "score": 0.01406733484187187,
+          "sell_commission": 8.11111838793849,
+          "sell_price": 456.2117824401856,
+          "signal_date": "2026-10-16",
+          "ticker": "DELL",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.357758241263232,
+          "buy_price": 275.29758366394043,
+          "close": 230.10000610351562,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -16.375925628321497,
+          "last_session": "2026-10-23",
+          "net_pnl": -1390.9857495526521,
+          "net_return_pct": -16.626421981658357,
+          "open": 275.1600036621094,
+          "predicted_return": 0.014019130340685717,
+          "quantity": 30.358996,
+          "score": 0.014019130340685717,
+          "sell_commission": 6.982112362314159,
+          "sell_price": 229.98495610046388,
+          "signal_date": "2026-10-16",
+          "ticker": "LRCX",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.35775820920925,
+          "buy_price": 341.67075,
+          "close": 308.8500061035156,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -9.56075955973188,
+          "last_session": "2026-10-23",
+          "net_pnl": -822.5289788865675,
+          "net_return_pct": -9.831670778768519,
+          "open": 341.5,
+          "predicted_return": 0.013644438410536874,
+          "quantity": 24.461439,
+          "score": 0.013644438410536874,
+          "sell_commission": 7.551138126658549,
+          "sell_price": 308.69558110046387,
+          "signal_date": "2026-10-16",
+          "ticker": "TER",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.35775825423175,
+          "buy_price": 136.56825,
+          "close": 123.69000244140625,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -9.384613596039381,
+          "last_session": "2026-10-23",
+          "net_pnl": -807.8365511333459,
+          "net_return_pct": -9.656052461234022,
+          "open": 136.5,
+          "predicted_return": 0.013622902198444626,
+          "quantity": 61.198399,
+          "score": 0.013622902198444626,
+          "sell_commission": 7.565845306659295,
+          "sell_price": 123.62815744018556,
+          "signal_date": "2026-10-16",
+          "ticker": "GLW",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.357758219860003,
+          "buy_price": 172.82637549591064,
+          "close": 145.61000061035156,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -15.705687171514027,
+          "last_session": "2026-10-23",
+          "net_pnl": -1335.080786110072,
+          "net_return_pct": -15.958191227663221,
+          "open": 172.74000549316406,
+          "predicted_return": 0.013600223362570996,
+          "quantity": 48.359275,
+          "score": 0.013600223362570996,
+          "sell_commission": 7.038073265235026,
+          "sell_price": 145.53719561004638,
+          "signal_date": "2026-10-16",
+          "ticker": "KLAC",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.357758264747993,
+          "buy_price": 182.9614301147461,
+          "close": 172.3699951171875,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -5.741783934139299,
+          "last_session": "2026-10-23",
+          "net_pnl": -503.98611634583267,
+          "net_return_pct": -6.0241349146905705,
+          "open": 182.8699951171875,
+          "predicted_return": 0.013500883328013535,
+          "quantity": 45.680438,
+          "score": 0.013500883328013535,
+          "sell_commission": 7.869999906573482,
+          "sell_price": 172.28381011962892,
+          "signal_date": "2026-10-16",
+          "ticker": "ANET",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.357758041698839,
+          "buy_price": 285.0524586639404,
+          "close": 273.9700012207031,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -3.8398098700600958,
+          "last_session": "2026-10-23",
+          "net_pnl": -345.3413990601639,
+          "net_return_pct": -4.127858223894942,
+          "open": 284.9100036621094,
+          "predicted_return": 0.013425307544611863,
+          "quantity": 29.32007,
+          "score": 0.013425307544611863,
+          "sell_commission": 8.028803203884257,
+          "sell_price": 273.8330162200928,
+          "signal_date": "2026-10-16",
+          "ticker": "JBL",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.357758140267997,
+          "buy_price": 234.29708267211913,
+          "close": 257.57000732421875,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 9.988049953020806,
+          "last_session": "2026-10-23",
+          "net_pnl": 808.0480113776648,
+          "net_return_pct": 9.658580172567333,
+          "open": 234.17999267578125,
+          "predicted_return": 0.0134074054718224,
+          "quantity": 35.671627,
+          "score": 0.0134074054718224,
+          "sell_commission": 9.183347257042973,
+          "sell_price": 257.4412223205567,
+          "signal_date": "2026-10-16",
+          "ticker": "CRWD",
+          "week": "2026-10-17/2026-10-23"
         }
       ],
       "unfilled": []
@@ -2135,69 +3105,74 @@
           "date": "2026-10-16",
           "decision_recorded": true,
           "nav": 90161.31498247455
+        },
+        {
+          "date": "2026-10-23",
+          "decision_recorded": true,
+          "nav": 90535.56977336342
         }
       ],
-      "nav": 90161.31498247455,
+      "nav": 90535.56977336342,
       "pending": [
         {
-          "predicted_return": 0.013718264177441597,
-          "score": 0.013718264177441597,
-          "signal_date": "2026-10-16",
-          "ticker": "MGM"
-        },
-        {
-          "predicted_return": 0.013281157240271568,
-          "score": 0.013281157240271568,
-          "signal_date": "2026-10-16",
-          "ticker": "AXON"
-        },
-        {
-          "predicted_return": 0.012053155340254307,
-          "score": 0.012053155340254307,
-          "signal_date": "2026-10-16",
-          "ticker": "FICO"
-        },
-        {
-          "predicted_return": 0.011924180202186108,
-          "score": 0.011924180202186108,
-          "signal_date": "2026-10-16",
+          "predicted_return": 0.01303701288998127,
+          "score": 0.01303701288998127,
+          "signal_date": "2026-10-23",
           "ticker": "SMCI"
         },
         {
-          "predicted_return": 0.011463525705039501,
-          "score": 0.011463525705039501,
-          "signal_date": "2026-10-16",
-          "ticker": "NCLH"
+          "predicted_return": 0.01275379303842783,
+          "score": 0.01275379303842783,
+          "signal_date": "2026-10-23",
+          "ticker": "MGM"
         },
         {
-          "predicted_return": 0.011259295046329498,
-          "score": 0.011259295046329498,
-          "signal_date": "2026-10-16",
-          "ticker": "WYNN"
+          "predicted_return": 0.012002593837678432,
+          "score": 0.012002593837678432,
+          "signal_date": "2026-10-23",
+          "ticker": "KLAC"
         },
         {
-          "predicted_return": 0.01118364930152893,
-          "score": 0.01118364930152893,
-          "signal_date": "2026-10-16",
-          "ticker": "UAL"
+          "predicted_return": 0.011548377573490143,
+          "score": 0.011548377573490143,
+          "signal_date": "2026-10-23",
+          "ticker": "LKQ"
         },
         {
-          "predicted_return": 0.010864288546144962,
-          "score": 0.010864288546144962,
-          "signal_date": "2026-10-16",
+          "predicted_return": 0.011351758614182472,
+          "score": 0.011351758614182472,
+          "signal_date": "2026-10-23",
           "ticker": "BLDR"
         },
         {
-          "predicted_return": 0.010438017547130585,
-          "score": 0.010438017547130585,
-          "signal_date": "2026-10-16",
-          "ticker": "ORCL"
+          "predicted_return": 0.011084857396781445,
+          "score": 0.011084857396781445,
+          "signal_date": "2026-10-23",
+          "ticker": "NRG"
         },
         {
-          "predicted_return": 0.010378027334809303,
-          "score": 0.010378027334809303,
-          "signal_date": "2026-10-16",
-          "ticker": "FSLR"
+          "predicted_return": 0.010303818620741367,
+          "score": 0.010303818620741367,
+          "signal_date": "2026-10-23",
+          "ticker": "F"
+        },
+        {
+          "predicted_return": 0.010254829190671444,
+          "score": 0.010254829190671444,
+          "signal_date": "2026-10-23",
+          "ticker": "AXON"
+        },
+        {
+          "predicted_return": 0.010093818418681622,
+          "score": 0.010093818418681622,
+          "signal_date": "2026-10-23",
+          "ticker": "WYNN"
+        },
+        {
+          "predicted_return": 0.009935783222317696,
+          "score": 0.009935783222317696,
+          "signal_date": "2026-10-23",
+          "ticker": "DECK"
         }
       ],
       "trades": [
@@ -2580,6 +3555,196 @@
           "signal_date": "2026-10-09",
           "ticker": "NXPI",
           "week": "2026-10-10/2026-10-16"
+        },
+        {
+          "buy_commission": 8.556768131976456,
+          "buy_price": 28.314149236679075,
+          "close": 28.059999465942383,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -0.8480557511954645,
+          "last_session": "2026-10-23",
+          "net_pnl": -98.07861638411669,
+          "net_return_pct": -1.145065920183308,
+          "open": 28.299999237060547,
+          "predicted_return": 0.013718264177441597,
+          "quantity": 302.208202,
+          "score": 0.013718264177441597,
+          "sell_commission": 8.475722005730047,
+          "sell_price": 28.045969466209414,
+          "signal_date": "2026-10-16",
+          "ticker": "MGM",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.556767804191955,
+          "buy_price": 394.1169734344482,
+          "close": 420.3699951171875,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 6.7145564550772585,
+          "last_session": "2026-10-23",
+          "net_pnl": 547.7432936500336,
+          "net_return_pct": 6.394892441564326,
+          "open": 393.9200134277344,
+          "predicted_return": 0.013281157240271568,
+          "quantity": 21.711239,
+          "score": 0.013281157240271568,
+          "sell_commission": 9.122190055701882,
+          "sell_price": 420.15981011962896,
+          "signal_date": "2026-10-16",
+          "ticker": "AXON",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.556767413644945,
+          "buy_price": 763.7717096557617,
+          "close": 815.3099975585938,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 6.8012394600244885,
+          "last_session": "2026-10-23",
+          "net_pnl": 555.1457083645819,
+          "net_return_pct": 6.481315787115616,
+          "open": 763.3900146484375,
+          "predicted_return": 0.012053155340254307,
+          "quantity": 11.203305,
+          "score": 0.012053155340254307,
+          "sell_commission": 9.129599488912083,
+          "sell_price": 814.9023425598145,
+          "signal_date": "2026-10-16",
+          "ticker": "FICO",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.556768138946502,
+          "buy_price": 33.0165,
+          "close": 32.939998626708984,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -0.18182234330610392,
+          "last_session": "2026-10-23",
+          "net_pnl": -41.184499113331185,
+          "net_return_pct": -0.48082821796125996,
+          "open": 33.0,
+          "predicted_return": 0.011924180202186108,
+          "quantity": 259.166421,
+          "score": 0.011924180202186108,
+          "sell_commission": 8.53267308105317,
+          "sell_price": 32.92352862739563,
+          "signal_date": "2026-10-16",
+          "ticker": "SMCI",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.556768150404581,
+          "buy_price": 15.157574618339538,
+          "close": 15.100000381469727,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -0.33002797570629294,
+          "last_session": "2026-10-23",
+          "net_pnl": -53.84076730701781,
+          "net_return_pct": -0.628589899612364,
+          "open": 15.149999618530273,
+          "predicted_return": 0.011463525705039501,
+          "quantity": 564.520932,
+          "score": 0.011463525705039501,
+          "sell_commission": 8.520004155403372,
+          "sell_price": 15.092450381278992,
+          "signal_date": "2026-10-16",
+          "ticker": "NCLH",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.556768143761177,
+          "buy_price": 75.10753469467163,
+          "close": 72.7300033569336,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -3.1170858497445275,
+          "last_session": "2026-10-23",
+          "net_pnl": -291.8462409628246,
+          "net_return_pct": -3.4072991271724917,
+          "open": 75.06999969482422,
+          "predicted_return": 0.011259295046329498,
+          "quantity": 113.926894,
+          "score": 0.011259295046329498,
+          "sell_commission": 8.281760431373486,
+          "sell_price": 72.69363835525513,
+          "signal_date": "2026-10-16",
+          "ticker": "WYNN",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.556768129571653,
+          "buy_price": 97.61878469467163,
+          "close": 97.93000030517578,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 0.36896649736348763,
+          "last_session": "2026-10-23",
+          "net_pnl": 5.85103612273997,
+          "net_return_pct": 0.06831073184754288,
+          "open": 97.56999969482422,
+          "predicted_return": 0.01118364930152893,
+          "quantity": 87.654934,
+          "score": 0.01118364930152893,
+          "sell_commission": 8.579755689513478,
+          "sell_price": 97.8810353050232,
+          "signal_date": "2026-10-16",
+          "ticker": "UAL",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.556768154010681,
+          "buy_price": 54.757364542007444,
+          "close": 56.849998474121094,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 3.8735591990069596,
+          "last_session": "2026-10-23",
+          "net_pnl": 305.13159821203044,
+          "net_return_pct": 3.562405407673852,
+          "open": 54.72999954223633,
+          "predicted_return": 0.010864288546144962,
+          "quantity": 156.266983,
+          "score": 0.010864288546144962,
+          "sell_commission": 8.879335856232954,
+          "sell_price": 56.82157347488403,
+          "signal_date": "2026-10-16",
+          "ticker": "BLDR",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.55676802905891,
+          "buy_price": 130.72533366394043,
+          "close": 126.16000366210938,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -3.444053171494721,
+          "last_session": "2026-10-23",
+          "net_pnl": -319.76815857893234,
+          "net_return_pct": -3.7332870165956433,
+          "open": 130.66000366210938,
+          "predicted_return": 0.010438017547130585,
+          "quantity": 65.456081,
+          "score": 0.010438017547130585,
+          "sell_commission": 8.253810448957994,
+          "sell_price": 126.09692366027832,
+          "signal_date": "2026-10-16",
+          "ticker": "ORCL",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.556768153365327,
+          "buy_price": 176.39815255737304,
+          "close": 171.99000549316406,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -2.450225242612236,
+          "last_session": "2026-10-23",
+          "net_pnl": -234.89856311428048,
+          "net_return_pct": -2.742436104486168,
+          "open": 176.30999755859375,
+          "predicted_return": 0.010378027334809303,
+          "quantity": 48.508264,
+          "score": 0.010378027334809303,
+          "sell_commission": 8.338765123527939,
+          "sell_price": 171.90401049041748,
+          "signal_date": "2026-10-16",
+          "ticker": "FSLR",
+          "week": "2026-10-17/2026-10-23"
         }
       ],
       "unfilled": []
@@ -2600,69 +3765,74 @@
           "date": "2026-10-16",
           "decision_recorded": true,
           "nav": 94126.48875045154
+        },
+        {
+          "date": "2026-10-23",
+          "decision_recorded": true,
+          "nav": 90217.00385450856
         }
       ],
-      "nav": 94126.48875045154,
+      "nav": 90217.00385450856,
       "pending": [
         {
-          "predicted_return": 0.10130050290221579,
-          "score": 0.10130050290221579,
-          "signal_date": "2026-10-16",
-          "ticker": "MU"
+          "predicted_return": 0.13087979670294414,
+          "score": 0.13087979670294414,
+          "signal_date": "2026-10-23",
+          "ticker": "CEG"
         },
         {
-          "predicted_return": 0.09159475375125073,
-          "score": 0.09159475375125073,
-          "signal_date": "2026-10-16",
-          "ticker": "GLW"
+          "predicted_return": 0.1142111804272481,
+          "score": 0.1142111804272481,
+          "signal_date": "2026-10-23",
+          "ticker": "NRG"
         },
         {
-          "predicted_return": 0.08190167059826411,
-          "score": 0.08190167059826411,
-          "signal_date": "2026-10-16",
-          "ticker": "STX"
+          "predicted_return": 0.06600789205044816,
+          "score": 0.06600789205044816,
+          "signal_date": "2026-10-23",
+          "ticker": "VST"
         },
         {
-          "predicted_return": 0.06418912567513288,
-          "score": 0.06418912567513288,
-          "signal_date": "2026-10-16",
-          "ticker": "AMAT"
+          "predicted_return": 0.06416922893409521,
+          "score": 0.06416922893409521,
+          "signal_date": "2026-10-23",
+          "ticker": "AXON"
         },
         {
-          "predicted_return": 0.06129776089952991,
-          "score": 0.06129776089952991,
-          "signal_date": "2026-10-16",
-          "ticker": "APA"
+          "predicted_return": 0.06287555708256491,
+          "score": 0.06287555708256491,
+          "signal_date": "2026-10-23",
+          "ticker": "QCOM"
         },
         {
-          "predicted_return": 0.05970103551750604,
-          "score": 0.05970103551750604,
-          "signal_date": "2026-10-16",
-          "ticker": "AMD"
+          "predicted_return": 0.051441847148354446,
+          "score": 0.051441847148354446,
+          "signal_date": "2026-10-23",
+          "ticker": "LUV"
         },
         {
-          "predicted_return": 0.056380397518503905,
-          "score": 0.056380397518503905,
-          "signal_date": "2026-10-16",
-          "ticker": "DELL"
+          "predicted_return": 0.04215892996173831,
+          "score": 0.04215892996173831,
+          "signal_date": "2026-10-23",
+          "ticker": "GDDY"
         },
         {
-          "predicted_return": 0.044005450606398204,
-          "score": 0.044005450606398204,
-          "signal_date": "2026-10-16",
-          "ticker": "HPE"
+          "predicted_return": 0.034729142778503315,
+          "score": 0.034729142778503315,
+          "signal_date": "2026-10-23",
+          "ticker": "HPQ"
         },
         {
-          "predicted_return": 0.04314844879575959,
-          "score": 0.04314844879575959,
-          "signal_date": "2026-10-16",
-          "ticker": "LRCX"
+          "predicted_return": 0.033777286388633754,
+          "score": 0.033777286388633754,
+          "signal_date": "2026-10-23",
+          "ticker": "APH"
         },
         {
-          "predicted_return": 0.04282118940453592,
-          "score": 0.04282118940453592,
-          "signal_date": "2026-10-16",
-          "ticker": "SLB"
+          "predicted_return": 0.03292202704077657,
+          "score": 0.03292202704077657,
+          "signal_date": "2026-10-23",
+          "ticker": "TER"
         }
       ],
       "trades": [
@@ -3045,6 +4215,196 @@
           "signal_date": "2026-10-09",
           "ticker": "APTV",
           "week": "2026-10-10/2026-10-16"
+        },
+        {
+          "buy_commission": 8.933082570374701,
+          "buy_price": 914.0067627868652,
+          "close": 877.5499877929688,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -3.940671061358325,
+          "last_session": "2026-10-23",
+          "net_pnl": -378.1057354934692,
+          "net_return_pct": -4.228417284965714,
+          "open": 913.5499877929688,
+          "predicted_return": 0.10130050290221579,
+          "quantity": 9.773541,
+          "score": 0.10130050290221579,
+          "sell_commission": 8.57248239985146,
+          "sell_price": 877.1112127990723,
+          "signal_date": "2026-10-16",
+          "ticker": "MU",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.933083281486,
+          "buy_price": 136.56825,
+          "close": 123.69000244140625,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -9.384613596039381,
+          "last_session": "2026-10-23",
+          "net_pnl": -863.4457912740809,
+          "net_return_pct": -9.656052461234033,
+          "open": 136.5,
+          "predicted_return": 0.09159475375125073,
+          "quantity": 65.411128,
+          "score": 0.09159475375125073,
+          "sell_commission": 8.08665723072413,
+          "sell_price": 123.62815744018556,
+          "signal_date": "2026-10-16",
+          "ticker": "GLW",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.933082819255,
+          "buy_price": 665.3325,
+          "close": 630.489990234375,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -5.1894751527255645,
+          "last_session": "2026-10-23",
+          "net_pnl": -489.43950360373674,
+          "net_return_pct": -5.473480577128065,
+          "open": 665.0,
+          "predicted_return": 0.08190167059826411,
+          "quantity": 13.426494,
+          "score": 0.08190167059826411,
+          "sell_commission": 8.461037435906425,
+          "sell_price": 630.1747452392578,
+          "signal_date": "2026-10-16",
+          "ticker": "STX",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.933083000590647,
+          "buy_price": 425.81280610656734,
+          "close": 377.239990234375,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -11.36278552058535,
+          "last_session": "2026-10-23",
+          "net_pnl": -1039.8043454929402,
+          "net_return_pct": -11.62829876140572,
+          "open": 425.6000061035156,
+          "predicted_return": 0.06418912567513288,
+          "quantity": 20.978897,
+          "score": 0.06418912567513288,
+          "sell_commission": 7.910121859958256,
+          "sell_price": 377.05137023925784,
+          "signal_date": "2026-10-16",
+          "ticker": "AMAT",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.933083342774399,
+          "buy_price": 48.62823199999154,
+          "close": 51.900001525878906,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 6.781491719976329,
+          "last_session": "2026-10-23",
+          "net_pnl": 577.7997657549386,
+          "net_return_pct": 6.461627201526321,
+          "open": 48.603930034974056,
+          "predicted_return": 0.06129776089952991,
+          "quantity": 183.701586,
+          "score": 0.06129776089952991,
+          "sell_commission": 9.52934553740952,
+          "sell_price": 51.874051525115966,
+          "signal_date": "2026-10-16",
+          "ticker": "APA",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.933082921332868,
+          "buy_price": 552.0559193115234,
+          "close": 516.7899780273438,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -6.341304398805181,
+          "last_session": "2026-10-23",
+          "net_pnl": -592.1277374013225,
+          "net_return_pct": -6.6218595126604,
+          "open": 551.780029296875,
+          "predicted_return": 0.05970103551750604,
+          "quantity": 16.181482,
+          "score": 0.05970103551750604,
+          "sell_commission": 8.358246513366245,
+          "sell_price": 516.5315830383302,
+          "signal_date": "2026-10-16",
+          "ticker": "AMD",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.93308312590402,
+          "buy_price": 470.08408737831064,
+          "close": 456.44000244140625,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -2.8539287535778612,
+          "last_session": "2026-10-23",
+          "net_pnl": -281.22017892948134,
+          "net_return_pct": -3.1449303194675093,
+          "open": 469.8491627969122,
+          "predicted_return": 0.056380397518503905,
+          "quantity": 19.00316,
+          "score": 0.056380397518503905,
+          "sell_commission": 8.669465495596038,
+          "sell_price": 456.2117824401856,
+          "signal_date": "2026-10-16",
+          "ticker": "DELL",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.933083298416717,
+          "buy_price": 56.95846530532837,
+          "close": 56.689998626708984,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -0.42157329559152634,
+          "last_session": "2026-10-23",
+          "net_pnl": -64.37008809952931,
+          "net_return_pct": -0.7198609950117674,
+          "open": 56.93000030517578,
+          "predicted_return": 0.044005450606398204,
+          "quantity": 156.835042,
+          "score": 0.044005450606398204,
+          "sell_commission": 8.886532826442046,
+          "sell_price": 56.66165362739563,
+          "signal_date": "2026-10-16",
+          "ticker": "HPE",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.933083115234062,
+          "buy_price": 275.29758366394043,
+          "close": 230.10000610351562,
+          "first_session": "2026-10-19",
+          "gross_return_pct": -16.375925628321497,
+          "last_session": "2026-10-23",
+          "net_pnl": -1486.7373468057976,
+          "net_return_pct": -16.626421981658346,
+          "open": 275.1600036621094,
+          "predicted_return": 0.04314844879575959,
+          "quantity": 32.448825,
+          "score": 0.04314844879575959,
+          "sell_commission": 7.462741593136635,
+          "sell_price": 229.98495610046388,
+          "signal_date": "2026-10-16",
+          "ticker": "LRCX",
+          "week": "2026-10-17/2026-10-23"
+        },
+        {
+          "buy_commission": 8.93308332126404,
+          "buy_price": 49.04451045799255,
+          "close": 53.060001373291016,
+          "first_session": "2026-10-19",
+          "gross_return_pct": 8.24153585842633,
+          "last_session": "2026-10-23",
+          "net_pnl": 707.9660654024392,
+          "net_return_pct": 7.9172977701025715,
+          "open": 49.02000045776367,
+          "predicted_return": 0.04282118940453592,
+          "quantity": 182.142369,
+          "score": 0.04282118940453592,
+          "sell_commission": 9.659642112099842,
+          "sell_price": 53.033471372604374,
+          "signal_date": "2026-10-16",
+          "ticker": "SLB",
+          "week": "2026-10-17/2026-10-23"
         }
       ],
       "unfilled": []
