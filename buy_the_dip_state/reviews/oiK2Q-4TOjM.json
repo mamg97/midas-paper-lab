@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-25T18:11:04.064168+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/63617627",
+    "published_date": "2021-01-07",
+    "youtube_video_id": "oiK2Q-4TOjM",
+    "match_score": 0.903245,
+    "audio_bytes_processed_transiently": 19164936
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2395.6114375,
+      "word_count": 6564,
+      "segment_count": 382,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "oiK2Q-4TOjM",
+    "youtube_url": "https://www.youtube.com/watch?v=oiK2Q-4TOjM",
+    "title": "BUY THE DIP PODCAST EPISODIO 31: NUESTRA CARTERA PARA 2021",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/63617627",
+    "published_date": "2021-01-07",
+    "source": "official_podcast_mirror",
+    "match_score": 0.903245
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza la rentabilidad de la cartera de inversión, destacando su rendimiento del 17,7% frente a un estándar del 14%, aunque no se cumplieron los catalizadores esperados como la cuarta enmienda del PSPA y la adquisición de GameWorks. Se mencionan decisiones de entrada y salida, como la adquisición de una mina en México y la venta de activos como Euronion Participation Corp. La cartera está compuesta por 15 posiciones, con Adriati en el 22,3% y Fanny en el 20%, mientras que otras empresas como Nexian, Horizon y Global Atomic tienen un peso significativo. Se aborda la volatilidad de las posiciones, la expectativa de un aumento del precio del petróleo por encima de 60 dólares debido a la recuperación de la demanda post-pandemia, y la posibilidad de que la situación política afecte la demanda de petróleo. También se menciona la adquisición de una empresa de drones marinos por Huntington Ingalls y la valoración de Lycopodium Minerals con expectativa de re-rating. Se discuten decisiones de ajuste de posiciones, la gestión de riesgos, y la expectativa de que el PSPA se realice este mes, lo que podría impactar las decisiones de inversión.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [],
+      "cycle_macro": [],
+      "entry": [],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [],
+      "risk": [],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "low"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El podcast discute la rentabilidad de la cartera de inversión, destacando que alcanzó un 17,7% en comparación con el standard ampur del 14%, aunque no se cumplieron los catalizadores esperados como la cuarta enmienda del PSPA y la adquisición de GameWorks.",
+          "timestamp": "00:01:01",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La cartera está compuesta por 15 posiciones, con Adriati en el 22,3% y Fanny en el 20%, mientras que otras empresas como Nexian, Horizon y Global Atomic tienen un peso significativo, aunque con posiciones menores.",
+          "timestamp": "00:03:51",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se menciona la venta de Ipco, una decisión tomada por el analista debido a la caída injustificada de la empresa, lo que refleja una estrategia de ajuste de posiciones en la cartera.",
+          "timestamp": "00:04:54",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista reconoce la volatilidad alta en las posiciones, sugiriendo que se deben aceptar y gestionar con paciencia, incluso si no se logran resultados inmediatos, como en el caso de Adriatic, que ha tenido fluctuaciones significativas.",
+          "timestamp": "00:10:54",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast analiza la rentabilidad de la cartera de inversión, destacando la distribución de posiciones y la toma de decisiones de entrada y salida. Se mencionan los catalizadores esperados, la volatilidad de las posiciones y la estrategia de ajuste de cartera, reflejando una gestión de riesgo y oportunidades en el mercado de inversiones."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la adquisición de una mina en México llamada El Cubo por 15 millones con términos de pago y royalty inicial.",
+          "timestamp": "00:14:00",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se indica que Lycopodium Minerals cotiza en bolsa con un valor de 200 millones y se espera un re-rating importante tras la producción de la mina en Burkina Faso.",
+          "timestamp": "00:12:11",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona la expectativa de un aumento del precio del petróleo (Brent) por encima de 60 dólares debido a la recuperación de la demanda post-pandemia y la liberalización de viajes.",
+          "timestamp": "00:17:02",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se señala la posibilidad de que la situación política y los confinamientos afecten la demanda de petróleo, especialmente en Europa y América del Norte.",
+          "timestamp": "00:17:39",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se menciona la venta de activos como Euronion Participation Corp y ICO, con un enfoque en la generación de liquidez y la reducción de riesgos en la cartera.",
+          "timestamp": "00:15:37",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis aborda la adquisición de una mina en México, la expectativa de un re-rating en Lycopodium Minerals, la proyección del precio del petróleo, los riesgos macroeconómicos, y la decisión de vender activos para generar liquidez. Se enfatiza en la estrategia de inversión basada en la producción de minas, el análisis de riesgos y la gestión de carteras."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de inversión discute la posibilidad de adquisiciones en sectores de defensa y banca, destacando la compra de HeroJet Rocking the Line Holdings por Lockheed Martin a 56 dólares por acción, una empresa especializada en el segmento espacial, y menciona la adquisición de una compañía de drones marinos por Huntington Ingalls.",
+          "timestamp": "00:28:12",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista menciona la subida del 70% en Energy Fuels en un mes, destacando una performance anormal y sugiere que el precio del uranio no ha subido, lo que podría indicar una especulación no basada en fundamentos.",
+          "timestamp": "00:27:12",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista explica que la falta de publicación de la hoja de ruta de Munchin y su posible viaje a Irán, Israel, podría afectar la firma del PSPA, lo que genera incertidumbre sobre la fecha de ejecución de un trato de última hora.",
+          "timestamp": "00:22:30",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la posibilidad de ampliar posiciones en empresas como Adriatic, Genworth, Sberbank y Bank of America, basándose en la confianza en las empresas de la cartera de baile y en la expectativa de un aumento en el valor de las acciones.",
+          "timestamp": "00:26:20",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El analista menciona la reducción de las restricciones de recompra de acciones por parte de los bancos en 2021, destacando el caso de UBS Bancorp y la posibilidad de que otros bancos como Bancorp América y Sberbank también realicen recompras, lo que podría impulsar el sector bancario.",
+          "timestamp": "00:31:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la adquisición de una empresa de drones marinos por Huntington Ingalls, una empresa especializada en drones autónomos, lo que podría ser un indicador de crecimiento en el sector de defensa y tecnologías emergentes.",
+          "timestamp": "00:32:03",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de inversión discute la posibilidad de adquisiciones en sectores de defensa y banca, destacando la compra de HeroJet Rocking the Line Holdings por Lockheed Martin a 56 dólares por acción, una empresa especializada en el segmento espacial, y menciona la adquisición de una compañía de drones marinos por Huntington Ingalls. También se analiza la subida anormal de Energy Fuels, la incertidumbre sobre la firma del PSPA debido a la ausencia de publicación de la hoja de ruta de Munchin, y la posibilidad de ampliar posiciones en empresas como Adriatic, Genworth, Sberbank y Bank of America. Además, se menciona la reducción de las restricciones de recompra de acciones por parte de los bancos en 2021, lo que podría impulsar el sector bancario."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la expansión de la banca de inversión y la necesidad de ajustarse en la banca tradicional, destacando el rol del Banco de América.",
+          "timestamp": "00:33:23",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se discute la valoración de Gingworth Financial, donde se menciona que el precio actual es 2,8 dólares, pero se espera que valga entre 4 y 6 dólares.",
+          "timestamp": "00:34:33",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se menciona la posibilidad de ajustar posiciones en acciones como Sunstorm, que actualmente tiene una participación del 1,5% en la cartera.",
+          "timestamp": "00:35:50",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se aborda el riesgo asociado a la adquisición de Gingworth Financial, donde se menciona la venta masiva y la expectativa de que la adquisición se complete con un aumento del 30%.",
+          "timestamp": "00:35:10",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se menciona la correlación entre el peso del CEO y el precio de la acción, como en el caso de Sberbank, donde se espera una revalorización proporcional.",
+          "timestamp": "00:37:01",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se refiere a la expansión de la banca de inversión y la necesidad de ajustarse en la banca tradicional, en un contexto macroeconómico.",
+          "timestamp": "00:33:23",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se menciona la ampliación de posiciones en acciones como Sunstorm y la valoración de la cartera en relación con el peso del CEO y el precio de la acción.",
+          "timestamp": "00:35:44",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se menciona la posibilidad de errores en la valoración de acciones, como en el caso de Sberbank, donde se espera una caída en el mercado.",
+          "timestamp": "00:37:20",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "other",
+          "paraphrase": "Se menciona la posibilidad de ajustes en la cartera y la expectativa de que el PSPA se realice este mes, lo que podría impactar las decisiones de inversión.",
+          "timestamp": "00:38:19",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento aborda la estrategia de inversión en banca de inversión y adquisiciones, discutiendo la valoración de acciones como Gingworth Financial y Sunstorm, la gestión de riesgos, y la posibilidad de ajustes en la cartera. Se mencionan decisiones de entrada y salida, análisis técnicos, y expectativas sobre eventos macroeconómicos como el PSPA."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
