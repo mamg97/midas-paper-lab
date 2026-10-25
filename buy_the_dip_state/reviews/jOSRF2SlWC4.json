@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-25T08:27:22.680106+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/60676544",
+    "published_date": "2020-11-19",
+    "youtube_video_id": "jOSRF2SlWC4",
+    "match_score": 0.922029,
+    "audio_bytes_processed_transiently": 26596041
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 3324.499625,
+      "word_count": 8511,
+      "segment_count": 1601,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "jOSRF2SlWC4",
+    "youtube_url": "https://www.youtube.com/watch?v=jOSRF2SlWC4",
+    "title": "BUY THE DIP PODCAST: EPISODIO 26 NUESTRA CARTERA DE NOVIEMBRE 2020",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/60676544",
+    "published_date": "2020-11-19",
+    "source": "official_podcast_mirror",
+    "match_score": 0.922029
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza la cartera de noviembre de 2020, destacando inversiones en empresas como Adriatic Metal y Twin Hill Central, con un enfoque en el análisis de valor, riesgo y oportunidades de entrada. Se mencionan posiciones en bancos georgianos y petroleros, con expectativas de recuperación del petróleo en 2021. También se abordan temas de política internacional, como la posible venta de F-35 a los Emiratos Árabes Unidos, y riesgos asociados a decisiones políticas. La cartera se ajusta en función de incertidumbres legales, políticas y narrativas de mercado, reflejando una estrategia de inversión basada en análisis técnico y macroeconómico.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Adriatic Metal tiene una valoración alrededor de 3-4 dólares con análisis gratuito disponible, y ha recibido financiación de 5,2 millones de dólares.",
+        "El depósito de oro está a 20% por debajo de su nivel máximo, sugiriendo un momento favorable para vender, aunque el oro sigue siendo un tema bull."
+      ],
+      "cycle_macro": [
+        "El oro está en una tendencia bull, pero factores como vacunas y relajación en la pandemia pueden afectar su valoración.",
+        "Se anticipa una posible recuperación del petróleo en 2021, aunque persisten riesgos como la pandemia y la geopolítica."
+      ],
+      "entry": [
+        "La empresa Adriatic adquirió un proyecto de minas antiguas en Bosnia con alto potencial de producción y NPV significativo.",
+        "Se considera comprar posiciones en bancos georgianos como Verban y TBC Bank debido a su buen desempeño financiero."
+      ],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [
+        "La acción del depósito de oro está a 20% por debajo de su nivel máximo, sugiriendo un momento favorable para vender."
+      ],
+      "risk": [
+        "El riesgo político y legal en la recapitalización de Fanny y Freddy Mac es significativo, con posibilidades de retrasos en decisiones judiciales.",
+        "Riesgos geopolíticos en Georgia y posibles caídas abruptas en bancos georgianos por factores económicos o políticos."
+      ],
+      "technical": [
+        "Se observa una recuperación en precios del petróleo, con el West Texas Oil subiendo de 28 a 40 dólares, mejorando la rentabilidad de IPCO."
+      ],
+      "management": [],
+      "mistakes": [
+        "El usuario menciona que no tiene sentido ser muy bullish con el oro, pero el análisis sugiere que los resultados de exploración son positivos y podrían aumentar el valor del depósito."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa Adriatic tiene un activo valioso en Bosnia con un valor presente neto (NPV) de más de un billón de dólares, lo que sugiere una alta rentabilidad potencial.",
+          "timestamp": "00:07:15",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa adquirió un proyecto de minas antiguas en Bosnia con un alto potencial de producción y un NPV significativo, lo que justifica su inversión.",
+          "timestamp": "00:07:35",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El análisis de riesgo indica que el proyecto de Adriatic tiene una geología sencilla y una alta concentración de metales, lo que reduce el riesgo de producción.",
+          "timestamp": "00:07:55",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la empresa Adriatic enfatiza el valor de su activo en Bosnia con un alto NPV y una alta rentabilidad potencial, lo que justifica su inversión y sugiere una estrategia de entrada basada en la exploración de minas antiguas con geología favorable."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El análisis de inversión muestra que Adriatic Metal tiene un potencial significativo con costes y tasas bajas en jurisdicciones específicas, y su valoración actual se sitúa alrededor de 3-4 dólares, con un análisis gratuito disponible para inversores.",
+          "timestamp": "00:10:09",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Adriatic Metal ha recibido buenas noticias, incluyendo un acuerdo con Sanford Resources que le otorga 8,5 millones de dólares australianos por 4,8 millones de acciones, y un préstamo de 5,2 millones de dólares del Banco Europeo de Reconstrucción, lo que refuerza su posición financiera.",
+          "timestamp": "00:12:23",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La desgracia de David Brickman, CEO de Freddie Mac, y su dimisión reflejan inestabilidad en la empresa, lo que podría afectar negativamente a las acciones preferentes de Freddie Mac y generar incertidumbre en el mercado.",
+          "timestamp": "00:16:10",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de inversión en Adriatic Metal destaca su potencial con costes bajos y una valoración favorable, mientras que las noticias recientes sobre Freddie Mac sugieren inestabilidad y riesgos significativos para su posición financiera."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis indica que la posición en Fanny y Freddy Mac podría reducirse significativamente debido a la incertidumbre legal y política, con un plazo de tiempo limitado para tomar decisiones.",
+          "timestamp": "00:19:26",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El riesgo político y legal asociado a la recapitalización de Fanny y Freddy Mac es significativo, con posibilidades de que los jueces se retrasen en su decisión, lo que podría afectar negativamente la posición de inversión.",
+          "timestamp": "00:20:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La valoración de Fanny y Freddy Mac está en constante evolución, con posibilidades de que su porcentaje en la cartera cambie significativamente dependiendo de los movimientos en el Tribunal Supremo y en el Senado, lo que refleja una asimetría de riesgo y retorno.",
+          "timestamp": "00:23:00",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de inversión enfatiza la necesidad de una rápida decisión sobre la posición en Fanny y Freddy Mac debido a la incertidumbre legal y política, con un plazo limitado y un riesgo significativo asociado a la recapitalización. La valoración de estas empresas está en constante cambio, reflejando una asimetría de riesgo y retorno, y se espera una actualización constante sobre su situación."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El usuario compró una posición en un depósito de oro con 2,5 millones de onzas, a 1,48 dólares por onza, y observa que el precio ha caído, aunque los resultados de exploración son positivos.",
+          "timestamp": "00:29:06",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El depósito de Twin Hill Central tiene 2,5 millones de onzas de oro, con concentraciones de 0,76 gramos por tonelada, y ha sido explorado con drills que revelaron mineralización en diferentes zonas.",
+          "timestamp": "00:29:12",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El mercado no valora el depósito debido a las concentraciones bajas, pero los resultados de exploración muestran mineralización en áreas adicionales, lo que podría aumentar el potencial de onzas.",
+          "timestamp": "00:30:00",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El oro está en una tendencia bull, pero el tema de las vacunas y la relajación en la pandemia pueden afectar la narrativa del mercado, lo que podría influir en la valoración del oro.",
+          "timestamp": "00:32:40",
+          "scope": "hosts",
+          "confidence": 0.5
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La acción del depósito está a 20% por debajo de su nivel máximo de agosto, lo que sugiere que podría ser un momento favorable para vender, aunque el oro sigue siendo un tema bull.",
+          "timestamp": "00:32:30",
+          "scope": "hosts",
+          "confidence": 0.4
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "El usuario menciona que no tiene sentido ser muy bullish con el oro, pero el análisis sugiere que los resultados de exploración son positivos y podrían aumentar el valor del depósito.",
+          "timestamp": "00:32:50",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.3
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de un depósito de oro con 2,5 millones de onzas revela resultados positivos de exploración, aunque el precio ha caído. El mercado no valora el depósito debido a concentraciones bajas, pero los resultados de exploración muestran mineralización en áreas adicionales. A pesar de la narrativa bull del oro, el tema de las vacunas y la relajación en la pandemia pueden influir en la valoración. La acción está a 20% por debajo de su nivel máximo, lo que sugiere un momento favorable para vender, aunque el oro sigue siendo un tema bull."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista considera comprar nuevas posiciones en bancos como Verban y TBC Bank debido a su buen desempeño financiero, a pesar de las dificultades geopolíticas y económicas en Georgia.",
+          "timestamp": "00:41:50",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista destaca resultados positivos de TBC Bank y Verban, con ROE del 22%, aumento de activos un 20%, y mejora en la rentabilidad, a pesar de la dependencia del turismo en Georgia y las crisis geopolíticas.",
+          "timestamp": "00:41:40",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista reconoce riesgos asociados a posiciones en bancos georgianos, incluyendo la posibilidad de caídas abruptas por factores geopolíticos o económicos, aunque mantiene posiciones a largo plazo por su valor intrínseco.",
+          "timestamp": "00:43:18",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El analista observa una recuperación en precios del petróleo, con el West Texas Oil subiendo de 28 a 40 dólares, lo que mejora la rentabilidad de IPCO, aunque advierte sobre la persistencia de riesgos como el coronavirus.",
+          "timestamp": "00:45:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El analista anticipa una posible recuperación del petróleo en el segundo semestre de 2021, basada en la reducción de inventarios y la producción, aunque advierte sobre la continuidad de riesgos como la pandemia y la geopolítica.",
+          "timestamp": "00:47:30",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El analista evalúa estrategias de inversión en bancos georgianos y petroleros, destacando resultados positivos de TBC Bank y Verban, aunque reconoce riesgos geopolíticos y económicos. También analiza la recuperación del petróleo, con expectativas de mejora en 2021, aunque con cautela ante la persistencia de amenazas como la pandemia y la geopolítica."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la posibilidad de una venta de F-35 a los Emiratos Árabes Unidos, lo que podría afectar el equilibrio de poder en el Oriente Medio.",
+          "timestamp": "00:49:38",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Huntington sigue recuperándose rápidamente, aunque la posición en la cartera ha sido reducida debido a problemas operativos que afectaron su valor.",
+          "timestamp": "00:48:34",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista expone preocupaciones sobre la posible guerra bajo la administración de Biden, sugiriendo que no todas las decisiones políticas favorecen a las empresas de defensa.",
+          "timestamp": "00:51:16",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona el impacto de la política internacional en la cartera de inversiones, especialmente con la venta de F-35 a los Emiratos Árabes Unidos y su efecto en el Oriente Medio.",
+          "timestamp": "00:49:48",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista comenta sobre los contratos recientes de Lockheed Martin, incluyendo la adquisición de Blackhawks por parte de Lituania, lo que refleja su crecimiento y relevancia en el sector de defensa.",
+          "timestamp": "00:50:24",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la cartera de defensa se centra en la recuperación de Huntington, la posible venta de F-35 a los Emiratos Árabes Unidos, y las implicaciones políticas y militares en el sector de defensa. Se mencionan también las preocupaciones sobre la guerra bajo la administración de Biden y el impacto de la política internacional en las inversiones."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
