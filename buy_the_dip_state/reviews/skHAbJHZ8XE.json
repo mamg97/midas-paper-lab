@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-26T20:47:35.326586+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/65320673",
+    "published_date": "2021-02-11",
+    "youtube_video_id": "skHAbJHZ8XE",
+    "match_score": 0.794545,
+    "audio_bytes_processed_transiently": 19691982
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2461.49225,
+      "word_count": 6724,
+      "segment_count": 1065,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "skHAbJHZ8XE",
+    "youtube_url": "https://www.youtube.com/watch?v=skHAbJHZ8XE",
+    "title": "BUY THE DIP PODCAST EPISODIO 36: NUESTRA CARTERA DE FEBRERO",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/65320673",
+    "published_date": "2021-02-11",
+    "source": "official_podcast_mirror",
+    "match_score": 0.794545
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute una estrategia de inversión basada en el Buy The Dip, enfocada en empresas de minería y sectores volátiles. Se analizan posiciones en empresas como Adriatic Metals, Orá, y Lockheed Martin, con enfoque en Momentum, volatilidad y gestión de riesgo. Se mencionan ajustes en la cartera, una caída del 22% en Orá, y una posible corrección en el mercado. También se discuten riesgos como el retraso en el acuerdo de F-35 y la volatilidad del uranio, con una cartera que tiene 22% en efectivo y posibles movimientos futuros basados en correcciones del mercado. La estrategia se basa en decisiones basadas en volatilidad y incertidumbre, con un enfoque en posiciones moderadas y análisis de proyectos de minería.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "La empresa de minería 'Orá' anuncia financiación para una mina, lo que genera una caída del 22% en su precio desde el anuncio, indicando una sobrevaloración inicial y una posible corrección en el mercado."
+      ],
+      "cycle_macro": [
+        "El bitcoin ha experimentado una subida volátil, alcanzando 10.000 dólares en 2019, con una volatilidad intrínseca que genera fluctuaciones extremas en su precio."
+      ],
+      "entry": [
+        "La empresa Adriatic Metals ha mostrado un buen desempeño, con un precio inicial de 1 dólar australiano que subió a 2,6 dólares, aunque posteriormente se estabilizó en 2,4 dólares, reflejando su volatilidad."
+      ],
+      "sizing": [
+        "La cartera tiene un 22% en efectivo, lo que sugiere una posición sólida y una capacidad para realizar movimientos futuros."
+      ],
+      "add_hold": [
+        "Se menciona la posibilidad de comprar acciones a precios más bajos si el mercado baja, lo que sugiere una estrategia de compra en el futuro."
+      ],
+      "exit": [
+        "La empresa Alliance Data Systems ha tenido un desempeño negativo, con una caída de ventas del 24% y una acción que subió un 4,75%, lo que indica un posible error en la estrategia de corto."
+      ],
+      "risk": [
+        "La cartera tiene posiciones en empresas con incertidumbre, como Lemonade, que pesa un 1%, y se evitan posiciones grandes por falta de Momentum, lo que refleja un enfoque de gestión del riesgo."
+      ],
+      "technical": [
+        "Se observa una tendencia al alza en el precio de Ur Energy, lo que podría indicar una posible corrección o un aumento en la demanda."
+      ],
+      "management": [
+        "Se menciona una caída del 20% en el sector de uranio en los últimos días, lo que sugiere un alto nivel de volatilidad y riesgo."
+      ],
+      "mistakes": [
+        "Se menciona que se ha vendido el 50% de Nexgen con un 253% de rentabilidad, lo que podría indicar una decisión de salida estratégica."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El podcast discute la estrategia de inversión en una cartera con posiciones en empresas como Adriatic Metals, Fanny, Horizon, y otras, con un enfoque en Momentum y en proyectos de minería.",
+          "timestamp": "00:00:27",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa de minería 'Orá' anuncia financiación para una mina, lo que genera una caída del 22% en su precio desde el anuncio, indicando una sobrevaloración inicial y una posible corrección en el mercado.",
+          "timestamp": "00:06:15",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La cartera tiene posiciones en empresas con incertidumbre, como Lemonade, que pesa un 1%, y se evitan posiciones grandes por falta de Momentum, lo que refleja un enfoque de gestión del riesgo.",
+          "timestamp": "00:02:10",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast analiza la estrategia de inversión en una cartera con enfoque en Momentum, posiciones en empresas de minería, y manejo de riesgo. Se mencionan empresas como Adriatic Metals, Fanny, y Orá, con análisis de valoración y correcciones de mercado. La estrategia se basa en la toma de decisiones basada en la volatilidad y la incertidumbre de las empresas, con un enfoque en posiciones moderadas y análisis de proyectos de minería."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona que Lockheed Martin ha experimentado un aumento en sus ventas y beneficios, alcanzando niveles record, con un crecimiento del 9% en ventas y un 9% en beneficio operativo, y un backlog de 147 billones de dólares.",
+          "timestamp": "00:14:45",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista señala que el P.E.R. de Lockheed Martin está a niveles muy bajos, lo que sugiere una buena oportunidad de inversión, con un P.E.R. de 15 veces y un crecimiento asegurado por parte del gobierno.",
+          "timestamp": "00:17:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista menciona que el acuerdo de venta de F-35 fue firmado por la administración Trump, pero fue retrasado por Biden, lo que podría afectar las perspectivas de crecimiento de Lockheed Martin.",
+          "timestamp": "00:12:24",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El analista analiza el desempeño de Lockheed Martin, destacando un aumento en ventas y beneficios, un P.E.R. bajo y un crecimiento asegurado por el gobierno, aunque menciona riesgos como el retraso en el acuerdo de venta de F-35 debido a la administración de Biden."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El bitcoin se comporta como un activo volátil donde la gente retira liquidez durante correcciones, similar al oro y las acciones en crisis.",
+          "timestamp": "00:19:14",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El bitcoin ha experimentado una subida volátil, alcanzando 10.000 dólares en 2019, con una volatilidad intrínseca que genera fluctuaciones extremas en su precio.",
+          "timestamp": "00:20:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa Adriatic Metals ha mostrado un buen desempeño, con un precio inicial de 1 dólar australiano que subió a 2,6 dólares, aunque posteriormente se estabilizó en 2,4 dólares, reflejando su volatilidad.",
+          "timestamp": "00:22:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La empresa Alliance Data Systems ha tenido un desempeño negativo, con una caída de ventas del 24% y una acción que subió un 4,75%, lo que indica un posible error en la estrategia de corto.",
+          "timestamp": "00:24:40",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El sector del uranio ha experimentado una subida significativa, con acciones como Energy Fuels subiendo de 4,8 a 5,5 dólares, lo que sugiere una alta volatilidad y posibles riesgos de inversión.",
+          "timestamp": "00:27:24",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis discute el comportamiento volátil del bitcoin, la volatilidad intrínseca de activos como el uranio, y la evaluación de empresas como Adriatic Metals y Alliance Data Systems, destacando la importancia de la volatilidad en decisiones de inversión y el riesgo asociado a estrategias de corto."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona la venta de acciones de Ur Energy y la liquidación de posiciones en global atomic con un 234% de rentabilidad.",
+          "timestamp": "00:30:00",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se indica que la producción de uranio no ha sido significativamente afectada, aunque cierran dos minas y hay reducciones en algunas operaciones.",
+          "timestamp": "00:28:24",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona una caída del 20% en el sector de uranio en los últimos días, lo que sugiere un alto nivel de volatilidad y riesgo.",
+          "timestamp": "00:30:12",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se observa una tendencia al alza en el precio de Ur Energy, lo que podría indicar una posible corrección o un aumento en la demanda.",
+          "timestamp": "00:30:16",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona que la producción de uranio no ha sido afectada significativamente por la pandemia, lo que sugiere una estabilidad en el ciclo macro.",
+          "timestamp": "00:28:36",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se indica que la cartera tiene un 22% en efectivo, lo que sugiere una posición sólida y una capacidad para realizar movimientos futuros.",
+          "timestamp": "00:31:44",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se menciona que se ha vendido el 50% de Nexgen con un 253% de rentabilidad, lo que podría indicar una decisión de salida estratégica.",
+          "timestamp": "00:30:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "add_hold",
+          "paraphrase": "Se menciona la posibilidad de comprar acciones a precios más bajos si el mercado baja, lo que sugiere una estrategia de compra en el futuro.",
+          "timestamp": "00:31:56",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis menciona la venta de acciones de Ur Energy y la liquidación de posiciones en global atomic con una rentabilidad del 234%, así como la estabilidad en la producción de uranio a pesar de la pandemia. También se señala una caída del 20% en el sector y una posibilidad de movimientos futuros basados en la volatilidad del mercado. La cartera tiene un 22% en efectivo, lo que sugiere una posición sólida y una estrategia de inversión basada en la volatilidad y la corrección del mercado."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El precio de la cotización se detuvo en 0027 y 0029, con una fluctuación en la cartera Bay de Dip.",
+          "timestamp": "00:37:48",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La posición en la cartera personal fue evaluada como minúscula y no se mencionan consecuencias graves.",
+          "timestamp": "00:38:20",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se mencionan ajustes en la cartera, con un 15% destinado a una actividad específica, y se refleja una decisión de no comentar futuras noticias.",
+          "timestamp": "00:38:26",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe una discusión sobre la cotización de una cartera, la toma de decisiones en inversiones, y la planificación futura de actividades de análisis de inversión. Se mencionan puntos de entrada y salida en inversiones, ajustes en la cartera, y una decisión de no comentar futuras noticias."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
