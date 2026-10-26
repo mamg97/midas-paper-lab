@@ -533,6 +533,15 @@
       "methodology_relevance_score": 3.0
     },
     {
+      "video_id": "9E8ZKvK1g4c",
+      "title": "El Precio del PETRÓLEO COLAPSA ¿Qué pasa?",
+      "url": "https://www.youtube.com/watch?v=9E8ZKvK1g4c",
+      "category": "sector_theme",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 3.0
+    },
+    {
       "video_id": "Gznki_QWgBY",
       "title": "💥 INVERTIR en ORO ¿Cuál es la situación del sector?",
       "url": "https://www.youtube.com/watch?v=Gznki_QWgBY",
@@ -608,6 +617,15 @@
       "video_id": "UzxdIAOxKCA",
       "title": "BUY THE DIP PODCAST EPISODIO 60: Jose Ruiz de Alda: Industriales, Energía y MMPP",
       "url": "https://www.youtube.com/watch?v=UzxdIAOxKCA",
+      "category": "sector_theme",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 3.0
+    },
+    {
+      "video_id": "X9s-_5nz4b4",
+      "title": "El ORO vuela a MÁXIMOS 3500$",
+      "url": "https://www.youtube.com/watch?v=X9s-_5nz4b4",
       "category": "sector_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -776,9 +794,9 @@
       "methodology_relevance_score": 3.0
     },
     {
-      "video_id": "xVZl6vVVkdg",
-      "title": "La Minería de URANIO en PELIGRO mientras RUSIA corta el gas a UCRANIA",
-      "url": "https://www.youtube.com/watch?v=xVZl6vVVkdg",
+      "video_id": "xQLuiuDKk-M",
+      "title": "INVERTIR en PLATINO y PALADIO",
+      "url": "https://www.youtube.com/watch?v=xQLuiuDKk-M",
       "category": "sector_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -858,7 +876,7 @@
     },
     {
       "video_id": "2iXVLrxC-5s",
-      "title": "INVESTING in AGRICULTURAL COMPANIES | BUY THE DIP PODCAST",
+      "title": "INVERTIR en EMPRESAS AGRÍCOLAS | BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=2iXVLrxC-5s",
       "category": "company_or_theme",
       "guest_likely": false,
@@ -1010,15 +1028,6 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "9E8ZKvK1g4c",
-      "title": "Oil Prices Collapse What's Going On?",
-      "url": "https://www.youtube.com/watch?v=9E8ZKvK1g4c",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
       "video_id": "9kuCcSnsdaE",
       "title": "INVERTIR en ACCIONES de META ¿Oportunidad de INVERSIÓN?",
       "url": "https://www.youtube.com/watch?v=9kuCcSnsdaE",
@@ -1092,17 +1101,8 @@
     },
     {
       "video_id": "EmjsXY2-kkM",
-      "title": "INVEST in KARELIA TOBACCO",
+      "title": "INVERTIR en KARELIA TOBACCO",
       "url": "https://www.youtube.com/watch?v=EmjsXY2-kkM",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
-      "video_id": "GEkJ5Mvxw9Q",
-      "title": "Are we heading toward the worst recession since 2008? with Diego Puertas | BUY THE DIP PODCAST",
-      "url": "https://www.youtube.com/watch?v=GEkJ5Mvxw9Q",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -1166,6 +1166,15 @@
       "video_id": "Jl_RpgN0U1s",
       "title": "📈 Dónde INVERTIR dúrate una CRISIS ECONÓMICA",
       "url": "https://www.youtube.com/watch?v=Jl_RpgN0U1s",
+      "category": "company_or_theme",
+      "guest_likely": false,
+      "caption_available": false,
+      "methodology_relevance_score": 2.0
+    },
+    {
+      "video_id": "K5_OMyB0PsA",
+      "title": "GERUNDA GLOBAL - The INVESTMENT FUND Portfolio",
+      "url": "https://www.youtube.com/watch?v=K5_OMyB0PsA",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -1478,15 +1487,6 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "X9s-_5nz4b4",
-      "title": "GOLD flies to HIGHS of $3,500",
-      "url": "https://www.youtube.com/watch?v=X9s-_5nz4b4",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
       "video_id": "XVds3X6S1dU",
       "title": "IDEAS de INVERSIÓN en SECTORES ODIADOS | BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=XVds3X6S1dU",
@@ -1614,7 +1614,7 @@
     },
     {
       "video_id": "byD_JpYJpNE",
-      "title": "Investing in Kazakhstan? A banking business",
+      "title": "¿INVERTIR en KAZAJISTÁN? Un NEGOCIO BANCARIO",
       "url": "https://www.youtube.com/watch?v=byD_JpYJpNE",
       "category": "company_or_theme",
       "guest_likely": false,
@@ -1739,15 +1739,6 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "ggoFBdqIJ4s",
-      "title": "The Oil Market Explained by an Expert | BUY THE DIP PODCAST",
-      "url": "https://www.youtube.com/watch?v=ggoFBdqIJ4s",
-      "category": "company_or_theme",
-      "guest_likely": false,
-      "caption_available": false,
-      "methodology_relevance_score": 2.0
-    },
-    {
       "video_id": "gkJfsg1uBZg",
       "title": "Lluvia de IDEAS de INVERSIÓN | BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=gkJfsg1uBZg",
@@ -1767,7 +1758,7 @@
     },
     {
       "video_id": "i9hrrD0WAcM",
-      "title": "Lemonade ($LMND) Tesis de inversión. ¿Invertir en la mejor aseguradora?",
+      "title": "Lemonade ($LMND) Investment Thesis: Investing in the Best Insurance Company?",
       "url": "https://www.youtube.com/watch?v=i9hrrD0WAcM",
       "category": "company_or_theme",
       "guest_likely": false,
@@ -2063,9 +2054,9 @@
       "methodology_relevance_score": 2.0
     },
     {
-      "video_id": "xQLuiuDKk-M",
-      "title": "INVEST in PLATINUM and PALLADIUM",
-      "url": "https://www.youtube.com/watch?v=xQLuiuDKk-M",
+      "video_id": "xVZl6vVVkdg",
+      "title": "Uranium mining in danger as Russia cuts off gas to Ukraine",
+      "url": "https://www.youtube.com/watch?v=xVZl6vVVkdg",
       "category": "company_or_theme",
       "guest_likely": false,
       "caption_available": false,
@@ -2442,7 +2433,7 @@
     },
     {
       "video_id": "ff2gVw3xR1s",
-      "title": "⚠️ CRASH 2025: Europa colapsa, ORO en MÁXIMOS y la FED atrapada.",
+      "title": "⚠️ CRASH 2025: Europe collapses, GOLD at HIGHS and the FED trapped.",
       "url": "https://www.youtube.com/watch?v=ff2gVw3xR1s",
       "category": "macro_market",
       "guest_likely": false,
@@ -2648,6 +2639,15 @@
       "methodology_relevance_score": -5.0
     },
     {
+      "video_id": "GEkJ5Mvxw9Q",
+      "title": "¿Vamos hacia La PEOR RECESIÓN desde 2008? con Diego Puertas  | BUY THE DIP PODCAST",
+      "url": "https://www.youtube.com/watch?v=GEkJ5Mvxw9Q",
+      "category": "guest_interview",
+      "guest_likely": true,
+      "caption_available": false,
+      "methodology_relevance_score": -5.0
+    },
+    {
       "video_id": "M6OXntqULU0",
       "title": "PETRÓLEO en 2025 por un experto - EMPIEZA LA SUBIDA  |  BUY THE DIP PODCAST",
       "url": "https://www.youtube.com/watch?v=M6OXntqULU0",
@@ -2669,6 +2669,15 @@
       "video_id": "Yy9putAvxl4",
       "title": "Por qué INVERTIR en PETRÓLEO en 2023 por un experto",
       "url": "https://www.youtube.com/watch?v=Yy9putAvxl4",
+      "category": "guest_interview",
+      "guest_likely": true,
+      "caption_available": false,
+      "methodology_relevance_score": -5.0
+    },
+    {
+      "video_id": "ggoFBdqIJ4s",
+      "title": "El mercado del petróleo por un experto  |  BUY THE DIP PODCAST",
+      "url": "https://www.youtube.com/watch?v=ggoFBdqIJ4s",
       "category": "guest_interview",
       "guest_likely": true,
       "caption_available": false,

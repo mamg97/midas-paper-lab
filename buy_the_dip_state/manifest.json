@@ -2,7 +2,7 @@
   "schema_version": 1,
   "channel_url": "https://www.youtube.com/@Buy_The_Dip",
   "channel_id": "UCS5I8A7UAu43QgFxxu8VRbQ",
-  "source_hash": "46386c7d3d973e4484436104720ae184c892ab4344b70d5ab6a82188a2ceae49",
+  "source_hash": "923feea1cb4fb29feb428686dd58da5d0701bb0bd631fbe56129f9ed43a2190a",
   "videos": [
     {
       "video_id": "-EL1QLkTi_A",
@@ -174,7 +174,7 @@
     },
     {
       "video_id": "2iXVLrxC-5s",
-      "title": "INVESTING in AGRICULTURAL COMPANIES | BUY THE DIP PODCAST",
+      "title": "INVERTIR en EMPRESAS AGRÍCOLAS | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 3877,
       "view_count": 1300,
@@ -225,7 +225,7 @@
       "title": "Our Portfolio and Returns for 2025 | Buy the Dip Podcast",
       "published_date": null,
       "duration_seconds": 3526,
-      "view_count": 876,
+      "view_count": 877,
       "surfaces": [
         "long"
       ],
@@ -465,7 +465,7 @@
       "title": "Lockheed Martin. Situación actual y negocio. 1.2.",
       "published_date": null,
       "duration_seconds": 313,
-      "view_count": 598,
+      "view_count": 599,
       "surfaces": [
         "long"
       ],
@@ -582,7 +582,7 @@
     },
     {
       "video_id": "9E8ZKvK1g4c",
-      "title": "Oil Prices Collapse What's Going On?",
+      "title": "El Precio del PETRÓLEO COLAPSA ¿Qué pasa?",
       "published_date": null,
       "duration_seconds": 864,
       "view_count": 890,
@@ -597,7 +597,7 @@
       "title": "Entrevista a Rafael Valera Buy&Hold | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 5330,
-      "view_count": 895,
+      "view_count": 897,
       "surfaces": [
         "live"
       ],
@@ -633,7 +633,7 @@
       "title": "🔥 INVERTIR en SPACE X la empresa de ELON MUSK | 👉 IDEAS de INVERSIÓN",
       "published_date": null,
       "duration_seconds": 467,
-      "view_count": 423,
+      "view_count": 424,
       "surfaces": [
         "long"
       ],
@@ -693,7 +693,7 @@
       "title": "Lockheed Martin. Segmento aeronautics. 1.3",
       "published_date": null,
       "duration_seconds": 3658,
-      "view_count": 583,
+      "view_count": 584,
       "surfaces": [
         "long"
       ],
@@ -777,7 +777,7 @@
       "title": "BUY THE DIP PODCAST EPISODIO 37: ENTREVISTA A CARLOS OTERMIN",
       "published_date": null,
       "duration_seconds": 2908,
-      "view_count": 641,
+      "view_count": 643,
       "surfaces": [
         "long"
       ],
@@ -858,7 +858,7 @@
     },
     {
       "video_id": "EmjsXY2-kkM",
-      "title": "INVEST in KARELIA TOBACCO",
+      "title": "INVERTIR en KARELIA TOBACCO",
       "published_date": null,
       "duration_seconds": 646,
       "view_count": 498,
@@ -894,7 +894,7 @@
     },
     {
       "video_id": "GEkJ5Mvxw9Q",
-      "title": "Are we heading toward the worst recession since 2008? with Diego Puertas | BUY THE DIP PODCAST",
+      "title": "¿Vamos hacia La PEOR RECESIÓN desde 2008? con Diego Puertas  | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 3324,
       "view_count": 872,
@@ -993,7 +993,7 @@
       "title": "¿El MERCADO está PREPARADO? Sube el petróleo y Europa con malas perspectivas",
       "published_date": null,
       "duration_seconds": 1542,
-      "view_count": 625,
+      "view_count": 626,
       "surfaces": [
         "long"
       ],
@@ -1119,6 +1119,18 @@
       ],
       "format": "long",
       "url": "https://www.youtube.com/watch?v=JrV5x_V9n40"
+    },
+    {
+      "video_id": "K5_OMyB0PsA",
+      "title": "GERUNDA GLOBAL - The INVESTMENT FUND Portfolio",
+      "published_date": null,
+      "duration_seconds": 3005,
+      "view_count": 2700,
+      "surfaces": [
+        "long"
+      ],
+      "format": "long",
+      "url": "https://www.youtube.com/watch?v=K5_OMyB0PsA"
     },
     {
       "video_id": "KAPa_BGXkRs",
@@ -1629,7 +1641,7 @@
       "title": "ORO y URANIO: Estos dos metales HAN DESPERTADO",
       "published_date": null,
       "duration_seconds": 489,
-      "view_count": 585,
+      "view_count": 586,
       "surfaces": [
         "long"
       ],
@@ -1713,7 +1725,7 @@
       "title": "🔥 INVERTIR en JADESTONE ENERGY 👉 ¿Oportunidad de INVERSIÓN?",
       "published_date": null,
       "duration_seconds": 699,
-      "view_count": 610,
+      "view_count": 611,
       "surfaces": [
         "long"
       ],
@@ -1833,7 +1845,7 @@
       "title": "BUY THE DIP PODCAST EPISODIO 59: El regreso de BUY THE DIP",
       "published_date": null,
       "duration_seconds": 2996,
-      "view_count": 377,
+      "view_count": 378,
       "surfaces": [
         "long"
       ],
@@ -1950,7 +1962,7 @@
     },
     {
       "video_id": "X9s-_5nz4b4",
-      "title": "GOLD flies to HIGHS of $3,500",
+      "title": "El ORO vuela a MÁXIMOS 3500$",
       "published_date": null,
       "duration_seconds": 721,
       "view_count": 551,
@@ -2025,7 +2037,7 @@
       "title": "🔥 UNIVERSAL MUSIC 👉 Invertir en Propiedad Intelectual",
       "published_date": null,
       "duration_seconds": 1373,
-      "view_count": 401,
+      "view_count": 402,
       "surfaces": [
         "long"
       ],
@@ -2229,7 +2241,7 @@
       "title": "¡Invierte en casas de empeño! Como ganar dinero en una RECESIÓN",
       "published_date": null,
       "duration_seconds": 1495,
-      "view_count": 550,
+      "view_count": 552,
       "surfaces": [
         "long"
       ],
@@ -2274,7 +2286,7 @@
     },
     {
       "video_id": "byD_JpYJpNE",
-      "title": "Investing in Kazakhstan? A banking business",
+      "title": "¿INVERTIR en KAZAJISTÁN? Un NEGOCIO BANCARIO",
       "published_date": null,
       "duration_seconds": 1566,
       "view_count": 438,
@@ -2349,7 +2361,7 @@
       "title": "AZVALOR's Portfolio 👉 Analyzing INVESTMENT FUNDS | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 4526,
-      "view_count": 5300,
+      "view_count": 5400,
       "surfaces": [
         "long"
       ],
@@ -2490,7 +2502,7 @@
     },
     {
       "video_id": "ff2gVw3xR1s",
-      "title": "⚠️ CRASH 2025: Europa colapsa, ORO en MÁXIMOS y la FED atrapada.",
+      "title": "⚠️ CRASH 2025: Europe collapses, GOLD at HIGHS and the FED trapped.",
       "published_date": null,
       "duration_seconds": 1320,
       "view_count": 1300,
@@ -2562,7 +2574,7 @@
     },
     {
       "video_id": "ggoFBdqIJ4s",
-      "title": "The Oil Market Explained by an Expert | BUY THE DIP PODCAST",
+      "title": "El mercado del petróleo por un experto  |  BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 4668,
       "view_count": 4800,
@@ -2646,7 +2658,7 @@
     },
     {
       "video_id": "i9hrrD0WAcM",
-      "title": "Lemonade ($LMND) Tesis de inversión. ¿Invertir en la mejor aseguradora?",
+      "title": "Lemonade ($LMND) Investment Thesis: Investing in the Best Insurance Company?",
       "published_date": null,
       "duration_seconds": 584,
       "view_count": 1400,
@@ -2817,7 +2829,7 @@
       "title": "¿Hay URANIO en ESPAÑA y se PUEDE EXPLOTAR?",
       "published_date": null,
       "duration_seconds": 678,
-      "view_count": 427,
+      "view_count": 429,
       "surfaces": [
         "long"
       ],
@@ -2877,7 +2889,7 @@
       "title": "IDEA de INVERSIÓN en BOLSA para 2023 👉 Montana Aerospace",
       "published_date": null,
       "duration_seconds": 1299,
-      "view_count": 592,
+      "view_count": 594,
       "surfaces": [
         "long"
       ],
@@ -2925,7 +2937,7 @@
       "title": "OIL in 2026 by an expert - CRITICAL SITUATION? | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 4366,
-      "view_count": 2800,
+      "view_count": 2900,
       "surfaces": [
         "long"
       ],
@@ -3057,7 +3069,7 @@
       "title": "Our INVESTMENT PORTFOLIO for October | BUY THE DIP PODCAST",
       "published_date": null,
       "duration_seconds": 2738,
-      "view_count": 1600,
+      "view_count": 1700,
       "surfaces": [
         "long"
       ],
@@ -3129,7 +3141,7 @@
       "title": "🔥 INVERTIR en FERTILIZANTES  👉🏻 MOSAIC Co",
       "published_date": null,
       "duration_seconds": 1338,
-      "view_count": 685,
+      "view_count": 688,
       "surfaces": [
         "long"
       ],
@@ -3453,7 +3465,7 @@
       "title": "🔥 INVERTIR en KOREA TOBACCO",
       "published_date": null,
       "duration_seconds": 763,
-      "view_count": 305,
+      "view_count": 307,
       "surfaces": [
         "long"
       ],
@@ -3522,7 +3534,7 @@
     },
     {
       "video_id": "xQLuiuDKk-M",
-      "title": "INVEST in PLATINUM and PALLADIUM",
+      "title": "INVERTIR en PLATINO y PALADIO",
       "published_date": null,
       "duration_seconds": 2005,
       "view_count": 2300,
@@ -3534,7 +3546,7 @@
     },
     {
       "video_id": "xVZl6vVVkdg",
-      "title": "La Minería de URANIO en PELIGRO mientras RUSIA corta el gas a UCRANIA",
+      "title": "Uranium mining in danger as Russia cuts off gas to Ukraine",
       "published_date": null,
       "duration_seconds": 1313,
       "view_count": 1700,
@@ -3621,7 +3633,7 @@
       "title": "Are these the BEST current INVESTMENT OPPORTUNITIES?",
       "published_date": null,
       "duration_seconds": 1239,
-      "view_count": 946,
+      "view_count": 947,
       "surfaces": [
         "long"
       ],

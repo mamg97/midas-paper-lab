@@ -2,11 +2,11 @@
 
 Fuente canónica: https://www.youtube.com/@Buy_The_Dip
 
-- Vídeos inventariados: **303**
+- Vídeos inventariados: **304**
 - Captions utilizables: **0** (0.00 %)
 - Transporte captions: **blocked_or_unavailable** · canary=False
-- Formatos: **{'long': 274, 'live': 27, 'short': 2}**
-- Categorías derivadas: **{'portfolio_update': 48, 'company_or_theme': 155, 'macro_market': 44, 'sector_theme': 34, 'methodology': 6, 'guest_interview': 14, 'short': 2}**
+- Formatos: **{'long': 275, 'live': 27, 'short': 2}**
+- Categorías derivadas: **{'portfolio_update': 48, 'company_or_theme': 152, 'macro_market': 44, 'sector_theme': 36, 'methodology': 6, 'guest_interview': 16, 'short': 2}**
 
 ## Señales recurrentes
 

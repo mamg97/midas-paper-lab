@@ -3,17 +3,17 @@
   "source_name": "Buy The Dip",
   "channel_url": "https://www.youtube.com/@Buy_The_Dip",
   "channel_id": "UCS5I8A7UAu43QgFxxu8VRbQ",
-  "generated_at_utc": "2026-10-19T10:58:34.182630+00:00",
+  "generated_at_utc": "2026-10-26T11:19:31.295005+00:00",
   "config_version": "2026-10-01-buy-the-dip-corpus-v1",
-  "manifest_count": 303,
+  "manifest_count": 304,
   "by_format": {
-    "long": 274,
+    "long": 275,
     "live": 27,
     "short": 2
   },
   "caption_coverage": {
     "available": 0,
-    "missing": 303,
+    "missing": 304,
     "pct": 0.0
   },
   "caption_transport": {
@@ -27,17 +27,17 @@
       "messages": [
         "WARNING: [youtube] No supported JavaScript runtime could be found. Only deno is enabled by default; to use another runtime add  --js-runtimes RUNTIME[:PATH]  to your command/config. YouTube extraction without a JS runtime has been deprecated, and some formats may be missing. See  <url>  for details on installing one",
         "WARNING: [youtube] No title found in player responses; falling back to title from initial data. Other metadata may also be missing",
-        "ERROR: [youtube] NjMXlb6pPDc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  <url>  for how to manually pass cookies. Also see  <url>  for tips on effectively exporting YouTube cookies"
+        "ERROR: [youtube] NjMXlb6pPDc: Sign in to confirm you’re not a bot. This helps protect our community. Use --cookies-from-browser or --cookies for the authentication. See  <url>  for how to manually pass cookies. Also see  <url>  for tips on effectively exporting YouTube cookies"
       ]
     }
   },
   "by_category": {
     "portfolio_update": 48,
-    "company_or_theme": 155,
+    "company_or_theme": 152,
     "macro_market": 44,
-    "sector_theme": 34,
+    "sector_theme": 36,
     "methodology": 6,
-    "guest_interview": 14,
+    "guest_interview": 16,
     "short": 2
   },
   "lexicon_aggregate": {
