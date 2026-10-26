@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-26T08:30:56.130433+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/156870969",
+    "published_date": "2025-09-03",
+    "youtube_video_id": "sc944xFNM00",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 21382373
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2672.69225,
+      "word_count": 7216,
+      "segment_count": 574,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "sc944xFNM00",
+    "youtube_url": "https://www.youtube.com/watch?v=sc944xFNM00",
+    "title": "Nuestra CARTERA de INVERSIÓN en SEPTIEMBRE | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/156870969",
+    "published_date": "2025-09-03",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute la estrategia de inversión 'Buy the Dip', enfatizando la importancia de la cautela y la vigilancia en un mercado cíclico. Se analizan sectores como el oro y los bancos, alertando sobre su sobrevaloración y posibles caídas. Se menciona la valoración de Fanny y Freddy, con un múltiplo de 5,5 veces SV Biddle que parece atractivo, pero con incertidumbre sobre proyecciones futuras. Se analiza la entrada en Francon Nevada tras la caída del activo Cobre Panamá, aprovechando un precio más bajo, aunque con riesgos asociados. Se destacan los riesgos cíclicos y la necesidad de ajustes en estrategias de inversión. Al final, los participantes cierran el programa, reconociendo errores y objetivos no alcanzados.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Se menciona que el precio actual de Francon Nevada es superior al que deberían pagar, considerando un margen de seguridad aceptable."
+      ],
+      "cycle_macro": [
+        "Se señala que la industria de las inversiones es cíclica, con ciclos de prosperidad y declive, lo que implica que ciertos sectores o empresas pueden experimentar un auge y un declive en el futuro, requiriendo una vigilancia constante.",
+        "Se menciona la recuperación del activo Cobre Panamá tras litigios con el gobierno panameño, lo que permitió avances en la producción y el activo sigue siendo propiedad de la empresa."
+      ],
+      "entry": [
+        "El analista sugiere que la empresa podría aumentar su valoración si se logran ventas adicionales y se realicen ventas de activos, lo que podría generar un impacto positivo en el mercado.",
+        "El análisis de entrada en Francon Nevada se basa en la caída del activo Cobre Panamá, aprovechando un precio más bajo."
+      ],
+      "sizing": [
+        "Se indica que el activo Cobre Panamá contribuye con 10.000 onzas de oro anuales, y que el activo sigue siendo operativo con producción de cobre y oro."
+      ],
+      "add_hold": [],
+      "exit": [
+        "Los participantes deciden finalizar el programa de transmisión y agradecen al público.",
+        "Los participantes expresan que han cometido errores durante la transmisión y solicitan feedback."
+      ],
+      "risk": [
+        "El analista advierte sobre la necesidad de mantener la calma y la cautela en la inversión, reconociendo que aunque el rendimiento actual es positivo, el mercado puede volverse caótico debido a factores cíclicos y errores previos.",
+        "Se destaca el riesgo asociado al activo Cobre Panamá, que afectaba al 25-28% de los ingresos de Francon Nevada y causó una caída del 33-34% en la acción."
+      ],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [
+      "El activo Cobre Panamá contribuye con 10.000 onzas de oro anuales, y el activo sigue siendo operativo con producción de cobre y oro."
+    ],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "risk",
+          "paraphrase": "El analista advierte sobre la necesidad de mantener la calma y la cautela en la inversión, reconociendo que aunque el rendimiento actual es positivo, el mercado puede volverse caótico debido a factores cíclicos y errores previos.",
+          "timestamp": "00:03:15",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona que ciertos sectores, como el oro y los bancos, han tenido años muy buenos, lo que sugiere que las empresas en estos sectores están sobrevaloradas y podrían enfrentar un descenso en el futuro.",
+          "timestamp": "00:04:49",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se señala que la industria de las inversiones es cíclica, con ciclos de prosperidad y declive, lo que implica que ciertos sectores o empresas pueden experimentar un auge y un declive en el futuro, requiriendo una vigilancia constante.",
+          "timestamp": "00:05:12",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast discute la importancia de la cautela en la inversión, menciona la sobrevaloración de ciertos sectores y alerta sobre la volatilidad cíclica en la industria de las inversiones, destacando la necesidad de un enfoque prudente y vigilante."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El análisis de la valoración de Fanny y Freddy se basa en la estimación de su valor en el mercado, que se sitúa entre un y dos trillones de dólares, según las declaraciones del director Bill Pult.",
+          "timestamp": "00:17:05",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El fragmento menciona que la IA puede no ser un reemplazo total, pero es una herramienta útil para mejorar la productividad, similar a las calculadoras o las máquinas, que no reemplazaron a los humanos en todas las tareas.",
+          "timestamp": "00:11:13",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se señala que el crecimiento de la IA no es lineal ni exponencial, sino que puede tener períodos de estancamiento o caída, lo que implica riesgos de colapso si no se ajusta la estrategia de inversión.",
+          "timestamp": "00:13:53",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis se centra en la valoración de Fanny y Freddy, la potencial de la IA como herramienta de productividad, y los riesgos asociados al crecimiento no lineal de la tecnología. Se destacan las declaraciones del director Bill Pult sobre el valor de Fanny y Freddy, la comparación de la IA con herramientas anteriores como las calculadoras, y la importancia de ajustar estrategias de inversión ante posibles períodos de estancamiento o caída."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El análisis de valoración menciona que el múltiplo de 5,5 veces SV Biddle es más atractivo que los históricos, pero el propietario del 7% de la empresa valora la empresa en 30 dólares por acción, lo cual es significativamente más alto que su precio actual de 11.",
+          "timestamp": "00:28:10",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista sugiere que la empresa podría aumentar su valoración si se logran ventas adicionales y se realicen ventas de activos, lo que podría generar un impacto positivo en el mercado.",
+          "timestamp": "00:29:25",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista menciona incertidumbre sobre las proyecciones de 2026 debido a la falta de información sobre las películas futuras y la posibilidad de que las estimaciones de EBITDA no sean realistas.",
+          "timestamp": "00:27:15",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento analiza la valoración de la empresa, menciona incertidumbre sobre las proyecciones futuras y sugiere que el aumento de valoración podría ser positivo si se logran ventas adicionales y se realizan ventas de activos, aunque existen dudas sobre la realista de las estimaciones de EBITDA para 2026."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de entrada menciona la entrada en Francon Nevada tras la caída del activo Cobre Panamá, aprovechando un precio más bajo.",
+          "timestamp": "00:35:17",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona que el precio actual de Francon Nevada es superior al que deberían pagar, considerando un margen de seguridad aceptable.",
+          "timestamp": "00:35:48",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se destaca el riesgo asociado al activo Cobre Panamá, que afectaba al 25-28% de los ingresos de Francon Nevada y causó una caída del 33-34% en la acción.",
+          "timestamp": "00:35:11",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona la recuperación del activo Cobre Panamá tras litigios con el gobierno panameño, lo que permitió avances en la producción y el activo sigue siendo propiedad del empresa.",
+          "timestamp": "00:37:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Se indica que el activo Cobre Panamá contribuye con 10.000 onzas de oro anuales, y que el activo sigue siendo operativo con producción de cobre y oro.",
+          "timestamp": "00:37:13",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de entrada en Francon Nevada se basa en la caída del activo Cobre Panamá, aprovechando un precio más bajo. Se menciona que el precio actual de la empresa es superior al valor justo, considerando un margen de seguridad. El riesgo del activo Cobre Panamá afectó significativamente los ingresos de la empresa, causando una caída en la acción. Sin embargo, tras litigios con el gobierno panameño, el activo ha mostrado avances en producción y sigue siendo propiedad de la empresa. El activo contribuye con 10.000 onzas de oro anuales, y la empresa sigue con operaciones positivas, aunque con riesgos asociados al activo."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "exit",
+          "paraphrase": "Los participantes deciden finalizar el programa de transmisión y agradecen al público.",
+          "timestamp": "00:43:48",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Los participantes expresan que han cometido errores durante la transmisión y solicitan feedback.",
+          "timestamp": "00:44:02",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Los participantes mencionan que no lograron alcanzar un número objetivo de visitas durante la transmisión.",
+          "timestamp": "00:44:02",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "Los participantes cierran el programa de transmisión, agradecen al público y mencionan errores y objetivos no alcanzados durante la transmisión."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
