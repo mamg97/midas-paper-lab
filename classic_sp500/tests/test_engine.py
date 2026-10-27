@@ -166,6 +166,34 @@ class SAndP500ClassicTests(unittest.TestCase):
             self.assertEqual(saved["coverage"][-1]["paused_books_missing_held_quotes"],
                              {"buy_hold_equal_weight": ["AAPL", "MSFT"]})
 
+    def test_invalid_trade_open_excludes_symbol_but_keeps_frozen_denominator(self):
+        from unittest.mock import patch
+        import pandas as pd
+        days = pd.bdate_range("2026-06-01", periods=90)
+        day = days[-1].date().isoformat()
+        prices = pd.DataFrame({
+            "Open": 100.0, "High": 104.0, "Low": 98.0,
+            "Close": 102.0, "Volume": 1000000.0,
+            "Stock Splits": 0.0, "Dividends": 0.0,
+        }, index=days)
+        invalid = prices.copy()
+        invalid.loc[days[-1], "Open"] = 0.0
+        config = copy.deepcopy(self.config)
+        # Small synthetic universe, with the production minimum coverage
+        # tested separately against the frozen 503 symbol configuration.
+        config["execution"]["minimum_eligible_coverage"] = .5
+        with (patch.object(classic, "verify_config", return_value=["AAPL", "BAD"]),
+              patch.object(classic, "signal", return_value="buy")):
+            orders, coverage = classic.rank_signals(
+                config, {"AAPL": prices, "BAD": invalid}, day)
+        self.assertEqual(coverage["eligible"], 1)
+        self.assertEqual(coverage["total"], 2)
+        self.assertEqual(coverage["ticker_coverage_pct"], 50.0)
+        self.assertEqual(coverage["missing"], {"BAD": "invalid_current_ohlc"})
+        for strategy_orders in orders.values():
+            self.assertEqual([item[0] for item in strategy_orders], ["AAPL"])
+        self.assertIn("BAD", ["AAPL", "BAD"])
+
     def test_missing_existing_holding_is_still_fatal(self):
         today = {"AAPL": {"open": 100, "high": 105, "low": 99, "close": 103},
                  "MSFT": {"open": 200, "high": 204, "low": 197, "close": 202},
