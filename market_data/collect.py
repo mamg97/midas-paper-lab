@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from market_data.snapshot import (make_snapshot, normalize_bar, provider_symbol,
-                                  write_immutable, load_snapshot)  # noqa: E402
+                                  write_immutable, load_snapshot, snapshot_path)  # noqa: E402
 from timesfm_strategy.run import _download, _last_row, calendar, load_universe  # noqa: E402
 
 UNIVERSE = "weekly_ml/universe_sp500_2026-09-29.csv"
@@ -81,6 +81,21 @@ def run():
     symbols = load_universe(UNIVERSE)
     if len(symbols) != 503:
         raise ValueError("Frozen 503-symbol universe changed")
+    existing_path = snapshot_path(SNAPSHOTS, session)
+    if existing_path.exists():
+        # A retry consumes the original bytes, including original missing bars.
+        # Genuine recovery/revisions require a separate provenance-bearing file.
+        existing = load_snapshot(existing_path, session=session)
+        if set(existing["requested_symbols"]) != set(symbols) | {"SPY"}:
+            raise ValueError("Existing snapshot differs from frozen universe")
+        return {"status": "snapshot_already_exists", "session": session,
+                "path": str(existing_path.relative_to(ROOT)),
+                "sha256": existing["sha256"],
+                "observed": existing["coverage"]["observed"],
+                "missing_count": len(existing["missing"]),
+                "missing_symbols": sorted(existing["missing"]),
+                "frozen_coverage": existing["coverage"]["frozen_constituents_observed"],
+                "previous_session": previous, "next_session": next_session}
     found, missing = collect(session, symbols)
     # Do not persist a misleading canonical snapshot during major outages.
     count = sum(symbol in found for symbol in symbols)

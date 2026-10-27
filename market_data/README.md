@@ -16,6 +16,8 @@ No declarar que las cinco familias consumen ya esta captura.
 - Si menos del 90% de los 503 constituyentes tiene barra válida, no publicar.
 - Escritura exclusiva atómica; reintentos con idénticas observaciones no alteran
   snapshot, fecha de captura o hash.
+- Si el archivo de sesión ya existe, se valida y reutiliza sin consultar Yahoo.
+  Un hash inválido o un universo distinto bloquean el reintento sin sobrescribirlo.
 - Una revisión real de precios exige un artefacto complementario con procedencia
   y hash padre; nunca reescribir el JSON canónico silenciosamente.
 - PSKY->SKYD efectivo 2026-10-06 modifica solo ticker del proveedor.
