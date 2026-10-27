@@ -41,7 +41,10 @@ jobs:
           python classic_sp500/run.py --phase check
       - name: Record next-open paper ledger
         id: execute
-        if: github.event_name != 'pull_request'
+        # A push can happen after the NEXT exchange open. It must never
+        # retrospectively replay a previous session merely to validate code.
+        # Prospective paper settlement is restricted to schedule/explicit dispatch.
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: python classic_sp500/run.py --phase daily
       - name: Record schedule health
         if: always() && github.event_name == 'schedule'
