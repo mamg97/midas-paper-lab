@@ -84,6 +84,88 @@ class SAndP500ClassicTests(unittest.TestCase):
         self.assertEqual(benchmark["events"][0]["type"], "unfilled_missing_dated_bar")
         self.assertEqual(benchmark["events"][0]["ticker"], "SPY")
 
+    def test_unpriced_equal_weight_quarantines_only_that_book(self):
+        invested = self._invested_state_oct16()
+        original = copy.deepcopy(invested)
+        quotes = {
+            "MSFT": {"open": 203, "low": 201, "high": 210, "close": 208},
+            "SPY": {"open": 403, "low": 401, "high": 409, "close": 406},
+        }
+        result, changed = classic.settle(
+            self.config, invested, "2026-10-19", "2026-10-16", quotes,
+            allow_partial=True)
+        self.assertTrue(changed)
+        self.assertEqual(invested, original)
+        self.assertEqual(result["last_session"], "2026-10-19")
+        paused = result["books"]["buy_hold_equal_weight"]
+        self.assertEqual(paused["equity"][-1]["date"], "2026-10-16")
+        self.assertEqual(paused["nav"], invested["books"]["buy_hold_equal_weight"]["nav"])
+        self.assertEqual(paused["cash"], invested["books"]["buy_hold_equal_weight"]["cash"])
+        self.assertEqual(paused["pending"], invested["books"]["buy_hold_equal_weight"]["pending"])
+        self.assertEqual(paused["paused_missing_quotes"]["missing_tickers"], ["AAPL"])
+        self.assertEqual(paused["events"][-1]["type"], "book_quarantined_missing_held_bar")
+        benchmark = result["books"]["benchmark_spy"]
+        self.assertEqual(benchmark["equity"][-1]["date"], "2026-10-19")
+        self.assertGreater(benchmark["nav"], 0)
+        self.assertNotIn("paused_missing_quotes", benchmark)
+        classic.validate_state(result, self.config)
+        frozen = classic.freeze(self.config, result, "2026-10-19", self.fake, self.diagnostic)
+        self.assertEqual(frozen["books"]["buy_hold_equal_weight"], paused)
+
+    def test_paused_book_cannot_skip_dates_or_fabricate_recovery(self):
+        invested = self._invested_state_oct16()
+        only_spy = {"SPY": {"open": 403, "low": 401, "high": 409, "close": 406}}
+        paused, _ = classic.settle(
+            self.config, invested, "2026-10-19", "2026-10-16", only_spy,
+            allow_partial=True)
+        # Even if today's quote magically reappears, a missing old session
+        # must be reconciled independently before any paper book resumes.
+        new_quotes = {
+            "AAPL": {"open": 103, "low": 102, "high": 106, "close": 105},
+            "MSFT": {"open": 203, "low": 202, "high": 206, "close": 205},
+            "SPY": {"open": 406, "low": 404, "high": 409, "close": 407},
+        }
+        next_day, _ = classic.settle(
+            self.config, paused, "2026-10-20", "2026-10-19", new_quotes,
+            allow_partial=True)
+        self.assertEqual(next_day["books"]["buy_hold_equal_weight"],
+                         paused["books"]["buy_hold_equal_weight"])
+        self.assertEqual(next_day["books"]["benchmark_spy"]["equity"][-1]["date"],
+                         "2026-10-20")
+        self.assertEqual(next_day["books"]["buy_hold_equal_weight"]["equity"][-1]["date"],
+                         "2026-10-16")
+        self.assertEqual(len(next_day["books"]["buy_hold_equal_weight"]["events"]),
+                         len(paused["books"]["buy_hold_equal_weight"]["events"]))
+        classic.validate_state(next_day, self.config)
+
+    def test_daily_run_isolates_missing_held_mark_and_persists_reason(self):
+        from unittest.mock import patch
+        from tempfile import TemporaryDirectory
+        import json
+        invested = self._invested_state_oct16()
+        quotes = {"SPY": {"open": 403, "low": 400, "high": 405, "close": 404}}
+        with TemporaryDirectory() as td:
+            path = Path(td) / "ledger.json"
+            path.write_text(json.dumps(invested), encoding="utf-8")
+            with (patch.object(classic.market, "calendar",
+                               return_value=("2026-10-19", "2026-10-16",
+                                             "2026-10-20", False)),
+                  patch.object(classic, "fetch_live", return_value=({}, quotes)),
+                  patch.object(classic, "rank_signals",
+                               return_value=(self.fake, self.diagnostic))):
+                result = classic.run(
+                    Path(__file__).resolve().parents[1] / "config.json", path)
+            self.assertEqual(result["status"], "paper_recorded_partial")
+            self.assertEqual(result["paused_books"], ["buy_hold_equal_weight"])
+            saved = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(saved["last_session"], "2026-10-19")
+            self.assertEqual(saved["books"]["benchmark_spy"]["equity"][-1]["date"],
+                             "2026-10-19")
+            self.assertEqual(saved["books"]["buy_hold_equal_weight"]["equity"][-1]["date"],
+                             "2026-10-16")
+            self.assertEqual(saved["coverage"][-1]["paused_books_missing_held_quotes"],
+                             {"buy_hold_equal_weight": ["AAPL", "MSFT"]})
+
     def test_missing_existing_holding_is_still_fatal(self):
         today = {"AAPL": {"open": 100, "high": 105, "low": 99, "close": 103},
                  "MSFT": {"open": 200, "high": 204, "low": 197, "close": 202},

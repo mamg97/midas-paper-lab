@@ -71,7 +71,17 @@ def validate_state(state, config):
             or not state.get("first_session") or not state.get("last_session")):
         raise ValueError("Foreign classic S&P 500 portfolio ledger")
     for book in state["books"].values():
-        if not book["equity"] or book["equity"][-1]["date"] != state["last_session"]:
+        if not book["equity"]:
+            raise ValueError("Book lacks observed latest NAV")
+        latest = book["equity"][-1]["date"]
+        paused = book.get("paused_missing_quotes")
+        if paused:
+            if (latest >= state["last_session"]
+                    or paused.get("last_valued_session") != latest
+                    or not paused.get("since")
+                    or not paused.get("missing_tickers")):
+                raise ValueError("Invalid unpriced book quarantine")
+        elif latest != state["last_session"]:
             raise ValueError("Book lacks observed latest NAV")
 
 
@@ -168,8 +178,13 @@ def _close_position(book, ticker, value, day, config, reason):
     book["events"].append({"date": day, "ticker": ticker, "type": "sell", "reason": reason})
 
 
-def settle(config, state, day, previous, today):
-    """Pure state transition; same dated OHLC for every paper event."""
+def settle(config, state, day, previous, today, *, allow_partial=False):
+    """Pure paper transition. Isolate unpriced books, never invent a daily NAV.
+
+    The strict default preserves backwards-compatibility for historical gap
+    reconciliation. Current live schedules may quarantine a single affected
+    book while the other eight books receive independently verified marks.
+    """
     validate_state(state, config)
     if day <= state["last_session"]:
         return copy.deepcopy(state), False
@@ -181,12 +196,34 @@ def settle(config, state, day, previous, today):
     required = {ticker for book in state["books"].values()
                 for ticker in set(book["positions"]) |
                 {t for t, order in book["pending"].items() if order["side"] == "sell"}}
-    if not required <= set(today):
+    if not allow_partial and not required <= set(today):
         raise ValueError("Missing dated bar for held position or pending sell: " +
                          ",".join(sorted(required - set(today))))
     result = copy.deepcopy(state)
     p = config["execution"]
     for name, book in result["books"].items():
+        if allow_partial:
+            # A previously quarantined book cannot skip an observed session.
+            # It stays at its LAST VERIFIED NAV until its dated session gap is
+            # independently reconciled. Never silently resume at a later close.
+            if book.get("paused_missing_quotes"):
+                continue
+            mandatory = set(book["positions"]) | {
+                t for t, order in book["pending"].items() if order["side"] == "sell"
+            }
+            missing = sorted(mandatory - set(today))
+            if missing:
+                book["paused_missing_quotes"] = {
+                    "since": day,
+                    "last_valued_session": book["equity"][-1]["date"],
+                    "missing_tickers": missing,
+                    "reason": "required same-session bar unavailable",
+                }
+                book["events"].append({
+                    "date": day, "type": "book_quarantined_missing_held_bar",
+                    "missing_tickers": missing,
+                })
+                continue
         for ticker, pos in list(book["positions"].items()):
             bar = today[ticker]
             split = float(bar.get("split", 0))
@@ -268,6 +305,9 @@ def freeze(config, state, day, decisions, coverage):
         raise ValueError("Current market close not marked")
     new = copy.deepcopy(state)
     for name, book in new["books"].items():
+        if book.get("paused_missing_quotes"):
+            # No next-session orders from a session we could not value.
+            continue
         book["pending"] = frozen_orders(config, name, decisions.get(name, []), book["positions"], day)
         book["signal_counts"].append({"date": day, "buys": sum(o["side"] == "buy" for o in book["pending"].values())})
     new["coverage"].append({"date": day, **coverage})
@@ -477,12 +517,6 @@ def run(config_path, state_path):
         market.atomic_write(state_path, fresh)
         return {"status": "first_signal_frozen", "date": day, "eligible": coverage["eligible"],
                 "universe": coverage["total"]}
-    critical = {ticker for book in state["books"].values()
-                for ticker in set(book["positions"]) |
-                {t for t, order in book["pending"].items() if order["side"] == "sell"}}
-    if not critical <= set(today):
-        raise ValueError("Missing dated bar for held position or pending sell: " +
-                         ",".join(sorted(critical - set(today))))
     # Persist explicit execution quality, without silently reducing the frozen
     # 503-symbol denominator or inventing a price for missing BUY candidates.
     unfilled_buys = sorted({ticker for book in state["books"].values()
@@ -492,12 +526,19 @@ def run(config_path, state_path):
     coverage["verified_price_source_aliases"] = {
         t: b["verified_price_source_symbol"] for t, b in today.items()
         if "verified_price_source_symbol" in b}
-    updated, changed = settle(config, state, day, previous, today)
+    updated, changed = settle(config, state, day, previous, today, allow_partial=True)
+    paused = {name: item["paused_missing_quotes"]
+              for name, item in updated["books"].items()
+              if item.get("paused_missing_quotes")}
+    coverage["paused_books_missing_held_quotes"] = {
+        name: info["missing_tickers"] for name, info in paused.items()}
     if changed:
         updated = freeze(config, updated, day, decisions, coverage)
         market.atomic_write(state_path, updated)
-    return {"status": "paper_recorded", "date": day, "eligible": coverage["eligible"],
+    return {"status": "paper_recorded_partial" if paused else "paper_recorded",
+            "date": day, "eligible": coverage["eligible"],
             "universe": coverage["total"], "models": len(config["strategies"]),
+            "paused_books": sorted(paused),
             "unfilled_pending_buys_missing_bar": unfilled_buys}
 
 
