@@ -392,8 +392,10 @@ def reconcile_invested_gap(config, state, day, previous, symbols):
 
     This is a disclosed late calculation from previously frozen strategy rules;
     it is not a claim that GitHub Actions executed successfully on those dates.
-    All sessions must pass their dated price and coverage checks before we
-    return a replacement ledger. No partial state is published on a failure.
+    Each session still requires real dated OHLC and sufficient universe
+    coverage. A missing HELD symbol quarantines only its exposed paper book;
+    unaffected books advance with fully observed marks. The complete transition
+    is persisted atomically, never as a partially written JSON file.
     """
     validate_state(state, config)
     observed = market_sessions_after(state["last_session"], day, previous)
@@ -404,11 +406,10 @@ def reconcile_invested_gap(config, state, day, previous, symbols):
         needed = {ticker for book in result["books"].values()
                   for ticker in set(book["positions"]) | set(book["pending"])}
         frames, today = fetch_live(config, session, prior, symbols, required=needed)
-        missing = required_live_quotes(result) - set(today)
-        if missing:
-            raise ValueError(
-                "Gap reconciliation requires real same-session OHLC for held/sell: "
-                + session + " " + ",".join(sorted(missing)))
+        # A missing held-price in ONE portfolio must not prevent eight
+        # unrelated portfolios from observing their exact historic session.
+        # The unpriced portfolio is quarantined, retaining its last real NAV;
+        # a later observed price never skips/replaces its missing old session.
         decisions, coverage = rank_signals(config, frames, session)
         unfilled_buys = sorted({ticker for book in result["books"].values()
                                for ticker, order in book["pending"].items()
@@ -419,7 +420,13 @@ def reconcile_invested_gap(config, state, day, previous, symbols):
             if "verified_price_source_symbol" in b}
         # An original signal dated prior must settle ONLY at this session's
         # verified open; new signals are frozen after its close, not before.
-        settled, changed = settle(config, result, session, prior, today)
+        settled, changed = settle(config, result, session, prior, today, allow_partial=True)
+        paused = {name: book["paused_missing_quotes"]
+                  for name, book in settled["books"].items()
+                  if book.get("paused_missing_quotes")}
+        coverage["paused_books_missing_held_quotes"] = {
+            name: issue["missing_tickers"] for name, issue in paused.items()
+        }
         if not changed:
             raise ValueError("Repeated reconciliation session")
         coverage["late_recorded_verified_date"] = True
@@ -504,9 +511,13 @@ def run(config_path, state_path):
         reconciled, late = reconcile_invested_gap(
             config, state, day, previous, symbols)
         market.atomic_write(state_path, reconciled)
-        return {"status": "dated_paper_sessions_reconciled",
+        paused_books = sorted(name for name, book in reconciled["books"].items()
+                              if book.get("paused_missing_quotes"))
+        return {"status": ("dated_paper_sessions_reconciled_partial"
+                           if paused_books else "dated_paper_sessions_reconciled"),
                 "date": day, "late_recorded_sessions": late,
                 "books": len(reconciled["books"]),
+                "paused_books": paused_books,
                 "eligible": reconciled["coverage"][-1]["eligible"],
                 "universe": reconciled["coverage"][-1]["total"]}
     # No stale next-open order may be filled after its intended session.
