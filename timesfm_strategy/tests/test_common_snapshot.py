@@ -5,8 +5,6 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-import pandas as pd
-
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import run as core
 
@@ -28,13 +26,18 @@ class SharedDailyMarkTests(unittest.TestCase):
 
     def _prices(self, names, start, end, allow_missing=False):
         if names == ["EURUSD=X"]:
-            return {"EURUSD=X": pd.DataFrame(
-                {"Close": [1.1, 1.2]}, index=pd.to_datetime([PREV, DAY]))}
+            return {"EURUSD=X": "EURUSD=X"}
         if names == ["AAPL", "SPY"]:
-            return {"SPY": pd.DataFrame(
-                {"Open": [400.], "Close": [410.], "Dividends": [0.],
-                 "Stock Splits": [0.]}, index=pd.to_datetime([DAY]))}
+            return {"SPY": "SPY"}
         raise AssertionError("Unexpected provider request: " + repr(names))
+
+    def _dated_row(self, frame, day, ticker):
+        if ticker == "EURUSD=X":
+            return {"Close": 1.1 if day == PREV else 1.2}
+        if ticker == "SPY" and day == DAY:
+            return {"Open": 400., "Close": 410.,
+                    "Dividends": 0., "Stock Splits": 0.}
+        raise ValueError("No exact provider bar")
 
     def test_missing_yahoo_stock_recovers_only_from_real_snapshot(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -51,7 +54,8 @@ class SharedDailyMarkTests(unittest.TestCase):
                                    captured_at_utc="2026-10-27T22:40:00+00:00")
             write_immutable(root / "market_data" / "snapshots", record)
             with (patch.object(core, "ROOT", root),
-                  patch.object(core, "_download", side_effect=self._prices)):
+                  patch.object(core, "_download", side_effect=self._prices),
+                  patch.object(core, "_last_row", side_effect=self._dated_row)):
                 result, fx_entry, fx_mark = core._daily_bars(
                     self.config, self.state, DAY, PREV)
             self.assertEqual(result["AAPL"]["open"], 100.)
@@ -63,7 +67,8 @@ class SharedDailyMarkTests(unittest.TestCase):
     def test_without_snapshot_missing_holding_still_fails_closed(self):
         with tempfile.TemporaryDirectory() as tmp:
             with (patch.object(core, "ROOT", Path(tmp)),
-                  patch.object(core, "_download", side_effect=self._prices)):
+                  patch.object(core, "_download", side_effect=self._prices),
+                  patch.object(core, "_last_row", side_effect=self._dated_row)):
                 with self.assertRaisesRegex(ValueError, "Missing exact-date"):
                     core._daily_bars(self.config, self.state, DAY, PREV)
 
