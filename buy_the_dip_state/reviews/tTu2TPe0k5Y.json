@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-27T08:43:12.476531+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/92920945",
+    "published_date": "2022-09-26",
+    "youtube_video_id": "tTu2TPe0k5Y",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 35036518
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 4379.5591875,
+      "word_count": 11780,
+      "segment_count": 596,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "tTu2TPe0k5Y",
+    "youtube_url": "https://www.youtube.com/watch?v=tTu2TPe0k5Y",
+    "title": "Cartera de INVERSIÓN en SEPTIEMBRE   | BUY THE DIP PODCAST",
+    "category": "portfolio_update",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/92920945",
+    "published_date": "2022-09-26",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio discute la estrategia de inversión de la cartera de Bay de Dip, enfocada en la compra en dip (Buy The Dip) durante caídas del mercado. Se analizan ajustes en posiciones, diversificación por sectores, y valoración de empresas como Ipco y Georgia Capital. Se mencionan proyecciones de rendimiento, riesgos geopolíticos, y la volatilidad extrema de la cartera. Se destacan oportunidades de inversión con alto potencial de retorno, aunque con riesgos asociados a la volatilidad y factores macroeconómicos. La cartera ha mostrado rendimientos superiores al mercado, pero con fluctuaciones extremas, lo que requiere gestión cuidadosa. Se evalúan proyectos mineros, empresas con alto TAM, y la posibilidad de adquisiciones, con enfoque en valoración económica y riesgo moderado.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "Ipco muestra un rendimiento del 30% en un año, con proyecciones de 400 millones de free cash flow en 2023 a 85 dólares del petróleo.",
+        "La empresa tiene un precio de 2,23 dólares australianos, con un valor de 450 millones australianos, y se espera una generación de cash flow significativa.",
+        "La empresa Serica tiene un management que, según el analista, cumple con los intereses de los accionistas, aunque hay críticas sobre su eficiencia.",
+        "El proyecto tiene un valor neto presente (NPV) cercano a cero, lo que sugiere que está sobrevalorado o muy barato, dependiendo de la perspectiva."
+      ],
+      "cycle_macro": [
+        "La cartera ha mantenido positividad durante la caída del mercado, lo que refleja una estrategia de inversión basada en la resiliencia frente a condiciones macroeconómicas negativas.",
+        "Se anticipa una corrección y un bache a corto plazo en el mercado inmobiliario, pero se espera una recuperación a largo plazo debido a la demanda persistente."
+      ],
+      "entry": [
+        "Se sugiere una inversión en Georgia Capital debido a su potencial de retorno alto, con una TIR del 134% y un payback en 8,5 meses.",
+        "Se menciona una empresa con un TAM enorme y una rentabilidad potencial, aunque se advierte que si no se logra la rentabilidad, la empresa sigue siendo valiosa por su tamaño.",
+        "El analista menciona la intención de volver a comprar una empresa (Guanajuato) que ha tenido un aumento significativo en producción y recursos."
+      ],
+      "sizing": [
+        "La cartera está estructurada con diversificación por sectores y pesos, incluyendo empresas como Dell, Microsoft, Centen, y otras con correlación distinta al mercado.",
+        "Una minera con recursos de 900,000 onzas, vida útil de 10 años, y recuperación del 90-95% del oro, sugiere un potencial de valoración elevada."
+      ],
+      "add_hold": [],
+      "exit": [
+        "Se menciona que la empresa tiene un 60% de upside potencial, lo que sugiere una oportunidad de salida con un alto margen de ganancia."
+      ],
+      "risk": [
+        "La cartera tiene una correlación moderada con el mercado, pero con divergencia en rendimiento, lo que sugiere una diversificación efectiva.",
+        "La posibilidad de que la guerra entre Cervayan y Armenia escalade podría afectar negativamente a Georgia Capital, dada la dependencia de Turquía y Rusia.",
+        "Se advierte que la empresa tiene un riesgo significativo debido a la volatilidad del terreno en comparación con las casas, lo que podría afectar su valoración."
+      ],
+      "technical": [
+        "El analista observa que el precio de una empresa (Guanajuato) ha subido un 700% en un año, aunque ha caído un 50% desde entonces, indicando volatilidad alta."
+      ],
+      "management": [
+        "El analista menciona la desconfianza hacia la directiva de la empresa Altisource, pero sigue manteniendo la posición en la cartera por su valoración económica y potencial de crecimiento."
+      ],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "La cartera de Bay de Dip ha ajustado posiciones, reduciendo la posición en ICO y manteniendo a Ipco como la posición más grande.",
+          "timestamp": "00:06:28",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Ipco muestra un rendimiento del 30% en un año, con proyecciones de 400 millones de free cash flow en 2023 a 85 dólares del petróleo.",
+          "timestamp": "00:08:16",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La cartera está estructurada con diversificación por sectores y pesos, incluyendo empresas como Dell, Microsoft, Centen, y otras con correlación distinta al mercado.",
+          "timestamp": "00:03:30",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La cartera tiene una correlación moderada con el mercado, pero con divergencia en rendimiento, lo que sugiere una diversificación efectiva.",
+          "timestamp": "00:02:05",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La cartera ha mantenido positividad durante la caída del mercado, lo que refleja una estrategia de inversión basada en la resiliencia frente a condiciones macroeconómicas negativas.",
+          "timestamp": "00:02:20",
+          "scope": "hosts",
+          "confidence": 0.5
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El podcast discute la estrategia de inversión de la cartera de Bay de Dip, destacando ajustes en posiciones, análisis de rendimiento de empresas como Ipco, diversificación por sectores y pesos, y la correlación moderada con el mercado. Se mencionan proyecciones de rendimiento y decisiones de reestructuración de la cartera para mejorar su rendimiento relativo al mercado."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El precio de la acción está a 2,23 dólares australianos, con un valor de 450 millones australianos, y se espera una generación de cash flow significativa.",
+          "timestamp": "00:13:00",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La posibilidad de que la guerra entre Cervayan y Armenia escalade podría afectar negativamente a Georgia Capital, dada la dependencia de Turquía y Rusia.",
+          "timestamp": "00:20:14",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se sugiere una inversión en Georgia Capital debido a su potencial de retorno alto, con una TIR del 134% y un payback en 8,5 meses.",
+          "timestamp": "00:13:00",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis sugiere una inversión en Georgia Capital basada en su valor actual y potencial de retorno, con riesgos asociados a conflictos geopolíticos. Se mencionan cifras de valor y cash flow, y se espera un crecimiento significativo en el precio de la acción."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "risk",
+          "paraphrase": "El analista menciona la posibilidad de conflictos militares y su impacto económico, destacando la importancia de monitorear movimientos en las fronteras y la vigilancia satelital.",
+          "timestamp": "00:23:26",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El analista evalúa la empresa Orison como una oportunidad de inversión, destacando su producción de oro, su potencial de expansión y la sinergia con otras empresas como West African Resources.",
+          "timestamp": "00:27:00",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista considera la entrada en la empresa Orison, valorando su producción de oro, su potencial de crecimiento y la posibilidad de una adquisición por parte de West African Resources.",
+          "timestamp": "00:27:00",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El analista analiza el precio del oro y su impacto en el valor de la empresa Orison, destacando que a 1.700 dólares el oro, el proyecto tiene un buen potencial de generación de ingresos.",
+          "timestamp": "00:30:07",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "management",
+          "paraphrase": "El analista menciona la desconfianza hacia la directiva de la empresa Altisource, pero sigue manteniendo la posición en la cartera por su valoración económica y potencial de crecimiento.",
+          "timestamp": "00:25:19",
+          "scope": "hosts",
+          "confidence": 0.5
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El analista discute la posibilidad de conflictos militares y su impacto económico, evalúa la inversión en la empresa Orison considerando su producción de oro y potencial de crecimiento, analiza el precio del oro y su impacto en el valor de la empresa, y menciona la desconfianza hacia la directiva de Altisource pero sigue manteniendo la posición en la cartera por su valoración económica."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona una empresa con un TAM enorme y una rentabilidad potencial, aunque se advierte que si no se logra la rentabilidad, la empresa sigue siendo valiosa por su tamaño.",
+          "timestamp": "00:35:14",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa tiene un precio de 2,7 veces el per, pero se considera barata a 0,5 veces el book value, lo que sugiere una posible valoración en el futuro.",
+          "timestamp": "00:36:09",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se advierte que la empresa tiene un riesgo significativo debido a la volatilidad del terreno en comparación con las casas, lo que podría afectar su valoración.",
+          "timestamp": "00:40:16",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "Se menciona que la empresa tiene un 60% de upside potencial, lo que sugiere una oportunidad de salida con un alto margen de ganancia.",
+          "timestamp": "00:37:03",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se anticipa una corrección y un bache a corto plazo en el mercado inmobiliario, pero se espera una recuperación a largo plazo debido a la demanda persistente.",
+          "timestamp": "00:39:03",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis aborda la valoración de una empresa con un TAM grande, la volatilidad del terreno en comparación con las casas, y la posibilidad de una corrección a corto plazo en el mercado inmobiliario, aunque se espera una recuperación a largo plazo. Se mencionan oportunidades de inversión con un alto margen de ganancia y riesgos asociados a la volatilidad del mercado."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la volatilidad de la cartera y la necesidad de gestionarla, destacando que algunas empresas han tenido caídas significativas y que la cartera ha experimentado fluctuaciones extremas.",
+          "timestamp": "00:50:00",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se destaca la rentabilidad de la cartera, que ha superado al mercado con un 95% de rendimiento, aunque con una volatilidad alta que ha causado caídas abruptas, como un -8% en un mes y una caída del 70% en otro.",
+          "timestamp": "00:49:54",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista reconoce la volatilidad como un factor crítico en la cartera, comparando la experiencia de 2020 con la de 2018 y 2020, destacando que la volatilidad ha sido extremadamente alta, con caídas de -8% y -70% en un mes, lo que ha llevado a decisiones de liquidación de empresas.",
+          "timestamp": "00:50:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca la volatilidad extrema de la cartera, con caídas abruptas y rendimientos superiores al mercado. Se menciona la rentabilidad de 95% y la necesidad de gestionar la volatilidad, comparando años con caídas significativas. El analista reconoce la volatilidad como un factor crítico, con decisiones de liquidación de empresas y una experiencia de mercado con fluctuaciones extremas."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona una empresa en cartera que ha vendido la mitad y vuelve a comprar, indicando interés en su potencial de crecimiento.",
+          "timestamp": "00:57:29",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa Serica tiene un management que, según el analista, cumple con los intereses de los accionistas, aunque hay críticas sobre su eficiencia.",
+          "timestamp": "00:58:00",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El analista menciona riesgos macroeconómicos como impuestos en Europa y políticas que podrían afectar la inversión en energéticas.",
+          "timestamp": "01:00:00",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "Una minera con recursos de 900,000 onzas, vida útil de 10 años, y recuperación del 90-95% del oro, sugiere un potencial de valoración elevada.",
+          "timestamp": "01:04:11",
+          "scope": "hosts",
+          "confidence": 0.7
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El analista observa que el precio de una empresa (Guanajuato) ha subido un 700% en un año, aunque ha caído un 50% desde entonces, indicando volatilidad alta.",
+          "timestamp": "01:07:51",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "management",
+          "paraphrase": "El analista menciona que el management de Serica ha sido criticado por ser 'tonto' por algunos, pero también reconoce que cumple con los intereses de los accionistas.",
+          "timestamp": "00:58:31",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El analista menciona preocupaciones sobre la política europea de impuestos a energéticas, lo que podría afectar la inversión en ese sector.",
+          "timestamp": "01:00:00",
+          "scope": "hosts",
+          "confidence": 0.6
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El analista menciona la intención de volver a comprar una empresa (Guanajuato) que ha tenido un aumento significativo en producción y recursos.",
+          "timestamp": "01:05:54",
+          "scope": "hosts",
+          "confidence": 0.7
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El analista discute la valoración de empresas mineras, menciona riesgos macroeconómicos como impuestos en Europa, y evalúa el potencial de crecimiento de una empresa en cartera. También analiza el desempeño del management de Serica y menciona la volatilidad de precios en el mercado de acciones."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El proyecto tiene un valor neto presente (NPV) cercano a cero, lo que sugiere que está sobrevalorado o muy barato, dependiendo de la perspectiva.",
+          "timestamp": "01:10:45",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La tasa de retorno (TIR) del proyecto es muy baja (26%), lo que indica un alto riesgo de no generar suficiente rentabilidad.",
+          "timestamp": "01:10:30",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El proyecto podría ser una oportunidad de hedge debido a su bajo precio, pero hay dudas sobre la capacidad de la empresa para cumplir con sus metas y mantener su valor.",
+          "timestamp": "01:11:07",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis del proyecto muestra que, aunque tiene potencial de exploración y un precio bajo, su valor neto presente es cercano a cero, lo que sugiere que está sobrevalorado o muy barato. La tasa de retorno es muy baja, lo que aumenta el riesgo de no generar suficiente rentabilidad. Sin embargo, se considera una oportunidad de hedge debido a su bajo precio, aunque hay dudas sobre la capacidad de la empresa para cumplir con sus metas y mantener su valor."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
