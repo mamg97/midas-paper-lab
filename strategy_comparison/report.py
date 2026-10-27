@@ -334,7 +334,16 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                 or set(classic_sp500_state.get("books", {})) != set(classic_sp500_tracks)):
             raise ValueError("Classic S&P 500 forward ledger invalid")
         for book in classic_sp500_state["books"].values():
-            if not book.get("equity") or book["equity"][-1].get("date") != classic_sp500_state.get("last_session"):
+            if not book.get("equity"):
+                raise ValueError("Classic S&P 500 book lacks matching close")
+            verified_day = book["equity"][-1].get("date")
+            paused = book.get("paused_missing_quotes")
+            if paused:
+                if (verified_day >= classic_sp500_state["last_session"]
+                        or paused.get("last_valued_session") != verified_day
+                        or not paused.get("missing_tickers")):
+                    raise ValueError("Classic S&P 500 unpriced book has invalid provenance")
+            elif verified_day != classic_sp500_state.get("last_session"):
                 raise ValueError("Classic S&P 500 book lacks matching close")
     timestamp = now or datetime.now(timezone.utc)
     rows = []
@@ -373,10 +382,11 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
             book = classic_sp500_state["books"][name]
             hist = book["equity"]
             nav = _equity(book["nav"], item["id"])
+            quarantined = book.get("paused_missing_quotes")
             row.update(status="demo_con_diario", first_session=classic_sp500_state["first_session"],
-                       last_session=classic_sp500_state["last_session"], last_equity=nav,
+                       last_session=hist[-1]["date"], last_equity=nav,
                        return_pct=round(100 * (nav / init - 1), 6) if len(hist) >= 2 else None,
-                       day_return_pct=_daily_return(hist, item["id"]),
+                       day_return_pct=None if quarantined else _daily_return(hist, item["id"]),
                        equity_history=_equity_history(hist, item["id"]),
                        evaluated_universe_symbols=(classic_sp500_state["coverage"][-1]["eligible"]
                                                    if classic_sp500_state.get("coverage") else None),
@@ -384,6 +394,12 @@ def build(registry, paper_config, paper_state=None, legacy_state=None, now=None,
                                                    if classic_sp500_state.get("coverage") else None))
             row.update(_activity(book["positions"], book.get("pending"),
                                  pending_label="compras paper para próxima apertura"))
+            if quarantined:
+                row["data_quality_status"] = "held_quote_unavailable"
+                row["activity_label"] = ("VALORACIÓN PAUSADA · falta cotización; "
+                                          + row.get("activity_label", ""))
+                row["note"] += (" Valoración conservada exclusivamente hasta "
+                                + hist[-1]["date"] + "; operaciones sin actualizar.")
         rows.append(row)
     for strategy_key, item in weekly_tracks.items():
         capital_weekly = None if weekly_config is None else _equity(
