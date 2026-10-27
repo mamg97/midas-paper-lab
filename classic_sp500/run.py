@@ -96,9 +96,18 @@ def rank_signals(config, panel, session):
             coverage[ticker] = "short_or_absent_history"
             continue
         try:
+            # The dated close alone does not make the instrument tradeable:
+            # a missing/zero Open or invalid OHLC must not freeze new BUYs.
+            # Keep such symbols in the frozen 503 denominator and record
+            # them explicitly as unavailable, without substituting prices.
             market._last_row(frame, session, ticker)
-        except ValueError:
+        except (ValueError, TypeError, KeyError):
             coverage[ticker] = "missing_current_close"
+            continue
+        try:
+            _dated_bar(frame, session, ticker)
+        except (ValueError, TypeError, KeyError, OverflowError):
+            coverage[ticker] = "invalid_current_ohlc"
             continue
         eligible[ticker] = [
             {"date": str(idx.date()), "open": float(row["Open"]),
