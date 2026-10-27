@@ -1,8 +1,23 @@
 # MIDAS market_data — fase 1, issue #58
 
-Estado: productor prospectivo de cotizaciones OHLC y contrato inmutable. La migración
-de consumidores y la recuperación de libros pausados NO están implementadas.
-No declarar que las cinco familias consumen ya esta captura.
+Estado: productor prospectivo y contrato inmutable, con integración incremental
+como respaldo de barras RAW ausentes. La extracción única para todos los lectores
+y la recuperación completa de libros pausados siguen pendientes.
+
+## Integraciones de valoración diaria (27/10/2026)
+
+- Clásicas y TimesFM: respaldo read-only integrado en PR #63 y #64.
+- Buy The Dip: respaldo diario integrado en PR #65; la decisión mensual conserva
+  historial ajustado y fundamentales independientes.
+- Weekly ML: respaldo diario integrado en PR #67; RSP sigue siendo independiente
+  porque no pertenece al snapshot. No se cambian forecast ni señales congeladas.
+- Capital Cycle: esta entrega añade respaldo para la sesión actual después de
+  comprobar el replay histórico. Requiere el panel histórico del benchmark y
+  bloquea cualquier sesión anterior sin precios obligatorios.
+
+Los lectores conservan precios propios discrepantes y registran el conflicto.
+Esto NO demuestra una extracción única ni la paridad de las cinco familias.
+No se han ejecutado capturas ni conciliaciones reales para validar estas PR.
 
 ## Contrato
 
@@ -37,8 +52,13 @@ python market_data/collect.py --phase check
 1. Primer capture realmente programado con hash y cobertura verificables.
 2. Recuperación versionada de símbolos ausentes, sin sobrescribir original.
 3. Adaptadores read-only opt-in para clásicas y TimesFM, luego Buy The Dip,
-   Capital Cycle y Weekly ML; mantener FX/adjusted/fundamentales separados.
+   Capital Cycle y Weekly ML: completar la transición desde el respaldo a una
+   captura compartida y verificar consumidores reales. Mantener FX, históricos
+   ajustados y fundamentales separados.
 4. Demostrar paridad de OHLC e independencia de cada libro bajo fallos.
 5. Telemetría de fuente en Segundo Cerebro y verificación próxima sesión schedule.
+6. Coordinar captura y consumidores por finalización efectiva; un cron anterior
+   no garantiza que el archivo ya esté publicado. Weekly ML daily intenta primero
+   a las 22:17 UTC y la captura común está programada a las 23:07 UTC.
 
 Nunca insertar fills a posteriori ni alterar históricos, NAV, pesos o decisiones.
