@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'weekly_ml/daily.py'
+      - 'market_data/**'
       - 'weekly_ml/tests/**'
       - '.github/workflows/weekly_ml_daily.yml'
       - 'strategy_comparison/report.py'
