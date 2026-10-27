@@ -349,7 +349,7 @@ class SAndP500ClassicTests(unittest.TestCase):
             resumed["books"]["benchmark_spy"]["pending"]["SPY"]["signal_date"],
             "2026-10-14")
 
-    def test_gap_with_any_live_position_fails_closed(self):
+    def test_gap_without_minimum_universe_coverage_still_fails_closed(self):
         from unittest.mock import patch
         from tempfile import TemporaryDirectory
         import json
@@ -364,7 +364,7 @@ class SAndP500ClassicTests(unittest.TestCase):
                                              "2026-10-15", False)),
                   patch.object(classic, "fetch_live", return_value=({}, {}))):
                 with self.assertRaisesRegex(
-                        ValueError, "Gap reconciliation requires real same-session OHLC"):
+                        ValueError, "S&P500 insufficient dated data"):
                     classic.run(
                         Path(__file__).resolve().parents[1] / "config.json", path)
             self.assertEqual(json.loads(path.read_text(encoding="utf-8")), state)
@@ -380,6 +380,59 @@ class SAndP500ClassicTests(unittest.TestCase):
         state, _ = classic.settle(self.config, base, "2026-10-16", "2026-10-15", bars)
         return classic.freeze(self.config, state, "2026-10-16",
                               orders, self.diagnostic)
+
+    def test_invested_gap_unpriced_holding_quarantines_only_one_book(self):
+        from unittest.mock import patch
+        from tempfile import TemporaryDirectory
+        import json
+        initial = self._invested_state_oct16()
+        original = copy.deepcopy(initial)
+        calls = []
+        # Only AAPL is missing; SPY remains verifiably marked each session.
+        # No historical AAPL fill or fake NAV is allowed.
+        observed = {
+            "MSFT": {"open": 204, "low": 203, "high": 210, "close": 208},
+            "SPY": {"open": 405, "low": 404, "high": 408, "close": 406},
+        }
+
+        def prices(_config, session, previous, symbols, *, required=()):
+            calls.append((session, previous))
+            self.assertIn("AAPL", required)
+            self.assertIn("SPY", required)
+            return {}, observed
+
+        def signals(_config, panel, session):
+            return self.fake, self.diagnostic
+
+        with TemporaryDirectory() as tmp:
+            path = Path(tmp) / "ledger.json"
+            path.write_text(json.dumps(initial), encoding="utf-8")
+            with (patch.object(classic.market, "calendar",
+                               return_value=("2026-10-20", "2026-10-19",
+                                             "2026-10-21", False)),
+                  patch.object(classic, "fetch_live", side_effect=prices),
+                  patch.object(classic, "rank_signals", side_effect=signals)):
+                out = classic.run(
+                    Path(__file__).resolve().parents[1] / "config.json", path)
+            self.assertEqual(out["status"], "dated_paper_sessions_reconciled_partial")
+            self.assertEqual(out["late_recorded_sessions"], ["2026-10-19", "2026-10-20"])
+            self.assertEqual(out["paused_books"], ["buy_hold_equal_weight"])
+            saved = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(saved["last_session"], "2026-10-20")
+            self.assertEqual(saved["coverage"][-1]["paused_books_missing_held_quotes"],
+                             {"buy_hold_equal_weight": ["AAPL"]})
+            paused = saved["books"]["buy_hold_equal_weight"]
+            self.assertEqual(paused["equity"][-1]["date"], "2026-10-16")
+            self.assertEqual(paused["nav"], original["books"]["buy_hold_equal_weight"]["nav"])
+            self.assertEqual(paused["positions"], original["books"]["buy_hold_equal_weight"]["positions"])
+            self.assertEqual(paused["pending"], original["books"]["buy_hold_equal_weight"]["pending"])
+            self.assertEqual(paused["paused_missing_quotes"]["since"], "2026-10-19")
+            self.assertEqual(saved["books"]["benchmark_spy"]["equity"][-1]["date"],
+                             "2026-10-20")
+            self.assertEqual(calls, [("2026-10-19", "2026-10-16"),
+                                     ("2026-10-20", "2026-10-19")])
+            classic.validate_state(saved, self.config)
+        self.assertEqual(initial, original)
 
     def test_invested_gap_replays_both_dated_sessions_and_freezes_new_signals(self):
         from unittest.mock import patch
