@@ -15,7 +15,9 @@ from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "paper_demo"))
+from market_data.consume import overlay as overlay_common_ohlc
 from strategies import signal
 
 spec = importlib.util.spec_from_file_location("timesfm_market_lib", ROOT / "timesfm_strategy/run.py")
@@ -487,6 +489,11 @@ def fetch_live(config, session, previous, symbols, required=()):
             frames[ticker] = frame
             today[ticker] = row
             break
+    # Canonical current-session marks are reused only when the direct feed
+    # lacks a valid dated bar. Existing direct values are never silently
+    # overwritten on provider revisions or snapshot corruption.
+    today, _common_diagnostic = overlay_common_ohlc(
+        session, today, ROOT / "market_data" / "snapshots")
     return frames, today
 
 
