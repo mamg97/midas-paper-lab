@@ -1,6 +1,6 @@
 {
   "benchmark_first_close": 763.989990234375,
-  "benchmark_last_close": 759.969970703125,
+  "benchmark_last_close": 765.3699951171875,
   "cash": 5000.000708983751,
   "config_hash": "125dabd8eaf1ea4c31f2b26c78d7bd80cb7b3499de37442f9ac881a9b20d1f2f",
   "currency": "USD",
@@ -122,6 +122,13 @@
       "cash": 5000.000708983751,
       "date": "2026-10-23",
       "nav": 108421.94403906628,
+      "positions": 10
+    },
+    {
+      "benchmark_close": 765.3699951171875,
+      "cash": 5000.000708983751,
+      "date": "2026-10-26",
+      "nav": 106688.96363382142,
       "positions": 10
     }
   ],
@@ -245,7 +252,7 @@
   ],
   "first_session": "2026-10-01",
   "first_signal_session": "2026-10-01",
-  "last_session": "2026-10-23",
+  "last_session": "2026-10-26",
   "last_signal_session": "2026-10-01",
   "market_hashes": {
     "2026-10-01": "93e8a01065ee5b97ed93450b123f2b28d1ce61e8cd6800fb4602afa8c1fe0487",
@@ -264,9 +271,10 @@
     "2026-10-20": "691f3b54031d2c41bed12516114d7a953b341ed66cf9c3c490a24374883bf104",
     "2026-10-21": "8abbf59523f42f51ae1468018cd06d1e82a4eeceff46589e018eb09d86e86677",
     "2026-10-22": "ca977eef8cecb86bce80365e084d40899c649709846db821e93c2f9936fe59cc",
-    "2026-10-23": "ea20b5c42a9922bdbac74ab345c3fd9db4066ef1bc38af1a24223d86b7a18d6e"
+    "2026-10-23": "ea20b5c42a9922bdbac74ab345c3fd9db4066ef1bc38af1a24223d86b7a18d6e",
+    "2026-10-26": "0be928459f5d8de5473ca639e45739636cbe829ae7a589f4f976c81516e9c19a"
   },
-  "nav": 108421.94403906628,
+  "nav": 106688.96363382142,
   "pending": null,
   "positions": {
     "ALGN": {
