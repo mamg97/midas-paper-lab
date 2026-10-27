@@ -488,7 +488,7 @@ class SAndP500ClassicTests(unittest.TestCase):
                          [("prices", "2026-10-19"), ("signals", "2026-10-19"),
                           ("prices", "2026-10-20"), ("signals", "2026-10-20")])
 
-    def test_invested_gap_is_atomic_if_second_day_lacks_held_prices(self):
+    def test_invested_gap_is_atomic_if_second_day_has_insufficient_coverage(self):
         from unittest.mock import patch
         from tempfile import TemporaryDirectory
         import json
@@ -502,6 +502,13 @@ class SAndP500ClassicTests(unittest.TestCase):
         def prices(_config, session, previous, symbols, *, required=()):
             return {}, bars if session == "2026-10-19" else {"SPY": bars["SPY"]}
 
+        def signals(_config, panel, session):
+            if session == "2026-10-20":
+                # A full-universe vendor outage remains a real failure:
+                # NEVER write even the first day's tentative settlement.
+                raise ValueError("S&P500 insufficient dated data 0/503")
+            return self.fake, self.diagnostic
+
         with TemporaryDirectory() as td:
             path = Path(td) / "ledger.json"
             path.write_text(json.dumps(state), encoding="utf-8")
@@ -510,9 +517,8 @@ class SAndP500ClassicTests(unittest.TestCase):
                                return_value=("2026-10-20", "2026-10-19",
                                              "2026-10-21", False)),
                   patch.object(classic, "fetch_live", side_effect=prices),
-                  patch.object(classic, "rank_signals",
-                               return_value=(self.fake, self.diagnostic))):
-                with self.assertRaisesRegex(ValueError, "2026-10-20 AAPL,MSFT"):
+                  patch.object(classic, "rank_signals", side_effect=signals)):
+                with self.assertRaisesRegex(ValueError, "insufficient dated data"):
                     classic.run(
                         Path(__file__).resolve().parents[1] / "config.json", path)
             self.assertEqual(path.read_bytes(), before)
