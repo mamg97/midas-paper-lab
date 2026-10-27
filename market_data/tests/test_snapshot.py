@@ -94,6 +94,48 @@ class SnapshotContractTests(unittest.TestCase):
 
 
 class ProspectiveCollectorTests(unittest.TestCase):
+    def test_existing_session_reuses_original_without_provider_calls(self):
+        record = snapshot.make_snapshot(DAY, NAMES, complete(missing=NAMES[:13]),
+                                        captured_at_utc=UTC)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            path, _ = snapshot.write_immutable(root / "snapshots", record)
+            prior = path.read_bytes()
+            with (patch.object(collect, "ROOT", root),
+                  patch.object(collect, "SNAPSHOTS", root / "snapshots"),
+                  patch.object(collect, "calendar", return_value=(DAY, "2026-10-26", "2026-10-28", False)),
+                  patch.object(collect, "load_universe", return_value=NAMES),
+                  patch.object(collect, "collect") as provider):
+                result = collect.run()
+            provider.assert_not_called()
+            self.assertEqual(result["status"], "snapshot_already_exists")
+            self.assertEqual(result["sha256"], record["sha256"])
+            self.assertEqual(result["missing_symbols"], NAMES[:13])
+            self.assertEqual(result["frozen_coverage"], 490)
+            self.assertEqual(path.read_bytes(), prior)
+
+    def test_invalid_existing_session_fails_without_refresh_or_overwrite(self):
+        for corrupt in (False, True):
+            with self.subTest(corrupt=corrupt), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                foreign = ["OTHER"] + NAMES[1:]
+                record = snapshot.make_snapshot(DAY, foreign, {}, captured_at_utc=UTC)
+                path, _ = snapshot.write_immutable(root / "snapshots", record)
+                if corrupt:
+                    value = json.loads(path.read_text())
+                    value["sha256"] = "bad"
+                    path.write_text(json.dumps(value))
+                prior = path.read_bytes()
+                with (patch.object(collect, "ROOT", root),
+                      patch.object(collect, "SNAPSHOTS", root / "snapshots"),
+                      patch.object(collect, "calendar", return_value=(DAY, "2026-10-26", "2026-10-28", False)),
+                      patch.object(collect, "load_universe", return_value=NAMES),
+                      patch.object(collect, "collect") as provider):
+                    with self.assertRaises(ValueError):
+                        collect.run()
+                provider.assert_not_called()
+                self.assertEqual(path.read_bytes(), prior)
+
     def test_partial_vendor_batch_and_bounded_single_symbol_recovery(self):
         requested = [NAMES[0], NAMES[1]]
         calls = []
