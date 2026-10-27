@@ -10,6 +10,11 @@ import sys
 import tempfile
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+from market_data.consume import overlay
+
 from engine import advance, benchmark_return_pct
 from factors import choose_portfolio, score_universe
 from market import (
@@ -28,6 +33,15 @@ def _read(path, optional=False):
     if optional and not path.exists():
         return None
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _daily_marks(panel, asof, requested):
+    bars = {ticker: current_bar(frame) for ticker, frame in panel.items()}
+    bars, info = overlay(asof, bars, ROOT / "market_data" / "snapshots")
+    missing = sorted(set(requested) - set(bars))
+    if missing:
+        raise ValueError("No se pueden valorar posiciones/órdenes: " + ",".join(missing))
+    return {ticker: bars[ticker] for ticker in requested}, info
 
 
 def _atomic_json(path, value):
@@ -219,9 +233,10 @@ def run(config_path, output_dir, now=None):
         panel, price_failures = download_panel(
             requested, period="6mo", asof=asof, min_history=1,
         )
-        missing = sorted(set(requested) - set(panel))
-        if missing:
-            raise ValueError("No se pueden valorar posiciones/órdenes: " + ",".join(missing))
+        # The benchmark historical panel still defines the existing gap replay.
+        # A current snapshot alone must never pretend that gap was recovered.
+        if benchmark not in panel:
+            raise ValueError("Benchmark sin historial para comprobar sesiones pendientes")
         decision = None
         fundamental_failures = {}
 
@@ -232,7 +247,11 @@ def run(config_path, output_dir, now=None):
             config, panel, benchmark, working_state, asof,
         )
 
-    bars = {ticker: current_bar(frame) for ticker, frame in panel.items()}
+    if due:
+        bars = {ticker: current_bar(frame) for ticker, frame in panel.items()}
+        quote_source = {"status": "independent_adjusted_history"}
+    else:
+        bars, quote_source = _daily_marks(panel, asof, requested)
     updated, changed = advance(
         config, bars, asof, bars[benchmark]["close"], decision=decision, state=working_state,
     )
@@ -246,6 +265,7 @@ def run(config_path, output_dir, now=None):
     return {
         "status": "ok",
         "session": asof,
+        "quote_source": quote_source,
         "month_end": context["is_month_end"],
         "decision_recorded": decision is not None,
         "recovered_mark_sessions": recovered_sessions,
