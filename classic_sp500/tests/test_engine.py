@@ -468,6 +468,16 @@ class SAndP500ClassicTests(unittest.TestCase):
                 self.assertEqual(second["status"], "already_recorded")
                 self.assertEqual(path.read_text(encoding="utf-8"), unchanged)
 
+    def test_code_push_never_runs_historical_market_open_fills(self):
+        workflow = (Path(__file__).resolve().parents[2]
+                    / ".github/workflows/classic_sp500.yml").read_text()
+        self.assertIn(
+            "if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'",
+            workflow)
+        self.assertNotIn("if: github.event_name != 'pull_request'", workflow)
+        self.assertIn("Record schedule health", workflow)
+        self.assertIn("github.event_name == 'schedule'", workflow)
+
     def test_non_held_missing_symbols_are_not_individually_refetched(self):
         from unittest.mock import patch
         with patch.object(classic.market, "_download", return_value={}) as download:
