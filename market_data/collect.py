@@ -11,7 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from market_data.snapshot import make_snapshot, provider_symbol, write_immutable  # noqa: E402
+from market_data.snapshot import (make_snapshot, normalize_bar, provider_symbol,
+                                  write_immutable, load_snapshot)  # noqa: E402
 from timesfm_strategy.run import _download, _last_row, calendar, load_universe  # noqa: E402
 
 UNIVERSE = "weekly_ml/universe_sp500_2026-09-29.csv"
@@ -44,7 +45,8 @@ def collect(session: str, symbols: list[str], *,
     for symbol in requested:
         source = translate[symbol]
         try:
-            found[symbol] = extract(panel[source], session, source)
+            normalized = normalize_bar(extract(panel[source], session, source), session, source)
+            found[symbol] = {k: v for k, v in normalized.items() if k != "provider_symbol"}
         except (ValueError, KeyError, TypeError) as exc:
             missing[symbol] = type(exc).__name__ + ": " + str(exc)[:120]
 
@@ -58,7 +60,8 @@ def collect(session: str, symbols: list[str], *,
         attempted += 1
         try:
             recovered = downloader([source], start, end, allow_missing=True)
-            value = extract(recovered[source], session, source)
+            normalized = normalize_bar(extract(recovered[source], session, source), session, source)
+            value = {k: v for k, v in normalized.items() if k != "provider_symbol"}
             for symbol in requested:
                 if translate[symbol] == source and symbol in missing:
                     found[symbol] = value.copy()
@@ -90,7 +93,7 @@ def run():
     path, created = write_immutable(SNAPSHOTS, snapshot)
     return {"status": "snapshot_written" if created else "snapshot_already_exists",
             "session": session, "path": str(path.relative_to(ROOT)),
-            "sha256": snapshot["sha256"], "observed": len(found),
+            "sha256": load_snapshot(path, session=session)["sha256"], "observed": len(found),
             "missing_count": len(missing),
             "missing_symbols": sorted(missing), "frozen_coverage": count,
             "previous_session": previous, "next_session": next_session}
