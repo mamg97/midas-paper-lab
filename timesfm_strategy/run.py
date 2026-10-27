@@ -101,21 +101,51 @@ def load_universe(relative_path):
 
 
 def _download(tickers, start, end, allow_missing=False):
+    """Shared raw Yahoo reader for TimesFM and all nine classic paper books.
+
+    Bad vendor *batches* are bisected with a global, bounded retry budget.
+    The returned frames are always real provider observations; downstream
+    consumers still require exact dated OHLC and enforce coverage separately.
+    """
     import yfinance as yf
     symbols = sorted(set(tickers))
     out = {}
-    for index in range(0, len(symbols), 40):
-        batch = symbols[index:index + 40]
-        # Isolated batches limit Yahoo response failures; never infer missing bars.
-        raw = yf.download(batch, start=start, end=end, interval="1d",
-                          auto_adjust=False, actions=True, group_by="ticker",
-                          threads=False, progress=False)
+    # Guard against a provider outage causing exponential calls (or expenses).
+    # At most 24 additional sub-batch reads across this entire invocation.
+    extra_reads_left = 24
+
+    def absorb(batch, *, counted=False):
+        nonlocal extra_reads_left
+        if counted:
+            if extra_reads_left <= 0:
+                return
+            extra_reads_left -= 1
+        try:
+            raw = yf.download(
+                batch, start=start, end=end, interval="1d",
+                auto_adjust=False, actions=True, group_by="ticker",
+                threads=False, progress=False,
+            )
+        except Exception:
+            if not allow_missing:
+                raise
+            # One bad symbol in a vendor request must not drop the other 39.
+            # Split only while the bounded budget can buy two genuine reads.
+            if len(batch) <= 1 or extra_reads_left < 2:
+                return
+            middle = len(batch) // 2
+            absorb(batch[:middle], counted=True)
+            absorb(batch[middle:], counted=True)
+            return
         for ticker in batch:
             try:
                 out[ticker] = _series(raw, ticker)
-            except ValueError:
+            except (ValueError, KeyError, TypeError):
                 if not allow_missing:
                     raise
+
+    for index in range(0, len(symbols), 40):
+        absorb(symbols[index:index + 40])
     return out
 
 
