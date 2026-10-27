@@ -5,12 +5,14 @@ on:
     branches: ['main']
     paths:
       - 'buy_the_dip_strategy/**'
+      - 'market_data/**'
       - 'strategy_comparison/**'
       - 'research/BUY_THE_DIP_SOURCE_STRATEGY.md'
       - '.github/workflows/buy_the_dip_strategy.yml'
   pull_request:
     paths:
       - 'buy_the_dip_strategy/**'
+      - 'market_data/**'
       - 'strategy_comparison/**'
       - 'research/BUY_THE_DIP_SOURCE_STRATEGY.md'
       - '.github/workflows/buy_the_dip_strategy.yml'
