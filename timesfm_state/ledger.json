@@ -26,6 +26,10 @@
         {
           "date": "2026-10-23",
           "nav": 99185.48241380019
+        },
+        {
+          "date": "2026-10-26",
+          "nav": 99655.2140408321
         }
       ],
       "events": [
@@ -38,7 +42,7 @@
           "ticker": "SPY"
         }
       ],
-      "nav": 99185.48241380019,
+      "nav": 99655.2140408321,
       "pending": [],
       "positions": {
         "SPY": {
@@ -54,7 +58,7 @@
       "trades": []
     },
     "timesfm": {
-      "cash": 102898.66775688078,
+      "cash": 20579.733936539946,
       "equity": [
         {
           "date": "2026-10-16",
@@ -79,6 +83,10 @@
         {
           "date": "2026-10-23",
           "nav": 102898.66775688078
+        },
+        {
+          "date": "2026-10-26",
+          "nav": 102831.60291244305
         }
       ],
       "events": [
@@ -184,60 +192,148 @@
           "count": 8,
           "date": "2026-10-23",
           "event": "signal"
-        }
-      ],
-      "nav": 102898.66775688078,
-      "pending": [
+        },
         {
-          "predicted_return": 0.14807939529418945,
-          "score": 0.10287219126746253,
-          "signal_date": "2026-10-23",
+          "date": "2026-10-26",
+          "event": "buy",
+          "fx": 1.1221455335617065,
+          "price_eur": 15.763410160519667,
+          "shares": 652.116964,
           "ticker": "LKQ"
         },
         {
-          "predicted_return": 0.03350484371185303,
-          "score": 0.014916843365804337,
-          "signal_date": "2026-10-23",
+          "date": "2026-10-26",
+          "event": "buy",
+          "fx": 1.1221455335617065,
+          "price_eur": 109.47902232079733,
+          "shares": 93.895496,
           "ticker": "CBRE"
         },
         {
-          "predicted_return": 0.025982975959777832,
-          "score": 0.010972605659106401,
-          "signal_date": "2026-10-23",
+          "date": "2026-10-26",
+          "event": "buy",
+          "fx": 1.1221455335617065,
+          "price_eur": 138.9462522220035,
+          "shares": 73.982471,
           "ticker": "BKNG"
         },
         {
-          "predicted_return": 0.019389748573303223,
-          "score": 0.010786515727564188,
-          "signal_date": "2026-10-23",
+          "date": "2026-10-26",
+          "event": "buy",
+          "fx": 1.1221455335617065,
+          "price_eur": 14.042630415311882,
+          "shares": 732.027183,
           "ticker": "HBAN"
         },
         {
-          "predicted_return": 0.025097966194152832,
-          "score": 0.008776792865159005,
-          "signal_date": "2026-10-23",
+          "date": "2026-10-26",
+          "event": "buy",
+          "fx": 1.1221455335617065,
+          "price_eur": 122.16643044461104,
+          "shares": 84.144123,
           "ticker": "LDOS"
         },
         {
-          "predicted_return": 0.019348621368408203,
-          "score": 0.006736148425852568,
-          "signal_date": "2026-10-23",
+          "date": "2026-10-26",
+          "event": "buy",
+          "fx": 1.1221455335617065,
+          "price_eur": 225.5825932850531,
+          "shares": 45.569062,
           "ticker": "IBM"
         },
         {
-          "predicted_return": 0.022495269775390625,
-          "score": 0.006312946724862156,
-          "signal_date": "2026-10-23",
+          "date": "2026-10-26",
+          "event": "buy",
+          "fx": 1.1221455335617065,
+          "price_eur": 493.8191159442568,
+          "shares": 20.816503,
           "ticker": "NOC"
         },
         {
-          "predicted_return": 0.01807534694671631,
-          "score": 0.006254727429202835,
-          "signal_date": "2026-10-23",
+          "date": "2026-10-26",
+          "event": "buy",
+          "fx": 1.1221455335617065,
+          "price_eur": 67.00340934209785,
+          "shares": 153.418867,
           "ticker": "OTIS"
         }
       ],
-      "positions": {},
+      "nav": 102831.60291244305,
+      "pending": [],
+      "positions": {
+        "BKNG": {
+          "cost_eur": 10289.866662648632,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-26",
+          "entry_fx": 1.1221455335617065,
+          "entry_price_eur": 138.9462522220035,
+          "shares": 73.982471,
+          "signal_date": "2026-10-23"
+        },
+        "CBRE": {
+          "cost_eur": 10289.86668950874,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-26",
+          "entry_fx": 1.1221455335617065,
+          "entry_price_eur": 109.47902232079733,
+          "shares": 93.895496,
+          "signal_date": "2026-10-23"
+        },
+        "HBAN": {
+          "cost_eur": 10289.866772015708,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-26",
+          "entry_fx": 1.1221455335617065,
+          "entry_price_eur": 14.042630415311882,
+          "shares": 732.027183,
+          "signal_date": "2026-10-23"
+        },
+        "IBM": {
+          "cost_eur": 10289.866766706895,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-26",
+          "entry_fx": 1.1221455335617065,
+          "entry_price_eur": 225.5825932850531,
+          "shares": 45.569062,
+          "signal_date": "2026-10-23"
+        },
+        "LDOS": {
+          "cost_eur": 10289.866736952097,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-26",
+          "entry_fx": 1.1221455335617065,
+          "entry_price_eur": 122.16643044461104,
+          "shares": 84.144123,
+          "signal_date": "2026-10-23"
+        },
+        "LKQ": {
+          "cost_eur": 10289.866763341004,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-26",
+          "entry_fx": 1.1221455335617065,
+          "entry_price_eur": 15.763410160519667,
+          "shares": 652.116964,
+          "signal_date": "2026-10-23"
+        },
+        "NOC": {
+          "cost_eur": 10289.86669561948,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-26",
+          "entry_fx": 1.1221455335617065,
+          "entry_price_eur": 493.8191159442568,
+          "shares": 20.816503,
+          "signal_date": "2026-10-23"
+        },
+        "OTIS": {
+          "cost_eur": 10289.86673354827,
+          "dividends_eur": 0.0,
+          "entry_date": "2026-10-26",
+          "entry_fx": 1.1221455335617065,
+          "entry_price_eur": 67.00340934209785,
+          "shares": 153.418867,
+          "signal_date": "2026-10-23"
+        }
+      },
       "trades": [
         {
           "buy_cost_eur": 11428.571404459093,
@@ -346,12 +442,16 @@
     {
       "date": "2026-10-23",
       "nav": 102898.66775688078
+    },
+    {
+      "date": "2026-10-26",
+      "nav": 102831.60291244305
     }
   ],
   "first_session": "2026-10-16",
   "fx_method": "previous_XNYS_session_EURUSD_close_at_open; current_EURUSD_close_at_mark",
   "initial_capital": 100000.0,
-  "last_session": "2026-10-23",
+  "last_session": "2026-10-26",
   "last_signal_session": "2026-10-23",
   "schema_version": 1,
   "signals": [
