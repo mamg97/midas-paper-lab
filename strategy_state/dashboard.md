@@ -1,6 +1,6 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-10-27T07:40:13.375720+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-10-27T07:59:34.343932+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
@@ -15,15 +15,15 @@ La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. L
 | Bollinger ruptura, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 1 posición abierta | 2026-09-28 | 2026-10-09 | 0.48 % | 0.13 % | — | -0.35 % | — |
 | Turtle 20/10 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | 1 posición abierta | 2026-09-28 | 2026-10-09 | 0.48 % | 0.13 % | — | -0.35 % | — |
 | Turtle 55/20 largo, adaptación nueva | Campaña nueva 2026 · señal técnica adaptada | demo_con_diario | Sin compras · en efectivo | 2026-09-28 | 2026-10-09 | 0.00 % | 0.00 % | — | 0.00 % | — |
-| S&P 500 v2 · Equiponderación S&P 500 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 490 posiciones · 13 compras paper para próxima apertura | 2026-10-12 | 2026-10-23 | -0.79 % | 1.64 % | — | -0.79 % | — |
-| S&P 500 v2 · EMA/RSI | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-23 | -1.03 % | 2.51 % | — | -1.03 % | — |
-| S&P 500 v2 · Genético congelado (reglas) | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-23 | -1.12 % | 2.10 % | — | -1.12 % | — |
-| S&P 500 v2 · MACD | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-23 | -0.50 % | 2.07 % | — | -1.74 % | — |
-| S&P 500 v2 · RSI reversión | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-23 | -0.33 % | 2.55 % | — | -1.21 % | — |
-| S&P 500 v2 · Bollinger ruptura | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-23 | -1.70 % | -1.06 % | — | -1.70 % | — |
-| S&P 500 v2 · Turtle 20/10 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-23 | -1.04 % | -1.40 % | — | -1.84 % | — |
-| S&P 500 v2 · Turtle 55/20 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-23 | -0.69 % | -1.52 % | — | -1.79 % | — |
-| S&P 500 v2 · Referencia SPY · inicio clásicos S&P500 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 1 posición abierta | 2026-10-12 | 2026-10-23 | -0.50 % | -0.92 % | — | -1.61 % | — |
+| S&P 500 v2 · Equiponderación S&P 500 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 490 posiciones · 13 compras paper para próxima apertura | 2026-10-12 | 2026-10-26 | 0.20 % | 1.85 % | — | -0.79 % | — |
+| S&P 500 v2 · EMA/RSI | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-26 | -0.60 % | 1.90 % | — | -1.63 % | — |
+| S&P 500 v2 · Genético congelado (reglas) | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-26 | 0.48 % | 2.60 % | — | -1.12 % | — |
+| S&P 500 v2 · MACD | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-26 | 0.90 % | 2.99 % | — | -1.74 % | — |
+| S&P 500 v2 · RSI reversión | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-26 | 0.85 % | 3.43 % | — | -1.21 % | — |
+| S&P 500 v2 · Bollinger ruptura | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-26 | 0.12 % | -0.94 % | — | -1.70 % | — |
+| S&P 500 v2 · Turtle 20/10 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-26 | 0.67 % | -0.74 % | — | -1.84 % | — |
+| S&P 500 v2 · Turtle 55/20 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 8 posiciones abiertas | 2026-10-12 | 2026-10-26 | 0.63 % | -0.90 % | — | -1.79 % | — |
+| S&P 500 v2 · Referencia SPY · inicio clásicos S&P500 | MIDAS 2026 · nueva campaña prospectiva S&P 500 completo (503 símbolos); no hereda libro antiguo de ocho acciones | demo_con_diario | 1 posición abierta | 2026-10-12 | 2026-10-26 | 0.67 % | -0.25 % | — | -1.61 % | — |
 | ML semanal · referencia SPY | Campaña ML semanal 2026 · referencia SPY | demo_con_diario | 1 posición abierta | 2026-10-09 | 2026-10-26 | 0.25 % | -3.09 % | 9.85 % | -3.33 % | -7.25 |
 | ML semanal · referencia SPY · liquidación diferida | Campaña ML semanal 2026 · referencia SPY · libro semanal independiente | weekly_settled_demo | 1 señal congelada · liquidación semanal pendiente | 2026-10-02 | 2026-10-23 | — | -2.55 % | — | -3.33 % | — |
 | ML semanal · referencia RSP | Campaña ML semanal 2026 · referencia RSP equiponderada | demo_con_diario | 1 posición abierta | 2026-10-09 | 2026-10-26 | 0.05 % | 0.78 % | 11.42 % | -1.13 % | 1.61 |
