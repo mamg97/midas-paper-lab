@@ -155,6 +155,11 @@ def snapshot_path(root: Path, session: str) -> Path:
     return Path(root) / "XNYS" / (_day(session) + ".json")
 
 
+def _economic_data(snapshot: dict) -> dict:
+    """Ignore timestamp/checksum only for identical-session idempotent retries."""
+    return {k: v for k, v in snapshot.items() if k not in ("sha256", "captured_at_utc")}
+
+
 def write_immutable(root: Path, snapshot: dict) -> tuple[Path, bool]:
     """Atomic create-only; conflict requires a *separate* reviewed revision."""
     validate_snapshot(snapshot)
@@ -162,7 +167,7 @@ def write_immutable(root: Path, snapshot: dict) -> tuple[Path, bool]:
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists():
         existing = load_snapshot(path, session=snapshot["session"])
-        if existing["sha256"] != snapshot["sha256"]:
+        if _economic_data(existing) != _economic_data(snapshot):
             raise ValueError("Immutable session exists with different content")
         return path, False
     with tempfile.NamedTemporaryFile("w", encoding="utf-8",
@@ -178,7 +183,7 @@ def write_immutable(root: Path, snapshot: dict) -> tuple[Path, bool]:
             os.link(temp, path)  # exclusive atomic creation: never replace
         except FileExistsError:
             existing = load_snapshot(path, session=snapshot["session"])
-            if existing["sha256"] != snapshot["sha256"]:
+            if _economic_data(existing) != _economic_data(snapshot):
                 raise ValueError("Concurrent different session snapshot")
             return path, False
     finally:
