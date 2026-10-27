@@ -5,10 +5,12 @@ on:
     branches: ['main']
     paths:
       - 'capital_cycle/**'
+      - 'market_data/**'
       - '.github/workflows/capital_cycle.yml'
   pull_request:
     paths:
       - 'capital_cycle/**'
+      - 'market_data/**'
       - 'strategy_comparison/**'
       - 'research/CAPITAL_CYCLE_STRATEGY.md'
       - '.github/workflows/capital_cycle.yml'
