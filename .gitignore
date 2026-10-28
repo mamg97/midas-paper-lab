@@ -8,4 +8,10 @@ __pycache__/
 *.p12
 *.pfx
 **/snapshots/
+# Public validated OHLC is the sole snapshot tree persisted in Git.
+!/market_data/snapshots/
+/market_data/snapshots/*
+!/market_data/snapshots/XNYS/
+/market_data/snapshots/XNYS/*
+!/market_data/snapshots/XNYS/????-??-??.json
 *.csv.gz

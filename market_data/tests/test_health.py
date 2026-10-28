@@ -2,6 +2,7 @@
 import json
 import tempfile
 import unittest
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -13,6 +14,19 @@ NOW = datetime(2026, 10, 27, 23, tzinfo=timezone.utc)
 
 
 class SourceHealthTests(unittest.TestCase):
+    def test_public_snapshot_is_publishable_but_other_snapshot_trees_stay_ignored(self):
+        root = Path(__file__).resolve().parents[2]
+        for path, ignored in [
+            ("market_data/snapshots/XNYS/2026-10-27.json", False),
+            ("market_data/snapshots/XNYS/debug.txt", True),
+            ("market_data/snapshots/private/secrets.json", True),
+            ("other/snapshots/XNYS/2026-10-27.json", True),
+        ]:
+            with self.subTest(path=path):
+                result = subprocess.run(["git", "check-ignore", "--no-index", "-q", path],
+                                        cwd=root, capture_output=True)
+                self.assertEqual(result.returncode, 0 if ignored else 1)
+
     def test_verified_partial_source_reports_age_hash_and_missing(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
