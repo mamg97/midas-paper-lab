@@ -30,6 +30,10 @@
         {
           "date": "2026-10-26",
           "nav": 99655.2140408321
+        },
+        {
+          "date": "2026-10-27",
+          "nav": 100415.28485961781
         }
       ],
       "events": [
@@ -42,7 +46,7 @@
           "ticker": "SPY"
         }
       ],
-      "nav": 99655.2140408321,
+      "nav": 100415.28485961781,
       "pending": [],
       "positions": {
         "SPY": {
@@ -87,6 +91,10 @@
         {
           "date": "2026-10-26",
           "nav": 102831.60291244305
+        },
+        {
+          "date": "2026-10-27",
+          "nav": 102191.8645617358
         }
       ],
       "events": [
@@ -258,7 +266,7 @@
           "ticker": "OTIS"
         }
       ],
-      "nav": 102831.60291244305,
+      "nav": 102191.8645617358,
       "pending": [],
       "positions": {
         "BKNG": {
@@ -446,12 +454,16 @@
     {
       "date": "2026-10-26",
       "nav": 102831.60291244305
+    },
+    {
+      "date": "2026-10-27",
+      "nav": 102191.8645617358
     }
   ],
   "first_session": "2026-10-16",
   "fx_method": "previous_XNYS_session_EURUSD_close_at_open; current_EURUSD_close_at_mark",
   "initial_capital": 100000.0,
-  "last_session": "2026-10-26",
+  "last_session": "2026-10-27",
   "last_signal_session": "2026-10-23",
   "schema_version": 1,
   "signals": [
