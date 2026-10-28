@@ -1,0 +1,19 @@
+{
+  "schema": "midas.corporate_action_reviews.v1",
+  "reviews": [
+    {
+      "ticker": "GEV",
+      "kind": "cash_dividend",
+      "currency": "USD",
+      "amount": 0.5,
+      "vendor_ex_session": "2026-10-27",
+      "issuer_record_date": "2026-10-27",
+      "issuer_payment_date": "2026-11-24",
+      "announced_on": "2026-09-30",
+      "verified_on": "2026-10-28",
+      "source_url": "https://www.gevernova.com/news/press-releases/ge-vernova-declares-fourth-quarter-2026-dividend",
+      "date_basis": "Yahoo dated action agrees with issuer record date and amount.",
+      "recognition": "Preserve existing paper ex-session dividend model; this is not receipt of real cash on the payment date."
+    }
+  ]
+}

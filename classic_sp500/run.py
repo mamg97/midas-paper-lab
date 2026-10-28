@@ -522,7 +522,8 @@ def run(config_path, state_path):
 
         state, recovered, blocked = recover_passive_books(
             config, state, sessions_after, quotes,
-            recorded_at=datetime.now(timezone.utc).isoformat(timespec="seconds"))
+            recorded_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            reviews=market.read(ROOT / "market_data/corporate_action_reviews.json"))
         validate_state(state, config)
         if day <= state["last_session"]:
             if recovered:

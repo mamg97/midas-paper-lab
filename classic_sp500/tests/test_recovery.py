@@ -68,3 +68,21 @@ class PassiveRecoveryTests(unittest.TestCase):
             self.assertEqual(got, self.state)
             self.assertEqual(restored, [])
             self.assertIn("require_review", blocked["hold"])
+
+    def test_reviewed_dividend_is_recorded_once_under_existing_paper_policy(self):
+        def quotes(day):
+            bars, identity = self.quotes(day)
+            bars["AAA"]["dividend"] = .5 if day.endswith("27") else 0
+            return bars, identity
+        reviews = {"reviews": [{"ticker": "AAA", "kind": "cash_dividend", "currency": "USD",
+                    "amount": .5, "vendor_ex_session": "2026-10-27",
+                    "source_url": "https://issuer.example/dividend", "verified_on": "2026-10-28"}]}
+        got, restored, _ = recover_passive_books(self.config, self.state, self.days, quotes,
+                                                recorded_at="now", reviews=reviews)
+        self.assertEqual(restored, ["hold"])
+        self.assertEqual(got["books"]["hold"]["cash"], 50.5)
+        self.assertEqual(got["books"]["hold"]["nav"], 153.5)
+        again, restored, _ = recover_passive_books(self.config, got, self.days, quotes,
+                                                  recorded_at="later", reviews=reviews)
+        self.assertEqual(got, again)
+        self.assertEqual(restored, [])

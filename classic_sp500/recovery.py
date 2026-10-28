@@ -5,7 +5,17 @@ import copy
 import math
 
 
-def recover_passive_books(config, state, sessions_after, quote_loader, *, recorded_at):
+def reviewed_dividend(reviews, ticker, day, amount):
+    for item in reviews.get("reviews", []):
+        if (item.get("ticker") == ticker and item.get("vendor_ex_session") == day
+                and item.get("kind") == "cash_dividend" and item.get("currency") == "USD"
+                and item.get("amount") == amount and item.get("source_url", "").startswith("https://")
+                and item.get("verified_on")):
+            return item["source_url"]
+    return None
+
+
+def recover_passive_books(config, state, sessions_after, quote_loader, *, recorded_at, reviews=None):
     result = copy.deepcopy(state)
     recovered, blocked = [], {}
     for name, original in state["books"].items():
@@ -30,15 +40,26 @@ def recover_passive_books(config, state, sessions_after, quote_loader, *, record
                 bars, identity = quote_loader(day)
                 if not set(book["positions"]) <= set(bars):
                     raise ValueError("missing_historical_held_bar")
-                nav = float(book["cash"])
                 for ticker, pos in book["positions"].items():
                     row = bars[ticker]
-                    if row.get("dividend", 0) or row.get("split", 0):
+                    dividend = float(row.get("dividend", 0))
+                    if row.get("split", 0):
                         raise ValueError("corporate_action_requires_review")
+                    if dividend:
+                        source = reviewed_dividend(reviews or {}, ticker, day, dividend)
+                        if not source or not math.isfinite(dividend) or dividend < 0:
+                            raise ValueError("corporate_action_requires_review")
+                        amount = pos["shares"] * dividend
+                        book["cash"] += amount
+                        pos["dividends"] = pos.get("dividends", 0) + amount
+                        book["events"].append({"date": day, "type": "dividend",
+                            "ticker": ticker, "amount": amount, "source_url": source,
+                            "recorded_at_utc": recorded_at, "recognition": "existing_paper_ex_session_model"})
                     close = float(row["close"])
                     if not math.isfinite(close) or close <= 0:
                         raise ValueError("invalid_close")
-                    nav += pos["shares"] * close
+                nav = float(book["cash"]) + sum(pos["shares"] * float(bars[ticker]["close"])
+                                               for ticker, pos in book["positions"].items())
                 if not math.isfinite(nav) or nav < 0:
                     raise ValueError("invalid_nav")
                 marks.append({"date": day, "nav": nav, "late_mark_only": True,
