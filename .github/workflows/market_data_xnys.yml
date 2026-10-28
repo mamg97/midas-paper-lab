@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'market_data/**'
+      - '.gitignore'
       - '.github/workflows/market_data_xnys.yml'
   schedule:
     - cron: '07 23 * * 1-5'
@@ -48,3 +49,11 @@ jobs:
           python strategy_comparison/publish_state.py \
             --message "Record immutable common XNYS OHLC snapshot" \
             --path market_data/snapshots
+      - name: Preserve captured bytes even if Git publication failed
+        if: ${{ always() && steps.capture.outcome == 'success' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: common-xnys-ohlc-${{ github.run_id }}
+          path: market_data/snapshots/XNYS/*.json
+          if-no-files-found: error
+          retention-days: 30
