@@ -1,0 +1,570 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-28T21:28:09.118001+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/87035012",
+    "published_date": "2022-05-14",
+    "youtube_video_id": "4JP1DgFH2TU",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 48500237
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 6062.524125,
+      "word_count": 14840,
+      "segment_count": 2637,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "4JP1DgFH2TU",
+    "youtube_url": "https://www.youtube.com/watch?v=4JP1DgFH2TU",
+    "title": "SHORT BONOS y LONG ORO | BUY THE DIP PODCAST",
+    "category": "sector_theme",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/87035012",
+    "published_date": "2022-05-14",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza la estrategia de Buy The Dip en el contexto de bonos, oro y minería, destacando la relación entre tipos de interés, inflación y políticas monetarias. Se discuten las oportunidades de inversión en minas de plata, como Diablillos y Abrazilver, basadas en descubrimientos técnicos, jurisdicción y potencial de valorización. Se menciona la caída de bonos del Tesoro estadounidense, la subida de tipos de interés de la FED, y la posibilidad de una burbuja en el mercado de acciones. También se analizan riesgos como la volatilidad de instrumentos financieros, la dependencia de políticas gubernamentales y la incertidumbre sobre la estabilidad de las hipotecas. La estrategia de inversión se basa en la expectativa de que los tipos de interés se dispararán para generar rendimientos reales positivos, y se sugiere la compra de opciones put para aprovechar posibles caídas en el valor de los bonos.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [
+        "La empresa tiene un capital de 160 millones de dólares, con una participación en proyectos como Arcas en Chile y Copita en Argentina, aunque algunos activos están en zonas prohibidas."
+      ],
+      "valuation": [
+        "La estrategia de corto en bonos se basa en la expectativa de que los tipos de interés se dispararán para generar rendimientos reales positivos.",
+        "La valoración de activos financieros (como hipotecas y bonos) depende de factores como la solvencia, el tipo de interés, la calidad crediticia y la estructura de deuda, lo que influye en su valor y riesgo de desaparición."
+      ],
+      "cycle_macro": [
+        "La inflación y la impresión de moneda han llevado a un aumento de los tipos de interés, afectando la rentabilidad de los instrumentos financieros.",
+        "La subida de tipos de interés está relacionada con la política monetaria de la FED para controlar la inflación y frenar el consumo.",
+        "La situación actual difiere de la burbuja de 2008, con escasez de construcción y demanda estable en el housing."
+      ],
+      "entry": [
+        "La estrategia de corto en bonos se basa en la expectativa de que los tipos de interés se dispararán para generar rendimientos reales positivos.",
+        "La estrategia de entrada en bonos a corto plazo incluye la compra de opciones put con strike en 90 dólares y vencimiento en enero de 2023, con una prima que ha aumentado de 0,40 a 1,20, reflejando un aumento en el valor del bono y una posible reducción en el valor de la estrategia si los tipos de interés suben rápidamente."
+      ],
+      "sizing": [
+        "La oferta de casas es limitada, con demanda estable y un impacto de la escasez de construcción en los precios."
+      ],
+      "add_hold": [
+        "El proyecto Diablillos tiene una estrategia de exploración con buenas descubrimientos, extendiendo su mineralización y mejorando las economías del proyecto."
+      ],
+      "exit": [
+        "El inversor evalúa la posibilidad de salir del mercado de opciones antes de su vencimiento para minimizar el riesgo de pérdida si el valor de las primas cae significativamente."
+      ],
+      "risk": [
+        "La subida de tipos de interés podría provocar un aumento de la demanda de liquidez y una deflación en activos financieros.",
+        "El mercado paga múltiplos elevados por empresas con promesas, pero no por empresas de calidad dudosa.",
+        "Se menciona que bonos basura (de bajo rating) tienen una alta probabilidad de quiebra y que la exigencia de rentabilidad elevada en el mercado incrementa su volatilidad y riesgo de desaparición."
+      ],
+      "technical": [
+        "Se explica cómo los bonos de alto rendimiento (AAA, AA) y los instrumentos de inversión de menor calidad (CDOs, CDS) están interrelacionados, con la volatilidad de los últimos aumentando debido a la demanda de rentabilidad en el mercado."
+      ],
+      "management": [
+        "El director tiene una trayectoria de experiencia en minería, con antecedentes en empresas como London y Barrick, y ha dirigido equipos de exploración en Sudamérica."
+      ],
+      "mistakes": [
+        "Se sugiere que la burbuja actual no es tan grave como la de 2008, pero hay dudas sobre la estabilidad de las hipotecas."
+      ]
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [
+      "Diablillos",
+      "Abrazilver"
+    ],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El análisis de bonos implica entender la historia monetaria y la evolución del sistema financiero, incluyendo la impresión de moneda y la inflación.",
+          "timestamp": "00:03:37",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La inflación y la impresión de moneda han llevado a un aumento de los tipos de interés, afectando la rentabilidad de los instrumentos financieros.",
+          "timestamp": "00:08:44",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La estrategia de corto en bonos se basa en la expectativa de que los tipos de interés se dispararán para generar rendimientos reales positivos.",
+          "timestamp": "00:09:33",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de bonos se enmarca en un contexto histórico de impresión de moneda y inflación, lo que influye en la evolución de los tipos de interés y la estrategia de inversión en corto. La estrategia se basa en la expectativa de que los tipos de interés se dispararán para generar rendimientos reales positivos, lo que podría llevar a una rotación de la demanda hacia instrumentos privados con mayores rendimientos."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "Los bonos del Tesoro estadounidense a más de 20 años han caído un 25% o 26%.",
+          "timestamp": "00:12:55",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La subida de tipos de interés podría provocar un aumento de la demanda de liquidez y una deflación en activos financieros.",
+          "timestamp": "00:14:35",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La subida de tipos de interés está relacionada con la política monetaria de la FED para controlar la inflación y frenar el consumo.",
+          "timestamp": "00:16:02",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento discute la relación entre la subida de tipos de interés y su impacto en la economía, destacando la caída de los bonos del Tesoro estadounidense, la posibilidad de una deflación en activos financieros y la política monetaria de la FED para controlar la inflación. También menciona burbujas en sectores como la vivienda y el NASDAQ, y la incertidumbre sobre el impacto de la subida de tipos en la economía."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "Las empresas cotizan a 30 veces las ventas, no generan beneficios y se comparan con burbujas anteriores.",
+          "timestamp": "00:23:12",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El mercado paga múltiplos elevados por empresas con promesas, pero no por empresas de calidad dudosa.",
+          "timestamp": "00:23:26",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La situación actual difiere de la burbuja de 2008, con escasez de construcción y demanda estable en el housing.",
+          "timestamp": "00:25:51",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El mercado está dispuesto a pagar más por empresas actuales que por empresas históricas, basado en perspectivas futuras.",
+          "timestamp": "00:25:57",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "La oferta de casas es limitada, con demanda estable y un impacto de la escasez de construcción en los precios.",
+          "timestamp": "00:26:05",
+          "scope": "hosts",
+          "confidence": 0.4,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "Se sugiere que la burbuja actual no es tan grave como la de 2008, pero hay dudas sobre la estabilidad de las hipotecas.",
+          "timestamp": "00:26:49",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.3,
+          "automation_hint": "null"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis discute la valoración de empresas a 30 veces las ventas, la posibilidad de burbuja en el mercado, la comparación con la burbuja de 2008, y la estabilidad de la demanda en el housing. Se menciona que el mercado paga múltiplos elevados por empresas actuales, pero hay dudas sobre la estabilidad de las hipotecas y la posibilidad de corrección. La escasez de construcción y la demanda estable se destacan como factores que diferencian la situación actual de la burbuja de 2008."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se discuten los riesgos asociados a la burbuja de hipotecas y la volatilidad de instrumentos financieros en 2007-2008, destacando la relación entre la calidad crediticia, los tipos de interés y la estructura de deuda.",
+          "timestamp": "00:32:53",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona que bonos basura (de bajo rating) tienen una alta probabilidad de quiebra y que la exigencia de rentabilidad elevada en el mercado incrementa su volatilidad y riesgo de desaparición.",
+          "timestamp": "00:34:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "Se explica cómo los bonos de alto rendimiento (AAA, AA) y los instrumentos de inversión de menor calidad (CDOs, CDS) están interrelacionados, con la volatilidad de los últimos aumentando debido a la demanda de rentabilidad en el mercado.",
+          "timestamp": "00:36:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se señala que la valoración de activos financieros (como hipotecas y bonos) depende de factores como la solvencia, el tipo de interés, la calidad crediticia y la estructura de deuda, lo que influye en su valor y riesgo de desaparición.",
+          "timestamp": "00:36:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona que la burbuja de hipotecas en 2003-2007 fue causada por la subestimación del riesgo de deuda y la dependencia de refinanciación, lo que llevó a una crisis financiera cuando la calidad crediticia se deterioró.",
+          "timestamp": "00:36:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento discute los riesgos asociados a la burbuja de hipotecas y la volatilidad de instrumentos financieros, destacando la relación entre la calidad crediticia, los tipos de interés y la estructura de deuda. Se explican los factores que influyen en la valoración de activos financieros y se analizan los riesgos de desaparición de bonos basura y otros instrumentos de inversión de menor calidad, relacionados con la exigencia de rentabilidad en el mercado."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "Se discute la relación entre los tipos de interés de bonos basura y los bonos de alta calidad, destacando que los bonos basura tienen una exigencia de rentabilidad más alta y que esta puede afectar la economía.",
+          "timestamp": "00:42:51",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona que la inflación y los tipos de interés están en un proceso de ajuste, con la posibilidad de que los bonos basura no se disparen demasiado, lo que podría beneficiar la economía.",
+          "timestamp": "00:47:21",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se analiza la posibilidad de que la inflación suyacente siga subiendo durante unos meses, con un posible pico en los próximos meses, lo que podría afectar la economía y los tipos de interés.",
+          "timestamp": "00:48:05",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento discute la relación entre los tipos de interés de bonos basura y los bonos de alta calidad, destacando la exigencia de rentabilidad y su impacto en la economía. También se menciona la posibilidad de que la inflación siga subiendo durante unos meses, lo que podría afectar la economía y los tipos de interés."
+    },
+    {
+      "chunk": 6,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El análisis de los tipos de interés de la FED muestra una tendencia ascendente, con bonos a 10 años que han subido del 2,6 al 5% en un año y medio, lo que indica una posible subida significativa en los tipos de interés.",
+          "timestamp": "00:53:13",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La FED está reduciendo su balance, lo que podría llevar a una caída en el valor de los bonos a largo plazo, especialmente si los tipos de interés suben rápidamente, lo que afectaría a los inversores que poseen bonos antiguos con rendimientos más bajos.",
+          "timestamp": "00:55:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La subida de los tipos de interés de la FED es una señal de que los bancos centrales están respondiendo a la inflación y a la volatilidad global, lo que podría acelerar la subida de tipos en otros países, como Rusia y Japón, y afectar a los mercados financieros a nivel mundial.",
+          "timestamp": "00:59:00",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La estrategia de entrada en bonos a corto plazo incluye la compra de opciones put con strike en 90 dólares y vencimiento en enero de 2023, con una prima que ha aumentado de 0,40 a 1,20, reflejando un aumento en el valor del bono y una posible reducción en el valor de la estrategia si los tipos de interés suben rápidamente.",
+          "timestamp": "01:03:00",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de los tipos de interés de la FED muestra una tendencia ascendente, con bonos a 10 años que han subido del 2,6 al 5% en un año y medio, lo que indica una posible subida significativa en los tipos de interés. La FED está reduciendo su balance, lo que podría llevar a una caída en el valor de los bonos a largo plazo, especialmente si los tipos de interés suben rápidamente, lo que afectaría a los inversores que poseen bonos antiguos con rendimientos más bajos. La subida de los tipos de interés de la FED es una señal de que los bancos centrales están respondiendo a la inflación y a la volatilidad global, lo que podría acelerar la subida de tipos en otros países, como Rusia y Japón, y afectar a los mercados financieros a nivel mundial. La estrategia de entrada en bonos a corto plazo incluye la compra de opciones put con strike en 90 dólares y vencimiento en enero de 2023, con una prima que ha aumentado de 0,40 a 1,20, reflejando un aumento en el valor del bono y una posible reducción en el valor de la estrategia si los tipos de interés suben rápidamente."
+    },
+    {
+      "chunk": 7,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El inversor decide entrar en el mercado de opciones para aprovechar la posibilidad de ganancia alrededor del vencimiento de los contratos.",
+          "timestamp": "01:04:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El inversor analiza el valor de los instrumentos financieros, como el ETF inverso SHORT TTT, que ofrece un alto rendimiento en comparación con otros activos.",
+          "timestamp": "01:05:00",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El inversor prioriza la gestión del riesgo al evitar posiciones a largo plazo que puedan sufrir grandes caídas en el valor de las opciones al final del vencimiento.",
+          "timestamp": "01:04:20",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El inversor anticipa una posible caída parabólica en los precios de las opciones al final del vencimiento, basándose en la expectativa de una inflación inesperada.",
+          "timestamp": "01:04:40",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El inversor decide apalancar su posición en el mercado de opciones para maximizar el potencial de ganancia, utilizando instrumentos como el ETF inverso SHORT TTT.",
+          "timestamp": "01:05:20",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "El inversor evalúa la posibilidad de salir del mercado de opciones antes de su vencimiento para minimizar el riesgo de pérdida si el valor de las primas cae significativamente.",
+          "timestamp": "01:04:30",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El inversor discute una estrategia de inversión basada en el vencimiento de opciones y el uso de instrumentos financieros inversos, priorizando el manejo del riesgo y la posibilidad de ganancia alrededor de eventos macroeconómicos. Se menciona la posibilidad de una caída parabólica en los precios de las opciones y la decisión de apalancar posiciones para maximizar el rendimiento, evitando posiciones a largo plazo que puedan sufrir grandes caídas al final del vencimiento."
+    },
+    {
+      "chunk": 8,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El oro está en un nivel de precios que podría subir, con un descuento del 14% entre el precio del oro y las mineras de oro, lo que sugiere un buen momento para invertir en mineras.",
+          "timestamp": "01:17:41",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El sentimiento actual hacia el oro está en mínimos, similar a los de 2018 y 2015, aunque la situación económica sugiere que podría mejorar, lo que podría impulsar el precio del oro.",
+          "timestamp": "01:18:41",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Las mineras de oro están cotizando a niveles interesantes con un ratio de 13,5 veces, mientras que el Standard Samples está a 25 veces, lo que sugiere una oportunidad de inversión en mineras de oro.",
+          "timestamp": "01:21:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis sugiere que el oro podría subir debido a factores macroeconómicos como la inflación y la caída de empresas tecnológicas, lo que genera un descuento entre el precio del oro y las mineras. El sentimiento actual hacia el oro está en mínimos, pero la situación económica indica una posible mejora. Las mineras de oro están cotizando a niveles interesantes con un ratio de 13,5 veces, lo que sugiere una oportunidad de inversión."
+    },
+    {
+      "chunk": 9,
+      "evidence": [
+        {
+          "stage": "idea_generation",
+          "paraphrase": "El proyecto principal es Diablillos, una minera de plata con una trayectoria interesante y nombres creativos, aunque tiene problemas en la gestión y en la jurisdicción.",
+          "timestamp": "01:23:37",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "quality",
+          "paraphrase": "El proyecto Diablillos tiene una puntuación de jurisdicción alta (74) en Argentina, con una concentración de mineralización significativa y una buena relación de onzas de oro y plata.",
+          "timestamp": "01:26:21",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "balance_sheet",
+          "paraphrase": "La empresa tiene un capital de 160 millones de dólares, con una participación en proyectos como Arcas en Chile y Copita en Argentina, aunque algunos activos están en zonas prohibidas.",
+          "timestamp": "01:24:33",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El proyecto Diablillos tiene un valor potencial alto debido a su mineralización, con un resource estimate que incrementó un 37% en onzas de oro y 11% en onzas de plata en 2022.",
+          "timestamp": "01:31:01",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El proyecto se encuentra en una fase de exploración con buenas descubrimientos, extendiendo su mineralización y mejorando las economías del proyecto.",
+          "timestamp": "01:30:33",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "El proyecto es un candidato para inversión debido a su ubicación en Argentina, su historial de descubrimientos y su potencial de crecimiento en la minería de plata.",
+          "timestamp": "01:23:37",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El proyecto tiene un tamaño significativo con 1 millón de onzas de oro y 90 millones de onzas de plata, con una concentración de 21 gramos por tonelada de plata.",
+          "timestamp": "01:31:01",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "add_hold",
+          "paraphrase": "El proyecto tiene una estrategia de exploración con buenas descubrimientos, extendiendo su mineralización y mejorando las economías del proyecto.",
+          "timestamp": "01:30:33",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "El proyecto tiene un potencial de valorización si se logran más descubrimientos y se levantan las prohibiciones en zonas como el Lichin.",
+          "timestamp": "01:27:55",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El proyecto enfrenta riesgos como la prohibición de Open Pit en ciertas zonas y la dependencia de políticas gubernamentales que puedan afectar su operación.",
+          "timestamp": "01:27:47",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "technical",
+          "paraphrase": "El proyecto tiene buenas descubrimientos técnicos con intervalos de mineralización significativos, como 33 metros a 1 gramo de oro y 14 metros a 14 gramos de plata.",
+          "timestamp": "01:29:41",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "management",
+          "paraphrase": "El director tiene una trayectoria de experiencia en minería, con antecedentes en empresas como London y Barrick, y ha dirigido equipos de exploración en Sudamérica.",
+          "timestamp": "01:24:43",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "mistake",
+          "paraphrase": "El proyecto tuvo una mala colidación en la gestión reciente, pero ha mejorado su desempeño con buenas campañas de exploración y resultados positivos en 2022.",
+          "timestamp": "01:25:17",
+          "scope": "hosts",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "other",
+          "paraphrase": "El proyecto tiene una reputación de creatividad en los nombres de las mineras y una estrategia de exploración que se extiende a diferentes zonas del proyecto, incluyendo áreas superficiales y profundas."
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El proyecto Diablillos es una minera de plata en Argentina con una trayectoria interesante, buenas descubrimientos técnicos y una buena puntuación de jurisdicción. Tiene un capital significativo y una estrategia de exploración que ha mejorado sus economías en 2022. Sin embargo, enfrenta riesgos como la prohibición de Open Pit en ciertas zonas y depende de políticas gubernamentales. La empresa tiene un director con experiencia en minería y ha logrado incrementar su resource estimate en un 37% en onzas de oro y 11% en onzas de plata. El proyecto tiene un potencial de valorización si se logran más descubrimientos y se levantan las prohibiciones en zonas como el Lichin."
+    },
+    {
+      "chunk": 10,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa abrazilver tiene un potencial de valorización significativo debido a su depósito de plata Open Pit de gran tamaño y a su capacidad de apalancamiento financiero.",
+          "timestamp": "01:33:05",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "La empresa abrazilver podría ser una buena oportunidad de inversión debido a su alta concentración de plata y su potencial de descubrimientos adicionales en zonas exploratorias.",
+          "timestamp": "01:37:11",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La empresa abrazilver enfrenta riesgos de mercado relacionados con la volatilidad de los precios de la plata y la plata, así como con la posibilidad de que los descubrimientos no se materialicen según lo planeado.",
+          "timestamp": "01:39:01",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.6,
+          "automation_hint": "null"
+        }
+      ],
+      "chunk_summary": "El análisis de la empresa abrazilver se centra en su potencial de valorización por su depósito de plata Open Pit, su capacidad de apalancamiento financiero y su potencial de descubrimientos adicionales. Sin embargo, también se mencionan riesgos de mercado y la volatilidad de los precios de los metales. La empresa se presenta como una oportunidad de inversión con un alto potencial de rentabilidad, aunque con cierta incertidumbre en su ejecución y resultados."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
