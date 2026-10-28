@@ -14,6 +14,7 @@ sys.path.insert(0, str(ROOT))
 from market_data.snapshot import (make_snapshot, normalize_bar, provider_symbol,
                                   write_immutable, load_snapshot, snapshot_path)  # noqa: E402
 from timesfm_strategy.run import _download, _last_row, calendar, load_universe  # noqa: E402
+from market_data.revisions import append_missing, load_effective
 
 UNIVERSE = "weekly_ml/universe_sp500_2026-09-29.csv"
 SNAPSHOTS = ROOT / "market_data" / "snapshots"
@@ -33,8 +34,9 @@ def extract(frame, session: str, ticker: str) -> dict:
 
 
 def collect(session: str, symbols: list[str], *,
-            downloader=_download, attempts: int = MAX_RETRIES) -> tuple[dict, dict]:
-    requested = sorted(set(symbols) | {"SPY"})
+            downloader=_download, attempts: int = MAX_RETRIES,
+            include_benchmark=True) -> tuple[dict, dict]:
+    requested = sorted(set(symbols) | ({"SPY"} if include_benchmark else set()))
     translate = {symbol: provider_symbol(symbol, session) for symbol in requested}
     provider_names = sorted(set(translate.values()))
     start = (datetime.fromisoformat(session) - timedelta(days=6)).date().isoformat()
@@ -114,9 +116,32 @@ def run():
             "previous_session": previous, "next_session": next_session}
 
 
+def recover_missing():
+    when = calendar()
+    if when is None:
+        return {"status": "session_not_eligible"}
+    session = when[0]
+    effective = load_effective(SNAPSHOTS, session)
+    missing = sorted(effective["missing"])
+    if not missing:
+        return {"status": "no_missing_bars", "session": session}
+    found, failures = collect(session, missing, include_benchmark=False)
+    review = sorted(s for s, r in found.items() if r["dividend"] or r["split"])
+    found = {s: r for s, r in found.items() if s not in review}
+    if not found:
+        return {"status": "missing_bars_not_recovered", "session": session,
+                "missing_symbols": missing, "corporate_review_required": review}
+    path, record = append_missing(SNAPSHOTS, session, found,
+                                 captured_at_utc=datetime.now(timezone.utc).isoformat(timespec="seconds"))
+    return {"status": "missing_revision_written", "session": session,
+            "sha256": record["sha256"], "parent_sha256": record["parent_sha256"],
+            "path": str(path.relative_to(ROOT)), "recovered": sorted(found),
+            "corporate_review_required": review, "still_missing": sorted(failures)}
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--phase", choices=("check", "capture"), default="check")
+    parser.add_argument("--phase", choices=("check", "capture", "recover"), default="check")
     args = parser.parse_args()
     try:
         if args.phase == "check":
@@ -125,7 +150,7 @@ def main():
                 raise ValueError("Unusable frozen universe")
             print(json.dumps({"status": "valid", "frozen_universe": 503}))
             return 0
-        print(json.dumps(run(), ensure_ascii=False, sort_keys=True))
+        print(json.dumps(recover_missing() if args.phase == "recover" else run(), ensure_ascii=False, sort_keys=True))
         return 0
     except Exception as exc:
         print("MIDAS COMMON OHLC ERROR: " + repr(exc))

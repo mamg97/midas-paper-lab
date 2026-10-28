@@ -1,8 +1,8 @@
-# MIDAS market_data — fase 1, issue #58
+# MIDAS market_data — fuente común, issue #58
 
-Estado: productor prospectivo y contrato inmutable, con integración incremental
-como respaldo de barras RAW ausentes. La extracción única para todos los lectores
-y la recuperación completa de libros pausados siguen pendientes.
+Estado: fuente RAW diaria común obligatoria para las cinco familias. Las señales
+ajustadas, los fundamentales, FX y el benchmark RSP siguen independientes.
+La coordinación encadena consumidores después de la publicación verificada.
 
 ## Integraciones de valoración diaria (27/10/2026)
 
@@ -15,9 +15,10 @@ y la recuperación completa de libros pausados siguen pendientes.
   comprobar el replay histórico. Requiere el panel histórico del benchmark y
   bloquea cualquier sesión anterior sin precios obligatorios.
 
-Los lectores conservan precios propios discrepantes y registran el conflicto.
-Esto NO demuestra una extracción única ni la paridad de las cinco familias.
-No se han ejecutado capturas ni conciliaciones reales para validar estas PR.
+Las PR #63–#68 introdujeron inicialmente un respaldo; la política actual lee las
+barras RAW de una única captura. La prueba de integración compara los cinco
+adaptadores con los mismos bytes y comprueba que no reextraigan precios comunes.
+Un símbolo común ausente permanece ausente; no se inventa una cotización.
 
 ## Contrato
 
@@ -35,6 +36,10 @@ No se han ejecutado capturas ni conciliaciones reales para validar estas PR.
   Un hash inválido o un universo distinto bloquean el reintento sin sobrescribirlo.
 - Una revisión real de precios exige un artefacto complementario con procedencia
   y hash padre; nunca reescribir el JSON canónico silenciosamente.
+- `YYYY-MM-DD.revisions/<sha256>.json` solo añade símbolos ausentes: cadena de
+  hash base/padre, fecha real de recuperación y misma procedencia. Se rechazan
+  alteraciones de barras existentes, ramas ambiguas, fechas erróneas y acciones
+  corporativas que requieran revisión. La telemetría conserva hash base y efectivo.
 - PSKY->SKYD efectivo 2026-10-06 modifica solo ticker del proveedor.
 
 ## Operativa y calidad
@@ -42,23 +47,32 @@ No se han ejecutado capturas ni conciliaciones reales para validar estas PR.
 Las PR solo ejecutan unit tests y comprobación del universo.
 Workflow market_data_xnys.yml: schedule 23:07 UTC laborables o dispatch explícito
 con capture_session=true. No capturar ni publicar durante eventos push o PR.
+Los consumidores reutilizables arrancan tras publicar; `run_consumers=true` los
+habilita también en un dispatch explícito. Cada consumidor verifica la sesión
+elegible y hace checkout de main con los bytes ya publicados. Sus schedules
+independientes quedan como respaldo; los contadores de runtime del coordinador
+no sobrescriben los contadores de esos workflows. `source_health.json` informa
+por separado de calidad de fuente, resultados y libros actualizados/pausados.
 
 Comandos de validación:
 python -m unittest discover -s market_data/tests -v
 python market_data/collect.py --phase check
+python market_data/collect.py --phase recover
+python market_data/health.py --eligible
 
 ## Pendiente para cerrar #58
 
 1. Primer capture realmente programado con hash y cobertura verificables.
-2. Recuperación versionada de símbolos ausentes, sin sobrescribir original.
-3. Adaptadores read-only opt-in para clásicas y TimesFM, luego Buy The Dip,
-   Capital Cycle y Weekly ML: completar la transición desde el respaldo a una
-   captura compartida y verificar consumidores reales. Mantener FX, históricos
-   ajustados y fundamentales separados.
-4. Demostrar paridad de OHLC e independencia de cada libro bajo fallos.
+2. Verificar recuperación versionada y cadena coordinada en ejecución real.
+3. Verificar consumidores reales, manteniendo las fuentes de distinta frecuencia.
+4. Conservar independencia de libros bajo fallos y omisiones explícitas. La
+   recuperación pasiva no crea operaciones: expira BUYs no ejecutados, añade solo
+   marcas fechadas y exige evidencia para dividendos; estrategias activas o ventas
+   históricas sin decisión suficiente siguen en espera de revisión.
 5. Telemetría de fuente en Segundo Cerebro y verificación próxima sesión schedule.
-6. Coordinar captura y consumidores por finalización efectiva; un cron anterior
-   no garantiza que el archivo ya esté publicado. Weekly ML daily intenta primero
-   a las 22:17 UTC y la captura común está programada a las 23:07 UTC.
+6. Confirmar la siguiente sesión programada después de los cambios. La ejecución
+   manual reparada del 28/10 publicó la sesión 27/10 (490/503 + SPY); no sustituye
+   la prueba schedule. La primera captura schedule se perdió por .gitignore:
+   su hash del log no permite reconstruir sus bytes originales.
 
 Nunca insertar fills a posteriori ni alterar históricos, NAV, pesos o decisiones.

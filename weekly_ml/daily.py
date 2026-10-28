@@ -17,7 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-from market_data.consume import overlay
+from market_data.consume import canonical
 
 from paper import BENCHMARKS, _fractional_quantity, _select, digest, strategy_ids
 
@@ -209,49 +209,39 @@ def live_calendar(now=None):
 def download_bars(tickers, day, *, diagnostics=None):
     if not tickers:
         return {}
-    import yfinance as yf
-    import pandas as pd
     ordered = sorted(set(tickers))
-    raw = yf.download(ordered,
-                      start=(datetime.fromisoformat(day) - timedelta(days=4)).date().isoformat(),
-                      end=(datetime.fromisoformat(day) + timedelta(days=1)).date().isoformat(),
-                      interval="1d", auto_adjust=False, actions=False,
-                      group_by="ticker", threads=True, progress=False)
-    prices = {}
-    for ticker in ordered:
-        try:
+    prices, info = canonical(day, ordered, ROOT / "market_data/snapshots")
+    independent = info["independent_symbols"]
+    if independent:
+        import yfinance as yf
+        import pandas as pd
+        raw = yf.download(independent,
+                          start=(datetime.fromisoformat(day) - timedelta(days=4)).date().isoformat(),
+                          end=(datetime.fromisoformat(day) + timedelta(days=1)).date().isoformat(),
+                          interval="1d", auto_adjust=False, actions=False,
+                          group_by="ticker", threads=False, progress=False)
+        for ticker in independent:
             if raw is None or raw.empty:
                 continue
             if isinstance(raw.columns, pd.MultiIndex):
                 if ticker not in raw.columns.get_level_values(0):
                     continue
                 frame = raw[ticker]
-            else:
-                if len(ordered) != 1:
-                    raise ValueError("Datos sin identificar ticker")
+            elif len(independent) == 1:
                 frame = raw
-            frame = frame[frame.index.strftime("%Y-%m-%d") == day]
-            if len(frame) != 1:
-                continue
-            row = frame.iloc[0]
-            candidate = {"open": float(row["Open"]), "close": float(row["Close"])}
-            _price({ticker: candidate}, ticker, "open")
-            _price({ticker: candidate}, ticker, "close")
-            # Extra RAW fields make quote comparisons meaningful; the accounting
-            # engine continues to consume only its existing open/close contract.
-            candidate.update({"high": float(row.get("High", 0)),
-                              "low": float(row.get("Low", 0)),
-                              "dividend": 0., "split": 0.})
-            prices[ticker] = candidate
-        except (KeyError, ValueError, TypeError, OverflowError):
-            continue
-    prices, info = overlay(day, prices, ROOT / "market_data" / "snapshots")
+            else:
+                raise ValueError("Datos sin identificar ticker")
+            rows = frame[frame.index.strftime("%Y-%m-%d") == day]
+            if len(rows) == 1:
+                row = rows.iloc[0]
+                prices[ticker] = {"open": float(row["Open"]), "close": float(row["Close"])}
+                _price(prices, ticker, "open")
+                _price(prices, ticker, "close")
     if diagnostics is not None:
         diagnostics.update(info)
     missing = sorted(set(ordered) - set(prices))
     if missing:
         raise ValueError("Barra OHLC fechada ausente: " + ",".join(missing))
-    prices = {ticker: prices[ticker] for ticker in ordered}
     return prices
 
 

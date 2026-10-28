@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from market_data.consume import overlay
+from market_data.consume import canonical
 
 from engine import STRATEGY_ID, advance, benchmark_return_pct
 from factors import choose_portfolio, score_universe
@@ -31,8 +31,7 @@ from market import (
 
 def _daily_marks(panel, asof, requested):
     """Recover exact-session RAW marks without manufacturing adjusted history."""
-    bars = {ticker: current_bar(frame) for ticker, frame in panel.items()}
-    bars, diagnostic = overlay(asof, bars, ROOT / "market_data" / "snapshots")
+    bars, diagnostic = canonical(asof, requested, ROOT / "market_data/snapshots")
     bars = {ticker: bars[ticker] for ticker in requested if ticker in bars}
     missing = sorted(set(requested) - set(bars))
     if missing:
@@ -180,6 +179,8 @@ def run(config_path, output_dir, now=None):
             min_history=int(config["price_min_history_days"]),
             required=active | {benchmark},
         )
+        common, _ = canonical(asof, requested, ROOT / "market_data/snapshots")
+        panel = {ticker: frame for ticker, frame in panel.items() if ticker in common}
         if benchmark not in panel:
             raise ValueError("Benchmark sin historial completo")
         fundamentals, fundamental_failures = fundamentals_snapshot(
@@ -192,16 +193,15 @@ def run(config_path, output_dir, now=None):
         )
     else:
         requested = sorted(active | {benchmark})
-        panel, price_failures = download_panel(
-            requested, period="6mo", asof=asof, min_history=1,
-            required=active | {benchmark},
-        )
+        # Daily passive marks need no independent RAW provider download.
+        panel, price_failures = {}, {}
         decision = None
         fundamental_failures = {}
 
     if due:
-        bars = {ticker: current_bar(frame) for ticker, frame in panel.items()}
-        quote_source = {"status": "independent_adjusted_history"}
+        bars, quote_source = canonical(asof, requested, ROOT / "market_data/snapshots")
+        if not (active | {benchmark}) <= set(bars):
+            raise ValueError("Mandatory exposure missing from common RAW source")
     else:
         bars, quote_source = _daily_marks(panel, asof, requested)
     updated, changed = advance(

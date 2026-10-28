@@ -17,7 +17,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "paper_demo"))
-from market_data.consume import overlay as overlay_common_ohlc
+from market_data.consume import canonical as canonical_ohlc
 from strategies import signal
 
 spec = importlib.util.spec_from_file_location("timesfm_market_lib", ROOT / "timesfm_strategy/run.py")
@@ -458,42 +458,11 @@ def fetch_live(config, session, previous, symbols, required=()):
     start = (datetime.fromisoformat(session) - timedelta(days=config["execution"]["history_calendar_days"])).date().isoformat()
     end = (datetime.fromisoformat(session) + timedelta(days=1)).date().isoformat()
     frames = market._download(symbols + [config["benchmark_ticker"]], start, end, allow_missing=True)
-    today = {}
-    for ticker, frame in frames.items():
-        try:
-            today[ticker] = _dated_bar(frame, session, ticker)
-        except (ValueError, TypeError, KeyError):
-            continue
-
-    # Yahoo bulk downloads can return an unusable OHLC column for an otherwise
-    # active constituent, particularly within 40-symbol batches. Retry ONLY
-    # existing positions and next-open pending orders as isolated reads.
-    # Keep the frozen universe, eligibility denominator and strict dated-price
-    # contract unchanged. Missing held/sell bars remain fatal; missing new BUY
-    # bars are explicitly recorded as unfilled rather than backdated.
-    for ticker in sorted(set(required) - set(today)):
-        alias = verified_price_symbol(ticker, session)
-        for source in [ticker] + ([alias] if alias else []):
-            try:
-                recovered = market._download([source], start, end, allow_missing=True)
-                frame = recovered.get(source)
-                if frame is None:
-                    continue
-                row = _dated_bar(frame, session, ticker)
-            except (ValueError, TypeError, KeyError):
-                continue
-            if source != ticker:
-                # Price only, verified issuer rename; never synthesize the bar
-                # or create a trade under the new display symbol.
-                row["verified_price_source_symbol"] = source
-            frames[ticker] = frame
-            today[ticker] = row
-            break
-    # Canonical current-session marks are reused only when the direct feed
-    # lacks a valid dated bar. Existing direct values are never silently
-    # overwritten on provider revisions or snapshot corruption.
-    today, _common_diagnostic = overlay_common_ohlc(
-        session, today, ROOT / "market_data" / "snapshots")
+    # Historical signal panels remain independent; all RAW daily marks share
+    # exactly the same persisted source, without a consumer-side re-extraction.
+    today, _common_diagnostic = canonical_ohlc(
+        session, set(symbols) | set(required) | {config["benchmark_ticker"]},
+        ROOT / "market_data/snapshots")
     return frames, today
 
 
@@ -509,7 +478,7 @@ def run(config_path, state_path):
     if state is not None:
         validate_state(state, config)
         from recovery import recover_passive_books
-        from market_data.snapshot import load_snapshot, snapshot_path
+        from market_data.revisions import load_effective
 
         def sessions_after(start, end):
             import pandas_market_calendars as calendars
@@ -517,8 +486,9 @@ def run(config_path, state_path):
             return [str(value.date()) for value in days if str(value.date()) > start]
 
         def quotes(session):
-            record = load_snapshot(snapshot_path(ROOT / "market_data/snapshots", session), session=session)
-            return record["bars"], {"snapshot_sha256": record["sha256"]}
+            record = load_effective(ROOT / "market_data/snapshots", session)
+            return record["bars"], {"snapshot_sha256": record["base"]["sha256"],
+                                   "effective_sha256": record["effective_sha256"]}
 
         state, recovered, blocked = recover_passive_books(
             config, state, sessions_after, quotes,

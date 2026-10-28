@@ -18,6 +18,22 @@ class SAndP500ClassicTests(unittest.TestCase):
         self.diagnostic = {"eligible": 503, "total": 503, "missing": {}, "ticker_coverage_pct": 100}
         self.book = classic.initialize(self.config, self.day, self.fake, self.diagnostic)
 
+    def common_source(self, day, observations):
+        from tempfile import TemporaryDirectory
+        from unittest.mock import patch
+        from market_data.snapshot import make_snapshot, write_immutable
+        tmp = TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        root = Path(tmp.name)
+        record = make_snapshot(day, self.symbols, observations,
+                               captured_at_utc=day + "T23:00:00+00:00")
+        write_immutable(root / "market_data/snapshots", record)
+        return patch.object(classic, "ROOT", root)
+
+    def shared_row(self, day, close=102.):
+        return {"date": day, "open": 101., "high": 103., "low": 99., "close": close,
+                "volume": 500., "dividend": 0., "split": 0.}
+
     def test_universe_matches_existing_canonical_503(self):
         self.assertEqual(len(self.symbols), 503)
         self.assertIn("AAPL", self.symbols)
@@ -251,26 +267,15 @@ class SAndP500ClassicTests(unittest.TestCase):
         self.assertEqual(self.book["currency"], "USD")
 
 
-    def test_missing_mandatory_close_gets_isolated_same_session_retry(self):
+    def test_missing_mandatory_close_uses_shared_source_without_raw_retry(self):
         from unittest.mock import patch
-        synthetic = object()
-        quoted = {"Open": 101.0, "High": 103.0, "Low": 99.0, "Close": 102.0}
-        calls = []
-
-        def download(symbols, start, end, allow_missing=False):
-            calls.append(list(symbols))
-            if len(calls) == 1:
-                return {"SPY": synthetic}
-            self.assertEqual(symbols, ["SYNTH"])
-            return {"SYNTH": synthetic}
-
-        with (patch.object(classic.market, "_download", side_effect=download),
-              patch.object(classic.market, "_last_row", return_value=quoted)):
-            frames, bars = classic.fetch_live(
-                self.config, "2026-10-14", "2026-10-13", ["AAPL"], required={"SYNTH"})
-        self.assertEqual(len(calls), 2)
-        self.assertIn("SYNTH", frames)
-        self.assertEqual(bars["SYNTH"]["close"], 102.0)
+        day = "2026-10-14"
+        with self.common_source(day, {"AAPL": self.shared_row(day)}), patch.object(
+                classic.market, "_download", return_value={}) as download:
+            frames, bars = classic.fetch_live(self.config, day, "2026-10-13", ["AAPL"], required={"AAPL"})
+        self.assertEqual(download.call_count, 1)  # Historical signals only.
+        self.assertEqual(frames, {})
+        self.assertEqual(bars["AAPL"]["close"], 102.)
 
     def test_issuer_confirmed_rename_only_after_effective_session(self):
         self.assertIsNone(classic.verified_price_symbol("PSKY", "2026-10-05"))
@@ -278,51 +283,32 @@ class SAndP500ClassicTests(unittest.TestCase):
         self.assertEqual(classic.verified_price_symbol("PSKY", "2026-10-19"), "SKYD")
         self.assertIsNone(classic.verified_price_symbol("SPY", "2026-10-19"))
 
-    def test_renamed_held_security_reads_skyd_but_preserves_psky_key(self):
+    def test_renamed_held_security_reads_shared_skyd_but_preserves_psky_key(self):
         from unittest.mock import patch
-        synthetic = object()
-        quotes = {"Open": 6.89, "High": 6.96, "Low": 6.61, "Close": 6.80}
-        calls = []
-
-        def download(symbols, start, end, allow_missing=False):
-            calls.append(tuple(symbols))
-            return {"SKYD": synthetic} if symbols == ["SKYD"] else {}
-
-        with (patch.object(classic.market, "_download", side_effect=download),
-              patch.object(classic.market, "_last_row", return_value=quotes)):
-            frames, bars = classic.fetch_live(
-                self.config, "2026-10-19", "2026-10-16",
-                ["PSKY"], required={"PSKY"})
-        self.assertEqual(calls[-2:], [("PSKY",), ("SKYD",)])
-        self.assertEqual(list(frames), ["PSKY"])
-        self.assertEqual(bars["PSKY"]["close"], 6.80)
+        day = "2026-10-19"
+        with self.common_source(day, {"PSKY": self.shared_row(day)}), patch.object(
+                classic.market, "_download", return_value={}) as download:
+            frames, bars = classic.fetch_live(self.config, day, "2026-10-16", ["PSKY"], required={"PSKY"})
+        self.assertEqual(download.call_count, 1)
         self.assertEqual(bars["PSKY"]["verified_price_source_symbol"], "SKYD")
         self.assertNotIn("SKYD", bars)
 
     def test_renamed_symbol_never_supplies_prior_or_missing_dated_prices(self):
         from unittest.mock import patch
-        with (patch.object(classic.market, "_download",
-                           side_effect=[{}, {}, {"SKYD": object()}]) as download,
-              patch.object(classic.market, "_last_row",
-                           side_effect=ValueError("not the requested session"))):
-            frames, bars = classic.fetch_live(
-                self.config, "2026-10-19", "2026-10-16",
-                ["PSKY"], required={"PSKY"})
+        day = "2026-10-19"
+        with self.common_source(day, {"PSKY": self.shared_row("2026-10-16")}), patch.object(
+                classic.market, "_download", return_value={}) as download:
+            frames, bars = classic.fetch_live(self.config, day, "2026-10-16", ["PSKY"], required={"PSKY"})
         self.assertEqual((frames, bars), ({}, {}))
-        self.assertEqual(download.call_count, 3)
+        self.assertEqual(download.call_count, 1)
 
-    def test_isolated_retry_never_fabricates_missing_mandatory_close(self):
+    def test_shared_source_never_fabricates_missing_mandatory_close(self):
         from unittest.mock import patch
-        with patch.object(classic.market, "_download", side_effect=[
-            {}, {"SYNTH": object()}
-        ]) as download, patch.object(
-            classic.market, "_last_row", side_effect=ValueError("Missing exact dated OHLC")
-        ):
-            frames, bars = classic.fetch_live(
-                self.config, "2026-10-14", "2026-10-13", ["AAPL"], required={"SYNTH"})
-        self.assertNotIn("SYNTH", bars)
-        self.assertEqual(download.call_count, 2)
-        self.assertEqual(frames, {})
+        day = "2026-10-14"
+        with self.common_source(day, {}), patch.object(classic.market, "_download", return_value={}) as download:
+            frames, bars = classic.fetch_live(self.config, day, "2026-10-13", ["AAPL"], required={"AAPL"})
+        self.assertEqual((frames, bars), ({}, {}))
+        self.assertEqual(download.call_count, 1)
 
     def test_flat_gap_recovery_marks_missing_session_without_backdating_trades(self):
         state = classic.initialize(
@@ -567,7 +553,7 @@ class SAndP500ClassicTests(unittest.TestCase):
 
     def test_non_held_missing_symbols_are_not_individually_refetched(self):
         from unittest.mock import patch
-        with patch.object(classic.market, "_download", return_value={}) as download:
+        with self.common_source("2026-10-14", {}), patch.object(classic.market, "_download", return_value={}) as download:
             frames, bars = classic.fetch_live(
                 self.config, "2026-10-14", "2026-10-13", ["AAPL"], required=set())
         self.assertEqual((frames, bars), ({}, {}))

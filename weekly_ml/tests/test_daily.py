@@ -51,9 +51,9 @@ class CommonDailyPriceTests(unittest.TestCase):
         info = {}
         with patch("yfinance.download", return_value=raw):
             got = daily.download_bars(["AAPL", "SPY"], self.DAY, diagnostics=info)
-        self.assertEqual(got["AAPL"]["close"], 101.)
+        self.assertEqual(got["AAPL"]["close"], 102.)
         self.assertEqual(got["SPY"]["close"], 102.)
-        self.assertIn("AAPL", info["conflicts"])
+        self.assertEqual(info["status"], "common_raw_primary")
 
     def test_missing_benchmark_outside_snapshot_is_never_substituted(self):
         import pandas as pd
@@ -64,10 +64,10 @@ class CommonDailyPriceTests(unittest.TestCase):
     def test_wrong_session_and_tampering_remain_closed(self):
         import pandas as pd
         with patch("yfinance.download", return_value=pd.DataFrame()):
-            with self.assertRaisesRegex(ValueError, "AAPL"):
+            with self.assertRaisesRegex(ValueError, "Missing verified common"):
                 daily.download_bars(["AAPL"], "2026-10-28")
             self.path.write_text(self.path.read_text().replace(self.sha, "bad"))
-            with self.assertRaisesRegex(ValueError, "AAPL"):
+            with self.assertRaisesRegex(ValueError, "Missing verified common"):
                 daily.download_bars(["AAPL"], self.DAY)
 
     def test_nan_vendor_open_is_missing_and_uses_verified_bar(self):

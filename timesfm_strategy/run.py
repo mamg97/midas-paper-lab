@@ -421,28 +421,13 @@ def _daily_bars(config, state, day, previous):
     fx_mark = _positive(_last_row(fx, day, config["fx_ticker"])["Close"], "FX close")
     bars = {}
     if needed:
-        # Raw company marks may be unavailable in the isolated Yahoo download.
-        # Only a checksum/date-verified XNYS snapshot may supply a missing mark.
-        stocks = _download(needed, start, end, allow_missing=True)
-        for ticker in needed:
-            try:
-                r = _last_row(stocks[ticker], day, ticker)
-                bars[ticker] = {
-                    "open": _positive(r["Open"], ticker + " open"),
-                    "close": _positive(r["Close"], ticker + " close"),
-                    "dividend": float(r.get("Dividends", 0)),
-                    "split": float(r.get("Stock Splits", 0))
-                }
-            except (ValueError, KeyError, TypeError):
-                continue
-        # The snapshot shares RAW OHLC only; historical adjusted series and
-        # causal entry/mark EURUSD FX above remain independent.
+        # Raw daily stock marks share the producer's immutable capture. FX and
+        # adjusted training/history above remain independent.
         import sys
         if str(ROOT) not in sys.path:
             sys.path.insert(0, str(ROOT))
-        from market_data.consume import overlay
-        bars, _snapshot_diagnostic = overlay(
-            day, bars, ROOT / "market_data" / "snapshots")
+        from market_data.consume import canonical
+        bars, _snapshot_diagnostic = canonical(day, needed, ROOT / "market_data/snapshots")
         absent = sorted(set(needed) - set(bars))
         if absent:
             raise ValueError("Missing exact-date TimesFM stock bars: " +

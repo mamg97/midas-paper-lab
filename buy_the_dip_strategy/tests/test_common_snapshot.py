@@ -50,21 +50,21 @@ class CommonDailyMarksTests(unittest.TestCase):
         panel["AAPL"].loc[:, "close"] = 101.
         before = copy.deepcopy(panel)
         got, info = runner._daily_marks(panel, DAY, ["AAPL", "SPY"])
-        self.assertEqual(got["AAPL"]["close"], 101.)
-        self.assertIn("AAPL", info["conflicts"])
+        self.assertEqual(got["AAPL"]["close"], 102.)
+        self.assertEqual(info["status"], "common_raw_primary")
         pd.testing.assert_frame_equal(panel["AAPL"], before["AAPL"])
 
     def test_missing_or_wrong_session_stays_closed(self):
         for day, requested in [(DAY, ["S001"]), ("2026-10-28", ["AAPL"])]:
             with self.subTest(day=day, requested=requested):
-                with self.assertRaisesRegex(ValueError, "No se pueden valorar"):
+                with self.assertRaisesRegex(ValueError, "No se pueden valorar|Missing verified common"):
                     runner._daily_marks({}, day, requested)
 
     def test_tampered_snapshot_stays_closed(self):
         value = json.loads(self.path.read_text())
         value["bars"]["AAPL"]["close"] = 101.
         self.path.write_text(json.dumps(value))
-        with self.assertRaisesRegex(ValueError, "No se pueden valorar"):
+        with self.assertRaisesRegex(ValueError, "No se pueden valorar|Missing verified common"):
             runner._daily_marks({}, DAY, ["AAPL"])
 
     def test_daily_runner_uses_fallback_before_accounting(self):

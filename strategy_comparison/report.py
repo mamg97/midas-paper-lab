@@ -796,6 +796,9 @@ def main(argv=None):
                     classic_sp500_config=_read(args.classic_sp500_config) if args.classic_sp500_config and Path(args.classic_sp500_config).exists() else None,
                     classic_sp500_state=_read(args.classic_sp500_state, optional=True) if args.classic_sp500_state else None)
     output = Path(args.output)
+    source_health = Path(__file__).resolve().parents[1] / "market_data/source_health.json"
+    if source_health.is_file():
+        report["market_data"] = _read(source_health)
     _write(output / "dashboard.json", json.dumps(report, indent=2, ensure_ascii=False) + "\n")
     _write(output / "dashboard.md", markdown(report))
     print(json.dumps({"output": str(output), "counts": report["counts"]}, ensure_ascii=False))

@@ -10,6 +10,10 @@ on:
     - cron: '07 23 * * 1-5'
   workflow_dispatch:
     inputs:
+      run_consumers:
+        description: 'Run existing paper consumers after verified publication'
+        type: boolean
+        default: false
       capture_session:
         description: 'Capture current prospective XNYS session only'
         type: boolean
@@ -26,6 +30,9 @@ jobs:
   capture:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    outputs:
+      published: ${{ steps.publish.outcome }}
+      session: ${{ steps.capture.outputs.session }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -42,9 +49,27 @@ jobs:
       - name: Capture prospective session once
         id: capture
         if: ${{ github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.capture_session) }}
-        run: python market_data/collect.py --phase capture
+        run: |
+          python market_data/collect.py --phase capture | tee capture-result.json
+          python - <<'PYTHON'
+          import json, os
+          result = json.load(open("capture-result.json"))
+          captured = result.get("status") in ("snapshot_written", "snapshot_already_exists")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as stream:
+              stream.write("captured=" + str(captured).lower() + "\n")
+              if captured:
+                  stream.write("session=" + result["session"] + "\n")
+          PYTHON
+      - name: Recover only missing bars as hash-linked revisions
+        if: ${{ steps.capture.outputs.captured == 'true' }}
+        continue-on-error: true
+        run: python market_data/collect.py --phase recover
+      - name: Verify effective source before publication
+        if: ${{ steps.capture.outputs.captured == 'true' }}
+        run: python market_data/health.py --eligible
       - name: Persist only market snapshot files
-        if: ${{ success() && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.capture_session)) }}
+        id: publish
+        if: ${{ success() && steps.capture.outputs.captured == 'true' }}
         run: |
           python strategy_comparison/publish_state.py \
             --message "Record immutable common XNYS OHLC snapshot" \
@@ -54,6 +79,72 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: common-xnys-ohlc-${{ github.run_id }}
-          path: market_data/snapshots/XNYS/*.json
+          path: |
+            market_data/snapshots/XNYS/*.json
+            market_data/snapshots/XNYS/*.revisions/*.json
           if-no-files-found: error
           retention-days: 30
+
+  consume-classic_sp500:
+    needs: capture
+    if: ${{ needs.capture.outputs.published == 'success' && (github.event_name == 'schedule' || inputs.run_consumers) }}
+    uses: ./.github/workflows/classic_sp500.yml
+    with:
+      common_capture: true
+
+  consume-buy_the_dip_strategy:
+    needs: capture
+    if: ${{ needs.capture.outputs.published == 'success' && (github.event_name == 'schedule' || inputs.run_consumers) }}
+    uses: ./.github/workflows/buy_the_dip_strategy.yml
+    with:
+      common_capture: true
+
+  consume-capital_cycle:
+    needs: capture
+    if: ${{ needs.capture.outputs.published == 'success' && (github.event_name == 'schedule' || inputs.run_consumers) }}
+    uses: ./.github/workflows/capital_cycle.yml
+    with:
+      common_capture: true
+
+  consume-weekly_ml_daily:
+    needs: capture
+    if: ${{ needs.capture.outputs.published == 'success' && (github.event_name == 'schedule' || inputs.run_consumers) }}
+    uses: ./.github/workflows/weekly_ml_daily.yml
+    with:
+      common_capture: true
+
+  consume-timesfm_daily:
+    needs: capture
+    if: ${{ needs.capture.outputs.published == 'success' && (github.event_name == 'schedule' || inputs.run_consumers) }}
+    uses: ./.github/workflows/timesfm_daily.yml
+    with:
+      common_capture: true
+
+  consume-timesfm_one_day:
+    needs: capture
+    if: ${{ needs.capture.outputs.published == 'success' && (github.event_name == 'schedule' || inputs.run_consumers) }}
+    uses: ./.github/workflows/timesfm_one_day.yml
+    with:
+      common_capture: true
+
+  source-health:
+    needs: [capture, consume-classic_sp500, consume-buy_the_dip_strategy, consume-capital_cycle, consume-weekly_ml_daily, consume-timesfm_daily, consume-timesfm_one_day]
+    if: ${{ always() && needs.capture.outputs.published == 'success' && (github.event_name == 'schedule' || inputs.run_consumers) }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Record source identity and consumer outcomes independently
+        env:
+          COMMON_SESSION: ${{ needs.capture.outputs.session }}
+          COMMON_RESULTS: ${{ toJson(needs) }}
+        run: python market_data/publish_health.py
+      - name: Publish source health and derived dashboard
+        run: |
+          python strategy_comparison/publish_state.py \
+            --message "Record common XNYS source and consumer health" \
+            --path market_data/source_health.json

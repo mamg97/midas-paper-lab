@@ -5,10 +5,31 @@ import math
 from pathlib import Path
 
 from market_data.snapshot import load_snapshot, snapshot_path
+from market_data.revisions import load_effective
 
 RAW = ("open", "high", "low", "close", "dividend", "split")
 # Allow numeric formatting noise, not economically material vendor revisions.
 REL_TOL = 1e-8
+
+
+def canonical(session: str, requested, root: Path) -> tuple[dict, dict]:
+    """The common RAW source is mandatory; non-universe products stay separate."""
+    try:
+        data = load_effective(root, session)
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        raise ValueError("Missing verified common XNYS snapshot for " + session) from exc
+    requested = set(requested)
+    bars = {ticker: {key: row[key] for key in RAW + ("volume",)}
+            for ticker, row in data["bars"].items() if ticker in requested}
+    for ticker in bars:
+        source = data["bars"][ticker]["provider_symbol"]
+        if source != ticker:
+            bars[ticker]["verified_price_source_symbol"] = source
+    return bars, {"status": "common_raw_primary", "hash": data["base"]["sha256"],
+                  "effective_sha256": data["effective_sha256"],
+                  "revision_hashes": data["revision_hashes"],
+                  "missing": sorted(requested & set(data["missing"])),
+                  "independent_symbols": sorted(requested - set(data["base"]["requested_symbols"]))}
 
 
 def overlay(session: str, today: dict, root: Path) -> tuple[dict, dict]:
@@ -23,7 +44,8 @@ def overlay(session: str, today: dict, root: Path) -> tuple[dict, dict]:
         return today.copy(), {"status": "snapshot_absent", "hash": None,
                               "reused": [], "conflicts": []}
     try:
-        capture = load_snapshot(path, session=session)
+        effective = load_effective(root, session)
+        capture = effective["base"]
     except (ValueError, OSError, KeyError, TypeError) as exc:
         return today.copy(), {"status": "snapshot_rejected",
                               "reason": type(exc).__name__, "hash": None,
@@ -31,7 +53,7 @@ def overlay(session: str, today: dict, root: Path) -> tuple[dict, dict]:
 
     result = {ticker: bar.copy() for ticker, bar in today.items()}
     reused, conflicts, verified = [], [], []
-    for ticker, row in capture["bars"].items():
+    for ticker, row in effective["bars"].items():
         converted = {key: row[key] for key in RAW}
         if row["provider_symbol"] != ticker:
             converted["verified_price_source_symbol"] = row["provider_symbol"]
@@ -53,8 +75,10 @@ def overlay(session: str, today: dict, root: Path) -> tuple[dict, dict]:
     return result, {
         "status": "snapshot_read_only",
         "hash": capture["sha256"],
+        "effective_sha256": effective["effective_sha256"],
+        "revision_hashes": effective["revision_hashes"],
         "reused": sorted(reused),
         "verified": sorted(verified),
         "conflicts": sorted(conflicts),
-        "snapshot_missing": sorted(capture["missing"]),
+        "snapshot_missing": sorted(effective["missing"]),
     }

@@ -69,7 +69,7 @@ class SharedDailyMarkTests(unittest.TestCase):
             with (patch.object(core, "ROOT", Path(tmp)),
                   patch.object(core, "_download", side_effect=self._prices),
                   patch.object(core, "_last_row", side_effect=self._dated_row)):
-                with self.assertRaisesRegex(ValueError, "Missing exact-date"):
+                with self.assertRaisesRegex(ValueError, "Missing verified common"):
                     core._daily_bars(self.config, self.state, DAY, PREV)
 
 
