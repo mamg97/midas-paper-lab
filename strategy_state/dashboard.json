@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-28T08:16:36.435245+00:00",
+  "generated_at_utc": "2026-10-28T08:18:46.930268+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 18,
@@ -679,11 +679,11 @@
       "status": "demo_con_diario",
       "classic_sp500_cohort": true,
       "first_session": "2026-10-12",
-      "last_session": "2026-10-26",
+      "last_session": "2026-10-27",
       "initial_capital": 100000.0,
-      "last_equity": 101849.30153344055,
-      "return_pct": 1.849302,
-      "day_return_pct": null,
+      "last_equity": 101829.72298058106,
+      "return_pct": 1.829723,
+      "day_return_pct": -0.019223,
       "currency": "USD",
       "equity_history": [
         {
@@ -725,13 +725,17 @@
         {
           "date": "2026-10-26",
           "nav": 101849.30153344055
+        },
+        {
+          "date": "2026-10-27",
+          "nav": 101829.72298058106
         }
       ],
-      "note": "Nueva campaña S&P500 503 símbolos; las carteras originales de 8 títulos se conservan históricas y no transfieren NAV ni operaciones. Valoración conservada exclusivamente hasta 2026-10-26; operaciones sin actualizar.",
+      "note": "Nueva campaña S&P500 503 símbolos; las carteras originales de 8 títulos se conservan históricas y no transfieren NAV ni operaciones.",
       "evaluated_universe_symbols": 489,
       "eligible_universe_symbols": 503,
-      "activity_state": "active_pending",
-      "activity_label": "VALORACIÓN PAUSADA · falta cotización; 490 posiciones · 13 compras paper para próxima apertura",
+      "activity_state": "active",
+      "activity_label": "490 posiciones abiertas",
       "activity_tickers": [
         "A",
         "AAPL",
@@ -747,16 +751,15 @@
         "ADSK"
       ],
       "open_positions_count": 490,
-      "pending_orders_count": 13,
-      "data_quality_status": "held_quote_unavailable",
+      "pending_orders_count": 0,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 10,
-      "annualized_volatility_pct": null,
+      "risk_observations": 11,
+      "annualized_volatility_pct": 9.94924,
       "max_drawdown_pct": -0.791304,
-      "sharpe_0rf": null
+      "sharpe_0rf": 4.641345
     },
     {
       "id": "classic_sp500_ema_rsi_fixed",

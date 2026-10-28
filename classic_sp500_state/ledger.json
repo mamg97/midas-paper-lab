@@ -381,7 +381,7 @@
       ]
     },
     "buy_hold_equal_weight": {
-      "cash": 7468.765435419023,
+      "cash": 7468.8696249190225,
       "equity": [
         {
           "date": "2026-10-12",
@@ -422,6 +422,16 @@
         {
           "date": "2026-10-26",
           "nav": 101849.30153344055
+        },
+        {
+          "date": "2026-10-27",
+          "late_mark_only": true,
+          "nav": 101829.72298058106,
+          "quote_identity": {
+            "effective_sha256": "4472ae4858a7aff2daa9869379f28700f61ff32194931937e269c55f916546a4",
+            "snapshot_sha256": "4472ae4858a7aff2daa9869379f28700f61ff32194931937e269c55f916546a4"
+          },
+          "recorded_at_utc": "2026-10-28T08:18:46+00:00"
         }
       ],
       "events": [
@@ -4004,71 +4014,42 @@
             "HUBB"
           ],
           "type": "book_quarantined_missing_held_bar"
+        },
+        {
+          "amount": 0.1041895,
+          "date": "2026-10-27",
+          "recognition": "existing_paper_ex_session_model",
+          "recorded_at_utc": "2026-10-28T08:18:46+00:00",
+          "source_url": "https://www.gevernova.com/news/press-releases/ge-vernova-declares-fourth-quarter-2026-dividend",
+          "ticker": "GEV",
+          "type": "dividend"
+        },
+        {
+          "date": "2026-10-27",
+          "expired_unfilled_buys": [
+            "AVB",
+            "BK",
+            "CTRA",
+            "DAY",
+            "EA",
+            "EQR",
+            "FI",
+            "HOLX",
+            "IPG",
+            "K",
+            "MMC",
+            "WBA",
+            "WBD"
+          ],
+          "recorded_at_utc": "2026-10-28T08:18:46+00:00",
+          "sessions": [
+            "2026-10-27"
+          ],
+          "type": "passive_marks_recovered_no_fills"
         }
       ],
-      "nav": 101849.30153344055,
-      "paused_missing_quotes": {
-        "last_valued_session": "2026-10-26",
-        "missing_tickers": [
-          "HUBB"
-        ],
-        "reason": "required same-session bar unavailable",
-        "since": "2026-10-27"
-      },
-      "pending": {
-        "AVB": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        },
-        "BK": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        },
-        "CTRA": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        },
-        "DAY": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        },
-        "EA": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        },
-        "EQR": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        },
-        "FI": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        },
-        "HOLX": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        },
-        "IPG": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        },
-        "K": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        },
-        "MMC": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        },
-        "WBA": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        },
-        "WBD": {
-          "side": "buy",
-          "signal_date": "2026-10-26"
-        }
-      },
+      "nav": 101829.72298058106,
+      "pending": {},
       "positions": {
         "A": {
           "cost": 188.86664480433743,
@@ -5818,7 +5799,7 @@
         },
         "GEV": {
           "cost": 188.86596378399747,
-          "dividends": 0.0,
+          "dividends": 0.1041895,
           "entry_date": "2026-10-15",
           "entry_price": 905.4525,
           "shares": 0.208379,
