@@ -10,7 +10,7 @@ import copy
 import importlib.util
 import json
 import math
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import sys
 
@@ -508,8 +508,29 @@ def run(config_path, state_path):
     day, previous, _, _ = cal
     if state is not None:
         validate_state(state, config)
+        from recovery import recover_passive_books
+        from market_data.snapshot import load_snapshot, snapshot_path
+
+        def sessions_after(start, end):
+            import pandas_market_calendars as calendars
+            days = calendars.get_calendar("XNYS").valid_days(start_date=start, end_date=end)
+            return [str(value.date()) for value in days if str(value.date()) > start]
+
+        def quotes(session):
+            record = load_snapshot(snapshot_path(ROOT / "market_data/snapshots", session), session=session)
+            return record["bars"], {"snapshot_sha256": record["sha256"]}
+
+        state, recovered, blocked = recover_passive_books(
+            config, state, sessions_after, quotes,
+            recorded_at=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            reviews=market.read(ROOT / "market_data/corporate_action_reviews.json"))
+        validate_state(state, config)
         if day <= state["last_session"]:
-            return {"status": "already_recorded", "session": day}
+            if recovered:
+                market.atomic_write(state_path, state)
+            return {"status": "passive_marks_recovered" if recovered else "already_recorded",
+                    "session": day, "recovered_books": recovered,
+                    "recovery_blocked": blocked}
     gap = state is not None and previous != state["last_session"]
     if gap and any(book["positions"] for book in state["books"].values()):
         # Never skip held exposures or treat future prices as historic prices.
