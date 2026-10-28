@@ -1,12 +1,82 @@
 import copy
 import sys
 import unittest
+import tempfile
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "weekly_ml"))
 from daily import freeze_signal, process_day, ENGINE_VERSION
 from paper import digest
+import daily
+from market_data.snapshot import make_snapshot, write_immutable
+
+
+class CommonDailyPriceTests(unittest.TestCase):
+    DAY = "2026-10-27"
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.root_patch = patch.object(daily, "ROOT", self.root)
+        self.root_patch.start()
+        self.addCleanup(self.root_patch.stop)
+        names = ["AAPL"] + [f"S{i:03d}" for i in range(502)]
+        row = {"date": self.DAY, "open": 100., "high": 103., "low": 99.,
+               "close": 102., "volume": 500., "dividend": 0., "split": 0.}
+        record = make_snapshot(self.DAY, names,
+                               {"AAPL": row, "SPY": row, "S000": row},
+                               captured_at_utc="2026-10-27T22:00:00+00:00")
+        self.path, _ = write_immutable(self.root / "market_data/snapshots", record)
+        self.sha = record["sha256"]
+
+    def test_snapshot_recovers_empty_vendor_with_hash_and_requested_symbols_only(self):
+        import pandas as pd
+        prior = self.path.read_bytes()
+        diagnostic = {}
+        with patch("yfinance.download", return_value=pd.DataFrame()):
+            got = daily.download_bars(["AAPL", "SPY"], self.DAY, diagnostics=diagnostic)
+        self.assertEqual(set(got), {"AAPL", "SPY"})
+        self.assertEqual(got["AAPL"]["close"], 102.)
+        self.assertEqual(diagnostic["hash"], self.sha)
+        self.assertEqual(self.path.read_bytes(), prior)
+
+    def test_partial_vendor_keeps_disagreement_and_recovers_other_ticker(self):
+        import pandas as pd
+        raw = pd.DataFrame({("AAPL", "Open"): [100.], ("AAPL", "Close"): [101.],
+                            ("AAPL", "High"): [103.], ("AAPL", "Low"): [99.]},
+                           index=pd.DatetimeIndex([self.DAY]))
+        info = {}
+        with patch("yfinance.download", return_value=raw):
+            got = daily.download_bars(["AAPL", "SPY"], self.DAY, diagnostics=info)
+        self.assertEqual(got["AAPL"]["close"], 101.)
+        self.assertEqual(got["SPY"]["close"], 102.)
+        self.assertIn("AAPL", info["conflicts"])
+
+    def test_missing_benchmark_outside_snapshot_is_never_substituted(self):
+        import pandas as pd
+        with patch("yfinance.download", return_value=pd.DataFrame()):
+            with self.assertRaisesRegex(ValueError, "RSP"):
+                daily.download_bars(["AAPL", "RSP"], self.DAY)
+
+    def test_wrong_session_and_tampering_remain_closed(self):
+        import pandas as pd
+        with patch("yfinance.download", return_value=pd.DataFrame()):
+            with self.assertRaisesRegex(ValueError, "AAPL"):
+                daily.download_bars(["AAPL"], "2026-10-28")
+            self.path.write_text(self.path.read_text().replace(self.sha, "bad"))
+            with self.assertRaisesRegex(ValueError, "AAPL"):
+                daily.download_bars(["AAPL"], self.DAY)
+
+    def test_nan_vendor_open_is_missing_and_uses_verified_bar(self):
+        import pandas as pd
+        raw = pd.DataFrame({"Open": [float("nan")], "Close": [101.]},
+                           index=pd.DatetimeIndex([self.DAY]))
+        with patch("yfinance.download", return_value=raw):
+            got = daily.download_bars(["AAPL"], self.DAY)
+        self.assertEqual(got["AAPL"]["open"], 100.)
 
 
 class DailyPaperTests(unittest.TestCase):

@@ -10,6 +10,12 @@ import sys
 import tempfile
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from market_data.consume import overlay
+
 from engine import STRATEGY_ID, advance, benchmark_return_pct
 from factors import choose_portfolio, score_universe
 from market import (
@@ -21,6 +27,17 @@ from market import (
     fundamentals_snapshot,
     load_universe,
 )
+
+
+def _daily_marks(panel, asof, requested):
+    """Recover exact-session RAW marks without manufacturing adjusted history."""
+    bars = {ticker: current_bar(frame) for ticker, frame in panel.items()}
+    bars, diagnostic = overlay(asof, bars, ROOT / "market_data" / "snapshots")
+    bars = {ticker: bars[ticker] for ticker in requested if ticker in bars}
+    missing = sorted(set(requested) - set(bars))
+    if missing:
+        raise ValueError("No se pueden valorar posiciones/órdenes: " + ",".join(missing))
+    return bars, diagnostic
 
 
 def _read(path, optional=False):
@@ -179,13 +196,14 @@ def run(config_path, output_dir, now=None):
             requested, period="6mo", asof=asof, min_history=1,
             required=active | {benchmark},
         )
-        missing = sorted(set(requested) - set(panel))
-        if missing:
-            raise ValueError("No se pueden valorar posiciones/órdenes: " + ",".join(missing))
         decision = None
         fundamental_failures = {}
 
-    bars = {ticker: current_bar(frame) for ticker, frame in panel.items()}
+    if due:
+        bars = {ticker: current_bar(frame) for ticker, frame in panel.items()}
+        quote_source = {"status": "independent_adjusted_history"}
+    else:
+        bars, quote_source = _daily_marks(panel, asof, requested)
     updated, changed = advance(
         config, bars, asof, bars[benchmark]["close"], decision=decision, state=state,
     )
@@ -199,6 +217,7 @@ def run(config_path, output_dir, now=None):
         "status": "ok",
         "strategy_id": STRATEGY_ID,
         "session": asof,
+        "quote_source": quote_source,
         "month_end": context["is_month_end"],
         "decision_recorded": decision is not None,
         "changed": changed,
