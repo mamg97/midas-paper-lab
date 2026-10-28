@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-28T09:12:41.392698+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/109652995",
+    "published_date": "2023-06-04",
+    "youtube_video_id": "1sb-ohC-8o0",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 21578858
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 2697.299625,
+      "word_count": 7630,
+      "segment_count": 439,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "1sb-ohC-8o0",
+    "youtube_url": "https://www.youtube.com/watch?v=1sb-ohC-8o0",
+    "title": "ORO La mayor adquisición de la HISTORIA | BUY THE DIP PODCAST",
+    "category": "sector_theme",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/109652995",
+    "published_date": "2023-06-04",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza la estrategia de adquisición de empresas mineras en el sector del oro, destacando el impacto del precio del oro en la valoración de las empresas, los ciclos históricos de precios, y la tendencia de adquisiciones de empresas pequeñas por parte de grandes. Se menciona una adquisición significativa de NewCrest por NewMond, que aumenta las reservas y recursos de oro y cobre, aprovechando el palancamiento del precio del oro. Se sugiere que la diversificación y el crecimiento del tamaño de la empresa mejoran su valoración y reducen el riesgo. Sin embargo, hay dudas sobre la rentabilidad a corto plazo y la descorrelación entre el precio del oro y las acciones de mineras, lo que afecta la valoración. La estrategia se basa en la estabilidad y el crecimiento sostenido, con un enfoque en proyectos de larga vida y diversificación geográfica.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "El precio del oro ha influido en la valoración de las empresas mineras, afectando su capacidad de generación de valor a largo plazo.",
+        "La adquisición de NewCrest por NewMond aumenta las reservas y recursos de oro y cobre, mejorando su capacidad de generación de valor a largo plazo.",
+        "La diversificación y el crecimiento del tamaño de la empresa mejoran su valoración y reducen el riesgo."
+      ],
+      "cycle_macro": [
+        "El oro ha experimentado ciclos de precios históricos, generando fluctuaciones en la inversión y el desarrollo del sector minero."
+      ],
+      "entry": [
+        "Empresas grandes adquieren empresas pequeñas en el sector minero, indicando un aumento de la actividad de inversión.",
+        "La adquisición de NewCrest por NewMond refleja una estrategia de inversión basada en la ampliación de reservas y recursos."
+      ],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [
+        "La consolidación de grandes mineras es positiva para el sector, visibilizando empresas y facilitando adquisiciones de activos."
+      ],
+      "risk": [
+        "La diversificación reduce el riesgo de problemas específicos en una mina individual, aumentando la estabilidad del portafolio."
+      ],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [
+      "La adquisición de NewCrest por NewMond, que aumenta las reservas y recursos de oro y cobre, mejorando su capacidad de generación de valor a largo plazo."
+    ],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El precio del oro ha subido considerablemente, alcanzando niveles históricos, lo que ha influido en la valoración de las empresas mineras.",
+          "timestamp": "00:05:25",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "El oro ha experimentado ciclos de precios históricos, lo que ha generado fluctuaciones en la inversión y el desarrollo del sector minero.",
+          "timestamp": "00:05:44",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Las empresas grandes están adquiriendo empresas más pequeñas, lo que indica un aumento de la actividad de inversión en el sector minero.",
+          "timestamp": "00:02:16",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento discute la adquisición más grande en el sector minero de oro, destacando el impacto del precio del oro en la valoración de las empresas, los ciclos de precios históricos y la tendencia de adquisiciones de empresas pequeñas por parte de empresas grandes, lo que refleja una actividad de inversión creciente en el sector."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Empresas de oro tienen activos de larga duración y estabilidad, lo que atrae a inversores buscando estabilidad en la producción.",
+          "timestamp": "00:21:25",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "exit",
+          "paraphrase": "La consolidación de grandes mineras es positiva para el sector, ya que visibiliza empresas y facilita adquisiciones de activos.",
+          "timestamp": "00:15:34",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa Newcrest tiene un market cap de 17 billones, y una oferta de 19 billones representa una adquisición significativa en el sector del oro.",
+          "timestamp": "00:20:48",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento destaca la importancia de la estabilidad y la producción a largo plazo en el sector del oro, menciona la consolidación de mineras grandes y la adquisición significativa de Newcrest, destacando la relevancia de estos factores para la inversión en el sector."
+    },
+    {
+      "chunk": 3,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "Se menciona una adquisición estratégica de New Moon en activos de oro y cobre, diversificando en jurisdicciones como Australia y Canadá, con un enfoque en proyectos de larga vida y diversificación en cobre.",
+          "timestamp": "00:25:00",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se sugiere que la diversificación y el crecimiento del tamaño de la empresa pueden mejorar su valoración, permitiendo financiamiento más favorable y mayor capacidad de adquisiciones.",
+          "timestamp": "00:24:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se indica que la diversificación reduce el riesgo de problemas específicos en una mina individual, aumentando la estabilidad y la diversificación del portafolio.",
+          "timestamp": "00:24:00",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe una estrategia de inversión enfocada en adquisiciones estratégicas de activos de oro y cobre, con un enfoque en diversificación geográfica y de activos. Se sugiere que la diversificación y el crecimiento del tamaño de la empresa pueden mejorar su valoración y reducir el riesgo, permitiendo un financiamiento más favorable y mayor capacidad de adquisiciones. La estrategia se basa en la estabilidad y el crecimiento sostenido, con un enfoque en proyectos de larga vida y diversificación en jurisdicciones como Australia y Canadá."
+    },
+    {
+      "chunk": 4,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "La empresa genera un fricaslo positivo a largo plazo debido a su producción de oro y cobre, con un palancamiento significativo en el precio del oro.",
+          "timestamp": "00:32:01",
+          "scope": "hosts",
+          "confidence": 0.8
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La adquisición de NewCrest aumenta significativamente las reservas y los recursos de NewMond, mejorando su capacidad de generación de valor a largo plazo.",
+          "timestamp": "00:39:14",
+          "scope": "hosts",
+          "confidence": 0.9
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "NewCrest ofrece activos con alta calidad de reservas y recursos, posicionados en corredores estratégicos de oro y cobre, ampliando la exposición del activo.",
+          "timestamp": "00:38:07",
+          "scope": "hosts",
+          "confidence": 0.7
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis destaca la estrategia de adquisición de NewCrest por NewMond, enfocada en aumentar las reservas y recursos de oro y cobre, aprovechando el palancamiento del precio del oro y la ubicación estratégica de los activos adquiridos. La transacción se valora como histórica por su impacto en la capacidad de generación de valor a largo plazo."
+    },
+    {
+      "chunk": 5,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El speaker sugiere que una adquisición de minera podría ser beneficiosa a largo plazo debido a la ampliación de reservas y recursos, aunque hay dudas sobre su valor actual.",
+          "timestamp": "00:43:15",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se menciona la descorrelación entre el precio del oro y las acciones de mineras, lo que podría afectar la valoración de las empresas mineras.",
+          "timestamp": "00:43:32",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "El speaker expresa dudas sobre la rentabilidad a corto plazo, pero espera que la adquisición pueda generar beneficios a largo plazo.",
+          "timestamp": "00:43:49",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El speaker discute la posibilidad de una adquisición en el sector minero, sugiere que podría ser beneficiosa a largo plazo debido a la ampliación de reservas y recursos, aunque hay dudas sobre su valor actual. Se menciona la descorrelación entre el precio del oro y las acciones de mineras, lo que podría afectar la valoración de las empresas mineras. El speaker expresa dudas sobre la rentabilidad a corto plazo, pero espera que la adquisición pueda generar beneficios a largo plazo."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
