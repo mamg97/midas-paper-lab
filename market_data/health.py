@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from market_data.snapshot import load_snapshot, snapshot_path
+from market_data.revisions import load_effective
 
 
 def inspect_source(root: Path, session: str, *, now=None) -> dict:
@@ -28,19 +29,31 @@ def inspect_source(root: Path, session: str, *, now=None) -> dict:
     if not path.is_file():
         return {**result, "status": "snapshot_absent"}
     try:
-        record = load_snapshot(path, session=session)
+        effective = load_effective(root, session)
+        record = effective["base"]
         stamp = datetime.fromisoformat(record["captured_at_utc"].replace("Z", "+00:00"))
         if stamp.tzinfo is None or stamp.utcoffset().total_seconds() != 0:
             raise ValueError("Capture timestamp is not UTC")
         age = (now - stamp).total_seconds()
         if age < 0:
             raise ValueError("Capture timestamp is in the future")
+        if (now - _stamp(effective["last_captured_at_utc"])).total_seconds() < 0:
+            raise ValueError("Revision timestamp is in the future")
     except (ValueError, OSError, KeyError, TypeError, AttributeError):
         return {**result, "status": "snapshot_rejected"}
     return {**result, "status": "snapshot_verified",
             "sha256": record["sha256"], "captured_at_utc": record["captured_at_utc"],
-            "age_seconds": int(age), "coverage": record["coverage"].copy(),
-            "missing_symbols": sorted(record["missing"])}
+            "effective_sha256": effective["effective_sha256"],
+            "revision_hashes": effective["revision_hashes"],
+            "age_seconds": int(age), "coverage": {
+                "observed": len(effective["bars"]), "requested": 504,
+                "missing": len(effective["missing"]),
+                "frozen_constituents_observed": len(effective["bars"]) - int("SPY" in effective["bars"])},
+            "missing_symbols": sorted(effective["missing"])}
+
+
+def _stamp(text):
+    return datetime.fromisoformat(text.replace("Z", "+00:00"))
 
 
 def main():

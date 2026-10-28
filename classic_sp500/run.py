@@ -509,7 +509,7 @@ def run(config_path, state_path):
     if state is not None:
         validate_state(state, config)
         from recovery import recover_passive_books
-        from market_data.snapshot import load_snapshot, snapshot_path
+        from market_data.revisions import load_effective
 
         def sessions_after(start, end):
             import pandas_market_calendars as calendars
@@ -517,8 +517,9 @@ def run(config_path, state_path):
             return [str(value.date()) for value in days if str(value.date()) > start]
 
         def quotes(session):
-            record = load_snapshot(snapshot_path(ROOT / "market_data/snapshots", session), session=session)
-            return record["bars"], {"snapshot_sha256": record["sha256"]}
+            record = load_effective(ROOT / "market_data/snapshots", session)
+            return record["bars"], {"snapshot_sha256": record["base"]["sha256"],
+                                   "effective_sha256": record["effective_sha256"]}
 
         state, recovered, blocked = recover_passive_books(
             config, state, sessions_after, quotes,
