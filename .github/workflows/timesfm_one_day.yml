@@ -1,5 +1,10 @@
 name: MIDAS TimesFM 2.5 EUR daily 1-session signal
 on:
+  workflow_call:
+    inputs:
+      common_capture:
+        type: boolean
+        default: false
   schedule:
     - cron: '57 23 * * 1-5'
     - cron: '27 2 * * 2-6'
@@ -24,6 +29,8 @@ jobs:
       MKL_NUM_THREADS: '2'
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.common_capture && 'main' || github.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -44,12 +51,15 @@ jobs:
       - name: Install model for scheduled inference
         if: github.event_name != 'pull_request'
         run: python -m pip install -r timesfm_strategy/requirements-weekly.txt
+      - name: Require the published common XNYS source before accounting
+        if: github.event_name != 'pull_request'
+        run: python market_data/health.py --eligible
       - name: Close paper session then freeze one-day forecast
         id: execute
         if: github.event_name != 'pull_request'
         run: python timesfm_strategy/daily_run.py --phase daily
       - name: Record scheduled runtime health
-        if: always() && github.event_name == 'schedule'
+        if: always() && github.event_name == 'schedule' && !inputs.common_capture
         run: |
           python strategy_comparison/runtime_health.py \
             --output strategy_runtime/timesfm_one_day.json \

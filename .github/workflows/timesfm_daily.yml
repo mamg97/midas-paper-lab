@@ -1,6 +1,11 @@
 name: MIDAS TimesFM EUR daily paper
 
 on:
+  workflow_call:
+    inputs:
+      common_capture:
+        type: boolean
+        default: false
   schedule:
     - cron: '37 0 * * 2-6'
     - cron: '7 2 * * 2-6'
@@ -24,6 +29,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.common_capture && 'main' || github.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -36,12 +43,15 @@ jobs:
           python -m unittest discover -s timesfm_strategy/tests -v
           python -m unittest discover -s strategy_comparison/tests -v
           python timesfm_strategy/run.py --phase check
+      - name: Require the published common XNYS source before accounting
+        if: github.event_name != 'pull_request'
+        run: python market_data/health.py --eligible
       - name: Record latest closed daily XNYS session
         id: execute
         if: github.event_name != 'pull_request'
         run: python timesfm_strategy/run.py --phase daily
       - name: Persist scheduled execution health
-        if: always() && github.event_name == 'schedule'
+        if: always() && github.event_name == 'schedule' && !inputs.common_capture
         run: |
           python strategy_comparison/runtime_health.py \
             --output strategy_runtime/timesfm_daily.json \

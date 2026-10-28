@@ -42,7 +42,7 @@ class CommonMarksTests(unittest.TestCase):
 
     def test_missing_and_wrong_session_still_fail(self):
         for day, requested in [(DAY, ["ABSENT"]), ("2026-10-28", ["AAPL"])]:
-            with self.assertRaisesRegex(ValueError, "No se pueden valorar"):
+            with self.assertRaisesRegex(ValueError, "No se pueden valorar|Missing verified common"):
                 runner._daily_marks({}, day, requested)
 
     def test_current_snapshot_cannot_recover_missing_prior_holding(self):

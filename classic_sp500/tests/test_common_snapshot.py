@@ -41,10 +41,9 @@ class ClassicCommonQuoteTests(unittest.TestCase):
                    "benchmark_ticker": "SPY"}
             with (patch.object(classic, "ROOT", Path(tmp)),
                   patch.object(classic.market, "_download", return_value={})):
-                historical, today = classic.fetch_live(
-                    cfg, "2026-10-27", "2026-10-26", ["AAPL"])
-            self.assertEqual(historical, {})
-            self.assertEqual(today, {})
+                with self.assertRaisesRegex(ValueError, "Missing verified common"):
+                    classic.fetch_live(cfg, "2026-10-27", "2026-10-26", ["AAPL"])
+
 
 
 if __name__ == "__main__":

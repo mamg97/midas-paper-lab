@@ -12,6 +12,26 @@ RAW = ("open", "high", "low", "close", "dividend", "split")
 REL_TOL = 1e-8
 
 
+def canonical(session: str, requested, root: Path) -> tuple[dict, dict]:
+    """The common RAW source is mandatory; non-universe products stay separate."""
+    try:
+        data = load_effective(root, session)
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        raise ValueError("Missing verified common XNYS snapshot for " + session) from exc
+    requested = set(requested)
+    bars = {ticker: {key: row[key] for key in RAW + ("volume",)}
+            for ticker, row in data["bars"].items() if ticker in requested}
+    for ticker in bars:
+        source = data["bars"][ticker]["provider_symbol"]
+        if source != ticker:
+            bars[ticker]["verified_price_source_symbol"] = source
+    return bars, {"status": "common_raw_primary", "hash": data["base"]["sha256"],
+                  "effective_sha256": data["effective_sha256"],
+                  "revision_hashes": data["revision_hashes"],
+                  "missing": sorted(requested & set(data["missing"])),
+                  "independent_symbols": sorted(requested - set(data["base"]["requested_symbols"]))}
+
+
 def overlay(session: str, today: dict, root: Path) -> tuple[dict, dict]:
     """Prefer verified exact-session bars ONLY where the old adapter has none.
 

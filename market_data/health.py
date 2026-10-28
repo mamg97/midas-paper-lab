@@ -24,7 +24,7 @@ def inspect_source(root: Path, session: str, *, now=None) -> dict:
               "expected_session": session, "sha256": None,
               "captured_at_utc": None, "age_seconds": None,
               "coverage": None, "missing_symbols": None,
-              "policy": "raw_exact_session_fallback_keep_existing_quotes",
+              "policy": "common_raw_daily_primary",
               "engine_health": "not_assessed"}
     if not path.is_file():
         return {**result, "status": "snapshot_absent"}
@@ -58,10 +58,20 @@ def _stamp(text):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--session", required=True)
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("--session")
+    group.add_argument("--eligible", action="store_true")
     parser.add_argument("--root", type=Path, default=ROOT / "market_data/snapshots")
     args = parser.parse_args()
-    result = inspect_source(args.root, args.session)
+    session = args.session
+    if args.eligible:
+        from timesfm_strategy.run import calendar
+        when = calendar()
+        if when is None:
+            print(json.dumps({"status": "no_eligible_closed_session"}))
+            return 2
+        session = when[0]
+    result = inspect_source(args.root, session)
     print(json.dumps(result, sort_keys=True))
     return 0 if result["status"] == "snapshot_verified" else 2
 
