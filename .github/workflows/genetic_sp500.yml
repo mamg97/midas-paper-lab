@@ -17,7 +17,10 @@ permissions:
   contents: read
 
 concurrency:
-  group: midas-original-genetic-writer
+  # Republication reads an immutable checkout; D1 rejects stale/conflicting curves.
+  # It must not wait for a long, read-only training validation. All trading stays
+  # in one writer queue, including schedules and manually dispatched sessions.
+  group: midas-original-genetic-${{ inputs.mode == 'publish_only' && 'publisher' || 'writer' }}
   cancel-in-progress: false
 
 jobs:
