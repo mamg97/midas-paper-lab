@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "simulation_only": true,
+  "source_repository": "mamg97/personal_mamg",
+  "files": [
+    {
+      "path": "AGENTE/genetic_invest_agent/sp500_portfolio_agent.py",
+      "source_blob": "6f1727916d45786a492183622fd567ec31eeeddc",
+      "sha256": "71239adf61b6bbe6e7a69f2f39e81c01bbcdc3d4449bf16a579550f2d7272286"
+    },
+    {
+      "path": "AGENTE/genetic_invest_agent/forward_portfolio.py",
+      "source_blob": "6eedd97a4d04679d0b1e8571042edc0ebafaa1be",
+      "sha256": "c632625a454d5600fd821e75af182d73048da82c531bc2b2d58d7cf478be49be"
+    },
+    {
+      "path": "AGENTE/genetic_invest_agent/genetic_agent.py",
+      "source_blob": "a9949bfe3f7ce0776bc595cceddd2bb39378ca5a",
+      "sha256": "e384077db99728bf590f627da09c38d3a6ad8e6ccc21b138c664d6c3160b4b79"
+    },
+    {
+      "path": "AGENTE/genetic_invest_agent/publish_snapshot.py",
+      "source_blob": "cee2b669deee10cba4154da8466c076f818572f4",
+      "sha256": "360a5a1c15b1b34b32ce18a1c5c63be64a0793fe1f7bfcd21127c52fca7105e5"
+    },
+    {
+      "path": "AGENTE/genetic_invest_agent/test_agent_integrity.py",
+      "source_blob": "94e4402cf5e18f15475c5a2eeb81bb3cb330b61e",
+      "sha256": "10e2547cdd1a08935a1a1a3e331879e806102c2e7ba262ad9e17e1f458c53771"
+    },
+    {
+      "path": "AGENTE/genetic_invest_agent/test_forward_portfolio.py",
+      "source_blob": "17401bee6d76c4898275f859c2bf0312b15e0b32",
+      "sha256": "ae45380583587f9c9039de0282733f8550639b42cc5e2855f9520f1b9e9829af"
+    },
+    {
+      "path": "AGENTE/genetic_invest_agent/test_publish_snapshot.py",
+      "source_blob": "bba5c4de9c8db6a5f649bf70253a0eef8f9c75f9",
+      "sha256": "3f09588581b42fb71655d0cca3918e53809873601f1696e37d5058504a61af8f"
+    },
+    {
+      "path": "AGENTE/genetic_invest_agent/requirements.txt",
+      "source_blob": "2f12861f6156a9221ce539fad6741b275d819a9c",
+      "sha256": "ddef565fa7af4b6c0bf519be47b892bdf5d571998d5d7855f32d1fa7653215c2"
+    },
+    {
+      "path": "AGENTE/genetic_invest_agent/sp500_tickers.csv",
+      "source_blob": "66b688d3a6701b8e561186c84984f45f59d1ee93",
+      "sha256": "18a2635c3c2b572a8c697955457bad063620aecfbae9d43e1e01f92f87a5cb0a"
+    },
+    {
+      "path": "AGENTE/genetic_invest_agent/registro_historico/diario_portfolio.json",
+      "source_blob": "1ed9c4640dc1aab374db646beea6eb3641be304e",
+      "sha256": "11eb01b887299e5fe34a048a73a1b600626e08f6d1cfa0f14e3a1bcb7e986c9b"
+    },
+    {
+      "path": "AGENTE/genetic_invest_agent/registro_historico/diario_portfolio_forward.json",
+      "source_blob": "e9546e1f437dcb3044eabe8a89e2b1786981189e",
+      "sha256": "12806093eebb26c7202954b0f476e00d06c5761c1fd8ad5d8fed14ecf65f2442"
+    },
+    {
+      "path": "AGENTE/genetic_invest_agent/registro_historico/diario_portfolio_forward_2026-10-12.json",
+      "source_blob": "299853e2e5aa36c07d23ce578047bbb30dcc2145",
+      "sha256": "fc41d85319c751d2e2d990689fd2a9e915aaf6dd94ce446a08af732d80e1d05d"
+    }
+  ],
+  "active_anchor": {
+    "last_session": "2026-10-28",
+    "history_length": 13,
+    "history_sha256": "8d4ed221a2a31af7ae75cb1f943ea0c87d8887f6b26e504bfe16f4aba7969d57",
+    "trade_count": 23,
+    "trades_sha256": "35751b6bec9323af55b304c5fe01669fd79aed34d7edc836304845a74ddb1766"
+  }
+}

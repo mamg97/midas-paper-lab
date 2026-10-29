@@ -1,0 +1,5 @@
+# Direct numerical/runtime versions observed in the last successful private run.
+pandas==2.3.3
+numpy==2.2.6
+yfinance==1.7.0
+matplotlib==3.10.9
