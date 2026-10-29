@@ -76,3 +76,10 @@ python market_data/health.py --eligible
    su hash del log no permite reconstruir sus bytes originales.
 
 Nunca insertar fills a posteriori ni alterar históricos, NAV, pesos o decisiones.
+
+## Coordinated Capital Cycle publication
+
+The reusable Capital Cycle consumer must publish its owned ledger before the
+coordinator reads it for source health. Its independent scheduled runtime stamp
+remains untouched by a coordinated call. This repairs a skipped publication step;
+it does not recover missing quotes, replay trades, or establish live continuity.

@@ -92,7 +92,8 @@ jobs:
             --capital-cycle-state capital_cycle_state/ledger.json \
             --output strategy_state
       - name: Commit capital-cycle and dashboard state
-        if: ${{ always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && !inputs.preflight_only && !inputs.common_capture }}
+        # The coordinated consumer must persist its ledger before source-health reads main.
+        if: ${{ always() && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && !inputs.preflight_only }}
         run: |
           python strategy_comparison/publish_state.py \
             --message "Record MIDAS capital-cycle paper state" \
