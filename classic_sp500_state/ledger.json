@@ -46,6 +46,10 @@
         {
           "date": "2026-10-27",
           "nav": 100279.80257247193
+        },
+        {
+          "date": "2026-10-28",
+          "nav": 100607.86147030274
         }
       ],
       "events": [
@@ -65,7 +69,7 @@
           "type": "buy"
         }
       ],
-      "nav": 100279.80257247193,
+      "nav": 100607.86147030274,
       "pending": {},
       "positions": {
         "SPY": {
@@ -122,6 +126,10 @@
         {
           "buys": 0,
           "date": "2026-10-27"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-28"
         }
       ],
       "trades": []
@@ -172,6 +180,10 @@
         {
           "date": "2026-10-27",
           "nav": 98603.75068121278
+        },
+        {
+          "date": "2026-10-28",
+          "nav": 98715.94932431824
         }
       ],
       "events": [
@@ -245,7 +257,7 @@
           "type": "buy"
         }
       ],
-      "nav": 98603.75068121278,
+      "nav": 98715.94932431824,
       "pending": {},
       "positions": {
         "ABBV": {
@@ -365,6 +377,10 @@
         {
           "buys": 0,
           "date": "2026-10-27"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-28"
         }
       ],
       "trades": [
@@ -4046,9 +4062,24 @@
             "2026-10-27"
           ],
           "type": "passive_marks_recovered_no_fills"
+        },
+        {
+          "date": "2026-10-28",
+          "missing_tickers": [
+            "HUBB"
+          ],
+          "type": "book_quarantined_missing_held_bar"
         }
       ],
       "nav": 101829.72298058106,
+      "paused_missing_quotes": {
+        "last_valued_session": "2026-10-27",
+        "missing_tickers": [
+          "HUBB"
+        ],
+        "reason": "required same-session bar unavailable",
+        "since": "2026-10-28"
+      },
       "pending": {},
       "positions": {
         "A": {
@@ -8552,6 +8583,10 @@
         {
           "date": "2026-10-27",
           "nav": 101047.24477732042
+        },
+        {
+          "date": "2026-10-28",
+          "nav": 100820.15660320473
         }
       ],
       "events": [
@@ -8613,7 +8648,7 @@
           "type": "buy"
         }
       ],
-      "nav": 101047.24477732042,
+      "nav": 100820.15660320473,
       "pending": {},
       "positions": {
         "BAX": {
@@ -8733,6 +8768,10 @@
         {
           "buys": 0,
           "date": "2026-10-27"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-28"
         }
       ],
       "trades": []
@@ -8783,6 +8822,10 @@
         {
           "date": "2026-10-27",
           "nav": 101161.3847026656
+        },
+        {
+          "date": "2026-10-28",
+          "nav": 102196.2667493637
         }
       ],
       "events": [
@@ -8844,7 +8887,7 @@
           "type": "buy"
         }
       ],
-      "nav": 101161.3847026656,
+      "nav": 102196.2667493637,
       "pending": {},
       "positions": {
         "ABT": {
@@ -8964,12 +9007,16 @@
         {
           "buys": 0,
           "date": "2026-10-27"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-28"
         }
       ],
       "trades": []
     },
     "macd_12_26_9": {
-      "cash": 12568.847101693516,
+      "cash": 29671.72689961962,
       "equity": [
         {
           "date": "2026-10-12",
@@ -9014,6 +9061,10 @@
         {
           "date": "2026-10-27",
           "nav": 102408.69610591458
+        },
+        {
+          "date": "2026-10-28",
+          "nav": 102642.57320975338
         }
       ],
       "events": [
@@ -9091,25 +9142,31 @@
           "reason": "stop",
           "ticker": "UHS",
           "type": "sell"
+        },
+        {
+          "date": "2026-10-28",
+          "ticker": "EXPD",
+          "type": "unfilled"
+        },
+        {
+          "date": "2026-10-28",
+          "reason": "target",
+          "ticker": "CRL",
+          "type": "sell"
         }
       ],
-      "nav": 102408.69610591458,
+      "nav": 102642.57320975338,
       "pending": {
-        "EXPD": {
+        "ADI": {
           "side": "buy",
-          "signal_date": "2026-10-27"
+          "signal_date": "2026-10-28"
+        },
+        "RVTY": {
+          "side": "buy",
+          "signal_date": "2026-10-28"
         }
       },
       "positions": {
-        "CRL": {
-          "cost": 14909.297951168237,
-          "dividends": 0.0,
-          "entry_date": "2026-10-21",
-          "entry_price": 313.98690156555176,
-          "shares": 47.436385,
-          "stop": 288.86794944030765,
-          "target": 361.0849368003845
-        },
         "DHR": {
           "cost": 11874.99992854094,
           "dividends": 0.0,
@@ -9209,6 +9266,10 @@
         {
           "buys": 1,
           "date": "2026-10-27"
+        },
+        {
+          "buys": 2,
+          "date": "2026-10-28"
         }
       ],
       "trades": [
@@ -9231,11 +9292,21 @@
           "proceeds": 10897.72010324767,
           "reason": "stop",
           "ticker": "UHS"
+        },
+        {
+          "dividends": 0.0,
+          "entry_cost": 14909.297951168237,
+          "entry_date": "2026-10-21",
+          "exit_date": "2026-10-28",
+          "net_pnl": 2193.5818467578665,
+          "proceeds": 17102.879797926103,
+          "reason": "target",
+          "ticker": "CRL"
         }
       ]
     },
     "rsi_reversion_14": {
-      "cash": 1994.690914317809,
+      "cash": 14959.628163921572,
       "equity": [
         {
           "date": "2026-10-12",
@@ -9280,6 +9351,10 @@
         {
           "date": "2026-10-27",
           "nav": 103979.0798513359
+        },
+        {
+          "date": "2026-10-28",
+          "nav": 105185.58086747523
         }
       ],
       "events": [
@@ -9351,17 +9426,24 @@
           "shares": 209.384164,
           "ticker": "APH",
           "type": "buy"
+        },
+        {
+          "date": "2026-10-28",
+          "reason": "signal_next_open",
+          "ticker": "PNC",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-28",
+          "ticker": "XYL",
+          "type": "unfilled"
         }
       ],
-      "nav": 103979.0798513359,
+      "nav": 105185.58086747523,
       "pending": {
-        "PNC": {
-          "side": "sell",
-          "signal_date": "2026-10-27"
-        },
-        "XYL": {
+        "FFIV": {
           "side": "buy",
-          "signal_date": "2026-10-27"
+          "signal_date": "2026-10-28"
         }
       },
       "positions": {
@@ -9419,15 +9501,6 @@
           "stop": 150.5504353527832,
           "target": 188.18804419097899
         },
-        "PNC": {
-          "cost": 11874.999889934026,
-          "dividends": 0.0,
-          "entry_date": "2026-10-15",
-          "entry_price": 208.59425049591064,
-          "shares": 56.87183,
-          "stop": 191.9067104562378,
-          "target": 239.88338807029723
-        },
         "STT": {
           "cost": 11874.9999768362,
           "dividends": 0.0,
@@ -9482,6 +9555,10 @@
         {
           "buys": 1,
           "date": "2026-10-27"
+        },
+        {
+          "buys": 1,
+          "date": "2026-10-28"
         }
       ],
       "trades": [
@@ -9494,11 +9571,21 @@
           "proceeds": 12254.571811560458,
           "reason": "signal_next_open",
           "ticker": "PNR"
+        },
+        {
+          "dividends": 0.0,
+          "entry_cost": 11874.999889934026,
+          "entry_date": "2026-10-15",
+          "exit_date": "2026-10-28",
+          "net_pnl": 1089.937359669737,
+          "proceeds": 12964.937249603763,
+          "reason": "signal_next_open",
+          "ticker": "PNC"
         }
       ]
     },
     "turtle_20_10_long": {
-      "cash": 5000.002720618815,
+      "cash": 4718.6984483078595,
       "equity": [
         {
           "date": "2026-10-12",
@@ -9543,6 +9630,10 @@
         {
           "date": "2026-10-27",
           "nav": 96194.45295173215
+        },
+        {
+          "date": "2026-10-28",
+          "nav": 96394.39938829279
         }
       ],
       "events": [
@@ -9602,44 +9693,81 @@
           "shares": 25.974169,
           "ticker": "VLO",
           "type": "buy"
+        },
+        {
+          "date": "2026-10-28",
+          "reason": "signal_next_open",
+          "ticker": "HCA",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-28",
+          "reason": "signal_next_open",
+          "ticker": "MPC",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-28",
+          "reason": "signal_next_open",
+          "ticker": "PSX",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-28",
+          "reason": "signal_next_open",
+          "ticker": "VLO",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-28",
+          "shares": 79.598496,
+          "ticker": "ALLE",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-28",
+          "shares": 342.30957,
+          "ticker": "CNP",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-28",
+          "shares": 39.906482,
+          "ticker": "CRL",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-28",
+          "ticker": "PNR",
+          "type": "unfilled"
         }
       ],
-      "nav": 96194.45295173215,
+      "nav": 96394.39938829279,
       "pending": {
-        "ALLE": {
-          "side": "buy",
-          "signal_date": "2026-10-27"
-        },
-        "CNP": {
-          "side": "buy",
-          "signal_date": "2026-10-27"
-        },
-        "CRL": {
-          "side": "buy",
-          "signal_date": "2026-10-27"
-        },
-        "HCA": {
-          "side": "sell",
-          "signal_date": "2026-10-27"
-        },
-        "MPC": {
-          "side": "sell",
-          "signal_date": "2026-10-27"
-        },
         "PNR": {
           "side": "buy",
-          "signal_date": "2026-10-27"
-        },
-        "PSX": {
-          "side": "sell",
-          "signal_date": "2026-10-27"
-        },
-        "VLO": {
-          "side": "sell",
-          "signal_date": "2026-10-27"
+          "signal_date": "2026-10-28"
         }
       },
       "positions": {
+        "ALLE": {
+          "cost": 14388.290263124516,
+          "dividends": 0.0,
+          "entry_date": "2026-10-28",
+          "entry_price": 180.58025049591063,
+          "shares": 79.598496,
+          "stop": null,
+          "target": null
+        },
+        "CNP": {
+          "cost": 14388.290353731034,
+          "dividends": 0.0,
+          "entry_date": "2026-10-28",
+          "entry_price": 41.99098622131348,
+          "shares": 342.30957,
+          "stop": null,
+          "target": null
+        },
         "COST": {
           "cost": 11874.999008088047,
           "dividends": 0.0,
@@ -9649,12 +9777,12 @@
           "stop": null,
           "target": null
         },
-        "HCA": {
-          "cost": 11874.999665491461,
+        "CRL": {
+          "cost": 14388.290257360019,
           "dividends": 0.0,
-          "entry_date": "2026-10-15",
-          "entry_price": 475.23749999999995,
-          "shares": 24.962543,
+          "entry_date": "2026-10-28",
+          "entry_price": 360.1900147705078,
+          "shares": 39.906482,
           "stop": null,
           "target": null
         },
@@ -9667,15 +9795,6 @@
           "stop": null,
           "target": null
         },
-        "MPC": {
-          "cost": 11874.999858372852,
-          "dividends": 0.0,
-          "entry_date": "2026-10-15",
-          "entry_price": 481.4406122131347,
-          "shares": 24.640914,
-          "stop": null,
-          "target": null
-        },
         "MTD": {
           "cost": 11874.999420123839,
           "dividends": 0.0,
@@ -9685,30 +9804,12 @@
           "stop": null,
           "target": null
         },
-        "PSX": {
-          "cost": 11874.999945478823,
-          "dividends": 0.0,
-          "entry_date": "2026-10-15",
-          "entry_price": 295.1374852294922,
-          "shares": 40.19529,
-          "stop": null,
-          "target": null
-        },
         "ULTA": {
           "cost": 11874.999540303897,
           "dividends": 0.0,
           "entry_date": "2026-10-15",
           "entry_price": 600.3,
           "shares": 19.762013,
-          "stop": null,
-          "target": null
-        },
-        "VLO": {
-          "cost": 11874.999889326822,
-          "dividends": 0.0,
-          "entry_date": "2026-10-15",
-          "entry_price": 456.72825,
-          "shares": 25.974169,
           "stop": null,
           "target": null
         }
@@ -9757,9 +9858,54 @@
         {
           "buys": 4,
           "date": "2026-10-27"
+        },
+        {
+          "buys": 1,
+          "date": "2026-10-28"
         }
       ],
-      "trades": []
+      "trades": [
+        {
+          "dividends": 0.0,
+          "entry_cost": 11874.999665491461,
+          "entry_date": "2026-10-15",
+          "exit_date": "2026-10-28",
+          "net_pnl": -772.856092190319,
+          "proceeds": 11102.143573301142,
+          "reason": "signal_next_open",
+          "ticker": "HCA"
+        },
+        {
+          "dividends": 0.0,
+          "entry_cost": 11874.999858372852,
+          "entry_date": "2026-10-15",
+          "exit_date": "2026-10-28",
+          "net_pnl": -1074.5973344755766,
+          "proceeds": 10800.402523897275,
+          "reason": "signal_next_open",
+          "ticker": "MPC"
+        },
+        {
+          "dividends": 0.0,
+          "entry_cost": 11874.999945478823,
+          "entry_date": "2026-10-15",
+          "exit_date": "2026-10-28",
+          "net_pnl": -1017.2738014614115,
+          "proceeds": 10857.726144017412,
+          "reason": "signal_next_open",
+          "ticker": "PSX"
+        },
+        {
+          "dividends": 0.0,
+          "entry_cost": 11874.999889326822,
+          "entry_date": "2026-10-15",
+          "exit_date": "2026-10-28",
+          "net_pnl": -1751.7055286380382,
+          "proceeds": 10123.294360688784,
+          "reason": "signal_next_open",
+          "ticker": "VLO"
+        }
+      ]
     },
     "turtle_55_20_long": {
       "cash": 5000.0026430789785,
@@ -9807,6 +9953,10 @@
         {
           "date": "2026-10-27",
           "nav": 95847.27185564794
+        },
+        {
+          "date": "2026-10-28",
+          "nav": 96388.02978588152
         }
       ],
       "events": [
@@ -9868,7 +10018,7 @@
           "type": "buy"
         }
       ],
-      "nav": 95847.27185564794,
+      "nav": 96388.02978588152,
       "pending": {},
       "positions": {
         "ABBV": {
@@ -9988,6 +10138,10 @@
         {
           "buys": 0,
           "date": "2026-10-27"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-28"
         }
       ],
       "trades": []
@@ -10251,13 +10405,45 @@
       "verified_price_source_aliases": {
         "PSKY": "SKYD"
       }
+    },
+    {
+      "date": "2026-10-28",
+      "eligible": 488,
+      "missing": {
+        "AVB": "invalid_current_ohlc",
+        "BK": "invalid_current_ohlc",
+        "CTRA": "invalid_current_ohlc",
+        "DAY": "invalid_current_ohlc",
+        "EA": "invalid_current_ohlc",
+        "EQR": "invalid_current_ohlc",
+        "FI": "invalid_current_ohlc",
+        "HOLX": "invalid_current_ohlc",
+        "HUBB": "invalid_current_ohlc",
+        "IPG": "invalid_current_ohlc",
+        "K": "invalid_current_ohlc",
+        "MMC": "invalid_current_ohlc",
+        "PSKY": "invalid_current_ohlc",
+        "WBA": "invalid_current_ohlc",
+        "WBD": "invalid_current_ohlc"
+      },
+      "paused_books_missing_held_quotes": {
+        "buy_hold_equal_weight": [
+          "HUBB"
+        ]
+      },
+      "ticker_coverage_pct": 97.018,
+      "total": 503,
+      "unfilled_pending_buys_missing_bar": [],
+      "verified_price_source_aliases": {
+        "PSKY": "SKYD"
+      }
     }
   ],
   "currency": "USD",
   "engine": "classic_sp500_next_open_v2",
   "first_session": "2026-10-12",
   "initial_capital": 100000,
-  "last_session": "2026-10-27",
+  "last_session": "2026-10-28",
   "late_recorded_sessions": [
     "2026-10-19",
     "2026-10-20"
