@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-29T02:23:51.718443+00:00",
+  "generated_at_utc": "2026-10-29T02:26:25.256115+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 18,
@@ -3552,11 +3552,11 @@
       "group": "timesfm_daily_demo",
       "status": "demo_con_diario",
       "first_session": "2026-10-12",
-      "last_session": "2026-10-27",
+      "last_session": "2026-10-28",
       "initial_capital": 100000.0,
-      "last_equity": 100555.32337552993,
-      "return_pct": 0.555323,
-      "day_return_pct": -0.189004,
+      "last_equity": 100184.407257004,
+      "return_pct": 0.184407,
+      "day_return_pct": -0.368868,
       "currency": "EUR",
       "equity_history": [
         {
@@ -3606,10 +3606,14 @@
         {
           "date": "2026-10-27",
           "nav": 100555.32337552993
+        },
+        {
+          "date": "2026-10-28",
+          "nav": 100184.407257004
         }
       ],
       "period_returns_pct": {
-        "5_sessions": 0.275826,
+        "5_sessions": -0.476294,
         "21_sessions": null,
         "63_sessions": null
       },
@@ -3617,20 +3621,22 @@
       "comparison_currency": "EUR",
       "comparison_reference": "timesfm_daily_spy_eur",
       "activity_state": "pending",
-      "activity_label": "1 compra paper para próxima apertura",
+      "activity_label": "3 compras paper para próxima apertura",
       "activity_tickers": [
-        "XYL"
+        "LII",
+        "CHRW",
+        "ESS"
       ],
       "open_positions_count": 0,
-      "pending_orders_count": 1,
+      "pending_orders_count": 3,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 12,
-      "annualized_volatility_pct": 3.922871,
-      "max_drawdown_pct": -0.428959,
-      "sharpe_0rf": 3.252682
+      "risk_observations": 13,
+      "annualized_volatility_pct": 4.205419,
+      "max_drawdown_pct": -0.796245,
+      "sharpe_0rf": 0.939338
     },
     {
       "id": "timesfm_daily_spy_eur",
@@ -3639,11 +3645,11 @@
       "group": "timesfm_daily_demo",
       "status": "demo_con_diario",
       "first_session": "2026-10-12",
-      "last_session": "2026-10-27",
+      "last_session": "2026-10-28",
       "initial_capital": 100000.0,
-      "last_equity": 99309.81898714228,
-      "return_pct": -0.690181,
-      "day_return_pct": 0.760573,
+      "last_equity": 99898.57251754959,
+      "return_pct": -0.101427,
+      "day_return_pct": 0.592845,
       "currency": "EUR",
       "equity_history": [
         {
@@ -3693,10 +3699,14 @@
         {
           "date": "2026-10-27",
           "nav": 99309.81898714228
+        },
+        {
+          "date": "2026-10-28",
+          "nav": 99898.57251754959
         }
       ],
       "period_returns_pct": {
-        "5_sessions": 0.363308,
+        "5_sessions": 0.615321,
         "21_sessions": null,
         "63_sessions": null
       },
@@ -3714,10 +3724,10 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 12,
-      "annualized_volatility_pct": 11.547611,
+      "risk_observations": 13,
+      "annualized_volatility_pct": 11.410067,
       "max_drawdown_pct": -2.165169,
-      "sharpe_0rf": -1.320847
+      "sharpe_0rf": -0.134252
     },
     {
       "id": "genetic_sp500_legacy",
