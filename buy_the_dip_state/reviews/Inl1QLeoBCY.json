@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-29T08:53:56.043103+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/144938361",
+    "published_date": "2025-04-14",
+    "youtube_video_id": "Inl1QLeoBCY",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 7779056
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 972.2775625,
+      "word_count": 2720,
+      "segment_count": 163,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "Inl1QLeoBCY",
+    "youtube_url": "https://www.youtube.com/watch?v=Inl1QLeoBCY",
+    "title": "¿Hasta dónde seguirá subiendo el ORO? ¿Qué pasa?",
+    "category": "sector_theme",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/144938361",
+    "published_date": "2025-04-14",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza el mercado de oro, destacando un rebote histórico en 2025 debido a la volatilidad y la falta de confianza en Estados Unidos. Se menciona que el oro ha alcanzado máximos históricos, superando los $3200, lo que refleja alta demanda y posibles correcciones en el sector energético. La volatilidad en el mercado energético y la inflación en caída influyen en la demanda de oro, mientras que el déficit presupuesto de EE. UU. alcanzó 1.3 billones en el primer semestre de 2025, causado por un aumento del gasto público en áreas como medicina, defensa y asistencia a desastres. Los republicanos proponen recortes de impuestos y gasto público, lo que genera un problema de déficit y recortes de impuestos. Se sugiere que podría haber una corrección en el precio del oro, afectando a las mineras y los activos reales, y se menciona que las mineras están a niveles razonables y que podría ser un momento para tomar posiciones.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [],
+      "cycle_macro": [],
+      "entry": [],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [],
+      "risk": [],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "low"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "entry",
+          "paraphrase": "El análisis de la semana pasada mostró un rebote histórico en el mercado de oro debido a la volatilidad y la falta de confianza en Estados Unidos.",
+          "timestamp": "00:00:23",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "El oro ha alcanzado máximos históricos, superando los $3200, lo que refleja una alta demanda y una posible corrección en el mercado energético.",
+          "timestamp": "00:00:34",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "La falta de credibilidad en el gobierno de Estados Unidos ha impactado la estabilidad psicológica y la confianza en los mercados financieros.",
+          "timestamp": "00:02:57",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "La volatilidad en el mercado energético y la inflación en caída han influido en la demanda de oro, reflejando una posible corrección en el sector energético.",
+          "timestamp": "00:04:44",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "sizing",
+          "paraphrase": "El precio del petróleo a $61 por barril sugiere que las empresas energéticas están manteniendo su producción y dividendos, aunque con un riesgo de recesión que podría afectar su sostenibilidad.",
+          "timestamp": "00:05:59",
+          "scope": "hosts",
+          "confidence": 0.4,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis de la semana pasada destacó un rebote histórico en el mercado de oro y una volatilidad en el mercado energético, influenciados por la falta de confianza en Estados Unidos y la inflación en caída. La estrategia de negociación de Trump y la posible recesión afectan la estabilidad psicológica y la demanda de oro, mientras que el precio del petróleo a $61 por barril refleja una producción sostenida por empresas energéticas, aunque con riesgos de recesión que podrían impactar su sostenibilidad."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "deficit",
+          "paraphrase": "El déficit presupuesto de EE. UU. alcanzó 1.3 billones en el primer semestre de 2025, el segundo más alto en la historia, debido a un aumento del gasto público, incluido medicina, defensa y asistencia a desastres.",
+          "timestamp": "00:11:01",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "deficit",
+          "paraphrase": "El déficit de EE. UU. alcanzó 1.3 billones en los primeros 6 meses de 2025, el segundo más alto en la historia, seguido por el récord de 2021, causado por un incremento del gasto público en áreas como medicina, defensa y asistencia a desastres.",
+          "timestamp": "00:11:06",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "deficit",
+          "paraphrase": "El déficit de EE. UU. alcanzó 1.3 billones en el primer semestre de 2025, el segundo más alto en la historia, causado por un aumento del gasto público, incluido medicina, defensa y asistencia a desastres, mientras que los republicanos proponen recortes de impuestos y gasto público.",
+          "timestamp": "00:11:12",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "deficit",
+          "paraphrase": "El déficit de EE. UU. alcanzó 1.3 billones en el primer semestre de 2025, el segundo más alto en la historia, causado por un aumento del gasto público, incluido medicina, defensa y asistencia a desastres, mientras que los republicanos proponen recortes de impuestos y gasto público, lo que genera un problema de déficit y recortes de impuestos.",
+          "timestamp": "00:11:19",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "deficit",
+          "paraphrase": "El déficit de EE. UU. alcanzó 1.3 billones en el primer semestre de 2025, el segundo más alto en la historia, causado por un aumento del gasto público, incluido medicina, defensa y asistencia a desastres, mientras que los republicanos proponen recortes de impuestos y gasto público, lo que genera un problema de déficit y recortes de impuestos, y se menciona la posibilidad de una corrección en el precio del oro.",
+          "timestamp": "00:11:29",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "deficit",
+          "paraphrase": "El déficit de EE. UU. alcanzó 1.3 billones en el primer semestre de 2025, el segundo más alto en la historia, causado por un aumento del gasto público, incluido medicina, defensa y asistencia a desastres, mientras que los republicanos proponen recortes de impuestos y gasto público, lo que genera un problema de déficit y recortes de impuestos, y se menciona la posibilidad de una corrección en el precio del oro, lo que podría afectar a las mineras y los activos reales.",
+          "timestamp": "00:11:39",
+          "scope": "hosts",
+          "confidence": 0.4,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "deficit",
+          "paraphrase": "El déficit de EE. UU. alcanzó 1.3 billones en el primer semestre de 2025, el segundo más alto en la historia, causado por un aumento del gasto público, incluido medicina, defensa y asistencia a desastres, mientras que los republicanos proponen recortes de impuestos y gasto público, lo que genera un problema de déficit y recortes de impuestos, y se menciona la posibilidad de una corrección en el precio del oro, lo que podría afectar a las mineras y los activos reales, y se sugiere que las mineras están a niveles razonables y que podría ser un momento para tomar posiciones.",
+          "timestamp": "00:11:59",
+          "scope": "hosts",
+          "confidence": 0.3,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El fragmento describe el déficit presupuesto de EE. UU. en 2025, que alcanzó 1.3 billones, el segundo más alto en la historia, causado por un aumento del gasto público en áreas como medicina, defensa y asistencia a desastres. Se menciona que los republicanos proponen recortes de impuestos y gasto público, lo que genera un problema de déficit y recortes de impuestos. Se sugiere que podría haber una corrección en el precio del oro, afectando a las mineras y los activos reales, y se menciona que las mineras están a niveles razonables y que podría ser un momento para tomar posiciones."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
