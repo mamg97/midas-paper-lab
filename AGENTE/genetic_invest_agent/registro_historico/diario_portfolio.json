@@ -1,0 +1,1858 @@
+{
+  "initial_capital": 100000.0,
+  "cash": 14859.760323095375,
+  "positions": {
+    "HSIC": {
+      "shares": 124.92447411923708,
+      "avg_price": 78.8499984741211,
+      "weight": 0.15,
+      "sl": 75.1823847727642,
+      "tp": 91.95775966523519
+    },
+    "GILD": {
+      "shares": 103.08263396851278,
+      "avg_price": 131.6999969482422,
+      "weight": 0.15,
+      "sl": 126.76793960965486,
+      "tp": 154.14760541213255
+    },
+    "ICE": {
+      "shares": 9.978779239841765,
+      "avg_price": 150.5399932861328,
+      "weight": 0.15,
+      "sl": 141.92795239398683,
+      "tp": 180.64799194335936
+    },
+    "DG": {
+      "shares": 99.15022189861874,
+      "avg_price": 122.30999755859375,
+      "weight": 0.15,
+      "sl": 113.45164895286075,
+      "tp": 146.23001964062922
+    },
+    "WMB": {
+      "shares": 9.206545176440391,
+      "avg_price": 75.2300033569336,
+      "weight": 0.15,
+      "sl": 69.21160308837891,
+      "tp": 88.92061935096336
+    },
+    "HCA": {
+      "shares": 36.8100142219296,
+      "avg_price": 421.8299865722656,
+      "weight": 0.15,
+      "sl": 403.964891160667,
+      "tp": 437.9132419625493
+    },
+    "DDOG": {
+      "shares": 3.4437157326714236,
+      "avg_price": 230.0500030517578,
+      "weight": 0.15,
+      "sl": 224.21344721195544,
+      "tp": 262.1314566597604
+    },
+    "INTC": {
+      "shares": 128.3405758661684,
+      "avg_price": 121.77999877929688,
+      "weight": 0.15,
+      "sl": 115.73391136817237,
+      "tp": 146.13599853515623
+    },
+    "TSLA": {
+      "shares": 2.0822429630530723,
+      "avg_price": 375.29998779296875,
+      "weight": 0.15,
+      "sl": 356.6672356634294,
+      "tp": 450.3599853515625
+    },
+    "AME": {
+      "shares": 59.376760740243974,
+      "avg_price": 246.4499969482422,
+      "weight": 0.15,
+      "sl": 233.31345382047368,
+      "tp": 295.7399963378906
+    },
+    "SW": {
+      "shares": 15.738225397835938,
+      "avg_price": 46.4900016784668,
+      "weight": 0.15,
+      "sl": 44.0119415461006,
+      "tp": 55.788002014160156
+    }
+  },
+  "history": [
+    {
+      "date": "2026-02-25",
+      "action": "COMPRAR",
+      "ticker": "URI",
+      "price": 896.8800048828125,
+      "shares": 16.707920701117605,
+      "reason": "Signal",
+      "sl": 848.915273948884,
+      "tp": 1062.2590003583698
+    },
+    {
+      "date": "2026-02-25",
+      "action": "COMPRAR",
+      "ticker": "VICI",
+      "price": 30.280000686645508,
+      "shares": 494.88109842113994,
+      "reason": "Signal",
+      "sl": 28.66064015044547,
+      "tp": 35.86344113497051
+    },
+    {
+      "date": "2026-02-25",
+      "action": "COMPRAR",
+      "ticker": "ZBH",
+      "price": 99.87000274658203,
+      "shares": 150.04505444967407,
+      "reason": "Signal",
+      "sl": 94.5290008466273,
+      "tp": 118.2853990565142
+    },
+    {
+      "date": "2026-02-25",
+      "action": "COMPRAR",
+      "ticker": "AIG",
+      "price": 79.83999633789062,
+      "shares": 187.60342481242813,
+      "reason": "Signal",
+      "sl": 78.18443245549666,
+      "tp": 84.36334307973894
+    },
+    {
+      "date": "2026-02-26",
+      "action": "COMPRAR",
+      "ticker": "AWK",
+      "price": 134.22000122070312,
+      "shares": 110.82627438026843,
+      "reason": "Signal",
+      "sl": 123.48240112304688,
+      "tp": 152.24396435948427
+    },
+    {
+      "date": "2026-02-26",
+      "action": "COMPRAR",
+      "ticker": "OMC",
+      "price": 82.70999908447266,
+      "shares": 179.84648588151353,
+      "reason": "Signal",
+      "sl": 76.09319915771485,
+      "tp": 93.81685321313444
+    },
+    {
+      "date": "2026-02-27",
+      "action": "COMPRAR",
+      "ticker": "ESS",
+      "price": 262.739990234375,
+      "shares": 36.940364433641975,
+      "reason": "Signal",
+      "sl": 248.06221793656857,
+      "tp": 278.7152790113188
+    },
+    {
+      "date": "2026-02-27",
+      "action": "COMPRAR",
+      "ticker": "DOC",
+      "price": 17.510000228881836,
+      "shares": 27.714765458827017,
+      "reason": "Signal",
+      "sl": 16.531817212033868,
+      "tp": 18.57465471825443
+    },
+    {
+      "date": "2026-03-02",
+      "action": "VENDER",
+      "ticker": "URI",
+      "price": 840.0,
+      "shares": 16.707920701117605,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-03-02",
+      "action": "COMPRAR",
+      "ticker": "ABNB",
+      "price": 135.11000061035156,
+      "shares": 98.66429152712644,
+      "reason": "Signal",
+      "sl": 130.93594063057557,
+      "tp": 141.57419841057293
+    },
+    {
+      "date": "2026-03-04",
+      "action": "COMPRAR",
+      "ticker": "CCI",
+      "price": 90.26000213623047,
+      "shares": 7.38451815474701,
+      "reason": "Signal",
+      "sl": 83.03920196533204,
+      "tp": 95.50928719022744
+    },
+    {
+      "date": "2026-03-06",
+      "action": "VENDER",
+      "ticker": "ZBH",
+      "price": 93.44999694824219,
+      "shares": 150.04505444967407,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-03-06",
+      "action": "COMPRAR",
+      "ticker": "EBAY",
+      "price": 93.04000091552734,
+      "shares": 143.24293484877168,
+      "reason": "Signal",
+      "sl": 89.48700423570226,
+      "tp": 99.29731848543605
+    },
+    {
+      "date": "2026-03-06",
+      "action": "COMPRAR",
+      "ticker": "FTNT",
+      "price": 84.41999816894531,
+      "shares": 7.893463088450496,
+      "reason": "Signal",
+      "sl": 81.19618077584977,
+      "tp": 90.09758557862088
+    },
+    {
+      "date": "2026-03-10",
+      "action": "VENDER",
+      "ticker": "AIG",
+      "price": 77.62000274658203,
+      "shares": 187.60342481242813,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-03-10",
+      "action": "COMPRAR",
+      "ticker": "GOOG",
+      "price": 306.010009765625,
+      "shares": 45.22516830134965,
+      "reason": "Signal",
+      "sl": 284.30289332277,
+      "tp": 367.21201171875
+    },
+    {
+      "date": "2026-03-10",
+      "action": "COMPRAR",
+      "ticker": "EXE",
+      "price": 107.87000274658203,
+      "shares": 6.414829814207343,
+      "reason": "Signal",
+      "sl": 100.21813961927926,
+      "tp": 129.44400329589843
+    },
+    {
+      "date": "2026-03-12",
+      "action": "VENDER",
+      "ticker": "VICI",
+      "price": 28.420000076293945,
+      "shares": 494.88109842113994,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-03-13",
+      "action": "VENDER",
+      "ticker": "ABNB",
+      "price": 127.69999694824219,
+      "shares": 98.66429152712644,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-03-13",
+      "action": "COMPRAR",
+      "ticker": "MOS",
+      "price": 31.360000610351562,
+      "shares": 450.8886594990318,
+      "reason": "Signal",
+      "sl": 29.08344843052405,
+      "tp": 36.271073493446764
+    },
+    {
+      "date": "2026-03-17",
+      "action": "VENDER",
+      "ticker": "MOS",
+      "price": 27.670000076293945,
+      "shares": 450.8886594990318,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-03-19",
+      "action": "VENDER",
+      "ticker": "OMC",
+      "price": 76.08000183105469,
+      "shares": 179.84648588151353,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-03-19",
+      "action": "VENDER",
+      "ticker": "ESS",
+      "price": 246.6999969482422,
+      "shares": 36.940364433641975,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-03-23",
+      "action": "VENDER",
+      "ticker": "CCI",
+      "price": 82.36000061035156,
+      "shares": 7.38451815474701,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-03-23",
+      "action": "VENDER",
+      "ticker": "EBAY",
+      "price": 88.9800033569336,
+      "shares": 143.24293484877168,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-03-25",
+      "action": "VENDER",
+      "ticker": "FTNT",
+      "price": 79.33999633789062,
+      "shares": 7.893463088450496,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-03-25",
+      "action": "VENDER",
+      "ticker": "GOOG",
+      "price": 289.20001220703125,
+      "shares": 45.22516830134965,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-03-26",
+      "action": "COMPRAR",
+      "ticker": "C",
+      "price": 114.4800033569336,
+      "shares": 118.98661565250389,
+      "reason": "Signal",
+      "sl": 105.32160308837891,
+      "tp": 122.45875633068015
+    },
+    {
+      "date": "2026-03-31",
+      "action": "COMPRAR",
+      "ticker": "ALL",
+      "price": 207.27000427246094,
+      "shares": 65.41122304505876,
+      "reason": "Signal",
+      "sl": 190.68840393066407,
+      "tp": 241.0641911202603
+    },
+    {
+      "date": "2026-03-31",
+      "action": "COMPRAR",
+      "ticker": "CBOE",
+      "price": 282.29998779296875,
+      "shares": 48.02616034811571,
+      "reason": "Signal",
+      "sl": 259.71598876953124,
+      "tp": 328.327383643583
+    },
+    {
+      "date": "2026-03-31",
+      "action": "COMPRAR",
+      "ticker": "KO",
+      "price": 76.2699966430664,
+      "shares": 177.76039172343064,
+      "reason": "Signal",
+      "sl": 70.1683969116211,
+      "tp": 88.7053826820837
+    },
+    {
+      "date": "2026-03-31",
+      "action": "COMPRAR",
+      "ticker": "MDLZ",
+      "price": 58.25,
+      "shares": 232.75166489298238,
+      "reason": "Signal",
+      "sl": 53.59,
+      "tp": 67.74732881414265
+    },
+    {
+      "date": "2026-04-01",
+      "action": "VENDER",
+      "ticker": "DOC",
+      "price": 16.43000030517578,
+      "shares": 27.714765458827017,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-04-01",
+      "action": "COMPRAR",
+      "ticker": "PFG",
+      "price": 90.11000061035156,
+      "shares": 77.1264554862458,
+      "reason": "Signal",
+      "sl": 84.03493261980027,
+      "tp": 107.21256072927935
+    },
+    {
+      "date": "2026-04-02",
+      "action": "COMPRAR",
+      "ticker": "HPE",
+      "price": 23.979999542236328,
+      "shares": 14.49096139201122,
+      "reason": "Signal",
+      "sl": 22.19197858201387,
+      "tp": 24.59377545570273
+    },
+    {
+      "date": "2026-04-03",
+      "action": "VENDER",
+      "ticker": "HPE",
+      "price": 24.610000610351562,
+      "shares": 14.49096139201122,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-04-03",
+      "action": "COMPRAR",
+      "ticker": "BK",
+      "price": 122.12999725341797,
+      "shares": 2.9107415585828607,
+      "reason": "Signal",
+      "sl": 112.86144370410398,
+      "tp": 142.26491626963795
+    },
+    {
+      "date": "2026-04-07",
+      "action": "VENDER",
+      "ticker": "EXE",
+      "price": 103.55000305175781,
+      "shares": 6.414829814207343,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-04-07",
+      "action": "COMPRAR",
+      "ticker": "BAC",
+      "price": 50.060001373291016,
+      "shares": 12.93559398667775,
+      "reason": "Signal",
+      "sl": 46.114909677770264,
+      "tp": 53.63354549216795
+    },
+    {
+      "date": "2026-04-09",
+      "action": "VENDER",
+      "ticker": "C",
+      "price": 123.48999786376953,
+      "shares": 118.98661565250389,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-04-09",
+      "action": "COMPRAR",
+      "ticker": "DAL",
+      "price": 68.08000183105469,
+      "shares": 205.10351784707098,
+      "reason": "Signal",
+      "sl": 67.39920181274414,
+      "tp": 79.909827036756
+    },
+    {
+      "date": "2026-04-09",
+      "action": "COMPRAR",
+      "ticker": "HCA",
+      "price": 505.1199951171875,
+      "shares": 1.3821911630467976,
+      "reason": "Signal",
+      "sl": 500.0687951660156,
+      "tp": 592.891456477744
+    },
+    {
+      "date": "2026-04-13",
+      "action": "VENDER",
+      "ticker": "HCA",
+      "price": 495.4700012207031,
+      "shares": 1.3821911630467976,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-04-13",
+      "action": "COMPRAR",
+      "ticker": "ANET",
+      "price": 147.35000610351562,
+      "shares": 4.643370215265032,
+      "reason": "Signal",
+      "sl": 143.5430982139354,
+      "tp": 167.95130161753832
+    },
+    {
+      "date": "2026-04-14",
+      "action": "VENDER",
+      "ticker": "DAL",
+      "price": 67.05000305175781,
+      "shares": 205.10351784707098,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-04-14",
+      "action": "COMPRAR",
+      "ticker": "AFL",
+      "price": 112.13999938964844,
+      "shares": 116.57460251524691,
+      "reason": "Signal",
+      "sl": 104.36673156664337,
+      "tp": 132.5356134918772
+    },
+    {
+      "date": "2026-04-14",
+      "action": "COMPRAR",
+      "ticker": "AMZN",
+      "price": 239.88999938964844,
+      "shares": 2.724722974731975,
+      "reason": "Signal",
+      "sl": 223.26141705091524,
+      "tp": 283.5203175737487
+    },
+    {
+      "date": "2026-04-16",
+      "action": "VENDER",
+      "ticker": "BAC",
+      "price": 54.31999969482422,
+      "shares": 12.93559398667775,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-04-16",
+      "action": "COMPRAR",
+      "ticker": "SCHW",
+      "price": 100.2699966430664,
+      "shares": 6.969938287871472,
+      "reason": "Signal",
+      "sl": 96.28688823802445,
+      "tp": 106.40231949130607
+    },
+    {
+      "date": "2026-04-17",
+      "action": "VENDER",
+      "ticker": "SCHW",
+      "price": 92.62000274658203,
+      "shares": 6.969938287871472,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-04-17",
+      "action": "COMPRAR",
+      "ticker": "AIG",
+      "price": 78.22000122070312,
+      "shares": 8.271487470962787,
+      "reason": "Signal",
+      "sl": 77.4378012084961,
+      "tp": 85.45605038015641
+    },
+    {
+      "date": "2026-04-22",
+      "action": "VENDER",
+      "ticker": "ANET",
+      "price": 172.86000061035156,
+      "shares": 4.643370215265032,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-04-22",
+      "action": "COMPRAR",
+      "ticker": "XYZ",
+      "price": 71.75,
+      "shares": 11.057084866871257,
+      "reason": "Signal",
+      "sl": 67.13617715319488,
+      "tp": 75.85871118431221
+    },
+    {
+      "date": "2026-04-23",
+      "action": "VENDER",
+      "ticker": "AIG",
+      "price": 76.02999877929688,
+      "shares": 8.271487470962787,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-04-23",
+      "action": "VENDER",
+      "ticker": "KO",
+      "price": 74.62999725341797,
+      "shares": 177.76039172343064,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-04-23",
+      "action": "VENDER",
+      "ticker": "MDLZ",
+      "price": 56.060001373291016,
+      "shares": 232.75166489298238,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-04-23",
+      "action": "COMPRAR",
+      "ticker": "AZO",
+      "price": 3589.989990234375,
+      "shares": 3.8639223417655253,
+      "reason": "Signal",
+      "sl": 3469.506710568086,
+      "tp": 4021.9133212716506
+    },
+    {
+      "date": "2026-04-23",
+      "action": "COMPRAR",
+      "ticker": "TPL",
+      "price": 439.5,
+      "shares": 28.229051017827548,
+      "reason": "Signal",
+      "sl": 424.7499863349544,
+      "tp": 492.3776694384291
+    },
+    {
+      "date": "2026-04-24",
+      "action": "COMPRAR",
+      "ticker": "CMCSA",
+      "price": 31.639999389648438,
+      "shares": 19.60598634902989,
+      "reason": "Signal",
+      "sl": 29.32876729963919,
+      "tp": 37.462427547976844
+    },
+    {
+      "date": "2026-04-27",
+      "action": "VENDER",
+      "ticker": "CMCSA",
+      "price": 27.559999465942383,
+      "shares": 19.60598634902989,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-04-27",
+      "action": "COMPRAR",
+      "ticker": "CBRE",
+      "price": 148.2899932861328,
+      "shares": 3.6638646201516454,
+      "reason": "Signal",
+      "sl": 141.11676093472948,
+      "tp": 174.3268757909872
+    },
+    {
+      "date": "2026-04-29",
+      "action": "VENDER",
+      "ticker": "AWK",
+      "price": 132.6699981689453,
+      "shares": 110.82627438026843,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-04-29",
+      "action": "VENDER",
+      "ticker": "TPL",
+      "price": 430.8999938964844,
+      "shares": 28.229051017827548,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-04-29",
+      "action": "COMPRAR",
+      "ticker": "CHD",
+      "price": 97.08000183105469,
+      "shares": 143.63158966260775,
+      "reason": "Signal",
+      "sl": 90.42668250384374,
+      "tp": 104.95716831603528
+    },
+    {
+      "date": "2026-04-29",
+      "action": "COMPRAR",
+      "ticker": "DDOG",
+      "price": 131.5500030517578,
+      "shares": 93.1465949166279,
+      "reason": "Signal",
+      "sl": 122.53430299725967,
+      "tp": 142.2240992156798
+    },
+    {
+      "date": "2026-04-29",
+      "action": "COMPRAR",
+      "ticker": "IVZ",
+      "price": 25.860000610351562,
+      "shares": 23.69186882508872,
+      "reason": "Signal",
+      "sl": 24.087701077828267,
+      "tp": 27.958306402145197
+    },
+    {
+      "date": "2026-05-05",
+      "action": "VENDER",
+      "ticker": "CBOE",
+      "price": 338.9100036621094,
+      "shares": 48.02616034811571,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-05-05",
+      "action": "VENDER",
+      "ticker": "CBRE",
+      "price": 140.0500030517578,
+      "shares": 3.6638646201516454,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-05-05",
+      "action": "VENDER",
+      "ticker": "DDOG",
+      "price": 146.69000244140625,
+      "shares": 93.1465949166279,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-05-05",
+      "action": "VENDER",
+      "ticker": "CHD",
+      "price": 92.88999938964844,
+      "shares": 143.63158966260775,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-05-06",
+      "action": "COMPRAR",
+      "ticker": "CEG",
+      "price": 320.4200134277344,
+      "shares": 44.63210645658329,
+      "reason": "Signal",
+      "sl": 303.5553668765149,
+      "tp": 350.98027436824543
+    },
+    {
+      "date": "2026-05-06",
+      "action": "COMPRAR",
+      "ticker": "EXPD",
+      "price": 153.0800018310547,
+      "shares": 93.42187078041503,
+      "reason": "Signal",
+      "sl": 145.02295165705544,
+      "tp": 167.68010358713937
+    },
+    {
+      "date": "2026-05-07",
+      "action": "COMPRAR",
+      "ticker": "AIG",
+      "price": 77.69000244140625,
+      "shares": 183.7188071760236,
+      "reason": "Signal",
+      "sl": 74.05852509432928,
+      "tp": 90.04738587991434
+    },
+    {
+      "date": "2026-05-07",
+      "action": "COMPRAR",
+      "ticker": "EMR",
+      "price": 147.99000549316406,
+      "shares": 5.551630417983277,
+      "reason": "Signal",
+      "sl": 141.0724828306111,
+      "tp": 171.52931795907887
+    },
+    {
+      "date": "2026-05-12",
+      "action": "VENDER",
+      "ticker": "AZO",
+      "price": 3427.800048828125,
+      "shares": 3.8639223417655253,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-05-12",
+      "action": "VENDER",
+      "ticker": "IVZ",
+      "price": 27.989999771118164,
+      "shares": 23.69186882508872,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-05-12",
+      "action": "VENDER",
+      "ticker": "CEG",
+      "price": 299.69000244140625,
+      "shares": 44.63210645658329,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-05-12",
+      "action": "VENDER",
+      "ticker": "EMR",
+      "price": 139.42999267578125,
+      "shares": 5.551630417983277,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-05-12",
+      "action": "COMPRAR",
+      "ticker": "FSLR",
+      "price": 233.27000427246094,
+      "shares": 60.178539477888116,
+      "reason": "Signal",
+      "sl": 217.68787035446718,
+      "tp": 268.0041535066866
+    },
+    {
+      "date": "2026-05-12",
+      "action": "COMPRAR",
+      "ticker": "RVTY",
+      "price": 98.94999694824219,
+      "shares": 134.4790493512277,
+      "reason": "Signal",
+      "sl": 92.34026541228488,
+      "tp": 113.68375567322613
+    },
+    {
+      "date": "2026-05-13",
+      "action": "COMPRAR",
+      "ticker": "UBER",
+      "price": 76.36000061035156,
+      "shares": 8.71313607683667,
+      "reason": "Signal",
+      "sl": 74.77073460348825,
+      "tp": 82.86463065492707
+    },
+    {
+      "date": "2026-05-14",
+      "action": "VENDER",
+      "ticker": "UBER",
+      "price": 74.69999694824219,
+      "shares": 8.71313607683667,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-05-14",
+      "action": "COMPRAR",
+      "ticker": "GEN",
+      "price": 23.290000915527344,
+      "shares": 27.924360998214482,
+      "reason": "Signal",
+      "sl": 21.638881448163485,
+      "tp": 25.73830376648042
+    },
+    {
+      "date": "2026-05-27",
+      "action": "VENDER",
+      "ticker": "FSLR",
+      "price": 269.95001220703125,
+      "shares": 60.178539477888116,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-05-27",
+      "action": "COMPRAR",
+      "ticker": "BAC",
+      "price": 52.20000076293945,
+      "shares": 277.5485280144763,
+      "reason": "Signal",
+      "sl": 49.70634531282636,
+      "tp": 59.24262316219165
+    },
+    {
+      "date": "2026-05-27",
+      "action": "COMPRAR",
+      "ticker": "CNP",
+      "price": 42.93000030517578,
+      "shares": 38.92320879232715,
+      "reason": "Signal",
+      "sl": 40.8791836831507,
+      "tp": 48.72195006245983
+    },
+    {
+      "date": "2026-06-01",
+      "action": "VENDER",
+      "ticker": "GEN",
+      "price": 25.790000915527344,
+      "shares": 27.924360998214482,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-06-01",
+      "action": "VENDER",
+      "ticker": "ALL",
+      "price": 206.08999633789062,
+      "shares": 65.41122304505876,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-06-01",
+      "action": "VENDER",
+      "ticker": "CNP",
+      "price": 42.2599983215332,
+      "shares": 38.92320879232715,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-06-01",
+      "action": "COMPRAR",
+      "ticker": "CCL",
+      "price": 28.059999465942383,
+      "shares": 511.46580619305104,
+      "reason": "Signal",
+      "sl": 25.848746813773552,
+      "tp": 31.625182557145216
+    },
+    {
+      "date": "2026-06-01",
+      "action": "COMPRAR",
+      "ticker": "EMR",
+      "price": 143.82000732421875,
+      "shares": 10.239832884111028,
+      "reason": "Signal",
+      "sl": 132.48635163343312,
+      "tp": 162.093160141321
+    },
+    {
+      "date": "2026-06-02",
+      "action": "VENDER",
+      "ticker": "BK",
+      "price": 142.58999633789062,
+      "shares": 2.9107415585828607,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-06-02",
+      "action": "VENDER",
+      "ticker": "XYZ",
+      "price": 76.0999984741211,
+      "shares": 11.057084866871257,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-06-02",
+      "action": "VENDER",
+      "ticker": "AIG",
+      "price": 73.44999694824219,
+      "shares": 183.7188071760236,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-06-02",
+      "action": "COMPRAR",
+      "ticker": "KMX",
+      "price": 45.02000045776367,
+      "shares": 312.2772829081283,
+      "reason": "Signal",
+      "sl": 41.77769187818947,
+      "tp": 48.345300742931954
+    },
+    {
+      "date": "2026-06-02",
+      "action": "COMPRAR",
+      "ticker": "NOW",
+      "price": 135.86000061035156,
+      "shares": 5.17397444292443,
+      "reason": "Signal",
+      "sl": 126.07545949260631,
+      "tp": 145.89499159611148
+    },
+    {
+      "date": "2026-06-04",
+      "action": "VENDER",
+      "ticker": "NOW",
+      "price": 117.9000015258789,
+      "shares": 5.17397444292443,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-06-04",
+      "action": "COMPRAR",
+      "ticker": "COP",
+      "price": 119.05000305175781,
+      "shares": 5.153291602545204,
+      "reason": "Signal",
+      "sl": 116.02746866136634,
+      "tp": 142.86000366210936
+    },
+    {
+      "date": "2026-06-11",
+      "action": "VENDER",
+      "ticker": "PFG",
+      "price": 109.20999908447266,
+      "shares": 77.1264554862458,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-06-11",
+      "action": "VENDER",
+      "ticker": "KMX",
+      "price": 48.5,
+      "shares": 312.2772829081283,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-06-11",
+      "action": "VENDER",
+      "ticker": "EMR",
+      "price": 137.11000061035156,
+      "shares": 10.239832884111028,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-06-11",
+      "action": "COMPRAR",
+      "ticker": "CINF",
+      "price": 166.42999267578125,
+      "shares": 87.64075543805318,
+      "reason": "Signal",
+      "sl": 158.68869992667916,
+      "tp": 194.09676047856053
+    },
+    {
+      "date": "2026-06-11",
+      "action": "COMPRAR",
+      "ticker": "HSIC",
+      "price": 78.8499984741211,
+      "shares": 124.92447411923708,
+      "reason": "Signal",
+      "sl": 75.1823847727642,
+      "tp": 91.95775966523519
+    },
+    {
+      "date": "2026-06-11",
+      "action": "COMPRAR",
+      "ticker": "SO",
+      "price": 94.0199966430664,
+      "shares": 5.238404033919229,
+      "reason": "Signal",
+      "sl": 89.6467685573003,
+      "tp": 109.64956781663008
+    },
+    {
+      "date": "2026-06-12",
+      "action": "VENDER",
+      "ticker": "COP",
+      "price": 115.36000061035156,
+      "shares": 5.153291602545204,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-06-12",
+      "action": "COMPRAR",
+      "ticker": "AMGN",
+      "price": 354.05999755859375,
+      "shares": 1.6614594207807674,
+      "reason": "Signal",
+      "sl": 333.22806481435515,
+      "tp": 416.42887098456714
+    },
+    {
+      "date": "2026-06-18",
+      "action": "VENDER",
+      "ticker": "AMZN",
+      "price": 237.5,
+      "shares": 2.724722974731975,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-06-18",
+      "action": "COMPRAR",
+      "ticker": "AMCR",
+      "price": 40.77000045776367,
+      "shares": 15.770162212446285,
+      "reason": "Signal",
+      "sl": 37.81720844949259,
+      "tp": 43.717369967700726
+    },
+    {
+      "date": "2026-07-03",
+      "action": "VENDER",
+      "ticker": "RVTY",
+      "price": 113.76000213623047,
+      "shares": 134.4790493512277,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-07-03",
+      "action": "VENDER",
+      "ticker": "AMCR",
+      "price": 45.0,
+      "shares": 15.770162212446285,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-07-03",
+      "action": "COMPRAR",
+      "ticker": "APD",
+      "price": 314.19000244140625,
+      "shares": 48.408103075737706,
+      "reason": "Signal",
+      "sl": 289.05480224609374,
+      "tp": 338.42487603664034
+    },
+    {
+      "date": "2026-07-03",
+      "action": "COMPRAR",
+      "ticker": "AIG",
+      "price": 79.38999938964844,
+      "shares": 9.578877780878917,
+      "reason": "Signal",
+      "sl": 73.03879943847656,
+      "tp": 85.51370346992914
+    },
+    {
+      "date": "2026-07-07",
+      "action": "VENDER",
+      "ticker": "BAC",
+      "price": 59.900001525878906,
+      "shares": 277.5485280144763,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-07-07",
+      "action": "COMPRAR",
+      "ticker": "BA",
+      "price": 234.5399932861328,
+      "shares": 66.77635145796401,
+      "reason": "Signal",
+      "sl": 220.62268731893457,
+      "tp": 270.69665668423016
+    },
+    {
+      "date": "2026-07-07",
+      "action": "COMPRAR",
+      "ticker": "FICO",
+      "price": 1286.510009765625,
+      "shares": 0.7164436814992065,
+      "reason": "Signal",
+      "sl": 1210.1701361905111,
+      "tp": 1484.8382723772402
+    },
+    {
+      "date": "2026-07-09",
+      "action": "VENDER",
+      "ticker": "CCL",
+      "price": 25.639999389648438,
+      "shares": 511.46580619305104,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-07-09",
+      "action": "COMPRAR",
+      "ticker": "BMY",
+      "price": 57.540000915527344,
+      "shares": 216.88330033314273,
+      "reason": "Signal",
+      "sl": 53.24079461129469,
+      "tp": 66.15268035649977
+    },
+    {
+      "date": "2026-07-09",
+      "action": "COMPRAR",
+      "ticker": "KMI",
+      "price": 32.47999954223633,
+      "shares": 19.21099980851846,
+      "reason": "Signal",
+      "sl": 30.05319702969458,
+      "tp": 37.34165786425982
+    },
+    {
+      "date": "2026-07-10",
+      "action": "VENDER",
+      "ticker": "EXPD",
+      "price": 170.6199951171875,
+      "shares": 93.42187078041503,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-07-10",
+      "action": "COMPRAR",
+      "ticker": "MA",
+      "price": 523.2000122070312,
+      "shares": 28.944161540134488,
+      "reason": "Signal",
+      "sl": 491.08663480895956,
+      "tp": 592.4528439654829
+    },
+    {
+      "date": "2026-07-10",
+      "action": "COMPRAR",
+      "ticker": "TMO",
+      "price": 524.7100219726562,
+      "shares": 1.4430433036316048,
+      "reason": "Signal",
+      "sl": 492.5039620204047,
+      "tp": 594.1627246214225
+    },
+    {
+      "date": "2026-07-13",
+      "action": "VENDER",
+      "ticker": "BA",
+      "price": 222.27999877929688,
+      "shares": 66.77635145796401,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-07-13",
+      "action": "COMPRAR",
+      "ticker": "AKAM",
+      "price": 126.19000244140625,
+      "shares": 111.82000124177566,
+      "reason": "Signal",
+      "sl": 121.43276459671213,
+      "tp": 138.7652027384938
+    },
+    {
+      "date": "2026-07-13",
+      "action": "COMPRAR",
+      "ticker": "AVGO",
+      "price": 399.9700012207031,
+      "shares": 1.763953069809295,
+      "reason": "Signal",
+      "sl": 384.8915291568565,
+      "tp": 439.8281736659579
+    },
+    {
+      "date": "2026-07-14",
+      "action": "VENDER",
+      "ticker": "AVGO",
+      "price": 384.04998779296875,
+      "shares": 1.763953069809295,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-07-14",
+      "action": "COMPRAR",
+      "ticker": "BDX",
+      "price": 153.8300018310547,
+      "shares": 4.404626864524894,
+      "reason": "Signal",
+      "sl": 141.5236016845703,
+      "tp": 183.60285018291015
+    },
+    {
+      "date": "2026-07-16",
+      "action": "VENDER",
+      "ticker": "FICO",
+      "price": 1205.7900390625,
+      "shares": 0.7164436814992065,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-07-16",
+      "action": "VENDER",
+      "ticker": "AKAM",
+      "price": 120.01000213623047,
+      "shares": 111.82000124177566,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-07-16",
+      "action": "COMPRAR",
+      "ticker": "GILD",
+      "price": 131.6999969482422,
+      "shares": 103.08263396851278,
+      "reason": "Signal",
+      "sl": 126.76793960965486,
+      "tp": 154.14760541213255
+    },
+    {
+      "date": "2026-07-16",
+      "action": "COMPRAR",
+      "ticker": "ROST",
+      "price": 225.80999755859375,
+      "shares": 3.0060632225876516,
+      "reason": "Signal",
+      "sl": 217.35359754802326,
+      "tp": 264.2981868515625
+    },
+    {
+      "date": "2026-07-30",
+      "action": "VENDER",
+      "ticker": "KMI",
+      "price": 31.850000381469727,
+      "shares": 19.21099980851846,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-07-30",
+      "action": "COMPRAR",
+      "ticker": "ALGN",
+      "price": 180.0800018310547,
+      "shares": 3.4099001081835834,
+      "reason": "Signal",
+      "sl": 165.67360168457031,
+      "tp": 216.09600219726562
+    },
+    {
+      "date": "2026-08-10",
+      "action": "VENDER",
+      "ticker": "SO",
+      "price": 92.69000244140625,
+      "shares": 5.238404033919229,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-08-10",
+      "action": "COMPRAR",
+      "ticker": "CAG",
+      "price": 15.109999656677246,
+      "shares": 32.498409746875545,
+      "reason": "Signal",
+      "sl": 14.592036424506233,
+      "tp": 17.674921643158143
+    },
+    {
+      "date": "2026-08-11",
+      "action": "VENDER",
+      "ticker": "AMGN",
+      "price": 417.20001220703125,
+      "shares": 1.6614594207807674,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-08-11",
+      "action": "VENDER",
+      "ticker": "TMO",
+      "price": 599.6900024414062,
+      "shares": 1.4430433036316048,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-08-11",
+      "action": "COMPRAR",
+      "ticker": "ICE",
+      "price": 150.5399932861328,
+      "shares": 9.978779239841765,
+      "reason": "Signal",
+      "sl": 141.92795239398683,
+      "tp": 180.64799194335936
+    },
+    {
+      "date": "2026-08-12",
+      "action": "VENDER",
+      "ticker": "AFL",
+      "price": 121.06999969482422,
+      "shares": 116.57460251524691,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-08-12",
+      "action": "VENDER",
+      "ticker": "CINF",
+      "price": 173.2100067138672,
+      "shares": 87.64075543805318,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-08-12",
+      "action": "COMPRAR",
+      "ticker": "GIS",
+      "price": 37.93000030517578,
+      "shares": 412.37536133160586,
+      "reason": "Signal",
+      "sl": 35.5226162344576,
+      "tp": 45.16667777768964
+    },
+    {
+      "date": "2026-08-13",
+      "action": "COMPRAR",
+      "ticker": "ORLY",
+      "price": 92.05000305175781,
+      "shares": 141.11240907410627,
+      "reason": "Signal",
+      "sl": 90.92091253515038,
+      "tp": 107.44687556562101
+    },
+    {
+      "date": "2026-08-13",
+      "action": "COMPRAR",
+      "ticker": "UBER",
+      "price": 75.36000061035156,
+      "shares": 8.618230878920777,
+      "reason": "Signal",
+      "sl": 74.43563060275,
+      "tp": 87.96519652098961
+    },
+    {
+      "date": "2026-08-19",
+      "action": "VENDER",
+      "ticker": "ORLY",
+      "price": 90.76000213623047,
+      "shares": 141.11240907410627,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-08-20",
+      "action": "VENDER",
+      "ticker": "BMY",
+      "price": 67.61000061035156,
+      "shares": 216.88330033314273,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-08-20",
+      "action": "VENDER",
+      "ticker": "BDX",
+      "price": 187.60000610351562,
+      "shares": 4.404626864524894,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-08-20",
+      "action": "VENDER",
+      "ticker": "ALGN",
+      "price": 163.0399932861328,
+      "shares": 3.4099001081835834,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-08-20",
+      "action": "COMPRAR",
+      "ticker": "CMG",
+      "price": 34.65999984741211,
+      "shares": 463.4817134785138,
+      "reason": "Signal",
+      "sl": 32.14973603045844,
+      "tp": 41.438415171280226
+    },
+    {
+      "date": "2026-08-20",
+      "action": "COMPRAR",
+      "ticker": "DG",
+      "price": 122.30999755859375,
+      "shares": 99.15022189861874,
+      "reason": "Signal",
+      "sl": 113.45164895286075,
+      "tp": 146.23001964062922
+    },
+    {
+      "date": "2026-08-20",
+      "action": "COMPRAR",
+      "ticker": "HLT",
+      "price": 334.7300109863281,
+      "shares": 1.8114693932910328,
+      "reason": "Signal",
+      "sl": 310.48706122502796,
+      "tp": 400.19276476062396
+    },
+    {
+      "date": "2026-08-25",
+      "action": "VENDER",
+      "ticker": "MA",
+      "price": 599.8599853515625,
+      "shares": 28.944161540134488,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-08-25",
+      "action": "COMPRAR",
+      "ticker": "T",
+      "price": 25.690000534057617,
+      "shares": 641.9489010269169,
+      "reason": "Signal",
+      "sl": 24.186111351455047,
+      "tp": 26.20380054473877
+    },
+    {
+      "date": "2026-08-28",
+      "action": "COMPRAR",
+      "ticker": "VRSK",
+      "price": 191.02000427246094,
+      "shares": 4.316738362830401,
+      "reason": "Signal",
+      "sl": 187.4334608605681,
+      "tp": 222.8459597154706
+    },
+    {
+      "date": "2026-08-31",
+      "action": "VENDER",
+      "ticker": "ROST",
+      "price": 228.5500030517578,
+      "shares": 3.0060632225876516,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-09-02",
+      "action": "COMPRAR",
+      "ticker": "WMB",
+      "price": 75.2300033569336,
+      "shares": 9.206545176440391,
+      "reason": "Signal",
+      "sl": 69.21160308837891,
+      "tp": 88.92061935096336
+    },
+    {
+      "date": "2026-09-07",
+      "action": "VENDER",
+      "ticker": "VRSK",
+      "price": 185.7899932861328,
+      "shares": 4.316738362830401,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-09-07",
+      "action": "COMPRAR",
+      "ticker": "BG",
+      "price": 118.70999908447266,
+      "shares": 6.69710915875996,
+      "reason": "Signal",
+      "sl": 116.5758537814445,
+      "tp": 128.60296698606413
+    },
+    {
+      "date": "2026-09-09",
+      "action": "VENDER",
+      "ticker": "UBER",
+      "price": 73.12999725341797,
+      "shares": 8.618230878920777,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-09-09",
+      "action": "VENDER",
+      "ticker": "HLT",
+      "price": 304.4700012207031,
+      "shares": 1.8114693932910328,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-09-09",
+      "action": "VENDER",
+      "ticker": "APD",
+      "price": 297.7099914550781,
+      "shares": 48.408103075737706,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-09-09",
+      "action": "VENDER",
+      "ticker": "AIG",
+      "price": 74.68000030517578,
+      "shares": 9.578877780878917,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-09-09",
+      "action": "VENDER",
+      "ticker": "CAG",
+      "price": 15.260000228881836,
+      "shares": 32.498409746875545,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-09-09",
+      "action": "VENDER",
+      "ticker": "GIS",
+      "price": 37.689998626708984,
+      "shares": 412.37536133160586,
+      "reason": "Signal"
+    },
+    {
+      "date": "2026-09-10",
+      "action": "COMPRAR",
+      "ticker": "DLR",
+      "price": 189.0800018310547,
+      "shares": 84.51153507792564,
+      "reason": "Signal",
+      "sl": 181.07219683694873,
+      "tp": 196.28911937946586
+    },
+    {
+      "date": "2026-09-10",
+      "action": "COMPRAR",
+      "ticker": "HCA",
+      "price": 421.8299865722656,
+      "shares": 36.8100142219296,
+      "reason": "Signal",
+      "sl": 403.964891160667,
+      "tp": 437.9132419625493
+    },
+    {
+      "date": "2026-09-11",
+      "action": "COMPRAR",
+      "ticker": "TER",
+      "price": 370.19000244140625,
+      "shares": 2.097242997184828,
+      "reason": "Signal",
+      "sl": 362.08816071008357,
+      "tp": 427.9583536506241
+    },
+    {
+      "date": "2026-09-15",
+      "action": "VENDER",
+      "ticker": "T",
+      "price": 26.510000228881836,
+      "shares": 641.9489010269169,
+      "reason": "Take Profit"
+    },
+    {
+      "date": "2026-09-15",
+      "action": "VENDER",
+      "ticker": "DLR",
+      "price": 179.13999938964844,
+      "shares": 84.51153507792564,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-09-15",
+      "action": "VENDER",
+      "ticker": "TER",
+      "price": 329.20001220703125,
+      "shares": 2.097242997184828,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-09-15",
+      "action": "COMPRAR",
+      "ticker": "MO",
+      "price": 70.61000061035156,
+      "shares": 228.64486612161738,
+      "reason": "Signal",
+      "sl": 68.81856741781178,
+      "tp": 80.45686619953555
+    },
+    {
+      "date": "2026-09-15",
+      "action": "COMPRAR",
+      "ticker": "ACGL",
+      "price": 97.94999694824219,
+      "shares": 161.76147820179474,
+      "reason": "Signal",
+      "sl": 95.46492579365383,
+      "tp": 111.60954157468602
+    },
+    {
+      "date": "2026-09-15",
+      "action": "COMPRAR",
+      "ticker": "DDOG",
+      "price": 230.0500030517578,
+      "shares": 3.4437157326714236,
+      "reason": "Signal",
+      "sl": 224.21344721195544,
+      "tp": 262.1314566597604
+    },
+    {
+      "date": "2026-09-21",
+      "action": "VENDER",
+      "ticker": "BG",
+      "price": 115.58000183105469,
+      "shares": 6.69710915875996,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-09-22",
+      "action": "VENDER",
+      "ticker": "MO",
+      "price": 68.52999877929688,
+      "shares": 228.64486612161738,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-09-22",
+      "action": "COMPRAR",
+      "ticker": "INTC",
+      "price": 121.77999877929688,
+      "shares": 128.3405758661684,
+      "reason": "Signal",
+      "sl": 115.73391136817237,
+      "tp": 146.13599853515623
+    },
+    {
+      "date": "2026-09-22",
+      "action": "COMPRAR",
+      "ticker": "TSLA",
+      "price": 375.29998779296875,
+      "shares": 2.0822429630530723,
+      "reason": "Signal",
+      "sl": 356.6672356634294,
+      "tp": 450.3599853515625
+    },
+    {
+      "date": "2026-09-24",
+      "action": "VENDER",
+      "ticker": "ACGL",
+      "price": 95.16000366210938,
+      "shares": 161.76147820179474,
+      "reason": "Stop Loss"
+    },
+    {
+      "date": "2026-09-24",
+      "action": "COMPRAR",
+      "ticker": "AME",
+      "price": 246.4499969482422,
+      "shares": 59.376760740243974,
+      "reason": "Signal",
+      "sl": 233.31345382047368,
+      "tp": 295.7399963378906
+    },
+    {
+      "date": "2026-09-24",
+      "action": "COMPRAR",
+      "ticker": "SW",
+      "price": 46.4900016784668,
+      "shares": 15.738225397835938,
+      "reason": "Signal",
+      "sl": 44.0119415461006,
+      "tp": 55.788002014160156
+    },
+    {
+      "date": "2026-09-25",
+      "action": "VENDER",
+      "ticker": "CMG",
+      "price": 32.0099983215332,
+      "shares": 463.4817134785138,
+      "reason": "Stop Loss"
+    }
+  ],
+  "equity_history": {
+    "2026-02-27": 99638.98929221331,
+    "2026-03-02": 99182.49245890269,
+    "2026-03-03": 99329.73493200449,
+    "2026-03-04": 98498.10933261865,
+    "2026-03-05": 98426.45666741491,
+    "2026-03-06": 98000.307001931,
+    "2026-03-09": 97655.06828431033,
+    "2026-03-10": 97308.16254839918,
+    "2026-03-11": 95656.21343399145,
+    "2026-03-12": 95333.8777912688,
+    "2026-03-13": 94345.99704234017,
+    "2026-03-16": 93620.94397173372,
+    "2026-03-17": 93107.4091615279,
+    "2026-03-18": 93554.79740410372,
+    "2026-03-19": 92353.91888428554,
+    "2026-03-20": 92243.45275966654,
+    "2026-03-23": 91462.46923936058,
+    "2026-03-24": 91482.41338346095,
+    "2026-03-25": 90759.37199877818,
+    "2026-03-26": 90887.8539946941,
+    "2026-03-27": 90946.19946948804,
+    "2026-03-30": 90285.83296752202,
+    "2026-03-31": 90421.42014900378,
+    "2026-04-01": 90592.41340874963,
+    "2026-04-02": 90491.43108762229,
+    "2026-04-03": 91510.07633086466,
+    "2026-04-06": 91510.07633086466,
+    "2026-04-07": 92479.24692422595,
+    "2026-04-08": 91858.6626091256,
+    "2026-04-09": 93684.49375055222,
+    "2026-04-10": 94100.65177106838,
+    "2026-04-13": 93486.99145754304,
+    "2026-04-14": 93143.35066391663,
+    "2026-04-15": 93046.70298580751,
+    "2026-04-16": 92906.61865827788,
+    "2026-04-17": 92985.59060618412,
+    "2026-04-20": 93209.4971664803,
+    "2026-04-21": 93531.90698068531,
+    "2026-04-22": 92965.15136560539,
+    "2026-04-23": 92542.54797072642,
+    "2026-04-24": 93250.14339579135,
+    "2026-04-27": 92902.92823459534,
+    "2026-04-28": 92582.97379108517,
+    "2026-04-29": 93024.58130268246,
+    "2026-04-30": 92740.31935951722,
+    "2026-05-01": 93292.44461141349,
+    "2026-05-04": 94673.92110320882,
+    "2026-05-05": 95040.30328431199,
+    "2026-05-06": 95406.93923310943,
+    "2026-05-07": 95234.23672324595,
+    "2026-05-08": 94148.81442169017,
+    "2026-05-11": 94037.78863983136,
+    "2026-05-12": 93651.96181958502,
+    "2026-05-13": 93564.75759674492,
+    "2026-05-14": 93263.02367959083,
+    "2026-05-15": 93254.3040999545,
+    "2026-05-18": 93354.9518364187,
+    "2026-05-19": 94757.52470175643,
+    "2026-05-20": 94077.54348698734,
+    "2026-05-21": 94949.90698711108,
+    "2026-05-22": 95331.48824089207,
+    "2026-05-25": 96043.73940545657,
+    "2026-05-27": 96667.39755153467,
+    "2026-05-28": 95619.43304594063,
+    "2026-05-29": 95273.78705483608,
+    "2026-06-01": 95758.13536977945,
+    "2026-06-02": 94801.60194148055,
+    "2026-06-03": 94734.97086480935,
+    "2026-06-04": 95153.90262777478,
+    "2026-06-05": 96877.64757794086,
+    "2026-06-08": 96520.59352560873,
+    "2026-06-09": 96561.7654572338,
+    "2026-06-10": 96846.7428464065,
+    "2026-06-11": 97312.71909718902,
+    "2026-06-12": 99005.81960945632,
+    "2026-06-15": 99899.27581110233,
+    "2026-06-16": 99879.28743775617,
+    "2026-06-17": 101176.35211334664,
+    "2026-06-18": 99444.77635475247,
+    "2026-06-19": 99444.77635475247,
+    "2026-06-22": 99997.45204921828,
+    "2026-06-23": 100191.36414616404,
+    "2026-06-24": 100277.02839926233,
+    "2026-06-25": 101466.48622647932,
+    "2026-06-26": 102690.11506591232,
+    "2026-06-29": 103715.79878188178,
+    "2026-06-30": 103741.41643778323,
+    "2026-07-01": 102763.7267093587,
+    "2026-07-02": 104142.51702175807,
+    "2026-07-03": 105093.32084547798,
+    "2026-07-06": 105093.32084547798,
+    "2026-07-07": 104499.41612996181,
+    "2026-07-08": 103825.5565267664,
+    "2026-07-09": 101129.56609132905,
+    "2026-07-10": 101198.32844208117,
+    "2026-07-13": 101691.3765667889,
+    "2026-07-14": 103023.38875786112,
+    "2026-07-15": 103023.38875786112,
+    "2026-07-16": 100740.70083091952,
+    "2026-07-17": 103062.70483372678,
+    "2026-07-20": 103116.5400371562,
+    "2026-07-21": 102698.27150811639,
+    "2026-07-22": 102194.51104421464,
+    "2026-07-23": 101767.40893649473,
+    "2026-07-24": 101935.94625632929,
+    "2026-07-27": 101935.94625632929,
+    "2026-07-28": 103397.64089250243,
+    "2026-07-29": 104816.26329156103,
+    "2026-07-30": 104424.02312717952,
+    "2026-07-31": 104480.86032470087,
+    "2026-08-03": 104405.22669304359,
+    "2026-08-04": 104437.88960511518,
+    "2026-08-05": 105313.00479899676,
+    "2026-08-06": 104497.977562994,
+    "2026-08-07": 104985.63598232041,
+    "2026-08-10": 104737.388913346,
+    "2026-08-11": 104415.73946665005,
+    "2026-08-12": 104364.70718396804,
+    "2026-08-13": 104368.74102406926,
+    "2026-08-17": 105406.48034649839,
+    "2026-08-18": 105406.48034649839,
+    "2026-08-19": 105606.86102704729,
+    "2026-08-20": 107173.54998025084,
+    "2026-08-21": 106462.42329988828,
+    "2026-08-24": 108408.14272629263,
+    "2026-08-25": 110332.50264696033,
+    "2026-08-26": 109450.79977477739,
+    "2026-08-27": 109753.46533218991,
+    "2026-08-28": 109820.11094454795,
+    "2026-08-31": 110456.01523870234,
+    "2026-09-01": 110733.97008721001,
+    "2026-09-02": 110935.06027370799,
+    "2026-09-03": 111511.92004187616,
+    "2026-09-04": 110746.81626914625,
+    "2026-09-07": 109560.47311563976,
+    "2026-09-08": 109560.47311563976,
+    "2026-09-09": 107918.03656651686,
+    "2026-09-10": 106604.7057452625,
+    "2026-09-11": 106222.71418499887,
+    "2026-09-14": 107263.99490292912,
+    "2026-09-15": 107705.68521731092,
+    "2026-09-16": 105656.6301082125,
+    "2026-09-17": 105239.04114831302,
+    "2026-09-18": 105314.01282100978,
+    "2026-09-21": 104837.49700783618,
+    "2026-09-22": 104290.23582381707,
+    "2026-09-23": 104290.23582381707,
+    "2026-09-24": 104423.87958764416,
+    "2026-09-25": 104382.9253805104
+  }
+}
