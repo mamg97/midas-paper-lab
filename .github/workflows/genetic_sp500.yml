@@ -54,6 +54,16 @@ jobs:
       - name: Full-size read-only training validation
         if: inputs.mode == 'training_check'
         run: python AGENTE/genetic_invest_agent/training_check.py
+      - name: Require explicit writer handover before a manual paper session
+        if: inputs.mode == 'trade'
+        env:
+          PUBLIC_ACTIVE: ${{ vars.GENETIC_PUBLIC_ACTIVE }}
+          TRIAL_ALLOWED: ${{ vars.GENETIC_MIGRATION_TRIAL_ALLOWED }}
+        run: |
+          if [ "$PUBLIC_ACTIVE" != 'true' ] && [ "$TRIAL_ALLOWED" != 'true' ]; then
+            echo '::error::Writer handover has not been authorized; run verify/training_check instead'
+            exit 1
+          fi
       - name: Check session before training
         id: session
         if: github.event_name == 'schedule' || inputs.mode == 'trade'
