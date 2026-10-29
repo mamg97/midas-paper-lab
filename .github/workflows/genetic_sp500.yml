@@ -41,6 +41,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          # Resolve main when this serialized job starts, after any prior writer.
+          # The event SHA may predate a session committed while this run queued.
+          ref: main
           fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
