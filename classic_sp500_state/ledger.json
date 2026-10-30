@@ -50,6 +50,10 @@
         {
           "date": "2026-10-28",
           "nav": 100607.86147030274
+        },
+        {
+          "date": "2026-10-29",
+          "nav": 100242.66568263734
         }
       ],
       "events": [
@@ -69,7 +73,7 @@
           "type": "buy"
         }
       ],
-      "nav": 100607.86147030274,
+      "nav": 100242.66568263734,
       "pending": {},
       "positions": {
         "SPY": {
@@ -130,6 +134,10 @@
         {
           "buys": 0,
           "date": "2026-10-28"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-29"
         }
       ],
       "trades": []
@@ -184,6 +192,10 @@
         {
           "date": "2026-10-28",
           "nav": 98715.94932431824
+        },
+        {
+          "date": "2026-10-29",
+          "nav": 101276.3417059624
         }
       ],
       "events": [
@@ -257,7 +269,7 @@
           "type": "buy"
         }
       ],
-      "nav": 98715.94932431824,
+      "nav": 101276.3417059624,
       "pending": {},
       "positions": {
         "ABBV": {
@@ -381,6 +393,10 @@
         {
           "buys": 0,
           "date": "2026-10-28"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-29"
         }
       ],
       "trades": [
@@ -8587,6 +8603,10 @@
         {
           "date": "2026-10-28",
           "nav": 100820.15660320473
+        },
+        {
+          "date": "2026-10-29",
+          "nav": 101077.52310972467
         }
       ],
       "events": [
@@ -8648,7 +8668,7 @@
           "type": "buy"
         }
       ],
-      "nav": 100820.15660320473,
+      "nav": 101077.52310972467,
       "pending": {},
       "positions": {
         "BAX": {
@@ -8772,6 +8792,10 @@
         {
           "buys": 0,
           "date": "2026-10-28"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-29"
         }
       ],
       "trades": []
@@ -8826,6 +8850,10 @@
         {
           "date": "2026-10-28",
           "nav": 102196.2667493637
+        },
+        {
+          "date": "2026-10-29",
+          "nav": 103918.65435437033
         }
       ],
       "events": [
@@ -8887,7 +8915,7 @@
           "type": "buy"
         }
       ],
-      "nav": 102196.2667493637,
+      "nav": 103918.65435437033,
       "pending": {},
       "positions": {
         "ABT": {
@@ -9011,12 +9039,16 @@
         {
           "buys": 0,
           "date": "2026-10-28"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-29"
         }
       ],
       "trades": []
     },
     "macd_12_26_9": {
-      "cash": 29671.72689961962,
+      "cash": 14131.878510291102,
       "equity": [
         {
           "date": "2026-10-12",
@@ -9065,6 +9097,10 @@
         {
           "date": "2026-10-28",
           "nav": 102642.57320975338
+        },
+        {
+          "date": "2026-10-29",
+          "nav": 104391.78753147644
         }
       ],
       "events": [
@@ -9153,20 +9189,36 @@
           "reason": "target",
           "ticker": "CRL",
           "type": "sell"
+        },
+        {
+          "date": "2026-10-29",
+          "shares": 36.189396,
+          "ticker": "ADI",
+          "type": "buy"
+        },
+        {
+          "date": "2026-10-29",
+          "ticker": "RVTY",
+          "type": "unfilled"
         }
       ],
-      "nav": 102642.57320975338,
+      "nav": 104391.78753147644,
       "pending": {
-        "ADI": {
+        "MO": {
           "side": "buy",
-          "signal_date": "2026-10-28"
-        },
-        "RVTY": {
-          "side": "buy",
-          "signal_date": "2026-10-28"
+          "signal_date": "2026-10-29"
         }
       },
       "positions": {
+        "ADI": {
+          "cost": 15539.84838932852,
+          "dividends": 0.0,
+          "entry_date": "2026-10-29",
+          "entry_price": 428.9743897705078,
+          "shares": 36.189396,
+          "stop": 394.6564385888672,
+          "target": 493.32054823608394
+        },
         "DHR": {
           "cost": 11874.99992854094,
           "dividends": 0.0,
@@ -9270,6 +9322,10 @@
         {
           "buys": 2,
           "date": "2026-10-28"
+        },
+        {
+          "buys": 1,
+          "date": "2026-10-29"
         }
       ],
       "trades": [
@@ -9355,6 +9411,10 @@
         {
           "date": "2026-10-28",
           "nav": 105185.58086747523
+        },
+        {
+          "date": "2026-10-29",
+          "nav": 106428.95953351168
         }
       ],
       "events": [
@@ -9437,13 +9497,34 @@
           "date": "2026-10-28",
           "ticker": "XYL",
           "type": "unfilled"
+        },
+        {
+          "date": "2026-10-29",
+          "ticker": "FFIV",
+          "type": "unfilled"
         }
       ],
-      "nav": 105185.58086747523,
+      "nav": 106428.95953351168,
       "pending": {
-        "FFIV": {
+        "BG": {
           "side": "buy",
-          "signal_date": "2026-10-28"
+          "signal_date": "2026-10-29"
+        },
+        "BXP": {
+          "side": "sell",
+          "signal_date": "2026-10-29"
+        },
+        "GOOG": {
+          "side": "buy",
+          "signal_date": "2026-10-29"
+        },
+        "GOOGL": {
+          "side": "buy",
+          "signal_date": "2026-10-29"
+        },
+        "NTRS": {
+          "side": "sell",
+          "signal_date": "2026-10-29"
         }
       },
       "positions": {
@@ -9559,6 +9640,10 @@
         {
           "buys": 1,
           "date": "2026-10-28"
+        },
+        {
+          "buys": 3,
+          "date": "2026-10-29"
         }
       ],
       "trades": [
@@ -9634,6 +9719,10 @@
         {
           "date": "2026-10-28",
           "nav": 96394.39938829279
+        },
+        {
+          "date": "2026-10-29",
+          "nav": 98036.46879833707
         }
       ],
       "events": [
@@ -9740,13 +9829,18 @@
           "date": "2026-10-28",
           "ticker": "PNR",
           "type": "unfilled"
+        },
+        {
+          "date": "2026-10-29",
+          "ticker": "PNR",
+          "type": "unfilled"
         }
       ],
-      "nav": 96394.39938829279,
+      "nav": 98036.46879833707,
       "pending": {
-        "PNR": {
+        "GEN": {
           "side": "buy",
-          "signal_date": "2026-10-28"
+          "signal_date": "2026-10-29"
         }
       },
       "positions": {
@@ -9862,6 +9956,10 @@
         {
           "buys": 1,
           "date": "2026-10-28"
+        },
+        {
+          "buys": 1,
+          "date": "2026-10-29"
         }
       ],
       "trades": [
@@ -9957,6 +10055,10 @@
         {
           "date": "2026-10-28",
           "nav": 96388.02978588152
+        },
+        {
+          "date": "2026-10-29",
+          "nav": 97608.53341431505
         }
       ],
       "events": [
@@ -10018,7 +10120,7 @@
           "type": "buy"
         }
       ],
-      "nav": 96388.02978588152,
+      "nav": 97608.53341431505,
       "pending": {},
       "positions": {
         "ABBV": {
@@ -10142,6 +10244,10 @@
         {
           "buys": 0,
           "date": "2026-10-28"
+        },
+        {
+          "buys": 0,
+          "date": "2026-10-29"
         }
       ],
       "trades": []
@@ -10437,13 +10543,45 @@
       "verified_price_source_aliases": {
         "PSKY": "SKYD"
       }
+    },
+    {
+      "date": "2026-10-29",
+      "eligible": 488,
+      "missing": {
+        "AVB": "invalid_current_ohlc",
+        "BK": "invalid_current_ohlc",
+        "CTRA": "invalid_current_ohlc",
+        "DAY": "invalid_current_ohlc",
+        "EA": "invalid_current_ohlc",
+        "EQR": "invalid_current_ohlc",
+        "FI": "invalid_current_ohlc",
+        "HOLX": "invalid_current_ohlc",
+        "HUBB": "invalid_current_ohlc",
+        "IPG": "invalid_current_ohlc",
+        "K": "invalid_current_ohlc",
+        "MMC": "invalid_current_ohlc",
+        "PSKY": "invalid_current_ohlc",
+        "WBA": "invalid_current_ohlc",
+        "WBD": "invalid_current_ohlc"
+      },
+      "paused_books_missing_held_quotes": {
+        "buy_hold_equal_weight": [
+          "HUBB"
+        ]
+      },
+      "ticker_coverage_pct": 97.018,
+      "total": 503,
+      "unfilled_pending_buys_missing_bar": [],
+      "verified_price_source_aliases": {
+        "PSKY": "SKYD"
+      }
     }
   ],
   "currency": "USD",
   "engine": "classic_sp500_next_open_v2",
   "first_session": "2026-10-12",
   "initial_capital": 100000,
-  "last_session": "2026-10-28",
+  "last_session": "2026-10-29",
   "late_recorded_sessions": [
     "2026-10-19",
     "2026-10-20"
