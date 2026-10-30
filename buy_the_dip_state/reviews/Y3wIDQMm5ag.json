@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "status": "machine_first_pass",
+  "reviewed_at_utc": "2026-10-30T09:03:58.233410+00:00",
+  "source_identity": "Buy The Dip YouTube channel",
+  "transport": {
+    "kind": "official_podcast_mirror",
+    "provider": "iVoox",
+    "guid": "https://www.ivoox.com/143267537",
+    "published_date": "2025-03-17",
+    "youtube_video_id": "Y3wIDQMm5ag",
+    "match_score": 1.0,
+    "audio_bytes_processed_transiently": 7538096
+  },
+  "models": {
+    "asr": {
+      "language": "es",
+      "language_probability": 1.0,
+      "duration_seconds": 942.158375,
+      "word_count": 2673,
+      "segment_count": 412,
+      "model": "small"
+    },
+    "semantic": {
+      "repo": "Qwen/Qwen3-4B-GGUF",
+      "file": "Qwen3-4B-Q4_K_M.gguf"
+    }
+  },
+  "metadata": {
+    "video_id": "Y3wIDQMm5ag",
+    "youtube_url": "https://www.youtube.com/watch?v=Y3wIDQMm5ag",
+    "title": "La LOCURA del ORO rompe MÁXIMOS HISTÓRICOS",
+    "category": "sector_theme",
+    "guest_likely": false,
+    "podcast_guid": "https://www.ivoox.com/143267537",
+    "published_date": "2025-03-17",
+    "source": "official_podcast_mirror",
+    "match_score": 1.0
+  },
+  "analysis": {
+    "episode_summary": "El episodio analiza el mercado de valores en un período de volatilidad y miedo extremo, identificando oportunidades de inversión en activos mineros como Franco Nevada y London Gold, donde eventos específicos han restablecido operaciones mineras. Se destacan señales de riesgo, como la posible caída en la producción de petróleo en EE. UU. debido a la escasez de pozos de alta calidad, y la sobrevaloración en el sector minero frente a la subida del oro. También se menciona el cobre, que está alcanzando máximos nominales pero no se ha comentado ampliamente, sugiriendo posibles oportunidades de inversión. El análisis sugiere que los momentos de volatilidad pueden ser buenos para invertir, especialmente en sectores con potencial de crecimiento, aunque se advierte sobre la necesidad de monitoreo de riesgos y ajustes en la estrategia de inversión.",
+    "process": {
+      "idea_generation": [],
+      "quality": [],
+      "balance_sheet": [],
+      "valuation": [
+        "La caída del oro y la reactivación de minas reflejan una revalorización de activos, indicando un potencial de crecimiento en el mercado."
+      ],
+      "cycle_macro": [
+        "Se menciona que la demanda de petróleo podría estancarse mientras la oferta aumenta, lo que podría llevar a un aumento en los precios del petróleo, aunque se afirma que la narrativa actual sigue siendo baja."
+      ],
+      "entry": [
+        "Se identifican oportunidades de compra en activos como Franco Nevada y London Gold debido a eventos que han restablecido operaciones mineras."
+      ],
+      "sizing": [],
+      "add_hold": [],
+      "exit": [],
+      "risk": [
+        "Se señala que la producción de petróleo en EE. UU. podría disminuir debido a la escasez de pozos de alta calidad, lo que podría afectar la oferta global y mantener los precios bajos."
+      ],
+      "technical": [],
+      "management": [],
+      "mistakes": []
+    },
+    "candidate_rules": [
+      {
+        "rule": "paráfrasis compacta",
+        "scope": "hosts|uncertain_or_guest",
+        "confidence": 0.0,
+        "evidence_timestamps": [],
+        "automation_proxy": "variable/cálculo posible o null",
+        "cross_video_confirmation_required": true
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "named_examples": [],
+    "automation_readiness": "medium"
+  },
+  "chunk_evidence": [
+    {
+      "chunk": 1,
+      "evidence": [
+        {
+          "stage": "risk",
+          "paraphrase": "El mercado muestra miedo extremo, lo que sugiere oportunidades de inversión en momentos de volatilidad.",
+          "timestamp": "00:06:04",
+          "scope": "uncertain_or_guest",
+          "confidence": 0.0,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "entry",
+          "paraphrase": "Se identifican oportunidades de compra en activos como Franco Nevada y London Gold debido a eventos que han restablecido operaciones mineras.",
+          "timestamp": "00:04:50",
+          "scope": "hosts",
+          "confidence": 0.9,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "La caída del oro y la reactivación de minas reflejan una revalorización de activos, indicando un potencial de crecimiento en el mercado.",
+          "timestamp": "00:01:23",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis del fragmento muestra que el mercado de valores está en un período de volatilidad y miedo extremo, lo que crea oportunidades para inversiones en activos mineros y otros sectores. Se destacan ejemplos de compra estratégica en Franco Nevada y London Gold, donde eventos específicos han restablecido operaciones mineras, lo que sugiere una revalorización de activos. Aunque hay señales de riesgo, el análisis sugiere que los momentos de volatilidad pueden ser buenos para invertir, especialmente en sectores con potencial de crecimiento."
+    },
+    {
+      "chunk": 2,
+      "evidence": [
+        {
+          "stage": "valuation",
+          "paraphrase": "El CEO de Ex-CEO de Pioneer Natural Resources menciona que la venta de la empresa se debió a la escasez de pozos de alta calidad en el inventario, lo que sugiere una posible caída en la producción de petróleo en EE. UU.",
+          "timestamp": "00:10:50",
+          "scope": "hosts",
+          "confidence": 0.8,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se señala que la producción de petróleo en EE. UU. podría disminuir debido a la escasez de pozos de alta calidad, lo que podría afectar la oferta global y mantener los precios bajos.",
+          "timestamp": "00:11:00",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "cycle_macro",
+          "paraphrase": "Se menciona que la demanda de petróleo podría estancarse mientras la oferta aumenta, lo que podría llevar a un aumento en los precios del petróleo, aunque se afirma que la narrativa actual sigue siendo baja.",
+          "timestamp": "00:11:38",
+          "scope": "hosts",
+          "confidence": 0.6,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "valuation",
+          "paraphrase": "Se destaca que el oro ha experimentado una fuerte subida en los últimos años, triplicándose desde 2020, pero las empresas mineras no han seguido el ritmo de crecimiento del oro, lo que sugiere una posible sobrevaloración en el sector.",
+          "timestamp": "00:14:30",
+          "scope": "hosts",
+          "confidence": 0.7,
+          "automation_hint": "proxy observable"
+        },
+        {
+          "stage": "risk",
+          "paraphrase": "Se menciona que el cobre está alcanzando máximos nominales, pero no se ha comentado ampliamente, lo que podría indicar una posible sobrevaloración o una oportunidad de inversión en este mercado.",
+          "timestamp": "00:15:06",
+          "scope": "hosts",
+          "confidence": 0.5,
+          "automation_hint": "proxy observable"
+        }
+      ],
+      "named_examples": [],
+      "chunk_summary": "El análisis discute la posibilidad de una caída en la producción de petróleo en EE. UU. debido a la escasez de pozos de alta calidad, lo que podría afectar la oferta global y mantener los precios bajos. Además, se menciona la subida del oro y la posible sobrevaloración en el sector minero, así como la tendencia del cobre, que está alcanzando máximos nominales pero no se ha comentado ampliamente."
+    }
+  ],
+  "copyright_note": "No audio or verbatim transcript is persisted; only derived paraphrases."
+}
