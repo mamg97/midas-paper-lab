@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-31T02:33:13.208823+00:00",
+  "generated_at_utc": "2026-10-31T02:45:18.481489+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 18,
@@ -2987,7 +2987,7 @@
       "group": "tfg_demo_adaptado",
       "status": "demo_con_diario",
       "first_session": "2026-10-02",
-      "last_session": "2026-10-23",
+      "last_session": "2026-10-30",
       "initial_capital": 100000.0,
       "last_equity": 100000.0,
       "return_pct": 0.0,
@@ -3009,19 +3009,36 @@
         {
           "date": "2026-10-23",
           "nav": 100000.0
+        },
+        {
+          "date": "2026-10-30",
+          "nav": 100000.0
         }
       ],
       "note": "Arquitectura TFG 2021 portada con riesgo/beta sobre retornos y ejecución prospectiva next-open.",
-      "activity_state": "cash",
-      "activity_label": "Sin compras · esperando señal",
-      "activity_tickers": [],
+      "activity_state": "pending",
+      "activity_label": "15 compras para próxima apertura",
+      "activity_tickers": [
+        "HST",
+        "MAR",
+        "DOV",
+        "TDY",
+        "HON",
+        "FAST",
+        "WMT",
+        "PG",
+        "AIG",
+        "DD",
+        "FTV",
+        "MTD"
+      ],
       "open_positions_count": 0,
-      "pending_orders_count": 0,
+      "pending_orders_count": 15,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 4,
+      "risk_observations": 5,
       "annualized_volatility_pct": null,
       "max_drawdown_pct": 0.0,
       "sharpe_0rf": null
