@@ -164,6 +164,12 @@ def run(config_path, output_dir, now=None):
     symbols, sectors, _ = load_universe(universe_path)
     benchmark = config["benchmark_ticker"]
     due = _decision_due(state, asof, context["is_month_end"])
+    # Replay of a monthly signal must hash the same frozen universe as
+    # its original run, rather than just today's held positions.
+    replay_signal = bool(
+        state and state.get("last_session") == asof
+        and state.get("last_signal_session") == asof
+    )
 
     active = set()
     if state:
@@ -192,13 +198,16 @@ def run(config_path, output_dir, now=None):
             price_failures, fundamental_failures,
         )
     else:
-        requested = sorted(active | {benchmark})
+        requested = (symbols + ([benchmark] if benchmark not in symbols else [])
+                     if replay_signal else sorted(active | {benchmark}))
         # Daily passive marks need no independent RAW provider download.
         panel, price_failures = {}, {}
         decision = None
         fundamental_failures = {}
 
-    if due:
+    if due or replay_signal:
+        # Original signal and its idempotent replay use identical RAW scope;
+        # missing non-held constituents are still excluded from the hash.
         bars, quote_source = canonical(asof, requested, ROOT / "market_data/snapshots")
         if not (active | {benchmark}) <= set(bars):
             raise ValueError("Mandatory exposure missing from common RAW source")

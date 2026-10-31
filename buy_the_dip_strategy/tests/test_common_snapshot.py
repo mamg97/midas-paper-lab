@@ -67,6 +67,34 @@ class CommonDailyMarksTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "No se pueden valorar|Missing verified common"):
             runner._daily_marks({}, DAY, ["AAPL"])
 
+    def test_signal_day_replay_uses_original_full_universe_hash_scope(self):
+        """A monthly-signal retry must not become a false revision alarm."""
+        config = {"schema_version": 1, "name": "MIDAS_buy_the_dip_corpus_v0_2026",
+                  "currency": "USD", "universe_file": "unused.csv", "benchmark_ticker": "SPY"}
+        state = {"positions": {"AAPL": {}}, "pending": None,
+                 "last_session": DAY, "last_signal_session": DAY,
+                 "universe_hash": "frozen"}
+        updated = {"nav": 1000., "positions": {}, "cash": 1000.}
+        with (patch.object(runner, "_read", side_effect=[config, state]),
+              patch.object(runner, "eligible_session", return_value=DAY),
+              patch.object(runner, "calendar_context", return_value={"is_month_end": False}),
+              patch.object(runner, "_file_hash", return_value="frozen"),
+              patch.object(runner, "load_universe", return_value=(UNIVERSE, {}, {})),
+              patch.object(runner, "_decision_due", return_value=False),
+              patch.object(runner, "download_panel") as download,
+              patch.object(runner, "fundamentals_snapshot") as fundamentals,
+              patch.object(runner, "advance", return_value=(updated, False)) as advance,
+              patch.object(runner, "benchmark_return_pct", return_value=0.),
+              patch.object(runner, "_atomic_json") as save):
+            result = runner.run("config.json", self.root / "state")
+        bars = advance.call_args.args[1]
+        self.assertEqual(set(bars), {"AAPL", "SPY", "S000"})
+        self.assertIsNone(advance.call_args.kwargs["decision"])
+        self.assertEqual(result["quote_source"]["hash"], self.record["sha256"])
+        download.assert_not_called()
+        fundamentals.assert_not_called()
+        save.assert_not_called()
+
     def test_daily_runner_uses_fallback_before_accounting(self):
         config = {"schema_version": 1, "name": "MIDAS_buy_the_dip_corpus_v0_2026",
                   "currency": "USD", "universe_file": "unused.csv", "benchmark_ticker": "SPY"}
