@@ -207,6 +207,8 @@ def update_progress(state_dir,queue,rss):
     progress={"schema_version":1,"updated_at_utc":dt.datetime.now(dt.timezone.utc).isoformat(),
               "youtube_catalog_count":len(ids),"official_podcast_matched_count":len(eligible),
               "reviewed_count":len(reviews),
+              "temporarily_unavailable_audio_count":len(unavailable_ids(
+                  Path(state_dir)/"unavailable_audio.json")),
               "reviewed_official_podcast_count":sum(x in mirror for x in reviews),
               "remaining_official_podcast_count":sum(x not in reviews for x in eligible),
               "coverage_note":"Official-podcast matches use local ASR; YouTube-only items remain queued."}
