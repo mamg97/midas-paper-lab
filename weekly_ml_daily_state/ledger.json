@@ -6,13 +6,13 @@
   "first_session": "2026-10-09",
   "gap_sessions": [],
   "initial_capital": 100000.0,
-  "last_session": "2026-10-29",
+  "last_session": "2026-10-30",
   "last_signal_session": "2026-10-23",
   "schema_version": 1,
   "signal_hash": "55158e338cadd258d1a5d73bee628f0f17b34376801319d2c35c194825a07aa2",
   "strategies": {
     "arima_return": {
-      "cash": 4405.922414667513,
+      "cash": 89683.27426368505,
       "equity": [
         {
           "date": "2026-10-09",
@@ -88,6 +88,11 @@
           "date": "2026-10-29",
           "decision_recorded": false,
           "nav": 88305.38650965803
+        },
+        {
+          "date": "2026-10-30",
+          "decision_recorded": false,
+          "nav": 89683.27426368505
         }
       ],
       "events": [
@@ -555,82 +560,101 @@
           "shares": 46.751537,
           "ticker": "EFX",
           "type": "buy"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.626018848540962,
+          "price": 184.50770610046388,
+          "shares": 46.751537,
+          "ticker": "EFX",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.412452033009599,
+          "price": 119.03045133972168,
+          "shares": 70.674789,
+          "ticker": "HAS",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.770363570116757,
+          "price": 18.55071946620941,
+          "shares": 472.777543,
+          "ticker": "LKQ",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.122574449491118,
+          "price": 444.507645980835,
+          "shares": 18.273194,
+          "ticker": "MPC",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.9107873929594,
+          "price": 221.6091412200928,
+          "shares": 44.721925,
+          "ticker": "MRNA",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.038407605780273,
+          "price": 264.06791220092776,
+          "shares": 30.440683,
+          "ticker": "PAYC",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.821404301864202,
+          "price": 205.84702194976808,
+          "shares": 42.854175,
+          "ticker": "POOL",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.812131359912797,
+          "price": 466.3667061004639,
+          "shares": 18.895284,
+          "ticker": "ROP",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 7.987967543428261,
+          "price": 399.4601736602783,
+          "shares": 19.996906,
+          "ticker": "VLO",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 7.860607458477748,
+          "price": 197.72109732055665,
+          "shares": 39.756038,
+          "ticker": "WDAY",
+          "type": "sell"
         }
       ],
-      "nav": 88305.38650965803,
+      "nav": 89683.27426368505,
       "pending": [],
-      "positions": {
-        "EFX": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.362886339839562,
-          "entry_price": 178.87938828277586,
-          "shares": 46.751537,
-          "signal_date": "2026-10-23"
-        },
-        "HAS": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.362886411308317,
-          "entry_price": 118.32913164138793,
-          "shares": 70.674789,
-          "signal_date": "2026-10-23"
-        },
-        "LKQ": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.362886458072516,
-          "entry_price": 17.68884030532837,
-          "shares": 472.777543,
-          "signal_date": "2026-10-23"
-        },
-        "MPC": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.36288635108192,
-          "entry_price": 457.65870767211914,
-          "shares": 18.273194,
-          "signal_date": "2026-10-23"
-        },
-        "MRNA": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.362886334866191,
-          "entry_price": 186.9974589614868,
-          "shares": 44.721925,
-          "signal_date": "2026-10-23"
-        },
-        "PAYC": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.362886387009636,
-          "entry_price": 274.7272913360596,
-          "shares": 30.440683,
-          "signal_date": "2026-10-23"
-        },
-        "POOL": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.362886318012828,
-          "entry_price": 195.14752805328368,
-          "shares": 42.854175,
-          "signal_date": "2026-10-23"
-        },
-        "ROP": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.362886044163279,
-          "entry_price": 442.59118011474607,
-          "shares": 18.895284,
-          "signal_date": "2026-10-23"
-        },
-        "VLO": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.362886061354,
-          "entry_price": 418.209,
-          "shares": 19.996906,
-          "signal_date": "2026-10-23"
-        },
-        "WDAY": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.362886342994749,
-          "entry_price": 210.355125,
-          "shares": 39.756038,
-          "signal_date": "2026-10-23"
-        }
-      },
+      "positions": {},
       "trades": [
         {
           "buy_commission": 9.490508965384615,
@@ -871,11 +895,131 @@
           "shares": 24.698535,
           "signal_date": "2026-10-16",
           "ticker": "WDC"
+        },
+        {
+          "buy_commission": 8.362886339839562,
+          "buy_price": 178.87938828277586,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 246.1436035130185,
+          "sell_commission": 8.626018848540962,
+          "sell_price": 184.50770610046388,
+          "shares": 46.751537,
+          "signal_date": "2026-10-23",
+          "ticker": "EFX"
+        },
+        {
+          "buy_commission": 8.362886411308317,
+          "buy_price": 118.32913164138793,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 32.790283256963995,
+          "sell_commission": 8.412452033009599,
+          "sell_price": 119.03045133972168,
+          "shares": 70.674789,
+          "signal_date": "2026-10-23",
+          "ticker": "HAS"
+        },
+        {
+          "buy_commission": 8.362886458072516,
+          "buy_price": 17.68884030532837,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 390.3438620160512,
+          "sell_commission": 8.770363570116757,
+          "sell_price": 18.55071946620941,
+          "shares": 472.777543,
+          "signal_date": "2026-10-23",
+          "ticker": "LKQ"
+        },
+        {
+          "buy_commission": 8.36288635108192,
+          "buy_price": 457.65870767211914,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -256.7973623913765,
+          "sell_commission": 8.122574449491118,
+          "sell_price": 444.507645980835,
+          "shares": 18.273194,
+          "signal_date": "2026-10-23",
+          "ticker": "MPC"
+        },
+        {
+          "buy_commission": 8.362886334866191,
+          "buy_price": 186.9974589614868,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 1529.627384365383,
+          "sell_commission": 9.9107873929594,
+          "sell_price": 221.6091412200928,
+          "shares": 44.721925,
+          "signal_date": "2026-10-23",
+          "ticker": "MRNA"
+        },
+        {
+          "buy_commission": 8.362886387009636,
+          "buy_price": 274.7272913360596,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -340.8800752221511,
+          "sell_commission": 8.038407605780273,
+          "sell_price": 264.06791220092776,
+          "shares": 30.440683,
+          "signal_date": "2026-10-23",
+          "ticker": "PAYC"
+        },
+        {
+          "buy_commission": 8.362886318012828,
+          "buy_price": 195.14752805328368,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 441.3336932314979,
+          "sell_commission": 8.821404301864202,
+          "sell_price": 205.84702194976808,
+          "shares": 42.854175,
+          "signal_date": "2026-10-23",
+          "ticker": "POOL"
+        },
+        {
+          "buy_commission": 8.362886044163279,
+          "buy_price": 442.59118011474607,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 432.0702983454419,
+          "sell_commission": 8.812131359912797,
+          "sell_price": 466.3667061004639,
+          "shares": 18.895284,
+          "signal_date": "2026-10-23",
+          "ticker": "ROP"
+        },
+        {
+          "buy_commission": 8.362886061354,
+          "buy_price": 418.209,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -391.2693715305218,
+          "sell_commission": 7.987967543428261,
+          "sell_price": 399.4601736602783,
+          "shares": 19.996906,
+          "signal_date": "2026-10-23",
+          "ticker": "VLO"
+        },
+        {
+          "buy_commission": 8.362886342994749,
+          "buy_price": 210.355125,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -518.5023783184732,
+          "sell_commission": 7.860607458477748,
+          "sell_price": 197.72109732055665,
+          "shares": 39.756038,
+          "signal_date": "2026-10-23",
+          "ticker": "WDAY"
         }
       ]
     },
     "benchmark_rsp": {
-      "cash": 5036.149619398493,
+      "cash": 101083.0962018479,
       "equity": [
         {
           "date": "2026-10-09",
@@ -951,6 +1095,11 @@
           "date": "2026-10-29",
           "decision_recorded": false,
           "nav": 101989.60111747174
+        },
+        {
+          "date": "2026-10-30",
+          "decision_recorded": false,
+          "nav": 101083.0962018479
         }
       ],
       "events": [
@@ -1013,19 +1162,20 @@
           "shares": 440.617408,
           "ticker": "RSP",
           "type": "buy"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 96.14308967212155,
+          "price": 218.20084255981448,
+          "shares": 440.617408,
+          "ticker": "RSP",
+          "type": "sell"
         }
       ],
-      "nav": 101989.60111747174,
+      "nav": 101083.0962018479,
       "pending": [],
-      "positions": {
-        "RSP": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 95.59124887569942,
-          "entry_price": 216.94841633605955,
-          "shares": 440.617408,
-          "signal_date": "2026-10-23"
-        }
-      },
+      "positions": {},
       "trades": [
         {
           "buy_commission": 94.90509486176578,
@@ -1050,11 +1200,23 @@
           "shares": 442.706437,
           "signal_date": "2026-10-16",
           "ticker": "RSP"
+        },
+        {
+          "buy_commission": 95.59124887569942,
+          "buy_price": 216.94841633605955,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 360.10645787429803,
+          "sell_commission": 96.14308967212155,
+          "sell_price": 218.20084255981448,
+          "shares": 440.617408,
+          "signal_date": "2026-10-23",
+          "ticker": "RSP"
         }
       ]
     },
     "benchmark_spy": {
-      "cash": 4833.575382191993,
+      "cash": 95611.99506221453,
       "equity": [
         {
           "date": "2026-10-09",
@@ -1130,6 +1292,11 @@
           "date": "2026-10-29",
           "decision_recorded": false,
           "nav": 97389.24497627329
+        },
+        {
+          "date": "2026-10-30",
+          "decision_recorded": false,
+          "nav": 95611.99506221453
         }
       ],
       "events": [
@@ -1192,19 +1359,20 @@
           "shares": 120.302162,
           "ticker": "SPY",
           "type": "buy"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 90.86928896899153,
+          "price": 755.3421107177735,
+          "shares": 120.302162,
+          "ticker": "SPY",
+          "type": "sell"
         }
       ],
-      "nav": 97389.24497627329,
+      "nav": 95611.99506221453,
       "pending": [],
-      "positions": {
-        "SPY": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 91.74617314599224,
-          "entry_price": 762.631125,
-          "shares": 120.302162,
-          "signal_date": "2026-10-23"
-        }
-      },
+      "positions": {},
       "trades": [
         {
           "buy_commission": 94.90509486345954,
@@ -1229,11 +1397,23 @@
           "shares": 120.949506,
           "signal_date": "2026-10-16",
           "ticker": "SPY"
+        },
+        {
+          "buy_commission": 91.74617314599224,
+          "buy_price": 762.631125,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -1059.4996391157044,
+          "sell_commission": 90.86928896899153,
+          "sell_price": 755.3421107177735,
+          "shares": 120.302162,
+          "signal_date": "2026-10-23",
+          "ticker": "SPY"
         }
       ]
     },
     "ensemble_consensus": {
-      "cash": 4304.549269369316,
+      "cash": 83727.75526088435,
       "equity": [
         {
           "date": "2026-10-09",
@@ -1309,6 +1489,11 @@
           "date": "2026-10-29",
           "decision_recorded": false,
           "nav": 86046.8691057231
+        },
+        {
+          "date": "2026-10-30",
+          "decision_recorded": false,
+          "nav": 83727.75526088435
         }
       ],
       "events": [
@@ -1776,82 +1961,101 @@
           "shares": 57.958754,
           "ticker": "VST",
           "type": "buy"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.247523469597477,
+          "price": 427.55610401916505,
+          "shares": 19.289921,
+          "ticker": "AXON",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.431928533310831,
+          "price": 262.2488148803711,
+          "shares": 32.152399,
+          "ticker": "CEG",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 7.0717936376351,
+          "price": 235.15236927032473,
+          "shares": 30.07324,
+          "ticker": "DDOG",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.51453531478294,
+          "price": 117.18137786483766,
+          "shares": 72.661164,
+          "ticker": "GDDY",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 6.956207875967278,
+          "price": 28.765610686302185,
+          "shares": 241.823751,
+          "ticker": "HPQ",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.317156906006485,
+          "price": 257.6810925598145,
+          "shares": 32.276939,
+          "ticker": "IBM",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.251765354859367,
+          "price": 42.408785305023194,
+          "shares": 194.576791,
+          "ticker": "LUV",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 7.468956802480649,
+          "price": 199.08040267944338,
+          "shares": 37.517288,
+          "ticker": "NTAP",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.22709817385084,
+          "price": 195.44222328948976,
+          "shares": 42.094784,
+          "ticker": "PTC",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.015742631724283,
+          "price": 138.30081011962892,
+          "shares": 57.958754,
+          "ticker": "VST",
+          "type": "sell"
         }
       ],
-      "nav": 86046.8691057231,
+      "nav": 83727.75526088435,
       "pending": [],
-      "positions": {
-        "AXON": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.170471367172876,
-          "entry_price": 423.56168110656733,
-          "shares": 19.289921,
-          "signal_date": "2026-10-23"
-        },
-        "CEG": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.170471192627717,
-          "entry_price": 254.11700049591062,
-          "shares": 32.152399,
-          "signal_date": "2026-10-23"
-        },
-        "DDOG": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.170471148872466,
-          "entry_price": 271.6857627868652,
-          "shares": 30.07324,
-          "signal_date": "2026-10-23"
-        },
-        "GDDY": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.17047137169995,
-          "entry_price": 112.44619438934326,
-          "shares": 72.661164,
-          "signal_date": "2026-10-23"
-        },
-        "HPQ": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.170471376059112,
-          "entry_price": 33.786885457992554,
-          "shares": 241.823751,
-          "signal_date": "2026-10-23"
-        },
-        "IBM": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.170471353167022,
-          "entry_price": 253.13649950408933,
-          "shares": 32.276939,
-          "signal_date": "2026-10-23"
-        },
-        "LUV": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.170471349868391,
-          "entry_price": 41.99098622131348,
-          "shares": 194.576791,
-          "signal_date": "2026-10-23"
-        },
-        "NTAP": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.170471204268926,
-          "entry_price": 217.77883316802976,
-          "shares": 37.517288,
-          "signal_date": "2026-10-23"
-        },
-        "PTC": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.170471290047999,
-          "entry_price": 194.09699999999998,
-          "shares": 42.094784,
-          "signal_date": "2026-10-23"
-        },
-        "VST": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.170471278890263,
-          "entry_price": 140.97044389343262,
-          "shares": 57.958754,
-          "signal_date": "2026-10-23"
-        }
-      },
+      "positions": {},
       "trades": [
         {
           "buy_commission": 9.490509257069236,
@@ -2092,11 +2296,131 @@
           "shares": 24.17591,
           "signal_date": "2026-10-16",
           "ticker": "WDC"
+        },
+        {
+          "buy_commission": 8.170471367172876,
+          "buy_price": 423.56168110656733,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 60.63410758782952,
+          "sell_commission": 8.247523469597477,
+          "sell_price": 427.55610401916505,
+          "shares": 19.289921,
+          "signal_date": "2026-10-23",
+          "ticker": "AXON"
+        },
+        {
+          "buy_commission": 8.170471192627717,
+          "buy_price": 254.11700049591062,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 244.8549409571751,
+          "sell_commission": 8.431928533310831,
+          "sell_price": 262.2488148803711,
+          "shares": 32.152399,
+          "signal_date": "2026-10-23",
+          "ticker": "CEG"
+        },
+        {
+          "buy_commission": 8.170471148872466,
+          "buy_price": 271.6857627868652,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -1113.9197760238735,
+          "sell_commission": 7.0717936376351,
+          "sell_price": 235.15236927032473,
+          "shares": 30.07324,
+          "signal_date": "2026-10-23",
+          "ticker": "DDOG"
+        },
+        {
+          "buy_commission": 8.17047137169995,
+          "buy_price": 112.44619438934326,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 327.3789363965052,
+          "sell_commission": 8.51453531478294,
+          "sell_price": 117.18137786483766,
+          "shares": 72.661164,
+          "signal_date": "2026-10-23",
+          "ticker": "GDDY"
+        },
+        {
+          "buy_commission": 8.170471376059112,
+          "buy_price": 33.786885457992554,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -1229.39017934386,
+          "sell_commission": 6.956207875967278,
+          "sell_price": 28.765610686302185,
+          "shares": 241.823751,
+          "signal_date": "2026-10-23",
+          "ticker": "HPQ"
+        },
+        {
+          "buy_commission": 8.170471353167022,
+          "buy_price": 253.13649950408933,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 130.19792458028965,
+          "sell_commission": 8.317156906006485,
+          "sell_price": 257.6810925598145,
+          "shares": 32.276939,
+          "signal_date": "2026-10-23",
+          "ticker": "IBM"
+        },
+        {
+          "buy_commission": 8.170471349868391,
+          "buy_price": 41.99098622131348,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 64.871768286248,
+          "sell_commission": 8.251765354859367,
+          "sell_price": 42.408785305023194,
+          "shares": 194.576791,
+          "signal_date": "2026-10-23",
+          "ticker": "LUV"
+        },
+        {
+          "buy_commission": 8.170471204268926,
+          "buy_price": 217.77883316802976,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -717.1538297950252,
+          "sell_commission": 7.468956802480649,
+          "sell_price": 199.08040267944338,
+          "shares": 37.517288,
+          "signal_date": "2026-10-23",
+          "ticker": "NTAP"
+        },
+        {
+          "buy_commission": 8.170471290047999,
+          "buy_price": 194.09699999999998,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 40.229314338941776,
+          "sell_commission": 8.22709817385084,
+          "sell_price": 195.44222328948976,
+          "shares": 42.094784,
+          "signal_date": "2026-10-23",
+          "ticker": "PTC"
+        },
+        {
+          "buy_commission": 8.170471278890263,
+          "buy_price": 140.97044389343262,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -170.91486107659483,
+          "sell_commission": 8.015742631724283,
+          "sell_price": 138.30081011962892,
+          "shares": 57.958754,
+          "signal_date": "2026-10-23",
+          "ticker": "VST"
         }
       ]
     },
     "lgbm_direction": {
-      "cash": 5024.686136739529,
+      "cash": 100692.64930089214,
       "equity": [
         {
           "date": "2026-10-09",
@@ -2172,6 +2496,11 @@
           "date": "2026-10-29",
           "decision_recorded": false,
           "nav": 100899.71235174725
+        },
+        {
+          "date": "2026-10-30",
+          "decision_recorded": false,
+          "nav": 100692.64930089214
         }
       ],
       "events": [
@@ -2639,82 +2968,101 @@
           "shares": 34.254185,
           "ticker": "ESS",
           "type": "buy"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.044745707243651,
+          "price": 264.0479026794434,
+          "shares": 34.254185,
+          "ticker": "ESS",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.670712667811214,
+          "price": 94.03296183013917,
+          "shares": 102.843859,
+          "ticker": "KO",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.894112904046102,
+          "price": 636.6315372009278,
+          "shares": 15.541349,
+          "ticker": "LMT",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.820015199984896,
+          "price": 36.95151622009278,
+          "shares": 265.754053,
+          "ticker": "LVS",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.668266346433873,
+          "price": 399.1003377990723,
+          "shares": 24.225152,
+          "ticker": "MAR",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.249472004587627,
+          "price": 228.16585877990724,
+          "shares": 40.53837,
+          "ticker": "ROST",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.044100498844116,
+          "price": 81.28933683013916,
+          "shares": 111.258141,
+          "ticker": "SOLV",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.965201056923902,
+          "price": 180.58965267944336,
+          "shares": 55.181462,
+          "ticker": "TKO",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.835206411307674,
+          "price": 123.44824713516236,
+          "shares": 79.670685,
+          "ticker": "WMT",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.571894093860601,
+          "price": 73.82307061004639,
+          "shares": 129.659929,
+          "ticker": "WRB",
+          "type": "sell"
         }
       ],
-      "nav": 100899.71235174725,
+      "nav": 100692.64930089214,
       "pending": [],
-      "positions": {
-        "ESS": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 9.53736373506751,
-          "entry_price": 278.4291535491943,
-          "shares": 34.254185,
-          "signal_date": "2026-10-23"
-        },
-        "KO": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 9.537363840564536,
-          "entry_price": 92.73634744262695,
-          "shares": 102.843859,
-          "signal_date": "2026-10-23"
-        },
-        "LMT": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 9.537363458824629,
-          "entry_price": 613.6766801147461,
-          "shares": 15.541349,
-          "signal_date": "2026-10-23"
-        },
-        "LVS": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 9.537363896052675,
-          "entry_price": 35.88793393135071,
-          "shares": 265.754053,
-          "signal_date": "2026-10-23"
-        },
-        "MAR": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 9.537363610656,
-          "entry_price": 393.69674999999995,
-          "shares": 24.225152,
-          "signal_date": "2026-10-23"
-        },
-        "ROST": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 9.537363756802463,
-          "entry_price": 235.2675688934326,
-          "shares": 40.53837,
-          "signal_date": "2026-10-23"
-        },
-        "SOLV": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 9.537363853610705,
-          "entry_price": 85.72284030532836,
-          "shares": 111.258141,
-          "signal_date": "2026-10-23"
-        },
-        "TKO": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 9.537363859280251,
-          "entry_price": 172.836375,
-          "shares": 55.181462,
-          "signal_date": "2026-10-23"
-        },
-        "WMT": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 9.537363880608726,
-          "entry_price": 119.70982652664183,
-          "shares": 79.670685,
-          "signal_date": "2026-10-23"
-        },
-        "WRB": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 9.537363843592638,
-          "entry_price": 73.55675664138793,
-          "shares": 129.659929,
-          "signal_date": "2026-10-23"
-        }
-      },
+      "positions": {},
       "trades": [
         {
           "buy_commission": 9.490509257069236,
@@ -2955,11 +3303,131 @@
           "shares": 96.870992,
           "signal_date": "2026-10-16",
           "ticker": "UPS"
+        },
+        {
+          "buy_commission": 9.53736373506751,
+          "buy_price": 278.4291535491943,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -511.2001372661706,
+          "sell_commission": 9.044745707243651,
+          "sell_price": 264.0479026794434,
+          "shares": 34.254185,
+          "signal_date": "2026-10-23",
+          "ticker": "ESS"
+        },
+        {
+          "buy_commission": 9.537363840564536,
+          "buy_price": 92.73634744262695,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 114.14075073830183,
+          "sell_commission": 9.670712667811214,
+          "sell_price": 94.03296183013917,
+          "shares": 102.843859,
+          "signal_date": "2026-10-23",
+          "ticker": "KO"
+        },
+        {
+          "buy_commission": 9.537363458824629,
+          "buy_price": 613.6766801147461,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 337.3179688586009,
+          "sell_commission": 9.894112904046102,
+          "sell_price": 636.6315372009278,
+          "shares": 15.541349,
+          "signal_date": "2026-10-23",
+          "ticker": "LMT"
+        },
+        {
+          "buy_commission": 9.537363896052675,
+          "buy_price": 35.88793393135071,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 263.2939248361827,
+          "sell_commission": 9.820015199984896,
+          "sell_price": 36.95151622009278,
+          "shares": 265.754053,
+          "signal_date": "2026-10-23",
+          "ticker": "LVS"
+        },
+        {
+          "buy_commission": 9.537363610656,
+          "buy_price": 393.69674999999995,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 111.69710582078372,
+          "sell_commission": 9.668266346433873,
+          "sell_price": 399.1003377990723,
+          "shares": 24.225152,
+          "signal_date": "2026-10-23",
+          "ticker": "MAR"
+        },
+        {
+          "buy_commission": 9.537363756802463,
+          "buy_price": 235.2675688934326,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -306.6785879762244,
+          "sell_commission": 9.249472004587627,
+          "sell_price": 228.16585877990724,
+          "shares": 40.53837,
+          "signal_date": "2026-10-23",
+          "ticker": "ROST"
+        },
+        {
+          "buy_commission": 9.537363853610705,
+          "buy_price": 85.72284030532836,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -511.8448191190432,
+          "sell_commission": 9.044100498844116,
+          "sell_price": 81.28933683013916,
+          "shares": 111.258141,
+          "signal_date": "2026-10-23",
+          "ticker": "SOLV"
+        },
+        {
+          "buy_commission": 9.537363859280251,
+          "buy_price": 172.836375,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 408.33463272744734,
+          "sell_commission": 9.965201056923902,
+          "sell_price": 180.58965267944336,
+          "shares": 55.181462,
+          "signal_date": "2026-10-23",
+          "ticker": "TKO"
+        },
+        {
+          "buy_commission": 9.537363880608726,
+          "buy_price": 119.70982652664183,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 278.46996040703186,
+          "sell_commission": 9.835206411307674,
+          "sell_price": 123.44824713516236,
+          "shares": 79.670685,
+          "signal_date": "2026-10-23",
+          "ticker": "WMT"
+        },
+        {
+          "buy_commission": 9.537363843592638,
+          "buy_price": 73.55675664138793,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 15.420992330509298,
+          "sell_commission": 9.571894093860601,
+          "sell_price": 73.82307061004639,
+          "shares": 129.659929,
+          "signal_date": "2026-10-23",
+          "ticker": "WRB"
         }
       ]
     },
     "lgbm_ranker": {
-      "cash": 4681.3130434545965,
+      "cash": 93086.44604935743,
       "equity": [
         {
           "date": "2026-10-09",
@@ -3035,6 +3503,11 @@
           "date": "2026-10-29",
           "decision_recorded": false,
           "nav": 98672.97329026941
+        },
+        {
+          "date": "2026-10-30",
+          "decision_recorded": false,
+          "nav": 93086.44604935743
         }
       ],
       "events": [
@@ -3502,82 +3975,101 @@
           "shares": 63.031697,
           "ticker": "VST",
           "type": "buy"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.811154398651219,
+          "price": 92.67364122009278,
+          "shares": 95.077244,
+          "ticker": "AKAM",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.078923776525025,
+          "price": 424.0878377990723,
+          "shares": 19.050119,
+          "ticker": "DELL",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.80106874797921,
+          "price": 123.24834255981446,
+          "shares": 71.409226,
+          "ticker": "GLW",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.546291128057666,
+          "price": 55.062455152511596,
+          "shares": 155.210862,
+          "ticker": "HPE",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 10.530258516904443,
+          "price": 221.6091412200928,
+          "shares": 47.517257,
+          "ticker": "MRNA",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.825452076452297,
+          "price": 884.2976202392579,
+          "shares": 9.980183,
+          "ticker": "MU",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.049836751692839,
+          "price": 644.2577270812989,
+          "shares": 14.04692,
+          "ticker": "STX",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 7.748248956909968,
+          "price": 274.23281011962894,
+          "shares": 28.254274,
+          "ticker": "TER",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.717334758314985,
+          "price": 138.30081011962892,
+          "shares": 63.031697,
+          "ticker": "VST",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.385057521047717,
+          "price": 365.92693035888675,
+          "shares": 25.647354,
+          "ticker": "WDC",
+          "type": "sell"
         }
       ],
-      "nav": 98672.97329026941,
+      "nav": 93086.44604935743,
       "pending": [],
-      "positions": {
-        "AKAM": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.885606293078377,
-          "entry_price": 93.45670866394042,
-          "shares": 95.077244,
-          "signal_date": "2026-10-23"
-        },
-        "DELL": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.88560629320057,
-          "entry_price": 466.43311221313473,
-          "shares": 19.050119,
-          "signal_date": "2026-10-23"
-        },
-        "GLW": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.885606216568172,
-          "entry_price": 124.43218774795531,
-          "shares": 71.409226,
-          "signal_date": "2026-10-23"
-        },
-        "HPE": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.885606295962937,
-          "entry_price": 57.248611221313475,
-          "shares": 155.210862,
-          "signal_date": "2026-10-23"
-        },
-        "MRNA": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.885606315819922,
-          "entry_price": 186.9974589614868,
-          "shares": 47.517257,
-          "signal_date": "2026-10-23"
-        },
-        "MU": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.88560587941975,
-          "entry_price": 890.3249448852539,
-          "shares": 9.980183,
-          "signal_date": "2026-10-23"
-        },
-        "STX": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.885605752584999,
-          "entry_price": 632.5661249999999,
-          "shares": 14.04692,
-          "signal_date": "2026-10-23"
-        },
-        "TER": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.885606149812627,
-          "entry_price": 314.48715156555176,
-          "shares": 28.254274,
-          "signal_date": "2026-10-23"
-        },
-        "VST": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.885606305446345,
-          "entry_price": 140.97044389343262,
-          "shares": 63.031697,
-          "signal_date": "2026-10-23"
-        },
-        "WDC": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.885606294668099,
-          "entry_price": 346.4531387786865,
-          "shares": 25.647354,
-          "signal_date": "2026-10-23"
-        }
-      },
+      "positions": {},
       "trades": [
         {
           "buy_commission": 9.490509473258017,
@@ -3818,6 +4310,126 @@
           "shares": 26.960703,
           "signal_date": "2026-10-16",
           "ticker": "WDC"
+        },
+        {
+          "buy_commission": 8.885606293078377,
+          "buy_price": 93.45670866394042,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -92.14865511888755,
+          "sell_commission": 8.811154398651219,
+          "sell_price": 92.67364122009278,
+          "shares": 95.077244,
+          "signal_date": "2026-10-23",
+          "ticker": "AKAM"
+        },
+        {
+          "buy_commission": 8.88560629320057,
+          "buy_price": 466.43311221313473,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -823.6470467452706,
+          "sell_commission": 8.078923776525025,
+          "sell_price": 424.0878377990723,
+          "shares": 19.050119,
+          "signal_date": "2026-10-23",
+          "ticker": "DELL"
+        },
+        {
+          "buy_commission": 8.885606216568172,
+          "buy_price": 124.43218774795531,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -102.22414355351013,
+          "sell_commission": 8.80106874797921,
+          "sell_price": 123.24834255981446,
+          "shares": 71.409226,
+          "signal_date": "2026-10-23",
+          "ticker": "GLW"
+        },
+        {
+          "buy_commission": 8.885606295962937,
+          "buy_price": 57.248611221313475,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -356.7470653292902,
+          "sell_commission": 8.546291128057666,
+          "sell_price": 55.062455152511596,
+          "shares": 155.210862,
+          "signal_date": "2026-10-23",
+          "ticker": "HPE"
+        },
+        {
+          "buy_commission": 8.885606315819922,
+          "buy_price": 186.9974589614868,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 1625.2363362517974,
+          "sell_commission": 10.530258516904443,
+          "sell_price": 221.6091412200928,
+          "shares": 47.517257,
+          "signal_date": "2026-10-23",
+          "ticker": "MRNA"
+        },
+        {
+          "buy_commission": 8.88560587941975,
+          "buy_price": 890.3249448852539,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -77.8648609233249,
+          "sell_commission": 8.825452076452297,
+          "sell_price": 884.2976202392579,
+          "shares": 9.980183,
+          "signal_date": "2026-10-23",
+          "ticker": "MU"
+        },
+        {
+          "buy_commission": 8.885605752584999,
+          "buy_price": 632.5661249999999,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 146.29555660356297,
+          "sell_commission": 9.049836751692839,
+          "sell_price": 644.2577270812989,
+          "shares": 14.04692,
+          "signal_date": "2026-10-23",
+          "ticker": "STX"
+        },
+        {
+          "buy_commission": 8.885606149812627,
+          "buy_price": 314.48715156555176,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -1153.9910480093822,
+          "sell_commission": 7.748248956909968,
+          "sell_price": 274.23281011962894,
+          "shares": 28.254274,
+          "signal_date": "2026-10-23",
+          "ticker": "TER"
+        },
+        {
+          "buy_commission": 8.885606305446345,
+          "buy_price": 140.97044389343262,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -185.87448819512247,
+          "sell_commission": 8.717334758314985,
+          "sell_price": 138.30081011962892,
+          "shares": 63.031697,
+          "signal_date": "2026-10-23",
+          "ticker": "VST"
+        },
+        {
+          "buy_commission": 8.885606294668099,
+          "buy_price": 346.4531387786865,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 481.18056256390156,
+          "sell_commission": 9.385057521047717,
+          "sell_price": 365.92693035888675,
+          "shares": 25.647354,
+          "signal_date": "2026-10-23",
+          "ticker": "WDC"
         }
       ]
     },
@@ -3896,6 +4508,11 @@
         },
         {
           "date": "2026-10-29",
+          "decision_recorded": false,
+          "nav": 83291.89980045031
+        },
+        {
+          "date": "2026-10-30",
           "decision_recorded": false,
           "nav": 83291.89980045031
         }
@@ -4524,7 +5141,7 @@
       ]
     },
     "lstm_return": {
-      "cash": 4640.252477579201,
+      "cash": 96515.1167903347,
       "equity": [
         {
           "date": "2026-10-09",
@@ -4600,6 +5217,11 @@
           "date": "2026-10-29",
           "decision_recorded": false,
           "nav": 97212.61596537598
+        },
+        {
+          "date": "2026-10-30",
+          "decision_recorded": false,
+          "nav": 96515.1167903347
         }
       ],
       "events": [
@@ -5067,82 +5689,101 @@
           "shares": 107.724779,
           "ticker": "DECK",
           "type": "buy"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.89073160403014,
+          "price": 427.55610401916505,
+          "shares": 20.794304,
+          "ticker": "AXON",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 10.097851917923412,
+          "price": 64.87754866027832,
+          "shares": 155.644782,
+          "ticker": "BLDR",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.827938222885003,
+          "price": 81.94900286483765,
+          "shares": 107.724779,
+          "ticker": "DECK",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.275914605808376,
+          "price": 12.243875000000001,
+          "shares": 757.596317,
+          "ticker": "F",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.397559253577036,
+          "price": 157.83104866027833,
+          "shares": 59.541892,
+          "ticker": "KLAC",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.236819722979122,
+          "price": 18.55071946620941,
+          "shares": 497.922452,
+          "ticker": "LKQ",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.314984749401443,
+          "price": 29.945019084930422,
+          "shares": 311.069588,
+          "ticker": "MGM",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.170220252250271,
+          "price": 96.01196755981447,
+          "shares": 95.511221,
+          "ticker": "NRG",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.766939599264346,
+          "price": 32.933525762557984,
+          "shares": 266.201064,
+          "ticker": "SMCI",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.98787121578024,
+          "price": 74.62267366027832,
+          "shares": 120.44424,
+          "ticker": "WYNN",
+          "type": "sell"
         }
       ],
-      "nav": 97212.61596537598,
+      "nav": 96515.1167903347,
       "pending": [],
-      "positions": {
-        "AXON": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.807670359681019,
-          "entry_price": 423.56168110656733,
-          "shares": 20.794304,
-          "signal_date": "2026-10-23"
-        },
-        "BLDR": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.807670718207413,
-          "entry_price": 56.58828137397766,
-          "shares": 155.644782,
-          "signal_date": "2026-10-23"
-        },
-        "DECK": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.807670705915664,
-          "entry_price": 81.76086122131348,
-          "shares": 107.724779,
-          "signal_date": "2026-10-23"
-        },
-        "F": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.807670751398403,
-          "entry_price": 11.62580988550186,
-          "shares": 757.596317,
-          "signal_date": "2026-10-23"
-        },
-        "KLAC": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.807670730162675,
-          "entry_price": 147.92393110656738,
-          "shares": 59.541892,
-          "signal_date": "2026-10-23"
-        },
-        "LKQ": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.80767073786553,
-          "entry_price": 17.68884030532837,
-          "shares": 497.922452,
-          "signal_date": "2026-10-23"
-        },
-        "MGM": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.807670737624274,
-          "entry_price": 28.314149236679075,
-          "shares": 311.069588,
-          "signal_date": "2026-10-23"
-        },
-        "NRG": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.807670699216073,
-          "entry_price": 92.21608316802978,
-          "shares": 95.511221,
-          "signal_date": "2026-10-23"
-        },
-        "SMCI": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.807670739794501,
-          "entry_price": 33.08653469467163,
-          "shares": 266.201064,
-          "signal_date": "2026-10-23"
-        },
-        "WYNN": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.807670695050279,
-          "entry_price": 73.12654133605956,
-          "shares": 120.44424,
-          "signal_date": "2026-10-23"
-        }
-      },
+      "positions": {},
       "trades": [
         {
           "buy_commission": 9.490509443008868,
@@ -5383,11 +6024,131 @@
           "shares": 116.782713,
           "signal_date": "2026-10-16",
           "ticker": "WYNN"
+        },
+        {
+          "buy_commission": 8.807670359681019,
+          "buy_price": 423.56168110656733,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 65.36284238541037,
+          "sell_commission": 8.89073160403014,
+          "sell_price": 427.55610401916505,
+          "shares": 20.794304,
+          "signal_date": "2026-10-23",
+          "ticker": "AXON"
+        },
+        {
+          "buy_commission": 8.807670718207413,
+          "buy_price": 56.58828137397766,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 1271.2756770798685,
+          "sell_commission": 10.097851917923412,
+          "sell_price": 64.87754866027832,
+          "shares": 155.644782,
+          "signal_date": "2026-10-23",
+          "ticker": "BLDR"
+        },
+        {
+          "buy_commission": 8.807670705915664,
+          "buy_price": 81.76086122131348,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 2.6319080405389084,
+          "sell_commission": 8.827938222885003,
+          "sell_price": 81.94900286483765,
+          "shares": 107.724779,
+          "signal_date": "2026-10-23",
+          "ticker": "DECK"
+        },
+        {
+          "buy_commission": 8.807670751398403,
+          "buy_price": 11.62580988550186,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 450.160269052766,
+          "sell_commission": 9.275914605808376,
+          "sell_price": 12.243875000000001,
+          "shares": 757.596317,
+          "signal_date": "2026-10-23",
+          "ticker": "F"
+        },
+        {
+          "buy_commission": 8.807670730162675,
+          "buy_price": 147.92393110656738,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 571.6832934306201,
+          "sell_commission": 9.397559253577036,
+          "sell_price": 157.83104866027833,
+          "shares": 59.541892,
+          "signal_date": "2026-10-23",
+          "ticker": "KLAC"
+        },
+        {
+          "buy_commission": 8.80767073786553,
+          "buy_price": 17.68884030532837,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 411.10449465274763,
+          "sell_commission": 9.236819722979122,
+          "sell_price": 18.55071946620941,
+          "shares": 497.922452,
+          "signal_date": "2026-10-23",
+          "ticker": "LKQ"
+        },
+        {
+          "buy_commission": 8.807670737624274,
+          "buy_price": 28.314149236679075,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 489.19135629014426,
+          "sell_commission": 9.314984749401443,
+          "sell_price": 29.945019084930422,
+          "shares": 311.069588,
+          "signal_date": "2026-10-23",
+          "ticker": "MGM"
+        },
+        {
+          "buy_commission": 8.807670699216073,
+          "buy_price": 92.21608316802978,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 344.5716620827315,
+          "sell_commission": 9.170220252250271,
+          "sell_price": 96.01196755981447,
+          "shares": 95.511221,
+          "signal_date": "2026-10-23",
+          "ticker": "NRG"
+        },
+        {
+          "buy_commission": 8.807670739794501,
+          "buy_price": 33.08653469467163,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -58.30575086921499,
+          "sell_commission": 8.766939599264346,
+          "sell_price": 32.933525762557984,
+          "shares": 266.201064,
+          "signal_date": "2026-10-23",
+          "ticker": "SMCI"
+        },
+        {
+          "buy_commission": 8.807670695050279,
+          "buy_price": 73.12654133605956,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 162.40497881913168,
+          "sell_commission": 8.98787121578024,
+          "sell_price": 74.62267366027832,
+          "shares": 120.44424,
+          "signal_date": "2026-10-23",
+          "ticker": "WYNN"
         }
       ]
     },
     "mlp_return": {
-      "cash": 4516.6426987927025,
+      "cash": 88740.2225692813,
       "equity": [
         {
           "date": "2026-10-09",
@@ -5463,6 +6224,11 @@
           "date": "2026-10-29",
           "decision_recorded": false,
           "nav": 91522.66717195719
+        },
+        {
+          "date": "2026-10-30",
+          "decision_recorded": false,
+          "nav": 88740.2225692813
         }
       ],
       "events": [
@@ -5930,82 +6696,101 @@
           "shares": 27.260404,
           "ticker": "TER",
           "type": "buy"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 9.117507843611971,
+          "price": 79.26035305023194,
+          "shares": 115.03239,
+          "ticker": "APH",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.653895451330804,
+          "price": 427.55610401916505,
+          "shares": 20.240374,
+          "ticker": "AXON",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.847386515078908,
+          "price": 262.2488148803711,
+          "shares": 33.736612,
+          "ticker": "CEG",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.934063513740893,
+          "price": 117.18137786483766,
+          "shares": 76.241325,
+          "ticker": "GDDY",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 7.298954183245677,
+          "price": 28.765610686302185,
+          "shares": 253.738892,
+          "ticker": "HPQ",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.658346394839048,
+          "price": 42.408785305023194,
+          "shares": 204.16398,
+          "ticker": "LUV",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.925938635391283,
+          "price": 96.01196755981447,
+          "shares": 92.966938,
+          "ticker": "NRG",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 7.985403686673325,
+          "price": 164.70759828948977,
+          "shares": 48.482303,
+          "ticker": "QCOM",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 7.475697193916373,
+          "price": 274.23281011962894,
+          "shares": 27.260404,
+          "ticker": "TER",
+          "type": "sell"
+        },
+        {
+          "date": "2026-10-30",
+          "execution": "simulated_week_close",
+          "fee": 8.410694340418553,
+          "price": 138.30081011962892,
+          "shares": 60.814498,
+          "ticker": "VST",
+          "type": "sell"
         }
       ],
-      "nav": 91522.66717195719,
+      "nav": 88740.2225692813,
       "pending": [],
-      "positions": {
-        "APH": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.573046866606987,
-          "entry_price": 74.52724286270141,
-          "shares": 115.03239,
-          "signal_date": "2026-10-23"
-        },
-        "AXON": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.573046837665657,
-          "entry_price": 423.56168110656733,
-          "shares": 20.240374,
-          "signal_date": "2026-10-23"
-        },
-        "CEG": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.573046648334344,
-          "entry_price": 254.11700049591062,
-          "shares": 33.736612,
-          "signal_date": "2026-10-23"
-        },
-        "GDDY": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.573046851451096,
-          "entry_price": 112.44619438934326,
-          "shares": 76.241325,
-          "signal_date": "2026-10-23"
-        },
-        "HPQ": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.573046880241943,
-          "entry_price": 33.786885457992554,
-          "shares": 253.738892,
-          "signal_date": "2026-10-23"
-        },
-        "LUV": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.57304687106852,
-          "entry_price": 41.99098622131348,
-          "shares": 204.16398,
-          "signal_date": "2026-10-23"
-        },
-        "NRG": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.573046886485068,
-          "entry_price": 92.21608316802978,
-          "shares": 92.966938,
-          "signal_date": "2026-10-23"
-        },
-        "QCOM": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.573046879790516,
-          "entry_price": 176.82837549591065,
-          "shares": 48.482303,
-          "signal_date": "2026-10-23"
-        },
-        "TER": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.573046804486173,
-          "entry_price": 314.48715156555176,
-          "shares": 27.260404,
-          "signal_date": "2026-10-23"
-        },
-        "VST": {
-          "entry_date": "2026-10-26",
-          "entry_fee": 8.57304677821627,
-          "entry_price": 140.97044389343262,
-          "shares": 60.814498,
-          "signal_date": "2026-10-23"
-        }
-      },
+      "positions": {},
       "trades": [
         {
           "buy_commission": 9.490509459287999,
@@ -6246,6 +7031,126 @@
           "shares": 13.452671,
           "signal_date": "2026-10-16",
           "ticker": "STX"
+        },
+        {
+          "buy_commission": 8.573046866606987,
+          "buy_price": 74.52724286270141,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 526.7704222947659,
+          "sell_commission": 9.117507843611971,
+          "sell_price": 79.26035305023194,
+          "shares": 115.03239,
+          "signal_date": "2026-10-23",
+          "ticker": "APH"
+        },
+        {
+          "buy_commission": 8.573046837665657,
+          "buy_price": 423.56168110656733,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 63.62167137614992,
+          "sell_commission": 8.653895451330804,
+          "sell_price": 427.55610401916505,
+          "shares": 20.240374,
+          "signal_date": "2026-10-23",
+          "ticker": "AXON"
+        },
+        {
+          "buy_commission": 8.573046648334344,
+          "buy_price": 254.11700049591062,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 256.91943358115014,
+          "sell_commission": 8.847386515078908,
+          "sell_price": 262.2488148803711,
+          "shares": 33.736612,
+          "signal_date": "2026-10-23",
+          "ticker": "CEG"
+        },
+        {
+          "buy_commission": 8.573046851451096,
+          "buy_price": 112.44619438934326,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 343.50955192460526,
+          "sell_commission": 8.934063513740893,
+          "sell_price": 117.18137786483766,
+          "shares": 76.241325,
+          "signal_date": "2026-10-23",
+          "ticker": "GDDY"
+        },
+        {
+          "buy_commission": 8.573046880241943,
+          "buy_price": 33.786885457992554,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -1289.9646980597552,
+          "sell_commission": 7.298954183245677,
+          "sell_price": 28.765610686302185,
+          "shares": 253.738892,
+          "signal_date": "2026-10-23",
+          "ticker": "HPQ"
+        },
+        {
+          "buy_commission": 8.57304687106852,
+          "buy_price": 41.99098622131348,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 68.06813050462142,
+          "sell_commission": 8.658346394839048,
+          "sell_price": 42.408785305023194,
+          "shares": 204.16398,
+          "signal_date": "2026-10-23",
+          "ticker": "LUV"
+        },
+        {
+          "buy_commission": 8.573046886485068,
+          "buy_price": 92.21608316802978,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": 335.3927633843385,
+          "sell_commission": 8.925938635391283,
+          "sell_price": 96.01196755981447,
+          "shares": 92.966938,
+          "signal_date": "2026-10-23",
+          "ticker": "NRG"
+        },
+        {
+          "buy_commission": 8.573046879790516,
+          "buy_price": 176.82837549591065,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -604.2016436836551,
+          "sell_commission": 7.985403686673325,
+          "sell_price": 164.70759828948977,
+          "shares": 48.482303,
+          "signal_date": "2026-10-23",
+          "ticker": "QCOM"
+        },
+        {
+          "buy_commission": 8.573046804486173,
+          "buy_price": 314.48715156555176,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -1113.3983545682026,
+          "sell_commission": 7.475697193916373,
+          "sell_price": 274.23281011962894,
+          "shares": 27.260404,
+          "signal_date": "2026-10-23",
+          "ticker": "TER"
+        },
+        {
+          "buy_commission": 8.57304677821627,
+          "buy_price": 140.97044389343262,
+          "entry_date": "2026-10-26",
+          "exit_date": "2026-10-30",
+          "net_pnl": -179.3361789163522,
+          "sell_commission": 8.410694340418553,
+          "sell_price": 138.30081011962892,
+          "shares": 60.814498,
+          "signal_date": "2026-10-23",
+          "ticker": "VST"
         }
       ]
     }

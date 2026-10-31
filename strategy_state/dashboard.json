@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-31T02:16:35.777940+00:00",
+  "generated_at_utc": "2026-10-31T02:17:05.106853+00:00",
   "principle": "Comparar rentabilidad acumulada y riesgo observado; no ordenar carteras con distintas fechas de inicio o supuestos de ejecución.",
   "counts": {
     "paper_with_diary": 18,
@@ -1517,11 +1517,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-29",
+      "last_session": "2026-10-30",
       "initial_capital": 100000.0,
-      "last_equity": 97389.24497627329,
-      "return_pct": -2.610755,
-      "day_return_pct": -0.363084,
+      "last_equity": 95611.99506221453,
+      "return_pct": -4.388005,
+      "day_return_pct": -1.824893,
       "currency": "USD",
       "equity_history": [
         {
@@ -1583,30 +1583,27 @@
         {
           "date": "2026-10-29",
           "nav": 97389.24497627329
+        },
+        {
+          "date": "2026-10-30",
+          "nav": 95611.99506221453
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
-      "positions": [
-        {
-          "ticker": "SPY",
-          "shares": 120.302162
-        }
-      ],
-      "activity_state": "active",
-      "activity_label": "1 posición abierta",
-      "activity_tickers": [
-        "SPY"
-      ],
-      "open_positions_count": 1,
+      "positions": [],
+      "activity_state": "cash",
+      "activity_label": "Sin compras · en efectivo",
+      "activity_tickers": [],
+      "open_positions_count": 0,
       "pending_orders_count": 0,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 15,
-      "annualized_volatility_pct": 9.608384,
-      "max_drawdown_pct": -3.328505,
-      "sharpe_0rf": -4.906411
+      "risk_observations": 16,
+      "annualized_volatility_pct": 11.436428,
+      "max_drawdown_pct": -4.388005,
+      "sharpe_0rf": -6.528092
     },
     {
       "id": "weekly_legacy_weekly_ml_benchmark_spy",
@@ -1665,11 +1662,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-29",
+      "last_session": "2026-10-30",
       "initial_capital": 100000.0,
-      "last_equity": 101989.60111747174,
-      "return_pct": 1.989601,
-      "day_return_pct": 1.140437,
+      "last_equity": 101083.0962018479,
+      "return_pct": 1.083096,
+      "day_return_pct": -0.888821,
       "currency": "USD",
       "equity_history": [
         {
@@ -1731,30 +1728,27 @@
         {
           "date": "2026-10-29",
           "nav": 101989.60111747174
+        },
+        {
+          "date": "2026-10-30",
+          "nav": 101083.0962018479
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
-      "positions": [
-        {
-          "ticker": "RSP",
-          "shares": 440.617408
-        }
-      ],
-      "activity_state": "active",
-      "activity_label": "1 posición abierta",
-      "activity_tickers": [
-        "RSP"
-      ],
-      "open_positions_count": 1,
+      "positions": [],
+      "activity_state": "cash",
+      "activity_label": "Sin compras · en efectivo",
+      "activity_tickers": [],
+      "open_positions_count": 0,
       "pending_orders_count": 0,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 15,
-      "annualized_volatility_pct": 11.01179,
+      "risk_observations": 16,
+      "annualized_volatility_pct": 11.423043,
       "max_drawdown_pct": -1.125703,
-      "sharpe_0rf": 3.273537
+      "sharpe_0rf": 1.638105
     },
     {
       "id": "weekly_legacy_weekly_ml_benchmark_rsp",
@@ -1813,7 +1807,7 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-29",
+      "last_session": "2026-10-30",
       "initial_capital": 100000.0,
       "last_equity": 83291.89980045031,
       "return_pct": -16.7081,
@@ -1879,6 +1873,10 @@
         {
           "date": "2026-10-29",
           "nav": 83291.89980045031
+        },
+        {
+          "date": "2026-10-30",
+          "nav": 83291.89980045031
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
@@ -1892,10 +1890,10 @@
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 15,
-      "annualized_volatility_pct": 39.75793,
+      "risk_observations": 16,
+      "annualized_volatility_pct": 38.662361,
       "max_drawdown_pct": -17.460329,
-      "sharpe_0rf": -8.034121
+      "sharpe_0rf": -7.710997
     },
     {
       "id": "weekly_legacy_weekly_ml_lgbm_return_2026",
@@ -1952,11 +1950,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-29",
+      "last_session": "2026-10-30",
       "initial_capital": 100000.0,
-      "last_equity": 100899.71235174725,
-      "return_pct": 0.899712,
-      "day_return_pct": 1.842925,
+      "last_equity": 100692.64930089214,
+      "return_pct": 0.692649,
+      "day_return_pct": -0.205217,
       "currency": "USD",
       "equity_history": [
         {
@@ -2018,75 +2016,27 @@
         {
           "date": "2026-10-29",
           "nav": 100899.71235174725
+        },
+        {
+          "date": "2026-10-30",
+          "nav": 100692.64930089214
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
-      "positions": [
-        {
-          "ticker": "ESS",
-          "shares": 34.254185
-        },
-        {
-          "ticker": "KO",
-          "shares": 102.843859
-        },
-        {
-          "ticker": "LMT",
-          "shares": 15.541349
-        },
-        {
-          "ticker": "LVS",
-          "shares": 265.754053
-        },
-        {
-          "ticker": "MAR",
-          "shares": 24.225152
-        },
-        {
-          "ticker": "ROST",
-          "shares": 40.53837
-        },
-        {
-          "ticker": "SOLV",
-          "shares": 111.258141
-        },
-        {
-          "ticker": "TKO",
-          "shares": 55.181462
-        },
-        {
-          "ticker": "WMT",
-          "shares": 79.670685
-        },
-        {
-          "ticker": "WRB",
-          "shares": 129.659929
-        }
-      ],
-      "activity_state": "active",
-      "activity_label": "10 posiciones abiertas",
-      "activity_tickers": [
-        "ESS",
-        "KO",
-        "LMT",
-        "LVS",
-        "MAR",
-        "ROST",
-        "SOLV",
-        "TKO",
-        "WMT",
-        "WRB"
-      ],
-      "open_positions_count": 10,
+      "positions": [],
+      "activity_state": "cash",
+      "activity_label": "Sin compras · en efectivo",
+      "activity_tickers": [],
+      "open_positions_count": 0,
       "pending_orders_count": 0,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 15,
-      "annualized_volatility_pct": 13.400666,
+      "risk_observations": 16,
+      "annualized_volatility_pct": 12.961422,
       "max_drawdown_pct": -2.28747,
-      "sharpe_0rf": 1.265469
+      "sharpe_0rf": 0.955138
     },
     {
       "id": "weekly_legacy_weekly_ml_lgbm_direction_2026",
@@ -2154,11 +2104,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-29",
+      "last_session": "2026-10-30",
       "initial_capital": 100000.0,
-      "last_equity": 98672.97329026941,
-      "return_pct": -1.327027,
-      "day_return_pct": -1.282568,
+      "last_equity": 93086.44604935743,
+      "return_pct": -6.913554,
+      "day_return_pct": -5.661659,
       "currency": "USD",
       "equity_history": [
         {
@@ -2220,75 +2170,27 @@
         {
           "date": "2026-10-29",
           "nav": 98672.97329026941
+        },
+        {
+          "date": "2026-10-30",
+          "nav": 93086.44604935743
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
-      "positions": [
-        {
-          "ticker": "AKAM",
-          "shares": 95.077244
-        },
-        {
-          "ticker": "DELL",
-          "shares": 19.050119
-        },
-        {
-          "ticker": "GLW",
-          "shares": 71.409226
-        },
-        {
-          "ticker": "HPE",
-          "shares": 155.210862
-        },
-        {
-          "ticker": "MRNA",
-          "shares": 47.517257
-        },
-        {
-          "ticker": "MU",
-          "shares": 9.980183
-        },
-        {
-          "ticker": "STX",
-          "shares": 14.04692
-        },
-        {
-          "ticker": "TER",
-          "shares": 28.254274
-        },
-        {
-          "ticker": "VST",
-          "shares": 63.031697
-        },
-        {
-          "ticker": "WDC",
-          "shares": 25.647354
-        }
-      ],
-      "activity_state": "active",
-      "activity_label": "10 posiciones abiertas",
-      "activity_tickers": [
-        "AKAM",
-        "DELL",
-        "GLW",
-        "HPE",
-        "MRNA",
-        "MU",
-        "STX",
-        "TER",
-        "VST",
-        "WDC"
-      ],
-      "open_positions_count": 10,
+      "positions": [],
+      "activity_state": "cash",
+      "activity_label": "Sin compras · en efectivo",
+      "activity_tickers": [],
+      "open_positions_count": 0,
       "pending_orders_count": 0,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 15,
-      "annualized_volatility_pct": 40.796422,
-      "max_drawdown_pct": -7.09836,
-      "sharpe_0rf": -0.395231
+      "risk_observations": 16,
+      "annualized_volatility_pct": 45.517871,
+      "max_drawdown_pct": -7.623984,
+      "sharpe_0rf": -2.420257
     },
     {
       "id": "weekly_legacy_weekly_ml_lgbm_ranker_2026",
@@ -2356,11 +2258,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-29",
+      "last_session": "2026-10-30",
       "initial_capital": 100000.0,
-      "last_equity": 91522.66717195719,
-      "return_pct": -8.477333,
-      "day_return_pct": 0.09323,
+      "last_equity": 88740.2225692813,
+      "return_pct": -11.259777,
+      "day_return_pct": -3.04017,
       "currency": "USD",
       "equity_history": [
         {
@@ -2422,75 +2324,27 @@
         {
           "date": "2026-10-29",
           "nav": 91522.66717195719
+        },
+        {
+          "date": "2026-10-30",
+          "nav": 88740.2225692813
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
-      "positions": [
-        {
-          "ticker": "APH",
-          "shares": 115.03239
-        },
-        {
-          "ticker": "AXON",
-          "shares": 20.240374
-        },
-        {
-          "ticker": "CEG",
-          "shares": 33.736612
-        },
-        {
-          "ticker": "GDDY",
-          "shares": 76.241325
-        },
-        {
-          "ticker": "HPQ",
-          "shares": 253.738892
-        },
-        {
-          "ticker": "LUV",
-          "shares": 204.16398
-        },
-        {
-          "ticker": "NRG",
-          "shares": 92.966938
-        },
-        {
-          "ticker": "QCOM",
-          "shares": 48.482303
-        },
-        {
-          "ticker": "TER",
-          "shares": 27.260404
-        },
-        {
-          "ticker": "VST",
-          "shares": 60.814498
-        }
-      ],
-      "activity_state": "active",
-      "activity_label": "10 posiciones abiertas",
-      "activity_tickers": [
-        "APH",
-        "AXON",
-        "CEG",
-        "GDDY",
-        "HPQ",
-        "LUV",
-        "NRG",
-        "QCOM",
-        "TER",
-        "VST"
-      ],
-      "open_positions_count": 10,
+      "positions": [],
+      "activity_state": "cash",
+      "activity_label": "Sin compras · en efectivo",
+      "activity_tickers": [],
+      "open_positions_count": 0,
       "pending_orders_count": 0,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 15,
-      "annualized_volatility_pct": 35.682194,
-      "max_drawdown_pct": -11.094487,
-      "sharpe_0rf": -4.285052
+      "risk_observations": 16,
+      "annualized_volatility_pct": 35.801632,
+      "max_drawdown_pct": -11.259777,
+      "sharpe_0rf": -5.412647
     },
     {
       "id": "weekly_legacy_weekly_ml_mlp_2026",
@@ -2558,11 +2412,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-29",
+      "last_session": "2026-10-30",
       "initial_capital": 100000.0,
-      "last_equity": 97212.61596537598,
-      "return_pct": -2.787384,
-      "day_return_pct": 3.665262,
+      "last_equity": 96515.1167903347,
+      "return_pct": -3.484883,
+      "day_return_pct": -0.717499,
       "currency": "USD",
       "equity_history": [
         {
@@ -2624,75 +2478,27 @@
         {
           "date": "2026-10-29",
           "nav": 97212.61596537598
+        },
+        {
+          "date": "2026-10-30",
+          "nav": 96515.1167903347
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
-      "positions": [
-        {
-          "ticker": "AXON",
-          "shares": 20.794304
-        },
-        {
-          "ticker": "BLDR",
-          "shares": 155.644782
-        },
-        {
-          "ticker": "DECK",
-          "shares": 107.724779
-        },
-        {
-          "ticker": "F",
-          "shares": 757.596317
-        },
-        {
-          "ticker": "KLAC",
-          "shares": 59.541892
-        },
-        {
-          "ticker": "LKQ",
-          "shares": 497.922452
-        },
-        {
-          "ticker": "MGM",
-          "shares": 311.069588
-        },
-        {
-          "ticker": "NRG",
-          "shares": 95.511221
-        },
-        {
-          "ticker": "SMCI",
-          "shares": 266.201064
-        },
-        {
-          "ticker": "WYNN",
-          "shares": 120.44424
-        }
-      ],
-      "activity_state": "active",
-      "activity_label": "10 posiciones abiertas",
-      "activity_tickers": [
-        "AXON",
-        "BLDR",
-        "DECK",
-        "F",
-        "KLAC",
-        "LKQ",
-        "MGM",
-        "NRG",
-        "SMCI",
-        "WYNN"
-      ],
-      "open_positions_count": 10,
+      "positions": [],
+      "activity_state": "cash",
+      "activity_label": "Sin compras · en efectivo",
+      "activity_tickers": [],
+      "open_positions_count": 0,
       "pending_orders_count": 0,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 15,
-      "annualized_volatility_pct": 33.754058,
+      "risk_observations": 16,
+      "annualized_volatility_pct": 32.600588,
       "max_drawdown_pct": -8.534402,
-      "sharpe_0rf": -1.348198
+      "sharpe_0rf": -1.672587
     },
     {
       "id": "weekly_legacy_weekly_ml_lstm_2026",
@@ -2760,11 +2566,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-29",
+      "last_session": "2026-10-30",
       "initial_capital": 100000.0,
-      "last_equity": 88305.38650965803,
-      "return_pct": -11.694613,
-      "day_return_pct": 1.055376,
+      "last_equity": 89683.27426368505,
+      "return_pct": -10.316726,
+      "day_return_pct": 1.560367,
       "currency": "USD",
       "equity_history": [
         {
@@ -2826,75 +2632,27 @@
         {
           "date": "2026-10-29",
           "nav": 88305.38650965803
+        },
+        {
+          "date": "2026-10-30",
+          "nav": 89683.27426368505
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
-      "positions": [
-        {
-          "ticker": "EFX",
-          "shares": 46.751537
-        },
-        {
-          "ticker": "HAS",
-          "shares": 70.674789
-        },
-        {
-          "ticker": "LKQ",
-          "shares": 472.777543
-        },
-        {
-          "ticker": "MPC",
-          "shares": 18.273194
-        },
-        {
-          "ticker": "MRNA",
-          "shares": 44.721925
-        },
-        {
-          "ticker": "PAYC",
-          "shares": 30.440683
-        },
-        {
-          "ticker": "POOL",
-          "shares": 42.854175
-        },
-        {
-          "ticker": "ROP",
-          "shares": 18.895284
-        },
-        {
-          "ticker": "VLO",
-          "shares": 19.996906
-        },
-        {
-          "ticker": "WDAY",
-          "shares": 39.756038
-        }
-      ],
-      "activity_state": "active",
-      "activity_label": "10 posiciones abiertas",
-      "activity_tickers": [
-        "EFX",
-        "HAS",
-        "LKQ",
-        "MPC",
-        "MRNA",
-        "PAYC",
-        "POOL",
-        "ROP",
-        "VLO",
-        "WDAY"
-      ],
-      "open_positions_count": 10,
+      "positions": [],
+      "activity_state": "cash",
+      "activity_label": "Sin compras · en efectivo",
+      "activity_tickers": [],
+      "open_positions_count": 0,
       "pending_orders_count": 0,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 15,
-      "annualized_volatility_pct": 37.181032,
+      "risk_observations": 16,
+      "annualized_volatility_pct": 37.175042,
       "max_drawdown_pct": -13.214943,
-      "sharpe_0rf": -5.818959
+      "sharpe_0rf": -4.726749
     },
     {
       "id": "weekly_legacy_weekly_ml_arima_2026",
@@ -2962,11 +2720,11 @@
       "status": "demo_con_diario",
       "daily_mode": true,
       "first_session": "2026-10-09",
-      "last_session": "2026-10-29",
+      "last_session": "2026-10-30",
       "initial_capital": 100000.0,
-      "last_equity": 86046.8691057231,
-      "return_pct": -13.953131,
-      "day_return_pct": -0.210267,
+      "last_equity": 83727.75526088435,
+      "return_pct": -16.272245,
+      "day_return_pct": -2.695175,
       "currency": "USD",
       "equity_history": [
         {
@@ -3028,75 +2786,27 @@
         {
           "date": "2026-10-29",
           "nav": 86046.8691057231
+        },
+        {
+          "date": "2026-10-30",
+          "nav": 83727.75526088435
         }
       ],
       "note": "Campaña diaria prospectiva desde la señal del 09/10/2026. Fills simulados en la siguiente apertura, NAV al cierre y cierre semanal. No hereda el NAV de la campaña de liquidación diferida ni reconstruye compras pasadas.",
-      "positions": [
-        {
-          "ticker": "AXON",
-          "shares": 19.289921
-        },
-        {
-          "ticker": "CEG",
-          "shares": 32.152399
-        },
-        {
-          "ticker": "DDOG",
-          "shares": 30.07324
-        },
-        {
-          "ticker": "GDDY",
-          "shares": 72.661164
-        },
-        {
-          "ticker": "HPQ",
-          "shares": 241.823751
-        },
-        {
-          "ticker": "IBM",
-          "shares": 32.276939
-        },
-        {
-          "ticker": "LUV",
-          "shares": 194.576791
-        },
-        {
-          "ticker": "NTAP",
-          "shares": 37.517288
-        },
-        {
-          "ticker": "PTC",
-          "shares": 42.094784
-        },
-        {
-          "ticker": "VST",
-          "shares": 57.958754
-        }
-      ],
-      "activity_state": "active",
-      "activity_label": "10 posiciones abiertas",
-      "activity_tickers": [
-        "AXON",
-        "CEG",
-        "DDOG",
-        "GDDY",
-        "HPQ",
-        "IBM",
-        "LUV",
-        "NTAP",
-        "PTC",
-        "VST"
-      ],
-      "open_positions_count": 10,
+      "positions": [],
+      "activity_state": "cash",
+      "activity_label": "Sin compras · en efectivo",
+      "activity_tickers": [],
+      "open_positions_count": 0,
       "pending_orders_count": 0,
       "comparison_eligible": true,
       "comparison_universe_id": "SP500_2026-09-29_503",
       "comparison_universe_symbols": 503,
       "comparison_exclusion_reason": null,
-      "risk_observations": 15,
-      "annualized_volatility_pct": 33.494938,
-      "max_drawdown_pct": -13.953131,
-      "sharpe_0rf": -7.874906
+      "risk_observations": 16,
+      "annualized_volatility_pct": 32.976168,
+      "max_drawdown_pct": -16.272245,
+      "sharpe_0rf": -8.838619
     },
     {
       "id": "weekly_legacy_weekly_ml_ensemble_2026",
