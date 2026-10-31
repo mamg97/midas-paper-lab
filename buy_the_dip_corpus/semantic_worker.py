@@ -5,7 +5,7 @@ provenance. YouTube remains the canonical source identity; the official podcast
 feed is only a transport fallback for matched long-form episodes.
 """
 from __future__ import annotations
-import argparse, datetime as dt, json, os, re, tempfile, urllib.request
+import argparse, datetime as dt, json, os, re, tempfile, urllib.request, urllib.error
 from pathlib import Path
 
 PRIORITY={"methodology":0,"portfolio_update":1,"sector_theme":2,"company_or_theme":3,
@@ -35,17 +35,47 @@ def rss_by_video(rss):
             out.setdefault(vid,row)
     return out
 
-def choose_next(queue,rss,reviewed):
+def choose_next(queue,rss,reviewed,blocked=()):
     mirror=rss_by_video(rss); candidates=[]
     for row in queue.get("videos") or []:
         vid=row.get("video_id")
-        if not vid or vid in reviewed or vid not in mirror: continue
+        if not vid or vid in reviewed or vid in blocked or vid not in mirror: continue
         candidates.append((PRIORITY.get(row.get("category"),99),
                            -float(row.get("methodology_relevance_score") or 0),
                            vid,row,mirror[vid]))
     if not candidates: return None
     *_,q,r=sorted(candidates,key=lambda x:x[:3])[0]
     return {"queue":q,"rss":r}
+
+def unavailable_ids(path, now=None):
+    """Only exclude unavailable transports during bounded retry cooldown."""
+    path=Path(path)
+    if not path.exists(): return set()
+    state=read_json(path)
+    if state.get("schema_version")!=1 or not isinstance(state.get("items"),dict):
+        raise ValueError("Invalid unavailable-audio state")
+    now=now or dt.datetime.now(dt.timezone.utc)
+    result=set()
+    for vid,entry in state["items"].items():
+        if not isinstance(entry,dict): raise ValueError("Invalid unavailable entry")
+        retry=dt.datetime.fromisoformat(entry["retry_after_utc"].replace("Z","+00:00"))
+        if retry.utcoffset()!=dt.timedelta(0): raise ValueError("Invalid UTC cooldown")
+        if retry>now: result.add(vid)
+    return result
+
+def record_missing_transport(path,vid,status,now=None):
+    """Persist a 48-hour retry guard, never audio, urls, or fake transcription."""
+    if status not in (404,410): raise ValueError("Only missing audio may be quarantined")
+    now=now or dt.datetime.now(dt.timezone.utc)
+    path=Path(path)
+    state=read_json(path) if path.is_file() else {"schema_version":1,"items":{}}
+    if state.get("schema_version")!=1 or not isinstance(state.get("items"),dict):
+        raise ValueError("Invalid unavailable-audio state")
+    later=(now+dt.timedelta(hours=48)).isoformat()
+    state["items"][vid]={"http_status":status,"detected_at_utc":now.isoformat(),
+                         "retry_after_utc":later}
+    atomic_json(path,state)
+    return later
 
 def download(url,destination,max_bytes=300_000_000):
     req=urllib.request.Request(url,headers={"User-Agent":"MIDAS-BuyTheDip/1.0"})
@@ -184,16 +214,30 @@ def update_progress(state_dir,queue,rss):
 
 def run(queue_path,rss_path,state_dir,asr_model=ASR_MODEL):
     queue=read_json(queue_path); rss=read_json(rss_path); state_dir=Path(state_dir)
-    selected=choose_next(queue,rss,reviewed_ids(state_dir/"reviews"))
+    unavailable=state_dir/"unavailable_audio.json"
+    selected=choose_next(queue,rss,reviewed_ids(state_dir/"reviews"),
+                         unavailable_ids(unavailable))
     if selected is None:
-        return {"status":"nothing_pending","progress":update_progress(state_dir,queue,rss)}
+        return {"status":"nothing_pending_or_waiting_for_transport",
+                "progress":update_progress(state_dir,queue,rss)}
     q=selected["queue"]; ep=selected["rss"]; vid=q["video_id"]
     meta={"video_id":vid,"youtube_url":q.get("url"),"title":q.get("title"),
           "category":q.get("category"),"guest_likely":bool(q.get("guest_likely")),
           "podcast_guid":ep.get("guid"),"published_date":ep.get("published_date"),
           "source":"official_podcast_mirror","match_score":ep.get("match_score")}
     with tempfile.TemporaryDirectory(prefix="btd-analysis-") as tmp:
-        audio=Path(tmp)/"episode.mp3"; audio_bytes=download(ep["audio_url"],audio)
+        audio=Path(tmp)/"episode.mp3"
+        try:
+            audio_bytes=download(ep["audio_url"],audio)
+        except urllib.error.HTTPError as error:
+            if error.code not in (404,410):
+                raise
+            retry=record_missing_transport(unavailable,vid,error.code)
+            # This is a transport failure, NOT a reviewed episode or an
+            # inferred investment rule. Next run can select another item.
+            return {"status":"audio_transport_unavailable","video_id":vid,
+                    "http_status":error.code,"retry_after_utc":retry,
+                    "progress":update_progress(state_dir,queue,rss)}
         transcript,asr=transcribe(audio,asr_model)
         llm=load_llm(os.environ.get("BTD_LLM_REPO",LLM_REPO),
                      os.environ.get("BTD_LLM_FILE",LLM_FILE))
