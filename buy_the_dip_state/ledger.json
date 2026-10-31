@@ -1,7 +1,7 @@
 {
   "benchmark_first_close": 763.989990234375,
-  "benchmark_last_close": 769.3599853515625,
-  "cash": 5000.000708983751,
+  "benchmark_last_close": 755.719970703125,
+  "cash": 5082.175454763751,
   "config_hash": "125dabd8eaf1ea4c31f2b26c78d7bd80cb7b3499de37442f9ac881a9b20d1f2f",
   "currency": "USD",
   "equity": [
@@ -151,6 +151,13 @@
       "date": "2026-10-29",
       "nav": 104419.94860520308,
       "positions": 10
+    },
+    {
+      "benchmark_close": 755.719970703125,
+      "cash": 5082.175454763751,
+      "date": "2026-10-30",
+      "nav": 105159.52883115194,
+      "positions": 10
     }
   ],
   "events": [
@@ -269,12 +276,27 @@
       "targets": 10,
       "ticker": null,
       "type": "rebalance_filled"
+    },
+    {
+      "amount": 82.17474578000001,
+      "date": "2026-10-30",
+      "per_share": 0.38,
+      "ticker": "AOS",
+      "type": "dividend"
+    },
+    {
+      "date": "2026-10-30",
+      "expected_fill_session": "2026-11-02",
+      "invest_fraction": 0.95,
+      "targets": 10,
+      "ticker": null,
+      "type": "signal"
     }
   ],
   "first_session": "2026-10-01",
   "first_signal_session": "2026-10-01",
-  "last_session": "2026-10-29",
-  "last_signal_session": "2026-10-01",
+  "last_session": "2026-10-30",
+  "last_signal_session": "2026-10-30",
   "market_hashes": {
     "2026-10-01": "93e8a01065ee5b97ed93450b123f2b28d1ce61e8cd6800fb4602afa8c1fe0487",
     "2026-10-02": "236533ebd1426d2a218fd8f8e1f5308d94f4d9b4a3560585bec28b24599cad19",
@@ -296,10 +318,38 @@
     "2026-10-26": "0be928459f5d8de5473ca639e45739636cbe829ae7a589f4f976c81516e9c19a",
     "2026-10-27": "79fb87b7b44a36662e52d3a77e6775d4726228f819762f9bf50f68755d1979fb",
     "2026-10-28": "c7238c6a9c2251327fae027d9b5d8432216509cc1623006707e18e3153d05844",
-    "2026-10-29": "5d9cb1fd01961603e5237463165b2c0c8468032c85da2575c5150f96f7061f62"
+    "2026-10-29": "5d9cb1fd01961603e5237463165b2c0c8468032c85da2575c5150f96f7061f62",
+    "2026-10-30": "833cefcaa9fd4e0150753bb6308941c3bcdd24a6932eb297e2e65e73610d123f"
   },
-  "nav": 104419.94860520308,
-  "pending": null,
+  "nav": 105159.52883115194,
+  "pending": {
+    "expected_fill_session": "2026-11-02",
+    "sectors": {
+      "ALGN": "Health Care",
+      "AOS": "Industrials",
+      "CTSH": "Information Technology",
+      "CTVA": "Materials",
+      "DECK": "Consumer Discretionary",
+      "ELV": "Health Care",
+      "ENPH": "Information Technology",
+      "EPAM": "Information Technology",
+      "PAYC": "Industrials",
+      "PYPL": "Financials"
+    },
+    "signal_date": "2026-10-30",
+    "target_weights": {
+      "ALGN": 0.09397274044670055,
+      "AOS": 0.13567211232302134,
+      "CTSH": 0.09186512908015662,
+      "CTVA": 0.1101895617114637,
+      "DECK": 0.09119434667377063,
+      "ELV": 0.0941038247162481,
+      "ENPH": 0.07359989157676194,
+      "EPAM": 0.09696646679279733,
+      "PAYC": 0.07537807116136874,
+      "PYPL": 0.08705785551771102
+    }
+  },
   "positions": {
     "ALGN": {
       "entry_date": "2026-10-02",
@@ -523,6 +573,167 @@
         "EPAM": 0.09149553901586022,
         "PAYC": 0.08941077737628751,
         "PYPL": 0.08938232049217298
+      }
+    },
+    {
+      "coverage": {
+        "entry_eligible": 42,
+        "financials_scored": 54,
+        "frozen_universe": 503,
+        "fundamental_failures": 138,
+        "fundamental_usable": 348,
+        "price_failures": 17,
+        "price_usable": 486,
+        "scored": 348
+      },
+      "date": "2026-10-30",
+      "excluded_count": 155,
+      "exit_reasons": {},
+      "expected_fill_session": "2026-11-02",
+      "invest_fraction": 0.95,
+      "selected": [
+        {
+          "capital_allocation_score": 79.8077,
+          "catalyst_votes": 4,
+          "composite_score": 79.8822,
+          "dislocation_score": 81.8269,
+          "latest_statement_period": "2025-12-31",
+          "quality_score": 70.5889,
+          "sector": "Industrials",
+          "ticker": "AOS",
+          "valuation_score": 84.7596,
+          "volatility_1y": 0.274529,
+          "weight": 0.13567211
+        },
+        {
+          "capital_allocation_score": 85.5102,
+          "catalyst_votes": 4,
+          "composite_score": 79.253,
+          "dislocation_score": 91.2245,
+          "latest_statement_period": "2025-12-31",
+          "quality_score": 43.2773,
+          "sector": "Information Technology",
+          "ticker": "EPAM",
+          "valuation_score": 91.7535,
+          "volatility_1y": 0.5207,
+          "weight": 0.09696647
+        },
+        {
+          "capital_allocation_score": 78.9796,
+          "catalyst_votes": 2,
+          "composite_score": 77.5359,
+          "dislocation_score": 98.9796,
+          "latest_statement_period": "2025-12-31",
+          "quality_score": 57.4426,
+          "sector": "Information Technology",
+          "ticker": "ENPH",
+          "valuation_score": 94.6817,
+          "volatility_1y": 0.82799,
+          "weight": 0.07359989
+        },
+        {
+          "capital_allocation_score": 85.4762,
+          "catalyst_votes": 3,
+          "composite_score": 74.3452,
+          "dislocation_score": 41.6667,
+          "latest_statement_period": "2025-12-31",
+          "quality_score": 74.5238,
+          "sector": "Materials",
+          "ticker": "CTVA",
+          "valuation_score": 97.619,
+          "volatility_1y": 0.312248,
+          "weight": 0.11018956
+        },
+        {
+          "capital_allocation_score": 77.3469,
+          "catalyst_votes": 4,
+          "composite_score": 73.6815,
+          "dislocation_score": 64.7959,
+          "latest_statement_period": "2025-12-31",
+          "quality_score": 53.2283,
+          "sector": "Information Technology",
+          "ticker": "CTSH",
+          "valuation_score": 88.2487,
+          "volatility_1y": 0.433412,
+          "weight": 0.09186513
+        },
+        {
+          "capital_allocation_score": 64.5238,
+          "catalyst_votes": 2,
+          "composite_score": 72.7103,
+          "dislocation_score": 96.6667,
+          "latest_statement_period": "2025-12-31",
+          "quality_score": 63.4174,
+          "sector": "Health Care",
+          "ticker": "ALGN",
+          "valuation_score": 83.3829,
+          "volatility_1y": 0.392778,
+          "weight": 0.09397274
+        },
+        {
+          "capital_allocation_score": 72.3611,
+          "catalyst_votes": 2,
+          "composite_score": 72.5286,
+          "dislocation_score": 79.3056,
+          "latest_statement_period": "2026-03-31",
+          "quality_score": 85.2275,
+          "sector": "Consumer Discretionary",
+          "ticker": "DECK",
+          "valuation_score": 75.8929,
+          "volatility_1y": 0.412924,
+          "weight": 0.09119435
+        },
+        {
+          "capital_allocation_score": 67.2222,
+          "catalyst_votes": 4,
+          "composite_score": 71.2959,
+          "dislocation_score": 85.9259,
+          "latest_statement_period": "2025-12-31",
+          "quality_score": 56.0683,
+          "sector": "Financials",
+          "ticker": "PYPL",
+          "valuation_score": 69.3789,
+          "volatility_1y": 0.423068,
+          "weight": 0.08705786
+        },
+        {
+          "capital_allocation_score": 75.4762,
+          "catalyst_votes": 4,
+          "composite_score": 70.7807,
+          "dislocation_score": 78.9286,
+          "latest_statement_period": "2025-12-31",
+          "quality_score": 45.0495,
+          "sector": "Health Care",
+          "ticker": "ELV",
+          "valuation_score": 75.5456,
+          "volatility_1y": 0.351734,
+          "weight": 0.09410382
+        },
+        {
+          "capital_allocation_score": 72.1154,
+          "catalyst_votes": 5,
+          "composite_score": 68.3101,
+          "dislocation_score": 58.0769,
+          "latest_statement_period": "2025-12-31",
+          "quality_score": 82.3438,
+          "sector": "Industrials",
+          "ticker": "PAYC",
+          "valuation_score": 48.0288,
+          "volatility_1y": 0.475574,
+          "weight": 0.07537807
+        }
+      ],
+      "target_weights": {
+        "ALGN": 0.09397274044670055,
+        "AOS": 0.13567211232302134,
+        "CTSH": 0.09186512908015662,
+        "CTVA": 0.1101895617114637,
+        "DECK": 0.09119434667377063,
+        "ELV": 0.0941038247162481,
+        "ENPH": 0.07359989157676194,
+        "EPAM": 0.09696646679279733,
+        "PAYC": 0.07537807116136874,
+        "PYPL": 0.08705785551771102
       }
     }
   ],
