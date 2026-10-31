@@ -3,17 +3,17 @@
   "source_name": "Buy The Dip",
   "channel_url": "https://www.youtube.com/@Buy_The_Dip",
   "channel_id": "UCS5I8A7UAu43QgFxxu8VRbQ",
-  "generated_at_utc": "2026-10-26T11:19:31.295005+00:00",
+  "generated_at_utc": "2026-10-31T11:39:45.427567+00:00",
   "config_version": "2026-10-01-buy-the-dip-corpus-v1",
-  "manifest_count": 304,
+  "manifest_count": 305,
   "by_format": {
-    "long": 275,
+    "long": 276,
     "live": 27,
     "short": 2
   },
   "caption_coverage": {
     "available": 0,
-    "missing": 304,
+    "missing": 305,
     "pct": 0.0
   },
   "caption_transport": {
@@ -32,12 +32,12 @@
     }
   },
   "by_category": {
-    "portfolio_update": 48,
-    "company_or_theme": 152,
-    "macro_market": 44,
-    "sector_theme": 36,
-    "methodology": 6,
-    "guest_interview": 16,
+    "portfolio_update": 46,
+    "company_or_theme": 171,
+    "macro_market": 38,
+    "sector_theme": 28,
+    "methodology": 5,
+    "guest_interview": 15,
     "short": 2
   },
   "lexicon_aggregate": {
@@ -146,15 +146,6 @@
       "url": "https://www.youtube.com/watch?v=NjMXlb6pPDc"
     },
     {
-      "video_id": "ckJ0cRRc7DE",
-      "title": "El Lado Oscuro de las Inversiones: Nuestros Fracasos | BUY THE DIP PODCAST",
-      "published_date": null,
-      "category": "methodology",
-      "guest_likely": false,
-      "score": 12.0,
-      "url": "https://www.youtube.com/watch?v=ckJ0cRRc7DE"
-    },
-    {
       "video_id": "-EL1QLkTi_A",
       "title": "Nuestra Cartera de INVERSIÓN en AGOSTO | BUY THE DIP PODCAST",
       "published_date": null,
@@ -243,24 +234,6 @@
       "guest_likely": false,
       "score": 8.0,
       "url": "https://www.youtube.com/watch?v=6hmNp6N8Gdo"
-    },
-    {
-      "video_id": "ARpaMofMpx0",
-      "title": "Nuestra CARTERA de INVERSIÓN en AGOSTO | BUY THE DIP PODCAST",
-      "published_date": null,
-      "category": "portfolio_update",
-      "guest_likely": false,
-      "score": 8.0,
-      "url": "https://www.youtube.com/watch?v=ARpaMofMpx0"
-    },
-    {
-      "video_id": "Ac1ZqjTbEx0",
-      "title": "Nuestra CARTERA de INVERSIÓN a MITAD DE AÑO | BUY THE DIP PODCAST",
-      "published_date": null,
-      "category": "portfolio_update",
-      "guest_likely": false,
-      "score": 8.0,
-      "url": "https://www.youtube.com/watch?v=Ac1ZqjTbEx0"
     },
     {
       "video_id": "FdAm8oWiw6k",
@@ -459,6 +432,33 @@
       "guest_likely": false,
       "score": 8.0,
       "url": "https://www.youtube.com/watch?v=etWzK0Bb7qQ"
+    },
+    {
+      "video_id": "i5EfibJeKz8",
+      "title": "Nuestra Cartera de INVERSIÓN en Marzo | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=i5EfibJeKz8"
+    },
+    {
+      "video_id": "ijwCQJkwDog",
+      "title": "Nuestra CARTERA de INVERSIÓN en OCTUBRE-NOVIEMBRE | BUY THE DIP PODCAST",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=ijwCQJkwDog"
+    },
+    {
+      "video_id": "jOSRF2SlWC4",
+      "title": "BUY THE DIP PODCAST: EPISODIO 26 NUESTRA CARTERA DE NOVIEMBRE 2020",
+      "published_date": null,
+      "category": "portfolio_update",
+      "guest_likely": false,
+      "score": 8.0,
+      "url": "https://www.youtube.com/watch?v=jOSRF2SlWC4"
     }
   ],
   "methodology_note": "Corpus screening only. No trading rule is considered canonical until semantic review distinguishes host process from guest opinions and recurring themes."
