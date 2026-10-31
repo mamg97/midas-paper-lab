@@ -1,0 +1,44 @@
+{
+  "actual_tickers": 488,
+  "coverage_pct": 100.0,
+  "evaluated_at_session": "2026-10-30",
+  "expected_tickers": 488,
+  "forecast_asof": "2026-10-23",
+  "metrics": {
+    "arima_return": {
+      "direction_accuracy": 0.4979508196721312,
+      "mae": 0.03931346534079953,
+      "rank_ic": -0.12742767243513908
+    },
+    "ensemble_consensus": {
+      "direction_accuracy": 0.5594262295081968,
+      "mae": 0.03741675722334158,
+      "rank_ic": -0.024999925137890247
+    },
+    "lgbm_direction": {
+      "accuracy": 0.5409836065573771,
+      "brier": 0.24629235908338468,
+      "rank_ic": -0.05678217998649792
+    },
+    "lgbm_ranker": {
+      "rank_ic": 0.027042856927183376
+    },
+    "lgbm_return": {
+      "direction_accuracy": 0.6454918032786885,
+      "mae": 0.03737819209517756,
+      "rank_ic": 3.436120867102063e-16
+    },
+    "lstm_return": {
+      "direction_accuracy": 0.6413934426229508,
+      "mae": 0.03663117276588054,
+      "rank_ic": 0.0403723193455262
+    },
+    "mlp_return": {
+      "direction_accuracy": 0.4733606557377049,
+      "mae": 0.04288407243100458,
+      "rank_ic": 0.0608261753184115
+    }
+  },
+  "missing_tickers": {},
+  "schema_version": 1
+}
