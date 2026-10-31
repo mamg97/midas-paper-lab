@@ -1,6 +1,6 @@
 # MIDAS: todas las ideas en paralelo
 
-Actualizado: 2026-10-31T10:23:51.101213+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
+Actualizado: 2026-10-31T10:25:24.952844+00:00. El tablero distingue resultados observados de ideas aún no ejecutadas.
 
 La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. Las campañas diarias, TFM, Weekly ML, TFG corregido, Capital Cycle, Buy The Dip y el diario genético antiguo **no forman una clasificación común** si sus fechas, divisas o reglas difieren.
 
@@ -45,7 +45,7 @@ La comparación principal sigue **rentabilidad acumulada + riesgo realizado**. L
 | TFG corregido 2026 · técnico + AHP + MAD | TFG 2021 · arquitectura portada y corregida para paper 2026 | demo_con_diario | 15 compras para próxima apertura | 2026-10-02 | 2026-10-30 | 0.00 % | 0.00 % | — | 0.00 % | — |
 | Capital Cycle Inflection · underinvestment + calidad + giro | MIDAS 2026 · estrategia cíclica derivada del marco Capital Cycle | demo_con_diario | 12 posiciones · 4 órdenes pendientes | 2026-09-30 | 2026-10-30 | -0.40 % | 6.40 % | 11.11 % | -1.33 % | 6.46 |
 | Buy The Dip corpus v0 · deep value + special situations | MIDAS 2026 · Buy The Dip corpus v0 · deep value + special situations | demo_con_diario | 10 posiciones · 4 órdenes pendientes | 2026-10-01 | 2026-10-30 | 0.71 % | 5.16 % | 21.54 % | -5.76 % | 2.91 |
-| TimesFM 2.5 · zero-shot semanal · EUR | MIDAS 2026 · TimesFM 2.5 5 sesiones · S&P 500 503 símbolos · EUR | demo_con_diario | Sin compras · en efectivo | 2026-10-16 | 2026-10-30 | -0.11 % | 4.26 % | 17.55 % | -1.34 % | 6.08 |
+| TimesFM 2.5 · zero-shot semanal · EUR | MIDAS 2026 · TimesFM 2.5 5 sesiones · S&P 500 503 símbolos · EUR | demo_con_diario | 8 compras paper para próxima apertura | 2026-10-16 | 2026-10-30 | -0.11 % | 4.26 % | 17.55 % | -1.34 % | 6.08 |
 | Referencia SPY · EUR · inicio TimesFM | Referencia SPY buy & hold convertida a EUR · mismas fechas | demo_con_diario | 1 posición abierta | 2026-10-16 | 2026-10-30 | -1.61 % | -1.10 % | 12.11 % | -2.10 % | -2.26 |
 | TimesFM 2.5 · diario · S&P 500 · EUR | MIDAS 2026 · TimesFM 2.5 1 sesión · S&P 500 503 símbolos · EUR | demo_con_diario | 1 compra paper para próxima apertura | 2026-10-12 | 2026-10-30 | -0.19 % | 0.61 % | 4.75 % | -0.80 % | 2.33 |
 | Referencia SPY · EUR · inicio TimesFM diario | Referencia SPY en EUR, misma fecha y costes que TimesFM diario | demo_con_diario | 1 posición abierta | 2026-10-12 | 2026-10-30 | -1.61 % | -2.19 % | 12.58 % | -2.45 % | -3.11 |
