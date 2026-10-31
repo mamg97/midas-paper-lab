@@ -67,11 +67,10 @@ class HistoricalHeldRecoveryTests(unittest.TestCase):
         effective = load_effective(self.root, day)
         self.assertEqual(effective["bars"]["HUBB"]["close"], 435)
         self.assertEqual(effective["revision_hashes"], [out["sha256"]])
-        self.assertEqual(recovery.recover_one(
-            self.root, day, ["HUBB"],
-            download=lambda *_a, **_k: (_ for _ in ()).throw(
-                AssertionError("No provider call when recovered"))["status"],
-            "already_complete")
+        def fail_download(*_args, **_kwargs):
+            raise AssertionError("No provider call when recovered")
+        retry = recovery.recover_one(self.root, day, ["HUBB"], download=fail_download)
+        self.assertEqual(retry["status"], "already_complete")
 
     def test_missing_vendor_data_no_revision(self):
         result = recovery.recover_one(
