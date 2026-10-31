@@ -1,0 +1,185 @@
+{
+  "coverage": {
+    "entry_eligible": 17,
+    "frozen_universe": 276,
+    "fundamental_failures": 2,
+    "fundamental_usable": 270,
+    "price_failures": 4,
+    "price_usable": 272,
+    "scored": 270
+  },
+  "excluded_count": 6,
+  "exit_reasons": {},
+  "expected_fill_session": "2026-11-02",
+  "sector_scores": {
+    "Consumer Discretionary": 66.6667,
+    "Energy": 45.8333,
+    "Industrials": 54.1667,
+    "Information Technology": 54.1667,
+    "Materials": 58.3333,
+    "Utilities": 20.8333
+  },
+  "sectors": {
+    "ADI": "Information Technology",
+    "CF": "Materials",
+    "EBAY": "Consumer Discretionary",
+    "EOG": "Energy",
+    "MHK": "Consumer Discretionary",
+    "NEM": "Materials",
+    "ON": "Information Technology",
+    "OXY": "Energy",
+    "PAYC": "Industrials",
+    "PAYX": "Industrials",
+    "QCOM": "Information Technology",
+    "SWKS": "Information Technology"
+  },
+  "selected": [
+    {
+      "capital_scarcity_score": 66.7907,
+      "composite_score": 72.016,
+      "inflection_votes": 3,
+      "latest_statement_period": "2025-09-30",
+      "quality_score": 63.9088,
+      "sector": "Information Technology",
+      "ticker": "SWKS",
+      "valuation_score": 85.2505,
+      "weight": 0.07916666666666666
+    },
+    {
+      "capital_scarcity_score": 44.7167,
+      "composite_score": 66.786,
+      "inflection_votes": 3,
+      "latest_statement_period": "2025-12-31",
+      "quality_score": 88.0769,
+      "sector": "Materials",
+      "ticker": "CF",
+      "valuation_score": 68.2692,
+      "weight": 0.07916666666666666
+    },
+    {
+      "capital_scarcity_score": 59.4369,
+      "composite_score": 65.5466,
+      "inflection_votes": 3,
+      "latest_statement_period": "2025-12-31",
+      "quality_score": 50.4048,
+      "sector": "Energy",
+      "ticker": "OXY",
+      "valuation_score": 91.1905,
+      "weight": 0.07916666666666666
+    },
+    {
+      "capital_scarcity_score": 42.9702,
+      "composite_score": 64.908,
+      "inflection_votes": 3,
+      "latest_statement_period": "2025-12-31",
+      "quality_score": 82.0238,
+      "sector": "Energy",
+      "ticker": "EOG",
+      "valuation_score": 73.0952,
+      "weight": 0.07916666666666666
+    },
+    {
+      "capital_scarcity_score": 62.7493,
+      "composite_score": 63.5,
+      "inflection_votes": 3,
+      "latest_statement_period": "2025-12-31",
+      "quality_score": 44.2037,
+      "sector": "Consumer Discretionary",
+      "ticker": "MHK",
+      "valuation_score": 80.0115,
+      "weight": 0.07916666666666666
+    },
+    {
+      "capital_scarcity_score": 68.3392,
+      "composite_score": 62.6511,
+      "inflection_votes": 1,
+      "latest_statement_period": "2025-09-30",
+      "quality_score": 61.3466,
+      "sector": "Information Technology",
+      "ticker": "QCOM",
+      "valuation_score": 67.7413,
+      "weight": 0.07916666666666666
+    },
+    {
+      "capital_scarcity_score": 77.6877,
+      "composite_score": 61.5766,
+      "inflection_votes": 1,
+      "latest_statement_period": "2025-12-31",
+      "quality_score": 41.0006,
+      "sector": "Information Technology",
+      "ticker": "ON",
+      "valuation_score": 73.2238,
+      "weight": 0.07916666666666666
+    },
+    {
+      "capital_scarcity_score": 50.6667,
+      "composite_score": 61.2968,
+      "inflection_votes": 1,
+      "latest_statement_period": "2025-12-31",
+      "quality_score": 92.1154,
+      "sector": "Materials",
+      "ticker": "NEM",
+      "valuation_score": 50.1923,
+      "weight": 0.07916666666666666
+    },
+    {
+      "capital_scarcity_score": 55.0793,
+      "composite_score": 61.1136,
+      "inflection_votes": 3,
+      "latest_statement_period": "2025-12-31",
+      "quality_score": 70.9768,
+      "sector": "Consumer Discretionary",
+      "ticker": "EBAY",
+      "valuation_score": 33.5654,
+      "weight": 0.07916666666666666
+    },
+    {
+      "capital_scarcity_score": 53.2502,
+      "composite_score": 61.0334,
+      "inflection_votes": 2,
+      "latest_statement_period": "2026-05-31",
+      "quality_score": 76.9797,
+      "sector": "Industrials",
+      "ticker": "PAYX",
+      "valuation_score": 48.7348,
+      "weight": 0.07916666666666666
+    },
+    {
+      "capital_scarcity_score": 58.073,
+      "composite_score": 60.8944,
+      "inflection_votes": 3,
+      "latest_statement_period": "2025-10-31",
+      "quality_score": 58.445,
+      "sector": "Information Technology",
+      "ticker": "ADI",
+      "valuation_score": 48.187,
+      "weight": 0.07916666666666666
+    },
+    {
+      "capital_scarcity_score": 43.957,
+      "composite_score": 60.6038,
+      "inflection_votes": 3,
+      "latest_statement_period": "2025-12-31",
+      "quality_score": 84.4546,
+      "sector": "Industrials",
+      "ticker": "PAYC",
+      "valuation_score": 36.5783,
+      "weight": 0.07916666666666666
+    }
+  ],
+  "signal_date": "2026-10-30",
+  "target_weights": {
+    "ADI": 0.07916666666666666,
+    "CF": 0.07916666666666666,
+    "EBAY": 0.07916666666666666,
+    "EOG": 0.07916666666666666,
+    "MHK": 0.07916666666666666,
+    "NEM": 0.07916666666666666,
+    "ON": 0.07916666666666666,
+    "OXY": 0.07916666666666666,
+    "PAYC": 0.07916666666666666,
+    "PAYX": 0.07916666666666666,
+    "QCOM": 0.07916666666666666,
+    "SWKS": 0.07916666666666666
+  }
+}
