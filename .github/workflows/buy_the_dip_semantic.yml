@@ -116,7 +116,7 @@ jobs:
       - name: Commit semantic evidence
         if: ${{ github.event_name != 'pull_request' }}
         run: |
-          git add -- buy_the_dip_state/reviews buy_the_dip_state/semantic_progress.json
+          git add -- buy_the_dip_state/reviews buy_the_dip_state/semantic_progress.json buy_the_dip_state/unavailable_audio.json
           if ! git diff --cached --quiet; then
             # Rebase recreates the commit, so local identity must persist beyond git commit.
             git config user.name 'github-actions[bot]'
