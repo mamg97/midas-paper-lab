@@ -1,0 +1,28 @@
+{
+  "bars": {
+    "HUBB": {
+      "close": 422.44000244140625,
+      "date": "2026-10-30",
+      "dividend": 0.0,
+      "high": 435.777099609375,
+      "low": 419.04998779296875,
+      "open": 429.0,
+      "provider_symbol": "HUBB",
+      "split": 0.0,
+      "volume": 807610.0
+    }
+  },
+  "base_sha256": "01ee1c4d0d5f28fc76abd4a80bc6228477bbf1b6c1e244aed29ce64fe5f3a987",
+  "captured_at_utc": "2026-10-31T11:28:13+00:00",
+  "parent_sha256": "01ee1c4d0d5f28fc76abd4a80bc6228477bbf1b6c1e244aed29ce64fe5f3a987",
+  "schema": "midas.xnys_missing_revision.v1",
+  "session": "2026-10-30",
+  "sha256": "0f09c6ae175f1ea60bb6ced05f5a3620483aad3f4cdedc044edd8a1a8f2c2680",
+  "source": {
+    "actions": true,
+    "auto_adjust": false,
+    "client": "yfinance",
+    "interval": "1d",
+    "vendor": "Yahoo Finance"
+  }
+}
