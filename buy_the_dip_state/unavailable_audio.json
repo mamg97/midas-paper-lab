@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "items": {
+    "c8GFOKB8c50": {
+      "http_status": 404,
+      "detected_at_utc": "2026-10-31T11:40:50.518690+00:00",
+      "retry_after_utc": "2026-11-02T11:40:50.518690+00:00"
+    }
+  }
+}
