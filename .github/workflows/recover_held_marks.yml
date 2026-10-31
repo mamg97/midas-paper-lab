@@ -1,0 +1,62 @@
+name: MIDAS verified historical HELD OHLC recovery
+
+on:
+  pull_request:
+    paths:
+      - 'market_data/recover_held_marks.py'
+      - 'market_data/tests/test_recover_held_marks.py'
+      - '.github/workflows/recover_held_marks.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'market_data/recover_held_marks.py'
+      - '.github/workflows/recover_held_marks.yml'
+  schedule:
+    # Retry only past HELD quotes across bounded sessions while XNYS is closed.
+    - cron: '51 5 * * 0,6'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: midas-common-xnys-snapshot
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || 'main' }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: timesfm_strategy/requirements-daily.txt
+      - name: Install existing Yahoo dependencies
+        run: python -m pip install -r timesfm_strategy/requirements-daily.txt
+      - name: Verify immutable recovery and earlier common quote contracts
+        run: |
+          python -m unittest discover -s market_data/tests -v
+          python market_data/recover_held_marks.py --phase check
+      - name: Try to recover genuine historical HELD bars only
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          python market_data/recover_held_marks.py --phase recover | tee held-recovery-result.json
+      - name: Publish append-only market revisions, never a ledger
+        if: ${{ success() && github.event_name != 'pull_request' }}
+        run: |
+          python strategy_comparison/publish_state.py \
+            --message "Recover verified historical held marks only" \
+            --path market_data/snapshots
+      - name: Preserve recovery evidence
+        if: ${{ always() && github.event_name != 'pull_request' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: held-mark-recovery-${{ github.run_id }}
+          path: held-recovery-result.json
+          if-no-files-found: warn
+          retention-days: 14
